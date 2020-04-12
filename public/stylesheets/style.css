@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+  color: black; }
+
+a:hover {
+  color: black;
+  text-decoration: none; }
+
+.card-body > div {
+  display: inline; }
+
+/*# sourceMappingURL=style.css.map */

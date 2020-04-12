@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= Emibo
+    meta(name="viewport", content="width=device-width, user-scalable=no")
+    link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh", crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-3.4.1.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6", crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand(href="/") Emibo DB
+        form.form-inline.my-2.my-lg-0
+          input.form-control.mr-sm-7.my-2.my-lg-0(type="search", placeholder="Search by name", aria-label="Search")
+        //form.form-inline
+          select.form-control
+            option(selected) 성격
+            option(selected value="단순활발") 단순활발
+            option(selected value="성숙함") 성숙함
+            option(selected value="아이돌") 아이돌
+            option(selected value="친절함") 친절함
+            option(selected value="느끼함") 느끼함
+            option(selected value="무뚝뚝") 무뚝뚝
+            option(selected value="운동광") 운동광
+            option(selected value="먹보") 먹보
+
+    section
+      .container-fluid
+        block content
