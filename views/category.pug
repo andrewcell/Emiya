@@ -15,8 +15,8 @@ block content
 
     .row
         each card in miibo
-            a.card.col-2(style="/*width: 12rem*/" href="/data/" + card.file)
-                img.card-img-top(src="/images/cards/" + card.number + ".png", alt=card.name)
+            a.card.col-2(href="/data/" + card.file)
+                img.card-img-top(src="/images/cards/" + card.number + ".jpg", alt=card.name)
                 .card-body
                     div#content
                         div#number(style="font-weight: bold")=card.number

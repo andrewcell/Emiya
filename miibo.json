@@ -1,26 +1,4752 @@
 {
-  "data": [{"name": "Isabelle", "name_kor": "\uc5ec\uc6b8", "number": 1, "file": "Series 1/[AC] 001 - Isabelle.bin", "image": "cards/1-Isabelle.png", "series": 1, "personality": null}, {"name": "Tom Nook", "name_kor": "너굴", "number": 2, "file": "Series 1/[AC] 002 - Tom Nook.bin", "image": "cards/2-Tom Nook.png", "series": 1, "personality": null}, {"name": "DJ KK", "name_kor": "", "number": 3, "file": "Series 1/[AC] 003 - DJ KK.bin", "image": "cards/3-DJ KK.png", "series": 1, "personality": null}, {"name": "Sable", "name_kor": "\uace0\uc625\uc774", "number": 4, "file": "Series 1/[AC] 004 - Sable.bin", "image": "cards/4-Sable.png", "series": 1, "personality": null}, {"name": "Kappn", "name_kor": "", "number": 5, "file": "Series 1/[AC] 005 - Kappn.bin", "image": "cards/5-Kappn.png", "series": 1, "personality": null}, {"name": "Resetti", "name_kor": "\ub3c4\ub8e8\ubb35\uc528", "number": 6, "file": "Series 1/[AC] 006 - Resetti.bin", "image": "cards/6-Resetti.png", "series": 1, "personality": null}, {"name": "Joan", "name_kor": "\ubb34\ud30c\ub77c", "number": 7, "file": "Series 1/[AC] 007 - Joan.bin", "image": "cards/7-Joan.png", "series": 1, "personality": null}, {"name": "Timmy", "name_kor": "\ucf69\ub3cc", "number": 8, "file": "Series 1/[AC] 008 - Timmy.bin", "image": "cards/8-Timmy.png", "series": 1, "personality": null}, {"name": "Digby", "name_kor": "\ucf04\ud2b8", "number": 9, "file": "Series 1/[AC] 009 - Digby.bin", "image": "cards/9-Digby.png", "series": 1, "personality": null}, {"name": "Pascal", "name_kor": "\ud574\ud0c8\ud55c", "number": 10, "file": "Series 1/[AC] 010 - Pascal.bin", "image": "cards/10-Pascal.png", "series": 1, "personality": null}, {"name": "Harriet", "name_kor": "\uce74\ud2b8\ub9ac\ub098", "number": 11, "file": "Series 1/[AC] 011 - Harriet.bin", "image": "cards/11-Harriet.png", "series": 1, "personality": null}, {"name": "Redd", "name_kor": "\uc5ec\uc6b1", "number": 12, "file": "Series 1/[AC] 012 - Redd.bin", "image": "cards/12-Redd.png", "series": 1, "personality": null}, {"name": "Saharah", "name_kor": "\uc0ac\ub77c\ud558", "number": 13, "file": "Series 1/[AC] 013 - Saharah.bin", "image": "cards/13-Saharah.png", "series": 1, "personality": null}, {"name": "Luna", "name_kor": "\ubabd\uc170\ub974", "number": 14, "file": "Series 1/[AC] 014 - Luna.bin", "image": "cards/14-Luna.png", "series": 1, "personality": null}, {"name": "Tortimer", "name_kor": "\uace0\ubd81", "number": 15, "file": "Series 1/[AC] 015 - Tortimer.bin", "image": "cards/15-Tortimer.png", "series": 1, "personality": null}, {"name": "Lyle", "name_kor": "\uc548\uc2ec\ud574", "number": 16, "file": "Series 1/[AC] 016 - Lyle.bin", "image": "cards/16-Lyle.png", "series": 1, "personality": null}, {"name": "Lottie", "name_kor": "\ud0c0\ucfe0\ubbf8", "number": 17, "file": "Series 1/[AC] 017 - Lottie.bin", "image": "cards/17-Lottie.png", "series": 1, "personality": null}, {"name": "Bob", "name_kor": "\ud788\uc8fd", "number": 18, "file": "Series 1/[AC] 018 - Bob.bin", "image": "cards/18-Bob.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Fauna", "name_kor": "\uc194\ubbf8", "number": 19, "file": "Series 1/[AC] 019 - Fauna.bin", "image": "cards/19-Fauna.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Curt", "name_kor": "\ub69d\uc2ec", "number": 20, "file": "Series 1/[AC] 020 - Curt.bin", "image": "cards/20-Curt.png", "series": 1, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Portia", "name_kor": "\ube14\ub79c\ub354", "number": 21, "file": "Series 1/[AC] 021 - Portia.bin", "image": "cards/21-Portia.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Leonardo", "name_kor": "\ubc94\ud638", "number": 22, "file": "Series 1/[AC] 022 - Leonardo.bin", "image": "cards/22-Leonardo.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Cheri", "name_kor": "\uc544\uc138\ub85c\ub77c", "number": 23, "file": "Series 1/[AC] 023 - Cheri.bin", "image": "cards/23-Cheri.png", "series": 1, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Kyle", "name_kor": "\ub9ac\uce74\ub974\ub3c4", "number": 24, "file": "Series 1/[AC] 024 - Kyle.bin", "image": "cards/24-Kyle.png", "series": 1, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Al", "name_kor": "\uc6b0\ub77d", "number": 25, "file": "Series 1/[AC] 025 - Al.bin", "image": "cards/25-Al.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Renee", "name_kor": "\ubfd4\ub2d8\uc774", "number": 26, "file": "Series 1/[AC] 026 - Renee.bin", "image": "cards/26-Renee.png", "series": 1, "personality": ["Sisterly", "단순활발"]}, {"name": "Lopez", "name_kor": "\ud1b0\uc2a8", "number": 27, "file": "Series 1/[AC] 027 - Lopez.bin", "image": "cards/27-Lopez.png", "series": 1, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Jambette", "name_kor": "\uc5d0\uc2a4\uba54\ub784\ub2e4", "number": 28, "file": "Series 1/[AC] 028 - Jambette.bin", "image": "cards/28-Jambette.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Rasher", "name_kor": "\uae00\ub808\uc774", "number": 29, "file": "Series 1/[AC] 029 - Rasher.bin", "image": "cards/29-Rasher.png", "series": 1, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Tiffany", "name_kor": "\ubc14\uc2ac\ub808", "number": 30, "file": "Series 1/[AC] 030 - Tiffany.bin", "image": "cards/30-Tiffany.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Sheldon", "name_kor": "\ud06c\ub9ac\uc2a4", "number": 31, "file": "Series 1/[AC] 031 - Sheldon.bin", "image": "cards/31-Sheldon.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Bluebear", "name_kor": "\uae00\ub8e8\ubbfc", "number": 32, "file": "Series 1/[AC] 032 - Bluebear.bin", "image": "cards/32-Bluebear.png", "series": 1, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Bill", "name_kor": "\ucf54\ucf54\uc544", "number": 33, "file": "Series 1/[AC] 033 - Bill.bin", "image": "cards/33-Bill.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Kiki", "name_kor": "\uce90\ube44\uc5b4", "number": 34, "file": "Series 1/[AC] 034 - Kiki.bin", "image": "cards/34-Kiki.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Deli", "name_kor": "\ub378\ub9ac", "number": 35, "file": "Series 1/[AC] 035 - Deli.bin", "image": "cards/35-Deli.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Alli", "name_kor": "\ud06c\ub85c\ud06c", "number": 36, "file": "Series 1/[AC] 036 - Alli.bin", "image": "cards/36-Alli.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Kabuki", "name_kor": "\uac00\ubd81\ud76c", "number": 37, "file": "Series 1/[AC] 037 - Kabuki.bin", "image": "cards/37-Kabuki.png", "series": 1, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Patty", "name_kor": "\ubc00\ud06c", "number": 38, "file": "Series 1/[AC] 038 - Patty.bin", "image": "cards/38-Patty.png", "series": 1, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Jitters", "name_kor": "\ub529\uc694", "number": 39, "file": "Series 1/[AC] 039 - Jitters.bin", "image": "cards/39-Jitters.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Gigi", "name_kor": "\ub9b0\ub2e4", "number": 40, "file": "Series 1/[AC] 040 - Gigi.bin", "image": "cards/40-Gigi.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Quillson", "name_kor": "\ub355\uadfc", "number": 41, "file": "Series 1/[AC] 041 - Quillson.bin", "image": "cards/41-Quillson.png", "series": 1, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Marcie", "name_kor": "\ub9c8\ub9ac\uc544", "number": 42, "file": "Series 1/[AC] 042 - Marcie.bin", "image": "cards/42-Marcie.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Puck", "name_kor": "\ud558\ud0a4", "number": 43, "file": "Series 1/[AC] 043 - Puck.bin", "image": "cards/43-Puck.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Shari", "name_kor": "\uc824\ub9ac", "number": 44, "file": "Series 1/[AC] 044 - Shari.bin", "image": "cards/44-Shari.png", "series": 1, "personality": ["Sisterly", "단순활발"]}, {"name": "Octavian", "name_kor": "\ubb38\ubcf5", "number": 45, "file": "Series 1/[AC] 045 - Octavian.bin", "image": "cards/45-Octavian.png", "series": 1, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Winnie", "name_kor": "\uce74\ub85c\ud2f4", "number": 46, "file": "Series 1/[AC] 046 - Winnie.bin", "image": "cards/46-Winnie.png", "series": 1, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Knox", "name_kor": "\uae08\ub07c\uc624", "number": 47, "file": "Series 1/[AC] 047 - Knox.bin", "image": "cards/47-Knox.png", "series": 1, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Sterling", "name_kor": "\uc740\uc218\ub9ac", "number": 48, "file": "Series 1/[AC] 048 - Sterling.bin", "image": "cards/48-Sterling.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Bonbon", "name_kor": "\ubbf8\ubbf8", "number": 49, "file": "Series 1/[AC] 049 - Bonbon.bin", "image": "cards/49-Bonbon.png", "series": 1, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Punchy", "name_kor": "\ube59\ud2f0", "number": 50, "file": "Series 1/[AC] 050 - Punchy.bin", "image": "cards/50-Punchy.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Opal", "name_kor": "\uc624\ud314", "number": 51, "file": "Series 1/[AC] 051 - Opal.bin", "image": "cards/51-Opal.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Poppy", "name_kor": "\ub2e4\ub78c", "number": 52, "file": "Series 1/[AC] 052 - Poppy.bin", "image": "cards/52-Poppy.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Limberg", "name_kor": "\ub2e8\ubb34\uc9c0", "number": 53, "file": "Series 1/[AC] 053 - Limberg.bin", "image": "cards/53-Limberg.png", "series": 1, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Deena", "name_kor": "\ub9c8\ub9ac\ubaa8", "number": 54, "file": "Series 1/[AC] 054 - Deena.bin", "image": "cards/54-Deena.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Snake", "name_kor": "\ub2cc\ud1a0", "number": 55, "file": "Series 1/[AC] 055 - Snake.bin", "image": "cards/55-Snake.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Bangle", "name_kor": "\ub8e8\uc8fc", "number": 56, "file": "Series 1/[AC] 056 - Bangle.bin", "image": "cards/56-Bangle.png", "series": 1, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Phil", "name_kor": "\ucf00\uc778", "number": 57, "file": "Series 1/[AC] 057 - Phil.bin", "image": "cards/57-Phil.png", "series": 1, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Monique", "name_kor": "\uc81c\uc778", "number": 58, "file": "Series 1/[AC] 058 - Monique.bin", "image": "cards/58-Monique.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Nate", "name_kor": "\ubc15\ud558\uc2a4", "number": 59, "file": "Series 1/[AC] 059 - Nate.bin", "image": "cards/59-Nate.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Samson", "name_kor": "\ud53c\uc2a4", "number": 60, "file": "Series 1/[AC] 060 - Samson.bin", "image": "cards/60-Samson.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Tutu", "name_kor": "\uc5f0\uc720", "number": 61, "file": "Series 1/[AC] 061 - Tutu.bin", "image": "cards/61-Tutu.png", "series": 1, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "T-Bone", "name_kor": "티본", "number": 62, "file": "Series 1/[AC] 062 - T-Bone.bin", "image": "cards/62-T.png", "series": 1, "personality": ["Cranky", "무뚝뚝"]}, {"name": "Mint", "name_kor": "\ubbfc\ud2b8", "number": 63, "file": "Series 1/[AC] 063 - Mint.bin", "image": "cards/63-Mint.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Pudge", "name_kor": "\uc6b0\ub760", "number": 64, "file": "Series 1/[AC] 064 - Pudge.bin", "image": "cards/64-Pudge.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Midge", "name_kor": "\ud551\uae00\uc774", "number": 65, "file": "Series 1/[AC] 065 - Midge.bin", "image": "cards/65-Midge.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Gruff", "name_kor": "\ube4c\ub9ac", "number": 66, "file": "Series 1/[AC] 066 - Gruff.bin", "image": "cards/66-Gruff.png", "series": 1, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Flurry", "name_kor": "\ubf40\uc57c\ubbf8", "number": 67, "file": "Series 1/[AC] 067 - Flurry.bin", "image": "cards/67-Flurry.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Clyde", "name_kor": "\ub9c8\ucca0\uc774", "number": 68, "file": "Series 1/[AC] 068 - Clyde.bin", "image": "cards/68-Clyde.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Bella", "name_kor": "\uc774\uc790\ubca8", "number": 69, "file": "Series 1/[AC] 069 - Bella.bin", "image": "cards/69-Bella.png", "series": 1, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Biff", "name_kor": "\uac00\ube0c\ub9ac\uc5d8", "number": 70, "file": "Series 1/[AC] 070 - Biff.bin", "image": "cards/70-Biff.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Yuka", "name_kor": "\uc720\uce74\ub9ac", "number": 71, "file": "Series 1/[AC] 071 - Yuka.bin", "image": "cards/71-Yuka.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Lionel", "name_kor": "\ub77c\uc774\uc624\ub12c", "number": 72, "file": "Series 1/[AC] 072 - Lionel.bin", "image": "cards/72-Lionel.png", "series": 1, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Flo", "name_kor": "\ub808\uc774\ub77c", "number": 73, "file": "Series 1/[AC] 073 - Flo.bin", "image": "cards/73-Flo.png", "series": 1, "personality": ["Sisterly", "단순활발"]}, {"name": "Cobb", "name_kor": "\ubc15\uc0ac", "number": 74, "file": "Series 1/[AC] 074 - Cobb.bin", "image": "cards/74-Cobb.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Amelia", "name_kor": "\uc548\ub370\uc2a4", "number": 75, "file": "Series 1/[AC] 075 - Amelia.bin", "image": "cards/75-Amelia.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Jeremiah", "name_kor": "", "number": 76, "file": "Series 1/[AC] 076 - Jeramiah.bin", "image": "cards/76-Jeramiah.png", "series": 1, "personality": ["Lazy", "먹보"]}, {"name": "Cherry", "name_kor": "\ud55c\ub098", "number": 77, "file": "Series 1/[AC] 077 - Cherry.bin", "image": "cards/77-Cherry.png", "series": 1, "personality": ["Sisterly", "단순활발"]}, {"name": "Roscoe", "name_kor": "\uc288\ubca0\ub974\ud2b8", "number": 78, "file": "Series 1/[AC] 078 - Roscoe.bin", "image": "cards/78-Roscoe.png", "series": 1, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Truffles", "name_kor": "\ud0f1\uace0", "number": 79, "file": "Series 1/[AC] 079 - Truffles.bin", "image": "cards/79-Truffles.png", "series": 1, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Eugene", "name_kor": "\ucf54\uc54c", "number": 80, "file": "Series 1/[AC] 080 - Eugene.bin", "image": "cards/80-Eugene.png", "series": 1, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Eunice", "name_kor": "\uacf1\uc2ac\uc774", "number": 81, "file": "Series 1/[AC] 081 - Eunice.bin", "image": "cards/81-Eunice.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Goose", "name_kor": "\uac74\ud0dc", "number": 82, "file": "Series 1/[AC] 082 - Goose.bin", "image": "cards/82-Goose.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Annalisa", "name_kor": "\uc124\ubc31", "number": 83, "file": "Series 1/[AC] 083 - Annalisa.bin", "image": "cards/83-Annalisa.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Benjamin", "name_kor": "\ub561\uce60\uc774", "number": 84, "file": "Series 1/[AC] 084 - Benjamin.bin", "image": "cards/84-Benjamin.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Pancetti", "name_kor": "\ube0c\ub9ac\ud2b8\ub2c8", "number": 85, "file": "Series 1/[AC] 085 - Pancetti.bin", "image": "cards/85-Pancetti.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Chief", "name_kor": "\ub300\uc7a5", "number": 86, "file": "Series 1/[AC] 086 - Chief.bin", "image": "cards/86-Chief.png", "series": 1, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Bunnie", "name_kor": "\ub9b4\ub9ac\uc548", "number": 87, "file": "Series 1/[AC] 087 - Bunnie.bin", "image": "cards/87-Bunnie.png", "series": 1, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Clay", "name_kor": "\ud584\ub465", "number": 88, "file": "Series 1/[AC] 088 - Clay.bin", "image": "cards/88-Clay.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Diana", "name_kor": "\ub098\ud0c8\ub9ac", "number": 89, "file": "Series 1/[AC] 089 - Diana.bin", "image": "cards/89-Diana.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Axel", "name_kor": "\uc5d1\uc2a4\uc5d8\ub9ac", "number": 90, "file": "Series 1/[AC] 090 - Axel.bin", "image": "cards/90-Axel.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Muffy", "name_kor": "\ud504\ub9b4", "number": 91, "file": "Series 1/[AC] 091 - Muffy.bin", "image": "cards/91-Muffy.png", "series": 1, "personality": ["Sisterly", "단순활발"]}, {"name": "Henry", "name_kor": "\ud5e8\ub9ac", "number": 92, "file": "Series 1/[AC] 092 - Henry.bin", "image": "cards/92-Henry.png", "series": 1, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Bertha", "name_kor": "\ubca0\ud2f0", "number": 93, "file": "Series 1/[AC] 093 - Bertha.bin", "image": "cards/93-Bertha.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Cyrano", "name_kor": "\uc0ac\uc9c0\ub9c8", "number": 94, "file": "Series 1/[AC] 094 - Cyrano.bin", "image": "cards/94-Cyrano.png", "series": 1, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Peanut", "name_kor": "\ud551\ud0a4", "number": 95, "file": "Series 1/[AC] 095 - Peanut.bin", "image": "cards/95-Peanut.png", "series": 1, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Cole", "name_kor": "\uc544\ub9c8\ubbfc", "number": 96, "file": "Series 1/[AC] 096 - Cole.bin", "image": "cards/96-Cole.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Willow", "name_kor": "\ub9c8\ub9ac", "number": 97, "file": "Series 1/[AC] 097 - Willow.bin", "image": "cards/97-Willow.png", "series": 1, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Roald", "name_kor": "\ud3ad\uc218", "number": 98, "file": "Series 1/[AC] 098 - Roald.bin", "image": "cards/98-Roald.png", "series": 1, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Molly", "name_kor": "\uadc0\uc624\ubbf8", "number": 99, "file": "Series 1/[AC] 099 - Molly.bin", "image": "cards/99-Molly.png", "series": 1, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Walker", "name_kor": "\ubca4", "number": 100, "file": "Series 1/[AC] 100 - Walker.bin", "image": "cards/100-Walker.png", "series": 1, "personality": ["Lazy", "\uba39\ubcf4"]},
-    {"name": "K", "name_kor": "T.K.", "number": 101, "file": "Series 2/[AC] 101 - K.K. Slider.bin", "image": "cards/101-K.png", "series": 2, "personality": ["", ""]}, {"name": "Reese", "name_kor": "\ub9ac\uc0ac", "number": 102, "file": "Series 2/[AC] 102 - Reese.bin", "image": "cards/102-Reese.png", "series": 2, "personality": ["", ""]}, {"name": "Kicks", "name_kor": "\ud328\ud2b8\ub9ad", "number": 103, "file": "Series 2/[AC] 103 - Kicks.bin", "image": "cards/103-Kicks.png", "series": 2, "personality": ["", ""]}, {"name": "Labelle", "name_kor": "\ucf00\uc774\ud2b8", "number": 104, "file": "Series 2/[AC] 104 - Labelle.bin", "image": "cards/104-Labelle.png", "series": 2, "personality": ["", ""]}, {"name": "Copper", "name_kor": "\uacbd\ucc30\uad00A", "number": 105, "file": "Series 2/[AC] 105 - Copper.bin", "image": "cards/105-Copper.png", "series": 2, "personality": ["", ""]}, {"name": "Booker", "name_kor": "\uacbd\ucc30\uad00B", "number": 106, "file": "Series 2/[AC] 106 - Booker.bin", "image": "cards/106-Booker.png", "series": 2, "personality": ["", ""]}, {"name": "Katie", "name_kor": "\ubbf8\uc57c", "number": 107, "file": "Series 2/[AC] 107 - Katie.bin", "image": "cards/107-Katie.png", "series": 2, "personality": ["", ""]}, {"name": "Tommy", "name_kor": "\ubc24\ub3cc\uc774", "number": 108, "file": "Series 2/[AC] 108 - Tommy.bin", "image": "cards/108-Tommy.png", "series": 2, "personality": ["", ""]}, {"name": "Porter", "name_kor": "\uc5ed\ubb34\uc6d0", "number": 109, "file": "Series 2/[AC] 109 - Porter.bin", "image": "cards/109-Porter.png", "series": 2, "personality": ["", ""]}, {"name": "Leila", "name_kor": "\uaf2c\ubbf8", "number": 110, "file": "Series 2/[AC] 110 - Leila.bin", "image": "cards/110-Leila.png", "series": 2, "personality": ["", ""]}, {"name": "Shrunk", "name_kor": "\uc2a4\uc2b9", "number": 111, "file": "Series 2/[AC] 111 - Shrunk.bin", "image": "cards/111-Shrunk.png", "series": 2, "personality": ["", ""]}, {"name": "Don Resetti", "name_kor": "\uc624\ub8e8\ubb35\uc528", "number": 112, "file": "Series 2/[AC] 112 - Don Resetti.bin", "image": "cards/112-Don Resetti.png", "series": 2, "personality": ["", ""]}, {"name": "Isabelle", "name_kor": "\uc5ec\uc6b8", "number": 113, "file": "Series 2/[AC] 113 - Isabelle.bin", "image": "cards/113-Isabelle.png", "series": 2, "personality": ["", ""]}, {"name": "Blanca", "name_kor": "\uc544\ud2b8\uace0\uc591\uc774", "number": 114, "file": "Series 2/[AC] 114 - Blanca.bin", "image": "cards/114-Blanca.png", "series": 2, "personality": ["", ""]}, {"name": "Nat", "name_kor": "\uba5c\ub808\uc639", "number": 115, "file": "Series 2/[AC] 115 - Nat.bin", "image": "cards/115-Nat.png", "series": 2, "personality": ["", ""]}, {"name": "Chip", "name_kor": "\ub6b1\ub2ec", "number": 116, "file": "Series 2/[AC] 116 - Chip.bin", "image": "cards/116-Chip.png", "series": 2, "personality": ["", ""]}, {"name": "Jack", "name_kor": "\ud38c\ud0b9", "number": 117, "file": "Series 2/[AC] 117 - Jack.bin", "image": "cards/117-Jack.png", "series": 2, "personality": ["", ""]}, {"name": "Poncho", "name_kor": "\ubd09\ucd94", "number": 118, "file": "Series 2/[AC] 118 - Poncho.bin", "image": "cards/118-Poncho.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Felicity", "name_kor": "\uc608\ub9c1", "number": 119, "file": "Series 2/[AC] 119 - Felicity.bin", "image": "cards/119-Felicity.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Ozzie", "name_kor": "\ub3d9\ub3d9\uc774", "number": 120, "file": "Series 2/[AC] 120 - Ozzie.bin", "image": "cards/120-Ozzie.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Tia", "name_kor": "\ud2f0\ub098", "number": 121, "file": "Series 2/[AC] 121 - Tia.bin", "image": "cards/121-Tia.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Lucha", "name_kor": "\ub9c8\uc2a4\uce74\ub77c\uc2a4", "number": 122, "file": "Series 2/[AC] 122 - Lucha.bin", "image": "cards/122-Lucha.png", "series": 2, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Fuchsia", "name_kor": "\uc81c\uc2dc\uce74", "number": 123, "file": "Series 2/[AC] 123 - Fuchsia.bin", "image": "cards/123-Fuchsia.png", "series": 2, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Harry", "name_kor": "\uc62c\ub9ac\ubc84", "number": 124, "file": "Series 2/[AC] 124 - Harry.bin", "image": "cards/124-Harry.png", "series": 2, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Gwen", "name_kor": "\ud3f4\ub77c", "number": 125, "file": "Series 2/[AC] 125 - Gwen.bin", "image": "cards/125-Gwen.png", "series": 2, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Coach", "name_kor": "\ucca0\uc18c", "number": 126, "file": "Series 2/[AC] 126 - Coach.bin", "image": "cards/126-Coach.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Kitt", "name_kor": "\uc560\ud50c\ub9ac\ucf00", "number": 127, "file": "Series 2/[AC] 127 - Kitt.bin", "image": "cards/127-Kitt.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Tom", "name_kor": "\ubc34\ub364", "number": 128, "file": "Series 2/[AC] 128 - Tom.bin", "image": "cards/128-Tom.png", "series": 2, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Tipper", "name_kor": "\ub9c8\ud2f8\ub2e4", "number": 129, "file": "Series 2/[AC] 129 - Tipper.bin", "image": "cards/129-Tipper.png", "series": 2, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Prince", "name_kor": "\uce74\uc77c", "number": 130, "file": "Series 2/[AC] 130 - Prince.bin", "image": "cards/130-Prince.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Pate", "name_kor": "\ub098\ud0a4", "number": 131, "file": "Series 2/[AC] 131 - Pate.bin", "image": "cards/131-Pate.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Vladimir", "name_kor": "\uacf0\ube44", "number": 132, "file": "Series 2/[AC] 132 - Vladimir.bin", "image": "cards/132-Vladimir.png", "series": 2, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Savannah", "name_kor": "\uc0ac\ubc18\ub098", "number": 133, "file": "Series 2/[AC] 133 - Savannah.bin", "image": "cards/133-Savannah.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Kidd", "name_kor": "\uc5fc\ub450\ub9ac", "number": 134, "file": "Series 2/[AC] 134 - Kidd.bin", "image": "cards/134-Kidd.png", "series": 2, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Phoebe", "name_kor": "\ud718\ub2c8", "number": 135, "file": "Series 2/[AC] 135 - Phoebe.bin", "image": "cards/135-Phoebe.png", "series": 2, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Egbert", "name_kor": "\uae40\ud76c", "number": 136, "file": "Series 2/[AC] 136 - Egbert.bin", "image": "cards/136-Egbert.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Cookie", "name_kor": "\ubca0\ub9ac", "number": 137, "file": "Series 2/[AC] 137 - Cookie.bin", "image": "cards/137-Cookie.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Sly", "name_kor": "\ud558\uc774\ub4dc", "number": 138, "file": "Series 2/[AC] 138 - Sly.bin", "image": "cards/138-Sly.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Blaire", "name_kor": "\uc2e4\ub8e8\uc5e3", "number": 139, "file": "Series 2/[AC] 139 - Blaire.bin", "image": "cards/139-Blaire.png", "series": 2, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Avery", "name_kor": "\ucfe0\uc2a4\ucf00\ucc98", "number": 140, "file": "Series 2/[AC] 140 - Avery.bin", "image": "cards/140-Avery.png", "series": 2, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Nana", "name_kor": "\ud0a4\ud0a4", "number": 141, "file": "Series 2/[AC] 141 - Nana.bin", "image": "cards/141-Nana.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Peck", "name_kor": "\ubb38\ub300", "number": 142, "file": "Series 2/[AC] 142 - Peck.bin", "image": "cards/142-Peck.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Olivia", "name_kor": "\uc62c\ub9ac\ube44\uc544", "number": 143, "file": "Series 2/[AC] 143 - Olivia.bin", "image": "cards/143-Olivia.png", "series": 2, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Cesar", "name_kor": "\uc568\ub7f0", "number": 144, "file": "Series 2/[AC] 144 - Cesar.bin", "image": "cards/144-Cesar.png", "series": 2, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Carmen", "name_kor": "\ucd08\ucf54", "number": 145, "file": "Series 2/[AC] 145 - Carmen.bin", "image": "cards/145-Carmen.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Rodney", "name_kor": "\uc9c0\ubbf8", "number": 146, "file": "Series 2/[AC] 146 - Rodney.bin", "image": "cards/146-Rodney.png", "series": 2, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Scoot", "name_kor": "\uc9c0\ud0a4\ubbf8", "number": 147, "file": "Series 2/[AC] 147 - Scoot.bin", "image": "cards/147-Scoot.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Whitney", "name_kor": "\ube44\uc559\uce74", "number": 148, "file": "Series 2/[AC] 148 - Whitney.bin", "image": "cards/148-Whitney.png", "series": 2, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Broccolo", "name_kor": "\ube0c\ub85c\ucf5c\ub9ac", "number": 149, "file": "Series 2/[AC] 149 - Broccolo.bin", "image": "cards/149-Broccolo.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Coco", "name_kor": "\uc774\uc694", "number": 150, "file": "Series 2/[AC] 150 - Coco.bin", "image": "cards/150-Coco.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Groucho", "name_kor": "\uac70\ubb34\ud2f1", "number": 151, "file": "Series 2/[AC] 151 - Groucho.bin", "image": "cards/151-Groucho.png", "series": 2, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Wendy", "name_kor": "\ub208\uc1a1\uc774", "number": 152, "file": "Series 2/[AC] 152 - Wendy.bin", "image": "cards/152-Wendy.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Alfonso", "name_kor": "\uc54c\ubca0\ub974\ud2b8", "number": 153, "file": "Series 2/[AC] 153 - Alfonso.bin", "image": "cards/153-Alfonso.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Rhonda", "name_kor": "\ub860\ub2e4", "number": 154, "file": "Series 2/[AC] 154 - Rhonda.bin", "image": "cards/154-Rhonda.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Butch", "name_kor": "\uc874", "number": 155, "file": "Series 2/[AC] 155 - Butch.bin", "image": "cards/155-Butch.png", "series": 2, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Gabi", "name_kor": "\ud328\ud2f0\uce74", "number": 156, "file": "Series 2/[AC] 156 - Gabi.bin", "image": "cards/156-Gabi.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Moose", "name_kor": "\ud551", "number": 157, "file": "Series 2/[AC] 157 - Moose.bin", "image": "cards/157-Moose.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Timbra", "name_kor": "\uc794\ub514", "number": 158, "file": "Series 2/[AC] 158 - Timbra.bin", "image": "cards/158-Timbra.png", "series": 2, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Zell", "name_kor": "\ub12c\uc2a8", "number": 159, "file": "Series 2/[AC] 159 - Zell.bin", "image": "cards/159-Zell.png", "series": 2, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Pekoe", "name_kor": "\uc7ac\uc2a4\ubbfc", "number": 160, "file": "Series 2/[AC] 160 - Pekoe.bin", "image": "cards/160-Pekoe.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Teddy", "name_kor": "\ubcd1\ud0dc", "number": 161, "file": "Series 2/[AC] 161 - Teddy.bin", "image": "cards/161-Teddy.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Mathilda", "name_kor": "\uc548\uc824\ub77c", "number": 162, "file": "Series 2/[AC] 162 - Mathilda.bin", "image": "cards/162-Mathilda.png", "series": 2, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Ed", "name_kor": "\uaebc\ubc99", "number": 163, "file": "Series 2/[AC] 163 - Ed.bin", "image": "cards/163-Ed.png", "series": 2, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Bianca", "name_kor": "\ubc31\ud76c", "number": 164, "file": "Series 2/[AC] 164 - Bianca.bin", "image": "cards/164-Bianca.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Filbert", "name_kor": "\ub9ac\ud0a4", "number": 165, "file": "Series 2/[AC] 165 - Filbert.bin", "image": "cards/165-Filbert.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Kitty", "name_kor": "\uc1fc\ucf5c\ub77c", "number": 166, "file": "Series 2/[AC] 166 - Kitty.bin", "image": "cards/166-Kitty.png", "series": 2, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Beau", "name_kor": "\ud53c\ud130", "number": 167, "file": "Series 2/[AC] 167 - Beau.bin", "image": "cards/167-Beau.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Nan", "name_kor": "\uc21c\uc774", "number": 168, "file": "Series 2/[AC] 168 - Nan.bin", "image": "cards/168-Nan.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Bud", "name_kor": "\uc120\uae00", "number": 169, "file": "Series 2/[AC] 169 - Bud.bin", "image": "cards/169-Bud.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Ruby", "name_kor": "\ub8e8\ub098", "number": 170, "file": "Series 2/[AC] 170 - Ruby.bin", "image": "cards/170-Ruby.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Benedict", "name_kor": "\ud398\ub2c8\uc2e4\ub9b0", "number": 171, "file": "Series 2/[AC] 171 - Benedict.bin", "image": "cards/171-Benedict.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Agnes", "name_kor": "\uc544\uadf8\ub124\uc2a4", "number": 172, "file": "Series 2/[AC] 172 - Agnes.bin", "image": "cards/172-Agnes.png", "series": 2, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Julian", "name_kor": "\uc720\ub2c8\uc624", "number": 173, "file": "Series 2/[AC] 173 - Julian.bin", "image": "cards/173-Julian.png", "series": 2, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Bettina", "name_kor": "\ub9c8\ub974\uce74", "number": 174, "file": "Series 2/[AC] 174 - Bettina.bin", "image": "cards/174-Bettina.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Jay", "name_kor": "\ucc38\ub3cc\uc774", "number": 175, "file": "Series 2/[AC] 175 - Jay.bin", "image": "cards/175-Jay.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Sprinkle", "name_kor": "\ud06c\ub9ac\ubbf8", "number": 176, "file": "Series 2/[AC] 176 - Sprinkle.bin", "image": "cards/176-Sprinkle.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Flip", "name_kor": "\uc6d0\uc2b9", "number": 177, "file": "Series 2/[AC] 177 - Flip.bin", "image": "cards/177-Flip.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Hugh", "name_kor": "\uba39\uace0\ud30c", "number": 178, "file": "Series 2/[AC] 178 - Hugh.bin", "image": "cards/178-Hugh.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Hopper", "name_kor": "\ub2ec\ub9cc\uc774", "number": 179, "file": "Series 2/[AC] 179 - Hopper.bin", "image": "cards/179-Hopper.png", "series": 2, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Pecan", "name_kor": "\ub808\ubca0\uce74", "number": 180, "file": "Series 2/[AC] 180 - Pecan.bin", "image": "cards/180-Pecan.png", "series": 2, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Drake", "name_kor": "\ud478\uc544\uadf8\ub77c", "number": 181, "file": "Series 2/[AC] 181 - Drake.bin", "image": "cards/181-Drake.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Alice", "name_kor": "\uba5c\ubc84\ub978", "number": 182, "file": "Series 2/[AC] 182 - Alice.bin", "image": "cards/182-Alice.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Camofrog", "name_kor": "\ucda9\uc131", "number": 183, "file": "Series 2/[AC] 183 - Camofrog.bin", "image": "cards/183-Camofrog.png", "series": 2, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Anicotti", "name_kor": "\ub77c\uc790\ub0d0", "number": 184, "file": "Series 2/[AC] 184 - Anicotti.bin", "image": "cards/184-Anicotti.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Chops", "name_kor": "\ub3c8\ud6c4\uc559", "number": 185, "file": "Series 2/[AC] 185 - Chops.bin", "image": "cards/185-Chops.png", "series": 2, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Charlise", "name_kor": "\ucc60\ubbf8", "number": 186, "file": "Series 2/[AC] 186 - Charlise.bin", "image": "cards/186-Charlise.png", "series": 2, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Vic", "name_kor": "\ub178\ub974\ub9dd", "number": 187, "file": "Series 2/[AC] 187 - Vic.bin", "image": "cards/187-Vic.png", "series": 2, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Ankha", "name_kor": "\ud074\ub808\uc624", "number": 188, "file": "Series 2/[AC] 188 - Ankha.bin", "image": "cards/188-Ankha.png", "series": 2, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Drift", "name_kor": "\ub355", "number": 189, "file": "Series 2/[AC] 189 - Drift.bin", "image": "cards/189-Drift.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Vesta", "name_kor": "\uba54\ub9ac\uc5b4\uc2a4", "number": 190, "file": "Series 2/[AC] 190 - Vesta.bin", "image": "cards/190-Vesta.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Marcel", "name_kor": "\uc5d0\ub4dc\uc6cc\ub4dc", "number": 191, "file": "Series 2/[AC] 191 - Marcel.bin", "image": "cards/191-Marcel.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Pango", "name_kor": "\ud328\ud2b8\ub77c", "number": 192, "file": "Series 2/[AC] 192 - Pango.bin", "image": "cards/192-Pango.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Keaton", "name_kor": "\ud504\ub7ad\ud06c", "number": 193, "file": "Series 2/[AC] 193 - Keaton.bin", "image": "cards/193-Keaton.png", "series": 2, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Gladys", "name_kor": "\ube45\ud1a0\ub9ac\uc544", "number": 194, "file": "Series 2/[AC] 194 - Gladys.bin", "image": "cards/194-Gladys.png", "series": 2, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Hamphrey", "name_kor": "\ud584\uc950", "number": 195, "file": "Series 2/[AC] 195 - Hamphrey.bin", "image": "cards/195-Hamphrey.png", "series": 2, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Freya", "name_kor": "\uc0b0\ub4dc\ub77c", "number": 196, "file": "Series 2/[AC] 196 - Freya.bin", "image": "cards/196-Freya.png", "series": 2, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Kid Cat", "name_kor": "1\ud638", "number": 197, "file": "Series 2/[AC] 197 - Kid Cat.bin", "image": "cards/197-Kid Cat.png", "series": 2, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Agent S", "name_kor": "2\ud638", "number": 198, "file": "Series 2/[AC] 198 - Agent S.bin", "image": "cards/198-Agent S.png", "series": 2, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Big Top", "name_kor": "3\ud638", "number": 199, "file": "Series 2/[AC] 199 - Big Top.bin", "image": "cards/199-Big Top.png", "series": 2, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Rocket", "name_kor": "4\ud638", "number": 200, "file": "Series 2/[AC] 200 - Rocket.bin", "image": "cards/200-Rocket.png", "series": 2, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]},
-    {"name": "Rover", "name_kor": "\ub0af\uc120\uace0\uc591\uc774", "number": 201, "file": "Series 3/[AC] 201 - Rover.bin", "image": "cards/201-Rover.png", "series": 3, "personality": ["", ""]}, {"name": "Blathers", "name_kor": "\ubd80\uc5c9", "number": 202, "file": "Series 3/[AC] 202 - Blathers.bin", "image": "cards/202-Blathers.png", "series": 3, "personality": ["", ""]}, {"name": "Tom Nook", "name_kor": "\ub108\uad74", "number": 203, "file": "Series 3/[AC] 203 - Tom Nook.bin", "image": "cards/203-Tom Nook.png", "series": 3, "personality": ["", ""]}, {"name": "Pelly", "name_kor": "\ud3a0\ub9ac", "number": 204, "file": "Series 3/[AC] 204 - Pelly.bin", "image": "cards/204-Pelly.png", "series": 3, "personality": ["", ""]}, {"name": "Phyllis", "name_kor": "\ud3a0\ub9ac\ubbf8", "number": 205, "file": "Series 3/[AC] 205 - Phyllis.bin", "image": "cards/205-Phyllis.png", "series": 3, "personality": ["", ""]}, {"name": "Pete", "name_kor": "\ud3a0\ub9ac\uc624", "number": 206, "file": "Series 3/[AC] 206 - Pete.bin", "image": "cards/206-Pete.png", "series": 3, "personality": ["", ""]}, {"name": "Mabel", "name_kor": "\uace0\uc21c\uc774", "number": 207, "file": "Series 3/[AC] 207 - Mabel.bin", "image": "cards/207-Mabel.png", "series": 3, "personality": ["", ""]}, {"name": "Leif", "name_kor": "\ub298\ubd09", "number": 208, "file": "Series 3/[AC] 208 - Leif.bin", "image": "cards/208-Leif.png", "series": 3, "personality": ["", ""]}, {"name": "Wendell", "name_kor": "", "number": 209, "file": "Series 3/[AC] 209 - Wendell.bin", "image": "cards/209-Wendell.png", "series": 3, "personality": ["", ""]}, {"name": "Cyrus", "name_kor": "\ub9ac\ud3ec", "number": 210, "file": "Series 3/[AC] 210 - Cyrus.bin", "image": "cards/210-Cyrus.png", "series": 3, "personality": ["", ""]}, {"name": "Grams", "name_kor": "\uadc0\ub140", "number": 211, "file": "Series 3/[AC] 211 - Grams.bin", "image": "cards/211-Grams.png", "series": 3, "personality": ["", ""]}, {"name": "Timmy", "name_kor": "\ucf69\ub3cc", "number": 212, "file": "Series 3/[AC] 212 - Timmy.bin", "image": "cards/212-Timmy.png", "series": 3, "personality": ["", ""]}, {"name": "Digby", "name_kor": "\ucf04\ud2b8", "number": 213, "file": "Series 3/[AC] 213 - Digby.bin", "image": "cards/213-Digby.png", "series": 3, "personality": ["", ""]}, {"name": "Don Resetti", "name_kor": "\uc624\ub8e8\ubb35\uc528", "number": 214, "file": "Series 3/[AC] 214 - Don Resetti.bin", "image": "cards/214-Don Resetti.png", "series": 3, "personality": ["", ""]}, {"name": "Isabelle", "name_kor": "\uc5ec\uc6b8 (\uae30\ubaa8\ub178)", "number": 215, "file": "Series 3/[AC] 215 - Isabelle.bin", "image": "cards/215-Isabelle.png", "series": 3, "personality": ["", ""]}, {"name": "Franklin", "name_kor": "", "number": 216, "file": "Series 3/[AC] 216 - Franklin.bin", "image": "cards/216-Franklin.png", "series": 3, "personality": ["", ""]}, {"name": "Jingle", "name_kor": "", "number": 217, "file": "Series 3/[AC] 217 - Jingle.bin", "image": "cards/217-Jingle.png", "series": 3, "personality": ["", ""]}, {"name": "Lily", "name_kor": "\ub808\uc774\ub2c8", "number": 218, "file": "Series 3/[AC] 218 - Lily.bin", "image": "cards/218-Lily.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Anchovy", "name_kor": "\uc548\ucd78\ube44", "number": 219, "file": "Series 3/[AC] 219 - Anchovy.bin", "image": "cards/219-Anchovy.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Tabby", "name_kor": "\ud638\ub0e5\uc774", "number": 220, "file": "Series 3/[AC] 220 - Tabby.bin", "image": "cards/220-Tabby.png", "series": 3, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Kody", "name_kor": "\uc544\uc774\ub2e4\ud638", "number": 221, "file": "Series 3/[AC] 221 - Kody.bin", "image": "cards/221-Kody.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Miranda", "name_kor": "\ubbf8\ub780\ub2e4", "number": 222, "file": "Series 3/[AC] 222 - Miranda.bin", "image": "cards/222-Miranda.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Del", "name_kor": "\ud30c\ub3c4\ub9e8", "number": 223, "file": "Series 3/[AC] 223 - Del.bin", "image": "cards/223-Del.png", "series": 3, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Paula", "name_kor": "\ub808\uc774\uccbc", "number": 224, "file": "Series 3/[AC] 224 - Paula.bin", "image": "cards/224-Paula.png", "series": 3, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Ken", "name_kor": "\uc624\uace8", "number": 225, "file": "Series 3/[AC] 225 - Ken.bin", "image": "cards/225-Ken.png", "series": 3, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Mitzi", "name_kor": "\ub9c8\ub974", "number": 226, "file": "Series 3/[AC] 226 - Mitzi.bin", "image": "cards/226-Mitzi.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Rodeo", "name_kor": "\ub85c\ub370\uc624", "number": 227, "file": "Series 3/[AC] 227 - Rodeo.bin", "image": "cards/227-Rodeo.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Bubbles", "name_kor": "\ucc28\ucf54", "number": 228, "file": "Series 3/[AC] 228 - Bubbles.bin", "image": "cards/228-Bubbles.png", "series": 3, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Cousteau", "name_kor": "\uc655\uc11c\ubc29", "number": 229, "file": "Series 3/[AC] 229 - Cousteau.bin", "image": "cards/229-Cousteau.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Velma", "name_kor": "\ubca8\ub9c8", "number": 230, "file": "Series 3/[AC] 230 - Velma.bin", "image": "cards/230-Velma.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Elvis", "name_kor": "\ud0b9", "number": 231, "file": "Series 3/[AC] 231 - Elvis.bin", "image": "cards/231-Elvis.png", "series": 3, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Canberra", "name_kor": "\uce94\ubc84\ub77c", "number": 232, "file": "Series 3/[AC] 232 - Canberra.bin", "image": "cards/232-Canberra.png", "series": 3, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Colton", "name_kor": "\uc548\uc18c\ub2c8", "number": 233, "file": "Series 3/[AC] 233 - Colton.bin", "image": "cards/233-Colton.png", "series": 3, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Marina", "name_kor": "\ubb38\ub9ac\ub098", "number": 234, "file": "Series 3/[AC] 234 - Marina.bin", "image": "cards/234-Marina.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Spork", "name_kor": "\ud3ec\ud06c", "number": 235, "file": "Series 3/[AC] 235 - Spork-Crackle.bin", "image": "cards/235-Spork.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Freckles", "name_kor": "\ub2e4\ub791\uc5b4", "number": 236, "file": "Series 3/[AC] 236 - Freckles.bin", "image": "cards/236-Freckles.png", "series": 3, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Bam", "name_kor": "\ub85d\ud0a4", "number": 237, "file": "Series 3/[AC] 237 - Bam.bin", "image": "cards/237-Bam.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Friga", "name_kor": "\uc0ac\ube0c\ub9ac\ub098", "number": 238, "file": "Series 3/[AC] 238 - Friga.bin", "image": "cards/238-Friga.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Ricky", "name_kor": "\uac08\uac00\ub9ac", "number": 239, "file": "Series 3/[AC] 239 - Ricky.bin", "image": "cards/239-Ricky.png", "series": 3, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Deirdre", "name_kor": "\ub098\ub514\uc544", "number": 240, "file": "Series 3/[AC] 240 - Deirdre.bin", "image": "cards/240-Deirdre.png", "series": 3, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Hans", "name_kor": "\uc2a4\ub098\uc77c", "number": 241, "file": "Series 3/[AC] 241 - Hans.bin", "image": "cards/241-Hans.png", "series": 3, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Chevre", "name_kor": "\uc724\uc774", "number": 242, "file": "Series 3/[AC] 242 - Chevre.bin", "image": "cards/242-Chevre.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Drago", "name_kor": "\uc6a9\ub0a8\uc774", "number": 243, "file": "Series 3/[AC] 243 - Drago.bin", "image": "cards/243-Drago.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Tangy", "name_kor": "\ubc31\ud504\ub85c", "number": 244, "file": "Series 3/[AC] 244 - Tangy.bin", "image": "cards/244-Tangy.png", "series": 3, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Mac", "name_kor": "\ucc54\ud504", "number": 245, "file": "Series 3/[AC] 245 - Mac.bin", "image": "cards/245-Mac.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Eloise", "name_kor": "\uc5d8\ub808\ud540", "number": 246, "file": "Series 3/[AC] 246 - Eloise.bin", "image": "cards/246-Eloise.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Wart Jr", "name_kor": "\uc0d8", "number": 247, "file": "Series 3/[AC] 247 - Wart Jr..bin", "image": "cards/247-Wart Jr.png", "series": 3, "personality": ["", ""]}, {"name": "Hazel", "name_kor": "\uc544\uc774\ub9ac\uc2a4", "number": 248, "file": "Series 3/[AC] 248 - Hazel.bin", "image": "cards/248-Hazel.png", "series": 3, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Beardo", "name_kor": "\ubca0\uc5b4\ub4dc", "number": 249, "file": "Series 3/[AC] 249 - Beardo.bin", "image": "cards/249-Beardo.png", "series": 3, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Ava", "name_kor": "\uc5d0\ubc14", "number": 250, "file": "Series 3/[AC] 250 - Ava.bin", "image": "cards/250-Ava.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Chester", "name_kor": "", "number": 251, "file": "Series 3/[AC] 251 - Chester.bin", "image": "cards/251-Chester.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Merry", "name_kor": "\uc720\ub124\ucc0c", "number": 252, "file": "Series 3/[AC] 252 - Merry.bin", "image": "cards/252-Merry.png", "series": 3, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Genji", "name_kor": "\ud1a0\uc2dc", "number": 253, "file": "Series 3/[AC] 253 - Genji.bin", "image": "cards/253-Genji.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Greta", "name_kor": "\ubcf5\uc790", "number": 254, "file": "Series 3/[AC] 254 - Greta.bin", "image": "cards/254-Greta.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Wolfgang", "name_kor": "\ub85c\ubcf4", "number": 255, "file": "Series 3/[AC] 255 - Wolfgang.bin", "image": "cards/255-Wolfgang.png", "series": 3, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Diva", "name_kor": "\uc544\uc774\ub2e4", "number": 256, "file": "Series 3/[AC] 256 - Diva.bin", "image": "cards/256-Diva.png", "series": 3, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Klaus", "name_kor": "\uacf0\ub3c4\ub85c\uc2a4", "number": 257, "file": "Series 3/[AC] 257 - Klaus.bin", "image": "cards/257-Klaus.png", "series": 3, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Daisy", "name_kor": "\ubc14\ub2d0\ub77c", "number": 258, "file": "Series 3/[AC] 258 - Daisy.bin", "image": "cards/258-Daisy.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Stinky", "name_kor": "\ub540\ub760", "number": 259, "file": "Series 3/[AC] 259 - Stinky.bin", "image": "cards/259-Stinky.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Tammi", "name_kor": "\uc5d0\uc774\ud504\ub9b4", "number": 260, "file": "Series 3/[AC] 260 - Tammi.bin", "image": "cards/260-Tammi.png", "series": 3, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Tucker", "name_kor": "\ub9d8\ubaa8", "number": 261, "file": "Series 3/[AC] 261 - Tucker.bin", "image": "cards/261-Tucker.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Blanche", "name_kor": "\uc2e0\uc625", "number": 262, "file": "Series 3/[AC] 262 - Blanche.bin", "image": "cards/262-Blanche.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Gaston", "name_kor": "\ub300\uae38", "number": 263, "file": "Series 3/[AC] 263 - Gaston.bin", "image": "cards/263-Gaston.png", "series": 3, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Marshal", "name_kor": "\ucb48\ub2c8", "number": 264, "file": "Series 3/[AC] 264 - Marshal.bin", "image": "cards/264-Marshal.png", "series": 3, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Gala", "name_kor": "\uaf43\uc9c0", "number": 265, "file": "Series 3/[AC] 265 - Gala.bin", "image": "cards/265-Gala.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Joey", "name_kor": "\ub9ac\ucc98\ub4dc", "number": 266, "file": "Series 3/[AC] 266 - Joey.bin", "image": "cards/266-Joey.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Pippy", "name_kor": "\ub85c\ud0c0", "number": 267, "file": "Series 3/[AC] 267 - Pippy.bin", "image": "cards/267-Pippy.png", "series": 3, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Buck", "name_kor": "\ubc14\uc57c\uc2dc\ucf54\ud504", "number": 268, "file": "Series 3/[AC] 268 - Buck.bin", "image": "cards/268-Buck.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Bree", "name_kor": "\uc0ac\ub77c", "number": 269, "file": "Series 3/[AC] 269 - Bree.bin", "image": "cards/269-Bree.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Rooney", "name_kor": "\ub9c8\uc774\ud06c", "number": 270, "file": "Series 3/[AC] 270 - Rooney.bin", "image": "cards/270-Rooney.png", "series": 3, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Curlos", "name_kor": "\uce74\ub97c\ub85c\uc2a4", "number": 271, "file": "Series 3/[AC] 271 - Curlos.bin", "image": "cards/271-Curlos.png", "series": 3, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Skye", "name_kor": "\ub9b4\ub9ac", "number": 272, "file": "Series 3/[AC] 272 - Skye.bin", "image": "cards/272-Skye.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Moe", "name_kor": "\uc9c4\uc0c1", "number": 273, "file": "Series 3/[AC] 273 - Moe.bin", "image": "cards/273-Moe.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Flora", "name_kor": "\ud50c\ub77c\ub77c", "number": 274, "file": "Series 3/[AC] 274 - Flora.bin", "image": "cards/274-Flora.png", "series": 3, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Hamlet", "name_kor": "\ud584\uc2a4\ud2f4", "number": 275, "file": "Series 3/[AC] 275 - Hamlet.bin", "image": "cards/275-Hamlet.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Astrid", "name_kor": "\ud391\ud0a4\ub9d8", "number": 276, "file": "Series 3/[AC] 276 - Astrid.bin", "image": "cards/276-Astrid.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Monty", "name_kor": "\ubabd\ud2f0", "number": 277, "file": "Series 3/[AC] 277 - Monty.bin", "image": "cards/277-Monty.png", "series": 3, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Dora", "name_kor": "\ud2f0\ubbf8", "number": 278, "file": "Series 3/[AC] 278 - Dora.bin", "image": "cards/278-Dora.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Biskit", "name_kor": "\ub85c\ube48", "number": 279, "file": "Series 3/[AC] 279 - Biskit.bin", "image": "cards/279-Biskit.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Victoria", "name_kor": "\uc13c\ud2b8\uc5d8\ub85c", "number": 280, "file": "Series 3/[AC] 280 - Victoria.bin", "image": "cards/280-Victoria.png", "series": 3, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Lyman", "name_kor": "\uc624\uc988\uba3c\ub4dc", "number": 281, "file": "Series 3/[AC] 281 - Lyman.bin", "image": "cards/281-Lyman.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Violet", "name_kor": "\uc90c\ub9c8", "number": 282, "file": "Series 3/[AC] 282 - Violet.bin", "image": "cards/282-Violet.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Frank", "name_kor": "\ud5d0\ud06c", "number": 283, "file": "Series 3/[AC] 283 - Frank.bin", "image": "cards/283-Frank.png", "series": 3, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Chadder", "name_kor": "\uce58\uc988", "number": 284, "file": "Series 3/[AC] 284 - Chadder.bin", "image": "cards/284-Chadder.png", "series": 3, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Merengue", "name_kor": "\uc2a4\ud2b8\ub85c\ubca0\ub9ac", "number": 285, "file": "Series 3/[AC] 285 - Merengue.bin", "image": "cards/285-Merengue.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Cube", "name_kor": "\ube59\uc218", "number": 286, "file": "Series 3/[AC] 286 - Cube.bin", "image": "cards/286-Cube.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Claudia", "name_kor": "\uc2e0\ub514", "number": 287, "file": "Series 3/[AC] 287 - Claudia.bin", "image": "cards/287-Claudia.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Curly", "name_kor": "\ud584\uae4c\uc2a4", "number": 288, "file": "Series 3/[AC] 288 - Curly.bin", "image": "cards/288-Curly.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Boomer", "name_kor": "\ud33d\uae30", "number": 289, "file": "Series 3/[AC] 289 - Boomer.bin", "image": "cards/289-Boomer.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Caroline", "name_kor": "\uce90\ub864\ub77c\uc778", "number": 290, "file": "Series 3/[AC] 290 - Caroline.bin", "image": "cards/290-Caroline.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Sparro", "name_kor": "\ucd98\uc12d", "number": 291, "file": "Series 3/[AC] 291 - Sparro.bin", "image": "cards/291-Sparro.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Baabara", "name_kor": "\ud2b8\ub85c\uc640", "number": 292, "file": "Series 3/[AC] 292 - Baabara.bin", "image": "cards/292-Baabara.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Rolf", "name_kor": "\ud638\ub7ad\uc774", "number": 293, "file": "Series 3/[AC] 293 - Rolf.bin", "image": "cards/293-Rolf.png", "series": 3, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Maple", "name_kor": "\uba54\uc774\uccbc", "number": 294, "file": "Series 3/[AC] 294 - Maple.bin", "image": "cards/294-Maple.png", "series": 3, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Antonio", "name_kor": "\ud37c\uba38\uac70", "number": 295, "file": "Series 3/[AC] 295 - Antonio.bin", "image": "cards/295-Antonio.png", "series": 3, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Soleil", "name_kor": "\uc0e8\ud2f0", "number": 296, "file": "Series 3/[AC] 296 - Soleil.bin", "image": "cards/296-Soleil.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Apollo", "name_kor": "\uc544\ud3f4\ub85c", "number": 297, "file": "Series 3/[AC] 297 - Apollo.bin", "image": "cards/297-Apollo.png", "series": 3, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Derwin", "name_kor": "\ubd09", "number": 298, "file": "Series 3/[AC] 298 - Derwin.bin", "image": "cards/298-Derwin.png", "series": 3, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Francine", "name_kor": "\ud504\ub791\uc18c\uc640", "number": 299, "file": "Series 3/[AC] 299 - Francine.bin", "image": "cards/299-Francine.png", "series": 3, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Chrissy", "name_kor": "\ud06c\ub9ac\uc2a4\ud2f4", "number": 300, "file": "Series 3/[AC] 300 - Chrissy.bin", "image": "cards/300-Chrissy.png", "series": 3, "personality": ["Peppy", "\uc544\uc774\ub3cc"]},
-    {"name": "Isabelle", "name_kor": "\uc5ec\uc6b8", "number": 301, "file": "Series 4/[AC] 301 - Isabelle.bin", "image": "cards/301-Isabelle.png", "series": 4, "personality": ["", ""]}, {"name": "Brewster", "name_kor": "\ub9c8\uc2a4\ud130", "number": 302, "file": "Series 4/[AC] 302 - Brewster.bin", "image": "cards/302-Brewster.png", "series": 4, "personality": ["", ""]}, {"name": "Katrina", "name_kor": "\uce74\ud2b8\ub9ac\ub098", "number": 303, "file": "Series 4/[AC] 303 - Katrina.bin", "image": "cards/303-Katrina.png", "series": 4, "personality": ["", ""]}, {"name": "Phineas", "name_kor": "\ud30c\ub860\ud2f0\ub178\u00a0\uc639", "number": 304, "file": "Series 4/[AC] 304 - Phineas.bin", "image": "cards/304-Phineas.png", "series": 4, "personality": ["", ""]}, {"name": "Celeste", "name_kor": "\ubd80\uc625", "number": 305, "file": "Series 4/[AC] 305 - Celeste.bin", "image": "cards/305-Celeste.png", "series": 4, "personality": ["", ""]}, {"name": "Tommy", "name_kor": "\ubc24\ub3cc", "number": 306, "file": "Series 4/[AC] 306 - Tommy.bin", "image": "cards/306-Tommy.png", "series": 4, "personality": ["", ""]}, {"name": "Gracie", "name_kor": "\uadf8\ub808\uc774\uc2a4", "number": 307, "file": "Series 4/[AC] 307 - Gracie.bin", "image": "cards/307-Gracie.png", "series": 4, "personality": ["", ""]}, {"name": "Leilani", "name_kor": "\uac11\uc21c\uc774", "number": 308, "file": "Series 4/[AC] 308 - Leilani.bin", "image": "cards/308-Leilani.png", "series": 4, "personality": ["", ""]}, {"name": "Resetti", "name_kor": "\ub3c4\ub8e8\ubb35\uc528", "number": 309, "file": "Series 4/[AC] 309 - Resetti.bin", "image": "cards/309-Resetti.png", "series": 4, "personality": ["", ""]}, {"name": "Timmy", "name_kor": "\ucf69\ub3cc", "number": 310, "file": "Series 4/[AC] 310 - Timmy.bin", "image": "cards/310-Timmy.png", "series": 4, "personality": ["", ""]}, {"name": "Lottie", "name_kor": "\ud0c0\ucfe0\ubbf8", "number": 311, "file": "Series 4/[AC] 311 - Lottie.bin", "image": "cards/311-Lottie.png", "series": 4, "personality": ["", ""]}, {"name": "Shrunk", "name_kor": "\uc2a4\uc2b9", "number": 312, "file": "Series 4/[AC] 312 - Shrunk.bin", "image": "cards/312-Shrunk.png", "series": 4, "personality": ["", ""]}, {"name": "Pave", "name_kor": "\ubca0\ub974\ub9ac\ub098", "number": 313, "file": "Series 4/[AC] 313 - Pave.bin", "image": "cards/313-Pave.png", "series": 4, "personality": ["", ""]}, {"name": "Gulliver", "name_kor": "\uc8e0\ub2c8", "number": 314, "file": "Series 4/[AC] 314 - Gulliver.bin", "image": "cards/314-Gulliver.png", "series": 4, "personality": ["", ""]}, {"name": "Redd", "name_kor": "\uc5ec\uc6b1", "number": 315, "file": "Series 4/[AC] 315 - Redd.bin", "image": "cards/315-Redd.png", "series": 4, "personality": ["", ""]}, {"name": "Zipper", "name_kor": "\ud1a0\ube57", "number": 316, "file": "Series 4/[AC] 316 - Zipper.bin", "image": "cards/316-Zipper.png", "series": 4, "personality": ["", ""]}, {"name": "Goldie", "name_kor": "\uce74\ub77c\uba5c", "number": 317, "file": "Series 4/[AC] 317 - Goldie.bin", "image": "cards/317-Goldie.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Stitches", "name_kor": "\ud328\uce58", "number": 318, "file": "Series 4/[AC] 318 - Stitches.bin", "image": "cards/318-Stitches.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Pinky", "name_kor": "\ub9c1\ub9c1", "number": 319, "file": "Series 4/[AC] 319 - Pinky.bin", "image": "cards/319-Pinky.png", "series": 4, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Mott", "name_kor": "\ub9ad", "number": 320, "file": "Series 4/[AC] 320 - Mott.bin", "image": "cards/320-Mott.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Mallary", "name_kor": "\uc2a4\ubbf8\ubaa8", "number": 321, "file": "Series 4/[AC] 321 - Mallary.bin", "image": "cards/321-Mallary.png", "series": 4, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Rocco", "name_kor": "\ube0c\ub85c\ucf5c\ub9ac", "number": 322, "file": "Series 4/[AC] 322 - Rocco.bin", "image": "cards/322-Rocco.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Katt", "name_kor": "\ucd78\uc774", "number": 323, "file": "Series 4/[AC] 323 - Katt.bin", "image": "cards/323-Katt.png", "series": 4, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Graham", "name_kor": "\uae00\ub77c\ud584", "number": 324, "file": "Series 4/[AC] 324 - Graham.bin", "image": "cards/324-Graham.png", "series": 4, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Peaches", "name_kor": "\ub9d0\uc790", "number": 325, "file": "Series 4/[AC] 325 - Peaches.bin", "image": "cards/325-Peaches.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Dizzy", "name_kor": "\ud734\uc9c0", "number": 326, "file": "Series 4/[AC] 326 - Dizzy.bin", "image": "cards/326-Dizzy.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Penelope", "name_kor": "\ucc0d\uc21c\uc774", "number": 327, "file": "Series 4/[AC] 327 - Penelope.bin", "image": "cards/327-Penelope.png", "series": 4, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Boone", "name_kor": "\ub9cc\ubcf5\uc774", "number": 328, "file": "Series 4/[AC] 328 - Boone.bin", "image": "cards/328-Boone.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Broffina", "name_kor": "\ud788\ud0a8", "number": 329, "file": "Series 4/[AC] 329 - Broffina.bin", "image": "cards/329-Broffina.png", "series": 4, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Croque", "name_kor": "\ud22c\ud22c", "number": 330, "file": "Series 4/[AC] 330 - Croque.bin", "image": "cards/330-Croque.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Pashmina", "name_kor": "\ubc14\ubc14\ub77c", "number": 331, "file": "Series 4/[AC] 331 - Pashmina.bin", "image": "cards/331-Pashmina.png", "series": 4, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Shep", "name_kor": "\ubc25", "number": 332, "file": "Series 4/[AC] 332 - Shep.bin", "image": "cards/332-Shep.png", "series": 4, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Lolly", "name_kor": "\uc0ac\uc774\ub2e4", "number": 333, "file": "Series 4/[AC] 333 - Lolly.bin", "image": "cards/333-Lolly.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Erik", "name_kor": "\uc790\ub044", "number": 334, "file": "Series 4/[AC] 334 - Erik.bin", "image": "cards/334-Erik.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Dotty", "name_kor": "\uc11c\uba38", "number": 335, "file": "Series 4/[AC] 335 - Dotty.bin", "image": "cards/335-Dotty.png", "series": 4, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Pierce", "name_kor": "\uc138\ubc14\uc2a4\ucc2c", "number": 336, "file": "Series 4/[AC] 336 - Pierce.bin", "image": "cards/336-Pierce.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Queenie", "name_kor": "\ud0dd\uc8fc", "number": 337, "file": "Series 4/[AC] 337 - Queenie.bin", "image": "cards/337-Queenie.png", "series": 4, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Fang", "name_kor": "\uc2dc\ubca0\ub9ac\uc544", "number": 338, "file": "Series 4/[AC] 338 - Fang.bin", "image": "cards/338-Fang.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Frita", "name_kor": "\uc6ec\ub514", "number": 339, "file": "Series 4/[AC] 339 - Fritta.bin", "image": "cards/339-Fritta.png", "series": 4, "personality": ["Sisterly", "단순활발"]}, {"name": "Tex", "name_kor": "\ubcfc\ud2b8", "number": 340, "file": "Series 4/[AC] 340 - Tex.bin", "image": "cards/340-Tex.png", "series": 4, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Melba", "name_kor": "\uc544\ub378\ub808\uc774\ub4dc", "number": 341, "file": "Series 4/[AC] 341 - Melba.bin", "image": "cards/341-Melba.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Bones", "name_kor": "\ud1a0\ubbf8", "number": 342, "file": "Series 4/[AC] 342 - Bones.bin", "image": "cards/342-Bones.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Anabelle", "name_kor": "\uc544\ub871\uc774", "number": 343, "file": "Series 4/[AC] 343 - Anabelle.bin", "image": "cards/343-Anabelle.png", "series": 4, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Rudy", "name_kor": "\ucc30\uc2a4", "number": 344, "file": "Series 4/[AC] 344 - Rudy.bin", "image": "cards/344-Rudy.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Naomi", "name_kor": "\ud654\uc790", "number": 345, "file": "Series 4/[AC] 345 - Naomi.bin", "image": "cards/345-Naomi.png", "series": 4, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Peewee", "name_kor": "\ub364\ubca8", "number": 346, "file": "Series 4/[AC] 346 - Peewee.bin", "image": "cards/346-Peewee.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Tammy", "name_kor": "\uc544\ub124\uc0ac", "number": 347, "file": "Series 4/[AC] 347 - Tammy.bin", "image": "cards/347-Tammy.png", "series": 4, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Olaf", "name_kor": "\uc548\ud1a0\ub2c8\uc624", "number": 348, "file": "Series 4/[AC] 348 - Olaf.bin", "image": "cards/348-Olaf.png", "series": 4, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Lucy", "name_kor": "\ub8e8\uc2dc", "number": 349, "file": "Series 4/[AC] 349 - Lucy.bin", "image": "cards/349-Lucy.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Elmer", "name_kor": "\uc0e4\ube0c\ub80c", "number": 350, "file": "Series 4/[AC] 350 - Elmer.bin", "image": "cards/350-Elmer.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Puddles", "name_kor": "\uac00\uc704", "number": 351, "file": "Series 4/[AC] 351 - Puddles.bin", "image": "cards/351-Puddles.png", "series": 4, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Rory", "name_kor": "\uc544\ub354", "number": 352, "file": "Series 4/[AC] 352 - Rory.bin", "image": "cards/352-Rory.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Elise", "name_kor": "\ubabd\uc790", "number": 353, "file": "Series 4/[AC] 353 - Elise.bin", "image": "cards/353-Elise.png", "series": 4, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Walt", "name_kor": "\uad00\ub85d", "number": 354, "file": "Series 4/[AC] 354 - Walt.bin", "image": "cards/354-Walt.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Mira", "name_kor": "\ubbf8\ub791", "number": 355, "file": "Series 4/[AC] 355 - Mira.bin", "image": "cards/355-Mira.png", "series": 4, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Pietro", "name_kor": "\ud53c\uc5d8", "number": 356, "file": "Series 4/[AC] 356 - Pietro.bin", "image": "cards/356-Pietro.png", "series": 4, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Aurora", "name_kor": "\uc624\ub85c\ub77c", "number": 357, "file": "Series 4/[AC] 357 - Aurora.bin", "image": "cards/357-Aurora.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Papi", "name_kor": "\ub9c8\uc0ac\ub9c8", "number": 358, "file": "Series 4/[AC] 358 - Papi.bin", "image": "cards/358-Papi.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Apple", "name_kor": "\uc560\ud50c", "number": 359, "file": "Series 4/[AC] 359 - Apple.bin", "image": "cards/359-Apple.png", "series": 4, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Rod", "name_kor": "\uc7dd", "number": 360, "file": "Series 4/[AC] 360 - Rod.bin", "image": "cards/360-Rod.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Purrl", "name_kor": "\ud0c0\ub9c8", "number": 361, "file": "Series 4/[AC] 361 - Purrl.bin", "image": "cards/361-Purrl.png", "series": 4, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Static", "name_kor": "\uc2a4\ud30c\ud06c", "number": 362, "file": "Series 4/[AC] 362 - Static.bin", "image": "cards/362-Static.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Celia", "name_kor": "\ud2f0\ud30c\ub2c8", "number": 363, "file": "Series 4/[AC] 363 - Celia.bin", "image": "cards/363-Celia.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Zucker", "name_kor": "\ud0c1\ud638", "number": 364, "file": "Series 4/[AC] 364 - Zucker.bin", "image": "cards/364-Zucker.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Peggy", "name_kor": "\uccb4\ub9ac", "number": 365, "file": "Series 4/[AC] 365 - Peggy.bin", "image": "cards/365-Peggy.png", "series": 4, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Ribbot", "name_kor": "\ucca0\ucee5", "number": 366, "file": "Series 4/[AC] 366 - Ribbot.bin", "image": "cards/366-Ribbot.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Annalise", "name_kor": "\uc2e4\ubd80\ud50c\ub808", "number": 367, "file": "Series 4/[AC] 367 - Annalise.bin", "image": "cards/367-Annalise.png", "series": 4, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Chow", "name_kor": "\uce04\uc591", "number": 368, "file": "Series 4/[AC] 368 - Chow.bin", "image": "cards/368-Chow.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Sylvia", "name_kor": "\uc2e4\ube44\uc544", "number": 369, "file": "Series 4/[AC] 369 - Sylvia.bin", "image": "cards/369-Sylvia.png", "series": 4, "personality": ["Sisterly", "\ub2e8\uc21c\ud65c\ubc1c"]}, {"name": "Jacques", "name_kor": "\ucabc\ub07c", "number": 370, "file": "Series 4/[AC] 370 - Jacques.bin", "image": "cards/370-Jacques.png", "series": 4, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Sally", "name_kor": "\ub77c\ub77c\ubbf8", "number": 371, "file": "Series 4/[AC] 371 - Sally.bin", "image": "cards/371-Sally.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Doc", "name_kor": "\ud1a0\ub2c8", "number": 372, "file": "Series 4/[AC] 372 - Doc.bin", "image": "cards/372-Doc.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Pompom", "name_kor": "\uc8fc\ub514", "number": 373, "file": "Series 4/[AC] 373 - Pompom.bin", "image": "cards/373-Pompom.png", "series": 4, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Tank", "name_kor": "\ud0f1\ud06c", "number": 374, "file": "Series 4/[AC] 374 - Tank.bin", "image": "cards/374-Tank.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Becky", "name_kor": "\uc544\ub9ac\uc544", "number": 375, "file": "Series 4/[AC] 375 - Becky.bin", "image": "cards/375-Becky.png", "series": 4, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Rizzo", "name_kor": "\uc870\ub974\uc950", "number": 376, "file": "Series 4/[AC] 376 - Rizzo.bin", "image": "cards/376-Rizzo.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Sydney", "name_kor": "\uc2dc\ub4dc\ub2c8", "number": 377, "file": "Series 4/[AC] 377 - Sydney.bin", "image": "cards/377-Sydney.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Barold", "name_kor": "\uacf0\uc2dc", "number": 378, "file": "Series 4/[AC] 378 - Barold.bin", "image": "cards/378-Barold.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Nibbles", "name_kor": "\uadf8\ub9ac\ubbf8", "number": 379, "file": "Series 4/[AC] 379 - Nibbles.bin", "image": "cards/379-Nibbles.png", "series": 4, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Kevin", "name_kor": "\uba67\uc9c0", "number": 380, "file": "Series 4/[AC] 380 - Kevin.bin", "image": "cards/380-Kevin.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Gloria", "name_kor": "\ub9c8\ub9b4\ub9b0", "number": 381, "file": "Series 4/[AC] 381 - Gloria.bin", "image": "cards/381-Gloria.png", "series": 4, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Lobo", "name_kor": "\ub291\ud0dc", "number": 382, "file": "Series 4/[AC] 382 - Lobo.bin", "image": "cards/382-Lobo.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Hippeux", "name_kor": "\ub370\uc774\ube57", "number": 383, "file": "Series 4/[AC] 383 - Hippeux.bin", "image": "cards/383-Hippeux.png", "series": 4, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Margie", "name_kor": "\uc0d0\ub9ac", "number": 384, "file": "Series 4/[AC] 384 - Margie.bin", "image": "cards/384-Margie.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Lucky", "name_kor": "\ub7ed\ud0a4", "number": 385, "file": "Series 4/[AC] 385 - Lucky.bin", "image": "cards/385-Lucky.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Rosie", "name_kor": "\ubd80\ucf00", "number": 386, "file": "Series 4/[AC] 386 - Rosie.bin", "image": "cards/386-Rosie.png", "series": 4, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Rowan", "name_kor": "\uace0\uba54\uc2a4", "number": 387, "file": "Series 4/[AC] 387 - Rowan.bin", "image": "cards/387-Rowan.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Maelle", "name_kor": "\uc564", "number": 388, "file": "Series 4/[AC] 388 - Maelle.bin", "image": "cards/388-Maelle.png", "series": 4, "personality": ["Snooty", "\uc131\uc219\ud568"]}, {"name": "Bruce", "name_kor": "\ube0c\ub8e8\uc2a4", "number": 389, "file": "Series 4/[AC] 389 - Bruce.bin", "image": "cards/389-Bruce.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "O'Hare", "name_kor": "\uc0b0\ud1a0\uc2a4", "number": 390, "file": "Series 4/[AC] 390 - O'Hare.bin", "image": "cards/390-O'Hare.png", "series": 4, "personality": ["Smug", "\ub290\ub07c\ud568"]}, {"name": "Gayle", "name_kor": "\uc568\ub9ac", "number": 391, "file": "Series 4/[AC] 391 - Gayle.bin", "image": "cards/391-Gayle.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Cranston", "name_kor": "\ud0c0\ud0a4", "number": 392, "file": "Series 4/[AC] 392 - Cranston.bin", "image": "cards/392-Cranston.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Frobert", "name_kor": "\uad6c\ub9ac\uad6c\ub9ac", "number": 393, "file": "Series 4/[AC] 393 - Frobert.bin", "image": "cards/393-Frobert.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Grizzly", "name_kor": "\ubb34\ub69d", "number": 394, "file": "Series 4/[AC] 394 - Grizzly.bin", "image": "cards/394-Grizzly.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Cally", "name_kor": "\ud30c\uc2ac\ub9ac", "number": 395, "file": "Series 4/[AC] 395 - Cally.bin", "image": "cards/395-Cally.png", "series": 4, "personality": ["Normal", "\uce5c\uc808\ud568"]}, {"name": "Simon", "name_kor": "\uc2dc\ubaac", "number": 396, "file": "Series 4/[AC] 396 - Simon.bin", "image": "cards/396-Simon.png", "series": 4, "personality": ["Lazy", "\uba39\ubcf4"]}, {"name": "Iggly", "name_kor": "\uae40\ub9d0\uc774", "number": 397, "file": "Series 4/[AC] 397 - Iggly.bin", "image": "cards/397-Iggly.png", "series": 4, "personality": ["Jock", "\uc6b4\ub3d9\uad11"]}, {"name": "Angus", "name_kor": "\ubc18\ub370\uc2a4", "number": 398, "file": "Series 4/[AC] 398 - Angus.bin", "image": "cards/398-Angus.png", "series": 4, "personality": ["Cranky", "\ubb34\ub69d\ub69d"]}, {"name": "Twiggy", "name_kor": "\ud540\ud2f1", "number": 399, "file": "Series 4/[AC] 399 - Twiggy.bin", "image": "cards/399-Twiggy.png", "series": 4, "personality": ["Peppy", "\uc544\uc774\ub3cc"]}, {"name": "Robin", "name_kor": "\ud30c\ud2f1", "number": 400, "file": "Series 4/[AC] 400 - Robin.bin", "image": "cards/400-Robin.png", "series": 4, "personality": ["Snooty", "\uc131\uc219\ud568"]},
+  "data": [
     {
-      "name": "Raymond",
-      "name_kor": "잭슨",
-      "number": -1,
-      "file": "no",
-      "image": "cards/blank.png",
-      "series": -1,
-      "personality": ["Smug", "느끼함"]
+      "name": "Isabelle",
+      "name_kor": "\uc5ec\uc6b8",
+      "number": 1,
+      "file": "Series 1/[AC] 001 - Isabelle.bin",
+      "image": "cards/1-Isabelle.png",
+      "series": 1,
+      "personality": null
     },
-
     {
-      "name": "Judy",
-      "name_kor": "미애",
-      "number": -1,
-      "file": "no",
-      "image": "cards/blank.png",
-      "series": -1,
-      "personality": ["Snooty", "성숙함"]
+      "name": "Tom Nook",
+      "name_kor": "너굴",
+      "number": 2,
+      "file": "Series 1/[AC] 002 - Tom Nook.bin",
+      "image": "cards/2-Tom Nook.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "DJ KK",
+      "name_kor": "",
+      "number": 3,
+      "file": "Series 1/[AC] 003 - DJ KK.bin",
+      "image": "cards/3-DJ KK.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Sable",
+      "name_kor": "\uace0\uc625\uc774",
+      "number": 4,
+      "file": "Series 1/[AC] 004 - Sable.bin",
+      "image": "cards/4-Sable.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Kappn",
+      "name_kor": "",
+      "number": 5,
+      "file": "Series 1/[AC] 005 - Kappn.bin",
+      "image": "cards/5-Kappn.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Resetti",
+      "name_kor": "\ub3c4\ub8e8\ubb35\uc528",
+      "number": 6,
+      "file": "Series 1/[AC] 006 - Resetti.bin",
+      "image": "cards/6-Resetti.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Joan",
+      "name_kor": "\ubb34\ud30c\ub77c",
+      "number": 7,
+      "file": "Series 1/[AC] 007 - Joan.bin",
+      "image": "cards/7-Joan.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Timmy",
+      "name_kor": "\ucf69\ub3cc",
+      "number": 8,
+      "file": "Series 1/[AC] 008 - Timmy.bin",
+      "image": "cards/8-Timmy.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Digby",
+      "name_kor": "\ucf04\ud2b8",
+      "number": 9,
+      "file": "Series 1/[AC] 009 - Digby.bin",
+      "image": "cards/9-Digby.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Pascal",
+      "name_kor": "\ud574\ud0c8\ud55c",
+      "number": 10,
+      "file": "Series 1/[AC] 010 - Pascal.bin",
+      "image": "cards/10-Pascal.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Harriet",
+      "name_kor": "\uce74\ud2b8\ub9ac\ub098",
+      "number": 11,
+      "file": "Series 1/[AC] 011 - Harriet.bin",
+      "image": "cards/11-Harriet.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Redd",
+      "name_kor": "\uc5ec\uc6b1",
+      "number": 12,
+      "file": "Series 1/[AC] 012 - Redd.bin",
+      "image": "cards/12-Redd.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Saharah",
+      "name_kor": "\uc0ac\ub77c\ud558",
+      "number": 13,
+      "file": "Series 1/[AC] 013 - Saharah.bin",
+      "image": "cards/13-Saharah.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Luna",
+      "name_kor": "\ubabd\uc170\ub974",
+      "number": 14,
+      "file": "Series 1/[AC] 014 - Luna.bin",
+      "image": "cards/14-Luna.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Tortimer",
+      "name_kor": "\uace0\ubd81",
+      "number": 15,
+      "file": "Series 1/[AC] 015 - Tortimer.bin",
+      "image": "cards/15-Tortimer.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Lyle",
+      "name_kor": "\uc548\uc2ec\ud574",
+      "number": 16,
+      "file": "Series 1/[AC] 016 - Lyle.bin",
+      "image": "cards/16-Lyle.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Lottie",
+      "name_kor": "\ud0c0\ucfe0\ubbf8",
+      "number": 17,
+      "file": "Series 1/[AC] 017 - Lottie.bin",
+      "image": "cards/17-Lottie.png",
+      "series": 1,
+      "personality": null
+    },
+    {
+      "name": "Bob",
+      "name_kor": "\ud788\uc8fd",
+      "number": 18,
+      "file": "Series 1/[AC] 018 - Bob.bin",
+      "image": "cards/18-Bob.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Fauna",
+      "name_kor": "\uc194\ubbf8",
+      "number": 19,
+      "file": "Series 1/[AC] 019 - Fauna.bin",
+      "image": "cards/19-Fauna.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Curt",
+      "name_kor": "\ub69d\uc2ec",
+      "number": 20,
+      "file": "Series 1/[AC] 020 - Curt.bin",
+      "image": "cards/20-Curt.png",
+      "series": 1,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Portia",
+      "name_kor": "\ube14\ub79c\ub354",
+      "number": 21,
+      "file": "Series 1/[AC] 021 - Portia.bin",
+      "image": "cards/21-Portia.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Leonardo",
+      "name_kor": "\ubc94\ud638",
+      "number": 22,
+      "file": "Series 1/[AC] 022 - Leonardo.bin",
+      "image": "cards/22-Leonardo.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Cheri",
+      "name_kor": "\uc544\uc138\ub85c\ub77c",
+      "number": 23,
+      "file": "Series 1/[AC] 023 - Cheri.bin",
+      "image": "cards/23-Cheri.png",
+      "series": 1,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Kyle",
+      "name_kor": "\ub9ac\uce74\ub974\ub3c4",
+      "number": 24,
+      "file": "Series 1/[AC] 024 - Kyle.bin",
+      "image": "cards/24-Kyle.png",
+      "series": 1,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Al",
+      "name_kor": "\uc6b0\ub77d",
+      "number": 25,
+      "file": "Series 1/[AC] 025 - Al.bin",
+      "image": "cards/25-Al.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Renee",
+      "name_kor": "\ubfd4\ub2d8\uc774",
+      "number": 26,
+      "file": "Series 1/[AC] 026 - Renee.bin",
+      "image": "cards/26-Renee.png",
+      "series": 1,
+      "personality": [
+        "Sisterly",
+        "단순활발"
+      ]
+    },
+    {
+      "name": "Lopez",
+      "name_kor": "\ud1b0\uc2a8",
+      "number": 27,
+      "file": "Series 1/[AC] 027 - Lopez.bin",
+      "image": "cards/27-Lopez.png",
+      "series": 1,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Jambette",
+      "name_kor": "\uc5d0\uc2a4\uba54\ub784\ub2e4",
+      "number": 28,
+      "file": "Series 1/[AC] 028 - Jambette.bin",
+      "image": "cards/28-Jambette.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Rasher",
+      "name_kor": "\uae00\ub808\uc774",
+      "number": 29,
+      "file": "Series 1/[AC] 029 - Rasher.bin",
+      "image": "cards/29-Rasher.png",
+      "series": 1,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Tiffany",
+      "name_kor": "\ubc14\uc2ac\ub808",
+      "number": 30,
+      "file": "Series 1/[AC] 030 - Tiffany.bin",
+      "image": "cards/30-Tiffany.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Sheldon",
+      "name_kor": "\ud06c\ub9ac\uc2a4",
+      "number": 31,
+      "file": "Series 1/[AC] 031 - Sheldon.bin",
+      "image": "cards/31-Sheldon.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Bluebear",
+      "name_kor": "\uae00\ub8e8\ubbfc",
+      "number": 32,
+      "file": "Series 1/[AC] 032 - Bluebear.bin",
+      "image": "cards/32-Bluebear.png",
+      "series": 1,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Bill",
+      "name_kor": "\ucf54\ucf54\uc544",
+      "number": 33,
+      "file": "Series 1/[AC] 033 - Bill.bin",
+      "image": "cards/33-Bill.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Kiki",
+      "name_kor": "\uce90\ube44\uc5b4",
+      "number": 34,
+      "file": "Series 1/[AC] 034 - Kiki.bin",
+      "image": "cards/34-Kiki.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Deli",
+      "name_kor": "\ub378\ub9ac",
+      "number": 35,
+      "file": "Series 1/[AC] 035 - Deli.bin",
+      "image": "cards/35-Deli.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Alli",
+      "name_kor": "\ud06c\ub85c\ud06c",
+      "number": 36,
+      "file": "Series 1/[AC] 036 - Alli.bin",
+      "image": "cards/36-Alli.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Kabuki",
+      "name_kor": "\uac00\ubd81\ud76c",
+      "number": 37,
+      "file": "Series 1/[AC] 037 - Kabuki.bin",
+      "image": "cards/37-Kabuki.png",
+      "series": 1,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Patty",
+      "name_kor": "\ubc00\ud06c",
+      "number": 38,
+      "file": "Series 1/[AC] 038 - Patty.bin",
+      "image": "cards/38-Patty.png",
+      "series": 1,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Jitters",
+      "name_kor": "\ub529\uc694",
+      "number": 39,
+      "file": "Series 1/[AC] 039 - Jitters.bin",
+      "image": "cards/39-Jitters.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Gigi",
+      "name_kor": "\ub9b0\ub2e4",
+      "number": 40,
+      "file": "Series 1/[AC] 040 - Gigi.bin",
+      "image": "cards/40-Gigi.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Quillson",
+      "name_kor": "\ub355\uadfc",
+      "number": 41,
+      "file": "Series 1/[AC] 041 - Quillson.bin",
+      "image": "cards/41-Quillson.png",
+      "series": 1,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Marcie",
+      "name_kor": "\ub9c8\ub9ac\uc544",
+      "number": 42,
+      "file": "Series 1/[AC] 042 - Marcie.bin",
+      "image": "cards/42-Marcie.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Puck",
+      "name_kor": "\ud558\ud0a4",
+      "number": 43,
+      "file": "Series 1/[AC] 043 - Puck.bin",
+      "image": "cards/43-Puck.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Shari",
+      "name_kor": "\uc824\ub9ac",
+      "number": 44,
+      "file": "Series 1/[AC] 044 - Shari.bin",
+      "image": "cards/44-Shari.png",
+      "series": 1,
+      "personality": [
+        "Sisterly",
+        "단순활발"
+      ]
+    },
+    {
+      "name": "Octavian",
+      "name_kor": "\ubb38\ubcf5",
+      "number": 45,
+      "file": "Series 1/[AC] 045 - Octavian.bin",
+      "image": "cards/45-Octavian.png",
+      "series": 1,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Winnie",
+      "name_kor": "\uce74\ub85c\ud2f4",
+      "number": 46,
+      "file": "Series 1/[AC] 046 - Winnie.bin",
+      "image": "cards/46-Winnie.png",
+      "series": 1,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Knox",
+      "name_kor": "\uae08\ub07c\uc624",
+      "number": 47,
+      "file": "Series 1/[AC] 047 - Knox.bin",
+      "image": "cards/47-Knox.png",
+      "series": 1,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Sterling",
+      "name_kor": "\uc740\uc218\ub9ac",
+      "number": 48,
+      "file": "Series 1/[AC] 048 - Sterling.bin",
+      "image": "cards/48-Sterling.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Bonbon",
+      "name_kor": "\ubbf8\ubbf8",
+      "number": 49,
+      "file": "Series 1/[AC] 049 - Bonbon.bin",
+      "image": "cards/49-Bonbon.png",
+      "series": 1,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Punchy",
+      "name_kor": "\ube59\ud2f0",
+      "number": 50,
+      "file": "Series 1/[AC] 050 - Punchy.bin",
+      "image": "cards/50-Punchy.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Opal",
+      "name_kor": "\uc624\ud314",
+      "number": 51,
+      "file": "Series 1/[AC] 051 - Opal.bin",
+      "image": "cards/51-Opal.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Poppy",
+      "name_kor": "\ub2e4\ub78c",
+      "number": 52,
+      "file": "Series 1/[AC] 052 - Poppy.bin",
+      "image": "cards/52-Poppy.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Limberg",
+      "name_kor": "\ub2e8\ubb34\uc9c0",
+      "number": 53,
+      "file": "Series 1/[AC] 053 - Limberg.bin",
+      "image": "cards/53-Limberg.png",
+      "series": 1,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Deena",
+      "name_kor": "\ub9c8\ub9ac\ubaa8",
+      "number": 54,
+      "file": "Series 1/[AC] 054 - Deena.bin",
+      "image": "cards/54-Deena.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Snake",
+      "name_kor": "\ub2cc\ud1a0",
+      "number": 55,
+      "file": "Series 1/[AC] 055 - Snake.bin",
+      "image": "cards/55-Snake.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Bangle",
+      "name_kor": "\ub8e8\uc8fc",
+      "number": 56,
+      "file": "Series 1/[AC] 056 - Bangle.bin",
+      "image": "cards/56-Bangle.png",
+      "series": 1,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Phil",
+      "name_kor": "\ucf00\uc778",
+      "number": 57,
+      "file": "Series 1/[AC] 057 - Phil.bin",
+      "image": "cards/57-Phil.png",
+      "series": 1,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Monique",
+      "name_kor": "\uc81c\uc778",
+      "number": 58,
+      "file": "Series 1/[AC] 058 - Monique.bin",
+      "image": "cards/58-Monique.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Nate",
+      "name_kor": "\ubc15\ud558\uc2a4",
+      "number": 59,
+      "file": "Series 1/[AC] 059 - Nate.bin",
+      "image": "cards/59-Nate.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Samson",
+      "name_kor": "\ud53c\uc2a4",
+      "number": 60,
+      "file": "Series 1/[AC] 060 - Samson.bin",
+      "image": "cards/60-Samson.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Tutu",
+      "name_kor": "\uc5f0\uc720",
+      "number": 61,
+      "file": "Series 1/[AC] 061 - Tutu.bin",
+      "image": "cards/61-Tutu.png",
+      "series": 1,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "T-Bone",
+      "name_kor": "티본",
+      "number": 62,
+      "file": "Series 1/[AC] 062 - T-Bone.bin",
+      "image": "cards/62-T.png",
+      "series": 1,
+      "personality": [
+        "Cranky",
+        "무뚝뚝"
+      ]
+    },
+    {
+      "name": "Mint",
+      "name_kor": "\ubbfc\ud2b8",
+      "number": 63,
+      "file": "Series 1/[AC] 063 - Mint.bin",
+      "image": "cards/63-Mint.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Pudge",
+      "name_kor": "\uc6b0\ub760",
+      "number": 64,
+      "file": "Series 1/[AC] 064 - Pudge.bin",
+      "image": "cards/64-Pudge.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Midge",
+      "name_kor": "\ud551\uae00\uc774",
+      "number": 65,
+      "file": "Series 1/[AC] 065 - Midge.bin",
+      "image": "cards/65-Midge.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Gruff",
+      "name_kor": "\ube4c\ub9ac",
+      "number": 66,
+      "file": "Series 1/[AC] 066 - Gruff.bin",
+      "image": "cards/66-Gruff.png",
+      "series": 1,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Flurry",
+      "name_kor": "\ubf40\uc57c\ubbf8",
+      "number": 67,
+      "file": "Series 1/[AC] 067 - Flurry.bin",
+      "image": "cards/67-Flurry.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Clyde",
+      "name_kor": "\ub9c8\ucca0\uc774",
+      "number": 68,
+      "file": "Series 1/[AC] 068 - Clyde.bin",
+      "image": "cards/68-Clyde.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Bella",
+      "name_kor": "\uc774\uc790\ubca8",
+      "number": 69,
+      "file": "Series 1/[AC] 069 - Bella.bin",
+      "image": "cards/69-Bella.png",
+      "series": 1,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Biff",
+      "name_kor": "\uac00\ube0c\ub9ac\uc5d8",
+      "number": 70,
+      "file": "Series 1/[AC] 070 - Biff.bin",
+      "image": "cards/70-Biff.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Yuka",
+      "name_kor": "\uc720\uce74\ub9ac",
+      "number": 71,
+      "file": "Series 1/[AC] 071 - Yuka.bin",
+      "image": "cards/71-Yuka.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Lionel",
+      "name_kor": "\ub77c\uc774\uc624\ub12c",
+      "number": 72,
+      "file": "Series 1/[AC] 072 - Lionel.bin",
+      "image": "cards/72-Lionel.png",
+      "series": 1,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Flo",
+      "name_kor": "\ub808\uc774\ub77c",
+      "number": 73,
+      "file": "Series 1/[AC] 073 - Flo.bin",
+      "image": "cards/73-Flo.png",
+      "series": 1,
+      "personality": [
+        "Sisterly",
+        "단순활발"
+      ]
+    },
+    {
+      "name": "Cobb",
+      "name_kor": "\ubc15\uc0ac",
+      "number": 74,
+      "file": "Series 1/[AC] 074 - Cobb.bin",
+      "image": "cards/74-Cobb.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Amelia",
+      "name_kor": "\uc548\ub370\uc2a4",
+      "number": 75,
+      "file": "Series 1/[AC] 075 - Amelia.bin",
+      "image": "cards/75-Amelia.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Jeremiah",
+      "name_kor": "",
+      "number": 76,
+      "file": "Series 1/[AC] 076 - Jeramiah.bin",
+      "image": "cards/76-Jeramiah.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "먹보"
+      ]
+    },
+    {
+      "name": "Cherry",
+      "name_kor": "\ud55c\ub098",
+      "number": 77,
+      "file": "Series 1/[AC] 077 - Cherry.bin",
+      "image": "cards/77-Cherry.png",
+      "series": 1,
+      "personality": [
+        "Sisterly",
+        "단순활발"
+      ]
+    },
+    {
+      "name": "Roscoe",
+      "name_kor": "\uc288\ubca0\ub974\ud2b8",
+      "number": 78,
+      "file": "Series 1/[AC] 078 - Roscoe.bin",
+      "image": "cards/78-Roscoe.png",
+      "series": 1,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Truffles",
+      "name_kor": "\ud0f1\uace0",
+      "number": 79,
+      "file": "Series 1/[AC] 079 - Truffles.bin",
+      "image": "cards/79-Truffles.png",
+      "series": 1,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Eugene",
+      "name_kor": "\ucf54\uc54c",
+      "number": 80,
+      "file": "Series 1/[AC] 080 - Eugene.bin",
+      "image": "cards/80-Eugene.png",
+      "series": 1,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Eunice",
+      "name_kor": "\uacf1\uc2ac\uc774",
+      "number": 81,
+      "file": "Series 1/[AC] 081 - Eunice.bin",
+      "image": "cards/81-Eunice.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Goose",
+      "name_kor": "\uac74\ud0dc",
+      "number": 82,
+      "file": "Series 1/[AC] 082 - Goose.bin",
+      "image": "cards/82-Goose.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Annalisa",
+      "name_kor": "\uc124\ubc31",
+      "number": 83,
+      "file": "Series 1/[AC] 083 - Annalisa.bin",
+      "image": "cards/83-Annalisa.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Benjamin",
+      "name_kor": "\ub561\uce60\uc774",
+      "number": 84,
+      "file": "Series 1/[AC] 084 - Benjamin.bin",
+      "image": "cards/84-Benjamin.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Pancetti",
+      "name_kor": "\ube0c\ub9ac\ud2b8\ub2c8",
+      "number": 85,
+      "file": "Series 1/[AC] 085 - Pancetti.bin",
+      "image": "cards/85-Pancetti.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Chief",
+      "name_kor": "\ub300\uc7a5",
+      "number": 86,
+      "file": "Series 1/[AC] 086 - Chief.bin",
+      "image": "cards/86-Chief.png",
+      "series": 1,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Bunnie",
+      "name_kor": "\ub9b4\ub9ac\uc548",
+      "number": 87,
+      "file": "Series 1/[AC] 087 - Bunnie.bin",
+      "image": "cards/87-Bunnie.png",
+      "series": 1,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Clay",
+      "name_kor": "\ud584\ub465",
+      "number": 88,
+      "file": "Series 1/[AC] 088 - Clay.bin",
+      "image": "cards/88-Clay.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Diana",
+      "name_kor": "\ub098\ud0c8\ub9ac",
+      "number": 89,
+      "file": "Series 1/[AC] 089 - Diana.bin",
+      "image": "cards/89-Diana.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Axel",
+      "name_kor": "\uc5d1\uc2a4\uc5d8\ub9ac",
+      "number": 90,
+      "file": "Series 1/[AC] 090 - Axel.bin",
+      "image": "cards/90-Axel.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Muffy",
+      "name_kor": "\ud504\ub9b4",
+      "number": 91,
+      "file": "Series 1/[AC] 091 - Muffy.bin",
+      "image": "cards/91-Muffy.png",
+      "series": 1,
+      "personality": [
+        "Sisterly",
+        "단순활발"
+      ]
+    },
+    {
+      "name": "Henry",
+      "name_kor": "\ud5e8\ub9ac",
+      "number": 92,
+      "file": "Series 1/[AC] 092 - Henry.bin",
+      "image": "cards/92-Henry.png",
+      "series": 1,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Bertha",
+      "name_kor": "\ubca0\ud2f0",
+      "number": 93,
+      "file": "Series 1/[AC] 093 - Bertha.bin",
+      "image": "cards/93-Bertha.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Cyrano",
+      "name_kor": "\uc0ac\uc9c0\ub9c8",
+      "number": 94,
+      "file": "Series 1/[AC] 094 - Cyrano.bin",
+      "image": "cards/94-Cyrano.png",
+      "series": 1,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Peanut",
+      "name_kor": "\ud551\ud0a4",
+      "number": 95,
+      "file": "Series 1/[AC] 095 - Peanut.bin",
+      "image": "cards/95-Peanut.png",
+      "series": 1,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Cole",
+      "name_kor": "\uc544\ub9c8\ubbfc",
+      "number": 96,
+      "file": "Series 1/[AC] 096 - Cole.bin",
+      "image": "cards/96-Cole.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Willow",
+      "name_kor": "\ub9c8\ub9ac",
+      "number": 97,
+      "file": "Series 1/[AC] 097 - Willow.bin",
+      "image": "cards/97-Willow.png",
+      "series": 1,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Roald",
+      "name_kor": "\ud3ad\uc218",
+      "number": 98,
+      "file": "Series 1/[AC] 098 - Roald.bin",
+      "image": "cards/98-Roald.png",
+      "series": 1,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Molly",
+      "name_kor": "\uadc0\uc624\ubbf8",
+      "number": 99,
+      "file": "Series 1/[AC] 099 - Molly.bin",
+      "image": "cards/99-Molly.png",
+      "series": 1,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Walker",
+      "name_kor": "\ubca4",
+      "number": 100,
+      "file": "Series 1/[AC] 100 - Walker.bin",
+      "image": "cards/100-Walker.png",
+      "series": 1,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "K",
+      "name_kor": "T.K.",
+      "number": 101,
+      "file": "Series 2/[AC] 101 - K.K. Slider.bin",
+      "image": "cards/101-K.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Reese",
+      "name_kor": "\ub9ac\uc0ac",
+      "number": 102,
+      "file": "Series 2/[AC] 102 - Reese.bin",
+      "image": "cards/102-Reese.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Kicks",
+      "name_kor": "\ud328\ud2b8\ub9ad",
+      "number": 103,
+      "file": "Series 2/[AC] 103 - Kicks.bin",
+      "image": "cards/103-Kicks.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Labelle",
+      "name_kor": "\ucf00\uc774\ud2b8",
+      "number": 104,
+      "file": "Series 2/[AC] 104 - Labelle.bin",
+      "image": "cards/104-Labelle.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Copper",
+      "name_kor": "\uacbd\ucc30\uad00A",
+      "number": 105,
+      "file": "Series 2/[AC] 105 - Copper.bin",
+      "image": "cards/105-Copper.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Booker",
+      "name_kor": "\uacbd\ucc30\uad00B",
+      "number": 106,
+      "file": "Series 2/[AC] 106 - Booker.bin",
+      "image": "cards/106-Booker.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Katie",
+      "name_kor": "\ubbf8\uc57c",
+      "number": 107,
+      "file": "Series 2/[AC] 107 - Katie.bin",
+      "image": "cards/107-Katie.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Tommy",
+      "name_kor": "\ubc24\ub3cc\uc774",
+      "number": 108,
+      "file": "Series 2/[AC] 108 - Tommy.bin",
+      "image": "cards/108-Tommy.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Porter",
+      "name_kor": "\uc5ed\ubb34\uc6d0",
+      "number": 109,
+      "file": "Series 2/[AC] 109 - Porter.bin",
+      "image": "cards/109-Porter.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Leila",
+      "name_kor": "\uaf2c\ubbf8",
+      "number": 110,
+      "file": "Series 2/[AC] 110 - Leila.bin",
+      "image": "cards/110-Leila.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Shrunk",
+      "name_kor": "\uc2a4\uc2b9",
+      "number": 111,
+      "file": "Series 2/[AC] 111 - Shrunk.bin",
+      "image": "cards/111-Shrunk.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Don Resetti",
+      "name_kor": "\uc624\ub8e8\ubb35\uc528",
+      "number": 112,
+      "file": "Series 2/[AC] 112 - Don Resetti.bin",
+      "image": "cards/112-Don Resetti.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Isabelle",
+      "name_kor": "\uc5ec\uc6b8",
+      "number": 113,
+      "file": "Series 2/[AC] 113 - Isabelle.bin",
+      "image": "cards/113-Isabelle.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Blanca",
+      "name_kor": "\uc544\ud2b8\uace0\uc591\uc774",
+      "number": 114,
+      "file": "Series 2/[AC] 114 - Blanca.bin",
+      "image": "cards/114-Blanca.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Nat",
+      "name_kor": "\uba5c\ub808\uc639",
+      "number": 115,
+      "file": "Series 2/[AC] 115 - Nat.bin",
+      "image": "cards/115-Nat.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Chip",
+      "name_kor": "\ub6b1\ub2ec",
+      "number": 116,
+      "file": "Series 2/[AC] 116 - Chip.bin",
+      "image": "cards/116-Chip.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Jack",
+      "name_kor": "\ud38c\ud0b9",
+      "number": 117,
+      "file": "Series 2/[AC] 117 - Jack.bin",
+      "image": "cards/117-Jack.png",
+      "series": 2,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Poncho",
+      "name_kor": "\ubd09\ucd94",
+      "number": 118,
+      "file": "Series 2/[AC] 118 - Poncho.bin",
+      "image": "cards/118-Poncho.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Felicity",
+      "name_kor": "\uc608\ub9c1",
+      "number": 119,
+      "file": "Series 2/[AC] 119 - Felicity.bin",
+      "image": "cards/119-Felicity.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Ozzie",
+      "name_kor": "\ub3d9\ub3d9\uc774",
+      "number": 120,
+      "file": "Series 2/[AC] 120 - Ozzie.bin",
+      "image": "cards/120-Ozzie.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Tia",
+      "name_kor": "\ud2f0\ub098",
+      "number": 121,
+      "file": "Series 2/[AC] 121 - Tia.bin",
+      "image": "cards/121-Tia.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Lucha",
+      "name_kor": "\ub9c8\uc2a4\uce74\ub77c\uc2a4",
+      "number": 122,
+      "file": "Series 2/[AC] 122 - Lucha.bin",
+      "image": "cards/122-Lucha.png",
+      "series": 2,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Fuchsia",
+      "name_kor": "\uc81c\uc2dc\uce74",
+      "number": 123,
+      "file": "Series 2/[AC] 123 - Fuchsia.bin",
+      "image": "cards/123-Fuchsia.png",
+      "series": 2,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Harry",
+      "name_kor": "\uc62c\ub9ac\ubc84",
+      "number": 124,
+      "file": "Series 2/[AC] 124 - Harry.bin",
+      "image": "cards/124-Harry.png",
+      "series": 2,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Gwen",
+      "name_kor": "\ud3f4\ub77c",
+      "number": 125,
+      "file": "Series 2/[AC] 125 - Gwen.bin",
+      "image": "cards/125-Gwen.png",
+      "series": 2,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Coach",
+      "name_kor": "\ucca0\uc18c",
+      "number": 126,
+      "file": "Series 2/[AC] 126 - Coach.bin",
+      "image": "cards/126-Coach.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Kitt",
+      "name_kor": "\uc560\ud50c\ub9ac\ucf00",
+      "number": 127,
+      "file": "Series 2/[AC] 127 - Kitt.bin",
+      "image": "cards/127-Kitt.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Tom",
+      "name_kor": "\ubc34\ub364",
+      "number": 128,
+      "file": "Series 2/[AC] 128 - Tom.bin",
+      "image": "cards/128-Tom.png",
+      "series": 2,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Tipper",
+      "name_kor": "\ub9c8\ud2f8\ub2e4",
+      "number": 129,
+      "file": "Series 2/[AC] 129 - Tipper.bin",
+      "image": "cards/129-Tipper.png",
+      "series": 2,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Prince",
+      "name_kor": "\uce74\uc77c",
+      "number": 130,
+      "file": "Series 2/[AC] 130 - Prince.bin",
+      "image": "cards/130-Prince.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Pate",
+      "name_kor": "\ub098\ud0a4",
+      "number": 131,
+      "file": "Series 2/[AC] 131 - Pate.bin",
+      "image": "cards/131-Pate.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Vladimir",
+      "name_kor": "\uacf0\ube44",
+      "number": 132,
+      "file": "Series 2/[AC] 132 - Vladimir.bin",
+      "image": "cards/132-Vladimir.png",
+      "series": 2,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Savannah",
+      "name_kor": "\uc0ac\ubc18\ub098",
+      "number": 133,
+      "file": "Series 2/[AC] 133 - Savannah.bin",
+      "image": "cards/133-Savannah.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Kidd",
+      "name_kor": "\uc5fc\ub450\ub9ac",
+      "number": 134,
+      "file": "Series 2/[AC] 134 - Kidd.bin",
+      "image": "cards/134-Kidd.png",
+      "series": 2,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Phoebe",
+      "name_kor": "\ud718\ub2c8",
+      "number": 135,
+      "file": "Series 2/[AC] 135 - Phoebe.bin",
+      "image": "cards/135-Phoebe.png",
+      "series": 2,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Egbert",
+      "name_kor": "\uae40\ud76c",
+      "number": 136,
+      "file": "Series 2/[AC] 136 - Egbert.bin",
+      "image": "cards/136-Egbert.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Cookie",
+      "name_kor": "\ubca0\ub9ac",
+      "number": 137,
+      "file": "Series 2/[AC] 137 - Cookie.bin",
+      "image": "cards/137-Cookie.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Sly",
+      "name_kor": "\ud558\uc774\ub4dc",
+      "number": 138,
+      "file": "Series 2/[AC] 138 - Sly.bin",
+      "image": "cards/138-Sly.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Blaire",
+      "name_kor": "\uc2e4\ub8e8\uc5e3",
+      "number": 139,
+      "file": "Series 2/[AC] 139 - Blaire.bin",
+      "image": "cards/139-Blaire.png",
+      "series": 2,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Avery",
+      "name_kor": "\ucfe0\uc2a4\ucf00\ucc98",
+      "number": 140,
+      "file": "Series 2/[AC] 140 - Avery.bin",
+      "image": "cards/140-Avery.png",
+      "series": 2,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Nana",
+      "name_kor": "\ud0a4\ud0a4",
+      "number": 141,
+      "file": "Series 2/[AC] 141 - Nana.bin",
+      "image": "cards/141-Nana.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Peck",
+      "name_kor": "\ubb38\ub300",
+      "number": 142,
+      "file": "Series 2/[AC] 142 - Peck.bin",
+      "image": "cards/142-Peck.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Olivia",
+      "name_kor": "\uc62c\ub9ac\ube44\uc544",
+      "number": 143,
+      "file": "Series 2/[AC] 143 - Olivia.bin",
+      "image": "cards/143-Olivia.png",
+      "series": 2,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Cesar",
+      "name_kor": "\uc568\ub7f0",
+      "number": 144,
+      "file": "Series 2/[AC] 144 - Cesar.bin",
+      "image": "cards/144-Cesar.png",
+      "series": 2,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Carmen",
+      "name_kor": "\ucd08\ucf54",
+      "number": 145,
+      "file": "Series 2/[AC] 145 - Carmen.bin",
+      "image": "cards/145-Carmen.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Rodney",
+      "name_kor": "\uc9c0\ubbf8",
+      "number": 146,
+      "file": "Series 2/[AC] 146 - Rodney.bin",
+      "image": "cards/146-Rodney.png",
+      "series": 2,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Scoot",
+      "name_kor": "\uc9c0\ud0a4\ubbf8",
+      "number": 147,
+      "file": "Series 2/[AC] 147 - Scoot.bin",
+      "image": "cards/147-Scoot.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Whitney",
+      "name_kor": "\ube44\uc559\uce74",
+      "number": 148,
+      "file": "Series 2/[AC] 148 - Whitney.bin",
+      "image": "cards/148-Whitney.png",
+      "series": 2,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Broccolo",
+      "name_kor": "\ube0c\ub85c\ucf5c\ub9ac",
+      "number": 149,
+      "file": "Series 2/[AC] 149 - Broccolo.bin",
+      "image": "cards/149-Broccolo.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Coco",
+      "name_kor": "\uc774\uc694",
+      "number": 150,
+      "file": "Series 2/[AC] 150 - Coco.bin",
+      "image": "cards/150-Coco.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Groucho",
+      "name_kor": "\uac70\ubb34\ud2f1",
+      "number": 151,
+      "file": "Series 2/[AC] 151 - Groucho.bin",
+      "image": "cards/151-Groucho.png",
+      "series": 2,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Wendy",
+      "name_kor": "\ub208\uc1a1\uc774",
+      "number": 152,
+      "file": "Series 2/[AC] 152 - Wendy.bin",
+      "image": "cards/152-Wendy.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Alfonso",
+      "name_kor": "\uc54c\ubca0\ub974\ud2b8",
+      "number": 153,
+      "file": "Series 2/[AC] 153 - Alfonso.bin",
+      "image": "cards/153-Alfonso.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Rhonda",
+      "name_kor": "\ub860\ub2e4",
+      "number": 154,
+      "file": "Series 2/[AC] 154 - Rhonda.bin",
+      "image": "cards/154-Rhonda.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Butch",
+      "name_kor": "\uc874",
+      "number": 155,
+      "file": "Series 2/[AC] 155 - Butch.bin",
+      "image": "cards/155-Butch.png",
+      "series": 2,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Gabi",
+      "name_kor": "\ud328\ud2f0\uce74",
+      "number": 156,
+      "file": "Series 2/[AC] 156 - Gabi.bin",
+      "image": "cards/156-Gabi.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Moose",
+      "name_kor": "\ud551",
+      "number": 157,
+      "file": "Series 2/[AC] 157 - Moose.bin",
+      "image": "cards/157-Moose.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Timbra",
+      "name_kor": "\uc794\ub514",
+      "number": 158,
+      "file": "Series 2/[AC] 158 - Timbra.bin",
+      "image": "cards/158-Timbra.png",
+      "series": 2,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Zell",
+      "name_kor": "\ub12c\uc2a8",
+      "number": 159,
+      "file": "Series 2/[AC] 159 - Zell.bin",
+      "image": "cards/159-Zell.png",
+      "series": 2,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Pekoe",
+      "name_kor": "\uc7ac\uc2a4\ubbfc",
+      "number": 160,
+      "file": "Series 2/[AC] 160 - Pekoe.bin",
+      "image": "cards/160-Pekoe.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Teddy",
+      "name_kor": "\ubcd1\ud0dc",
+      "number": 161,
+      "file": "Series 2/[AC] 161 - Teddy.bin",
+      "image": "cards/161-Teddy.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Mathilda",
+      "name_kor": "\uc548\uc824\ub77c",
+      "number": 162,
+      "file": "Series 2/[AC] 162 - Mathilda.bin",
+      "image": "cards/162-Mathilda.png",
+      "series": 2,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Ed",
+      "name_kor": "\uaebc\ubc99",
+      "number": 163,
+      "file": "Series 2/[AC] 163 - Ed.bin",
+      "image": "cards/163-Ed.png",
+      "series": 2,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Bianca",
+      "name_kor": "\ubc31\ud76c",
+      "number": 164,
+      "file": "Series 2/[AC] 164 - Bianca.bin",
+      "image": "cards/164-Bianca.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Filbert",
+      "name_kor": "\ub9ac\ud0a4",
+      "number": 165,
+      "file": "Series 2/[AC] 165 - Filbert.bin",
+      "image": "cards/165-Filbert.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Kitty",
+      "name_kor": "\uc1fc\ucf5c\ub77c",
+      "number": 166,
+      "file": "Series 2/[AC] 166 - Kitty.bin",
+      "image": "cards/166-Kitty.png",
+      "series": 2,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Beau",
+      "name_kor": "\ud53c\ud130",
+      "number": 167,
+      "file": "Series 2/[AC] 167 - Beau.bin",
+      "image": "cards/167-Beau.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Nan",
+      "name_kor": "\uc21c\uc774",
+      "number": 168,
+      "file": "Series 2/[AC] 168 - Nan.bin",
+      "image": "cards/168-Nan.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Bud",
+      "name_kor": "\uc120\uae00",
+      "number": 169,
+      "file": "Series 2/[AC] 169 - Bud.bin",
+      "image": "cards/169-Bud.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Ruby",
+      "name_kor": "\ub8e8\ub098",
+      "number": 170,
+      "file": "Series 2/[AC] 170 - Ruby.bin",
+      "image": "cards/170-Ruby.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Benedict",
+      "name_kor": "\ud398\ub2c8\uc2e4\ub9b0",
+      "number": 171,
+      "file": "Series 2/[AC] 171 - Benedict.bin",
+      "image": "cards/171-Benedict.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Agnes",
+      "name_kor": "\uc544\uadf8\ub124\uc2a4",
+      "number": 172,
+      "file": "Series 2/[AC] 172 - Agnes.bin",
+      "image": "cards/172-Agnes.png",
+      "series": 2,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Julian",
+      "name_kor": "\uc720\ub2c8\uc624",
+      "number": 173,
+      "file": "Series 2/[AC] 173 - Julian.bin",
+      "image": "cards/173-Julian.png",
+      "series": 2,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Bettina",
+      "name_kor": "\ub9c8\ub974\uce74",
+      "number": 174,
+      "file": "Series 2/[AC] 174 - Bettina.bin",
+      "image": "cards/174-Bettina.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Jay",
+      "name_kor": "\ucc38\ub3cc\uc774",
+      "number": 175,
+      "file": "Series 2/[AC] 175 - Jay.bin",
+      "image": "cards/175-Jay.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Sprinkle",
+      "name_kor": "\ud06c\ub9ac\ubbf8",
+      "number": 176,
+      "file": "Series 2/[AC] 176 - Sprinkle.bin",
+      "image": "cards/176-Sprinkle.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Flip",
+      "name_kor": "\uc6d0\uc2b9",
+      "number": 177,
+      "file": "Series 2/[AC] 177 - Flip.bin",
+      "image": "cards/177-Flip.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Hugh",
+      "name_kor": "\uba39\uace0\ud30c",
+      "number": 178,
+      "file": "Series 2/[AC] 178 - Hugh.bin",
+      "image": "cards/178-Hugh.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Hopper",
+      "name_kor": "\ub2ec\ub9cc\uc774",
+      "number": 179,
+      "file": "Series 2/[AC] 179 - Hopper.bin",
+      "image": "cards/179-Hopper.png",
+      "series": 2,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Pecan",
+      "name_kor": "\ub808\ubca0\uce74",
+      "number": 180,
+      "file": "Series 2/[AC] 180 - Pecan.bin",
+      "image": "cards/180-Pecan.png",
+      "series": 2,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Drake",
+      "name_kor": "\ud478\uc544\uadf8\ub77c",
+      "number": 181,
+      "file": "Series 2/[AC] 181 - Drake.bin",
+      "image": "cards/181-Drake.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Alice",
+      "name_kor": "\uba5c\ubc84\ub978",
+      "number": 182,
+      "file": "Series 2/[AC] 182 - Alice.bin",
+      "image": "cards/182-Alice.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Camofrog",
+      "name_kor": "\ucda9\uc131",
+      "number": 183,
+      "file": "Series 2/[AC] 183 - Camofrog.bin",
+      "image": "cards/183-Camofrog.png",
+      "series": 2,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Anicotti",
+      "name_kor": "\ub77c\uc790\ub0d0",
+      "number": 184,
+      "file": "Series 2/[AC] 184 - Anicotti.bin",
+      "image": "cards/184-Anicotti.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Chops",
+      "name_kor": "\ub3c8\ud6c4\uc559",
+      "number": 185,
+      "file": "Series 2/[AC] 185 - Chops.bin",
+      "image": "cards/185-Chops.png",
+      "series": 2,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Charlise",
+      "name_kor": "\ucc60\ubbf8",
+      "number": 186,
+      "file": "Series 2/[AC] 186 - Charlise.bin",
+      "image": "cards/186-Charlise.png",
+      "series": 2,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Vic",
+      "name_kor": "\ub178\ub974\ub9dd",
+      "number": 187,
+      "file": "Series 2/[AC] 187 - Vic.bin",
+      "image": "cards/187-Vic.png",
+      "series": 2,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Ankha",
+      "name_kor": "\ud074\ub808\uc624",
+      "number": 188,
+      "file": "Series 2/[AC] 188 - Ankha.bin",
+      "image": "cards/188-Ankha.png",
+      "series": 2,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Drift",
+      "name_kor": "\ub355",
+      "number": 189,
+      "file": "Series 2/[AC] 189 - Drift.bin",
+      "image": "cards/189-Drift.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Vesta",
+      "name_kor": "\uba54\ub9ac\uc5b4\uc2a4",
+      "number": 190,
+      "file": "Series 2/[AC] 190 - Vesta.bin",
+      "image": "cards/190-Vesta.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Marcel",
+      "name_kor": "\uc5d0\ub4dc\uc6cc\ub4dc",
+      "number": 191,
+      "file": "Series 2/[AC] 191 - Marcel.bin",
+      "image": "cards/191-Marcel.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Pango",
+      "name_kor": "\ud328\ud2b8\ub77c",
+      "number": 192,
+      "file": "Series 2/[AC] 192 - Pango.bin",
+      "image": "cards/192-Pango.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Keaton",
+      "name_kor": "\ud504\ub7ad\ud06c",
+      "number": 193,
+      "file": "Series 2/[AC] 193 - Keaton.bin",
+      "image": "cards/193-Keaton.png",
+      "series": 2,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Gladys",
+      "name_kor": "\ube45\ud1a0\ub9ac\uc544",
+      "number": 194,
+      "file": "Series 2/[AC] 194 - Gladys.bin",
+      "image": "cards/194-Gladys.png",
+      "series": 2,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Hamphrey",
+      "name_kor": "\ud584\uc950",
+      "number": 195,
+      "file": "Series 2/[AC] 195 - Hamphrey.bin",
+      "image": "cards/195-Hamphrey.png",
+      "series": 2,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Freya",
+      "name_kor": "\uc0b0\ub4dc\ub77c",
+      "number": 196,
+      "file": "Series 2/[AC] 196 - Freya.bin",
+      "image": "cards/196-Freya.png",
+      "series": 2,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Kid Cat",
+      "name_kor": "1\ud638",
+      "number": 197,
+      "file": "Series 2/[AC] 197 - Kid Cat.bin",
+      "image": "cards/197-Kid Cat.png",
+      "series": 2,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Agent S",
+      "name_kor": "2\ud638",
+      "number": 198,
+      "file": "Series 2/[AC] 198 - Agent S.bin",
+      "image": "cards/198-Agent S.png",
+      "series": 2,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Big Top",
+      "name_kor": "3\ud638",
+      "number": 199,
+      "file": "Series 2/[AC] 199 - Big Top.bin",
+      "image": "cards/199-Big Top.png",
+      "series": 2,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Rocket",
+      "name_kor": "4\ud638",
+      "number": 200,
+      "file": "Series 2/[AC] 200 - Rocket.bin",
+      "image": "cards/200-Rocket.png",
+      "series": 2,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Rover",
+      "name_kor": "\ub0af\uc120\uace0\uc591\uc774",
+      "number": 201,
+      "file": "Series 3/[AC] 201 - Rover.bin",
+      "image": "cards/201-Rover.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Blathers",
+      "name_kor": "\ubd80\uc5c9",
+      "number": 202,
+      "file": "Series 3/[AC] 202 - Blathers.bin",
+      "image": "cards/202-Blathers.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Tom Nook",
+      "name_kor": "\ub108\uad74",
+      "number": 203,
+      "file": "Series 3/[AC] 203 - Tom Nook.bin",
+      "image": "cards/203-Tom Nook.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Pelly",
+      "name_kor": "\ud3a0\ub9ac",
+      "number": 204,
+      "file": "Series 3/[AC] 204 - Pelly.bin",
+      "image": "cards/204-Pelly.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Phyllis",
+      "name_kor": "\ud3a0\ub9ac\ubbf8",
+      "number": 205,
+      "file": "Series 3/[AC] 205 - Phyllis.bin",
+      "image": "cards/205-Phyllis.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Pete",
+      "name_kor": "\ud3a0\ub9ac\uc624",
+      "number": 206,
+      "file": "Series 3/[AC] 206 - Pete.bin",
+      "image": "cards/206-Pete.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Mabel",
+      "name_kor": "\uace0\uc21c\uc774",
+      "number": 207,
+      "file": "Series 3/[AC] 207 - Mabel.bin",
+      "image": "cards/207-Mabel.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Leif",
+      "name_kor": "\ub298\ubd09",
+      "number": 208,
+      "file": "Series 3/[AC] 208 - Leif.bin",
+      "image": "cards/208-Leif.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Wendell",
+      "name_kor": "",
+      "number": 209,
+      "file": "Series 3/[AC] 209 - Wendell.bin",
+      "image": "cards/209-Wendell.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Cyrus",
+      "name_kor": "\ub9ac\ud3ec",
+      "number": 210,
+      "file": "Series 3/[AC] 210 - Cyrus.bin",
+      "image": "cards/210-Cyrus.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Grams",
+      "name_kor": "\uadc0\ub140",
+      "number": 211,
+      "file": "Series 3/[AC] 211 - Grams.bin",
+      "image": "cards/211-Grams.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Timmy",
+      "name_kor": "\ucf69\ub3cc",
+      "number": 212,
+      "file": "Series 3/[AC] 212 - Timmy.bin",
+      "image": "cards/212-Timmy.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Digby",
+      "name_kor": "\ucf04\ud2b8",
+      "number": 213,
+      "file": "Series 3/[AC] 213 - Digby.bin",
+      "image": "cards/213-Digby.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Don Resetti",
+      "name_kor": "\uc624\ub8e8\ubb35\uc528",
+      "number": 214,
+      "file": "Series 3/[AC] 214 - Don Resetti.bin",
+      "image": "cards/214-Don Resetti.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Isabelle",
+      "name_kor": "\uc5ec\uc6b8 (\uae30\ubaa8\ub178)",
+      "number": 215,
+      "file": "Series 3/[AC] 215 - Isabelle.bin",
+      "image": "cards/215-Isabelle.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Franklin",
+      "name_kor": "",
+      "number": 216,
+      "file": "Series 3/[AC] 216 - Franklin.bin",
+      "image": "cards/216-Franklin.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Jingle",
+      "name_kor": "",
+      "number": 217,
+      "file": "Series 3/[AC] 217 - Jingle.bin",
+      "image": "cards/217-Jingle.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Lily",
+      "name_kor": "\ub808\uc774\ub2c8",
+      "number": 218,
+      "file": "Series 3/[AC] 218 - Lily.bin",
+      "image": "cards/218-Lily.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Anchovy",
+      "name_kor": "\uc548\ucd78\ube44",
+      "number": 219,
+      "file": "Series 3/[AC] 219 - Anchovy.bin",
+      "image": "cards/219-Anchovy.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Tabby",
+      "name_kor": "\ud638\ub0e5\uc774",
+      "number": 220,
+      "file": "Series 3/[AC] 220 - Tabby.bin",
+      "image": "cards/220-Tabby.png",
+      "series": 3,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Kody",
+      "name_kor": "\uc544\uc774\ub2e4\ud638",
+      "number": 221,
+      "file": "Series 3/[AC] 221 - Kody.bin",
+      "image": "cards/221-Kody.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Miranda",
+      "name_kor": "\ubbf8\ub780\ub2e4",
+      "number": 222,
+      "file": "Series 3/[AC] 222 - Miranda.bin",
+      "image": "cards/222-Miranda.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Del",
+      "name_kor": "\ud30c\ub3c4\ub9e8",
+      "number": 223,
+      "file": "Series 3/[AC] 223 - Del.bin",
+      "image": "cards/223-Del.png",
+      "series": 3,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Paula",
+      "name_kor": "\ub808\uc774\uccbc",
+      "number": 224,
+      "file": "Series 3/[AC] 224 - Paula.bin",
+      "image": "cards/224-Paula.png",
+      "series": 3,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Ken",
+      "name_kor": "\uc624\uace8",
+      "number": 225,
+      "file": "Series 3/[AC] 225 - Ken.bin",
+      "image": "cards/225-Ken.png",
+      "series": 3,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Mitzi",
+      "name_kor": "\ub9c8\ub974",
+      "number": 226,
+      "file": "Series 3/[AC] 226 - Mitzi.bin",
+      "image": "cards/226-Mitzi.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Rodeo",
+      "name_kor": "\ub85c\ub370\uc624",
+      "number": 227,
+      "file": "Series 3/[AC] 227 - Rodeo.bin",
+      "image": "cards/227-Rodeo.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Bubbles",
+      "name_kor": "\ucc28\ucf54",
+      "number": 228,
+      "file": "Series 3/[AC] 228 - Bubbles.bin",
+      "image": "cards/228-Bubbles.png",
+      "series": 3,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Cousteau",
+      "name_kor": "\uc655\uc11c\ubc29",
+      "number": 229,
+      "file": "Series 3/[AC] 229 - Cousteau.bin",
+      "image": "cards/229-Cousteau.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Velma",
+      "name_kor": "\ubca8\ub9c8",
+      "number": 230,
+      "file": "Series 3/[AC] 230 - Velma.bin",
+      "image": "cards/230-Velma.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Elvis",
+      "name_kor": "\ud0b9",
+      "number": 231,
+      "file": "Series 3/[AC] 231 - Elvis.bin",
+      "image": "cards/231-Elvis.png",
+      "series": 3,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Canberra",
+      "name_kor": "\uce94\ubc84\ub77c",
+      "number": 232,
+      "file": "Series 3/[AC] 232 - Canberra.bin",
+      "image": "cards/232-Canberra.png",
+      "series": 3,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Colton",
+      "name_kor": "\uc548\uc18c\ub2c8",
+      "number": 233,
+      "file": "Series 3/[AC] 233 - Colton.bin",
+      "image": "cards/233-Colton.png",
+      "series": 3,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Marina",
+      "name_kor": "\ubb38\ub9ac\ub098",
+      "number": 234,
+      "file": "Series 3/[AC] 234 - Marina.bin",
+      "image": "cards/234-Marina.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Spork",
+      "name_kor": "\ud3ec\ud06c",
+      "number": 235,
+      "file": "Series 3/[AC] 235 - Spork-Crackle.bin",
+      "image": "cards/235-Spork.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Freckles",
+      "name_kor": "\ub2e4\ub791\uc5b4",
+      "number": 236,
+      "file": "Series 3/[AC] 236 - Freckles.bin",
+      "image": "cards/236-Freckles.png",
+      "series": 3,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Bam",
+      "name_kor": "\ub85d\ud0a4",
+      "number": 237,
+      "file": "Series 3/[AC] 237 - Bam.bin",
+      "image": "cards/237-Bam.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Friga",
+      "name_kor": "\uc0ac\ube0c\ub9ac\ub098",
+      "number": 238,
+      "file": "Series 3/[AC] 238 - Friga.bin",
+      "image": "cards/238-Friga.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Ricky",
+      "name_kor": "\uac08\uac00\ub9ac",
+      "number": 239,
+      "file": "Series 3/[AC] 239 - Ricky.bin",
+      "image": "cards/239-Ricky.png",
+      "series": 3,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Deirdre",
+      "name_kor": "\ub098\ub514\uc544",
+      "number": 240,
+      "file": "Series 3/[AC] 240 - Deirdre.bin",
+      "image": "cards/240-Deirdre.png",
+      "series": 3,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Hans",
+      "name_kor": "\uc2a4\ub098\uc77c",
+      "number": 241,
+      "file": "Series 3/[AC] 241 - Hans.bin",
+      "image": "cards/241-Hans.png",
+      "series": 3,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Chevre",
+      "name_kor": "\uc724\uc774",
+      "number": 242,
+      "file": "Series 3/[AC] 242 - Chevre.bin",
+      "image": "cards/242-Chevre.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Drago",
+      "name_kor": "\uc6a9\ub0a8\uc774",
+      "number": 243,
+      "file": "Series 3/[AC] 243 - Drago.bin",
+      "image": "cards/243-Drago.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Tangy",
+      "name_kor": "\ubc31\ud504\ub85c",
+      "number": 244,
+      "file": "Series 3/[AC] 244 - Tangy.bin",
+      "image": "cards/244-Tangy.png",
+      "series": 3,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Mac",
+      "name_kor": "\ucc54\ud504",
+      "number": 245,
+      "file": "Series 3/[AC] 245 - Mac.bin",
+      "image": "cards/245-Mac.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Eloise",
+      "name_kor": "\uc5d8\ub808\ud540",
+      "number": 246,
+      "file": "Series 3/[AC] 246 - Eloise.bin",
+      "image": "cards/246-Eloise.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Wart Jr",
+      "name_kor": "\uc0d8",
+      "number": 247,
+      "file": "Series 3/[AC] 247 - Wart Jr..bin",
+      "image": "cards/247-Wart Jr.png",
+      "series": 3,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Hazel",
+      "name_kor": "\uc544\uc774\ub9ac\uc2a4",
+      "number": 248,
+      "file": "Series 3/[AC] 248 - Hazel.bin",
+      "image": "cards/248-Hazel.png",
+      "series": 3,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Beardo",
+      "name_kor": "\ubca0\uc5b4\ub4dc",
+      "number": 249,
+      "file": "Series 3/[AC] 249 - Beardo.bin",
+      "image": "cards/249-Beardo.png",
+      "series": 3,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Ava",
+      "name_kor": "\uc5d0\ubc14",
+      "number": 250,
+      "file": "Series 3/[AC] 250 - Ava.bin",
+      "image": "cards/250-Ava.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Chester",
+      "name_kor": "",
+      "number": 251,
+      "file": "Series 3/[AC] 251 - Chester.bin",
+      "image": "cards/251-Chester.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Merry",
+      "name_kor": "\uc720\ub124\ucc0c",
+      "number": 252,
+      "file": "Series 3/[AC] 252 - Merry.bin",
+      "image": "cards/252-Merry.png",
+      "series": 3,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Genji",
+      "name_kor": "\ud1a0\uc2dc",
+      "number": 253,
+      "file": "Series 3/[AC] 253 - Genji.bin",
+      "image": "cards/253-Genji.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Greta",
+      "name_kor": "\ubcf5\uc790",
+      "number": 254,
+      "file": "Series 3/[AC] 254 - Greta.bin",
+      "image": "cards/254-Greta.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Wolfgang",
+      "name_kor": "\ub85c\ubcf4",
+      "number": 255,
+      "file": "Series 3/[AC] 255 - Wolfgang.bin",
+      "image": "cards/255-Wolfgang.png",
+      "series": 3,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Diva",
+      "name_kor": "\uc544\uc774\ub2e4",
+      "number": 256,
+      "file": "Series 3/[AC] 256 - Diva.bin",
+      "image": "cards/256-Diva.png",
+      "series": 3,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Klaus",
+      "name_kor": "\uacf0\ub3c4\ub85c\uc2a4",
+      "number": 257,
+      "file": "Series 3/[AC] 257 - Klaus.bin",
+      "image": "cards/257-Klaus.png",
+      "series": 3,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Daisy",
+      "name_kor": "\ubc14\ub2d0\ub77c",
+      "number": 258,
+      "file": "Series 3/[AC] 258 - Daisy.bin",
+      "image": "cards/258-Daisy.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Stinky",
+      "name_kor": "\ub540\ub760",
+      "number": 259,
+      "file": "Series 3/[AC] 259 - Stinky.bin",
+      "image": "cards/259-Stinky.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Tammi",
+      "name_kor": "\uc5d0\uc774\ud504\ub9b4",
+      "number": 260,
+      "file": "Series 3/[AC] 260 - Tammi.bin",
+      "image": "cards/260-Tammi.png",
+      "series": 3,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Tucker",
+      "name_kor": "\ub9d8\ubaa8",
+      "number": 261,
+      "file": "Series 3/[AC] 261 - Tucker.bin",
+      "image": "cards/261-Tucker.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Blanche",
+      "name_kor": "\uc2e0\uc625",
+      "number": 262,
+      "file": "Series 3/[AC] 262 - Blanche.bin",
+      "image": "cards/262-Blanche.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Gaston",
+      "name_kor": "\ub300\uae38",
+      "number": 263,
+      "file": "Series 3/[AC] 263 - Gaston.bin",
+      "image": "cards/263-Gaston.png",
+      "series": 3,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Marshal",
+      "name_kor": "\ucb48\ub2c8",
+      "number": 264,
+      "file": "Series 3/[AC] 264 - Marshal.bin",
+      "image": "cards/264-Marshal.png",
+      "series": 3,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Gala",
+      "name_kor": "\uaf43\uc9c0",
+      "number": 265,
+      "file": "Series 3/[AC] 265 - Gala.bin",
+      "image": "cards/265-Gala.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Joey",
+      "name_kor": "\ub9ac\ucc98\ub4dc",
+      "number": 266,
+      "file": "Series 3/[AC] 266 - Joey.bin",
+      "image": "cards/266-Joey.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Pippy",
+      "name_kor": "\ub85c\ud0c0",
+      "number": 267,
+      "file": "Series 3/[AC] 267 - Pippy.bin",
+      "image": "cards/267-Pippy.png",
+      "series": 3,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Buck",
+      "name_kor": "\ubc14\uc57c\uc2dc\ucf54\ud504",
+      "number": 268,
+      "file": "Series 3/[AC] 268 - Buck.bin",
+      "image": "cards/268-Buck.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Bree",
+      "name_kor": "\uc0ac\ub77c",
+      "number": 269,
+      "file": "Series 3/[AC] 269 - Bree.bin",
+      "image": "cards/269-Bree.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Rooney",
+      "name_kor": "\ub9c8\uc774\ud06c",
+      "number": 270,
+      "file": "Series 3/[AC] 270 - Rooney.bin",
+      "image": "cards/270-Rooney.png",
+      "series": 3,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Curlos",
+      "name_kor": "\uce74\ub97c\ub85c\uc2a4",
+      "number": 271,
+      "file": "Series 3/[AC] 271 - Curlos.bin",
+      "image": "cards/271-Curlos.png",
+      "series": 3,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Skye",
+      "name_kor": "\ub9b4\ub9ac",
+      "number": 272,
+      "file": "Series 3/[AC] 272 - Skye.bin",
+      "image": "cards/272-Skye.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Moe",
+      "name_kor": "\uc9c4\uc0c1",
+      "number": 273,
+      "file": "Series 3/[AC] 273 - Moe.bin",
+      "image": "cards/273-Moe.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Flora",
+      "name_kor": "\ud50c\ub77c\ub77c",
+      "number": 274,
+      "file": "Series 3/[AC] 274 - Flora.bin",
+      "image": "cards/274-Flora.png",
+      "series": 3,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Hamlet",
+      "name_kor": "\ud584\uc2a4\ud2f4",
+      "number": 275,
+      "file": "Series 3/[AC] 275 - Hamlet.bin",
+      "image": "cards/275-Hamlet.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Astrid",
+      "name_kor": "\ud391\ud0a4\ub9d8",
+      "number": 276,
+      "file": "Series 3/[AC] 276 - Astrid.bin",
+      "image": "cards/276-Astrid.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Monty",
+      "name_kor": "\ubabd\ud2f0",
+      "number": 277,
+      "file": "Series 3/[AC] 277 - Monty.bin",
+      "image": "cards/277-Monty.png",
+      "series": 3,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Dora",
+      "name_kor": "\ud2f0\ubbf8",
+      "number": 278,
+      "file": "Series 3/[AC] 278 - Dora.bin",
+      "image": "cards/278-Dora.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Biskit",
+      "name_kor": "\ub85c\ube48",
+      "number": 279,
+      "file": "Series 3/[AC] 279 - Biskit.bin",
+      "image": "cards/279-Biskit.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Victoria",
+      "name_kor": "\uc13c\ud2b8\uc5d8\ub85c",
+      "number": 280,
+      "file": "Series 3/[AC] 280 - Victoria.bin",
+      "image": "cards/280-Victoria.png",
+      "series": 3,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Lyman",
+      "name_kor": "\uc624\uc988\uba3c\ub4dc",
+      "number": 281,
+      "file": "Series 3/[AC] 281 - Lyman.bin",
+      "image": "cards/281-Lyman.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Violet",
+      "name_kor": "\uc90c\ub9c8",
+      "number": 282,
+      "file": "Series 3/[AC] 282 - Violet.bin",
+      "image": "cards/282-Violet.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Frank",
+      "name_kor": "\ud5d0\ud06c",
+      "number": 283,
+      "file": "Series 3/[AC] 283 - Frank.bin",
+      "image": "cards/283-Frank.png",
+      "series": 3,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Chadder",
+      "name_kor": "\uce58\uc988",
+      "number": 284,
+      "file": "Series 3/[AC] 284 - Chadder.bin",
+      "image": "cards/284-Chadder.png",
+      "series": 3,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Merengue",
+      "name_kor": "\uc2a4\ud2b8\ub85c\ubca0\ub9ac",
+      "number": 285,
+      "file": "Series 3/[AC] 285 - Merengue.bin",
+      "image": "cards/285-Merengue.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Cube",
+      "name_kor": "\ube59\uc218",
+      "number": 286,
+      "file": "Series 3/[AC] 286 - Cube.bin",
+      "image": "cards/286-Cube.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Claudia",
+      "name_kor": "\uc2e0\ub514",
+      "number": 287,
+      "file": "Series 3/[AC] 287 - Claudia.bin",
+      "image": "cards/287-Claudia.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Curly",
+      "name_kor": "\ud584\uae4c\uc2a4",
+      "number": 288,
+      "file": "Series 3/[AC] 288 - Curly.bin",
+      "image": "cards/288-Curly.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Boomer",
+      "name_kor": "\ud33d\uae30",
+      "number": 289,
+      "file": "Series 3/[AC] 289 - Boomer.bin",
+      "image": "cards/289-Boomer.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Caroline",
+      "name_kor": "\uce90\ub864\ub77c\uc778",
+      "number": 290,
+      "file": "Series 3/[AC] 290 - Caroline.bin",
+      "image": "cards/290-Caroline.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Sparro",
+      "name_kor": "\ucd98\uc12d",
+      "number": 291,
+      "file": "Series 3/[AC] 291 - Sparro.bin",
+      "image": "cards/291-Sparro.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Baabara",
+      "name_kor": "\ud2b8\ub85c\uc640",
+      "number": 292,
+      "file": "Series 3/[AC] 292 - Baabara.bin",
+      "image": "cards/292-Baabara.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Rolf",
+      "name_kor": "\ud638\ub7ad\uc774",
+      "number": 293,
+      "file": "Series 3/[AC] 293 - Rolf.bin",
+      "image": "cards/293-Rolf.png",
+      "series": 3,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Maple",
+      "name_kor": "\uba54\uc774\uccbc",
+      "number": 294,
+      "file": "Series 3/[AC] 294 - Maple.bin",
+      "image": "cards/294-Maple.png",
+      "series": 3,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Antonio",
+      "name_kor": "\ud37c\uba38\uac70",
+      "number": 295,
+      "file": "Series 3/[AC] 295 - Antonio.bin",
+      "image": "cards/295-Antonio.png",
+      "series": 3,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Soleil",
+      "name_kor": "\uc0e8\ud2f0",
+      "number": 296,
+      "file": "Series 3/[AC] 296 - Soleil.bin",
+      "image": "cards/296-Soleil.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Apollo",
+      "name_kor": "\uc544\ud3f4\ub85c",
+      "number": 297,
+      "file": "Series 3/[AC] 297 - Apollo.bin",
+      "image": "cards/297-Apollo.png",
+      "series": 3,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Derwin",
+      "name_kor": "\ubd09",
+      "number": 298,
+      "file": "Series 3/[AC] 298 - Derwin.bin",
+      "image": "cards/298-Derwin.png",
+      "series": 3,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Francine",
+      "name_kor": "\ud504\ub791\uc18c\uc640",
+      "number": 299,
+      "file": "Series 3/[AC] 299 - Francine.bin",
+      "image": "cards/299-Francine.png",
+      "series": 3,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Chrissy",
+      "name_kor": "\ud06c\ub9ac\uc2a4\ud2f4",
+      "number": 300,
+      "file": "Series 3/[AC] 300 - Chrissy.bin",
+      "image": "cards/300-Chrissy.png",
+      "series": 3,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Isabelle",
+      "name_kor": "\uc5ec\uc6b8",
+      "number": 301,
+      "file": "Series 4/[AC] 301 - Isabelle.bin",
+      "image": "cards/301-Isabelle.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Brewster",
+      "name_kor": "\ub9c8\uc2a4\ud130",
+      "number": 302,
+      "file": "Series 4/[AC] 302 - Brewster.bin",
+      "image": "cards/302-Brewster.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Katrina",
+      "name_kor": "\uce74\ud2b8\ub9ac\ub098",
+      "number": 303,
+      "file": "Series 4/[AC] 303 - Katrina.bin",
+      "image": "cards/303-Katrina.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Phineas",
+      "name_kor": "\ud30c\ub860\ud2f0\ub178\u00a0\uc639",
+      "number": 304,
+      "file": "Series 4/[AC] 304 - Phineas.bin",
+      "image": "cards/304-Phineas.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Celeste",
+      "name_kor": "\ubd80\uc625",
+      "number": 305,
+      "file": "Series 4/[AC] 305 - Celeste.bin",
+      "image": "cards/305-Celeste.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Tommy",
+      "name_kor": "\ubc24\ub3cc",
+      "number": 306,
+      "file": "Series 4/[AC] 306 - Tommy.bin",
+      "image": "cards/306-Tommy.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Gracie",
+      "name_kor": "\uadf8\ub808\uc774\uc2a4",
+      "number": 307,
+      "file": "Series 4/[AC] 307 - Gracie.bin",
+      "image": "cards/307-Gracie.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Leilani",
+      "name_kor": "\uac11\uc21c\uc774",
+      "number": 308,
+      "file": "Series 4/[AC] 308 - Leilani.bin",
+      "image": "cards/308-Leilani.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Resetti",
+      "name_kor": "\ub3c4\ub8e8\ubb35\uc528",
+      "number": 309,
+      "file": "Series 4/[AC] 309 - Resetti.bin",
+      "image": "cards/309-Resetti.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Timmy",
+      "name_kor": "\ucf69\ub3cc",
+      "number": 310,
+      "file": "Series 4/[AC] 310 - Timmy.bin",
+      "image": "cards/310-Timmy.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Lottie",
+      "name_kor": "\ud0c0\ucfe0\ubbf8",
+      "number": 311,
+      "file": "Series 4/[AC] 311 - Lottie.bin",
+      "image": "cards/311-Lottie.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Shrunk",
+      "name_kor": "\uc2a4\uc2b9",
+      "number": 312,
+      "file": "Series 4/[AC] 312 - Shrunk.bin",
+      "image": "cards/312-Shrunk.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Pave",
+      "name_kor": "\ubca0\ub974\ub9ac\ub098",
+      "number": 313,
+      "file": "Series 4/[AC] 313 - Pave.bin",
+      "image": "cards/313-Pave.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Gulliver",
+      "name_kor": "\uc8e0\ub2c8",
+      "number": 314,
+      "file": "Series 4/[AC] 314 - Gulliver.bin",
+      "image": "cards/314-Gulliver.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Redd",
+      "name_kor": "\uc5ec\uc6b1",
+      "number": 315,
+      "file": "Series 4/[AC] 315 - Redd.bin",
+      "image": "cards/315-Redd.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Zipper",
+      "name_kor": "\ud1a0\ube57",
+      "number": 316,
+      "file": "Series 4/[AC] 316 - Zipper.bin",
+      "image": "cards/316-Zipper.png",
+      "series": 4,
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Goldie",
+      "name_kor": "\uce74\ub77c\uba5c",
+      "number": 317,
+      "file": "Series 4/[AC] 317 - Goldie.bin",
+      "image": "cards/317-Goldie.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Stitches",
+      "name_kor": "\ud328\uce58",
+      "number": 318,
+      "file": "Series 4/[AC] 318 - Stitches.bin",
+      "image": "cards/318-Stitches.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Pinky",
+      "name_kor": "\ub9c1\ub9c1",
+      "number": 319,
+      "file": "Series 4/[AC] 319 - Pinky.bin",
+      "image": "cards/319-Pinky.png",
+      "series": 4,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Mott",
+      "name_kor": "\ub9ad",
+      "number": 320,
+      "file": "Series 4/[AC] 320 - Mott.bin",
+      "image": "cards/320-Mott.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Mallary",
+      "name_kor": "\uc2a4\ubbf8\ubaa8",
+      "number": 321,
+      "file": "Series 4/[AC] 321 - Mallary.bin",
+      "image": "cards/321-Mallary.png",
+      "series": 4,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Rocco",
+      "name_kor": "\ube0c\ub85c\ucf5c\ub9ac",
+      "number": 322,
+      "file": "Series 4/[AC] 322 - Rocco.bin",
+      "image": "cards/322-Rocco.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Katt",
+      "name_kor": "\ucd78\uc774",
+      "number": 323,
+      "file": "Series 4/[AC] 323 - Katt.bin",
+      "image": "cards/323-Katt.png",
+      "series": 4,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Graham",
+      "name_kor": "\uae00\ub77c\ud584",
+      "number": 324,
+      "file": "Series 4/[AC] 324 - Graham.bin",
+      "image": "cards/324-Graham.png",
+      "series": 4,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Peaches",
+      "name_kor": "\ub9d0\uc790",
+      "number": 325,
+      "file": "Series 4/[AC] 325 - Peaches.bin",
+      "image": "cards/325-Peaches.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Dizzy",
+      "name_kor": "\ud734\uc9c0",
+      "number": 326,
+      "file": "Series 4/[AC] 326 - Dizzy.bin",
+      "image": "cards/326-Dizzy.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Penelope",
+      "name_kor": "\ucc0d\uc21c\uc774",
+      "number": 327,
+      "file": "Series 4/[AC] 327 - Penelope.bin",
+      "image": "cards/327-Penelope.png",
+      "series": 4,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Boone",
+      "name_kor": "\ub9cc\ubcf5\uc774",
+      "number": 328,
+      "file": "Series 4/[AC] 328 - Boone.bin",
+      "image": "cards/328-Boone.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Broffina",
+      "name_kor": "\ud788\ud0a8",
+      "number": 329,
+      "file": "Series 4/[AC] 329 - Broffina.bin",
+      "image": "cards/329-Broffina.png",
+      "series": 4,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Croque",
+      "name_kor": "\ud22c\ud22c",
+      "number": 330,
+      "file": "Series 4/[AC] 330 - Croque.bin",
+      "image": "cards/330-Croque.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Pashmina",
+      "name_kor": "\ubc14\ubc14\ub77c",
+      "number": 331,
+      "file": "Series 4/[AC] 331 - Pashmina.bin",
+      "image": "cards/331-Pashmina.png",
+      "series": 4,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Shep",
+      "name_kor": "\ubc25",
+      "number": 332,
+      "file": "Series 4/[AC] 332 - Shep.bin",
+      "image": "cards/332-Shep.png",
+      "series": 4,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Lolly",
+      "name_kor": "\uc0ac\uc774\ub2e4",
+      "number": 333,
+      "file": "Series 4/[AC] 333 - Lolly.bin",
+      "image": "cards/333-Lolly.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Erik",
+      "name_kor": "\uc790\ub044",
+      "number": 334,
+      "file": "Series 4/[AC] 334 - Erik.bin",
+      "image": "cards/334-Erik.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Dotty",
+      "name_kor": "\uc11c\uba38",
+      "number": 335,
+      "file": "Series 4/[AC] 335 - Dotty.bin",
+      "image": "cards/335-Dotty.png",
+      "series": 4,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Pierce",
+      "name_kor": "\uc138\ubc14\uc2a4\ucc2c",
+      "number": 336,
+      "file": "Series 4/[AC] 336 - Pierce.bin",
+      "image": "cards/336-Pierce.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Queenie",
+      "name_kor": "\ud0dd\uc8fc",
+      "number": 337,
+      "file": "Series 4/[AC] 337 - Queenie.bin",
+      "image": "cards/337-Queenie.png",
+      "series": 4,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Fang",
+      "name_kor": "\uc2dc\ubca0\ub9ac\uc544",
+      "number": 338,
+      "file": "Series 4/[AC] 338 - Fang.bin",
+      "image": "cards/338-Fang.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Frita",
+      "name_kor": "\uc6ec\ub514",
+      "number": 339,
+      "file": "Series 4/[AC] 339 - Fritta.bin",
+      "image": "cards/339-Fritta.png",
+      "series": 4,
+      "personality": [
+        "Sisterly",
+        "단순활발"
+      ]
+    },
+    {
+      "name": "Tex",
+      "name_kor": "\ubcfc\ud2b8",
+      "number": 340,
+      "file": "Series 4/[AC] 340 - Tex.bin",
+      "image": "cards/340-Tex.png",
+      "series": 4,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Melba",
+      "name_kor": "\uc544\ub378\ub808\uc774\ub4dc",
+      "number": 341,
+      "file": "Series 4/[AC] 341 - Melba.bin",
+      "image": "cards/341-Melba.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Bones",
+      "name_kor": "\ud1a0\ubbf8",
+      "number": 342,
+      "file": "Series 4/[AC] 342 - Bones.bin",
+      "image": "cards/342-Bones.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Anabelle",
+      "name_kor": "\uc544\ub871\uc774",
+      "number": 343,
+      "file": "Series 4/[AC] 343 - Anabelle.bin",
+      "image": "cards/343-Anabelle.png",
+      "series": 4,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Rudy",
+      "name_kor": "\ucc30\uc2a4",
+      "number": 344,
+      "file": "Series 4/[AC] 344 - Rudy.bin",
+      "image": "cards/344-Rudy.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Naomi",
+      "name_kor": "\ud654\uc790",
+      "number": 345,
+      "file": "Series 4/[AC] 345 - Naomi.bin",
+      "image": "cards/345-Naomi.png",
+      "series": 4,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Peewee",
+      "name_kor": "\ub364\ubca8",
+      "number": 346,
+      "file": "Series 4/[AC] 346 - Peewee.bin",
+      "image": "cards/346-Peewee.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Tammy",
+      "name_kor": "\uc544\ub124\uc0ac",
+      "number": 347,
+      "file": "Series 4/[AC] 347 - Tammy.bin",
+      "image": "cards/347-Tammy.png",
+      "series": 4,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Olaf",
+      "name_kor": "\uc548\ud1a0\ub2c8\uc624",
+      "number": 348,
+      "file": "Series 4/[AC] 348 - Olaf.bin",
+      "image": "cards/348-Olaf.png",
+      "series": 4,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Lucy",
+      "name_kor": "\ub8e8\uc2dc",
+      "number": 349,
+      "file": "Series 4/[AC] 349 - Lucy.bin",
+      "image": "cards/349-Lucy.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Elmer",
+      "name_kor": "\uc0e4\ube0c\ub80c",
+      "number": 350,
+      "file": "Series 4/[AC] 350 - Elmer.bin",
+      "image": "cards/350-Elmer.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Puddles",
+      "name_kor": "\uac00\uc704",
+      "number": 351,
+      "file": "Series 4/[AC] 351 - Puddles.bin",
+      "image": "cards/351-Puddles.png",
+      "series": 4,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Rory",
+      "name_kor": "\uc544\ub354",
+      "number": 352,
+      "file": "Series 4/[AC] 352 - Rory.bin",
+      "image": "cards/352-Rory.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Elise",
+      "name_kor": "\ubabd\uc790",
+      "number": 353,
+      "file": "Series 4/[AC] 353 - Elise.bin",
+      "image": "cards/353-Elise.png",
+      "series": 4,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Walt",
+      "name_kor": "\uad00\ub85d",
+      "number": 354,
+      "file": "Series 4/[AC] 354 - Walt.bin",
+      "image": "cards/354-Walt.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Mira",
+      "name_kor": "\ubbf8\ub791",
+      "number": 355,
+      "file": "Series 4/[AC] 355 - Mira.bin",
+      "image": "cards/355-Mira.png",
+      "series": 4,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Pietro",
+      "name_kor": "\ud53c\uc5d8",
+      "number": 356,
+      "file": "Series 4/[AC] 356 - Pietro.bin",
+      "image": "cards/356-Pietro.png",
+      "series": 4,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Aurora",
+      "name_kor": "\uc624\ub85c\ub77c",
+      "number": 357,
+      "file": "Series 4/[AC] 357 - Aurora.bin",
+      "image": "cards/357-Aurora.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Papi",
+      "name_kor": "\ub9c8\uc0ac\ub9c8",
+      "number": 358,
+      "file": "Series 4/[AC] 358 - Papi.bin",
+      "image": "cards/358-Papi.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Apple",
+      "name_kor": "\uc560\ud50c",
+      "number": 359,
+      "file": "Series 4/[AC] 359 - Apple.bin",
+      "image": "cards/359-Apple.png",
+      "series": 4,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Rod",
+      "name_kor": "\uc7dd",
+      "number": 360,
+      "file": "Series 4/[AC] 360 - Rod.bin",
+      "image": "cards/360-Rod.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Purrl",
+      "name_kor": "\ud0c0\ub9c8",
+      "number": 361,
+      "file": "Series 4/[AC] 361 - Purrl.bin",
+      "image": "cards/361-Purrl.png",
+      "series": 4,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Static",
+      "name_kor": "\uc2a4\ud30c\ud06c",
+      "number": 362,
+      "file": "Series 4/[AC] 362 - Static.bin",
+      "image": "cards/362-Static.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Celia",
+      "name_kor": "\ud2f0\ud30c\ub2c8",
+      "number": 363,
+      "file": "Series 4/[AC] 363 - Celia.bin",
+      "image": "cards/363-Celia.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Zucker",
+      "name_kor": "\ud0c1\ud638",
+      "number": 364,
+      "file": "Series 4/[AC] 364 - Zucker.bin",
+      "image": "cards/364-Zucker.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Peggy",
+      "name_kor": "\uccb4\ub9ac",
+      "number": 365,
+      "file": "Series 4/[AC] 365 - Peggy.bin",
+      "image": "cards/365-Peggy.png",
+      "series": 4,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Ribbot",
+      "name_kor": "\ucca0\ucee5",
+      "number": 366,
+      "file": "Series 4/[AC] 366 - Ribbot.bin",
+      "image": "cards/366-Ribbot.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Annalise",
+      "name_kor": "\uc2e4\ubd80\ud50c\ub808",
+      "number": 367,
+      "file": "Series 4/[AC] 367 - Annalise.bin",
+      "image": "cards/367-Annalise.png",
+      "series": 4,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Chow",
+      "name_kor": "\uce04\uc591",
+      "number": 368,
+      "file": "Series 4/[AC] 368 - Chow.bin",
+      "image": "cards/368-Chow.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Sylvia",
+      "name_kor": "\uc2e4\ube44\uc544",
+      "number": 369,
+      "file": "Series 4/[AC] 369 - Sylvia.bin",
+      "image": "cards/369-Sylvia.png",
+      "series": 4,
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Jacques",
+      "name_kor": "\ucabc\ub07c",
+      "number": 370,
+      "file": "Series 4/[AC] 370 - Jacques.bin",
+      "image": "cards/370-Jacques.png",
+      "series": 4,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Sally",
+      "name_kor": "\ub77c\ub77c\ubbf8",
+      "number": 371,
+      "file": "Series 4/[AC] 371 - Sally.bin",
+      "image": "cards/371-Sally.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Doc",
+      "name_kor": "\ud1a0\ub2c8",
+      "number": 372,
+      "file": "Series 4/[AC] 372 - Doc.bin",
+      "image": "cards/372-Doc.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Pompom",
+      "name_kor": "\uc8fc\ub514",
+      "number": 373,
+      "file": "Series 4/[AC] 373 - Pompom.bin",
+      "image": "cards/373-Pompom.png",
+      "series": 4,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Tank",
+      "name_kor": "\ud0f1\ud06c",
+      "number": 374,
+      "file": "Series 4/[AC] 374 - Tank.bin",
+      "image": "cards/374-Tank.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Becky",
+      "name_kor": "\uc544\ub9ac\uc544",
+      "number": 375,
+      "file": "Series 4/[AC] 375 - Becky.bin",
+      "image": "cards/375-Becky.png",
+      "series": 4,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Rizzo",
+      "name_kor": "\uc870\ub974\uc950",
+      "number": 376,
+      "file": "Series 4/[AC] 376 - Rizzo.bin",
+      "image": "cards/376-Rizzo.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Sydney",
+      "name_kor": "\uc2dc\ub4dc\ub2c8",
+      "number": 377,
+      "file": "Series 4/[AC] 377 - Sydney.bin",
+      "image": "cards/377-Sydney.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Barold",
+      "name_kor": "\uacf0\uc2dc",
+      "number": 378,
+      "file": "Series 4/[AC] 378 - Barold.bin",
+      "image": "cards/378-Barold.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Nibbles",
+      "name_kor": "\uadf8\ub9ac\ubbf8",
+      "number": 379,
+      "file": "Series 4/[AC] 379 - Nibbles.bin",
+      "image": "cards/379-Nibbles.png",
+      "series": 4,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Kevin",
+      "name_kor": "\uba67\uc9c0",
+      "number": 380,
+      "file": "Series 4/[AC] 380 - Kevin.bin",
+      "image": "cards/380-Kevin.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Gloria",
+      "name_kor": "\ub9c8\ub9b4\ub9b0",
+      "number": 381,
+      "file": "Series 4/[AC] 381 - Gloria.bin",
+      "image": "cards/381-Gloria.png",
+      "series": 4,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Lobo",
+      "name_kor": "\ub291\ud0dc",
+      "number": 382,
+      "file": "Series 4/[AC] 382 - Lobo.bin",
+      "image": "cards/382-Lobo.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Hippeux",
+      "name_kor": "\ub370\uc774\ube57",
+      "number": 383,
+      "file": "Series 4/[AC] 383 - Hippeux.bin",
+      "image": "cards/383-Hippeux.png",
+      "series": 4,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Margie",
+      "name_kor": "\uc0d0\ub9ac",
+      "number": 384,
+      "file": "Series 4/[AC] 384 - Margie.bin",
+      "image": "cards/384-Margie.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Lucky",
+      "name_kor": "\ub7ed\ud0a4",
+      "number": 385,
+      "file": "Series 4/[AC] 385 - Lucky.bin",
+      "image": "cards/385-Lucky.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Rosie",
+      "name_kor": "\ubd80\ucf00",
+      "number": 386,
+      "file": "Series 4/[AC] 386 - Rosie.bin",
+      "image": "cards/386-Rosie.png",
+      "series": 4,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Rowan",
+      "name_kor": "\uace0\uba54\uc2a4",
+      "number": 387,
+      "file": "Series 4/[AC] 387 - Rowan.bin",
+      "image": "cards/387-Rowan.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Maelle",
+      "name_kor": "\uc564",
+      "number": 388,
+      "file": "Series 4/[AC] 388 - Maelle.bin",
+      "image": "cards/388-Maelle.png",
+      "series": 4,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Bruce",
+      "name_kor": "\ube0c\ub8e8\uc2a4",
+      "number": 389,
+      "file": "Series 4/[AC] 389 - Bruce.bin",
+      "image": "cards/389-Bruce.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "O'Hare",
+      "name_kor": "\uc0b0\ud1a0\uc2a4",
+      "number": 390,
+      "file": "Series 4/[AC] 390 - O'Hare.bin",
+      "image": "cards/390-O'Hare.png",
+      "series": 4,
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Gayle",
+      "name_kor": "\uc568\ub9ac",
+      "number": 391,
+      "file": "Series 4/[AC] 391 - Gayle.bin",
+      "image": "cards/391-Gayle.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Cranston",
+      "name_kor": "\ud0c0\ud0a4",
+      "number": 392,
+      "file": "Series 4/[AC] 392 - Cranston.bin",
+      "image": "cards/392-Cranston.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Frobert",
+      "name_kor": "\uad6c\ub9ac\uad6c\ub9ac",
+      "number": 393,
+      "file": "Series 4/[AC] 393 - Frobert.bin",
+      "image": "cards/393-Frobert.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Grizzly",
+      "name_kor": "\ubb34\ub69d",
+      "number": 394,
+      "file": "Series 4/[AC] 394 - Grizzly.bin",
+      "image": "cards/394-Grizzly.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Cally",
+      "name_kor": "\ud30c\uc2ac\ub9ac",
+      "number": 395,
+      "file": "Series 4/[AC] 395 - Cally.bin",
+      "image": "cards/395-Cally.png",
+      "series": 4,
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Simon",
+      "name_kor": "\uc2dc\ubaac",
+      "number": 396,
+      "file": "Series 4/[AC] 396 - Simon.bin",
+      "image": "cards/396-Simon.png",
+      "series": 4,
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Iggly",
+      "name_kor": "\uae40\ub9d0\uc774",
+      "number": 397,
+      "file": "Series 4/[AC] 397 - Iggly.bin",
+      "image": "cards/397-Iggly.png",
+      "series": 4,
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Angus",
+      "name_kor": "\ubc18\ub370\uc2a4",
+      "number": 398,
+      "file": "Series 4/[AC] 398 - Angus.bin",
+      "image": "cards/398-Angus.png",
+      "series": 4,
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Twiggy",
+      "name_kor": "\ud540\ud2f1",
+      "number": 399,
+      "file": "Series 4/[AC] 399 - Twiggy.bin",
+      "image": "cards/399-Twiggy.png",
+      "series": 4,
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Robin",
+      "name_kor": "\ud30c\ud2f1",
+      "number": 400,
+      "file": "Series 4/[AC] 400 - Robin.bin",
+      "image": "cards/400-Robin.png",
+      "series": 4,
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
     }
-  ]
-}
+]}
