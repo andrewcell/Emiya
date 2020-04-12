@@ -1,0 +1,45 @@
+extends layout
+
+block content
+    script(src="/javascripts/index.js")
+    script.
+        $(document).ready(function () {
+            const category = #{category}
+        })
+    .btn-group(role='group' aria-label='Basic example')
+        a.btn.btn-secondary(type='button', href="/category/1") 1~100
+        a.btn.btn-secondary(type='button', href="/category/2") 101~200
+        a.btn.btn-secondary(type='button', href="/category/3") 201~300
+        a.btn.btn-secondary(type='button', href="/category/4") 301~400
+
+
+    .row
+        each card in miibo
+            a.card.col-2(style="/*width: 12rem*/" href="/data/" + card.file)
+                img.card-img-top(src="/images/cards/" + card.number + ".png", alt=card.name)
+                .card-body
+                    div#content
+                        div#number(style="font-weight: bold")=card.number
+                        if card.number === 256
+                            div#name(style="color: purple; font-weight: bold; font-size: 24px") -->★#{card.name_kor}★<--
+                        else
+                            div#name #{card.name} #{card.name_kor}
+                        div#p(style="font-size: 12px; color: blue") #{(card.personality == null || card.personality[0] === "") ? "특수 주민" : card.personality[1] }
+                        case card.number
+                            when 256
+                                div#alias(style="display: none") 갤주
+                            when 249
+                                div#alias(style="display: none") 꼬털
+                            when 185
+                                div#alias(style="display: none") 데끼에로
+                            when 324
+                                div#alias(style="display: none") 부갤주
+                            when 366
+                                div#alias(style="display: none") 졸귀
+                            when 67
+                            when 126
+                                div#alias(style="display: none") 짱구
+                            when 244
+                                div#alias(style="display: none") 어노잉
+                            when -1
+                                div#alias(style="display: none") 신캐
