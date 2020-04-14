@@ -13,7 +13,7 @@ block content
               div#name(style="color: purple; font-weight: bold; font-size: 24px") -->★#{card.name_kor}★<--
             else
               div#name #{card.name} #{card.name_kor}
-            div#p(style="font-size: 12px; color: blue") #{(card.personality == null || card.personality[0] === "") ? "특수 주민" : card.personality[1] }
+            div#p(style="font-size: 12px; color: blue") #{(card.personality == null || card.personality[0] === "") ? "특수 주민(Special)" : card.personality[1]+"("+card.personality[0]+")" }
             case card.number
               when 256
                 div#alias(style="display: none") 갤주

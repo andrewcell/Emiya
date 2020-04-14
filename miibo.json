@@ -20,7 +20,7 @@
     },
     {
       "name": "DJ KK",
-      "name_kor": "",
+      "name_kor": "DJ K.K.",
       "number": 3,
       "file": "Series 1/[AC] 003 - DJ KK.bin",
       "image": "cards/3-DJ KK.png",
@@ -4748,5 +4748,14 @@
         "Snooty",
         "\uc131\uc219\ud568"
       ]
+    },
+    {
+	    "name": "Judy",
+	    "name_kor": "미애 아미보 빨리 내주세요",
+	    "number": -2,
+	    "file": "no",
+	    "image": "",
+	    "series": -1,
+	    "personality": ["Snooty", "성숙한 미애쨩 아미보 내주세요"]
     }
 ]}

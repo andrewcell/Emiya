@@ -599,6 +599,80 @@
         "Snooty",
         "\uc131\uc219\ud568"
       ]
-    }
+    },
+        {
+		      "name": "Rilla",
+		            "name_kor": "릴라",
+			          "number": "s1",
+				        "file": "Animal Crossing x Sanrio Series/[AC] XS1 - Rilla.bin",
+					      "image": "Welcome amiibo Series/50-Tasha.png",
+					            "series": "welcome",
+						          "personality": [
+								          "Peppy",
+									          "아이돌"
+										        ]
+											    },
+											      {
+												            "name": "Rilla",
+													          "name_kor": "Marty",
+														        "number": "s2",
+															      "file": "Animal Crossing x Sanrio Series/[AC] XS2 - Marty.bin",
+															            "image": "Welcome amiibo Series/50-Tasha.png",
+																          "series": "welcome",
+																	        "personality": [
+																			        "Lazy",
+																				        "먹보"
+																					      ]
+																					          },
+    {
+      "name": "Étoile",
+      "name_kor": "에뜨와르",
+      "number": "s3",
+      "file": "Animal Crossing x Sanrio Series/s3.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+	        "Normal",
+	          "친절함"
+	        ]
+          },
+	  {
+		        "name": "Chai",
+			      "name_kor": "피카",
+			            "number": "s4",
+				          "file": "Animal Crossing x Sanrio Series/[AC] XS4 - Chai.bin",
+					        "image": "Welcome amiibo Series/50-Tasha.png",
+						      "series": "welcome",
+						            "personality": [
+								            "Peppy",
+									            "아이돌"
+										          ]
+											      },
+											      {
+	      "name": "Chelsea",
+      "name_kor": "첼시",
+      "number": "s5",
+      "file": "Animal Crossing x Sanrio Series/[AC] XS5 - Chai.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+	        "Normal",
+	          "친절함"
+	        ]
+          },
+
+    {
+        "name": "Toby",
+      "name_kor": "토비",
+      "number": "s6",
+      "file": "Animal Crossing x Sanrio Series/[AC] XS6 - Toby.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+	        "Smug",
+	          "느끼함"
+	        ]
+          }		
+											      
   ]
 }
