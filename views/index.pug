@@ -4,16 +4,16 @@ block content
   script(src="/javascripts/index.js")
   .row
     each card in miibo
-      a.card.col-2(style="/*width: 12rem*/" href="/data/" + card.file)
-        img.card-img-top(src="/images/cards/" + card.number + ".png", alt=card.name)
+      a.card.col-2(href="/data/" + card.file)
+        img.card-img-top(src="/images/cards/" + card.number + ".jpg", alt=card.name)
         .card-body
           div#content
             div#number(style="font-weight: bold")=card.number
             if card.number === 256
-              div#name(style="color: purple; font-weight: bold; font-size: 24px") -->★#{card.name_kor}★<--
+              div#name(style="color: purple; font-weight: bold; font-size: 26px") ★#{card.name_kor}★
             else
               div#name #{card.name} #{card.name_kor}
-            div#p(style="font-size: 12px; color: blue") #{(card.personality == null || card.personality[0] === "") ? "특수 주민(Special)" : card.personality[1]+"("+card.personality[0]+")" }
+            div#p(style="font-size: 12px; color: blue") #{(card.personality == null || card.personality[0] === "") ? "특수 주민 (Special)" : card.personality[1]+" ("+card.personality[0]+")" }
             case card.number
               when 256
                 div#alias(style="display: none") 갤주

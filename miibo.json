@@ -4750,12 +4750,16 @@
       ]
     },
     {
-	    "name": "Judy",
-	    "name_kor": "미애 아미보 빨리 내주세요",
-	    "number": -2,
-	    "file": "no",
-	    "image": "",
-	    "series": -1,
-	    "personality": ["Snooty", "성숙한 미애쨩 아미보 내주세요"]
+      "name": "Judy",
+      "name_kor": "미애 아미보 빨리 내주세요",
+      "number": "x2",
+      "file": "no",
+      "image": "",
+      "series": -1,
+      "personality": [
+        "Snooty",
+        "성숙한 우리 미애!!!!!!!!"
+      ]
     }
-]}
+  ]
+}

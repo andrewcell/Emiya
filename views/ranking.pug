@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+    .conatiner-fluid
+        h1 Top 100 villagers! (beta)
+        table.table
+            thead
+                tr
+                    th(scope="col") #
+                    //-th(scope="col") Name
+                    th(scope="col") Name_KOR
+                    th(scope="col") Downloads
+            tbody
+                each element in data
+                    tr
+                        td(style="width: 40%")
+                            img(style="width: 100%", src="images/" + element["image"] + "/" + element["number"] + ".jpg")
+                        //-td=element["name"]
+                        td=element["name_kor"]
+                        td=element["count"]
+
+

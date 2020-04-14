@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 const path = require('path');
+const fs = require("fs");
 
 const downloadKey = {};
 
 router.get('/', function(req, res, next) {
-  const fs = require("fs");
-  const mibo = JSON.parse(require('fs').readFileSync("miibo.json")).data;
+  const mibo = JSON.parse(fs.readFileSync("miibo.json")).data;
 
   mibo.forEach(function(ambo) {
     if (ambo.number !== -1) {
@@ -26,24 +26,36 @@ router.get('/', function(req, res, next) {
 });
 
 router.get(['/category', '/category/:id'], function(req, res, next) {
-  var id = parseInt(req.params.id);
-  if (req.params.id === undefined) id = 1;
-  const mibo = JSON.parse(require('fs').readFileSync("miibo.json")).data;
-  var newData = []
-  mibo.forEach(function(ambo, index, object) {
-    if (ambo.number !== -1) {
-      if (ambo.number >= ((id-1)*100)+1 && ambo.number <= (100 * (id))) {
-        const randomKey = makeId(6);
-        downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
-        ambo.file = randomKey;
-        newData.push(ambo)
-      } else {
-        //object.splice(index, 1)
-      }
-    }
-  });
+  const fs = require("fs");
+  if (typeof req.params.id !== "undefined" && req.params.id === "welcome") {
+    const mibo = JSON.parse(fs.readFileSync("wel.json")).data;
+    mibo.forEach(function(ambo, index, object) {
+      const randomKey = makeId(10);
+      downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
+      ambo.file = randomKey
+    });
+    res.render("category", { title: "NTAG215", miibo: mibo, category: "welcome" });
+  } else {
+    var id = parseInt(req.params.id);
+    if (req.params.id === undefined) id = 1;
 
-  res.render("category", { title: "NTAG215", miibo: newData, category: id });
+    const mibo = JSON.parse(fs.readFileSync("miibo.json")).data;
+    var newData = []
+    mibo.forEach(function (ambo, index, object) {
+      if (ambo.number !== -1) {
+        if (ambo.number >= ((id - 1) * 100) + 1 && ambo.number <= (100 * (id))) {
+          const randomKey = makeId(6);
+          downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
+          ambo.file = randomKey;
+          newData.push(ambo)
+        } else {
+          //object.splice(index, 1)
+        }
+      }
+    });
+    res.render("category", { title: "NTAG215", miibo: newData, category: id });
+  }
+
 });
 
 router.get("/data/:key", function(req, res) {
@@ -61,8 +73,38 @@ router.get("/data/:key", function(req, res) {
   }
 });
 
+router.get("/ranking", function(req, res) {
+  const log = JSON.parse(fs.readFileSync("log.json"))
+  const sorted = Object.keys(log).sort(function(a,b){return log[a]-log[b]})
+  const array = [];
+  sorted.forEach(function(key, index){
+    const data = key.split("-");
+    let number = TryParseInt(data[0], data[0]);
+    let image = "cards";
+    if (typeof number === "string") {
+      number = number.trim()
+      image = "welcome"
+    }
+    const name = data[1].trim()
+    const name_kor = data[2].trim()
+    array.push({image: image, number: number, name: name, name_kor: name_kor, count: log[key]})
+  })
+  res.render("ranking", {data: array})
+})
+
+function TryParseInt(str,defaultValue) {
+  var retValue = defaultValue;
+  if(str !== null) {
+    if(str.length > 0) {
+      if (!isNaN(str)) {
+        retValue = parseInt(str);
+      }
+    }
+  }
+  return retValue;
+}
+
 function save(name, ip) {
-  const fs = require('fs');
   if (!fs.existsSync("log.json")) {
     fs.writeFileSync("log.json", "{}")
   }

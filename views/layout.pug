@@ -9,10 +9,12 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     header
-      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      nav.navbar.navbar-expand.navbar-light.bg-light
         a.navbar-brand(href="/") Emibo DB
+
         form.form-inline.my-2.my-lg-0
-          input.form-control.mr-sm-7.my-2.my-lg-0(type="search", placeholder="Search by name", aria-label="Search")
+            input.form-control.mr-sm-7.my-2.my-lg-0(type="search", placeholder="Search", aria-label="Search")
+        a.nav-link(href="/ranking", style="font-size: 10px") Ranking
         //form.form-inline
           select.form-control
             option(selected) 성격
