@@ -4760,6 +4760,18 @@
         "Snooty",
         "성숙한 우리 미애!!!!!!!!"
       ]
+    },
+    {
+      "name": "Raymond",
+      "name_kor": "짹슨은 아직 아미보가 업대요",
+      "number": "x3",
+      "file": "no",
+      "image": "",
+      "series": -1,
+      "personality": [
+        "Smug",
+        "느끼한 떼껄룩"
+      ]
     }
   ]
 }
