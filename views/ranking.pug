@@ -12,12 +12,12 @@ block content
                     th(scope="col") Name_KOR
                     th(scope="col") Downloads
             tbody
-                each element in data
+                each element,index in data
                     tr
-                        td(style="width: 40%")
+                        td(style="width: 25%")
                             img(style="width: 100%", src="images/" + element["image"] + "/" + element["number"] + ".jpg")
                         //-td=element["name"]
-                        td=element["name_kor"]
+                        td=(index+1) + "위" + " " + element["name_kor"]
                         td=element["count"]
 
 

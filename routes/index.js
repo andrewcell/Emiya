@@ -89,7 +89,7 @@ router.get("/ranking", function(req, res) {
     const name_kor = data[2].trim()
     array.push({image: image, number: number, name: name, name_kor: name_kor, count: log[key]})
   })
-  res.render("ranking", {data: array})
+  res.render("ranking", {data: array.reverse()})
 })
 
 function TryParseInt(str,defaultValue) {
