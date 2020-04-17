@@ -28,17 +28,18 @@ app.use(sassMiddleware({
 
 app.use(function (req, res, next) {
   const fs = require("fs");
-  const referrer = req.headers.referer;
+
+  const url = require("url").parse(req.headers.referer).hostname;
   if (referrer !== undefined || referrer === "") {
     if (!fs.existsSync("Referer.json")) {
       fs.writeFileSync("Referer.json", '{}');
     }
     const referer = JSON.parse(fs.readFileSync("Referer.json"));
     let count = 1;
-    if (referrer in referer) {
-      count = count + referer[name];
+    if (url in referer) {
+      count = count + referer[url];
     }
-    referer[referrer] = count;
+    referer[url] = count;
     next();
   } else {
     next();
