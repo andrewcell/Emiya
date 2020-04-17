@@ -25,6 +25,25 @@ app.use(sassMiddleware({
   indentedSyntax: true, // true = .sass and false = .scss
   sourceMap: true
 }));
+
+app.use(function (req, res, next) {
+  const fs = require("fs")
+  if (req.referrer !== undefined || req.referrer === "") {
+    if (!fs.existsSync("Referer.json")) {
+      fs.writeFileSync("Referer.json", '{}')
+    }
+    const referer = JSON.parse(fs.readFileSync("Referer.json"));
+    let count = 1;
+    if (req.referrer in referer) {
+      count = count + referer[name]
+    }
+    referer[req.referrer] = count
+    next()
+  } else {
+    next()
+  }
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
