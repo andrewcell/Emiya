@@ -4762,6 +4762,18 @@
       ]
     },
     {
+	    "name": "TagMo",
+	    "name_kor": "2.7.0",
+	    "number": "x3",
+	    "file": "Series 1/tagmo.bin",
+	    "image": "",
+	    "series": -1,
+	    "personality": [
+		    "설명",
+		    "다운로드 후 tagmo.bin 을 tagmo.apk 로 바꾸세요."
+	    ]
+    },
+    {
       "name": "Raymond",
       "name_kor": "짹슨은 아직 아미보가 업대요",
       "number": "x3",

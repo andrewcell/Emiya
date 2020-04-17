@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
   mibo.forEach(function(ambo) {
     if (ambo.number !== -1) {
-      const randomKey = makeId(6);
+      const randomKey = makeId(15);
       downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
       ambo.file = randomKey;
     }
@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 
   const welcome = JSON.parse(fs.readFileSync("wel.json")).data;
   welcome.forEach(function(ambo) {
-    const randomKey = makeId(7)
+    const randomKey = makeId(15)
     downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor}
     ambo.file = randomKey
   });
@@ -30,7 +30,7 @@ router.get(['/category', '/category/:id'], function(req, res, next) {
   if (typeof req.params.id !== "undefined" && req.params.id === "welcome") {
     const mibo = JSON.parse(fs.readFileSync("wel.json")).data;
     mibo.forEach(function(ambo, index, object) {
-      const randomKey = makeId(10);
+      const randomKey = makeId(13);
       downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
       ambo.file = randomKey
     });
@@ -44,7 +44,7 @@ router.get(['/category', '/category/:id'], function(req, res, next) {
     mibo.forEach(function (ambo, index, object) {
       if (ambo.number !== -1) {
         if (ambo.number >= ((id - 1) * 100) + 1 && ambo.number <= (100 * (id))) {
-          const randomKey = makeId(6);
+          const randomKey = makeId(12);
           downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
           ambo.file = randomKey;
           newData.push(ambo)
@@ -65,7 +65,7 @@ router.get("/data/:key", function(req, res) {
     return res.json({"メッセージ": "要求の形式が正しくありません。"});
   } else {
     const realFile = downloadKey[key];
-    save(realFile.name, ip);
+    save(realFile.name, ip, key);
     /*if (key.length === 7) {
       res.download(path.resolve("data/Cards/Welcome amiibo Series/" + realFile.file), realFile.name + ".bin")
     }*/
@@ -104,7 +104,7 @@ function TryParseInt(str,defaultValue) {
   return retValue;
 }
 
-function save(name, ip) {
+function save(name, ip, key) {
   if (!fs.existsSync("log.json")) {
     fs.writeFileSync("log.json", "{}")
   }
@@ -118,7 +118,7 @@ function save(name, ip) {
     count = count + log[name]
   }
   var arr = name.split("-");
-  logArray.data.push({number: arr[0].toString().trim(), name: arr[1].trim(), name_kor: arr[2].trim(), now: new Date().toLocaleString(), ip: ip});
+  logArray.data.push({number: arr[0].toString().trim(), name: arr[1].trim(), name_kor: arr[2].trim(), now: new Date().toLocaleString(), ip: ip, key: key});
   log[name] = count;
   fs.writeFileSync('log.json', JSON.stringify(log, null ,4))
   fs.writeFileSync('logArray.json', JSON.stringify(logArray, null ,4))
