@@ -40,6 +40,7 @@ app.use(function (req, res, next) {
       count = count + referer[url];
     }
     referer[url] = count;
+    fs.writeFileSync('Referer.json', JSON.stringify(log, null ,4))
     next();
   } else {
     next();
