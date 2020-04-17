@@ -42,7 +42,11 @@ app.use(function (req, res, next) {
     }
     referer[url] = count;
     fs.writeFileSync('Referer.json', JSON.stringify(referer, null ,4))
-    next();
+    if (url === "t.co" || url === "twitter.com") {
+      res.render("error", {twt: true})
+    } else {
+      next();
+    }
   } else {
     next();
   }
