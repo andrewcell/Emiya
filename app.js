@@ -29,8 +29,9 @@ app.use(sassMiddleware({
 app.use(function (req, res, next) {
   const fs = require("fs");
 
-  const url = require("url").parse(req.headers.referer).hostname;
-  if (referrer !== undefined || referrer === "") {
+
+  if (req.headers.referer !== undefined || req.headers.referer === "") {
+    const url = require("url").parse(req.headers.referer).hostname;
     if (!fs.existsSync("Referer.json")) {
       fs.writeFileSync("Referer.json", '{}');
     }
@@ -40,7 +41,7 @@ app.use(function (req, res, next) {
       count = count + referer[url];
     }
     referer[url] = count;
-    fs.writeFileSync('Referer.json', JSON.stringify(log, null ,4))
+    fs.writeFileSync('Referer.json', JSON.stringify(referer, null ,4))
     next();
   } else {
     next();
@@ -65,6 +66,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
+  console.log(err);
   res.render('error');
 });
 
