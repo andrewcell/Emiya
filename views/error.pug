@@ -1,7 +1,13 @@
 extends layout
 
 block content
-    img(src="/images/prettyone.jpg")
-    h3 오류가 생겼습니다. 하지만 걱정하지 마십시오.
-    h3(style="color: purple") ★아이다★
-    h3 님이 이미 처치하셨습니다.
+    .container-fluid
+        img(src="/images/prettyone.jpg")
+        if (notfound)
+            h3 다운로드 링크를 찾을 수 없습니다.
+            h3 혹시 당신, 이상한 시도를 하고 있나요?
+            h3(style="color: purple; font-weight: bold") "무인도가 있다고? 나도 살아도 될까?, 흐응"
+        else
+            h3 오류가 생겼습니다. 하지만 걱정하지 마십시오.
+            h3(style="color: purple") ★아이다★
+            h3 님이 이미 처치하셨습니다.

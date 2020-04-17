@@ -62,7 +62,7 @@ router.get("/data/:key", function(req, res) {
   const ip = req.headers['x-forwarded-for'] ||  req.connection.remoteAddress;
   const key = req.params.key;
   if (!(key in downloadKey)) {
-    return res.json({"メッセージ": "要求の形式が正しくありません。"});
+    return res.render("error", {notfound: true});
   } else {
     const realFile = downloadKey[key];
     save(realFile.name, ip, key);
