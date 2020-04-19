@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const path = require('path');
 const fs = require("fs");
 
@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 
   const welcome = JSON.parse(fs.readFileSync("wel.json")).data;
   welcome.forEach(function(ambo) {
-    const randomKey = makeId(15)
+    const randomKey = makeId(15);
     downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor}
     ambo.file = randomKey
   });
@@ -40,7 +40,7 @@ router.get(['/category', '/category/:id'], function(req, res, next) {
     if (req.params.id === undefined) id = 1;
 
     const mibo = JSON.parse(fs.readFileSync("miibo.json")).data;
-    var newData = []
+    var newData = [];
     mibo.forEach(function (ambo, index, object) {
       if (ambo.number !== -1) {
         if (ambo.number >= ((id - 1) * 100) + 1 && ambo.number <= (100 * (id))) {
@@ -66,32 +66,41 @@ router.get("/data/:key", function(req, res) {
   } else {
     const realFile = downloadKey[key];
     save(realFile.name, ip, key);
+    if (realFile.file === "no") {
+      res.render("error", {notyet: true});
+    } else {
+      res.download(path.resolve("data/Cards/" + realFile.file), realFile.name + ".bin")
+
+    }
     /*if (key.length === 7) {
       res.download(path.resolve("data/Cards/Welcome amiibo Series/" + realFile.file), realFile.name + ".bin")
     }*/
-    res.download(path.resolve("data/Cards/" + realFile.file), realFile.name + ".bin")
+
   }
 });
 
-router.get("/ranking", function(req, res) {
-  const log = JSON.parse(fs.readFileSync("log.json"))
-  const sorted = Object.keys(log).sort(function(a,b){return log[a]-log[b]})
+router.get("/menu", function(req, res) {
+  const log = JSON.parse(fs.readFileSync("log.json"));
+  const sorted = Object.keys(log).sort(function(a,b){return log[a]-log[b]});
   const array = [];
   sorted.forEach(function(key, index){
     const data = key.split("-");
     let number = TryParseInt(data[0], data[0]);
     let image = "cards";
     if (typeof number === "string") {
-      number = number.trim()
+      number = number.trim();
       image = "welcome"
     }
-    const name = data[1].trim()
-    const name_kor = data[2].trim()
+    const name = data[1].trim();
+    const name_kor = data[2].trim();
     array.push({image: image, number: number, name: name, name_kor: name_kor, count: log[key]})
-  })
+  });
   res.render("ranking", {data: array.reverse()})
-})
+});
 
+/**
+ * @return {number}
+ */
 function TryParseInt(str,defaultValue) {
   var retValue = defaultValue;
   if(str !== null) {

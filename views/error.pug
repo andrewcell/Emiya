@@ -2,7 +2,7 @@ extends layout
 
 block content
     .container-fluid
-        img(src="/images/prettyone.jpg")
+        img(src="/images/dva.jpg")
         if (notfound)
             h3 다운로드 링크를 찾을 수 없습니다.
             h3 혹시 당신, 이상한 시도를 하고 있나요?
@@ -10,6 +10,8 @@ block content
         else if (twt)
             h3 잠시만요. 어디서 오신거죠?
             h3(style="color: purple; font-weight: bold") "넌 못 들어갈 거 같은데, 흐응"
+        else if (notyet)
+            h3 모동숲에서 추가된 주민은 파일이 없습니다.
         else
             h3 오류가 생겼습니다. 하지만 걱정하지 마십시오.
             h3(style="color: purple") ★아이다★
