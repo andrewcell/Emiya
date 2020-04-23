@@ -5,8 +5,9 @@ const fs = require("fs");
 
 const downloadKey = {};
 
-const mibo = JSON.parse(fs.readFileSync("miibo.json")).data;
-const welcome = JSON.parse(fs.readFileSync("wel.json")).data;
+const mibo = JSON.parse(fs.readFileSync("miibo.json").toString()).data;
+const welcome = JSON.parse(fs.readFileSync("wel.json").toString()).data;
+const figure = JSON.parse(fs.readFileSync("figure.json").toString()).data;
 
 mibo.forEach(function(ambo) {
   if (ambo.number !== -1) {
@@ -22,12 +23,17 @@ welcome.forEach(function(ambo) {
   ambo.file = randomKey
 });
 
-router.get('/', function(req, res, next) {
+figure.forEach(function(ambo) {
+  const randomKey = makeId(32);
+  downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor}
+  ambo.file = randomKey
+});
+
+router.get('/', function(req, res) {
   res.render('index', { title: 'NTAG215', miibo: mibo, welcome: welcome });
 });
 
-router.get(['/category', '/category/:id'], function(req, res, next) {
-  const fs = require("fs");
+router.get(['/category', '/category/:id'], function(req, res) {
   if (typeof req.params.id !== "undefined" && req.params.id === "welcome") {
     res.render("category", { title: "NTAG215", miibo: welcome, category: "welcome" });
   } else {
@@ -35,7 +41,7 @@ router.get(['/category', '/category/:id'], function(req, res, next) {
     if (req.params.id === undefined) id = 1;
 
     var newData = [];
-    mibo.forEach(function (ambo, index, object) {
+    mibo.forEach(function (ambo) {
       if (ambo.number !== -1) {
         if (ambo.number >= ((id - 1) * 100) + 1 && ambo.number <= (100 * (id))) {
           newData.push(ambo)
@@ -74,7 +80,7 @@ router.get("/menu", function(req, res) {
   const log = JSON.parse(fs.readFileSync("log.json"));
   const sorted = Object.keys(log).sort(function(a,b){return log[a]-log[b]});
   const array = [];
-  sorted.forEach(function(key, index){
+  sorted.forEach(function(key){
     const data = key.split("-");
     let number = TryParseInt(data[0], data[0]);
     let image = "cards";
