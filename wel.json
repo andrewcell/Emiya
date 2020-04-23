@@ -671,6 +671,66 @@
         "Smug",
         "느끼함"
       ]
+    },
+    {
+      "name": "Stitches",
+      "name_kor": "패치",
+      "number": "af1",
+      "file": "Promo/[AC] AF1 - Stitches.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "먹보"
+      ]
+    },
+    {
+      "name": "Rosie",
+      "name_kor": "부케",
+      "number": "af2",
+      "file": "Promo/[AC] AF2 - Rosie.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Peppy",
+        "아이돌"
+      ]
+    },
+    {
+      "name": "Goldie",
+      "name_kor": "카라멜",
+      "number": "af3",
+      "file": "Promo/[AC] AF3 - Goldie.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "친절함"
+      ]
+    },
+    {
+      "name": "Isabelle",
+      "name_kor": "여울",
+      "number": "cp1",
+      "file": "Promo/[AC] CP1 - Isabelle.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "K. K. Slider",
+      "name_kor": "K. K.",
+      "number": "cp2",
+      "file": "Promo/[AC] CP2 - K.K Slider.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "",
+        ""
+      ]
     }
   ]
 }
