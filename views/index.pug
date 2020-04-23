@@ -39,6 +39,6 @@ block content
           div#content
             div#number(style="font-weight: bold")=card.number
             div#name #{card.name} #{card.name_kor}
-            div#p(style="font-size: 12px; color: blue")=card.personality[1]
+            div#p(style="font-size: 12px; color: blue")=card.personality[1]+" ("+card.personality[0]+")"
             div#alias(style="display: none") welcome웰컴플러스plus캠핑카
             //div#p(style="font-size: 12px; color: blue") #{(card.personality == null || card.personality[0] === "") ? "특수 주민" : card.personality[1] }
