@@ -29,7 +29,6 @@ app.use(sassMiddleware({
 app.use(function (req, res, next) {
   const fs = require("fs");
 
-
   if (req.headers.referer !== undefined || req.headers.referer === "") {
     const url = require("url").parse(req.headers.referer).hostname;
     if (!fs.existsSync("Referer.json")) {

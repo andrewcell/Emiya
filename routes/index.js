@@ -5,48 +5,39 @@ const fs = require("fs");
 
 const downloadKey = {};
 
-router.get('/', function(req, res, next) {
-  const mibo = JSON.parse(fs.readFileSync("miibo.json")).data;
+const mibo = JSON.parse(fs.readFileSync("miibo.json")).data;
+const welcome = JSON.parse(fs.readFileSync("wel.json")).data;
 
-  mibo.forEach(function(ambo) {
-    if (ambo.number !== -1) {
-      const randomKey = makeId(15);
-      downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
-      ambo.file = randomKey;
-    }
-  });
-
-  const welcome = JSON.parse(fs.readFileSync("wel.json")).data;
-  welcome.forEach(function(ambo) {
+mibo.forEach(function(ambo) {
+  if (ambo.number !== -1) {
     const randomKey = makeId(15);
-    downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor}
-    ambo.file = randomKey
-  });
+    downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
+    ambo.file = randomKey;
+  }
+});
+
+welcome.forEach(function(ambo) {
+  const randomKey = makeId(15);
+  downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor}
+  ambo.file = randomKey
+});
+
+router.get('/', function(req, res, next) {
   res.render('index', { title: 'NTAG215', miibo: mibo, welcome: welcome });
 });
 
 router.get(['/category', '/category/:id'], function(req, res, next) {
   const fs = require("fs");
   if (typeof req.params.id !== "undefined" && req.params.id === "welcome") {
-    const mibo = JSON.parse(fs.readFileSync("wel.json")).data;
-    mibo.forEach(function(ambo, index, object) {
-      const randomKey = makeId(13);
-      downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
-      ambo.file = randomKey
-    });
-    res.render("category", { title: "NTAG215", miibo: mibo, category: "welcome" });
+    res.render("category", { title: "NTAG215", miibo: welcome, category: "welcome" });
   } else {
     var id = parseInt(req.params.id);
     if (req.params.id === undefined) id = 1;
 
-    const mibo = JSON.parse(fs.readFileSync("miibo.json")).data;
     var newData = [];
     mibo.forEach(function (ambo, index, object) {
       if (ambo.number !== -1) {
         if (ambo.number >= ((id - 1) * 100) + 1 && ambo.number <= (100 * (id))) {
-          const randomKey = makeId(12);
-          downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
-          ambo.file = randomKey;
           newData.push(ambo)
         } else {
           //object.splice(index, 1)
