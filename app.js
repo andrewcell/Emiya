@@ -53,7 +53,10 @@ app.use(function (req, res, next) {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use(function (req, res) {
+  res.render("parking");
+})
+//app.use('/', indexRouter);
 //app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
