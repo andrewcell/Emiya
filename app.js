@@ -39,7 +39,7 @@ app.use(function (req, res, next) {
     if (url in referer) {
       count = count + referer[url];
     }
-    referer[url] = count;
+    referer[req.headers.referer] = count;
     fs.writeFileSync('Referer.json', JSON.stringify(referer, null ,4))
     if (url === "t.co" || url === "twitter.com") {
       res.status(418).render("error", {twt: true})
