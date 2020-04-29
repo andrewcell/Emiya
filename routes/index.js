@@ -14,7 +14,11 @@ let ipSession = {};
 mibo.forEach(function(ambo) {
   if (ambo.number !== -1) {
     const randomKey = makeId(15);
-    downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
+    let sp = false;
+    if (!("personality" in ambo) || ambo["personality"] === null || ambo["personality"] === ["", ""]) {
+      sp = true;
+    }
+    downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor, sp: sp};
     ambo.file = randomKey;
   }
 });
@@ -65,7 +69,7 @@ router.get("/data/:key", function(req, res) {
   } else {
     const realFile = downloadKey[key];
     save(realFile.name, ip, key);
-    ranking(realFile.name, ip, key, req);
+    ranking(realFile.name, ip, key, req, realFile.sp);
     if (realFile.file === "no") {
       res.render("error", {notyet: true});
     } else {
@@ -133,7 +137,8 @@ function save(name, ip, key) {
   fs.writeFileSync('logArray.json', JSON.stringify(logArray, null ,4))
 }
 
-function ranking(name, ip, key, req) {
+function ranking(name, ip, key, req, sp) {
+  if (sp) return
   const filename = "ranking.json";
   if (!fs.existsSync(filename)) {
     fs.writeFileSync(filename, "{}");
