@@ -1,14 +1,25 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var sassMiddleware = require('node-sass-middleware');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const sassMiddleware = require('node-sass-middleware');
+const session = require("express-session");
+const indexRouter = require('./routes/index');
+//const usersRouter = require('./routes/data');
 
-var indexRouter = require('./routes/index');
-//var usersRouter = require('./routes/data');
+const app = express();
 
-var app = express();
+const sessions = session({
+  key: indexRouter.random(10),
+  secret: indexRouter.random(20),
+  name: indexRouter.random(12),
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    maxAge: 3600 * 1000
+  }
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,12 +30,17 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(sessions);
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
   indentedSyntax: true, // true = .sass and false = .scss
   sourceMap: true
 }));
+app.use((req, res, next) => {
+  res.locals.session = req.session;
+  next();
+})
 
 app.use(function (req, res, next) {
   const fs = require("fs");
@@ -34,7 +50,7 @@ app.use(function (req, res, next) {
     if (!fs.existsSync("Referer.json")) {
       fs.writeFileSync("Referer.json", '{}');
     }
-    const referer = JSON.parse(fs.readFileSync("Referer.json"));
+    const referer = JSON.parse(fs.readFileSync("Referer.json").toString());
     let count = 1;
     if (url in referer) {
       count = count + referer[url];
@@ -53,11 +69,7 @@ app.use(function (req, res, next) {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(function (req, res) {
-  res.render("parking");
-})
-//app.use('/', indexRouter);
-//app.use('/users', usersRouter);
+app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

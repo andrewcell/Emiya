@@ -9,6 +9,8 @@ const mibo = JSON.parse(fs.readFileSync("miibo.json").toString()).data;
 const welcome = JSON.parse(fs.readFileSync("wel.json").toString()).data;
 const figure = JSON.parse(fs.readFileSync("figure.json").toString()).data;
 
+let ipSession = {};
+
 mibo.forEach(function(ambo) {
   if (ambo.number !== -1) {
     const randomKey = makeId(15);
@@ -37,10 +39,10 @@ router.get(['/category', '/category/:id'], function(req, res) {
   if (typeof req.params.id !== "undefined" && req.params.id === "welcome") {
     res.render("category", { title: "NTAG215", miibo: welcome, category: "welcome" });
   } else {
-    var id = parseInt(req.params.id);
+    let id = parseInt(req.params.id);
     if (req.params.id === undefined) id = 1;
 
-    var newData = [];
+    const newData = [];
     mibo.forEach(function (ambo) {
       if (ambo.number !== -1) {
         if (ambo.number >= ((id - 1) * 100) + 1 && ambo.number <= (100 * (id))) {
@@ -63,6 +65,7 @@ router.get("/data/:key", function(req, res) {
   } else {
     const realFile = downloadKey[key];
     save(realFile.name, ip, key);
+    ranking(realFile.name, ip, key, req);
     if (realFile.file === "no") {
       res.render("error", {notyet: true});
     } else {
@@ -77,7 +80,7 @@ router.get("/data/:key", function(req, res) {
 });
 
 router.get("/menu", function(req, res) {
-  const log = JSON.parse(fs.readFileSync("log.json"));
+  const log = JSON.parse(fs.readFileSync("ranking.json").toString());
   const sorted = Object.keys(log).sort(function(a,b){return log[a]-log[b]});
   const array = [];
   sorted.forEach(function(key){
@@ -117,17 +120,33 @@ function save(name, ip, key) {
   if (!fs.existsSync("logArray.json")) {
     fs.writeFileSync("logArray.json", '{"data": []}')
   }
-  var log = JSON.parse(fs.readFileSync("log.json"));
-  var logArray = JSON.parse(fs.readFileSync("logArray.json"));
-  var count = 1;
+  const log = JSON.parse(fs.readFileSync("log.json"));
+  const logArray = JSON.parse(fs.readFileSync("logArray.json"));
+  let count = 1;
   if (name in log) {
     count = count + log[name]
   }
-  var arr = name.split("-");
+  const arr = name.split("-");
   logArray.data.push({number: arr[0].toString().trim(), name: arr[1].trim(), name_kor: arr[2].trim(), now: new Date().toLocaleString(), ip: ip, key: key});
   log[name] = count;
   fs.writeFileSync('log.json', JSON.stringify(log, null ,4))
   fs.writeFileSync('logArray.json', JSON.stringify(logArray, null ,4))
+}
+
+function ranking(name, ip, key, req) {
+  const filename = "ranking.json";
+  if (!fs.existsSync(filename)) {
+    fs.writeFileSync(filename, "{}");
+  }
+  const ranking = JSON.parse(fs.readFileSync(filename).toString());
+  const arr = name.split("-");
+  const number = arr[0].toString().trim()
+  if (!(req.session[number] >= 1 || number in req.session || ipSession[ip] >= 5)) {
+    (name in ranking) ? ranking[name]++ : ranking[name] = 1;
+    (ip in ipSession) ? ipSession[ip]++ : ipSession[ip] = 1;
+    req.session[number] = 1;
+  }
+  fs.writeFileSync(filename, JSON.stringify(ranking, null, 4));
 }
 
 function makeId(length) {
@@ -142,3 +161,4 @@ function makeId(length) {
 
 
 module.exports = router;
+module.exports.random = makeId;
