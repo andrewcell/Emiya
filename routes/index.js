@@ -24,19 +24,19 @@ mibo.forEach(function(ambo) {
 });
 
 welcome.forEach(function(ambo) {
-  const randomKey = makeId(15);
-  downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor}
+  const randomKey = makeId(22);
+  downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor};
   ambo.file = randomKey
 });
 
 figure.forEach(function(ambo) {
-  const randomKey = makeId(32);
-  downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor}
+  const randomKey = makeId(128);
+  downloadKey[randomKey] = {file: ambo.file, name: ambo.number + " - " + ambo.name + " - " + ambo.name_kor, fi: true};
   ambo.file = randomKey
 });
 
 router.get('/', function(req, res) {
-  res.render('index', { title: 'NTAG215', miibo: mibo, welcome: welcome });
+  res.render('index', { title: 'NTAG215', miibo: mibo, welcome: welcome, figures: figure });
 });
 
 router.get(['/category', '/category/:id'], function(req, res) {
@@ -73,8 +73,11 @@ router.get("/data/:key", function(req, res) {
     if (realFile.file === "no") {
       res.render("error", {notyet: true});
     } else {
-      res.download(path.resolve("data/Cards/" + realFile.file), realFile.name + ".bin")
-
+      let link = "data/Cards/";
+      if ("fi" in realFile && realFile["fi"] === true) {
+        link = "data/Figures/";
+      }
+      res.download(path.resolve(link + realFile.file), realFile.name + ".bin")
     }
     /*if (key.length === 7) {
       res.download(path.resolve("data/Cards/Welcome amiibo Series/" + realFile.file), realFile.name + ".bin")
@@ -105,7 +108,7 @@ router.get("/menu", function(req, res) {
 /**
  * @return {number}
  */
-function TryParseInt(str,defaultValue) {
+function TryParseInt(str, defaultValue) {
   var retValue = defaultValue;
   if(str !== null) {
     if(str.length > 0) {
@@ -124,8 +127,8 @@ function save(name, ip, key) {
   if (!fs.existsSync("logArray.json")) {
     fs.writeFileSync("logArray.json", '{"data": []}')
   }
-  const log = JSON.parse(fs.readFileSync("log.json"));
-  const logArray = JSON.parse(fs.readFileSync("logArray.json"));
+  const log = JSON.parse(fs.readFileSync("log.json").toString());
+  const logArray = JSON.parse(fs.readFileSync("logArray.json").toString());
   let count = 1;
   if (name in log) {
     count = count + log[name]
@@ -133,12 +136,12 @@ function save(name, ip, key) {
   const arr = name.split("-");
   logArray.data.push({number: arr[0].toString().trim(), name: arr[1].trim(), name_kor: arr[2].trim(), now: new Date().toLocaleString(), ip: ip, key: key});
   log[name] = count;
-  fs.writeFileSync('log.json', JSON.stringify(log, null ,4))
-  fs.writeFileSync('logArray.json', JSON.stringify(logArray, null ,4))
+  fs.writeFileSync('log.json', JSON.stringify(log, null ,4));
+  fs.writeFileSync('logArray.json', JSON.stringify(logArray, null ,4));
 }
 
 function ranking(name, ip, key, req, sp) {
-  if (sp) return
+  if (sp) return;
   const filename = "ranking.json";
   if (!fs.existsSync(filename)) {
     fs.writeFileSync(filename, "{}");
