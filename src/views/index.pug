@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  script(src="/scripts/index.js")
+  .row
+    each card in miibo
+      if (!("series" in card && card["series"] === -1))
+        a.card.col-2(href="/data/" + card.file)
+          img.card-img-top(src="/images/cards/" + card.number + ".jpg", alt=card.name)
+          .card-body
+            div#content
+              div#number(style="font-weight: bold")=card.number
+              if card.number === 256
+                div#name(style="color: purple; font-weight: bold; font-size: 26px") ★#{card.name_kor}★
+              else
+                div#name #{card.name} #{card.name_kor}
+              div#p(style="font-size: 12px; color: blue") #{(card.personality == null || card.personality[0] === "") ? "특수 주민 (Special)" : card.personality[1]+" ("+card.personality[0]+")" }
+              case card.number
+                when 256
+                  div#alias(style="display: none") 갤주
+                when 249
+                  div#alias(style="display: none") 꼬털
+                when 185
+                  div#alias(style="display: none") 데끼에로
+                when 324
+                  div#alias(style="display: none") 부갤주
+                when 366
+                  div#alias(style="display: none") 졸귀
+                when 67
+                when 126
+                  div#alias(style="display: none") 짱구
+                when 244
+                  div#alias(style="display: none") 어노잉
+                when -1
+                  div#alias(style="display: none") 신캐
+    each card in welcome
+      a.card.col-2(href="/data/" + card.file)
+        img.card-img-top(src="/images/welcome/" + card.number + ".png", alt=card.name)
+        .card-body
+          div#content
+            div#number(style="font-weight: bold")=card.number
+            div#name #{card.name} #{card.name_kor}
+            div#p(style="font-size: 12px; color: blue")=card.personality[1]+" ("+card.personality[0]+")"
+            div#alias(style="display: none") welcome웰컴플러스plus캠핑카
+
+    each figure in figures
+      a.card.col-2(href="/data/" + figure.file)
+        img.card-img-top(src="/images/figure/" + figure.number + ".png", alt=figure.name)
+        .card-body
+          div#content
+            div#number(style="font-weight: bold")=figure.number
+            div#name #{figure.name} #{figure.name_kor}
+            div#p(style="font-size: 12px; color: blue") 특수 주민 (Special)
+            div#alias(style="display: none")
+

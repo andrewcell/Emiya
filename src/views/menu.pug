@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+    .container-fluid
+        .alert.alert-success Update (05/04/2020): Base language changed
+
+
+
+        //-h3 Villagers ranking!
+        //-table.table
+            thead
+                tr
+                    th(scope="col") #
+                    //-th(scope="col") Name
+                    th(scope="col") Name_KOR
+                    th(scope="col") Downloads
+            tbody
+                each element,index in data
+                    tr
+                        td(style="width: 25%")
+                            img(style="width: 100%", src="images/" + element["image"] + "/" + element["number"] + ".jpg")
+                        //-td=element["name"]
+                        td=(index+1) + "위" + " " + element["name_kor"]
+                        td=element["count"]
+
+
