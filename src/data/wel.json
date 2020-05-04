@@ -1,0 +1,736 @@
+{
+  "data": [
+    {
+      "name": "Vivian",
+      "name_kor": "\ubc14\ub124\uc0ac",
+      "number": "w1",
+      "file": "Welcome amiibo Series/[AC] W01 - Vivian.bin",
+      "image": "Welcome amiibo Series/1-Vivian.png",
+      "series": "welcome",
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Hopkins",
+      "name_kor": "\ud649\ud0a8\uc2a4",
+      "number": "w2",
+      "file": "Welcome amiibo Series/[AC] W02 - Hopkins.bin",
+      "image": "Welcome amiibo Series/2-Hopkins.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "June",
+      "name_kor": "\uba54\uc774",
+      "number": "w3",
+      "file": "Welcome amiibo Series/[AC] W03 - June.bin",
+      "image": "Welcome amiibo Series/3-June.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Piper",
+      "name_kor": "\ud30c\uc774\ud504",
+      "number": "w4",
+      "file": "Welcome amiibo Series/[AC] W04 - Piper.bin",
+      "image": "Welcome amiibo Series/4-Piper.png",
+      "series": "welcome",
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Paolo",
+      "name_kor": "\ud30c\uc62c\ub85c",
+      "number": "w5",
+      "file": "Welcome amiibo Series/[AC] W05 - Paolo.bin",
+      "image": "Welcome amiibo Series/5-Paolo.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Hornsby",
+      "name_kor": "\ubfcc\ub78c",
+      "number": "w6",
+      "file": "Welcome amiibo Series/[AC] W06 - Hornsby.bin",
+      "image": "Welcome amiibo Series/6-Hornsby.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Stella",
+      "name_kor": "\uc544\ud06c\ub9b4",
+      "number": "w7",
+      "file": "Welcome amiibo Series/[AC] W07 - Stella.bin",
+      "image": "Welcome amiibo Series/7-Stella.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Tybalt",
+      "name_kor": "\ud2f0\ubcfc\ud2b8",
+      "number": "w8",
+      "file": "Welcome amiibo Series/[AC] W08 - Tybalt.bin",
+      "image": "Welcome amiibo Series/8-Tybalt.png",
+      "series": "welcome",
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Huck",
+      "name_kor": "\uc2a4\ud2b8\ub85c",
+      "number": "w9",
+      "file": "Welcome amiibo Series/[AC] W09 - Huck.bin",
+      "image": "Welcome amiibo Series/9-Huck.png",
+      "series": "welcome",
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Sylvana",
+      "name_kor": "\uc2e4\ubc14\ub098",
+      "number": "w10",
+      "file": "Welcome amiibo Series/[AC] W10 - Sylvana.bin",
+      "image": "Welcome amiibo Series/10-Sylvana.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Boris",
+      "name_kor": "\ubcf4\ub9ac",
+      "number": "w11",
+      "file": "Welcome amiibo Series/[AC] W11 - Boris.bin",
+      "image": "Welcome amiibo Series/11-Boris.png",
+      "series": "welcome",
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Wade",
+      "name_kor": "\ud638\ub5a1",
+      "number": "w12",
+      "file": "Welcome amiibo Series/[AC] W12 - Wade.bin",
+      "image": "Welcome amiibo Series/12-Wade.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Carrie",
+      "name_kor": "\ub9c8\ubbf8",
+      "number": "w13",
+      "file": "Welcome amiibo Series/[AC] W13 - Carrie.bin",
+      "image": "Welcome amiibo Series/13-Carrie.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Ketchup",
+      "name_kor": "\ucf00\ucca9",
+      "number": "w14",
+      "file": "Welcome amiibo Series/[AC] W14 - Ketchup.bin",
+      "image": "Welcome amiibo Series/14-Ketchup.png",
+      "series": "welcome",
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Rex",
+      "name_kor": "\ub809\uc2a4",
+      "number": "w15",
+      "file": "Welcome amiibo Series/[AC] W15 - Rex.bin",
+      "image": "Welcome amiibo Series/15-Rex.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Stu",
+      "name_kor": "\ubaa8\ub9ac\uc2a4",
+      "number": "w16",
+      "file": "Welcome amiibo Series/[AC] W16 - Stu.bin",
+      "image": "Welcome amiibo Series/16-Stu.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Ursala",
+      "name_kor": "\ub124\uc774\uc544",
+      "number": "w17",
+      "file": "Welcome amiibo Series/[AC] W17 - Ursala.bin",
+      "image": "Welcome amiibo Series/17-Ursala.png",
+      "series": "welcome",
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Jacob",
+      "name_kor": "\uc57c\uacf1",
+      "number": "w18",
+      "file": "Welcome amiibo Series/[AC] W18 - Jacob.bin",
+      "image": "Welcome amiibo Series/18-Jacob.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Maddie",
+      "name_kor": "\ub9c8\ub871",
+      "number": "w19",
+      "file": "Welcome amiibo Series/[AC] W19 - Maddie.bin",
+      "image": "Welcome amiibo Series/19-Maddie.png",
+      "series": "welcome",
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Billy",
+      "name_kor": "\ud798\ub4dc\ub7ec",
+      "number": "w20",
+      "file": "Welcome amiibo Series/[AC] W20 - Billy.bin",
+      "image": "Welcome amiibo Series/20-Billy.png",
+      "series": "welcome",
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Boyd",
+      "name_kor": "\ubcf4\uc774\ub4dc",
+      "number": "w21",
+      "file": "Welcome amiibo Series/[AC] W21 - Boyd.bin",
+      "image": "Welcome amiibo Series/21-Boyd.png",
+      "series": "welcome",
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Bitty",
+      "name_kor": "\ube44\ud2f0",
+      "number": "w22",
+      "file": "Welcome amiibo Series/[AC] W22 - Bitty.bin",
+      "image": "Welcome amiibo Series/22-Bitty.png",
+      "series": "welcome",
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Maggie",
+      "name_kor": "\ub9c8\uac00\ub81b",
+      "number": "w23",
+      "file": "Welcome amiibo Series/[AC] W23 - Maggie.bin",
+      "image": "Welcome amiibo Series/23-Maggie.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Murphy",
+      "name_kor": "\uba38\ud53c",
+      "number": "w24",
+      "file": "Welcome amiibo Series/[AC] W24 - Murphy.bin",
+      "image": "Welcome amiibo Series/24-Murphy.png",
+      "series": "welcome",
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Plucky",
+      "name_kor": "\ud30c\ud0c0\uc57c",
+      "number": "w25",
+      "file": "Welcome amiibo Series/[AC] W25 - Plucky.bin",
+      "image": "Welcome amiibo Series/25-Plucky.png",
+      "series": "welcome",
+      "personality": [
+        "Sisterly",
+        "\ub2e8\uc21c\ud65c\ubc1c"
+      ]
+    },
+    {
+      "name": "Sandy",
+      "name_kor": "\uc0cc\ub514",
+      "number": "w26",
+      "file": "Welcome amiibo Series/[AC] W26 - Sandy.bin",
+      "image": "Welcome amiibo Series/26-Sandy.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Claude",
+      "name_kor": "\ube44\ub2c8\uac70",
+      "number": "w27",
+      "file": "Welcome amiibo Series/[AC] W27 - Claude.bin",
+      "image": "Welcome amiibo Series/27-Claude.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Raddle",
+      "name_kor": "\uac1c\uad70",
+      "number": "w28",
+      "file": "Welcome amiibo Series/[AC] W28 - Raddle.bin",
+      "image": "Welcome amiibo Series/28-Raddle.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Julia",
+      "name_kor": "\uc904\ub9ac\uc544",
+      "number": "w29",
+      "file": "Welcome amiibo Series/[AC] W29 - Julia.bin",
+      "image": "Welcome amiibo Series/29-Julia.png",
+      "series": "welcome",
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Louie",
+      "name_kor": "\uba38\uc2ac",
+      "number": "w30",
+      "file": "Welcome amiibo Series/[AC] W30 - Louie.bin",
+      "image": "Welcome amiibo Series/30-Louie.png",
+      "series": "welcome",
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Bea",
+      "name_kor": "\ubca0\uc774\uae00",
+      "number": "w31",
+      "file": "Welcome amiibo Series/[AC] W31 - Bea.bin",
+      "image": "Welcome amiibo Series/31-Bea.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Admiral",
+      "name_kor": "\uc77c\uc12d",
+      "number": "w32",
+      "file": "Welcome amiibo Series/[AC] W32 - Admiral.bin",
+      "image": "Welcome amiibo Series/32-Admiral.png",
+      "series": "welcome",
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Ellie",
+      "name_kor": "\uc5d0\ub04c\ub808\ub974",
+      "number": "w33",
+      "file": "Welcome amiibo Series/[AC] W33 - Ellie.bin",
+      "image": "Welcome amiibo Series/33-Ellie.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Boots",
+      "name_kor": "\ud48d\uc791",
+      "number": "w34",
+      "file": "Welcome amiibo Series/[AC] W34 - Boots.bin",
+      "image": "Welcome amiibo Series/34-Boots.png",
+      "series": "welcome",
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Weber",
+      "name_kor": "\uc544\uc7a0\ub9cc",
+      "number": "w35",
+      "file": "Welcome amiibo Series/[AC] W35 - Weber.bin",
+      "image": "Welcome amiibo Series/35-Weber.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "\uba39\ubcf4"
+      ]
+    },
+    {
+      "name": "Candi",
+      "name_kor": "\uc0ac\ud0d5",
+      "number": "w36",
+      "file": "Welcome amiibo Series/[AC] W36 - Candi.bin",
+      "image": "Welcome amiibo Series/36-Candi.png",
+      "series": "welcome",
+      "personality": [
+        "Peppy",
+        "\uc544\uc774\ub3cc"
+      ]
+    },
+    {
+      "name": "Leopold",
+      "name_kor": "\ud2f0\ucc98",
+      "number": "w37",
+      "file": "Welcome amiibo Series/[AC] W37 - Leopold.bin",
+      "image": "Welcome amiibo Series/37-Leopold.png",
+      "series": "welcome",
+      "personality": [
+        "Smug",
+        "\ub290\ub07c\ud568"
+      ]
+    },
+    {
+      "name": "Spike",
+      "name_kor": "\uc2a4\ucffc\ud2b8",
+      "number": "w38",
+      "file": "Welcome amiibo Series/[AC] W38 - Spike.bin",
+      "image": "Welcome amiibo Series/38-Spike.png",
+      "series": "welcome",
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Cashmere",
+      "name_kor": "\uce90\uc2dc\ubbf8\uc5b4",
+      "number": "w39",
+      "file": "Welcome amiibo Series/[AC] W39 - Cashmere.bin",
+      "image": "Welcome amiibo Series/39-Cashmere.png",
+      "series": "welcome",
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Tad",
+      "name_kor": "\ud140\ubcf4",
+      "number": "w40",
+      "file": "Welcome amiibo Series/[AC] W40 - Tad.bin",
+      "image": "Welcome amiibo Series/40-Tad.png",
+      "series": "welcome",
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Norma",
+      "name_kor": "\ubbf8\uc790",
+      "number": "w41",
+      "file": "Welcome amiibo Series/[AC] W41 - Norma.bin",
+      "image": "Welcome amiibo Series/41-Norma.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Gonzo",
+      "name_kor": "\uadfc\uc131",
+      "number": "w42",
+      "file": "Welcome amiibo Series/[AC] W42 - Gonzo.bin",
+      "image": "Welcome amiibo Series/42-Gonzo.png",
+      "series": "welcome",
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Sprocket",
+      "name_kor": "\ud5e4\ub974\uce20",
+      "number": "w43",
+      "file": "Welcome amiibo Series/[AC] W43 - Sprocket.bin",
+      "image": "Welcome amiibo Series/43-Sprocket.png",
+      "series": "welcome",
+      "personality": [
+        "Jock",
+        "\uc6b4\ub3d9\uad11"
+      ]
+    },
+    {
+      "name": "Snooty",
+      "name_kor": "\uc2a4\ub204\ud2f0",
+      "number": "w44",
+      "file": "Welcome amiibo Series/[AC] W44 - Snooty.bin",
+      "image": "Welcome amiibo Series/44-Snooty.png",
+      "series": "welcome",
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Olive",
+      "name_kor": "\uc62c\ub9ac\ube0c",
+      "number": "w45",
+      "file": "Welcome amiibo Series/[AC] W45 - Olive.bin",
+      "image": "Welcome amiibo Series/45-Olive.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "\uce5c\uc808\ud568"
+      ]
+    },
+    {
+      "name": "Dobie",
+      "name_kor": "\ucf04",
+      "number": "w46",
+      "file": "Welcome amiibo Series/[AC] W46 - Dobie.bin",
+      "image": "Welcome amiibo Series/46-Dobie.png",
+      "series": "welcome",
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Buzz",
+      "name_kor": "\uadfc\uc5c4",
+      "number": "w47",
+      "file": "Welcome amiibo Series/[AC] W47 - Buzz.bin",
+      "image": "Welcome amiibo Series/47-Buzz.png",
+      "series": "welcome",
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Cleo",
+      "name_kor": "\uc544\uc774\uc18c\ud1a0\ud504",
+      "number": "w48",
+      "file": "Welcome amiibo Series/[AC] W48 - Cleo.bin",
+      "image": "Welcome amiibo Series/48-Cleo.png",
+      "series": "welcome",
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Ike",
+      "name_kor": "\ub300\uacf5",
+      "number": "w49",
+      "file": "Welcome amiibo Series/[AC] W49 - Ike.bin",
+      "image": "Welcome amiibo Series/49-Ike.png",
+      "series": "welcome",
+      "personality": [
+        "Cranky",
+        "\ubb34\ub69d\ub69d"
+      ]
+    },
+    {
+      "name": "Tasha",
+      "name_kor": "\ub098\ud0c0\uc0e4",
+      "number": "w50",
+      "file": "Welcome amiibo Series/[AC] W50 - Tasha.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Snooty",
+        "\uc131\uc219\ud568"
+      ]
+    },
+    {
+      "name": "Rilla",
+      "name_kor": "릴라",
+      "number": "s1",
+      "file": "Animal Crossing x Sanrio Series/[AC] XS1 - Rilla.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Peppy",
+        "아이돌"
+      ]
+    },
+    {
+      "name": "Marty",
+      "name_kor": "마티",
+      "number": "s2",
+      "file": "Animal Crossing x Sanrio Series/[AC] XS2 - Marty.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "먹보"
+      ]
+    },
+    {
+      "name": "Étoile",
+      "name_kor": "에뜨와르",
+      "number": "s3",
+      "file": "Animal Crossing x Sanrio Series/s3.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "친절함"
+      ]
+    },
+    {
+      "name": "Chai",
+      "name_kor": "피카",
+      "number": "s4",
+      "file": "Animal Crossing x Sanrio Series/[AC] XS4 - Chai.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Peppy",
+        "아이돌"
+      ]
+    },
+    {
+      "name": "Chelsea",
+      "name_kor": "첼시",
+      "number": "s5",
+      "file": "Animal Crossing x Sanrio Series/[AC] XS5 - Chelsea.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "친절함"
+      ]
+    },
+    {
+      "name": "Toby",
+      "name_kor": "토비",
+      "number": "s6",
+      "file": "Animal Crossing x Sanrio Series/[AC] XS6 - Toby.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Smug",
+        "느끼함"
+      ]
+    },
+    {
+      "name": "Stitches",
+      "name_kor": "패치",
+      "number": "af1",
+      "file": "Promo/[AC] AF1 - Stitches.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Lazy",
+        "먹보"
+      ]
+    },
+    {
+      "name": "Rosie",
+      "name_kor": "부케",
+      "number": "af2",
+      "file": "Promo/[AC] AF2 - Rosie.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Peppy",
+        "아이돌"
+      ]
+    },
+    {
+      "name": "Goldie",
+      "name_kor": "카라멜",
+      "number": "af3",
+      "file": "Promo/[AC] AF3 - Goldie.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Normal",
+        "친절함"
+      ]
+    },
+    {
+      "name": "Isabelle",
+      "name_kor": "여울",
+      "number": "cp1",
+      "file": "Promo/[AC] CP1 - Isabelle.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Special",
+        "특수 주민"
+      ]
+    },
+    {
+      "name": "K. K. Slider",
+      "name_kor": "K. K.",
+      "number": "cp2",
+      "file": "Promo/[AC] CP2 - K.K Slider.bin",
+      "image": "Welcome amiibo Series/50-Tasha.png",
+      "series": "welcome",
+      "personality": [
+        "Special",
+        "특수 주민"
+      ]
+    }
+  ]
+}

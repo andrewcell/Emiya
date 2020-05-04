@@ -1,6 +1,5 @@
 node_modules/
 .idea/
-*.json
 node_modules/
 .node_modules/
 built/*
