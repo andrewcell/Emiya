@@ -4,6 +4,8 @@ import path from 'path';
 
 import {Villager} from '@interfaces/villagerData';
 import {DownloadKey} from '@interfaces/downloadKey';
+import {Log, LogJson} from '@interfaces/logJson';
+
 import {Session} from 'inspector';
 
 const downloadKey = new Map<string, DownloadKey>();
@@ -126,24 +128,23 @@ router.get('/menu', (req: Request, res: Response) => {
 });
 
 const save = (name: string, ip: string, key: string) => {
-    const dataPath = path.join(__dirname, '/../data/');
-    const logJsonPath = path.join(dataPath, 'log.json');
-    const logArrayJsonPath = path.join(dataPath, 'logArray.json');
-    if (!existsSync(logJsonPath)) {
-        writeFileSync(logJsonPath, '{}');
+    if (!existsSync('log.json')) {
+        writeFileSync('log.json', '{}');
     }
-    if (!existsSync(logArrayJsonPath)) {
-        writeFileSync(logArrayJsonPath, '{"data": []}');
+    if (!existsSync('logArray.json')) {
+        writeFileSync('logArray.json', '{"data": []}');
     }
-    const log = JSON.parse(readFileSync(logJsonPath).toString());
-    const logArray = JSON.parse(readFileSync(logArrayJsonPath).toString());
+    const log = JSON.parse(readFileSync('log.json').toString());
+    const logArray: LogJson = JSON.parse(readFileSync('logArray.json').toString());
     let count = 1;
-    if (log.name !== null) {
-        count = count + log.name
+    if (log[name] !== undefined && log[name] !== null) {
+        count = count + log[name]
     }
     const arr = name.split('-');
-    logArray.data.push({number: arr[0].toString().trim(), name: arr[1].trim(), name_kor: arr[2].trim(), now: new Date().toLocaleString(), ip, key})
-    log.name = count;
+    logArray.data.push({
+        number: arr[0].toString().trim(), name: arr[1].trim(), name_kor: arr[2].trim(), now: new Date().toLocaleString(), ip, key
+    });
+    log[name] = count;
     writeFileSync('log.json', JSON.stringify(log, null ,4));
     writeFileSync('logArray.json', JSON.stringify(logArray, null ,4));
 }
