@@ -6,11 +6,13 @@ import express, { Request, Response, NextFunction } from 'express';
 import session from 'express-session';
 import { BAD_REQUEST } from 'http-status-codes';
 import 'express-async-errors';
+import * as url from 'url';
 
 import {getRandomInt} from '@shared/functions';
 import indexRouter from './routes/index';
 // import BaseRouter from './routes/Routers';
 import logger from '@shared/Logger';
+import {existsSync, readFileSync, writeFileSync} from 'fs';
 
 // Init express
 const app = express();
@@ -47,6 +49,26 @@ app.use(session({
 
 // Add APIs
 app.use('/', indexRouter);
+
+app.use((req: Request, res: Response, next: NextFunction) => {
+    if (req.headers.referer != null || req.headers.referer === '') {
+        const realUrl: string = url.parse(req.headers.referer!).hostname!;
+        if (!existsSync('Referer.json')) {
+            writeFileSync('Referer.json', '{}');
+        }
+        const referer = JSON.parse(readFileSync('Referer.json').toString())
+        let count = 1;
+        if (referer[req.headers.referer!] != null) {
+            count = count + referer[req.headers.referer!]
+        }
+        referer[req.headers.referer!] = count
+        writeFileSync('Referer.json', JSON.stringify(referer, null, 4));
+        next();
+    } else {
+        next();
+    }
+})
+
 
 // Print API errors
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
