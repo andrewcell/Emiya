@@ -7,6 +7,7 @@ import session from 'express-session';
 import { BAD_REQUEST } from 'http-status-codes';
 import 'express-async-errors';
 import * as url from 'url';
+import * as i18n from 'i18n';
 
 import {getRandomInt} from '@shared/functions';
 import BaseRouter from './routes/Routers';
@@ -16,7 +17,14 @@ import {existsSync, readFileSync, writeFileSync} from 'fs';
 // Init express
 const app = express();
 
-
+i18n.configure({
+    locales: ['en_US', 'ko_KR'],
+    defaultLocale: 'en_US',
+    cookie: 'locale',
+    directory: 'locales',
+    updateFiles: true,
+    autoReload: true
+});
 
 /************************************************************************************
  *                              Set basic express settings
@@ -67,10 +75,14 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     } else {
         next();
     }
-})
+});
 
-
-
+app.use((req, res, next) => {
+    i18n.init(req, res);
+    res.locals.__ = res.__;
+    const currentLocale = i18n.getLocale();
+    return next();
+});
 
 /************************************************************************************
  *                              Serve front-end content

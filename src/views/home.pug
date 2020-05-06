@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    style.
+        .card-content {
+            height: 200px;
+        }
+    .container
+        .row
+            .col.m4
+                .card
+                    .card-image
+
+                    .card-content
+                        span.card-title=__("home_emibo_title")
+                        p Unofficial AC villager NFC database.
+                    .card-action
+                        a(href='/emibo').black-text Enter
+            .col.m4
+                .card
+                    .card-image
+
+                    .card-content
+                        span.card-title Campsite
+                        p Are you using Campsite to get your favorite villager? Record here.
+                    .card-action
+                        a(href='#').black-text Enter
+            .col.m4
+                .card
+                    .card-image
+
+                    .card-content
+                        span.card-title Resident Services
+                        p Information about Emiya.
+                    .card-action
+                        a(href='#').black-text Enter
