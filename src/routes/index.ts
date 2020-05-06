@@ -19,7 +19,7 @@ const ipSession = new Map<string, number>();
 mibo.forEach((ambo) => {
     const cardNumber = Number(ambo.number);
     if (cardNumber !== -1) {
-        const randomKey = makeId(15)
+        const randomKey = makeId(32)
         let sp: boolean = false;
         if (ambo.personality === null || ambo.personality === ['', '']) {
             sp = true;
@@ -34,11 +34,12 @@ mibo.forEach((ambo) => {
 });
 
 welcome.forEach((ambo) => {
-    const randomKey = makeId(22);
+    const randomKey = makeId(64);
     downloadKey.set(randomKey, {
         file: ambo.file,
         name: ambo.number + ' - ' + ambo.name + ' - ' + ambo.name_kor
     });
+    ambo.file = randomKey;
 })
 
 figure.forEach((ambo) => {
@@ -47,7 +48,8 @@ figure.forEach((ambo) => {
         file: ambo.file,
         name: ambo.number + ' - ' + ambo.name + ' - ' + ambo.name_kor,
         fi: true
-    })
+    });
+    ambo.file = randomKey;
 })
 
 const router = Router();
