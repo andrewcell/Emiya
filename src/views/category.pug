@@ -8,11 +8,11 @@ block content
         -exten=".jpg"
     script(src="/scripts/index.js")
     .btn-group.btn-group-sm.flex-wrap(role='group' aria-label='Basic example')
-        a.btn.btn-secondary(type='button', href="/category/1") ~100
-        a.btn.btn-secondary(type='button', href="/category/2") 101~200
-        a.btn.btn-secondary(type='button', href="/category/3") 201~300
-        a.btn.btn-secondary(type='button', href="/category/4") 301~400
-        a.btn.btn-secondary(type='button', href="/category/welcome") Welcome/Sanrio/Promo
+        a.btn.btn-secondary(type='button', href="/emibo/category/1") ~100
+        a.btn.btn-secondary(type='button', href="/emibo/category/2") 101~200
+        a.btn.btn-secondary(type='button', href="/emibo/category/3") 201~300
+        a.btn.btn-secondary(type='button', href="/emibo/category/4") 301~400
+        a.btn.btn-secondary(type='button', href="/emibo/category/welcome") Welcome/Sanrio/Promo
     .row
         each card in miibo
             a.card.col-2(href="/emibo/data/" + card.file)
