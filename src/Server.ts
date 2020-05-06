@@ -70,15 +70,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 })
 
 
-// Print API errors
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-    logger.error(err.message, err);
-    res.render('error');
-    next(err);
-    /*return res.status(BAD_REQUEST).json({
-        error: err.message,
-    });*/
-});
 
 
 /************************************************************************************
@@ -90,6 +81,20 @@ app.set('views', viewsDir);
 const staticDir = path.join(__dirname, 'public');
 app.use(express.static(staticDir));
 
+app.use(function (req, res, next) {
+    var err = new Error("Not Found");
+    res.status(404);
+    next(err);
+});
+// Print API errors
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+    logger.error(err.message, err);
+    res.render('error');
+    next(err);
+    /*return res.status(BAD_REQUEST).json({
+        error: err.message,
+    });*/
+});
 
 // Export express instance
 export default app;
