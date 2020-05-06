@@ -1,11 +1,13 @@
-extends layout
+extends emiboLayout
 
 block content
   script(src="/scripts/index.js")
+  .alert.alert-danger Website address will be https://emiya.vxz.me/
+  .alert.alert-danger 웹 사이트 주소가  https://emiya.vxz.me/ 로 변경될 예정입니다.
   .row
     each card in miibo
       if (!("series" in card && card["series"] === -1))
-        a.card.col-2(href="/data/" + card.file)
+        a.card.col-2(href="/emibo/data/" + card.file)
           img.card-img-top(src="/images/cards/" + card.number + ".jpg", alt=card.name)
           .card-body
             div#content
@@ -34,7 +36,7 @@ block content
                 when -1
                   div#alias(style="display: none") 신캐
     each card in welcome
-      a.card.col-2(href="/data/" + card.file)
+      a.card.col-2(href="/emibo/data/" + card.file)
         img.card-img-top(src="/images/welcome/" + card.number + ".png", alt=card.name)
         .card-body
           div#content
@@ -44,7 +46,7 @@ block content
             div#alias(style="display: none") welcome웰컴플러스plus캠핑카
 
     each figure in figures
-      a.card.col-2(href="/data/" + figure.file)
+      a.card.col-2(href="/emibo/data/" + figure.file)
         img.card-img-top(src="/images/figure/" + figure.number + ".png", alt=figure.name)
         .card-body
           div#content

@@ -9,8 +9,7 @@ import 'express-async-errors';
 import * as url from 'url';
 
 import {getRandomInt} from '@shared/functions';
-import indexRouter from './routes/index';
-// import BaseRouter from './routes/Routers';
+import BaseRouter from './routes/Routers';
 import logger from '@shared/Logger';
 import {existsSync, readFileSync, writeFileSync} from 'fs';
 
@@ -49,7 +48,7 @@ app.use(session({
 }))
 
 // Add APIs
-app.use('/', indexRouter);
+app.use('/', BaseRouter);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     if (req.headers.referer != null || req.headers.referer === '') {
@@ -74,9 +73,11 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 // Print API errors
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     logger.error(err.message, err);
-    return res.status(BAD_REQUEST).json({
+    res.render('error');
+    next(err);
+    /*return res.status(BAD_REQUEST).json({
         error: err.message,
-    });
+    });*/
 });
 
 

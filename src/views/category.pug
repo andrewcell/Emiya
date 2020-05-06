@@ -1,4 +1,4 @@
-extends layout
+extends emiboLayout
 
 block content
     -var image = "welcome"
@@ -15,7 +15,7 @@ block content
         a.btn.btn-secondary(type='button', href="/category/welcome") Welcome/Sanrio/Promo
     .row
         each card in miibo
-            a.card.col-2(href="/data/" + card.file)
+            a.card.col-2(href="/emibo/data/" + card.file)
                 img.card-img-top(src="/images/"+image+ "/" + card.number + exten, alt=card.name)
                 .card-body
                     div#content
