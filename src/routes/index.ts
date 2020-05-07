@@ -27,6 +27,63 @@ const tryParseInt = (str: any, defaultValue: string) => {
     }
     return retValue;
 }
+const save = (name: string, ip: string, key: string) => {
+    if (!existsSync('log.json')) {
+        writeFileSync('log.json', '{}');
+    }
+    if (!existsSync('logArray.json')) {
+        writeFileSync('logArray.json', '{"data": []}');
+    }
+    const log = JSON.parse(readFileSync('log.json').toString());
+    const logArray: LogJson = JSON.parse(readFileSync('logArray.json').toString());
+    let count = 1;
+    if (log[name] != null && log[name] !== null) {
+        count = count + log[name]
+    }
+    const arr = name.split('-');
+    logArray.data.push({
+        cardNumber: arr[0].toString().trim(), name: arr[1].trim(), nameKor: arr[2].trim(), now: new Date().toLocaleString(), ip, key
+    });
+    log[name] = count;
+    writeFileSync('log.json', JSON.stringify(log, null ,4));
+    writeFileSync('logArray.json', JSON.stringify(logArray, null ,4));
+}
+
+const ranking = (name: string, ip: string, key: string, sp: any, req: Request): void => {
+    if (sp) return;
+    const filename = 'ranking.json';
+    if (!existsSync(filename)) {
+        writeFileSync(filename, '{}');
+    }
+    const rankingData = JSON.parse(readFileSync(filename).toString());
+    const arr = name.split('-');
+    const cardNumber = arr[0].toString().trim()
+    if (!(req.session!.cnumber >= 1 || ipSession.get(ip)! >= 5) || ipSession.get(ip) === null) {
+        if (rankingData[name] == null) {
+            rankingData[name] = 1;
+        } else {
+            rankingData[name] =  rankingData[name] + 1;
+        }
+        // (name in rankingData) ? rankingData[name]++ : rankingData[name] = 1;
+        if (ipSession.get(ip) != null) {
+            ipSession.set(ip, ipSession.get(ip) as number + 1);
+        } else {
+            ipSession.set(ip, 1);
+        }
+        req.session!.cnumber = 1;
+    }
+    writeFileSync(filename, JSON.stringify(rankingData, null, 4));
+}
+
+const makeId = (length: number): string => {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
 
 mibo.forEach((ambo) => {
     const cardNumber = Number(ambo.number);
@@ -157,62 +214,5 @@ router.get('/menu', (req: Request, res: Response) => {
     // res.render('menu');
 });
 
-const save = (name: string, ip: string, key: string) => {
-    if (!existsSync('log.json')) {
-        writeFileSync('log.json', '{}');
-    }
-    if (!existsSync('logArray.json')) {
-        writeFileSync('logArray.json', '{"data": []}');
-    }
-    const log = JSON.parse(readFileSync('log.json').toString());
-    const logArray: LogJson = JSON.parse(readFileSync('logArray.json').toString());
-    let count = 1;
-    if (log[name] != null && log[name] !== null) {
-        count = count + log[name]
-    }
-    const arr = name.split('-');
-    logArray.data.push({
-        cardNumber: arr[0].toString().trim(), name: arr[1].trim(), nameKor: arr[2].trim(), now: new Date().toLocaleString(), ip, key
-    });
-    log[name] = count;
-    writeFileSync('log.json', JSON.stringify(log, null ,4));
-    writeFileSync('logArray.json', JSON.stringify(logArray, null ,4));
-}
-
-const ranking = (name: string, ip: string, key: string, sp: any, req: Request) => {
-    if (sp) return;
-    const filename = 'ranking.json';
-    if (!existsSync(filename)) {
-        writeFileSync(filename, '{}');
-    }
-    const rankingData = JSON.parse(readFileSync(filename).toString());
-    const arr = name.split('-');
-    const cardNumber = arr[0].toString().trim()
-    if (!(req.session!.cnumber >= 1 || ipSession.get(ip)! >= 5) || ipSession.get(ip) === null) {
-        if (rankingData[name] == null) {
-            rankingData[name] = 1;
-        } else {
-            rankingData[name] =  rankingData[name] + 1;
-        }
-        // (name in rankingData) ? rankingData[name]++ : rankingData[name] = 1;
-        if (ipSession.get(ip) != null) {
-            ipSession.set(ip, ipSession.get(ip) as number + 1);
-        } else {
-            ipSession.set(ip, 1);
-        }
-        req.session!.cnumber = 1;
-    }
-    writeFileSync(filename, JSON.stringify(rankingData, null, 4));
-}
-
-function makeId(length: number) {
-    let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const charactersLength = characters.length;
-    for (let i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-}
 
 export default router;

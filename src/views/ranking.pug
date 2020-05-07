@@ -8,16 +8,16 @@ block content
             thead
                 tr
                     th(scope="col") #
-                    //-th(scope="col") Name
-                    th(scope="col") Name_KOR
+                    //-th(scope="col") Name_eng
+                    th(scope="col") Name
                     th(scope="col") Downloads
             tbody
                 each element,index in data
                     tr
                         td(style="width: 25%")
-                            img(style="width: 100%", src="/images/" + element["image"] + "/" + element["number"] + ".jpg")
+                            img(style="width: 100%", src="/images/" + element["image"] + "/" + element["cardNumber"] + ".jpg")
                         //-td=element["name"]
-                        td=(index+1) + "위" + " " + element["name_kor"]
+                        td=(index+1) + "위" + " " + element["nameKor"]
                         td=element["count"]
 
 
