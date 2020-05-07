@@ -26,7 +26,7 @@ i18n.configure({
     autoReload: true
 });
 
-/************************************************************************************
+/* ***********************************************************************************
  *                              Set basic express settings
  ***********************************************************************************/
 
@@ -94,7 +94,7 @@ const staticDir = path.join(__dirname, 'public');
 app.use(express.static(staticDir));
 
 app.use(function (req, res, next) {  // 404 Not Found handler
-    var err = new Error("Not Found");
+    var err = new Error('Not Found');
     res.status(404);
     next(err);
 });
@@ -103,9 +103,9 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     logger.error(err.message, err);
     res.render('error');
     next(err);
-    /*return res.status(BAD_REQUEST).json({
+    /* return res.status(BAD_REQUEST).json({
         error: err.message,
-    });*/
+    }); */
 });
 
 // Export express instance

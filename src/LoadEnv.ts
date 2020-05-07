@@ -4,7 +4,7 @@ import commandLineArgs from 'command-line-args';
 // Setup command line options
 const options = commandLineArgs([
     {
-        name: 'env',
+    name: 'env',
         alias: 'e',
         defaultValue: 'production',
         type: String,
