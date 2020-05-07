@@ -3,12 +3,8 @@ extends emiboLayout
 block content
     link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
     .container-fluid
-        .alert.alert-success Update (05/06/2020): Bugfix
-        h3 Contact: S. Y. Lee
-        h3 Powered By
-        img(src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.svg", style='width: 10%')
-        //-h3 Villagers ranking!
-        //-table.table
+        h3 Villagers ranking!
+        table.table
             thead
                 tr
                     th(scope="col") #
@@ -19,7 +15,7 @@ block content
                 each element,index in data
                     tr
                         td(style="width: 25%")
-                            img(style="width: 100%", src="images/" + element["image"] + "/" + element["number"] + ".jpg")
+                            img(style="width: 100%", src="/images/" + element["image"] + "/" + element["number"] + ".jpg")
                         //-td=element["name"]
                         td=(index+1) + "위" + " " + element["name_kor"]
                         td=element["count"]

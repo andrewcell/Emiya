@@ -6,7 +6,6 @@ const router = Router();
 
 router.get('/', (req, res) => {
     return res.render('home');
-    //return res.redirect('/emibo');
 });
 
 // Add sub-routes

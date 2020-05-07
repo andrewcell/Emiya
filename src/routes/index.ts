@@ -16,6 +16,18 @@ const figure: Villager[] = JSON.parse(readFileSync(path.join(__dirname, '../data
 
 const ipSession = new Map<string, number>();
 
+const tryParseInt = (str: any, defaultValue: string) => {
+    let retValue: any = defaultValue;
+    if(str !== null) {
+        if(str.length > 0) {
+            if (!isNaN(str)) {
+                retValue = parseInt(str);
+            }
+        }
+    }
+    return retValue;
+}
+
 mibo.forEach((ambo) => {
     const cardNumber = Number(ambo.number);
     if (cardNumber !== -1) {
@@ -109,24 +121,36 @@ interface Ranking {
     count: number
 }
 
+interface RankingPublic {
+    image: string, number: string | number, name: string, name_kor: string, count: number
+}
+
 router.get('/menu', (req: Request, res: Response) => {
-    /*const log: Ranking[] = JSON.parse(readFileSync(path.join(__dirname + '/../data/ranking.json')).toString());
-    const sorted = log.sort((a, b) => (a.count > b.count) ? 1 : -1);
-    const array = [];
-    sorted.forEach(function(key){
-        const data = key.split("-");
-        let number = TryParseInt(data[0], data[0]);
-        let image = "cards";
-        if (typeof number === "string") {
-            number = number.trim();
-            image = "welcome"
+    const log: Object = JSON.parse(readFileSync(path.join(__dirname + '/../data/ranking.json')).toString());
+    const array: RankingPublic[] = [];
+    Object.entries(log).forEach(([key, count]) => {
+        const data = key.split('-');
+        let number = tryParseInt(data[0], data[0]);
+        let image = 'cards';
+        if (typeof number === 'string') {
+            number = number.replace(/\s/g, "");
+            image = 'welcome';
         }
-        const name = data[1].trim();
-        const name_kor = data[2].trim();
-        array.push({image: image, number: number, name: name, name_kor: name_kor, count: log[key]})
+        const name = data[1].replace(/\s/g, "");
+        const name_kor = data[2].replace(/\s/g, "");
+        array.push({image, number, name, name_kor, count})
     });
-    res.render("ranking", {data: array.reverse()})*/
-    res.render('menu');
+    const sortedArray: RankingPublic[] = array.sort((obj1, obj2) => {
+        if (obj1.count > obj2.count) {
+            return 1;
+        }
+        if (obj1.count < obj2.count) {
+            return -1;
+        }
+        return 0;
+    })
+    res.render("ranking", {data: sortedArray.reverse()})
+    //res.render('menu');
 });
 
 const save = (name: string, ip: string, key: string) => {

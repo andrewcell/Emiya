@@ -93,7 +93,7 @@ app.set('views', viewsDir);
 const staticDir = path.join(__dirname, 'public');
 app.use(express.static(staticDir));
 
-app.use(function (req, res, next) {
+app.use(function (req, res, next) {  // 404 Not Found handler
     var err = new Error("Not Found");
     res.status(404);
     next(err);
