@@ -90,7 +90,7 @@ mibo.forEach((ambo) => {
     if (cardNumber !== -1) {
         const randomKey = makeId(32)
         let sp = false;
-        if (ambo.personality === null || ambo.personality === ['', '']) {
+        if (ambo.personality == null || ambo.personality[0] === '') {
             sp = true;
         }
         downloadKey.set(randomKey, {
