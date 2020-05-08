@@ -1,25 +1,24 @@
 
 #login-modal.modal
     .modal-content
-        h5 Centauri Project - &#xB85C;&#xADF8;&#xC778;
-        br
+        h5 EmiyaKotlinProject - S'identifier
         form#loginform
-            input#hash(type='hidden' name='hash' value='<?php echo $token ?>')
+            input#hash(type='hidden' name='_csrf' value='csrf goes here')
             .input-field
                 input#email(name='email' type='text')
-                label(for='email') &#xC774;&#xBA54;&#xC77C; &#xC8FC;&#xC18C;
+                label(for='email') Adresse électronique
             .input-field
                 input#password.validate(name='password' type='password')
-                label(for='password') &#xBE44;&#xBC00;&#xBC88;&#xD638;
-            button#loginbutton.btn(type='button') &#xB85C;&#xADF8;&#xC778;
+                label(for='password') Mot de passe
+            button#loginbutton.btn(type='button') Bouton de connexion
     .modal-footer
-        a.modal-close.waves-effect.waves-green.btn-flat(href='#') &#xB2EB;&#xAE30;
+        a.modal-close.waves-effect.waves-green.btn-flat(href='#') Fermer
 script.
     $(document).ready(function () {
         $('#loginbutton').click(function () {
             $.ajax({
                 type: 'POST',
-                url: '/service/login.php',
+                url: '/admin/login',
                 data: $("#loginform").serialize(),
                 success: function (data) {
                     switch (data.error) {
@@ -30,6 +29,9 @@ script.
                             location.reload();
                             break;
                     }
+                },
+                error: function (err) {
+                    M.toast({html: err.statusText, classes: 'rounded'});
                 }
             });
         });
