@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css')
+    if (!data)
+        h1 No data available.
+    else
+        table.striped.centered.responsive-table
+            thead
+                tr
+                    th Country
+                    th City
+                    th ASN
+                    th IP
+                    th Name
+                    th DateTime
+            tbody
+                each log in data
+                    tr
+                        if (log.ip === '127.0.0.1' || log.ip === 'localhost' || !country)
+                            td='-'
+                            td='-'
+                            td='-'
+                        else
+                            td=country.get(log.ip).country.names.en
+                            if (city.get(log.ip).city)
+                                td=city.get(log.ip).city.names.en
+                            else
+                                td='-'
+                            td=asn.get(log.ip).autonomous_system_organization
+                        td=log.ip
+                        if (log.name_kor)
+                            td=log.name_kor
+                        else
+                            td=log.nameKor
+                        td=log.now

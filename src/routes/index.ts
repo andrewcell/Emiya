@@ -27,7 +27,7 @@ const tryParseInt = (str: any, defaultValue: string) => {
     }
     return retValue;
 }
-const save = (name: string, ip: string, key: string) => {
+const save = (name: string, ip: string, key: string): void => {
     if (!existsSync('log.json')) {
         writeFileSync('log.json', '{}');
     }
