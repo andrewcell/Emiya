@@ -13,6 +13,7 @@ import {getRandomInt} from '@shared/functions';
 import BaseRouter from './routes/Routers';
 import logger from '@shared/Logger';
 import {existsSync, readFileSync, writeFileSync} from 'fs';
+import {VillagerDatabase} from '@interfaces/VillagerDatabase';
 
 // Init express
 const app = express();
@@ -79,6 +80,8 @@ app.use((req: Request, res: Response, next: NextFunction) => {
         next();
     }
 });
+
+
 /*
 app.use((req, res, next) => {
     i18n.init(req, res);
@@ -110,6 +113,11 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
         error: err.message,
     }); */
 });
-
+process.on('exit', () => {
+    VillagerDatabase.getInstance().close()
+});
+process.on('SIGHUP', () => process.exit(128 + 1));
+process.on('SIGINT', () => process.exit(128 + 2));
+process.on('SIGTERM', () => process.exit(128 + 15));
 // Export express instance
 export default app;
