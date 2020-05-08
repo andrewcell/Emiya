@@ -11,8 +11,7 @@ const resize = function() {
 
 $(function() {
     resize();
-    $(window).resize(() => { resize() })
-    $("#loading").remove();
+    $(window).resize(function() { resize() })
 });
 
 $('.form-control').keyup(function() {
