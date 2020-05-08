@@ -4,15 +4,21 @@ block content
     .container-fluid
         img(src="/images/dva.jpg")
         if (notfound)
-            h3 다운로드 링크를 찾을 수 없습니다.
-            h3 혹시 당신, 이상한 시도를 하고 있나요?
-            h3(style="color: purple; font-weight: bold") "무인도가 있다고? 나도 살아도 될까, 흐응"
+            h3=__('error.notfound.cannotfinddownloadkey')
+            //-
+            h3=__('error.notfound.areyoutrysomething')
+            //
+            h3(style="color: purple; font-weight: bold")=__('error.notfound.divaphrase')
+            //- ""
         else if (twt)
-            h3 잠시만요. 어디서 오신거죠?
-            h3(style="color: purple; font-weight: bold") "넌 못 들어갈 거 같은데, 흐응"
-        else if (notyet)
-            h3 모동숲에서 추가된 주민은 파일이 없습니다.
+            h3=__('error.blockedreferer.waitwheredidyoucomfrom')
+            //-잠시만요. 어디서 오신거죠?
+            h3(style="color: purple; font-weight: bold")=__('error.blockedreferer.divaphrase')
+            //- "넌 못 들어갈 거 같은데, 흐응"
         else
-            h3 오류가 생겼습니다. 하지만 걱정하지 마십시오.
-            h3(style="color: purple") ★아이다★
-            h3 님이 이미 처치하셨습니다.
+            h3=__('error.error.dontworry')
+            //-
+            h3(style="color: purple")=__('error.error.diva')
+            //-
+            h3=__('error.error.alreadysolved')
+            //-

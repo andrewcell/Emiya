@@ -1,1 +1,25 @@
-{}
+{
+	"Hello": "Hello",
+	"navbar.title": "Emiya",
+	"navbar.emibo": "Emibo",
+	"global.title": "Emiya - Unofficial Animal Crossing Tools",
+	"Emibo": "Emibo",
+	"error.notfound.cannotfinddownloadkey": "Can't find file.",
+	"error.notfound.areyoutrysomething": "What are you doing right now?",
+	"error.notfound.divaphrase": "There's a island with empty spot?, ya know",
+	"error.error.dontworry": "Error has been occurred. But dont woorrrry",
+	"error.error.diva": "DIIIIVA",
+	"error.error.alreadysolved": "already solved.",
+	"home.emibo.title": "Emibo",
+	"home.emibo.description": "Unofficial AC (Forest of Animal) villager NFC backed up data database.",
+	"home.emibo.seeranking": "See Villager ranking",
+	"home.emibo.enter": "Enter",
+	"home.emibo.bycategory": "Category",
+	"home.campsite.title": "Campsite",
+	"home.campsite.description": "Are you using Campsite to get your favorite villager? Record here.",
+	"home.campsite.enter": "Enter",
+	"home.residentservices.title": "Resident Services",
+	"home.residentservices.description": "Information about Emiya - Update log, administrator mode.",
+	"home.residentservices.enter": "Enter",
+	"navbar.login": "Login"
+}

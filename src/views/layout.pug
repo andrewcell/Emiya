@@ -1,7 +1,7 @@
 doctype html
 html
     head
-        title Emiya - Unofficial Animal Crossing Tools
+        title=__('global.title')
         meta(name="viewport", content="width=device-width, user-scalable=no")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
@@ -11,16 +11,23 @@ html
         header
             nav.green
                 .nav-wrapper
-                    a.brand-logo.right(href='/') Emiya
+                    a.brand-logo.right(href='/')=__('navbar.title')
                     a(href='#', data-target='mobile').sidenav-trigger
                         i.material-icons menu
                     ul#nav-mobile.left.hide-on-med-and-down
                         li
-                            a(href='/emibo') Emibo
+                            a(href='/emibo')=__('navbar.emibo')
+                        li
+                            a(href='#')=__('navbar.login')
         section
             block content
         footer.page-footer.green
             .footer-copyright
                 .container
                     p Emiya Copyright &copy; S.Y.Lee, Hosted in Netherlands
+                    p Click to change Language
+                        |&nbsp;
+                        a(href='/lang/ko').yellow-text 한국어(대한민국, Korean)
+                        |&nbsp;
+                        a(href='/lang/en').white-text English (United States)
 

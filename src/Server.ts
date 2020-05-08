@@ -7,7 +7,7 @@ import session from 'express-session';
 import { BAD_REQUEST } from 'http-status-codes';
 import 'express-async-errors';
 import * as url from 'url';
-import * as i18n from 'i18n';
+import i18n from 'i18n';
 
 import {getRandomInt} from '@shared/functions';
 import BaseRouter from './routes/Routers';
@@ -54,6 +54,7 @@ app.use(session({
         maxAge: 3600 * 1000
     }
 }))
+app.use(i18n.init);
 
 // Add APIs
 app.use('/', BaseRouter);
@@ -76,13 +77,13 @@ app.use((req: Request, res: Response, next: NextFunction) => {
         next();
     }
 });
-
+/*
 app.use((req, res, next) => {
     i18n.init(req, res);
-    res.locals.__ = res.__;
+   // res.locals.__ = res.__;
     const currentLocale = i18n.getLocale();
     return next();
-});
+});*/
 
 /************************************************************************************
  *                              Serve front-end content

@@ -1,1 +1,23 @@
-{}
+{
+	"error.notfound.cannotfinddownloadkey": "다운로드 링크를 찾을 수 없습니다.",
+	"error.notfound.areyoutrysomething": "혹시 당신, 이상한 시도를 하고 있나요?",
+	"error.notfound.divaphrase": "무인도가 있다고? 나도 살아도 될까, 흐응",
+	"error.error.dontworry": "오류가 생겼습니다. 하지만 걱정하지 마십시오.",
+	"error.error.diva": "★아이다★",
+	"error.error.alreadysolved": "님이 이미 처치하셨습니다.",
+	"global.title": "Emiya - 비공식 동물의 숲 도구",
+	"navbar.title": "Emiya",
+	"navbar.emibo": "에미보",
+	"home.emibo.title": "에미보",
+	"home.emibo.description": "비공식 짐승의 숲 주민, 특수 주민 NFC 백업 데이터 데이터베이스",
+	"home.emibo.seeranking": "주민 순위 보기",
+	"home.emibo.enter": "들어가기",
+	"home.emibo.bycategory": "카테고리",
+	"home.campsite.title": "캠핑장",
+	"home.campsite.description": "캠핑 노가다(캠노)중 인가요? 여기서 캠핑장에 왔던 주민들을 기록하세요",
+	"home.campsite.enter": "이용하기",
+	"home.residentservices.title": "안내소",
+	"home.residentservices.description": "Emiya, 웹 사이트에 대한 정보(업데이트 내역, 관리 모드)를 제공하는 곳",
+	"home.residentservices.enter": "들어가기",
+	"navbar.login": "로그인"
+}
