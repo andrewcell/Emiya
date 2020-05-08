@@ -40,8 +40,9 @@
     "@types/helmet": "0.0.46",
     "@types/i18n": "^0.8.6",
     "@types/jasmine": "^3.5.10",
-    "@types/jquery": "^3.3.37",
+    "@types/jquery": "^3.3.38",
     "@types/jsonfile": "^5.0.0",
+    "@types/materialize-css": "^1.0.7",
     "@types/maxmind": "^2.0.5",
     "@types/morgan": "^1.9.0",
     "@types/node": "^13.13.4",
@@ -58,14 +59,18 @@
     "find": "^0.3.0",
     "fs-extra": "^9.0.0",
     "jasmine": "^3.5.0",
+    "javascript-obfuscator": "^0.28.0",
+    "jquery": "^3.5.1",
     "jsonfile": "^6.0.1",
     "nodemon": "^2.0.3",
     "prettier": "^2.0.5",
     "supertest": "^4.0.2",
+    "ts-loader": "^7.0.3",
     "ts-node": "^8.10.1",
     "tsconfig-paths": "^3.9.0",
     "tslint": "^6.1.2",
     "typescript": "^3.8.3",
-    "typescript-eslint": "0.0.1-alpha.0"
+    "typescript-eslint": "0.0.1-alpha.0",
+    "webpack2": "^3.11.1"
   }
 }

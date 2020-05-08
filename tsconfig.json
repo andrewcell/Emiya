@@ -43,6 +43,7 @@
     "src/public/scripts/*.ts"
   ],
   "exclude": [
-    "src/public/"
+    "src/public/images",
+    "src/public/stylesheets"
   ]
 }

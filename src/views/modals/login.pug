@@ -1,0 +1,37 @@
+
+#login-modal.modal
+    .modal-content
+        h5 Centauri Project - &#xB85C;&#xADF8;&#xC778;
+        br
+        form#loginform
+            input#hash(type='hidden' name='hash' value='<?php echo $token ?>')
+            .input-field
+                input#email(name='email' type='text')
+                label(for='email') &#xC774;&#xBA54;&#xC77C; &#xC8FC;&#xC18C;
+            .input-field
+                input#password.validate(name='password' type='password')
+                label(for='password') &#xBE44;&#xBC00;&#xBC88;&#xD638;
+            button#loginbutton.btn(type='button') &#xB85C;&#xADF8;&#xC778;
+    .modal-footer
+        a.modal-close.waves-effect.waves-green.btn-flat(href='#') &#xB2EB;&#xAE30;
+script.
+    $(document).ready(function () {
+        $('#loginbutton').click(function () {
+            $.ajax({
+                type: 'POST',
+                url: '/service/login.php',
+                data: $("#loginform").serialize(),
+                success: function (data) {
+                    switch (data.error) {
+                        case true:
+                            M.toast({html: data.message, classes: "rounded"});
+                            break;
+                        case false:
+                            location.reload();
+                            break;
+                    }
+                }
+            });
+        });
+    });
+

@@ -18,5 +18,8 @@
 	"home.residentservices.title": "안내소",
 	"home.residentservices.description": "Emiya, 웹 사이트에 대한 정보(업데이트 내역, 관리 모드)를 제공하는 곳",
 	"home.residentservices.enter": "들어가기",
-	"navbar.login": "로그인"
+	"navbar.login": "로그인",
+	"home.villagers.title": "주민",
+	"home.villagers.description": "최신판 거리둬요 짐승의 숲 - 전체 주민 상세 데이터베이스",
+	"home.villagers.enter": "확인하기"
 }
