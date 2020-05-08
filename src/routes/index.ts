@@ -129,7 +129,7 @@ router.get('/', (req: Request, res: Response) => {
 
 router.get(['/category', '/category/:id'], (req: Request, res: Response) => {
     if (typeof req.params.id !== 'undefined' && req.params.id === 'welcome') {
-        res.render('category', { title: 'NTAG215', miibo: welcome, category: 'welcome' })
+        res.render('index', { title: 'NTAG215', welcome, category: 'welcome' })
     } else {
         let id = Number(req.params.id);
         if (typeof req.params.id === 'undefined') id = 1;
@@ -142,7 +142,7 @@ router.get(['/category', '/category/:id'], (req: Request, res: Response) => {
                 }
             }
         });
-        res.render('category', { title: 'NTAG215', miibo: newData, category: id })
+        res.render('index', { title: 'NTAG215', miibo: newData, category: id })
     }
 });
 
