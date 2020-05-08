@@ -58,7 +58,7 @@ const ranking = (name: string, ip: string, key: string, sp: any, req: Request): 
     const rankingData = JSON.parse(readFileSync(filename).toString());
     const arr = name.split('-');
     const cardNumber = arr[0].toString().trim()
-    if (!(req.session!.cnumber >= 1 || ipSession.get(ip)! >= 5) || ipSession.get(ip) === null) {
+    if (!(req.session![cardNumber] >= 1 || ipSession.get(ip)! >= 5) || ipSession.get(ip) === null) {
         if (rankingData[name] == null) {
             rankingData[name] = 1;
         } else {
@@ -70,7 +70,7 @@ const ranking = (name: string, ip: string, key: string, sp: any, req: Request): 
         } else {
             ipSession.set(ip, 1);
         }
-        req.session!.cnumber = 1;
+        req.session![cardNumber] = 1;
     }
     writeFileSync(filename, JSON.stringify(rankingData, null, 4));
 }
