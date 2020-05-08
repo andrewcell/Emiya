@@ -4,10 +4,10 @@ import path from 'path';
 import helmet from 'helmet';
 import express, { Request, Response, NextFunction } from 'express';
 import session from 'express-session';
-import { BAD_REQUEST } from 'http-status-codes';
 import 'express-async-errors';
 import * as url from 'url';
 import i18n from 'i18n';
+import passport from 'passport';
 
 import {getRandomInt} from '@shared/functions';
 import BaseRouter from './routes/Routers';
@@ -54,6 +54,8 @@ app.use(session({
         maxAge: 3600 * 1000
     }
 }))
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(i18n.init);
 
 // Add APIs
@@ -94,8 +96,8 @@ app.set('views', viewsDir);
 const staticDir = path.join(__dirname, 'public');
 app.use(express.static(staticDir));
 
-app.use(function (req, res, next) {  // 404 Not Found handler
-    var err = new Error('Not Found');
+app.use((req, res, next) => {  // 404 Not Found handler
+    const err = new Error('Not Found');
     res.status(404);
     next(err);
 });
