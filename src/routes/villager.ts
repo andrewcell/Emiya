@@ -7,6 +7,10 @@ const router = Router();
 // const sqlite = sqlite3.verbose()
 // let db = new sqlite.Database(getDataPath('villagers.db'));
 
+const returnHobby = (value: string) => {
+
+}
+
 router.get('/', (req: Request, res: Response) => {
   const db = VillagerDatabase;
   const data = db.getInstance().getAllVillager(req.cookies.locale);
@@ -14,7 +18,7 @@ router.get('/', (req: Request, res: Response) => {
   for (const villager of data) {
     array.push(villager)
   }
-  res.render('villagers/list', {data: array});
+  res.render('villagers/list', {data: array, locale: req.cookies.locale});
 });
 
 export default router;
