@@ -1,4 +1,4 @@
-
+script(src='/scripts/login.js')
 #login-modal.modal
     .modal-content
         h5 EmiyaKotlinProject - S'identifier
@@ -13,27 +13,3 @@
             button#loginbutton.btn(type='button') Bouton de connexion
     .modal-footer
         a.modal-close.waves-effect.waves-green.btn-flat(href='#') Fermer
-script.
-    $(document).ready(function () {
-        $('#loginbutton').click(function () {
-            $.ajax({
-                type: 'POST',
-                url: '/admin/login',
-                data: $("#loginform").serialize(),
-                success: function (data) {
-                    switch (data.error) {
-                        case true:
-                            M.toast({html: data.message, classes: "rounded"});
-                            break;
-                        case false:
-                            location.reload();
-                            break;
-                    }
-                },
-                error: function (err) {
-                    M.toast({html: err.statusText, classes: 'rounded'});
-                }
-            });
-        });
-    });
-
