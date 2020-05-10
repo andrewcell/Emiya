@@ -66,5 +66,10 @@
 	"villagers.colors.orange": "Orange",
 	"villagers.colors.beige": "Beige",
 	"villagers.colors.brown": "Brown",
-	"home.temp.changeaddress": "Please note. Website address will change to https://emiya.vxz.me/"
+	"home.temp.changeaddress": "Please note. Website address will change to https://emiya.vxz.me/",
+	"modal.login.title": "Emiya - Log In",
+	"modal.login.email": "E-mail Address",
+	"modal.login.password": "Password",
+	"modal.login.button": "Login",
+	"modal.login.close": "Close"
 }

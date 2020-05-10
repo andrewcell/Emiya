@@ -62,5 +62,10 @@
 	"villagers.colors.orange": "주황색",
 	"villagers.colors.beige": "베이지색",
 	"villagers.colors.brown": "갈색",
-	"home.temp.changeaddress": "웹 사이트 주소가 https://emiya.vxz.me/ 로 변경될 예정입니다."
+	"home.temp.changeaddress": "웹 사이트 주소가 https://emiya.vxz.me/ 로 변경될 예정입니다.",
+	"modal.login.title": "Emiya - 로그인",
+	"modal.login.email": "이메일 주소",
+	"modal.login.password": "비밀번호",
+	"modal.login.button": "로그인",
+	"modal.login.close": "닫기"
 }

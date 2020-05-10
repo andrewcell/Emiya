@@ -1,15 +1,15 @@
 script(src='/scripts/login.js')
 #login-modal.modal
     .modal-content
-        h5 EmiyaKotlinProject - S'identifier
+        h5=__('modal.login.title')
         form#loginform
             input#hash(type='hidden' name='_csrf' value='csrf goes here')
             .input-field
                 input#email(name='email' type='text')
-                label(for='email') Adresse électronique
+                label(for='email')=__('modal.login.email')
             .input-field
                 input#password.validate(name='password' type='password')
-                label(for='password') Mot de passe
-            button#loginbutton.btn(type='button') Bouton de connexion
+                label(for='password')=__('modal.login.password')
+            button#loginbutton.btn(type='button')=__('modal.login.button')
     .modal-footer
-        a.modal-close.waves-effect.waves-green.btn-flat(href='#') Fermer
+        a.modal-close.waves-effect.waves-green.btn-flat(href='#')=__('modal.login.close')

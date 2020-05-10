@@ -13,6 +13,9 @@ module.exports = {
         ]
     },
     entry: config.entry,
+    resolve: {
+        extensions: ['.ts']
+    },
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist', 'public', 'scripts')

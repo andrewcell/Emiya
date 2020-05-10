@@ -15,7 +15,9 @@ module.exports = {
     devtool: 'inline-source-map',
     entry: {
         layout: './src/public/scripts/layout.ts',
-        login: './src/public/scripts/login.ts'
+    },
+    resolve: {
+        extensions: ['.ts']
     },
     output: {
         filename: '[name].js',
