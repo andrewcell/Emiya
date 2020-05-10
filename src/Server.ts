@@ -96,13 +96,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
         next();
     }
 });
-
-app.use((req: Request, res: Response, next: NextFunction) => {
-    if (req.headers.host === 'emibo.vxz.me') {
-        res.redirect('https://emiya.vxz.me/')
-    }
-});
-
 /*
 app.use((req, res, next) => {
     i18n.init(req, res);
