@@ -22,7 +22,10 @@ block content
                             td='-'
                             td='-'
                         else
-                            td=country.get(log.ip).country.names.en
+                            if (country.get(log.ip).country)
+                                td=country.get(log.ip).country.names.en
+                            else
+                                td='-'
                             if (city.get(log.ip).city)
                                 td=city.get(log.ip).city.names.en
                             else
