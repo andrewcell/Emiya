@@ -55,7 +55,7 @@ block content
     if (figures)
       each figure in figures
         a.card.col-2(href="/emibo/data/" + figure.file)
-          img.card-img-top(src="/images/figure/" + figure.number + ".png", alt=figure.name)
+          img.card-img-top(src="/images/figures/" + figure.number + ".png", alt=figure.name, style='margin-top: 10px')
           .card-body
             div#content
               div#number(style="font-weight: bold")=figure.number
