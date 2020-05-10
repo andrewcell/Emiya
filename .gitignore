@@ -1,6 +1,7 @@
 node_modules/
 .idea/
 logs/
+dist/
 node_modules/
 .node_modules/
 built/*
