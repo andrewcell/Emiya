@@ -11,6 +11,10 @@ router.get('/', (req, res) => {
     return res.render('home');
 });
 
+router.get('/favicon.ico', (req, res) => {
+    return res.sendStatus(204);
+})
+
 // Add sub-routes
 router.use('/emibo', emiboRouter);
 router.use('/lang', LanguageRouter);
