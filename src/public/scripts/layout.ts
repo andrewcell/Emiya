@@ -5,7 +5,7 @@ import {b64} from './b64';
 $(() => {
     M.Modal.init($('.modal'));
 
-    $('#loginbutton').click(async () => {
+    $('#loginbutton').on('click', async () => {
         const result = await AJAX.send($("#loginform").serialize(), new b64('L2FkbWluL2xvZ2lu'))
         switch (result) {
             case 'login00':

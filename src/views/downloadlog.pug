@@ -30,7 +30,10 @@ block content
                                 td=city.get(log.ip).city.names.en
                             else
                                 td='-'
-                            td=asn.get(log.ip).autonomous_system_organization
+                            if (asn.get(log.ip).autonomous_system_organization)
+                                td=asn.get(log.ip).autonomous_system_organization
+                            else
+                                td='-'
                         if (log.ip.split(',').length > 1)
                             td=log.ip.split(',')[0]
                         else
