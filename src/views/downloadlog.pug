@@ -17,23 +17,25 @@ block content
             tbody
                 each log in data
                     tr
-                        if (log.ip === '127.0.0.1' || log.ip === 'localhost' || !country)
+                        //-if (log.ip === '127.0.0.1' || log.ip === 'localhost' || !country)
                             td='-'
                             td='-'
                             td='-'
-                        else
-                            if (country.get(log.ip).country)
-                                td=country.get(log.ip).country.names.en
-                            else
-                                td='-'
-                            if (city.get(log.ip).city)
-                                td=city.get(log.ip).city.names.en
-                            else
-                                td='-'
-                            if (asn.get(log.ip).autonomous_system_organization)
-                                td=asn.get(log.ip).autonomous_system_organization
-                            else
-                                td='-'
+                        -try {
+                        td=country.get(log.ip).country.names.en
+                        - } catch (err) {
+                        td='-'
+                        - }
+                        -try {
+                        td=city.get(log.ip).city.names.en
+                        - } catch (err) {
+                        td='-'
+                        - }
+                        -try {
+                        td=asn.get(log.ip).autonomous_system_organization
+                        - } catch (err) {
+                        td='-'
+                        -}
                         if (log.ip.split(',').length > 1)
                             td=log.ip.split(',')[0]
                         else
