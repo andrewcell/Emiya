@@ -16,16 +16,23 @@ html
                     ul#nav-mobile.left.hide-on-med-and-down
                         li
                             a(href='/emibo')=__('navbar.emibo')
-                        li
-                            a.modal-trigger(data-target='login-modal', href='#login-modal')=__('navbar.login')
+                        if (login)
+                            li
+                                a(href='/admin/logout')=__('navbar.logout')
+                        else
+                            li
+                                a.modal-trigger(data-target='login-modal', href='#login-modal')=__('navbar.login')
+                            li
+                                a.modal-trigger(data-target='register-modal', href='#register-modal')=__('navbar.register')
         section
             block content
         section
            include modals/login.pug
+           include modals/register.pug
         footer.page-footer.green
             .footer-copyright
                 .container
-                    p Emiya Copyright &copy; S.Y.Lee, Hosted in Netherlands
+                    p Emiya Copyright &copy; Suyeon Lee, Hosted in Netherlands
                     p Click to change Language
                         |&nbsp;
                         a(href='/lang/ko').yellow-text 한국어(대한민국, Korean)

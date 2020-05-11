@@ -2,12 +2,12 @@ import mongoose, {PassportLocalSchema, Schema} from 'mongoose';
 import passportLocalMongoose from 'passport-local-mongoose';
 
 const userSchema = new Schema({
-    name: String,
+    username: String,
     email: String
-});
+}, {collection: 'users'});
 
 
-userSchema.plugin(passportLocalMongoose, { usernameField: 'name'});
+userSchema.plugin(passportLocalMongoose, { usernameField: 'username'});
 
 const model = mongoose.model('User', userSchema as PassportLocalSchema)
 

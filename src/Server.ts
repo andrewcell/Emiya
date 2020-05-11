@@ -49,15 +49,33 @@ if (process.env.NODE_ENV === 'production') {
     app.use(helmet());
 }
 app.use(session({
-    secret: getRandomInt().toString(),
-    name: getRandomInt().toString(),
-    resave: false,
+    secret: '***REMOVED***',
+    name: '***REMOVED***',
     saveUninitialized: true,
     cookie: {
         path: '/',
         maxAge: 3600 * 1000
     }
+
 }))
+
+
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser())
+passport.deserializeUser(User.deserializeUser())
+app.use((req, res, next) => {
+
+    res.locals.session = req.session;
+    next();
+});
+app.use((req, res, next) => {
+    res.locals.login = req.isAuthenticated();
+    next();
+});
+app.use(i18n.init);
 mongoose.connect(process.env.MONGODB as string, { useNewUrlParser: true, useUnifiedTopology: true  })
     .then(() => {
         logger.info('MongoDB Success. Version: ' + mongoose.version);
@@ -66,15 +84,6 @@ mongoose.connect(process.env.MONGODB as string, { useNewUrlParser: true, useUnif
         logger.error(err.message, err);
         process.exit(1);
     });
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use(User.createStrategy());
-passport.serializeUser(User.serializeUser())
-passport.deserializeUser(User.deserializeUser())
-passport.use(new passportlocal.Strategy(User.authenticate()))
-
-app.use(i18n.init);
-
 // Add APIs
 app.use('/', BaseRouter);
 

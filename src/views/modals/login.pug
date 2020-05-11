@@ -4,6 +4,9 @@
         form#loginform
             input#hash(type='hidden' name='_csrf' value='csrf goes here')
             .input-field
+                input#username(name='username' type='text')
+                label(for='username')=__('modal.login.username')
+            //-.input-field
                 input#email(name='email' type='text')
                 label(for='email')=__('modal.login.email')
             .input-field

@@ -1,0 +1,24 @@
+#register-modal.modal
+    .modal-content
+        h5=__('modal.register.title')
+        br
+        form#regiform
+            input#hash(type='hidden' name='hash' value='<?php echo $token ?>')
+            .input-field
+                input#email.validate(required name='email' type='email')
+                label(for='email')=__('modal.register.email')
+                span.helper-text(data-success=__('modal.register.validemail') data-error=__('modal.register.invalidemail'))=__('modal.register.emailhelper')
+            .input-field
+                input#password(required name='password' type='password')
+                label(for='password')=__('modal.register.password')
+                span#passwordHelper.helper-text(data-success=__('modal.register.passwordavailable') data-error=__('modal.register.passworderror'))=__('modal.register.passwordhelper')
+            .input-field
+                input#password2(required name='password2' type='password')
+                label(for='password2')=__('modal.register.password2')
+                span#password2Helper.helper-text.invalid(data-success=__('modal.register.passwordmatched') data-error=__('modal.register.passwordnotmatched'))=__('modal.register.password2helper')
+            .input-field
+                input#username(name='username' type='text', required)
+                label(for='username')=__('modal.register.username')
+            button#registerButton.btn(type='button')=__('modal.register.registerbutton')
+    .modal-footer
+        a.modal-close.waves-effect.waves-green.btn-flat(href='#')=__('modal.register.close')
