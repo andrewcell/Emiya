@@ -27,8 +27,9 @@ html
         section
             block content
         section
-           include modals/login.pug
-           include modals/register.pug
+            if (!login)
+               include modals/login.pug
+               include modals/register.pug
         footer.page-footer.green
             .footer-copyright
                 .container

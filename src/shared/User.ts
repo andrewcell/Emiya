@@ -3,7 +3,8 @@ import passportLocalMongoose from 'passport-local-mongoose';
 
 const userSchema = new Schema({
     username: String,
-    email: String
+    email: String,
+    admin: Boolean
 }, {collection: 'users'});
 
 
