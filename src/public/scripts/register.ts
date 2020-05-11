@@ -14,6 +14,7 @@ export class Register {
             case RegisterCode.UsernameOccupied:
             case RegisterCode.EmailOccupied:
             case RegisterCode.BannedClient:
+            case RegisterCode.RegisterNotAllowed:
             default:
                 return Promise.resolve({code: result.code, comment: result.comment});
         }
@@ -45,6 +46,7 @@ enum RegisterCode {
     UsernameOccupied = 'register03',
     EmailOccupied = 'register04',
     BannedClient = 'register05',
+    RegisterNotAllowed = 'register06',
     InternalError = '500'
 }
 

@@ -21,13 +21,24 @@ router.post('/login', (req: Request, res: Response) => {
 });
 
 router.post('/register', (req: Request, res: Response) => {
-    User.register(new User({email: '***REMOVED***', username: '***REMOVED***'}), '***REMOVED***', (err, user) => {
-        if (err) {
-            logger.error(err.message, err)
-        } else {
-            logger.info(user)
-        }
-    });
+    if (process.env.ALLOWREGISTER === '1') {
+        User.register(new User({email: '***REMOVED***', username: '***REMOVED***'}), '***REMOVED***', (err, user) => {
+            switch (err.name) {
+                case 'UserExistsError':
+                    res.json({code: 'register03', comment: res.__('ts.register.usernameoccupied')})
+                    break;
+                default:
+                    res.json({code: '500', comment: internalError})
+            }
+            if (err) {
+                logger.error(err.message, err)
+            } else {
+                logger.info(user)
+            }
+        });
+    } else {
+        res.json({code: 'register06', comment: res.__('ts.register.notallowed')})
+    }
 });
 
 router.get('/logout', (req: Request, res: Response) => {

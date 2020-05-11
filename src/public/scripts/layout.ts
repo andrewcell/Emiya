@@ -46,11 +46,10 @@ $(() => {
     });
 
     $('#registerButton').on('click', async () => {
-        if (!$('#register-modal input').hasClass('invalid')) {
+        if ($('#register-modal input').hasClass('valid')) {
             const result = await Register.register(registerUsername.val() as string, registerPassword.val() as string, registerPassword2.val() as string, registerEmail.val() as string);
-            console.log(result)
+            M.toast({html: result.comment, classes: 'rounded'});
         }
-
     });
 
     $('#password').on('focusout', () => {
