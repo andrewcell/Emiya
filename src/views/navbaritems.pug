@@ -1,0 +1,10 @@
+li
+    a(href='/emibo')=__('navbar.emibo')
+if (login)
+    li
+        a(href='/admin/logout')=__('navbar.logout')
+else
+    li
+        a.modal-trigger(data-target='login-modal', href='#login-modal')=__('navbar.login')
+    li
+        a.modal-trigger(data-target='register-modal', href='#register-modal')=__('navbar.register')

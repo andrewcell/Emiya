@@ -4,6 +4,7 @@ logs/
 dist/
 node_modules/
 .node_modules/
+public/scripts/layout.js
 built/*
 tests/cases/rwc/*
 tests/cases/test262/*

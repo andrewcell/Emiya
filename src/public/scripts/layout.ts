@@ -28,6 +28,7 @@ $(() => {
     }
 
     M.Modal.init($('.modal'));
+    M.Sidenav.init($('.sidenav'));
 
     $('#loginbutton').on('click', async () => {
         const result: AjaxResult = await AJAX.send($("#loginform").serialize(), new b64('L2FkbWluL2xvZ2lu'))
