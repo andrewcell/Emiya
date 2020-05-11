@@ -88,5 +88,6 @@
 	"navbar.logout": "로그아웃",
 	"modal.login.username": "사용자 이름 (아이디)",
 	"modal.register.validemail": "올바른 형식의 이메일 주소가 아닙니다.",
-	"modal.register.invalidemail": "사용할 수 있는 이메일 주소입니다."
+	"modal.register.invalidemail": "사용할 수 있는 이메일 주소입니다.",
+	"ts.register.notallowed": "회원가입 기능이 비활성화되어 있습니다."
 }

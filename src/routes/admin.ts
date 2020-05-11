@@ -22,7 +22,7 @@ router.post('/login', (req: Request, res: Response) => {
 
 router.post('/register', (req: Request, res: Response) => {
     if (process.env.ALLOWREGISTER === '1') {
-        User.register(new User({email: '***REMOVED***', username: '***REMOVED***'}), '***REMOVED***', (err, user) => {
+        User.register(new User({email: req.body.email, username: req.body.username}), req.body.password, (err, user) => {
             switch (err.name) {
                 case 'UserExistsError':
                     res.json({code: 'register03', comment: res.__('ts.register.usernameoccupied')})

@@ -92,5 +92,6 @@
 	"modal.register.validemail": "This email address can be use as user's email.",
 	"modal.register.invalidemail": "Do not use invalid email address.",
 	"modal.login.username": "Username",
-	"navbar.logout": "Logout"
+	"navbar.logout": "Logout",
+	"ts.register.notallowed": "Register not allowed at this time."
 }
