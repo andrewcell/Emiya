@@ -10,12 +10,12 @@ router.post('/login', (req: Request, res: Response) => {
     passport.authenticate('local', (err, user, info) => {
         if (err) { return res.json({code: 500, comment: internalError}) }
         if (!user) { return res.json({code: 'login01', comment: res.__('ts.admin.login.invalidlogin')}) }
-        req.logIn(user, (err)=> {
+        req.logIn(user, (err) => {
             if (err) {
                 logger.error(err.message, err);
             }
-            return res.json({code: 'login00', comment: 'success'})
-        })
+            return res.json({code: 'login00', comment: 'success'});
+        });
         return user
     })(req, res);
 });

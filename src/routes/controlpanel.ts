@@ -5,10 +5,11 @@ import { fileExistsSync } from 'tsconfig-paths/lib/filesystem'
 import path from 'path'
 import { Reader, AsnResponse, CityResponse, CountryResponse } from 'maxmind';
 import { getDataPath } from '@shared/functions'
+import { validateAdmin } from '@shared/validation';
 
 const router = Router();
 
-router.get('/downloadlog', (req: Request, res: Response) => {
+router.get('/downloadlog', validateAdmin, (req: Request, res: Response) => {
   if (!fileExistsSync('logArray.json')) {
     return res.render('downloadlog', { data: false });
   }
