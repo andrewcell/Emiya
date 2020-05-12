@@ -2,6 +2,9 @@ import { Request, Response, Router} from 'express';
 import sqlite3, {Database} from 'sqlite3';
 import {getDataPath} from '@shared/functions';
 import {VillagerDatabase} from '@interfaces/VillagerDatabase';
+import {validateXhr} from '@shared/validation';
+
+
 const router = Router();
 
 router.use((req, res, next) => {
@@ -29,5 +32,9 @@ router.get('/', (req: Request, res: Response) => {
 router.get('/list', (req: Request, res: Response) => {
   res.render('villagers/list', {data: villagerList, locale: req.cookies.locale});
 });
+
+router.get('/villagers', validateXhr, ((req, res) => {
+  return res.json({code: 200, comment: 'success', data: villagerList, locale: req.cookies.locale});
+}));
 
 export default router;

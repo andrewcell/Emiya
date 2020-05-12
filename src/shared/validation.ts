@@ -13,3 +13,11 @@ export const validateAdmin = (req: Request, res: Response, next: NextFunction) =
         }
     }
 }
+
+export const validateXhr = (req: Request, res: Response, next: NextFunction) => {
+    //if (req.xhr || req!.headers!.accept!.indexOf('json') > -1) {
+        next();
+   //} else {
+    //    res.status(400).json('{error: 1}');
+    //}
+}

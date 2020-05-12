@@ -6,18 +6,31 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.ts?$/,
+                test: /\.ts|\.tsx?$/,
                 use: 'ts-loader',
                 exclude: '/node_modules/'
+            },
+            {
+                test: /\.jsx?$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
             }
-        ]
+        ],
+
     },
     devtool: 'inline-source-map',
     entry: {
         layout: './src/public/scripts/layout.ts',
+        villagers: './src/public/scripts/villagers.tsx',
     },
     resolve: {
-        extensions: ['.ts']
+        extensions: ['.ts', '.tsx', '.js']
     },
     output: {
         filename: '[name].js',
