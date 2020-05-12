@@ -2,12 +2,25 @@ import {NextFunction, Request, Response, Router} from 'express';
 import User, {UserDocument} from '@shared/User';
 import passport from 'passport';
 import logger from '@shared/Logger';
+import emailValidator from 'email-validator';
 import {internalError} from '@shared/constants';
 import {SendGrid} from '@shared/SendGrid';
 import {Mail} from '@shared/Mail';
 import {getRandomString} from '@shared/functions';
 const router = Router();
 
+const validatePassword = (password: string): boolean => {
+    const regex = /((^[0-9]+[a-z]+)|(^[a-z]+[0-9]+))+[0-9a-z]+$/i;
+    if (password.length < 6) {
+        return false;
+    }
+
+    if (regex.exec(password)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 router.post('/login', (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate('local', (error, user, info) => {
@@ -29,6 +42,15 @@ router.post('/login', (req: Request, res: Response, next: NextFunction) => {
 router.post('/register', (req: Request, res: Response) => {
     if (process.env.ALLOWREGISTER === '1') {
         const hash = getRandomString(32);
+        if (req.body.password !== req.body.password2) {
+            return res.json({code: 'register03', comment: res.__('ts.register.passwordnotmatch')})
+        }
+        if (!emailValidator.validate(req.body.email)) {
+            return res.json({code: 'register03', comment: res.__('ts.register.invalidemail')})
+        }
+        if (!validatePassword(req.body.password)) {
+            return res.json({code: 'register03', comment: res.__('ts.register.invalidpassword')})
+        }
         User.register(new User({email: req.body.email, username: req.body.username, verified: false, verifyHash: hash}), req.body.password, (err, user) => {
             if (err) {
                 switch (err.name) {

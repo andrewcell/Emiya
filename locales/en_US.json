@@ -101,5 +101,8 @@
 	"ts.register.usernameoremailoccupied": "E-mail address or Username already in use.",
 	"verified.cannotbeverified": "Error in sight when verify email address.",
 	"verified.emailverified": "E-mail address is verified.",
-	"verified.clickemiyatogo": "Click Emiya to proceed."
+	"verified.clickemiyatogo": "Click Emiya to proceed.",
+	"ts.register.invalidpassword": "You can't use this password.",
+	"ts.register.invalidemail": "You can't use this email address.",
+	"ts.register.passwordnotmatch": "Passwords do not match."
 }

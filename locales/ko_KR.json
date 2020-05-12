@@ -97,5 +97,8 @@
 	"ts.register.usernameoremailoccupied": "이메일 주소 혹은 사용자 이름 (아이디)가 이미 사용중입니다.",
 	"verified.cannotbeverified": "오류가 발생하여 이메일을 인증할 수 없습니다.",
 	"verified.emailverified": "이메일 주소가 인증되었습니다.",
-	"verified.clickemiyatogo": "Emiya 를 클릭하면 홈페이지로 이동할 수 있습니다."
+	"verified.clickemiyatogo": "Emiya 를 클릭하면 홈페이지로 이동할 수 있습니다.",
+	"ts.register.invalidpassword": "사용할 수 없는 비밀번호 입니다.",
+	"ts.register.invalidemail": "사용할 수 없는 이메일 주소 입니다.",
+	"ts.register.passwordnotmatch": "두 개의 비밀번호가 일치하지 않습니다."
 }

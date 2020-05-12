@@ -36,7 +36,6 @@ export class Register {
         } else {
             return false;
         }
-
     }
 }
 
