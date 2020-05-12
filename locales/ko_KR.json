@@ -89,5 +89,13 @@
 	"modal.login.username": "사용자 이름 (아이디)",
 	"modal.register.validemail": "사용할 수 있는 이메일 주소입니다.",
 	"modal.register.invalidemail": "올바른 형식의 이메일 주소가 아닙니다.",
-	"ts.register.notallowed": "회원가입 기능이 비활성화되어 있습니다."
+	"ts.register.notallowed": "회원가입 기능이 비활성화되어 있습니다.",
+	"ts.register.usernameoccupied": "이미 사용중인 사용자 이름 (아이디) 입니다.",
+	"ts.register.clickheretoverifyemail": "여기를 클릭하여 이메일 주소 확인",
+	"ts.register.clickheretoverifyemailtitle": "Emiya 이메일 주소 확인",
+	"ts.register.emailverificationrequired": "회원가입은 완료되었습니다. 기재한 이메일로 계정 활성화 메일을 보냈습니다.",
+	"ts.register.usernameoremailoccupied": "이메일 주소 혹은 사용자 이름 (아이디)가 이미 사용중입니다.",
+	"verified.cannotbeverified": "오류가 발생하여 이메일을 인증할 수 없습니다.",
+	"verified.emailverified": "이메일 주소가 인증되었습니다.",
+	"verified.clickemiyatogo": "Emiya 를 클릭하면 홈페이지로 이동할 수 있습니다."
 }

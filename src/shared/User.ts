@@ -5,12 +5,16 @@ export type UserDocument = mongoose.Document & {
     username: string;
     email: string;
     admin: boolean;
+    verifyHash: string;
+    verified: boolean;
 }
 
 const userSchema = new Schema({
-    username: String,
-    email: String,
-    admin: Boolean
+    username: { type: String, unique: true },
+    email: { type: String, unique: true },
+    admin: Boolean,
+    verifyHash: String,
+    verified: Boolean
 }, {collection: 'users'});
 
 

@@ -93,5 +93,13 @@
 	"modal.register.invalidemail": "Do not use invalid email address.",
 	"modal.login.username": "Username",
 	"navbar.logout": "Logout",
-	"ts.register.notallowed": "Register not allowed at this time."
+	"ts.register.notallowed": "Register not allowed at this time.",
+	"ts.register.usernameoccupied": "Username already occupied.",
+	"ts.register.clickheretoverifyemail": "Click here to verify email address.",
+	"ts.register.clickheretoverifyemailtitle": "Emiya E-mail address verification",
+	"ts.register.emailverificationrequired": "Register process completed. We sent you a mail for active.",
+	"ts.register.usernameoremailoccupied": "E-mail address or Username already in use.",
+	"verified.cannotbeverified": "Error in sight when verify email address.",
+	"verified.emailverified": "E-mail address is verified.",
+	"verified.clickemiyatogo": "Click Emiya to proceed."
 }

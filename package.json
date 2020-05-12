@@ -15,6 +15,7 @@
     "@server": "dist/Server"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.1.0",
     "better-sqlite3": "^7.0.1",
     "command-line-args": "^5.1.1",
     "cookie-parser": "^1.4.5",

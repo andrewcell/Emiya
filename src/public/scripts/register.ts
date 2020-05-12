@@ -9,6 +9,7 @@ export class Register {
             case RegisterCode.Success:
                 return Promise.resolve({code: result.code, comment: 'success'});
                 break;
+            case RegisterCode.EmailVerificationRequired:
             case RegisterCode.PasswordValidationFailed:
             case RegisterCode.PasswordDoNotMatch:
             case RegisterCode.UsernameOccupied:
@@ -16,7 +17,7 @@ export class Register {
             case RegisterCode.BannedClient:
             case RegisterCode.RegisterNotAllowed:
             default:
-                return Promise.resolve({code: result.code, comment: result.comment});
+                return Promise.resolve({code: result.code, comment: result.comment, enumResult: registerResult});
         }
     }
 
@@ -39,7 +40,7 @@ export class Register {
     }
 }
 
-enum RegisterCode {
+export enum RegisterCode {
     Success = 'register00',
     PasswordValidationFailed = 'register01',
     PasswordDoNotMatch = 'register02',
@@ -47,6 +48,7 @@ enum RegisterCode {
     EmailOccupied = 'register04',
     BannedClient = 'register05',
     RegisterNotAllowed = 'register06',
+    EmailVerificationRequired = 'register07',
     InternalError = '500'
 }
 

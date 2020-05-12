@@ -21,5 +21,6 @@ export class AJAX {
 
 export interface AjaxResult {
     code: string | number,
-    comment: string
+    comment: string,
+    enumResult?: any
 }

@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    if (verified)
+        h3=__('verified.emailverified')
+        h5=__('verified.clickemiyatogo')
+    else
+        h3=__('verified.cannotbeverified')
