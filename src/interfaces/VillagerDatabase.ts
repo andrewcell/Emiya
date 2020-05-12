@@ -32,9 +32,8 @@ export class VillagerDatabase {
         }
     }
 
-    public getAllVillager(language: string) {
-        const col = VillagerDatabase.getLanguage(language);
-        const stmt = this.engine.prepare('SELECT  a.*, d.'+col+' as name, d.english as name_english, c.'+col+' as motto, b.'+col+' as phrase ' +
+    public getAllVillager() {
+        const stmt = this.engine.prepare('SELECT  a.*, d.korean as name_kor, d.english as name_english, c.korean as motto_kor, c.english as motto_english, b.korean as phrase_kor, b.english as phrase_english ' +
             'FROM villager as a ' +
             'INNER JOIN phrase as b ON a.phraseid=b.id ' +
             'INNER JOIN motto as c ON a.mottoid=c.id ' +
