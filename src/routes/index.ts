@@ -167,7 +167,7 @@ router.get('/data/:key', ((req: Request, res: Response) => {
                 if (realFile.fi === true) {
                     link = 'src/data/Figures/';
                 }
-                res.download(path.resolve(link + realFile.file), realFile.name + '.bin');
+                res.download(path.resolve(link + realFile.file), '#' + realFile.name + '.bin');
             }
         }
     }
