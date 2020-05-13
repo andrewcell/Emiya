@@ -58,7 +58,7 @@
     "@types/jasmine": "^3.5.10",
     "@types/jquery": "^3.3.38",
     "@types/js-cookie": "^2.2.6",
-    "@types/jsonfile": "^5.0.0",
+    "@types/jsonfile": "^6.0.0",
     "@types/materialize-css": "^1.0.7",
     "@types/maxmind": "^2.0.5",
     "@types/mongoose": "^5.7.16",
