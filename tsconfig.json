@@ -40,10 +40,11 @@
   },
   "include": [
     "src/**/*.ts",
+    "src/public/scripts/*.tsx",
     "spec/**/*.ts"
   ],
   "exclude": [
-    "src/public/",
+    "src/public",
     "*.js"
   ]
 }

@@ -22,7 +22,7 @@ router.get('/locale/:locale', (req, res) => {
     switch (req.params.locale) {
         case 'ko_KR':
         case 'en_US':
-            const file = readFileSync('locales/public/' + req.params.locale) as string;
+            const file = readFileSync('public/locales/' + req.params.locale) as string;
             return res.json(file)
     }
 })

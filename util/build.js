@@ -7,6 +7,7 @@ try {
     // Copy front-end files
     fs.copySync('./src/public/stylesheets', './dist/public/stylesheets');
     fs.copySync('./src/public/images', './dist/public/images');
+    fs.copySync('./src/public/locales', './dist/public/locales');
     fs.copySync('./src/public/scripts/emibo.js', './dist/public/scripts/emibo.js');
     fs.copySync('./src/views', './dist/views');
     fs.copySync('./src/data', './dist/data');
