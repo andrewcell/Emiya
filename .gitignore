@@ -5,6 +5,7 @@ dist/
 node_modules/
 .node_modules/
 src/public/scripts/layout.js
+src/public/scripts/villagers.js
 built/*
 tests/cases/rwc/*
 tests/cases/test262/*
