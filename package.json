@@ -52,7 +52,7 @@
     "@types/express": "^4.17.6",
     "@types/express-session": "^1.17.0",
     "@types/find": "^0.2.1",
-    "@types/helmet": "0.0.46",
+    "@types/helmet": "0.0.47",
     "@types/i18n": "^0.8.6",
     "@types/i18next": "^13.0.0",
     "@types/jasmine": "^3.5.10",
