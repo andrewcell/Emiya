@@ -25,14 +25,14 @@ const loadDb = () => {
 
 loadDb()
 
-router.get('/', (req: Request, res: Response) => {
+router.get(['/', '/:param'], (req: Request, res: Response) => {
   res.render('villagers/main', {data: villagerList, locale: req.cookies.locale});
 });
 
-router.get('/list', (req: Request, res: Response) => {
+/* router.get('/list', (req: Request, res: Response) => {
   res.render('villagers/list', {data: villagerList, locale: req.cookies.locale});
 });
-
+*/
 router.get('/villagers', validateXhr, ((req, res) => {
   return res.json({code: 200, comment: 'success', data: villagerList, locale: req.cookies.locale});
 }));

@@ -5,14 +5,69 @@ import './locale';
 import MyVillagers from './villagers/MyVillagers';
 import Cookies from 'js-cookie';
 import {setLanguage} from './locale';
-
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import VillagersList from './villagers/VillagersList';
+import LinkButtons from './villagers/LinkButtons';
+import axios from "axios";
+import { VillagersData, Villager } from './villagers/interfaces';
+import { Style, Color } from './villagers/enums';
 if (Cookies.get('locale') == null) Cookies.set('locale', 'en_US')
 setLanguage(Cookies.get('locale') as string);
 
-const Villagers = () => {
-    return (
-        <MyVillagers locale={Cookies.get('locale')}/>
-    )
+class Villagers extends React.Component<any, VillagersData> {
+    constructor(prop: any) {
+        super(prop);
+        this.state = {
+            data: []
+        }
+    }
+    async componentWillMount() {
+        axios.get('/villagers/villagers').then(response => {
+            const villagersJson = response.data;
+            const array: Villager[] = [];
+            villagersJson.data.forEach((v: any, k: number) => {
+                const data: Villager = {
+                    id: v.id,
+                    personality: v.personality,
+                    hobby: v.hobby,
+                    type: v.type,
+                    birthday: v.birthday,
+                    style1: Style[v.style1 as keyof typeof Style],
+                    style2: Style[v.style2 as keyof typeof Style],
+                    color1: Color[v.color1 as keyof typeof Color],
+                    color2: Color[v.color2 as keyof typeof Color],
+                    voicetone: v.voicetone,
+                    species: v.species,
+                    code: v.code,
+                    nameKor: v.name_kor,
+                    nameEng: v.name_english,
+                    mottoKor: v.motto_kor,
+                    mottoEng: v.motto_english,
+                    phraseKor: v.phrase_kor,
+                    phraseEng: v.phrase_english
+                }
+                array.push(data);
+            });
+            this.setState({data: array})
+        });
+    }
+    render() {
+        return (
+            <div>
+                <BrowserRouter>
+                    <LinkButtons/>
+                    <Switch>
+                        <Route exact path={'/villagers'}>
+                            <MyVillagers locale={Cookies.get('locale')} data={this.state.data}/>
+                        </Route>
+                        <Route path={'/villagers/list'}>
+                            <VillagersList locale={Cookies.get('locale')} data={this.state.data}/>
+                        </Route>
+                    </Switch>
+                </BrowserRouter>
+            </div>
+        )
+    }
 }
 
 export default Villagers;
