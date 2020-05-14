@@ -1,29 +1,32 @@
 import axios from 'axios';
-    let data: any = {};
-    const whitelist: string[] = ['en_US', 'ko_KR'];
-    let language = '';
+import ko from './locales/ko_KR';
+import en from './locales/en_US';
+let data: any = {};
+
+const whitelist = new Map([
+        ['en_US', en],
+        ['ko_KR', ko]
+]);
+
+let language = new Map();
+
 const setLanguage = (lang: string) => {
-        if (whitelist.includes(lang)) {
-            axios.get(`/locales/${lang}.json`).then(res => {
-                data = res.data;
-                language = lang;
-                return;
-            })
-        }
+    const data = whitelist.get(lang);
+    if (data == null) {
+        language = en;
+    } else {
+        language = data;
     }
-const getData = () => {
-        if (data === {}) {
-            setLanguage(language);
-        }
-        return data;
-    }
+}
 
 const l = (key: string): string => {
-    const dataa = getData();
-    if (dataa[key] != null) {
-        return dataa[key];
-    } else {
+    const data = language.get(key)
+    if (data == null) {
+        //console.log(`"${key}": ""`);
         return '';
+
+    } else {
+        return data;
     }
 }
 

@@ -11,18 +11,16 @@ import LinkButtons from './villagers/LinkButtons';
 import axios from "axios";
 import { VillagersData, Villager } from './villagers/interfaces';
 import { Style, Color } from './villagers/enums';
-if (Cookies.get('locale') == null) Cookies.set('locale', 'en_US')
-setLanguage(Cookies.get('locale') as string);
+
+
 
 class Villagers extends React.Component<any, VillagersData> {
     constructor(prop: any) {
+        if (Cookies.get('locale') == null) Cookies.set('locale', 'en_US')
+        setLanguage(Cookies.get('locale') as string);
         super(prop);
-        this.state = {
-            data: []
-        }
-    }
-    async componentWillMount() {
-        axios.get('/villagers/villagers').then(response => {
+        this.state = {data: []}
+        axios.get('/villagers/react/villagers').then(response => {
             const villagersJson = response.data;
             const array: Villager[] = [];
             villagersJson.data.forEach((v: any, k: number) => {
@@ -30,7 +28,7 @@ class Villagers extends React.Component<any, VillagersData> {
                     id: v.id,
                     personality: v.personality,
                     hobby: v.hobby,
-                    type: v.type,
+                    type: (v.type == 0) ? 'A' : 'B',
                     birthday: v.birthday,
                     style1: Style[v.style1 as keyof typeof Style],
                     style2: Style[v.style2 as keyof typeof Style],
@@ -48,14 +46,15 @@ class Villagers extends React.Component<any, VillagersData> {
                 }
                 array.push(data);
             });
-            this.setState({data: array})
+            this.setState({data: array});
         });
     }
+
     render() {
         return (
             <div>
                 <BrowserRouter>
-                    <LinkButtons/>
+                    <LinkButtons />
                     <Switch>
                         <Route exact path={'/villagers'}>
                             <MyVillagers locale={Cookies.get('locale')} data={this.state.data}/>
