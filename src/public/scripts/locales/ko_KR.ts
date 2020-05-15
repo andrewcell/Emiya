@@ -77,5 +77,10 @@ export default new Map([
     ['villagers.species.penguin', '펭귄'],
     ['villagers.species.rhino', '코뿔소'],
     ['villagers.species.hamster', '햄스터'],
-    ['villagers.species.tiger', '호랑이']
+    ['villagers.species.tiger', '호랑이'],
+    ['villagers.search.name', '이름'],
+    ['villagers.search.hobby', '취미'],
+    ['villagers.search.species', '종'],
+    ['villagers.search.type', '성격 타입'],
+    ['villagers.search.personality', '성격']
 ]);

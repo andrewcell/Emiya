@@ -77,5 +77,10 @@ export default new Map([
     ['villagers.species.penguin', 'Penguin'],
     ['villagers.species.rhino', 'Rhino'],
     ['villagers.species.hamster', 'Hamster'],
-    ['villagers.species.tiger', 'Tiger']
+    ['villagers.species.tiger', 'Tiger'],
+    ['villagers.search.name', 'Name'],
+    ['villagers.search.hobby', 'Hobby'],
+    ['villagers.search.species', 'Species'],
+    ['villagers.search.type', 'Type'],
+    ['villagers.search.personality', 'Personality']
 ]);
