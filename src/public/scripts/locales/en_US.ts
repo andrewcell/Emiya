@@ -82,5 +82,10 @@ export default new Map([
     ['villagers.search.hobby', 'Hobby'],
     ['villagers.search.species', 'Species'],
     ['villagers.search.type', 'Type'],
-    ['villagers.search.personality', 'Personality']
+    ['villagers.search.personality', 'Personality'],
+    ['villagers.search.style', 'Style'],
+    ['villagers.list.hobby', 'Hobby'],
+    ['villagers.list.personality', 'Personality'],
+    ['villagers.list.style', 'Style'],
+    ['villagers.list.color', 'Color']
 ]);

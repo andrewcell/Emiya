@@ -82,5 +82,10 @@ export default new Map([
     ['villagers.search.hobby', '취미'],
     ['villagers.search.species', '종'],
     ['villagers.search.type', '성격 타입'],
-    ['villagers.search.personality', '성격']
+    ['villagers.search.personality', '성격'],
+    ['villagers.search.style', '선호 스타일'],
+    ['villagers.list.hobby', '취미'],
+    ['villagers.list.personality', '성격'],
+    ['villagers.list.style', '선호 스타일'],
+    ['villagers.list.color', '선호 색상']
 ]);
