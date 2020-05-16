@@ -5,7 +5,7 @@ import {VillagerDatabase} from '@interfaces/VillagerDatabase';
 import {validateReact} from '@shared/validation';
 import crypto from 'crypto-js';
 import {AES} from 'aes-js';
-import {decrypt, encrypt} from '@shared/Encryption.ts';
+import {decrypt, encrypt} from '@shared/Encryption';
 import MyVillagers, {resize} from '@interfaces/MyVillagersDatabase';
 import {UserDocument} from '@shared/User';
 
