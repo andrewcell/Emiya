@@ -83,13 +83,13 @@ router.get('/react/my/get', validateReact, (req, res) => {
     } else {
       data = req.session!.myvillagers;
     }
-    return res.json({code: 'villagers00', comment: res.__('ts.villagers.my.added'), data: encrypt(JSON.stringify(data))})
+    return res.json({code: 'villagers00', comment: 'success', data: encrypt(JSON.stringify(data))})
   } else {
     if (req.session?.myvillagers == null) {
       req.session!.myvillagers = resize([], 10, null)
       req.session!.myvillagersguest = true;
     }
-    return res.json({code: 'villagers00', comment: res.__('ts.villagers.my.added'), data: encrypt(JSON.stringify(req.session!.myvillagers))});
+    return res.json({code: 'villagers00', comment: 'success', data: encrypt(JSON.stringify(req.session!.myvillagers))});
   }
 });
 
