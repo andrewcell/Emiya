@@ -74,8 +74,9 @@ router.post('/register', (req: Request, res: Response) => {
 });
 
 router.get('/logout', (req: Request, res: Response) => {
-    req.logout();
-    return res.redirect('/')
+    req.session!.destroy(()=>{
+        res.redirect('/')
+    })
 });
 
 router.get('/verify/:hash', (req: Request, res: Response) => {

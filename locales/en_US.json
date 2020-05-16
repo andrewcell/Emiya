@@ -26,7 +26,6 @@
 	"home.villagers.enter": "Enter",
 	"error.blockedreferer.waitwheredidyoucomfrom": "error.blockedreferer.waitwheredidyoucomfrom",
 	"error.blockedreferer.divaphrase": "error.blockedreferer.divaphrase",
-
 	"home.temp.changeaddress": "Please note. Website address will change to https://emiya.vxz.me/",
 	"modal.login.title": "Emiya - Log In",
 	"modal.login.email": "E-mail Address",
@@ -66,5 +65,7 @@
 	"ts.register.invalidpassword": "You can't use this password.",
 	"ts.register.invalidemail": "You can't use this email address.",
 	"ts.register.passwordnotmatch": "Passwords do not match.",
-	"ts.villagers.my.alreadyexists": "Already exists."
+	"ts.villagers.my.alreadyexists": "Already exists.",
+	"ts.villagers.my.full": "List is full. Limited to game's limit.",
+	"ts.villagers.my.added": "Added to My Villagers"
 }

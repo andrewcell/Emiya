@@ -7,6 +7,7 @@ export type UserDocument = mongoose.Document & {
     admin: boolean;
     verifyHash: string;
     verified: boolean;
+    myVillagers: string[];
 }
 
 const userSchema = new Schema({
@@ -14,7 +15,8 @@ const userSchema = new Schema({
     email: { type: String, unique: true },
     admin: Boolean,
     verifyHash: String,
-    verified: Boolean
+    verified: Boolean,
+    myVillagers: [String]
 }, {collection: 'users'});
 
 

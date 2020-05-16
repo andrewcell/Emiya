@@ -61,5 +61,7 @@
 	"ts.register.invalidpassword": "사용할 수 없는 비밀번호 입니다.",
 	"ts.register.invalidemail": "사용할 수 없는 이메일 주소 입니다.",
 	"ts.register.passwordnotmatch": "두 개의 비밀번호가 일치하지 않습니다.",
-	"ts.villagers.my.alreadyexists": "이미 등록되어 있습니다."
+	"ts.villagers.my.alreadyexists": "이미 등록되어 있습니다.",
+	"ts.villagers.my.full": "더 이상 추가할 수 없습니다.",
+	"ts.villagers.my.added": "내 주민에 추가되었습니다."
 }

@@ -17,6 +17,7 @@ import {existsSync, readFileSync, writeFileSync} from 'fs';
 import {VillagerDatabase} from '@interfaces/VillagerDatabase';
 import User from '@shared/User';
 import mongoose from 'mongoose';
+import MyVillagersDatabase from "@interfaces/MyVillagersDatabase";
 
 // Init express
 const app = express();
@@ -137,7 +138,8 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     }); */
 });
 process.on('exit', () => {
-    VillagerDatabase.getInstance().close()
+    VillagerDatabase.getInstance().close();
+    MyVillagersDatabase.getInstance().close();
 });
 process.on('SIGHUP', () => process.exit(128 + 1));
 process.on('SIGINT', () => process.exit(128 + 2));

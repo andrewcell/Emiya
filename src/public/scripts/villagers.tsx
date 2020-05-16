@@ -12,7 +12,7 @@ import axios from "axios";
 import { VillagersData, Villager } from './villagers/interfaces';
 import { Style, Color } from './villagers/enums';
 import {AES, enc} from 'crypto-js';
-import {getKey, getString} from './encryption';
+import {decrypt} from './encryption';
 
 
 class Villagers extends React.Component<any, VillagersData> {
@@ -23,7 +23,7 @@ class Villagers extends React.Component<any, VillagersData> {
         this.state = {data: []}
 
         axios.get('/villagers/react/villagers').then(response => {
-            const villagersJson = JSON.parse(getString(AES.decrypt(response.data.data,getKey())))
+            const villagersJson = JSON.parse(decrypt(response.data.data))
             const array: Villager[] = [];
             villagersJson.forEach((v: any, k: number) => {
                 const data: Villager = {
