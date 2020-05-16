@@ -11,9 +11,9 @@ import LinkButtons from './villagers/LinkButtons';
 import axios from "axios";
 import { VillagersData, Villager } from './villagers/interfaces';
 import { Style, Color } from './villagers/enums';
-import aes, {utils} from 'aes-js';
-import toBytes = utils.hex.toBytes;
-import fromBytes = utils.utf8.fromBytes;
+import {AES, enc} from 'crypto-js';
+import {getKey, getString} from './encryption';
+
 
 class Villagers extends React.Component<any, VillagersData> {
     constructor(prop: any) {
@@ -21,9 +21,9 @@ class Villagers extends React.Component<any, VillagersData> {
         setLanguage(Cookies.get('locale') as string);
         super(prop);
         this.state = {data: []}
-        const key = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ];
+
         axios.get('/villagers/react/villagers').then(response => {
-            const villagersJson = JSON.parse(fromBytes(new aes.ModeOfOperation.ctr(key, new aes.Counter(3)).decrypt(toBytes(atob(response.data.data)))))
+            const villagersJson = JSON.parse(getString(AES.decrypt(response.data.data,getKey())))
             const array: Villager[] = [];
             villagersJson.forEach((v: any, k: number) => {
                 const data: Villager = {

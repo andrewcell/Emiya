@@ -65,5 +65,6 @@
 	"verified.clickemiyatogo": "Click Emiya to proceed.",
 	"ts.register.invalidpassword": "You can't use this password.",
 	"ts.register.invalidemail": "You can't use this email address.",
-	"ts.register.passwordnotmatch": "Passwords do not match."
+	"ts.register.passwordnotmatch": "Passwords do not match.",
+	"ts.villagers.my.alreadyexists": "Already exists."
 }

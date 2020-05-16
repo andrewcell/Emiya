@@ -87,5 +87,6 @@ export default new Map([
     ['villagers.list.hobby', '취미'],
     ['villagers.list.personality', '성격'],
     ['villagers.list.style', '선호 스타일'],
-    ['villagers.list.color', '선호 색상']
+    ['villagers.list.color', '선호 색상'],
+    ['villagers.modal.success', '추가되었습니다.']
 ]);
