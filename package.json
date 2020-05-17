@@ -6,7 +6,8 @@
     "lint": "tslint --project \"tsconfig.json\"",
     "start": "node -r module-alias/register ./dist",
     "start:dev": "concurrently \"nodemon --config nodemon.json\" \"webpack --watch\"",
-    "test": "nodemon --config nodemon.test.json"
+    "test": "nodemon --config nodemon.test.json",
+    "heroku-postbuild": "npm run build"
   },
   "_moduleAliases": {
     "@interfaces": "dist/interfaces",
