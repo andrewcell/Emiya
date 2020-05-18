@@ -13,7 +13,7 @@ import { VillagersData, Villager } from './villagers/interfaces';
 import { Style, Color } from './villagers/enums';
 import {AES, enc} from 'crypto-js';
 import {decrypt} from './encryption';
-import {VillagerDetail} from './villagers/VillagerDetail';
+//import {VillagerDetail} from './villagers/VillagerDetail';
 
 class Villagers extends React.Component<any, VillagersData> {
     constructor(prop: any) {
@@ -64,7 +64,7 @@ class Villagers extends React.Component<any, VillagersData> {
                         <Route exact path={'/villagers/list'}>
                             <VillagersList locale={Cookies.get('locale')} data={this.state.data}/>
                         </Route>
-                        <Route path={'/villagers/:code'} render={(props) => <VillagerDetail {...props}/> } />
+                        {/*<Route path={'/villagers/:code'} render={(props) => <VillagerDetail {...props}/> } />*/}
                     </Switch>
                 </BrowserRouter>
             </div>
