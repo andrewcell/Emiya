@@ -90,5 +90,8 @@ export default new Map([
     ['villagers.list.color', '선호 색상'],
     ['villagers.modal.success', '추가되었습니다.'],
     ['villagers.my.missingpersonality', '마을에 없는 성격'],
-    ['villagers.my.missinghobby', '마을에 없는 취미']
+    ['villagers.my.missinghobby', '마을에 없는 취미'],
+    ['villagers.my.speciesreport', '종 보고서'],
+    ['villagers.my.personality', '성격'],
+    ['villagers.my.hobby', '취미'],
 ]);
