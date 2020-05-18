@@ -22,7 +22,7 @@
 	"home.villagers.title": "주민",
 	"home.villagers.description": "최신판 거리둬요 짐승의 숲 - 전체 주민 상세 데이터베이스 (개발중)",
 	"home.villagers.enter": "확인하기",
-	"home.temp.changeaddress": "웹 사이트 주소가 https://emiya.vxz.me/ 로 변경될 예정입니다.",
+	"home.temp.changeaddress": "회원가입/로그인 기능이 활성화되었습니다.",
 	"modal.login.title": "Emiya - 로그인",
 	"modal.login.email": "이메일 주소",
 	"modal.login.password": "비밀번호",
@@ -63,5 +63,6 @@
 	"ts.register.passwordnotmatch": "두 개의 비밀번호가 일치하지 않습니다.",
 	"ts.villagers.my.alreadyexists": "이미 등록되어 있습니다.",
 	"ts.villagers.my.full": "더 이상 추가할 수 없습니다.",
-	"ts.villagers.my.added": "내 주민에 추가되었습니다."
+	"ts.villagers.my.added": "내 주민에 추가되었습니다.",
+	"villagers.notloggedin": "로그인을 하지 않아 기록한 내용이 저장되지 않습니다."
 }
