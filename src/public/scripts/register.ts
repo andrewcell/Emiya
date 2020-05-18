@@ -1,9 +1,10 @@
 import {AJAX, AjaxResult} from './ajax';
 import { b64 } from './b64';
+import {encrypt, decrypt} from './encryption';
 
 export class Register {
     public static async register(username: string, password: string, password2: string, email: string): Promise<AjaxResult> {
-        const result: AjaxResult = await AJAX.send({username, password, password2, email}, new b64('L2FkbWluL3JlZ2lzdGVy'));
+        const result: AjaxResult = await AJAX.send({data: encrypt(JSON.stringify({username, password, password2, email}))}, new b64('L2FkbWluL3JlZ2lzdGVy'));
         const registerResult: RegisterCode = RegisterCode[result.code as keyof typeof RegisterCode]
         switch (registerResult) {
             case RegisterCode.Success:

@@ -12,7 +12,7 @@ export const resize = (arr: any[], newSize: number, defaultValue: any): any[] =>
 
 class MyVillagersDatabase {
     private static instance: MyVillagersDatabase;
-    private engine = sqlite3(getDataPath('MyVillagers.db'));
+    private engine = sqlite3('MyVillagers.db');
 
     private columns = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'];
 

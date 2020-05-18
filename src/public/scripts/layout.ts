@@ -4,7 +4,6 @@ import {AJAX, AjaxResult} from './ajax';
 import {Register, RegisterCode} from './register';
 import {b64} from './b64';
 
-
 $(() => {
     const registerPassword: JQuery<HTMLElement> = $('#register-modal #password');
     const registerPassword2: JQuery<HTMLElement> = $('#register-modal #password2');

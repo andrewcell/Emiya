@@ -7,6 +7,7 @@ import {internalError} from '@shared/constants';
 import {SendGrid} from '@shared/SendGrid';
 import {Mail} from '@shared/Mail';
 import {getRandomString} from '@shared/functions';
+import {decrypt} from "@shared/Encryption";
 const router = Router();
 
 const validatePassword = (password: string): boolean => {
@@ -41,33 +42,46 @@ router.post('/login', (req: Request, res: Response, next: NextFunction) => {
 
 router.post('/register', (req: Request, res: Response) => {
     if (process.env.ALLOWREGISTER === '1') {
-        const hash = getRandomString(32);
-        if (req.body.password !== req.body.password2) {
-            return res.json({code: 'register03', comment: res.__('ts.register.passwordnotmatch')})
-        }
-        if (!emailValidator.validate(req.body.email)) {
-            return res.json({code: 'register03', comment: res.__('ts.register.invalidemail')})
-        }
-        if (!validatePassword(req.body.password)) {
-            return res.json({code: 'register03', comment: res.__('ts.register.invalidpassword')})
-        }
-        User.register(new User({email: req.body.email, username: req.body.username, verified: false, verifyHash: hash}), req.body.password, (err, user) => {
-            if (err) {
-                switch (err.name) {
-                    case 'UserExistsError':
-                        return res.json({code: 'register03', comment: res.__('ts.register.usernameoccupied')})
-                    case 'MongoError':
-                        return res.json({code: 'register03', comment: res.__('ts.register.usernameoremailoccupied')})
-                    default:
-                        return res.json({code: '500', comment: internalError})
-                }
-            } else {
-                const html = Mail.generateVerifyEmail(req.body.email, hash, res.__('ts.register.clickheretoverifyemail'))
-                SendGrid.send(req.body.email, res.__('ts.register.clickheretoverifyemailtitle'), html).then(() => {
-                    return res.json({code: 'register07', comment: res.__('ts.register.emailverificationrequired')});
-                });
+        try {
+            const request = JSON.parse(decrypt(req.body.data));
+            const hash = getRandomString(32);
+            if (request.password !== request.password2) {
+                return res.json({code: 'register03', comment: res.__('ts.register.passwordnotmatch')})
             }
-        });
+            if (!emailValidator.validate(request.email)) {
+                return res.json({code: 'register03', comment: res.__('ts.register.invalidemail')})
+            }
+            if (!validatePassword(request.password)) {
+                return res.json({code: 'register03', comment: res.__('ts.register.invalidpassword')})
+            }
+            User.register(new User({
+                email: request.email,
+                username: request.username,
+                verified: false,
+                verifyHash: hash
+            }), request.password, (err, user) => {
+                if (err) {
+                    switch (err.name) {
+                        case 'UserExistsError':
+                            return res.json({code: 'register03', comment: res.__('ts.register.usernameoccupied')})
+                        case 'MongoError':
+                            return res.json({
+                                code: 'register03',
+                                comment: res.__('ts.register.usernameoremailoccupied')
+                            })
+                        default:
+                            return res.json({code: '500', comment: internalError})
+                    }
+                } else {
+                    const html = Mail.generateVerifyEmail(request.email, hash, res.__('ts.register.clickheretoverifyemail'))
+                    SendGrid.send(request.email, res.__('ts.register.clickheretoverifyemailtitle'), html).then(() => {
+                        return res.json({code: 'register07', comment: res.__('ts.register.emailverificationrequired')});
+                    });
+                }
+            });
+        } catch (e) {
+            return res.json({code: 500, comment: 'Internal Server Error.'});
+        }
     } else {
         res.json({code: 'register06', comment: res.__('ts.register.notallowed')})
     }
