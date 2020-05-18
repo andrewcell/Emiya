@@ -88,5 +88,8 @@ export default new Map([
     ['villagers.list.personality', 'Personality'],
     ['villagers.list.style', 'Style'],
     ['villagers.list.color', 'Color'],
-    ['villagers.modal.success', 'Added.']
+    ['villagers.modal.success', 'Added.'],
+    ['villagers.my.missingpersonality', 'Missing Personality'],
+    ['villagers.my.missinghobby', 'Missing Hobby']
+
 ]);
