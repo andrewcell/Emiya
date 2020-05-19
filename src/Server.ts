@@ -17,7 +17,7 @@ import {existsSync, readFileSync, writeFileSync} from 'fs';
 import {VillagerDatabase} from '@interfaces/VillagerDatabase';
 import User from '@shared/User';
 import mongoose from 'mongoose';
-import MyVillagersDatabase from "@interfaces/MyVillagersDatabase";
+import MyVillagersDatabase from '@interfaces/MyVillagersDatabase';
 
 // Init express
 const app = express();
