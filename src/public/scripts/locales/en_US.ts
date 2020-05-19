@@ -94,4 +94,10 @@ export default new Map([
     ['villagers.my.speciesreport', 'Species Report'],
     ['villagers.my.personality', 'Personality'],
     ['villagers.my.hobby', 'Hobby'],
+    ['villagers.my.species', 'Species'],
+    ['villagers.my.style', 'Prefer Style'],
+    ['villagers.my.color', 'Prefer Color'],
+    ['villagers.my.voicetone', 'Voicetone'],
+    ['villagers.my.delete', 'Delete from My Villagers'],
+    ['villagers.my.gohome', 'Back to My Villagers']
 ]);

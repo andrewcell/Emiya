@@ -68,5 +68,7 @@
 	"ts.villagers.my.alreadyexists": "Already exists.",
 	"ts.villagers.my.full": "List is full. Limited to game's limit.",
 	"ts.villagers.my.added": "Added to My Villagers",
-	"villagers.notloggedin": "You are not logged in. All data will be lost."
+	"villagers.notloggedin": "You are not logged in. All data will be lost.",
+	"ts.villagers.deletesuccess": "Successfully deleted from My Villagers.",
+	"ts.villagers.targetnotexists": "Target villager is not exists in My Villagers."
 }

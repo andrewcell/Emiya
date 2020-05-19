@@ -94,4 +94,10 @@ export default new Map([
     ['villagers.my.speciesreport', '종 보고서'],
     ['villagers.my.personality', '성격'],
     ['villagers.my.hobby', '취미'],
+    ['villagers.my.delete', '내 주민에서 삭제'],
+    ['villagers.my.gohome', '내 주민으로 이동'],
+    ['villagers.my.species', '종'],
+    ['villagers.my.style', '선호 스타일'],
+    ['villagers.my.color', '선호 색상'],
+    ['villagers.my.voicetone', '목소리 톤']
 ]);
