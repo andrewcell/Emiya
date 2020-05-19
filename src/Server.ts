@@ -24,7 +24,7 @@ const app = express();
 
 i18n.configure({
     locales: ['en_US', 'ko_KR'],
-    defaultLocale: 'en_US',
+    defaultLocale: 'ko_KR',
     cookie: 'locale',
     directory: 'locales',
     updateFiles: true,
