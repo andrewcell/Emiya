@@ -62,7 +62,7 @@
 	"verified.cannotbeverified": "Error in sight when verify email address.",
 	"verified.emailverified": "E-mail address is verified.",
 	"verified.clickemiyatogo": "Click Emiya to proceed.",
-	"ts.register.invalidpassword": "You can't use this password.",
+	"ts.register.invalidpasswordorusername": "You can't use this password or username.",
 	"ts.register.invalidemail": "You can't use this email address.",
 	"ts.register.passwordnotmatch": "Passwords do not match.",
 	"ts.villagers.my.alreadyexists": "Already exists.",

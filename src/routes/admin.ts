@@ -23,6 +23,18 @@ const validatePassword = (password: string): boolean => {
     }
 }
 
+const validateUsername = (username: string): boolean => {
+    const regex = /[^a-z\d]/i;
+    if (username.length < 4 || username.length > 24) {
+        return false;
+    }
+    if (regex.exec(username)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
 router.post('/login', (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate('local', (error, user, info) => {
         if (error) { return res.json({code: 500, comment: internalError}) }
@@ -51,8 +63,8 @@ router.post('/register', (req: Request, res: Response) => {
             if (!emailValidator.validate(request.email)) {
                 return res.json({code: 'register03', comment: res.__('ts.register.invalidemail')})
             }
-            if (!validatePassword(request.password) || !validatePassword(request.username)) {
-                return res.json({code: 'register03', comment: res.__('ts.register.invalidpassword')})
+            if (!validatePassword(request.password) || !validateUsername(request.username)) {
+                return res.json({code: 'register03', comment: res.__('ts.register.invalidpasswordorusername')})
             }
             User.register(new User({
                 email: request.email,
