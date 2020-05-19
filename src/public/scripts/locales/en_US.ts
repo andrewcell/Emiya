@@ -99,5 +99,7 @@ export default new Map([
     ['villagers.my.color', 'Prefer Color'],
     ['villagers.my.voicetone', 'Voicetone'],
     ['villagers.my.delete', 'Delete from My Villagers'],
-    ['villagers.my.gohome', 'Back to My Villagers']
+    ['villagers.my.gohome', 'Back to My Villagers'],
+    ['villagers.my.fullhobbies', 'No missing personalities.'],
+    ['villagers.my.fullpersonality', 'No missing hobbies.']
 ]);

@@ -99,5 +99,7 @@ export default new Map([
     ['villagers.my.species', '종'],
     ['villagers.my.style', '선호 스타일'],
     ['villagers.my.color', '선호 색상'],
-    ['villagers.my.voicetone', '목소리 톤']
+    ['villagers.my.voicetone', '목소리 톤'],
+    ['villagers.my.fullhobbies', '마을에 누락된 취미가 없습니다.'],
+    ['villagers.my.fullpersonality', '마을에 누락된 성격이 없습니다.']
 ]);
