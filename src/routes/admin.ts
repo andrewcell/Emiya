@@ -51,7 +51,7 @@ router.post('/register', (req: Request, res: Response) => {
             if (!emailValidator.validate(request.email)) {
                 return res.json({code: 'register03', comment: res.__('ts.register.invalidemail')})
             }
-            if (!validatePassword(request.password)) {
+            if (!validatePassword(request.password) || !validatePassword(request.username)) {
                 return res.json({code: 'register03', comment: res.__('ts.register.invalidpassword')})
             }
             User.register(new User({
