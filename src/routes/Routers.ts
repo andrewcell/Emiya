@@ -4,11 +4,9 @@ import LanguageRouter from './language';
 import ControlPanelRouter from './controlpanel';
 import VillagerRouter from './villager';
 import UserRouter from './admin';
-import {UserDocument} from '@shared/User'
-import {readFileSync} from 'jsonfile';
+
 // Init router and path
 const router = Router();
-import locale from 'locale';
 
 router.get('/', (req, res) => {
     return res.render('home');
