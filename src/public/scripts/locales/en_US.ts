@@ -101,5 +101,7 @@ export default new Map([
     ['villagers.my.delete', 'Delete from My Villagers'],
     ['villagers.my.gohome', 'Back to My Villagers'],
     ['villagers.my.fullhobbies', 'No missing hobbies.'],
-    ['villagers.my.fullpersonality', 'No missing personalities.']
+    ['villagers.my.fullpersonality', 'No missing personalities.'],
+    ['villagers.my.conflict', 'Conflict personality type'],
+    ['villagers.my.noconflictype', 'No conflict personality type.']
 ]);

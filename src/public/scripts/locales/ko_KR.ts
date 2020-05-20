@@ -101,5 +101,7 @@ export default new Map([
     ['villagers.my.color', '선호 색상'],
     ['villagers.my.voicetone', '목소리 톤'],
     ['villagers.my.fullhobbies', '마을에 누락된 취미가 없습니다.'],
-    ['villagers.my.fullpersonality', '마을에 누락된 성격이 없습니다.']
+    ['villagers.my.fullpersonality', '마을에 누락된 성격이 없습니다.'],
+    ['villagers.my.conflict', '성격타입 충돌감지'],
+    ['villagers.my.noconflictype', '충돌한 성격타입이 없습니다.']
 ]);
