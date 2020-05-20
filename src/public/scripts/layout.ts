@@ -11,7 +11,7 @@ $(() => {
     const registerEmail: JQuery<HTMLElement> = $('#register-modal #email');
 
 
-    const checkPassword = () => {
+    const checkPassword = (): void => {
         console.log(registerPassword.val())
         if (Register.checkPassword(registerPassword.val() as string, registerPassword2.val() as string)) {
             registerPassword2.removeClass('invalid').addClass('valid')
@@ -20,7 +20,7 @@ $(() => {
         }
     }
 
-    const validatePassword = () => {
+    const validatePassword = (): void => {
         if (Register.validatePassword(registerPassword.val() as string)) {
             registerPassword.removeClass('invalid').addClass('valid')
         } else {
@@ -28,10 +28,24 @@ $(() => {
         }
     }
 
+    const disableButton = (button: JQuery<HTMLElement>): void => {
+        button.prop('disabled', true);
+    }
+
+    const enableButton = (button: JQuery<HTMLElement>): void => {
+        button.prop('disabled', false);
+    }
+
+    const checkInputValid = (): boolean => {
+        return registerEmail.hasClass('valid') && registerPassword.hasClass('valid') &&
+            registerPassword2.hasClass('valid');// && registerUsername.hasClass('valid');
+    }
+
     M.Modal.init($('.modal'));
     M.Sidenav.init($('.sidenav'));
 
     $('#loginbutton').on('click', async () => {
+        disableButton($('#loginbutton'));
         const result: AjaxResult = await AJAX.send($("#loginform").serialize(), new b64('L2FkbWluL2xvZ2lu'))
         switch (result.code as string) {
             case 'login00':
@@ -44,17 +58,20 @@ $(() => {
                 M.toast({html: result.comment, classes: 'rounded'});
                 break;
         }
-        console.log(result)
+        enableButton($('#loginbutton'));
     });
 
     $('#registerButton').on('click', async () => {
-        if ($('#register-modal input').hasClass('valid')) {
+        if (checkInputValid()) {
+            disableButton($('#registerButton'));
             const result = await Register.register(registerUsername.val() as string, registerPassword.val() as string, registerPassword2.val() as string, registerEmail.val() as string);
             if (result.code === 'register07') {
                 M.Modal.getInstance(document.querySelector('#register-modal')!).close()
             }
             M.toast({html: result.comment, classes: 'rounded'});
+
         }
+        enableButton($('#registerButton'));
     });
 
     $('#password').on('focusout', () => {
@@ -63,7 +80,8 @@ $(() => {
 
     registerPassword.on('keyup', () => {
         validatePassword();
-    })
+    });
+
     $('#password2').on('keyup', () => {
         checkPassword();
     });
