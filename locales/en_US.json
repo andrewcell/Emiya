@@ -76,5 +76,6 @@
 	"residentservices.information": "Information",
 	"residentservices.information.lastbuildtime": "Last build time (UTC)",
 	"residentservices.information.lastcommittime": "Last commit time (UTC)",
-	"residentservices.usedandpoweredby": "Used & Powered by"
+	"residentservices.usedandpoweredby": "Used & Powered by",
+	"navbar.villagers": "Villagers"
 }

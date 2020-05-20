@@ -72,5 +72,6 @@
 	"residentservices.information": "정보",
 	"residentservices.information.lastbuildtime": "마지막 빌드 시간 (UTC)",
 	"residentservices.information.lastcommittime": "마지막 커밋 시간 (UTC)",
-	"residentservices.usedandpoweredby": "개발에 사용된 것"
+	"residentservices.usedandpoweredby": "개발에 사용된 것",
+	"navbar.villagers": "주민"
 }
