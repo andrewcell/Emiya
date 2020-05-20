@@ -17,7 +17,7 @@ import VillagerDetail from './villagers/VillagerDetail';
 
 class Villagers extends React.Component<any, VillagersData> {
     constructor(prop: any) {
-        if (Cookies.get('locale') == null) Cookies.set('locale', 'en_US')
+        if (Cookies.get('locale') == null) Cookies.set('locale', 'ko_KR')
         setLanguage(Cookies.get('locale') as string);
         super(prop);
         this.state = {data: []}
