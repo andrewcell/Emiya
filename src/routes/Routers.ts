@@ -23,14 +23,14 @@ router.get('/info', (req, res) => {
     if (existsSync('buildtime.txt')) {
         lastBuildTime = moment(+readFileSync('buildtime.txt').toString()).format('LLLL');
     } else {
-        lastBuildTime = moment(+readFileSync('buildtime.txt').toString()).format('LLLL');
+        lastBuildTime = moment(0).format('LLLL');
     }
     axios.get('https://api.github.com/repos/***REMOVED***cell/Emiya/commits', {
         headers: {
             Authorization: `Bearer ${process.env.GITHUB}`
         }
     }).then(response => {
-        const github = moment(response.data[response.data.length - 1].commit.author.date);
+        const github = moment(response.data[0].commit.author.date);
         return res.render('info', {lastBuildTime, lastCommitTime: github.format('LLLL')});
     }).catch(err => {
         return res.render('info', {lastBuildTime});
