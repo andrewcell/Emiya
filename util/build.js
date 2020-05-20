@@ -17,7 +17,7 @@ try {
     console.log('TypeScript build complete.')
     childProcess.execSync('webpack --config ./webpack.config.prod.js');
     console.log('Webpack build complete.')
-    childProcess.execSync('javascript-obfuscator ./dist/public/scripts --output ./ --compact true --self-defending true --control-flow-flattening true')
+    childProcess.execSync('javascript-obfuscator ./dist/public/scripts --output ./ --compact true --self-defending true --control-flow-flattening false')
     console.log('Obfuscate javascript files complete.')
     require('fs').writeFileSync('buildtime.txt', Date.now().toString());
 
