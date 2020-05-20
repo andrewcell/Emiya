@@ -2,6 +2,7 @@ const fs = require('fs-extra');
 const childProcess = require('child_process');
 
 try {
+
     // Remove current build
     fs.removeSync('./dist/');
     // Copy front-end files
@@ -18,7 +19,7 @@ try {
     console.log('Webpack build complete.')
     childProcess.execSync('javascript-obfuscator ./dist/public/scripts --output ./ --compact true --self-defending true --control-flow-flattening true')
     console.log('Obfuscate javascript files complete.')
-
+    require('fs').writeFileSync('buildtime.txt', Date.now().toString());
 
 } catch (err) {
     console.log(err);

@@ -1,0 +1,46 @@
+extends layout
+
+block content
+    .container
+        h3=__('residentservices.title')
+        .row
+            .col.s12.l6
+                ul.collection
+                    li.collection-header
+                        h5 &nbsp;#{__('residentservices.changelog')}
+                    li.collection-item
+                        div Added resident services.
+            .col.l6.s12
+                ul.collection
+                    li.collection-header
+                        h5 &nbsp;#{__('residentservices.information')}
+                    li.collection-item
+                        div=__('residentservices.information.lastbuildtime')
+                            .secondary-content=lastBuildTime
+                    if (lastCommitTime)
+                        li.collection-item
+                            div=__('residentservices.information.lastcommittime')
+                                .secondary-content=lastCommitTime
+
+            .col.s12.l12
+                .card
+                    .card-content
+                        style.
+                            .card-content > img {
+                                width: 10%;
+                                margin: 10px;
+                            }
+                            .card-content > img#python {width:30%;margin:10px;}
+                            .card-content > img#sqlite {width: 23%}
+                        span.card-title=__('residentservices.usedandpoweredby')
+                        img(src='https://raw.githubusercontent.com/vuejs/art/master/logo.svg')
+                        img(src='/images/react.svg')
+                        img(src='https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.svg')
+                        img(src='https://raw.githubusercontent.com/JetBrains/logos/master/web/kotlin/kotlin.svg')
+                        img(src='https://raw.githubusercontent.com/jhipster/jhipster.github.io/master/images/logo/svg/spring-boot.svg')
+
+                        img#python(src='https://www.python.org/static/community_logos/python-logo-generic.svg')
+                        img(src='https://raw.githubusercontent.com/jhipster/jhipster.github.io/master/images/logo/svg/mysql.svg')
+                        img(src='https://raw.githubusercontent.com/konpa/devicon/master/icons/mongodb/mongodb-original-wordmark.svg')
+                        img(src='https://user-images.githubusercontent.com/4249331/52232852-e2c4f780-28bd-11e9-835d-1e3cf3e43888.png')
+                        img#sqlite(src='https://raw.githubusercontent.com/gilbarbara/logos/master/logos/sqlite.svg')

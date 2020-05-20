@@ -70,5 +70,11 @@
 	"ts.villagers.my.added": "Added to My Villagers",
 	"villagers.notloggedin": "You are not logged in. All data will be lost.",
 	"ts.villagers.deletesuccess": "Successfully deleted from My Villagers.",
-	"ts.villagers.targetnotexists": "Target villager is not exists in My Villagers."
+	"ts.villagers.targetnotexists": "Target villager is not exists in My Villagers.",
+	"residentservices.title": "Welcome to resident services of Emiya.",
+	"residentservices.changelog": "Change log",
+	"residentservices.information": "Information",
+	"residentservices.information.lastbuildtime": "Last build time (UTC)",
+	"residentservices.information.lastcommittime": "Last commit time (UTC)",
+	"residentservices.usedandpoweredby": "Used & Powered by"
 }

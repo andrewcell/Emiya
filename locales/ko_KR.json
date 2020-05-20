@@ -66,5 +66,11 @@
 	"ts.villagers.my.added": "내 주민에 추가되었습니다.",
 	"villagers.notloggedin": "로그인을 하지 않아 기록한 내용이 저장되지 않습니다.",
 	"ts.villagers.deletesuccess": "내 주민에서 삭제되었습니다.",
-	"ts.villagers.targetnotexists": "해당 주민은 추가되어 있지 않습니다."
+	"ts.villagers.targetnotexists": "해당 주민은 추가되어 있지 않습니다.",
+	"residentservices.title": "안내소",
+	"residentservices.changelog": "변경 내역",
+	"residentservices.information": "정보",
+	"residentservices.information.lastbuildtime": "마지막 빌드 시간 (UTC)",
+	"residentservices.information.lastcommittime": "마지막 커밋 시간 (UTC)",
+	"residentservices.usedandpoweredby": "개발에 사용된 것"
 }

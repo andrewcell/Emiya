@@ -41,6 +41,7 @@
     "js-cookie": "^2.2.1",
     "maxmind": "^4.1.1",
     "module-alias": "^2.2.2",
+    "moment": "^2.25.3",
     "mongoose": "^5.9.13",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
