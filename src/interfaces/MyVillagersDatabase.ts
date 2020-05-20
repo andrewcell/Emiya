@@ -1,7 +1,7 @@
 import sqlite3, {SqliteError} from 'better-sqlite3';
 import {getDataPath} from '@shared/functions';
 import logger from '@shared/Logger';
-
+import User from '@shared/User';
 export const resize = (arr: any[], newSize: number, defaultValue: any): any[] => {
     const ad = arr;
     while(newSize > ad.length)
@@ -12,9 +12,59 @@ export const resize = (arr: any[], newSize: number, defaultValue: any): any[] =>
 
 class MyVillagersDatabase {
     private static instance: MyVillagersDatabase;
-    private engine = sqlite3('MyVillagers.db');
+    private constructor() {}
 
-    private columns = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'];
+    public static getInstance(): MyVillagersDatabase {
+        if (!MyVillagersDatabase.instance) {
+            MyVillagersDatabase.instance = new MyVillagersDatabase();
+        }
+        return MyVillagersDatabase.instance
+    }
+
+    public close(): void {
+        logger.info('My Villagers Database successfully closed.')
+        // this.engine.close();
+    }
+
+    public getMyVillagers(userId: string): Promise<string[]> {
+        return new Promise<string[]>((resolve) => {
+            User.findOne({_id: userId}).select('myVillagers')
+                .then(res=> {
+                    if (res) {
+                        return resolve(res.myVillagers);
+                    }
+                    return resolve([]);
+                })
+                .catch(err => {
+                    logger.error(err.message, err);
+                    return resolve([]);
+                });
+        });
+    }
+
+    public setMyVillager(userId: string, dataArray: string[]): Promise<void> {
+        const data = resize(dataArray, 10, null);
+        return new Promise<void>((resolve) => {
+            User.findOneAndUpdate({_id: userId}, {myVillagers: data})
+                .then(res => {
+                    if (res) {
+                        resolve();
+                    }
+                })
+                .catch(err => {
+                    logger.error(err.message, err);
+                    resolve();
+                })
+        });
+    }
+
+}
+/* SQLite 3
+class MyVillagersDatabase {
+    private static instance: MyVillagersDatabase;
+    // private engine = sqlite3('MyVillagers.db');
+
+    // private columns = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'];
 
     private constructor() {}
 
@@ -27,7 +77,7 @@ class MyVillagersDatabase {
 
     public close(): void {
         logger.info('My Villagers Database successfully closed.')
-        this.engine.close();
+        // this.engine.close();
     }
 
     public getMyVillagers(userId: string): string[] {
@@ -56,6 +106,6 @@ class MyVillagersDatabase {
             // return true;
         }
     }
-}
+}*/
 
 export default MyVillagersDatabase

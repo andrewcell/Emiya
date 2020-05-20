@@ -70,7 +70,10 @@ router.post('/register', (req: Request, res: Response) => {
                 email: request.email,
                 username: request.username,
                 verified: false,
-                verifyHash: hash
+                verifyHash: hash,
+                myVillagers: [],
+                registerIp: req.connection.remoteAddress,
+                registerUserAgent: req.headers['user-agent']
             }), request.password, (err, user) => {
                 if (err) {
                     switch (err.name) {

@@ -8,6 +8,8 @@ export type UserDocument = mongoose.Document & {
     verifyHash: string;
     verified: boolean;
     myVillagers: string[];
+    registerIp: string;
+    registerUserAgent: string;
 }
 
 const userSchema = new Schema({
@@ -16,7 +18,9 @@ const userSchema = new Schema({
     admin: Boolean,
     verifyHash: String,
     verified: Boolean,
-    myVillagers: [String]
+    myVillagers: [String],
+    registerIp: String,
+    registerUserAgent: String
 }, {collection: 'users'});
 
 

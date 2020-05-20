@@ -71,13 +71,13 @@ router.get('/react/villagers', validateReact, ((req, res) => {
   return res.json({code: 200, comment: 'success', data, locale: req.cookies.locale});
 }));
 
-router.get('/react/my/get', validateReact, (req, res) => {
+router.get('/react/my/get', validateReact, async (req, res) => {
   if (req.user) {
     const db = MyVillagers.getInstance();
     const user = req.user as UserDocument;
     let data: string[];
     if (req.session!.myvillagers == null || req.session!.myvillagersguest === true || req.session!.requireupdate === 4) {
-      data = db.getMyVillagers(user.id);
+      data = await db.getMyVillagers(user.id);
       req.session!.myvillagers = data;
       req.session!.myvillagersguest = false;
       req.session!.requireupdate = 1;
@@ -94,7 +94,7 @@ router.get('/react/my/get', validateReact, (req, res) => {
   }
 });
 
-router.post('/react/my/set', validateReact, (req, res) => {
+router.post('/react/my/set', validateReact, async (req, res) => {
   const body = JSON.parse(decrypt(req.body.data));
   if (!validateCode(body.code as string)) return {code: 500, comment: 'Internal Server Error.'}
   if (req.user) {
@@ -109,7 +109,7 @@ router.post('/react/my/set', validateReact, (req, res) => {
     const existData: string[] = req.session!.myvillagers
     if (existData.includes(body.code)) return res.json({code: 'villager01', comment: res.__('ts.villagers.my.alreadyexists')})
     pushToNull(existData, body.code);
-    db.setMyVillager((req.user as UserDocument).id, existData);
+    await db.setMyVillager((req.user as UserDocument).id, existData);
     req.session!.requireupdate = 4;
   } else {
     if (req.session!.myvillagers == null) {

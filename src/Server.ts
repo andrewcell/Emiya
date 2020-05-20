@@ -140,6 +140,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 process.on('exit', () => {
     VillagerDatabase.getInstance().close();
     MyVillagersDatabase.getInstance().close();
+    mongoose.disconnect().then(r => logger.info('Mongoose disconnected. ' + r));
 });
 process.on('SIGHUP', () => process.exit(128 + 1));
 process.on('SIGINT', () => process.exit(128 + 2));
