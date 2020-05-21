@@ -1,8 +1,13 @@
 .xlarge {
-    height: 52em; /* Your height here */
     overflow: auto;
     border-top-color: #b3b3ff;
     border-top-style: solid;
     border-top-width: 5px;
     background-color: #ffffec;
+}
+
+@media(max-width: 600px) {
+    .villagerImage {
+        width:20%;
+    }
 }
