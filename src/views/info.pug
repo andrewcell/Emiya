@@ -3,11 +3,27 @@ extends layout
 block content
     .container
         h3=__('residentservices.title')
+        .card
+            .card-content
+                span.card-title=__('residentservices.help.title')
+                h4=__('residentservices.help.emibo')
+                p=__('residentservices.help.emibo.description')
+                br
+                p=__('residentservices.help.emibo.description2')
+
+                h4=__('residentservices.help.villagers')
+                p=__('residentservices.help.villagers.description')
+                br
+                p=__('residentservices.help.villagers.description3')
+                br
+                p=__('residentservices.help.villagers.description2')
         .row
             .col.s12.l6
                 ul.collection
                     li.collection-header
                         h5 &nbsp;#{__('residentservices.changelog')}
+                    li.collection-item
+                        div Update Resident service
                     li.collection-item
                         div Add Style, Color chart, add some styles
                     li.collection-item
