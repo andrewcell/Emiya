@@ -9,7 +9,7 @@ try {
     fs.copySync('./src/public/stylesheets', './dist/public/stylesheets');
     fs.copySync('./src/public/images', './dist/public/images');
     fs.copySync('./src/public/manifests', './dist/public/manifests');
-    fs.copySync('./src/public/apple-touch-icon.js', './dist/public/apple-touch-icon.js');
+    fs.copySync('./src/public/apple-touch-icon.png', './dist/public/apple-touch-icon.png');
     fs.copySync('./src/public/scripts/emibo.js', './dist/public/scripts/emibo.js');
     fs.copySync('./src/views', './dist/views');
     fs.copySync('./src/data', './dist/data');
@@ -19,7 +19,7 @@ try {
     console.log('TypeScript build complete.')
     childProcess.execSync('webpack --config ./webpack.config.prod.js');
     console.log('Webpack build complete.')
-    childProcess.execSync('javascript-obfuscator ./dist/public/scripts --output ./ --compact true --self-defending false --control-flow-flattening false --debug-protection true --target browser-no-eval')
+    childProcess.execSync('javascript-obfuscator ./dist/public/scripts --output ./ --compact true --string-array true --self-defending false --control-flow-flattening false --debug-protection false  --disable-console-output true --split-strings true --target browser-no-eval')
     console.log('Obfuscate javascript files complete.')
     require('fs').writeFileSync('buildtime.txt', Date.now().toString());
 
