@@ -4,6 +4,6 @@ import logger from '@shared/Logger';
 
 // Start the server
 const port = Number(process.env.PORT || 3000);
-app.listen(port, 'localhost', () => {
+app.listen(port, '0.0.0.0', () => {
     logger.info('Express server started on port: ' + port);
 });
