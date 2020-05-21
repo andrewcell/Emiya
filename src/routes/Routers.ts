@@ -7,6 +7,7 @@ import UserRouter from './admin';
 import {existsSync, readFileSync} from 'fs';
 import moment from 'moment';
 import axios from 'axios';
+import path from "path";
 // Init router and path
 const router = Router();
 
@@ -15,7 +16,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/favicon.ico', (req, res) => {
-    return res.sendStatus(204);
+    return res.sendFile(path.join(__dirname, '../public/images/favicon.ico'));
 });
 
 router.get('/info', (req, res) => {
