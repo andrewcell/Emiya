@@ -55,6 +55,7 @@ router.post('/login', (req: Request, res: Response, next: NextFunction) => {
 router.post('/register', (req: Request, res: Response) => {
     if (process.env.ALLOWREGISTER === '1') {
         try {
+            const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
             const request = JSON.parse(decrypt(req.body.data));
             const hash = getRandomString(32);
             if (request.password !== request.password2) {
@@ -72,7 +73,7 @@ router.post('/register', (req: Request, res: Response) => {
                 verified: false,
                 verifyHash: hash,
                 myVillagers: [],
-                registerIp: req.connection.remoteAddress,
+                registerIp: ip as string,
                 registerUserAgent: req.headers['user-agent']
             }), request.password, (err, user) => {
                 if (err) {
