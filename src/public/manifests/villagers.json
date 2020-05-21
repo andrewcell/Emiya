@@ -7,6 +7,10 @@
       "src": "/images/128x128.png",
       "sizes": "128x128",
       "type": "image/png"
+    },{
+      "src": "/images/128x128.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "name": "Emiya Villagers",
