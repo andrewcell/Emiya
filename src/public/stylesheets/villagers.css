@@ -1,0 +1,8 @@
+.xlarge {
+    height: 750px; /* Your height here */
+    overflow: auto;
+    border-top-color: #b3b3ff;
+    border-top-style: solid;
+    border-top-width: 5px;
+    background-color: #ffffec;
+}

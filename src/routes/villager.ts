@@ -8,7 +8,7 @@ import {AES} from 'aes-js';
 import {decrypt, encrypt} from '@shared/Encryption';
 import MyVillagers, {resize} from '@interfaces/MyVillagersDatabase';
 import {UserDocument} from '@shared/User';
-import {internalError} from "@shared/constants";
+import {internalError} from '@shared/constants';
 
 const router = Router();
 router.use((req, res, next) => {
