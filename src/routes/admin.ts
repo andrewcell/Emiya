@@ -92,7 +92,7 @@ router.post('/register', (req: Request, res: Response) => {
                             return res.json({code: '500', comment: internalError})
                     }
                 } else {
-                    const html = Mail.generateVerifyEmail(request.email, hash, res.__('ts.register.clickheretoverifyemail'))
+                    const html = Mail.generateVerifyEmail(request.email, hash, res.__('ts.register.clickheretoverifyemail'), (user as UserDocument).username)
                     SendGrid.send(request.email, res.__('ts.register.clickheretoverifyemailtitle'), html).then(() => {
                         return res.json({code: 'register07', comment: res.__('ts.register.emailverificationrequired')});
                     });
