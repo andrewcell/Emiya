@@ -8,8 +8,6 @@ import {SendGrid} from '@shared/SendGrid';
 import {Mail} from '@shared/Mail';
 import {getRandomString} from '@shared/functions';
 import {decrypt} from '@shared/Encryption';
-import bcrypt from 'bcrypt-nodejs';
-import crypto from 'crypto';
 
 const router = Router();
 
@@ -184,7 +182,7 @@ router.post('/help/resetpassword/:hash', (req, res) => {
         return res.json({code: 500, comment: internalError});
     }
     User.findOne({resetPasswordHash: req.params.hash})
-        .then(async user => {
+        .then(user => {
             if (!user || (req.session!.hash !== req.params.hash)) {
                 return res.json({code: 500, comment: internalError});
             } else {
