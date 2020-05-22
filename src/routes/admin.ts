@@ -1,5 +1,5 @@
 import {NextFunction, Request, Response, Router} from 'express';
-import User, {UserDocument} from '@shared/User';
+import User, {UserDocument, userSchema} from '@shared/User';
 import passport from 'passport';
 import logger from '@shared/Logger';
 import emailValidator from 'email-validator';
@@ -7,7 +7,10 @@ import {internalError} from '@shared/constants';
 import {SendGrid} from '@shared/SendGrid';
 import {Mail} from '@shared/Mail';
 import {getRandomString} from '@shared/functions';
-import {decrypt} from "@shared/Encryption";
+import {decrypt} from '@shared/Encryption';
+import bcrypt from 'bcrypt-nodejs';
+import crypto from 'crypto';
+
 const router = Router();
 
 const validatePassword = (password: string): boolean => {
@@ -122,6 +125,80 @@ router.get('/verify/:hash', (req: Request, res: Response) => {
             return res.render('verified', { verified: true });
         })
     });
+});
+
+router.get('/help', (req, res) => {
+    res.render('help');
+});
+
+router.post('/help/resetpassword', (req, res) => {
+    const decrypted = decrypt(req.body.data);
+    const email: string = JSON.parse(decrypted).email;
+    User.findOne({email})
+        .then(async user => {
+            if (!user) {
+                return res.json({code: 'help00', comment: res.__('ts.accounthelp.help.sentemail')})
+            } else {
+                if (user.resetPasswordHash !== '') {
+                    return res.json({code: 'help01', comment: res.__('ts.accounthelp.help.alreadysent')})
+                }
+                const hash = getRandomString(24);
+                const result = await User.findOneAndUpdate({email}, {resetPasswordHash: hash, resetPasswordTime: Date.now()});
+                const html = Mail.generateResetPassword(email, hash, res.__('ts.accounthelp.clickheretoresetpassword'));
+                SendGrid.send(email, res.__('ts.accounthelp.clickheretoresetpasswordtitle'), html).then(() => {
+                    return res.json({code: 'help00', comment: res.__('ts.accounthelp.help.sentemail')})
+                });
+            }
+        })
+        .catch(err => {
+            logger.error(err.message, err);
+            return res.json({code: 500, comment: internalError})
+        })
+});
+
+router.get('/help/resetpassword/:hash', (req, res) => {
+    if (req.params.hash == null) {
+        return res.redirect('/admin/help');
+    }
+    User.findOne({resetPasswordHash: req.params.hash})
+        .then(user => {
+            if (!user) {
+                return res.status(404).render('error');
+            } else {
+                if (user.resetPasswordTime >= (user.resetPasswordTime + (10 * 60))) {
+                    user.update({resetPasswordHash: ''}).then(() => {
+                        return res.status(404).render('error');
+                    });
+                }
+                req.session!.hash = req.params.hash;
+                return res.render('resetpassword', {hash: req.params.hash});
+            }
+        })
+        .catch(error => {
+           return res.status(500).render('error');
+        });
+});
+
+router.post('/help/resetpassword/:hash', (req, res) => {
+    if (req.params.hash == null) {
+        return res.json({code: 500, comment: internalError});
+    }
+    User.findOne({resetPasswordHash: req.params.hash})
+        .then(async user => {
+            if (!user || (req.session!.hash !== req.params.hash)) {
+                return res.json({code: 500, comment: internalError});
+            } else {
+                const decrypted = decrypt(req.body.data);
+                const data = JSON.parse(decrypted);
+                const pw1 = data.password1;
+                const pw2 = data.password2;
+                if (pw1 !== pw2) return res.json({code: 'help02', comment: res.__('modal.register.passwordnotmatched')});
+                if (!validatePassword(pw1)) return res.json({code: 'help03', comment: res.__('modal.register.passworderror')});
+            }
+        })
+        .catch(error => {
+            return res.json({code: 500, comment: internalError});
+        });
 });
 
 export default router;

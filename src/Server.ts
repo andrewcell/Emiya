@@ -77,7 +77,7 @@ app.use((req, res, next) => {
     next();
 });
 app.use(i18n.init);
-mongoose.connect(process.env.MONGODB as string, { useNewUrlParser: true, useUnifiedTopology: true  })
+mongoose.connect(process.env.MONGODB as string, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
     .then(() => {
         logger.info('MongoDB Success. Version: ' + mongoose.version);
     })

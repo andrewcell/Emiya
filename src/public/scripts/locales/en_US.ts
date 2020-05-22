@@ -103,5 +103,6 @@ export default new Map([
     ['villagers.my.fullhobbies', 'No missing hobbies.'],
     ['villagers.my.fullpersonality', 'No missing personalities.'],
     ['villagers.my.conflict', 'Conflict personality type'],
-    ['villagers.my.noconflictype', 'No conflict personality type.']
+    ['villagers.my.noconflictype', 'No conflict personality type.'],
+    ['accounthelp.resetpw.twopasswordnotmatch', 'Passwords do not match.']
 ]);

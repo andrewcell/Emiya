@@ -10,6 +10,9 @@ export type UserDocument = mongoose.Document & {
     myVillagers: string[];
     registerIp: string;
     registerUserAgent: string;
+    registerDatetime: number;
+    resetPasswordHash: string;
+    resetPasswordTime: number;
 }
 
 const userSchema = new Schema({
@@ -20,7 +23,10 @@ const userSchema = new Schema({
     verified: Boolean,
     myVillagers: [String],
     registerIp: String,
-    registerUserAgent: String
+    registerUserAgent: String,
+    registerDatetime: Number,
+    resetPasswordHash: String,
+    resetPasswordTime: Number
 }, {collection: 'users'});
 
 
@@ -28,4 +34,5 @@ userSchema.plugin(passportLocalMongoose, { usernameField: 'username'});
 
 const model = mongoose.model<UserDocument>('User', userSchema as PassportLocalSchema)
 
+export {userSchema};
 export default model;

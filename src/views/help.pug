@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    script(src='/scripts/accounthelp.js')
+    .container
+        div#resetpassword
+            h4 사용자 이름 및 비밀번호 찾기
+            p 비밀번호를 잊었다면 아래에 가입할때 사용한 이메일 주소를 입력하고 버튼을 누르세요. 이메일 주소로 보낸 링크를 누르면 비밀번호를 변경할 수 있는 페이지로 이동됩니다.
+            .row
+                .input-field.col.s6
+                    input#resetEmail.validate(type='email')
+                    label(for='resetEmail') Email
+            button#resetButton(type='button').btn.waves-effect 이메일 전송
+
+        hr
+        div#resendverification
+            h4 인증메일 재전송
+            p 비밀번호를 잊었다면 아래에 가입할때 사용한 이메일 주소를 입력하고 버튼을 누르세요.
+            .row
+                .input-field.col.s6
+                    input#resendEmail.validate(type='email')
+                    label(for='resendEmail') Email
+            button#resendButton(type='button').btn.waves-effect 이메일 전송
+        br
+

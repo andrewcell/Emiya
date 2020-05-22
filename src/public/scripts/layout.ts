@@ -12,7 +12,6 @@ $(() => {
 
 
     const checkPassword = (): void => {
-        console.log(registerPassword.val())
         if (Register.checkPassword(registerPassword.val() as string, registerPassword2.val() as string)) {
             registerPassword2.removeClass('invalid').addClass('valid')
         } else {
