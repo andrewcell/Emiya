@@ -75,7 +75,8 @@ router.post('/register', (req: Request, res: Response) => {
                 verifyHash: hash,
                 myVillagers: [],
                 registerIp: ip as string,
-                registerUserAgent: req.headers['user-agent']
+                registerUserAgent: req.headers['user-agent'],
+                registerDatetime: Date.now()
             }), request.password, (err, user) => {
                 if (err) {
                     switch (err.name) {
