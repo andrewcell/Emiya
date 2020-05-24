@@ -44,4 +44,5 @@ export const encrypt = (raw: string): string => {
 }
 
 export const decrypt = (base64: string): string => {
-    return crypto.privateDecrypt({key: privateKey, padding:constants.RSA_PKCS1_PADDING}, Buffer.from(base64, 'base64')).toString()}
+    return crypto.privateDecrypt({key: privateKey, padding:constants.RSA_PKCS1_PADDING}, Buffer.from(base64, 'base64')).toString()
+}
