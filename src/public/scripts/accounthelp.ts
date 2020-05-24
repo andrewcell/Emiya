@@ -1,7 +1,7 @@
 import $ from 'jquery';
-import {encrypt, decrypt} from './encryption';
+import {encrypt, decrypt} from './encryption/AES';
 import axios from 'axios';
-import M from "materialize-css";
+import M from 'materialize-css';
 
 $(() => {
     const resetPasswordButton = $('#resetButton');

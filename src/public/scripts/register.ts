@@ -1,6 +1,6 @@
 import {AJAX, AjaxResult} from './ajax';
 import { b64 } from './b64';
-import {encrypt, decrypt} from './encryption';
+import {encrypt, decrypt} from './encryption/AES';
 
 export class Register {
     public static async register(username: string, password: string, password2: string, email: string): Promise<AjaxResult> {

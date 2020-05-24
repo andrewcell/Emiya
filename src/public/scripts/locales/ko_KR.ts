@@ -104,5 +104,9 @@ export default new Map([
     ['villagers.my.fullpersonality', '마을에 누락된 성격이 없습니다.'],
     ['villagers.my.conflict', '성격타입 충돌감지'],
     ['villagers.my.noconflictype', '충돌한 성격타입이 없습니다.'],
-    ['accounthelp.resetpw.twopasswordnotmatch', '두 개의 비밀번호가 일치하지 않습니다.']
+    ['accounthelp.resetpw.twopasswordnotmatch', '두 개의 비밀번호가 일치하지 않습니다.'],
+    ['villagers.nav.giftforvillagers', '주민에게 옷선물'],
+    ['villagers.nav.villagerstogift', '주민이 선호하는 옷'],
+    ['villagers.gift.color', '색상'],
+    ['villagers.gift.style', '스타일']
 ]);
