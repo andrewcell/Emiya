@@ -39,13 +39,9 @@ const publicKey = '-----BEGIN PUBLIC KEY-----\n' +
     'fwIDAQAB\n' +
     '-----END PUBLIC KEY-----\n';
 
-const getKey = (key: string[]) => {
-    return key.join("");
-}
-
 export const encrypt = (raw: string): string => {
-    return Buffer.from(crypto.publicEncrypt({"key": publicKey, padding: constants.RSA_PKCS1_PADDING}, Buffer.from(raw))).toString('base64')
+    return Buffer.from(crypto.publicEncrypt({key: publicKey, padding: constants.RSA_PKCS1_PADDING}, Buffer.from(raw))).toString('base64')
 }
 
 export const decrypt = (base64: string): string => {
-    return crypto.privateDecrypt({"key": privateKey, padding:constants.RSA_PKCS1_PADDING}, Buffer.from(base64, 'base64')).toString()}
+    return crypto.privateDecrypt({key: privateKey, padding:constants.RSA_PKCS1_PADDING}, Buffer.from(base64, 'base64')).toString()}
