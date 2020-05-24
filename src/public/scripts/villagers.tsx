@@ -12,7 +12,7 @@ import axios from "axios";
 import { VillagersData, Villager } from './villagers/interfaces';
 import { Style, Color } from './villagers/enums';
 import {AES, enc} from 'crypto-js';
-import {decrypt} from './encryption';
+import {decrypt} from './encryption/AES';
 import VillagerDetail from './villagers/VillagerDetail';
 
 class Villagers extends React.Component<any, VillagersData> {
