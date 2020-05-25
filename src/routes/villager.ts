@@ -87,7 +87,7 @@ router.get('/react/my/get', validateReact, async (req, res) => {
     return res.json({code: 'villagers00', comment: 'success', data: encrypt(JSON.stringify(data))})
   } else {
     if (req.session?.myvillagers == null) {
-      req.session!.myvillagers = resize([], 10, null)
+      req.session!.myvillagers = resize([], 14, null)
       req.session!.myvillagersguest = true;
     }
     return res.json({code: 'villagers00', comment: 'success', data: encrypt(JSON.stringify(req.session!.myvillagers))});
@@ -101,9 +101,9 @@ router.post('/react/my/set', validateReact, async (req, res) => {
     const db = MyVillagers.getInstance();
 
     if (req.session!.myvillagers == null) {
-      req.session!.myvillagers =  resize([], 10, null)
+      req.session!.myvillagers =  resize([], 14, null)
     }
-    if (getLengthWithoutNull(req.session!.myvillagers) >= 10)
+    if (getLengthWithoutNull(req.session!.myvillagers) >= 14)
       return res.json({code: 'villager01', comment: res.__('ts.villagers.my.full')});
 
     const existData: string[] = req.session!.myvillagers
@@ -113,10 +113,10 @@ router.post('/react/my/set', validateReact, async (req, res) => {
     req.session!.requireupdate = 4;
   } else {
     if (req.session!.myvillagers == null) {
-      req.session!.myvillagers = resize([], 10, null);
+      req.session!.myvillagers = resize([], 14, null);
     }
     const arr = (req.session!.myvillagers) as string[];
-    if (getLengthWithoutNull(req.session!.myvillagers) >= 10)
+    if (getLengthWithoutNull(req.session!.myvillagers) >= 14)
       return res.json({code: 'villager01', comment: res.__('ts.villagers.my.full')});
     if (arr.includes(body.code)) return res.json({code: 'villager01', comment: res.__('ts.villagers.my.alreadyexists')})
     pushToNull(arr, body.code);
@@ -140,7 +140,7 @@ router.delete('/react/my/set', validateReact, (req, res) => {
     } else {
       return res.json({code: 'villager02', comment: res.__('ts.villagers.targetnotexists')})
     }
-    req.session!.myvillagers =  resize(villagers, 10, null)
+    req.session!.myvillagers =  resize(villagers, 14, null)
     if (req.user) {
       const db = MyVillagers.getInstance();
       db.setMyVillager((req.user as UserDocument).id, villagers);

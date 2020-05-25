@@ -43,7 +43,7 @@ class MyVillagersDatabase {
     }
 
     public setMyVillager(userId: string, dataArray: string[]): Promise<void> {
-        const data = resize(dataArray, 10, null);
+        const data = resize(dataArray, 14, null);
         return new Promise<void>((resolve) => {
             User.findOneAndUpdate({_id: userId}, {myVillagers: data})
                 .then(res => {

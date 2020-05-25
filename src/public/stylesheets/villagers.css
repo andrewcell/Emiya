@@ -5,6 +5,11 @@
     border-top-width: 5px;
     background-color: #ffffec;
 }
+@media(min-width: 600px) {
+    .xlarge {
+        height:600px;
+    }
+}
 
 @media(max-width: 600px) {
     .villagerImage {

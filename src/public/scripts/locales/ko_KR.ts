@@ -108,5 +108,8 @@ export default new Map([
     ['villagers.nav.giftforvillagers', '주민에게 옷선물'],
     ['villagers.nav.villagerstogift', '주민이 선호하는 옷'],
     ['villagers.gift.color', '색상'],
-    ['villagers.gift.style', '스타일']
+    ['villagers.gift.style', '스타일'],
+    ['villagers.genders.male', '수컷)'],
+    ['villagers.genders.female', '암컷'],
+    ['villagers.my.sex', '성비']
 ]);
