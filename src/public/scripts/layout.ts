@@ -3,6 +3,8 @@ import M from 'materialize-css';
 import {AJAX, AjaxResult} from './ajax';
 import {Register, RegisterCode} from './register';
 import {b64} from './b64';
+import {Simulate} from "react-dom/test-utils";
+import click = Simulate.click;
 
 $(() => {
     const registerPassword: JQuery<HTMLElement> = $('#register-modal #password');
@@ -45,7 +47,7 @@ $(() => {
 
     $('#loginbutton').on('click', async () => {
         disableButton($('#loginbutton'));
-        const result: AjaxResult = await AJAX.send($("#loginform").serialize(), new b64('L2FkbWluL2xvZ2lu'))
+        const result: AjaxResult = await AJAX.send($('#loginform').serialize(), new b64('L2FkbWluL2xvZ2lu'))
         switch (result.code as string) {
             case 'login00':
                 location.reload()
@@ -83,6 +85,17 @@ $(() => {
 
     $('#password2').on('keyup', () => {
         checkPassword();
+    });
+
+    let lastTime = Date.now() + 1500;
+
+    $('#login-modal #password').keydown(e => {
+        if (lastTime+1500 <= Date.now()) {
+            if (e.keyCode === 13) {
+                $('#loginbutton').click();
+                lastTime = Date.now();
+            }
+        }
     });
 });
 

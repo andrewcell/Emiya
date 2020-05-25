@@ -83,7 +83,9 @@
 	"residentservices.help.emibo.description": "Emibo provides backed up binary file of released figures or cards. This file can be used for any situation. For use this file, you need NTAG215 tag, writer software, NFC writer hardware.",
 	"residentservices.help.emibo.description2": "In search field, show results as soon as you typing. Here is list of search keywords : name, korean name, personality, korean translation of personality, card number, welcome or not, aliases. Click picture to download.",
 	"residentservices.help.villagers": "Villagers",
-	"residentservices.help.villagers.description": "You can search villagers with information like Personality, Type, Hobby. This search feature highly detailed. If you add to My Villagers, you are able to discover all of detail of your villagers. For villagers search, use 'All Villagers' button. Each villager item has '+' button. this button use for Add to My Villagers. You can add villager to My Villagers up to 10 villagers as game.",
+	"residentservices.help.villagers.description": "You can search villagers with information like Personality, Type, Hobby. This search feature highly detailed. If you add to My Villagers, you are able to discover all of detail of your villagers. For villagers search, use 'All Villagers' button. Each villager item has '+' button. this button use for Add to My Villagers. You can add villager to My Villagers up to 14 villagers. (hope game expand to 14)",
 	"residentservices.help.villagers.description3": "Click profile picture of villager to access detail page of villager. There is a button for delete from My Villagers.",
-	"residentservices.help.villagers.description2": "Javascript file is huge, server located in Europe. Villagers page will be empty page while downloading. Please wait."
+	"residentservices.help.villagers.description2": "Javascript file is huge, server located in Europe. Villagers page will be empty page while downloading. Please wait.",
+	"changelog.1": "[Vil]Add Genders, Up to 14, Fix layout glitch on PC",
+	"changelog.2": "Now can use enter key on Login"
 }
