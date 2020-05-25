@@ -19,10 +19,11 @@ import VillagersPreferGift from './villagers/VillagersPreferGift';
 
 class Villagers extends React.Component<any, VillagersData> {
     constructor(prop: any) {
+        super(prop);
         if (Cookies.get('locale') == null) Cookies.set('locale', 'ko_KR')
         setLanguage(Cookies.get('locale') as string);
-        super(prop);
-        this.state = {data: [], my: []}
+
+        this.state = {data: [], my: [], addVillager: ()=>{}}
 
         axios.get('/villagers/react/villagers').then(response => {
             const villagersJson = JSON.parse(decrypt(response.data.data))
@@ -63,7 +64,34 @@ class Villagers extends React.Component<any, VillagersData> {
                 this.setState({my: filtered});
             });
         });
+        this.setMyVillagers = this.setMyVillagers.bind(this);
+        this.addToMyVillagers = this.addToMyVillagers.bind(this);
 
+    }
+
+    setMyVillagers = (arr: Villager[]) => {
+        this.setState({my: arr});
+    }
+
+    addToMyVillagers = (villager: string): void => {
+        const vill = this.state.data.filter((item: Villager) => {
+            return villager === item.code;
+        })
+        this.setState((prevState) => {
+            {my: prevState.my?.push(vill[0])}
+        })
+    }
+
+    removeVillager = (code: string): void => {
+        this.setState((prevState) => {
+            const index = prevState.my?.findIndex(i => {
+                return i.code === code;
+            });
+            if (index !== -1 && index != null) {
+                my: prevState.my?.splice(index, 1)
+            }
+            return {my: prevState.my}
+        })
     }
 
     render() {
@@ -73,10 +101,10 @@ class Villagers extends React.Component<any, VillagersData> {
                     <LinkButtons />
                     <Switch>
                         <Route exact path={'/villagers'}>
-                            <MyVillagers locale={Cookies.get('locale')} data={this.state.data} my={this.state.my} />
+                            <MyVillagers locale={Cookies.get('locale')} data={this.state.data} my={this.state.my} refresh={this.setMyVillagers}/>
                         </Route>
                         <Route exact path={'/villagers/list'}>
-                            <VillagersList locale={Cookies.get('locale')} data={this.state.data} />
+                            <VillagersList locale={Cookies.get('locale')} data={this.state.data} addVillager={this.addToMyVillagers} />
                         </Route>
                         <Route exact path={'/villagers/gift'}>
                             <VillagersGift data={this.state.data} />
@@ -84,7 +112,7 @@ class Villagers extends React.Component<any, VillagersData> {
                         <Route exact path={'/villagers/prefer'}>
                             <VillagersPreferGift data={this.state.data} />
                         </Route>
-                        <Route path={'/villagers/:code'}  component={(props: any) => <VillagerDetail {...props} data={this.state.data} />}  />
+                        <Route path={'/villagers/:code'}  component={(props: any) => <VillagerDetail {...props} data={this.state.data} removeVillager={this.removeVillager}/>}  />
                     </Switch>
                 </BrowserRouter>
             </div>

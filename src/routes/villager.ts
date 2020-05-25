@@ -104,7 +104,7 @@ router.post('/react/my/set', validateReact, async (req, res) => {
       req.session!.myvillagers =  resize([], 14, null)
     }
     if (getLengthWithoutNull(req.session!.myvillagers) >= 14)
-      return res.json({code: 'villager01', comment: res.__('ts.villagers.my.full')});
+      return res.json({code: 'villagers01', comment: res.__('ts.villagers.my.full')});
 
     const existData: string[] = req.session!.myvillagers
     if (existData.includes(body.code)) return res.json({code: 'villager01', comment: res.__('ts.villagers.my.alreadyexists')})
@@ -117,7 +117,7 @@ router.post('/react/my/set', validateReact, async (req, res) => {
     }
     const arr = (req.session!.myvillagers) as string[];
     if (getLengthWithoutNull(req.session!.myvillagers) >= 14)
-      return res.json({code: 'villager01', comment: res.__('ts.villagers.my.full')});
+      return res.json({code: 'villagers01', comment: res.__('ts.villagers.my.full')});
     if (arr.includes(body.code)) return res.json({code: 'villager01', comment: res.__('ts.villagers.my.alreadyexists')})
     pushToNull(arr, body.code);
     req.session!.myvillagers = arr;
@@ -131,21 +131,21 @@ router.delete('/react/my/set', validateReact, (req, res) => {
     const body = JSON.parse(decrypt(req.body.data));
     if (!validateCode(body.code as string)) return {code: 500, comment: 'Internal Server Error.'}
     if (req.session!.myvillagers == null) {
-      return res.json({code: 'villager00', comment: res.__('ts.villagers.targetnotexists')})
+      return res.json({code: 'villagers02', comment: res.__('ts.villagers.targetnotexists')})
     }
     const villagers = req.session!.myvillagers as string[]
     const targetIndex = villagers.indexOf(body.code);
     if (targetIndex > -1) {
       villagers.splice(targetIndex, 1);
     } else {
-      return res.json({code: 'villager02', comment: res.__('ts.villagers.targetnotexists')})
+      return res.json({code: 'villagers02', comment: res.__('ts.villagers.targetnotexists')})
     }
     req.session!.myvillagers =  resize(villagers, 14, null)
     if (req.user) {
       const db = MyVillagers.getInstance();
       db.setMyVillager((req.user as UserDocument).id, villagers);
     }
-    return res.json({code: 'villager00', comment: res.__('ts.villagers.deletesuccess')})
+    return res.json({code: 'villagers00', comment: res.__('ts.villagers.deletesuccess')})
   } catch (e) {
     return res.json({code: 500, comment: internalError})
   }
