@@ -91,5 +91,6 @@
 	"ts.accounthelp.help.alreadysent": "이메일을 이미 보냈습니다.",
 	"changelog.1": "[주민]성비 추가, 14마리 확장, PC 화면 버그 수정",
 	"changelog.2": "로그인 엔터 키 사용 가능",
-	"navbar.residentservices": "안내소"
+	"navbar.residentservices": "안내소",
+	"footer.copyright": " Emiya © 이수연 / 주민, 가구, 옷 그림 등의 게임과 관련된 저작물은 닌텐도의 소유입니다. 위치 : 네덜란드 및 일본"
 }

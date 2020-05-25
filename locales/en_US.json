@@ -88,5 +88,6 @@
 	"residentservices.help.villagers.description2": "Javascript file is huge, server located in Europe. Villagers page will be empty page while downloading. Please wait.",
 	"changelog.1": "[Vil]Add Genders, Up to 14, Fix layout glitch on PC",
 	"changelog.2": "Now can use enter key on Login",
-	"navbar.residentservices": "Help"
+	"navbar.residentservices": "Help",
+	"footer.copyright": "Emiya © Suyeon Lee. All resources related to Animal CrossingⓇ, owned by Nintendo. Hosted in Netherlands and Japan"
 }
