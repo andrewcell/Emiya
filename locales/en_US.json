@@ -87,5 +87,6 @@
 	"residentservices.help.villagers.description3": "Click profile picture of villager to access detail page of villager. There is a button for delete from My Villagers.",
 	"residentservices.help.villagers.description2": "Javascript file is huge, server located in Europe. Villagers page will be empty page while downloading. Please wait.",
 	"changelog.1": "[Vil]Add Genders, Up to 14, Fix layout glitch on PC",
-	"changelog.2": "Now can use enter key on Login"
+	"changelog.2": "Now can use enter key on Login",
+	"navbar.residentservices": "Help"
 }
