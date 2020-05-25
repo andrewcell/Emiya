@@ -22,7 +22,7 @@ class Villagers extends React.Component<any, VillagersData> {
         if (Cookies.get('locale') == null) Cookies.set('locale', 'ko_KR')
         setLanguage(Cookies.get('locale') as string);
         super(prop);
-        this.state = {data: []}
+        this.state = {data: [], my: []}
 
         axios.get('/villagers/react/villagers').then(response => {
             const villagersJson = JSON.parse(decrypt(response.data.data))
@@ -32,7 +32,7 @@ class Villagers extends React.Component<any, VillagersData> {
                     id: v.id,
                     personality: v.personality,
                     hobby: v.hobby,
-                    type: (v.type == 0) ? 'A' : 'B',
+                    type: (v.type === 0) ? 'A' : 'B',
                     birthday: v.birthday,
                     style1: v.style1 as Style,
                     style2: v.style2 as Style,
@@ -51,7 +51,19 @@ class Villagers extends React.Component<any, VillagersData> {
                 array.push(data);
             });
             this.setState({data: array});
+            axios.get('/villagers/react/my/get').then(res => {
+                const arr: string[] = [];
+                const list = JSON.parse(decrypt(res.data.data));
+                list.forEach((value: string, index: number) => {
+                    arr.push(value);
+                });
+                const filtered: Villager[] = this.state.data.filter((item: Villager) => {
+                    return arr.includes(item.code);
+                });
+                this.setState({my: filtered});
+            });
         });
+
     }
 
     render() {
@@ -61,10 +73,10 @@ class Villagers extends React.Component<any, VillagersData> {
                     <LinkButtons />
                     <Switch>
                         <Route exact path={'/villagers'}>
-                            <MyVillagers locale={Cookies.get('locale')} data={this.state.data}/>
+                            <MyVillagers locale={Cookies.get('locale')} data={this.state.data} my={this.state.my} />
                         </Route>
                         <Route exact path={'/villagers/list'}>
-                            <VillagersList locale={Cookies.get('locale')} data={this.state.data}/>
+                            <VillagersList locale={Cookies.get('locale')} data={this.state.data} />
                         </Route>
                         <Route exact path={'/villagers/gift'}>
                             <VillagersGift data={this.state.data} />
