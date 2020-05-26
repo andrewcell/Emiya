@@ -40,8 +40,8 @@ export default new Map([
     ['villagers.colors.beige', 'Beige'],
     ['villagers.colors.brown', 'Brown'],
     ['villagers.my.title', 'My Villagers'],
-    ['villagers.nav.myvillagers', 'My Villagers'],
-    ['villagers.nav.allvillagers', 'All Villagers'],
+    ['villagers.nav.myvillagers', 'My'],
+    ['villagers.nav.allvillagers', 'All'],
     ['villagers.search.title', 'Search'],
     ['villagers.species.alligator', 'Alligator'],
     ['villagers.species.anteater', 'Anteater'],
@@ -107,5 +107,7 @@ export default new Map([
     ['accounthelp.resetpw.twopasswordnotmatch', 'Passwords do not match.'],
     ['villagers.genders.male', 'Male'],
     ['villagers.genders.female', 'Female'],
-    ['villagers.my.sex', 'Genders']
+    ['villagers.my.sex', 'Genders'],
+    ['villagers.nav.giftforvillagers', 'Gift for My\'s'],
+    ['villagers.nav.villagerstogift', 'Prefer Clothes'],
 ]);

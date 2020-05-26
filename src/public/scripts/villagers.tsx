@@ -8,7 +8,7 @@ import {setLanguage} from './locale';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import VillagersList from './villagers/VillagersList';
 import LinkButtons from './villagers/LinkButtons';
-import axios from "axios";
+import axios from 'axios';
 import { VillagersData, Villager } from './villagers/interfaces';
 import { Style, Color } from './villagers/enums';
 import {AES, enc} from 'crypto-js';
