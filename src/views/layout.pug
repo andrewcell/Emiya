@@ -29,8 +29,8 @@ html
             block content
         section
             if (!login)
-               include modals/login.pug
-               include modals/register.pug
+                include modals/login.pug
+                include modals/register.pug
         footer.page-footer.green
             .footer-copyright
                 .container
@@ -40,4 +40,6 @@ html
                         a(href='/lang/ko').yellow-text 한국어(대한민국, Korean)
                         |&nbsp;
                         a(href='/lang/en').white-text English (United States)
+                    if (!login)
+                        h6(style="color: 'red'; fontWeight: 'bold'")=__('villagers.notloggedin')
 
