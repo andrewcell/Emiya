@@ -1,3 +1,5 @@
+import {l} from "../locale";
+
 export default new Map([
     ['villagers.card.personality', '성격'],
     ['villagers.personalities.smug', '느끼함'],
@@ -43,6 +45,8 @@ export default new Map([
     ['villagers.nav.myvillagers', '내 주민'],
     ['villagers.nav.allvillagers', '전체 주민 목록'],
     ['villagers.search.title', '검색'],
+    ['villagers.search.search', '검색'],
+    ['villagers.search.live', '실시간 검색'],
     ['villagers.species.alligator', '악어'],
     ['villagers.species.anteater', '개미핥기'],
     ['villagers.species.bear', '큰곰'],
