@@ -17,6 +17,9 @@ block content
                 p=__('residentservices.help.villagers.description3')
                 br
                 p=__('residentservices.help.villagers.description2')
+                br
+                h4=__('residentservices.help.performance')
+                p=__('residentservices.help.performance.description')
                 //-h4=__('residentservices.help.accounts')
                 //-p=__('residentservices.help.accounts.description')
                 //-a(href='/admin/help').btn.waves-light=__('residentservices.help.accounts.button')
@@ -26,19 +29,8 @@ block content
                 ul.collection
                     li.collection-header
                         h5 &nbsp;#{__('residentservices.changelog')}
-                    li.collection-item=__('changelog.2')
-                    li.collection-item=__('changelog.1')
                     li.collection-item
-                        div Update Resident service
-                    li.collection-item
-                        div Add Style, Color chart, add some styles
-                    li.collection-item
-                        div Add Conflict Personality Type Detection
-                    li.collection-item
-                        div Add Label to chart, villager list
-                    li.collection-item
-                        div Added resident services.
-
+                        iframe(src='https://discord.com/widget?id=714465316595433482' width='350' height='500' allowtransparency='true' frameborder='0')
             .col.l6.s12
                 ul.collection
                     li.collection-header
@@ -50,8 +42,6 @@ block content
                         li.collection-item
                             div=__('residentservices.information.lastcommittime')
                                 .secondary-content=lastCommitTime
-                    li.collection-item
-                        iframe(src='https://discord.com/widget?id=714465316595433482&theme=dark' width='350' height='500' allowtransparency='true' frameborder='0')
 
             .col.s12.l12
                 .card
