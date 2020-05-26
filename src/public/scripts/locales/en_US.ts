@@ -109,7 +109,7 @@ export default new Map([
     ['villagers.genders.female', 'Female'],
     ['villagers.my.sex', 'Genders'],
     ['villagers.nav.giftforvillagers', 'Gift for My\'s'],
-    ['villagers.nav.villagerstogift', 'Prefer Clothes'],
+    ['villagers.nav.villagerstogift', 'Prefer ClothesItem'],
     ['villagers.search.search', 'Search'],
     ['villagers.search.live', 'Live Search'],
 ]);
