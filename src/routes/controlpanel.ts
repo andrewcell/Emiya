@@ -6,7 +6,8 @@ import path from 'path'
 import { Reader, AsnResponse, CityResponse, CountryResponse } from 'maxmind';
 import { getDataPath } from '@shared/functions'
 import { validateAdmin } from '@shared/validation';
-
+import User, {UserDocument, userSchema} from '@shared/User';
+import moment from 'moment';
 const router = Router();
 
 router.get('/downloadlog', validateAdmin, (req: Request, res: Response) => {
@@ -28,6 +29,12 @@ router.get('/downloadlog', validateAdmin, (req: Request, res: Response) => {
 
   const logArray: LogJson = JSON.parse(readFileSync('logArray.json').toString());
   res.render('downloadlog', { data: logArray.data.reverse(), asn, city, country });
+});
+
+router.get('/users', validateAdmin, (req, res) => {
+  User.find((err, users) => {
+    return res.render('users', {users, moment});
+  });
 });
 
 export default router;

@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    if (!users)
+        h1 No data available.
+    else
+        table.striped.centered.responsive-table
+            thead
+                tr
+                    th MyVillagers
+                    th Email
+                    th Username
+                    th Verified
+                    th RegisterDateTime
+                    th RegisterIP
+                    th User-Agent
+            tbody
+                each user in users
+                    tr
+                        td=user.myVillagers
+                        td=user.email
+                        td=user.username
+                        td=(user.verified) ? "Verified" : "Not Verified"
+                        if (user.registerDatetime)
+                            td#registertime=moment(user.registerDatetime).format('YYYY-MM-DD HH:mm:ss')
+                        else 
+                            td#registertime=moment(0).format('YYYY-MM-DD HH:mm:ss')
+                        td=user.registerIp
+                        td=user.registerUserAgent
+                                
