@@ -2,6 +2,7 @@ node_modules/
 .idea/
 logs/
 dist/
+env/
 node_modules/
 .node_modules/
 src/public/scripts/layout.js
@@ -109,3 +110,4 @@ log.json
 logArray.json
 ranking.json
 Referer.json
+buildtime.txt
