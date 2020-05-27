@@ -91,8 +91,5 @@
 	"footer.copyright": "Emiya © Suyeon Lee. All resources related to Animal CrossingⓇ, owned by Nintendo. Hosted in Netherlands and Japan",
 	"residentservices.help.performance": "Performance issue",
 	"residentservices.help.performance.description": "Currently, Emiya running on small server with other services. Of course, Emiya has low priority. I'm developing just for fun, But server is not free. I'm just humble student. And server processed over 7,000,000 requests, visited over 12,000 people last 30 days.",
-	"villagers.notloggedin": "You are not logged in. All data will be lost.",
-	"manifest.villagers.name": "Emiya - Villagers",
-	"manifest.villagers.shortname": "Villagers",
-	"manifest.villagers.description": "Discover villagers personality, hobby and more."
+	"villagers.notloggedin": "You are not logged in. All data will be lost."
 }

@@ -64,6 +64,7 @@
 	"ts.villagers.my.alreadyexists": "이미 등록되어 있습니다.",
 	"ts.villagers.my.full": "더 이상 추가할 수 없습니다.",
 	"ts.villagers.my.added": "내 주민에 추가되었습니다.",
+
 	"ts.villagers.deletesuccess": "내 주민에서 삭제되었습니다.",
 	"ts.villagers.targetnotexists": "해당 주민은 추가되어 있지 않습니다.",
 	"residentservices.title": "안내소",
@@ -94,8 +95,5 @@
 	"footer.copyright": " Emiya © 이수연 / 주민, 가구, 옷 그림 등의 게임과 관련된 저작물은 닌텐도의 소유입니다. 위치 : 네덜란드 및 일본",
 	"residentservices.help.performance": "서버 퍼포먼스 문제",
 	"residentservices.help.performance.description": "현재 웹 사이트는 따지고 보면 단칸방에 세 들어가있는 상태입니다. 개발 자체는 재미 및 공부 목적으로 이루어지고 있으나 서버 유지비용은 고정적으로 지출되는 비용이다 보니 원래 다른 목적으로 운용되는 서버에 낮은 순위로 돌아가고 있습니다. 아직 학생이라 돈이 그렇게 많지도 않습니다. 여담으로, 지난 한달 간 재방문자를 제외한 방문자가 12,000여 명으로 집계되었고, 총 처리한 요청은 7,000,000여 개입니다.",
-	"villagers.notloggedin": "로그인을 하지 않아 기록한 내용이 저장되지 않습니다.",
-	"manifest.villagers.name": "Emiya - 주민",
-	"manifest.villagers.shortname": "내 주민",
-	"manifest.villagers.description": "내 주민의 성격, 취미 등을 한번에 확인할 수 있습니다."
+	"villagers.notloggedin": "로그인을 하지 않아 기록한 내용이 저장되지 않습니다."
 }

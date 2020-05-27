@@ -4,7 +4,6 @@ import LanguageRouter from './language';
 import ControlPanelRouter from './controlpanel';
 import VillagerRouter from './villager';
 import UserRouter from './admin';
-import ManifestRouter from './Manifest';
 import {existsSync, readFileSync} from 'fs';
 import moment from 'moment';
 import axios from 'axios';
@@ -46,6 +45,5 @@ router.use('/lang', LanguageRouter);
 router.use('/cp', ControlPanelRouter);
 router.use('/villagers', VillagerRouter);
 router.use('/admin', UserRouter);
-router.use('/manifests', ManifestRouter);
 // Export the base-router
 export default router;
