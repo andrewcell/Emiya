@@ -105,7 +105,7 @@ class Villagers extends React.Component<any, VillagersData> {
                             <VillagersList locale={Cookies.get('locale')} data={this.state.data} addVillager={this.addToMyVillagers} />
                         </Route>
                         <Route exact path={'/villagers/gift'}>
-                            <VillagersGift data={this.state.data} />
+                            <VillagersGift my={this.state.my} />
                         </Route>
                         <Route exact path={'/villagers/prefer'}>
                             <VillagersPreferGift data={this.state.data} />
