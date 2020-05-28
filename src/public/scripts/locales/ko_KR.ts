@@ -115,5 +115,8 @@ export default new Map([
     ['villagers.gift.style', '스타일'],
     ['villagers.genders.male', '수컷'],
     ['villagers.genders.female', '암컷'],
-    ['villagers.my.sex', '성비']
+    ['villagers.my.sex', '성비'],
+    ['villagers.gift.resulttitle.all', '선호 스타일과 색상 모두 일치'],
+    ['villagers.gift.resulttitle.styles', '선호 스타일 일치'],
+    ['villagers.gift.resulttitle.colors', '선호 색상 일치']
 ]);

@@ -112,4 +112,7 @@ export default new Map([
     ['villagers.nav.villagerstogift', 'Prefer ClothesItem'],
     ['villagers.search.search', 'Search'],
     ['villagers.search.live', 'Live Search'],
+    ['villagers.gift.resulttitle.all', 'Prefer Style and Color'],
+    ['villagers.gift.resulttitle.styles', 'Prefer Style'],
+    ['villagers.gift.resulttitle.colors', 'Prefer Color']
 ]);
