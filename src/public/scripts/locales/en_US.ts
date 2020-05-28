@@ -114,5 +114,6 @@ export default new Map([
     ['villagers.search.live', 'Live Search'],
     ['villagers.gift.resulttitle.all', 'Prefer Style and Color'],
     ['villagers.gift.resulttitle.styles', 'Prefer Style'],
-    ['villagers.gift.resulttitle.colors', 'Prefer Color']
+    ['villagers.gift.resulttitle.colors', 'Prefer Color'],
+    ['villagers.gift.toomanyrequests', 'Too many requests.']
 ]);

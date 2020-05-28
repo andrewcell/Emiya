@@ -118,5 +118,6 @@ export default new Map([
     ['villagers.my.sex', '성비'],
     ['villagers.gift.resulttitle.all', '선호 스타일과 색상 모두 일치'],
     ['villagers.gift.resulttitle.styles', '선호 스타일 일치'],
-    ['villagers.gift.resulttitle.colors', '선호 색상 일치']
+    ['villagers.gift.resulttitle.colors', '선호 색상 일치'],
+    ['villagers.gift.toomanyrequests', '너무 많은 요청을 보냈습니다.']
 ]);
