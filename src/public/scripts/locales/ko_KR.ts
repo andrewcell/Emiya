@@ -1,4 +1,3 @@
-import {l} from "../locale";
 
 export default new Map([
     ['villagers.card.personality', '성격'],

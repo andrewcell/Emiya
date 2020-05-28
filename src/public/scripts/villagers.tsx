@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { useTranslation } from 'react-i18next';
 import './locale';
 import MyVillagers from './villagers/MyVillagers';
 import Cookies from 'js-cookie';
@@ -11,7 +10,6 @@ import LinkButtons from './villagers/LinkButtons';
 import axios from 'axios';
 import { VillagersData, Villager } from './villagers/interfaces';
 import { Style, Color } from './villagers/enums';
-import {AES, enc} from 'crypto-js';
 import {decrypt} from './encryption/AES';
 import VillagerDetail from './villagers/VillagerDetail';
 import VillagersGift from './villagers/VillagersGift';
@@ -23,12 +21,12 @@ class Villagers extends React.Component<any, VillagersData> {
         if (Cookies.get('locale') == null) Cookies.set('locale', 'ko_KR')
         setLanguage(Cookies.get('locale') as string);
 
-        this.state = {data: [], my: [], addVillager: ()=>{}}
+        this.state = {data: [], my: [], addVillager: (): void => {return}}
 
         axios.get('/villagers/react/villagers').then(response => {
             const villagersJson = JSON.parse(decrypt(response.data.data))
             const array: Villager[] = [];
-            villagersJson.forEach((v: any, k: number) => {
+            villagersJson.forEach((v: any) => {
                 const data: Villager = {
                     id: v.id,
                     personality: v.personality,
@@ -55,7 +53,7 @@ class Villagers extends React.Component<any, VillagersData> {
             axios.get('/villagers/react/my/get').then(res => {
                 const arr: string[] = [];
                 const list = JSON.parse(decrypt(res.data.data));
-                list.forEach((value: string, index: number) => {
+                list.forEach((value: string) => {
                     arr.push(value);
                 });
                 const filtered: Villager[] = this.state.data.filter((item: Villager) => {
@@ -69,7 +67,7 @@ class Villagers extends React.Component<any, VillagersData> {
 
     }
 
-    setMyVillagers = (arr: Villager[]) => {
+    setMyVillagers = (arr: Villager[]): void => {
         this.setState({my: arr});
     }
 
