@@ -12,7 +12,7 @@ import { VillagersData, Villager } from './villagers/interfaces';
 import { Style, Color } from './villagers/enums';
 import {decrypt} from './encryption/AES';
 import VillagerDetail from './villagers/VillagerDetail';
-import VillagersGift from './villagers/VillagersGift';
+import VillagerSearchByClothes from './villagers/VillagerSearchByClothes';
 import VillagersPreferGift from './villagers/VillagersPreferGift';
 
 class Villagers extends React.Component<any, VillagersData> {
@@ -105,7 +105,7 @@ class Villagers extends React.Component<any, VillagersData> {
                             <VillagersList locale={Cookies.get('locale')} data={this.state.data} addVillager={this.addToMyVillagers} />
                         </Route>
                         <Route exact path={'/villagers/gift'}>
-                            <VillagersGift my={this.state.my} />
+                            <VillagerSearchByClothes my={this.state.my} />
                         </Route>
                         <Route exact path={'/villagers/prefer'}>
                             <VillagersPreferGift data={this.state.data} />

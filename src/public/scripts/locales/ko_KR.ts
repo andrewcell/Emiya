@@ -121,5 +121,9 @@ export default new Map([
     ['villagers.gift.resulttitle.ecolors', '선호 두 개 색상 정확히 일치'],
     ['villagers.gift.resulttitle.eall', '선호 두 개 색상 및 스타일 정확히 일치'],
     ['villagers.gift.toomanyrequests', '너무 많은 요청을 보냈습니다.'],
+    ['villagers.searchbyclothes.matchcolorsandstyles','선호 두 색상 중 한 개가 일치하고 선호 스타일중 하나가 일치'],
+    ['villagers.searchbyclothes.matchcolors', '선호 두 색상 중 한 개가 일치'],
+    ['villagers.searchbyclothes.exactcolorsandstyle', '선호 두 색상 모두 포함 및 선호 스타일중 하나가 정확히 일치'],
+    ['villagers.searchbyclothes.exactcolors', '선호 두 색상 모두 포함']
     
 ]);

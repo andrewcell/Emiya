@@ -115,5 +115,9 @@ export default new Map([
     ['villagers.gift.resulttitle.all', 'Prefer Style and Color'],
     ['villagers.gift.resulttitle.styles', 'Prefer Style'],
     ['villagers.gift.resulttitle.colors', 'Prefer Color'],
-    ['villagers.gift.toomanyrequests', 'Too many requests.']
+    ['villagers.gift.toomanyrequests', 'Too many requests.'],
+    ['villagers.searchbyclothes.matchcolorsandstyles','Match one of prefer colors and one of prefer styles'],
+    ['villagers.searchbyclothes.matchcolors', 'Match one of prefer color'],
+    ['villagers.searchbyclothes.exactcolorsandstyle', 'Match all prefer colors and one of the preferred styles'],
+    ['villagers.searchbyclothes.exactcolors', 'Match all prefer colors']
 ]);
