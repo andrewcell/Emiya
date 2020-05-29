@@ -119,5 +119,15 @@ export default new Map([
     ['villagers.searchbyclothes.matchcolorsandstyles','Match one of prefer colors and one of prefer styles'],
     ['villagers.searchbyclothes.matchcolors', 'Match one of prefer color'],
     ['villagers.searchbyclothes.exactcolorsandstyle', 'Match all prefer colors and one of the preferred styles'],
-    ['villagers.searchbyclothes.exactcolors', 'Match all prefer colors']
+    ['villagers.searchbyclothes.exactcolors', 'Match all prefer colors'],
+    ['villagers.searchbyclothes.multipleresult','Multiple clothes found, Used this one : '],
+    ['villagers.searchbyclothes.notfound', 'No clothes found.'],
+    ['villagers.searchbyclothes.title', 'Search with Clothes'],
+    ['villagers.searchbyclothes.button', 'Search'],
+    ['villagers.gift.matchstyleandcolor', 'Match one of style and color'],
+    ['villagers.gift.matchstyle', 'Match one of prefer style'],
+    ['villagers.gift.matchcolor', 'Match one of prefer color'],
+    ['villagers.gift.exactcolors', 'Match Exact Both Colors'],
+    ['villagers.gift.exactstyleandcolor', 'Match Exact Style and Exact Colors'],
+    ['villagers.gift.title', 'Search by Villager']
 ]);
