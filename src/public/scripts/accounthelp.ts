@@ -9,7 +9,7 @@ $(() => {
     const resetPasswordInput = $('#resetEmail');
     const resendEmailInput = $('#resendEmail');
 
-    const send = (url: string, value: string) => {
+    const send = (url: string, value: string): void => {
         const encrypted = encrypt(`{"email": "${value}"}`);
         axios.post('/admin/help/' + url, {data: encrypted}).then(res => {
             M.toast({html: res.data.comment, classes: 'rounded'})
