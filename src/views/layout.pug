@@ -34,12 +34,16 @@ html
         footer.page-footer.green
             .footer-copyright
                 .container
-                    p=__('footer.copyright')
+                    p=__('footer.copyright') 
+                    
                     p Click to change Language
                         |&nbsp;
                         a(href='/lang/ko').yellow-text 한국어(대한민국)
                         |&nbsp;
                         a(href='/lang/en').white-text English (United States)
+                    div
+                        a(href='https://docs.google.com/spreadsheets/d/13d_LAJPlxMa_DubPTuirkIV4DERBMXbrWQsmSh8ReK4/edit#gid=1672309167').white-text=' Data Source / '
+                        a(href='https://github.com/EmiyaSuite').white-text=' Github'
                     if (!login)
                         h6(style="color: 'red'; fontWeight: 'bold'")=__('villagers.notloggedin')
 
