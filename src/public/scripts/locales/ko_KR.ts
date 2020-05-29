@@ -1,4 +1,3 @@
-import {l} from "../locale";
 
 export default new Map([
     ['villagers.card.personality', '성격'],
@@ -115,5 +114,25 @@ export default new Map([
     ['villagers.gift.style', '스타일'],
     ['villagers.genders.male', '수컷'],
     ['villagers.genders.female', '암컷'],
-    ['villagers.my.sex', '성비']
+    ['villagers.my.sex', '성비'],
+    ['villagers.gift.resulttitle.all', '선호 스타일과 색상 모두 일치'],
+    ['villagers.gift.resulttitle.styles', '선호 스타일 일치'],
+    ['villagers.gift.resulttitle.colors', '선호 색상 일치'],
+    ['villagers.gift.resulttitle.ecolors', '선호 두 개 색상 정확히 일치'],
+    ['villagers.gift.resulttitle.eall', '선호 두 개 색상 및 스타일 정확히 일치'],
+    ['villagers.gift.toomanyrequests', '너무 많은 요청을 보냈습니다.'],
+    ['villagers.searchbyclothes.matchcolorsandstyles','선호 두 색상 중 한 개가 일치하고 선호 스타일중 하나가 일치'],
+    ['villagers.searchbyclothes.matchcolors', '선호 두 색상 중 한 개가 일치'],
+    ['villagers.searchbyclothes.exactcolorsandstyle', '선호 두 색상 모두 포함 및 선호 스타일 중 하나가 정확히 일치'],
+    ['villagers.searchbyclothes.exactcolors', '선호 두 색상 모두 포함'],
+    ['villagers.searchbyclothes.multipleresult', '1 개 이상의 옷이 검색되어 첫번째 결과만 사용합니다. 결과 : '],
+    ['villagers.searchbyclothes.notfound', '검색된 옷이 없습니다.'],
+    ['villagers.searchbyclothes.title', '옷으로 검색'],
+    ['villagers.searchbyclothes.button', '검색'],
+    ['villagers.gift.matchstyleandcolor', '스타일 중 한 개와 색상 중 한 개 일치'],
+    ['villagers.gift.matchstyle', '선호 스타일 중 일치'],
+    ['villagers.gift.matchcolor', '선호 색상 중 일치'],
+    ['villagers.gift.exactcolors', '선호 색상 모두 일치'],
+    ['villagers.gift.exactstyleandcolor', '선호 색상 전부와 스타일 일치'],
+    ['villagers.gift.title', '주민으로 선호 옷 검색']
 ]);
