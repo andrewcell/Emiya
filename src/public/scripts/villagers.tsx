@@ -18,7 +18,7 @@ import VillagersPreferGift from './villagers/VillagersPreferGift';
 class Villagers extends React.Component<any, VillagersData> {
     constructor(prop: any) {
         super(prop);
-        if (Cookies.get('locale') == null) Cookies.set('locale', 'ko_KR')
+        if (Cookies.get('locale') == null) Cookies.set('locale', 'en_US')
         setLanguage(Cookies.get('locale') as string);
 
         this.state = {data: [], my: [], addVillager: (): void => {return}}
