@@ -91,5 +91,7 @@
 	"footer.copyright": "Emiya © Suyeon Lee. All resources related to Animal CrossingⓇ, owned by Nintendo. Hosted in Netherlands and Japan",
 	"residentservices.help.performance": "Performance issue",
 	"residentservices.help.performance.description": "Currently, Emiya running on a small server with other services. Of course, Emiya has low priority. I'm developing just for fun, But the server is not free. I'm just a humble student. And server processed over 7,000,000 requests, visited over 12,000 people last 30 days.",
-	"villagers.notloggedin": "You are not logged in. All data will be lost."
+	"villagers.notloggedin": "You are not logged in. All data will be lost.",
+	"residentservices.information.updateloglink": "https://github.com/EmiyaSuite/Update.log/blob/master/ENGLISH.md",
+	"residentservices.information.updatelog": "Discover newest update log on Github. Click here."
 }
