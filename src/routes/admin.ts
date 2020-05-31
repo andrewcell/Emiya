@@ -8,6 +8,7 @@ import {SendGrid} from '@shared/SendGrid';
 import {Mail} from '@shared/Mail';
 import {getRandomString} from '@shared/functions';
 import {decrypt} from '@shared/Encryption';
+import crypto from 'crypto';
 
 const router = Router();
 
@@ -34,6 +35,17 @@ const validateUsername = (username: string): boolean => {
     } else {
         return true;
     }
+}
+
+const generateSalt = (len = 32): string => {
+    if (len == null) {
+        len = 32;
+    }
+    return crypto.randomBytes(len).toString('hex');
+}
+
+const generateHash = (password: string, salt: string): string => {
+    return crypto.pbkdf2Sync(password, salt, 25000, 512, 'sha256').toString('hex');
 }
 
 router.post('/login', (req: Request, res: Response, next: NextFunction) => {
@@ -134,11 +146,11 @@ router.post('/help/resetpassword', (req, res) => {
     const decrypted = decrypt(req.body.data);
     const email: string = JSON.parse(decrypted).email;
     User.findOne({email})
-        .then(async user => {
+        .then(async (user: UserDocument | null) => {
             if (!user) {
                 return res.json({code: 'help00', comment: res.__('ts.accounthelp.help.sentemail')})
             } else {
-                if (user.resetPasswordHash !== '') {
+                if (user.resetPasswordHash != null && user.resetPasswordHash !== '') {
                     return res.json({code: 'help01', comment: res.__('ts.accounthelp.help.alreadysent')})
                 }
                 const hash = getRandomString(24);
@@ -182,17 +194,30 @@ router.post('/help/resetpassword/:hash', (req, res) => {
     if (req.params.hash == null) {
         return res.json({code: 500, comment: internalError});
     }
+    const decrypted = decrypt(req.body.data);
+    const data = JSON.parse(decrypted);
+    const pw1 = data.password1;
+    const pw2 = data.password2;
+    if (pw1 !== pw2) return res.json({code: 'help02', comment: res.__('modal.register.passwordnotmatched')});
+    if (!validatePassword(pw1)) return res.json({code: 'help03', comment: res.__('modal.register.passworderror')});
     User.findOne({resetPasswordHash: req.params.hash})
-        .then(user => {
-            if (!user || (req.session!.hash !== req.params.hash)) {
+        .then(async user => {
+            if (!user/* || (req.session!.hash !== req.params.hash) */) {
                 return res.json({code: 500, comment: internalError});
             } else {
-                const decrypted = decrypt(req.body.data);
-                const data = JSON.parse(decrypted);
-                const pw1 = data.password1;
-                const pw2 = data.password2;
-                if (pw1 !== pw2) return res.json({code: 'help02', comment: res.__('modal.register.passwordnotmatched')});
-                if (!validatePassword(pw1)) return res.json({code: 'help03', comment: res.__('modal.register.passworderror')});
+                const salt = generateSalt();
+                const hash = generateHash(pw1, salt);
+                const updateResult = await user.update({
+                    resetPasswordHash: '',
+                    resetPasswordTime: 0,
+                    hash,
+                    salt
+                });
+                if (updateResult.ok != null && updateResult.ok === 1) {
+                    return res.json({code: 'help00', comment: res.__('ts.accounthelp.passwordchanged')})
+                } else {
+                    return res.json({code: 500, comment: internalError});
+                }
             }
         })
         .catch(error => {

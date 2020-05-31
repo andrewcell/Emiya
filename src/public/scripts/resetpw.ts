@@ -13,6 +13,10 @@ $(() => {
         const hash = $('#hash').val() as string;
         const encrypted = encrypt(JSON.stringify({password1: pw, password2: pw2}));
         axios.post('/admin/help/resetpassword/' + hash, {data: encrypted}).then(res => {
+            if (res.data.code === 'help00') {
+                $('.row').remove();
+                $('.container').append('<h6>' + res.data.comment + '</h6>')
+            }
             M.toast({html: res.data.comment, classes: 'rounded'})
         }).catch(err => {
             M.toast({html: 'Internal Server Error.', classes: 'rounded'});

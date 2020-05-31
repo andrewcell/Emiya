@@ -93,5 +93,17 @@
 	"residentservices.help.performance.description": "Currently, DodoSeki running on a small server with other services. Of course, DodoSeki has low priority. I'm developing just for fun, But the server is not free. I'm just a humble student. And server processed over 7,000,000 requests, visited over 12,000 people last 30 days.",
 	"villagers.notloggedin": "You are not logged in. All data will be lost.",
 	"residentservices.information.updateloglink": "https://github.com/EmiyaSuite/Update.log/blob/master/ENGLISH.md",
-	"residentservices.information.updatelog": "Discover newest update log on Github. Click here."
+	"residentservices.information.updatelog": "Discover newest update log on Github. Click here.",
+	"ts.accounthelp.help.alreadysent": "E-mail already sent.",
+	"ts.accounthelp.clickheretoresetpassword": "Click here to reset password.",
+	"ts.accounthelp.clickheretoresetpasswordtitle": "Instruction for reset password",
+	"ts.accounthelp.help.sentemail": "Instruction email has been sent.",
+	"ts.accounthelp.passwordchanged": "Password sucessfully changed.",
+	"accounthelp.resetpassword": "Enter new password to use. Password must be longer than 6, Alphanumeric only.",
+	"accounthelp.resetpassword.reset": "Reset",
+	"accounthelp.help.resetpassword": "Reset password",
+	"accounthelp.help.resetpassword.description": "Lost password? Using your email address, can change to other password. We will send you link to change password.",
+	"accounthelp.help.resetpassword.send": "Send",
+	"accounthelp.resendverify": "Resend verification mail",
+	"accounthelp.resendverify.description": "If you lost a verification e-mail to activate account, you can request send verification email again."
 }
