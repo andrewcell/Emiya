@@ -105,5 +105,8 @@
 	"accounthelp.help.resetpassword.description": "Lost password? Using your email address, can change to other password. We will send you link to change password.",
 	"accounthelp.help.resetpassword.send": "Send",
 	"accounthelp.resendverify": "Resend verification mail",
-	"accounthelp.resendverify.description": "If you lost a verification e-mail to activate account, you can request send verification email again."
+	"accounthelp.resendverify.description": "If you lost a verification e-mail to activate account, you can request send verification email again.",
+	"residentservices.help.accounts": "residentservices.help.accounts",
+	"residentservices.help.accounts.description": "residentservices.help.accounts.description",
+	"residentservices.help.accounts.button": "residentservices.help.accounts.button"
 }
