@@ -106,7 +106,7 @@
 	"accounthelp.help.resetpassword.send": "Send",
 	"accounthelp.resendverify": "Resend verification mail",
 	"accounthelp.resendverify.description": "If you lost a verification e-mail to activate account, you can request send verification email again.",
-	"residentservices.help.accounts": "residentservices.help.accounts",
-	"residentservices.help.accounts.description": "residentservices.help.accounts.description",
-	"residentservices.help.accounts.button": "residentservices.help.accounts.button"
+	"residentservices.help.accounts": "Login and Register",
+	"residentservices.help.accounts.description": "Need help with your account? Click button below.",
+	"residentservices.help.accounts.button": "Account help station"
 }
