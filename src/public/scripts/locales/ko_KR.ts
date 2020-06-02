@@ -134,5 +134,6 @@ export default new Map([
     ['villagers.gift.matchcolor', '선호 색상 중 일치'],
     ['villagers.gift.exactcolors', '선호 색상 모두 일치'],
     ['villagers.gift.exactstyleandcolor', '선호 색상 전부와 스타일 일치'],
-    ['villagers.gift.title', '주민으로 선호 옷 검색']
+    ['villagers.gift.title', '주민으로 선호 옷 검색'],
+    ['villagers.my.novillagers', '추가된 주민이 없습니다. "전체 주민 목록" 탭에서 주민을 추가하세요.']
 ]);

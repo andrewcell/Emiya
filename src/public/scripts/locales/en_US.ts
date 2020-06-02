@@ -129,5 +129,6 @@ export default new Map([
     ['villagers.gift.matchcolor', 'Match one of prefer color'],
     ['villagers.gift.exactcolors', 'Match Exact Both Colors'],
     ['villagers.gift.exactstyleandcolor', 'Match Exact Style and Exact Colors'],
-    ['villagers.gift.title', 'Search by Villager']
+    ['villagers.gift.title', 'Search by Villager'],
+    ['villagers.my.novillagers', 'No villagers added. Go to \'All\' tab, add some villagers.']
 ]);
