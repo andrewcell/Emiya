@@ -1,11 +1,11 @@
-import axios from 'axios';
 import ko from './locales/ko_KR';
 import en from './locales/en_US';
-let data: any = {};
+import ja from './locales/ja_JP';
 
 const whitelist = new Map([
         ['en_US', en],
-        ['ko_KR', ko]
+        ['ko_KR', ko],
+        ['ja_JP', ja]
 ]);
 
 let language = new Map();
@@ -22,7 +22,7 @@ const setLanguage = (lang: string) => {
 const l = (key: string): string => {
     const data = language.get(key)
     if (data == null) {
-        //console.log(`"${key}": ""`);
+        // console.log(`"${key}": ""`);
         return '';
 
     } else {
