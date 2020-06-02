@@ -23,7 +23,7 @@ import MyVillagersDatabase from '@interfaces/MyVillagersDatabase';
 const app = express();
 
 i18n.configure({
-    locales: ['en_US', 'ko_KR'],
+    locales: ['en_US', 'ko_KR', 'ja_JP'],
     defaultLocale: 'en_US',
     cookie: 'locale',
     directory: 'locales',
