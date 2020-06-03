@@ -21,7 +21,7 @@ class Villagers extends React.Component<any, VillagersData> {
         if (Cookies.get('locale') == null) Cookies.set('locale', 'en_US')
         setLanguage(Cookies.get('locale') as string);
 
-        this.state = {data: [], my: [], addVillager: (): void => {return}}
+        this.state = {data: [], my: [], renderComplete: false, addVillager: (): void => {return}}
 
         axios.get('/villagers/react/villagers').then(response => {
             const villagersJson = JSON.parse(decrypt(response.data.data))
@@ -59,7 +59,7 @@ class Villagers extends React.Component<any, VillagersData> {
                 const filtered: Villager[] = this.state.data.filter((item: Villager) => {
                     return arr.includes(item.code);
                 });
-                this.setState({my: filtered});
+                this.setState({my: filtered, renderComplete: true});
             });
         });
         this.setMyVillagers = this.setMyVillagers.bind(this);
@@ -99,7 +99,7 @@ class Villagers extends React.Component<any, VillagersData> {
                     <LinkButtons />
                     <Switch>
                         <Route exact path={'/villagers'}>
-                            <MyVillagers locale={Cookies.get('locale')} data={this.state.data} my={this.state.my} refresh={this.setMyVillagers}/>
+                            <MyVillagers locale={Cookies.get('locale')} data={this.state.data} my={this.state.my} refresh={this.setMyVillagers} renderComplete={this.state.renderComplete} />
                         </Route>
                         <Route exact path={'/villagers/list'}>
                             <VillagersList locale={Cookies.get('locale')} data={this.state.data} addVillager={this.addToMyVillagers} />

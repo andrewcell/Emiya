@@ -132,5 +132,6 @@ export default new Map([
     ['villagers.gift.title', 'Search by Villager'],
     ['villagers.my.code', 'Code'],
     ['villagers.my.birthday', '🎂'],
-    ['villagers.my.phrase', 'Initial phrase']
+    ['villagers.my.phrase', 'Initial phrase'],
+    ['villagers.my.novillagers', 'No villagers added. Go to \'All\' tab, add some villagers.']
 ]);
