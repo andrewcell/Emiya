@@ -134,5 +134,8 @@ export default new Map([
     ['villagers.gift.matchcolor', '선호 색상 중 일치'],
     ['villagers.gift.exactcolors', '선호 색상 모두 일치'],
     ['villagers.gift.exactstyleandcolor', '선호 색상 전부와 스타일 일치'],
-    ['villagers.gift.title', '주민으로 선호 옷 검색']
+    ['villagers.gift.title', '주민으로 선호 옷 검색'],
+    ['villagers.my.code', '고유 번호'],
+    ['villagers.my.birthday', '🎂'],
+    ['villagers.my.phrase', '말버릇']
 ]);
