@@ -138,5 +138,7 @@ export default new Map([
     ['villagers.my.code', '고유 번호'],
     ['villagers.my.birthday', '🎂'],
     ['villagers.my.phrase', '말버릇'],
-    ['villagers.my.novillagers', '추가된 주민이 없습니다. "전체 주민 목록" 탭에서 주민을 추가하세요.']
+    ['villagers.my.novillagers', '추가된 주민이 없습니다. "전체 주민 목록" 탭에서 주민을 추가하세요.'],
+    ['villagers.detail.color', '선호 색상'],
+    ['villagers.detail.style', '선호 스타일']
 ]);
