@@ -30,4 +30,22 @@ const l = (key: string): string => {
     }
 }
 
-export {l, setLanguage};
+const detectLanguage = (lang: string | null): string => {
+    switch (lang) {
+        case 'ja':
+        case 'ja-JP':
+        case 'ja_JP':
+            return 'ja_JP'
+        case 'ko':
+        case 'ko-KR':
+        case 'ko_KR':
+            return 'ko_KR'
+        case 'en':
+        case 'en-US':
+        case 'en_US':
+        default:
+            return 'en_US'
+    }
+}
+
+export {l, setLanguage, detectLanguage};

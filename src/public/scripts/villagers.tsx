@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './locale';
 import MyVillagers from './villagers/MyVillagers';
 import Cookies from 'js-cookie';
-import {setLanguage} from './locale';
+import {detectLanguage, setLanguage} from './locale';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import VillagersList from './villagers/VillagersList';
 import LinkButtons from './villagers/LinkButtons';
@@ -18,7 +18,11 @@ import VillagersPreferGift from './villagers/VillagersPreferGift';
 class Villagers extends React.Component<any, VillagersData> {
     constructor(prop: any) {
         super(prop);
-        if (Cookies.get('locale') == null) Cookies.set('locale', 'en_US')
+
+        if (Cookies.get('locale') == null) {
+            const lang = detectLanguage(navigator.language);
+            Cookies.set('locale', lang);
+        }
         setLanguage(Cookies.get('locale') as string);
 
         this.state = {data: [], my: [], renderComplete: false, addVillager: (): void => {return}}
