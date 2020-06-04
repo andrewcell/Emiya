@@ -9,6 +9,7 @@ import {Mail} from '@shared/Mail';
 import {getRandomString} from '@shared/functions';
 import {decrypt} from '@shared/Encryption';
 import crypto from 'crypto';
+import { validateLoggedIn } from '@shared/validation';
 
 const router = Router();
 
@@ -59,6 +60,7 @@ router.post('/login', (req: Request, res: Response, next: NextFunction) => {
             if (err) {
                 logger.error(err.message, err);
             }
+            res.cookie('locale', (user as UserDocument).language);
             res.json({code: 'login00', comment: 'success'});
             return user
         });
@@ -223,6 +225,18 @@ router.post('/help/resetpassword/:hash', (req, res) => {
         .catch(error => {
             return res.json({code: 500, comment: internalError});
         });
+});
+
+router.post('/config', validateLoggedIn, (req, res) => {
+    try {
+        const decrypted = JSON.parse(decrypt(req.body.data));
+        const language = decrypted.language;
+        User.findByIdAndUpdate({_id: (req.user as UserDocument)._id}, {language}).then(() => {
+            return res.json({code: 'user00', comment: res.__('ts.user.saved')})
+        });
+    } catch (e) {
+        return res.status(500).json({'code': 500, comment: internalError});
+    }
 });
 
 export default router;

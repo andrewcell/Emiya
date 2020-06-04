@@ -13,6 +13,7 @@ export type UserDocument = mongoose.Document & {
     registerDatetime: number;
     resetPasswordHash: string;
     resetPasswordTime: number;
+    language: string;
 }
 
 const userSchema = new Schema({
@@ -26,7 +27,8 @@ const userSchema = new Schema({
     registerUserAgent: String,
     registerDatetime: Number,
     resetPasswordHash: String,
-    resetPasswordTime: Number
+    resetPasswordTime: Number,
+    language: String
 }, {collection: 'users'});
 
 

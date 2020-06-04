@@ -104,5 +104,10 @@
 	"accounthelp.help.resetpassword.description": "비밀번호를 잊었다면 아래에 가입할때 사용한 이메일 주소를 입력하고 버튼을 누르세요. 이메일 주소로 보낸 링크를 누르면 비밀번호를 변경할 수 있는 페이지로 이동됩니다.",
 	"accounthelp.help.resetpassword.send": "이메일 전송",
 	"accounthelp.resendverify.description": "비밀번호를 잊었다면 아래에 가입할때 사용한 이메일 주소를 입력하고 버튼을 누르세요.",
-	"accounthelp.resendverify": "인증메일 재전송"
+	"accounthelp.resendverify": "인증메일 재전송",
+	"modal.user.title": "사용자 설정",
+	"modal.user.savebutton": "저장",
+	"modal.user.close": "닫기",
+	"modal.user.description": "아래 설정은 다음 로그인부터 적용됩니다.",
+	"ts.user.saved": "저장되었습니다. 다음 로그인 시 적용됩니다."
 }

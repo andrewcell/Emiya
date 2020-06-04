@@ -68,12 +68,12 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
 app.use((req, res, next) => {
-
     res.locals.session = req.session;
     next();
 });
 app.use((req, res, next) => {
     res.locals.login = req.isAuthenticated();
+    res.locals.user = req.user;
     next();
 });
 app.use(i18n.init);
@@ -115,7 +115,7 @@ app.use((req, res, next) => {
     return next();
 });*/
 
-/************************************************************************************
+/** **********************************************************************************
  *                              Serve front-end content
  ***********************************************************************************/
 

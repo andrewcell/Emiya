@@ -1,7 +1,7 @@
 import {NextFunction, Request, Response} from 'express';
 import {UserDocument} from '@shared/User';
 
-export const validateAdmin = (req: Request, res: Response, next: NextFunction) => {
+export const validateAdmin = (req: Request, res: Response, next: NextFunction): void => {
     if (req.user == null) {
         res.redirect('/')
     } else {
@@ -14,7 +14,7 @@ export const validateAdmin = (req: Request, res: Response, next: NextFunction) =
     }
 }
 
-export const validateNotLoggedIn = (req: Request, res: Response, next: NextFunction) => {
+export const validateNotLoggedIn = (req: Request, res: Response, next: NextFunction): void => {
     if (req.user) {
         res.redirect('/');
     } else {
@@ -22,10 +22,18 @@ export const validateNotLoggedIn = (req: Request, res: Response, next: NextFunct
     }
 }
 
-export const validateReact = (req: Request, res: Response, next: NextFunction) => {
-    //if (req.xhr || req!.headers!.accept!.indexOf('json') > -1) {
+export const validateLoggedIn = (req: Request, res: Response, next: NextFunction): void => {
+    if (req.user) {
         next();
-   //} else {
+    } else {
+        res.status(401).json('{error: 1}');
+    }
+}
+
+export const validateReact = (req: Request, res: Response, next: NextFunction): void => {
+    // if (req.xhr || req!.headers!.accept!.indexOf('json') > -1) {
+        next();
+   // } else {
     //    res.status(400).json('{error: 1}');
-    //}
+    // }
 }

@@ -38,6 +38,8 @@ html
             if (!login)
                 include modals/login.pug
                 include modals/register.pug
+            if (login)
+                include modals/userconfig.pug
         footer.page-footer.green
             .footer-copyright
                 .container

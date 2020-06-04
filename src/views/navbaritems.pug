@@ -6,7 +6,7 @@ li
     a(href='/info')=__('navbar.residentservices')
 if (login)
     li
-        a(href='/admin/logout')=__('navbar.logout')
+        a.modal-trigger(data-target='user-modal', href='#user-modal')=user.username
 else
     li
         a.modal-trigger(data-target='login-modal', href='#login-modal')=__('navbar.login')

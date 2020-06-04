@@ -1,0 +1,24 @@
+#user-modal.modal
+    .modal-content
+        h5=__('modal.user.title')
+        p=__('modal.user.description')
+        form#userform(action='#')
+            div
+                p
+                    label
+                        input(name='language' type='radio' value='en_US' checked='')
+                        span.black-text English (US)
+                p
+                    label
+                        input(name='language' type='radio' value='ko_KR')
+                        span.black-text 한국어 (Korean)
+                p
+                    label
+                        input(name='language' type='radio' value='ja_JP' disabled)
+                        span 日本語 (Japanese)
+
+            button#saveButton.btn(type='button')=__('modal.user.savebutton')
+            |&nbsp;
+            button#logoutButton.btn(type='button', style='background-color: red')=__('navbar.logout')
+    .modal-footer
+        a.modal-close.waves-effect.waves-green.btn-flat(href='#')=__('modal.user.close')

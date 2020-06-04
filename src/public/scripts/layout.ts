@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import $ from 'jquery';
 import M from 'materialize-css';
 import {AJAX, AjaxResult} from './ajax';
-import {Register, RegisterCode} from './register';
+import {Register} from './register';
 import {b64} from './b64';
-import {Simulate} from "react-dom/test-utils";
-import click = Simulate.click;
+import axios from 'axios';
+import { encrypt } from './encryption/AES';
 
 $(() => {
     const registerPassword: JQuery<HTMLElement> = $('#register-modal #password');
@@ -75,6 +76,19 @@ $(() => {
         enableButton($('#registerButton'));
     });
 
+    $('#saveButton').on('click', () => {
+        const language = $('input[name=language]:checked')
+        axios.post('/admin/config', {data: encrypt(JSON.stringify({language: language.val()}))}).then(res => {
+            M.toast({html: res.data.comment, classes: 'rounded'});
+        }).catch(() => {
+            M.toast({html: 'Internal Server Error.', classes: 'rounded'});
+        });
+    });
+
+    $('#logoutButton').on('click', () => {
+        window.location.replace('/admin/logout');
+    });
+
     $('#password').on('focusout', () => {
         checkPassword();
     });
@@ -98,7 +112,6 @@ $(() => {
         }
     });
 });
-
 
 
 export {$}

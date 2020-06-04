@@ -108,5 +108,10 @@
 	"accounthelp.resendverify.description": "If you lost a verification e-mail to activate account, you can request send verification email again.",
 	"residentservices.help.accounts": "Login and Register",
 	"residentservices.help.accounts.description": "Need help with your account? Click button below.",
-	"residentservices.help.accounts.button": "Account help station"
+	"residentservices.help.accounts.button": "Account help station",
+	"modal.user.title": "User settings",
+	"modal.user.savebutton": "Save",
+	"modal.user.close": "Close",
+	"modal.user.description": "Apply on next login.",
+	"ts.user.saved": "Saved. New configuration will apply on the next login."
 }
