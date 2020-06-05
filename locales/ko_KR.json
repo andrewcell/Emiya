@@ -109,5 +109,13 @@
 	"modal.user.savebutton": "저장",
 	"modal.user.close": "닫기",
 	"modal.user.description": "아래 설정은 다음 로그인부터 적용됩니다.",
-	"ts.user.saved": "저장되었습니다. 다음 로그인 시 적용됩니다."
+	"ts.user.saved": "저장되었습니다. 다음 로그인 시 적용됩니다.",
+	"info.htmltitle": "info.htmltitle",
+	"global.title.subtitle": "DodoSeki - %s - 비공식 동물의 숲 도구",
+	"info.title": "안내소",
+	"verifyemail.title": "이메일 인증",
+	"accounthelp.htmltitle": "계정 문제해결",
+	"accounthelp.resetpassword.title": "비밀번호 초기화 확인",
+	"emibo.title": "Emibo",
+	"villagers.title": "주민"
 }

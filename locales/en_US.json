@@ -113,5 +113,12 @@
 	"modal.user.savebutton": "Save",
 	"modal.user.close": "Close",
 	"modal.user.description": "Apply on next login.",
-	"ts.user.saved": "Saved. New configuration will apply on the next login."
+	"ts.user.saved": "Saved. New configuration will apply on the next login.",
+	"global.title.subtitle": "DodoSeki - %s - Unofficial Animal Crossing Tools",
+	"info.title": "resident services",
+	"verifyemail.title": "Email verification",
+	"accounthelp.htmltitle": "Account troubleshooting",
+	"accounthelp.resetpassword.title": "Verify password reset",
+	"emibo.title": "Emibo",
+	"villagers.title": "Villagers"
 }

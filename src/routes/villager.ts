@@ -61,7 +61,8 @@ const validateCode = (code: string): boolean => {
 loadDb()
 
 router.get(['/', '/:param'], (req: Request, res: Response) => {
-  res.render('villagers/main', {data: villagerList, locale: req.cookies.locale});
+  const title = res.__('global.title.subtitle', res.__('villagers.title'))
+  res.render('villagers/main', {data: villagerList, locale: req.cookies.locale, title});
 });
 
 router.get('/react/villagers', validateReact, ((req, res) => {

@@ -113,5 +113,11 @@
 	"modal.user.savebutton": "セーブ",
 	"modal.user.close": "閉じる",
 	"modal.user.description": "以下の設定は、次のログインから適用されます。",
-	"ts.user.saved": "保存された。次のログイン時に適用されます。"
+	"ts.user.saved": "保存された。次のログイン時に適用されます。",
+	"info.title": "案内所",
+	"verifyemail.title": "メールアドレスの確認",
+	"accounthelp.htmltitle": "アカウントのトラブルシューティング",
+	"accounthelp.resetpassword.title": "パスワードのリセットを確認する",
+	"emibo.title": "Emibo",
+	"villagers.title": "私住民"
 }

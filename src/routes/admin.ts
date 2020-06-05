@@ -126,22 +126,24 @@ router.get('/logout', (req: Request, res: Response) => {
 });
 
 router.get('/verify/:hash', (req: Request, res: Response) => {
+    const title = res.__('global.title.subtitle', res.__('verifyemail.title'))
     if (req.params.hash == null) {
         return res.render('verified')
     }
     const hash = req.params.hash.replace(/[^a-z0-9+]+/gi, '');
     User.findOne({verifyHash: hash}, (err: any, user: UserDocument) => {
-        if (!user) return res.render('verified')
-        if (user.verified || user.verifyHash === '') return res.render('verified');
+        if (!user) return res.render('verified', {title})
+        if (user.verified || user.verifyHash === '') return res.render('verified', {title});
         User.updateOne({email: user.email, username: user.username, verifyHash: user.verifyHash}, {verified: true, verifyHash: ''}, (error) => {
-            if (error) return res.render('verified')
-            return res.render('verified', { verified: true });
+            if (error) return res.render('verified', {title})
+            return res.render('verified', { verified: true, title});
         })
     });
 });
 
 router.get('/help', (req, res) => {
-    res.render('help');
+    const title = res.__('global.title.subtitle', res.__('accounthelp.htmltitle'))
+    res.render('help', {title});
 });
 
 router.post('/help/resetpassword', (req, res) => {
@@ -170,6 +172,7 @@ router.post('/help/resetpassword', (req, res) => {
 });
 
 router.get('/help/resetpassword/:hash', (req, res) => {
+    const title = res.__('global.title.subtitle', res.__('accounthelp.resetpassword.title'))
     if (req.params.hash == null) {
         return res.redirect('/admin/help');
     }
@@ -184,7 +187,7 @@ router.get('/help/resetpassword/:hash', (req, res) => {
                     });
                 }
                 req.session!.hash = req.params.hash;
-                return res.render('resetpassword', {hash: req.params.hash});
+                return res.render('resetpassword', {hash: req.params.hash, title});
             }
         })
         .catch(error => {

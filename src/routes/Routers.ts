@@ -7,7 +7,8 @@ import UserRouter from './admin';
 import {existsSync, readFileSync} from 'fs';
 import moment from 'moment';
 import axios from 'axios';
-import path from "path";
+import path from 'path';
+
 // Init router and path
 const router = Router();
 
@@ -20,6 +21,7 @@ router.get('/favicon.ico', (req, res) => {
 });
 
 router.get('/info', (req, res) => {
+    const title = res.__('global.title.subtitle', res.__('info.title'))
     let lastBuildTime: string;
     if (existsSync('buildtime.txt')) {
         lastBuildTime = moment(+readFileSync('buildtime.txt').toString()).format('LLLL');
@@ -32,9 +34,9 @@ router.get('/info', (req, res) => {
         }
     }).then(response => {
         const github = moment(response.data[0].commit.author.date);
-        return res.render('info', {lastBuildTime, lastCommitTime: github.format('LLLL')});
+        return res.render('info', {lastBuildTime, lastCommitTime: github.format('LLLL'), title});
     }).catch(err => {
-        return res.render('info', {lastBuildTime});
+        return res.render('info', {lastBuildTime, title});
     })
 
 });
