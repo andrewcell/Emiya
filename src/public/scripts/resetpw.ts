@@ -7,7 +7,7 @@ $(() => {
     const password1Input = $('#password1');
     const password2Input = $('#password2');
     const button = $('#button');
-    button.on('click', async () => {
+    button.on('click', () => {
         const pw = password1Input.val() as string;
         const pw2 = password2Input.val() as string;
         const hash = $('#hash').val() as string;
@@ -18,7 +18,7 @@ $(() => {
                 $('.container').append('<h6>' + res.data.comment + '</h6>')
             }
             M.toast({html: res.data.comment, classes: 'rounded'})
-        }).catch(err => {
+        }).catch(() => {
             M.toast({html: 'Internal Server Error.', classes: 'rounded'});
         });
     });

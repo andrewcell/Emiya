@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
 import $ from 'jquery';
 import M from 'materialize-css';
 import {AJAX, AjaxResult} from './ajax';
@@ -46,34 +45,43 @@ $(() => {
     M.Modal.init($('.modal'));
     M.Sidenav.init($('.sidenav'));
 
-    $('#loginbutton').on('click', async () => {
+    $('#loginbutton').on('click', () => {
         disableButton($('#loginbutton'));
-        const result: AjaxResult = await AJAX.send($('#loginform').serialize(), new b64('L2FkbWluL2xvZ2lu'))
-        switch (result.code as string) {
-            case 'login00':
-                location.reload()
-                break;
-            case 'login01':
-                M.toast({html: result.comment, classes: 'rounded'});
-                break;
-            case '500':
-                M.toast({html: result.comment, classes: 'rounded'});
-                break;
-        }
-        enableButton($('#loginbutton'));
+        AJAX.send($('#loginform').serialize(), new b64('L2FkbWluL2xvZ2lu'))
+            .then((result: AjaxResult) => {
+                switch (result.code as string) {
+                    case 'login00':
+                        location.reload()
+                        break;
+                    case 'login01':
+                        M.toast({html: result.comment, classes: 'rounded'});
+                        break;
+                    case '500':
+                        M.toast({html: result.comment, classes: 'rounded'});
+                        break;
+                }
+                enableButton($('#loginbutton'));
+            })
     });
 
-    $('#registerButton').on('click', async () => {
+    $('#registerButton').on('click', () => {
         if (checkInputValid()) {
             disableButton($('#registerButton'));
-            const result = await Register.register(registerUsername.val() as string, registerPassword.val() as string, registerPassword2.val() as string, registerEmail.val() as string);
-            if (result.code === 'register07') {
-                M.Modal.getInstance(document.querySelector('#register-modal')!).close()
-            }
-            M.toast({html: result.comment, classes: 'rounded'});
-
+            Register.register(registerUsername.val() as string, registerPassword.val() as string, registerPassword2.val() as string, registerEmail.val() as string)
+                .then(result => {
+                    if (result.code === 'register07') {
+                        const modal = document.querySelector('#register-modal');
+                        if (modal != null) {
+                            M.Modal.getInstance(modal).close();
+                        }
+                    } else {
+                        M.toast({html: result.comment, classes: 'rounded'});
+                        enableButton($('#registerButton'));
+                    }
+                });
+        } else {
+            enableButton($('#registerButton'));
         }
-        enableButton($('#registerButton'));
     });
 
     $('#saveButton').on('click', () => {
