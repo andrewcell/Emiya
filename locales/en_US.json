@@ -123,5 +123,8 @@
 	"villagers.title": "Villagers",
 	"home.points.title": "Friendship Points",
 	"home.points.description": "Calculate friendship points here. It will be available soon.",
-	"home.points.enter": "Enter"
+	"home.points.enter": "Enter",
+	"residentservices.information.email": "Email",
+	"residentservices.information.dicord": "Discord",
+	"residentservices.information.dcinside": "Dcinside (Korean)"
 }
