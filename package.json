@@ -109,7 +109,7 @@
     "find": "^0.3.0",
     "fs-extra": "^9.0.0",
     "jasmine": "^3.5.0",
-    "javascript-obfuscator": "^0.28.2",
+    "javascript-obfuscator": "^1.1.0",
     "jquery": "^3.5.1",
     "json-loader": "^0.5.7",
     "jsonfile": "^6.0.1",
