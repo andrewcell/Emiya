@@ -120,5 +120,11 @@
 	"accounthelp.htmltitle": "Account troubleshooting",
 	"accounthelp.resetpassword.title": "Verify password reset",
 	"emibo.title": "Emibo",
-	"villagers.title": "Villagers"
+	"villagers.title": "Villagers",
+	"home.points.title": "Friendship Points",
+	"home.points.description": "Calculate friendship points here. It will be available soon.",
+	"home.points.enter": "Enter",
+	"residentservices.information.email": "Email",
+	"residentservices.information.dicord": "Discord",
+	"residentservices.information.dcinside": "Dcinside (Korean)"
 }

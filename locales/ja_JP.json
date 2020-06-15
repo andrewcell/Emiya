@@ -119,5 +119,11 @@
 	"accounthelp.htmltitle": "アカウントのトラブルシューティング",
 	"accounthelp.resetpassword.title": "パスワードのリセットを確認する",
 	"emibo.title": "Emibo",
-	"villagers.title": "私住民"
+	"villagers.title": "私住民",
+	"home.points.title": "親密度計算",
+	"home.points.description": "親密度の計算は、ここにリンクされる予定。",
+	"home.points.enter": "入る",
+	"residentservices.information.email": "Email",
+	"residentservices.information.dicord": "Discord",
+	"residentservices.information.dcinside": "Dcinside (Korean)"
 }

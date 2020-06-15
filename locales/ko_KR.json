@@ -68,7 +68,7 @@
 	"ts.villagers.targetnotexists": "해당 주민은 추가되어 있지 않습니다.",
 	"residentservices.title": "안내소",
 	"residentservices.changelog": "변경 내역",
-	"residentservices.information": "정보",
+	"residentservices.information": "정보 / 문의",
 	"residentservices.information.lastbuildtime": "마지막 빌드 시간 (UTC)",
 	"residentservices.information.lastcommittime": "마지막 커밋 시간 (UTC)",
 	"residentservices.usedandpoweredby": "개발에 사용된 것",
@@ -117,5 +117,11 @@
 	"accounthelp.htmltitle": "계정 문제해결",
 	"accounthelp.resetpassword.title": "비밀번호 초기화 확인",
 	"emibo.title": "Emibo",
-	"villagers.title": "주민"
+	"villagers.title": "주민",
+	"home.points.title": "친밀도 계산기",
+	"home.points.description": "친밀도 계산기가 여기에 링크될 예정. (공백공백공백공백공백) 메모)f: React, b: Java)",
+	"home.points.enter": "못 들어가",
+	"residentservices.information.email": "Email",
+	"residentservices.information.dicord": "디스코드",
+	"residentservices.information.dcinside": "디시인사이드"
 }
