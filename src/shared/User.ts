@@ -5,6 +5,7 @@ export type UserDocument = mongoose.Document & {
     username: string;
     email: string;
     admin: boolean;
+    hash: string;
     verifyHash: string;
     verified: boolean;
     myVillagers: string[];

@@ -7,9 +7,11 @@ import {internalError} from '@shared/constants';
 import {SendGrid} from '@shared/SendGrid';
 import {Mail} from '@shared/Mail';
 import {getRandomString} from '@shared/functions';
-import {decrypt} from '@shared/Encryption';
+import {decrypt, encryptJava} from '@shared/Encryption';
 import crypto from 'crypto';
 import { validateLoggedIn } from '@shared/validation';
+import Axios from 'axios';
+import { emiyaJ } from '@shared/ApiUrl';
 
 const router = Router();
 
@@ -60,9 +62,22 @@ router.post('/login', (req: Request, res: Response, next: NextFunction) => {
             if (err) {
                 logger.error(err.message, err);
             }
-            res.cookie('locale', (user as UserDocument).language);
-            res.json({code: 'login00', comment: 'success'});
-            return user
+            const userAsDocument = user as UserDocument;
+            Axios.post(emiyaJ + '/admin/login', {data: encryptJava(JSON.stringify({username: userAsDocument.username, password: userAsDocument.hash, ipAddress: req.headers['x-forwarded-for']}))})
+                .then(tokenRes => {
+                    console.log(JSON.parse(tokenRes.data.data))
+                    const token = JSON.parse(tokenRes.data.data).token
+                    
+                    res.cookie('locale', userAsDocument.language);
+                    res.cookie('token', token);
+                    res.json({code: 'login00', comment: 'success'});
+                    return user
+                })
+                .catch(() => {
+                    res.cookie('locale', userAsDocument.language);
+                    res.json({code: 'login00', comment: 'success'});
+                    return user
+                })
         });
     })(req, res, next);
 });
