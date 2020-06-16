@@ -36,7 +36,7 @@
     "express-async-errors": "^3.1.1",
     "express-react-views": "^0.11.0",
     "express-session": "^1.17.1",
-    "helmet": "^3.22.0",
+    "helmet": "^3.23.1",
     "http-status-codes": "^1.4.0",
     "i18n": "^0.10.0",
     "js-cookie": "^2.2.1",
