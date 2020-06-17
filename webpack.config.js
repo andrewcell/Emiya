@@ -24,6 +24,7 @@ module.exports = {
     entry: {
         layout: './src/public/scripts/layout.ts',
         villagers: './src/public/scripts/villagers.tsx',
+        points: './src/public/scripts/points.tsx',
         accounthelp: './src/public/scripts/accounthelp.ts',
         resetpw: './src/public/scripts/resetpw.ts',
     },

@@ -41,6 +41,10 @@ router.get('/info', (req, res) => {
 
 });
 
+router.get(['/points', '/points/:param'], (req, res) => {
+    return res.render('points', {title: res.__('global.title.subtitle', res.__('points.title'))})
+})
+
 // Add sub-routes
 router.use('/emibo', emiboRouter);
 router.use('/lang', LanguageRouter);
