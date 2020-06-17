@@ -1,5 +1,6 @@
+import {PageStatus} from './enums';
+
 export interface PointsMainStates {
     myPoints: Map<string, number>;
-    loaded: boolean;
-    authorized: boolean;
+    pageStatus: PageStatus;
 }

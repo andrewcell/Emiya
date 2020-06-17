@@ -142,5 +142,6 @@ export default new Map([
     ['villagers.detail.color', '선호 색상'],
     ['villagers.detail.style', '선호 스타일'],
     // Points
-    ['points.main.title', '내 주민과 친밀도']
+    ['points.main.title', '내 주민과 친밀도'],
+    ['points.main.error', '오류가 발생하였습니다. 로그인하지 않았다면 로그인을 해주세요.']
 ]);

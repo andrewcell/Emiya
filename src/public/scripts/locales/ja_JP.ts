@@ -137,5 +137,8 @@ export default new Map([
     ['villagers.gift.title', '주민으로 선호 옷 검색'],
     ['villagers.my.code', '고유 번호'],
     ['villagers.my.birthday', '🎂'],
-    ['villagers.my.phrase', '말버릇']
+    ['villagers.my.phrase', '말버릇'],
+    // Points
+    ['points.main.title', '友情ポ'],
+    ['points.main.error', 'エラーが発生しました。 ログインしていない場合はログインしてください。']
 ]);

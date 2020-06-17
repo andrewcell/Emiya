@@ -135,5 +135,8 @@ export default new Map([
     ['villagers.my.phrase', 'Phrase'],
     ['villagers.my.novillagers', 'No villagers added. Go to \'All\' tab, add some villagers.'],
     ['villagers.detail.color', 'Likes Color'],
-    ['villagers.detail.style', 'Likes Style']
+    ['villagers.detail.style', 'Likes Style'],
+    // Points
+    ['points.main.title', 'Friendship Points'],
+    ['points.main.error', 'Error occurred. Please login if you not logged in.']
 ]);

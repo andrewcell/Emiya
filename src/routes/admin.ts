@@ -134,7 +134,8 @@ router.post('/register', (req: Request, res: Response) => {
 
 router.get('/logout', (req: Request, res: Response) => {
     req.session!.destroy(()=>{
-        res.redirect('/')
+        res.clearCookie('token');
+        res.redirect('/');
     })
 });
 
