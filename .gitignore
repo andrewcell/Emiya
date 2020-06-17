@@ -9,6 +9,7 @@ src/public/scripts/layout.js
 src/public/scripts/resetpw.js
 src/public/scripts/accounthelp.js
 src/public/scripts/villagers.js
+src/public/scripts/points.js
 built/*
 tests/cases/rwc/*
 tests/cases/test262/*
