@@ -96,7 +96,7 @@ class Villagers extends React.Component<any, VillagersData> {
         })
     }
 
-    render() {
+    render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
             <div>
                 <BrowserRouter>
