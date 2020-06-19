@@ -10,13 +10,21 @@ const whitelist = new Map([
 
 let language = new Map();
 
-const setLanguage = (lang: string) => {
+let languageConfigured = '';
+
+const setLanguage = (lang: string): void => {
     const data = whitelist.get(lang);
     if (data == null) {
         language = en;
+        languageConfigured = 'en_US';
     } else {
         language = data;
+        languageConfigured = 'ko_KR';
     }
+}
+
+const getLanguage = (): string => {
+    return languageConfigured
 }
 
 const l = (key: string): string => {
@@ -48,4 +56,4 @@ const detectLanguage = (lang: string | null): string => {
     }
 }
 
-export {l, setLanguage, detectLanguage};
+export {l, setLanguage, detectLanguage, getLanguage};

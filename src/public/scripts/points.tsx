@@ -49,7 +49,7 @@ class Points extends React.Component<any, PointsMainStates> {
                     </Container>
                 )
             case PageStatus.LOADING:
-            default:5
+            default:
                 return (
                     <Container>
                         <ProgressBar />

@@ -3,19 +3,27 @@ import ReactDOM from 'react-dom';
 import './locale';
 import MyVillagers from './villagers/MyVillagers';
 import Cookies from 'js-cookie';
-import {detectLanguage, setLanguage} from './locale';
+import {detectLanguage, getLanguage, setLanguage} from './locale';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import VillagersList from './villagers/VillagersList';
 import LinkButtons from './villagers/LinkButtons';
 import axios from 'axios';
-import { VillagersData, Villager } from './villagers/interfaces';
-import { Style, Color } from './villagers/enums';
+import {Villager} from './villagers/interfaces';
+import {Color, Style} from './villagers/enums';
 import {decrypt} from './encryption/AES';
 import VillagerDetail from './villagers/VillagerDetail';
 import VillagerSearchByClothes from './villagers/VillagerSearchByClothes';
 import VillagersPreferGift from './villagers/VillagersPreferGift';
+import {PageStatus} from './points/enums';
+import {Container, ProgressBar} from 'react-materialize';
 
-class Villagers extends React.Component<any, VillagersData> {
+interface VillagersState {
+    pageStatus: PageStatus;
+    allVillagers: Villager[];
+    myVillagers: Villager[];
+}
+
+class Villagers extends React.Component<any, VillagersState> {
     constructor(prop: any) {
         super(prop);
 
@@ -24,9 +32,11 @@ class Villagers extends React.Component<any, VillagersData> {
             Cookies.set('locale', lang);
         }
         setLanguage(Cookies.get('locale') as string);
+        this.setMyVillagers = this.setMyVillagers.bind(this);
+        this.addToMyVillagers = this.addToMyVillagers.bind(this);
+    }
 
-        this.state = {data: [], my: [], renderComplete: false, addVillager: (): void => {return}}
-
+    componentDidMount(): void {
         axios.get('/villagers/react/villagers').then(response => {
             const villagersJson = JSON.parse(decrypt(response.data.data))
             const array: Villager[] = [];
@@ -53,72 +63,77 @@ class Villagers extends React.Component<any, VillagersData> {
                 }
                 array.push(data);
             });
-            this.setState({data: array});
             axios.get('/villagers/react/my/get').then(res => {
                 const arr: string[] = [];
                 const list = JSON.parse(decrypt(res.data.data));
                 list.forEach((value: string) => {
                     arr.push(value);
                 });
-                const filtered: Villager[] = this.state.data.filter((item: Villager) => {
+                const filtered: Villager[] = array.filter((item: Villager) => {
                     return arr.includes(item.code);
                 });
-                this.setState({my: filtered, renderComplete: true});
+                this.setState({myVillagers: filtered, allVillagers: array, pageStatus: PageStatus.LOADED});
             });
         });
-        this.setMyVillagers = this.setMyVillagers.bind(this);
-        this.addToMyVillagers = this.addToMyVillagers.bind(this);
-
     }
 
     setMyVillagers = (arr: Villager[]): void => {
-        this.setState({my: arr});
+        this.setState({myVillagers: arr});
     }
 
     addToMyVillagers = (villager: string): void => {
-        const vill = this.state.data.filter((item: Villager) => {
+        const vill = this.state.allVillagers.filter((item: Villager) => {
             return villager === item.code;
         })
         this.setState((prevState) => {
-            {my: prevState.my?.push(vill[0])}
+            {myVillagers: prevState.myVillagers?.push(vill[0])}
         })
     }
 
     removeVillager = (code: string): void => {
         this.setState((prevState) => {
-            const index = prevState.my?.findIndex(i => {
+            const index = prevState.myVillagers?.findIndex(i => {
                 return i.code === code;
             });
             if (index !== -1 && index != null) {
-                my: prevState.my?.splice(index, 1)
+                myVillagers: prevState.myVillagers?.splice(index, 1)
             }
-            return {my: prevState.my}
+            return {myVillagers: prevState.myVillagers}
         })
     }
 
     render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        return (
-            <div>
-                <BrowserRouter>
-                    <LinkButtons />
-                    <Switch>
-                        <Route exact path={'/villagers'}>
-                            <MyVillagers locale={Cookies.get('locale')} data={this.state.data} my={this.state.my} refresh={this.setMyVillagers} renderComplete={this.state.renderComplete} />
-                        </Route>
-                        <Route exact path={'/villagers/list'}>
-                            <VillagersList locale={Cookies.get('locale')} data={this.state.data} addVillager={this.addToMyVillagers} />
-                        </Route>
-                        <Route exact path={'/villagers/gift'}>
-                            <VillagerSearchByClothes my={this.state.my} />
-                        </Route>
-                        <Route exact path={'/villagers/prefer'}>
-                            <VillagersPreferGift data={this.state.data} />
-                        </Route>
-                        <Route path={'/villagers/:code'}  component={(props: any) => <VillagerDetail {...props} data={this.state.data} removeVillager={this.removeVillager}/>}  />
-                    </Switch>
-                </BrowserRouter>
-            </div>
-        )
+        switch (this.state?.pageStatus) {
+            case PageStatus.LOADED:
+                return (
+                    <div>
+                        <BrowserRouter>
+                            <LinkButtons />
+                            <Switch>
+                                <Route exact path={'/villagers'}>
+                                    <MyVillagers locale={getLanguage()} data={this.state.allVillagers} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus == PageStatus.LOADED} />
+                                </Route>
+                                <Route exact path={'/villagers/list'}>
+                                    <VillagersList locale={getLanguage()} data={this.state.allVillagers} addVillager={this.addToMyVillagers} />
+                                </Route>
+                                <Route exact path={'/villagers/gift'}>
+                                    <VillagerSearchByClothes my={this.state.myVillagers} />
+                                </Route>
+                                <Route exact path={'/villagers/prefer'}>
+                                    <VillagersPreferGift data={this.state.allVillagers} />
+                                </Route>
+                                <Route path={'/villagers/:code'}  component={(props: any): React.ReactElement => <VillagerDetail {...props} data={this.state.allVillagers} removeVillager={this.removeVillager}/>}  />
+                            </Switch>
+                        </BrowserRouter>
+                    </div>
+                )
+            default:
+                return (
+                    <Container>
+                        <ProgressBar />
+                    </Container>
+                )
+        }
     }
 }
 
