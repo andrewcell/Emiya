@@ -77,7 +77,7 @@
     "@types/js-cookie": "^2.2.6",
     "@types/jsonfile": "^6.0.0",
     "@types/materialize-css": "^1.0.8",
-    "@types/mongoose": "^5.7.24",
+    "@types/mongoose": "^5.7.27",
     "@types/morgan": "^1.9.1",
     "@types/mssql": "^6.0.1",
     "@types/node": "^14.0.13",
