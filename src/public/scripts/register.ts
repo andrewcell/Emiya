@@ -9,7 +9,6 @@ export class Register {
         switch (registerResult) {
             case RegisterCode.Success:
                 return Promise.resolve({code: result.code, comment: 'success'});
-                break;
             case RegisterCode.EmailVerificationRequired:
             case RegisterCode.PasswordValidationFailed:
             case RegisterCode.PasswordDoNotMatch:
@@ -32,11 +31,7 @@ export class Register {
             return false;
         }
 
-        if (password.match(regex)) {
-            return true;
-        } else {
-            return false;
-        }
+        return !!password.match(regex);
     }
 }
 

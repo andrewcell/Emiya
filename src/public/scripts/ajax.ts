@@ -3,7 +3,7 @@ import {b64} from './b64';
 
 export class AJAX {
     public static async send(data: any, url: b64): Promise<AjaxResult> {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             $.ajax({
                 type: 'POST',
                 url: url.decode(),
@@ -11,7 +11,7 @@ export class AJAX {
                 success: (data) => {
                     resolve({code: data.code, comment: data.comment});
                 },
-                error: (err) => {
+                error: () => {
                     resolve({code: 500, comment: 'Internal Server Error.'})
                 }
             });

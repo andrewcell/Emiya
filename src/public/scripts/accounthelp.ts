@@ -18,7 +18,7 @@ $(() => {
         const encrypted = encrypt(`{"email": "${value}"}`);
         axios.post('/admin/help/' + url, {data: encrypted}).then(res => {
             M.toast({html: res.data.comment, classes: 'rounded'})
-        }).catch(err => {
+        }).catch(() => {
             M.toast({html: 'Internal Server Error.', classes: 'rounded'});
         });
     }

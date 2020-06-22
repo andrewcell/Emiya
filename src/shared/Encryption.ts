@@ -1,10 +1,10 @@
-import {WordArray, enc, mode, pad, AES} from 'crypto-js';
+import {WordArray, enc, mode, pad, AES, DecryptedMessage} from 'crypto-js';
 
 export const getKey = (): string => {
     return [***REMOVED***].toString()
 }
 
-export const getString = (value: CryptoJS.DecryptedMessage): string => {
+export const getString = (value: DecryptedMessage): string => {
     return enc.Utf8.stringify(value)
 }
 
