@@ -88,7 +88,7 @@
 	"changelog.1": "[Vil]Add Genders, Up to 14, Fix layout glitch on PC",
 	"changelog.2": "Now can use enter key on Login",
 	"navbar.residentservices": "ヘルプ",
-	"footer.copyright": "ドードーセキ © Suyeon Lee. All resources related to Animal CrossingⓇ, owned by Nintendo. オランダと日本にあるサーバー",
+	"footer.copyright": "ドードーセキ © Suyeon Lee. All resources related to Animal CrossingⓇ, owned by Nintendo. 米国と日本にあるサーバー",
 	"residentservices.help.performance": "Performance issue",
 	"residentservices.help.performance.description": "Currently, DodoSeki running on a small server with other services. Of course, DodoSeki has low priority. I'm developing just for fun, But the server is not free. I'm just a humble student. And server processed over 7,000,000 requests, visited over 12,000 people last 30 days.",
 	"villagers.notloggedin": "ログインしていません。すべてのデータが失われます。",
