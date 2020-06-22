@@ -141,6 +141,7 @@ export default new Map([
     ['villagers.my.novillagers', '추가된 주민이 없습니다. "전체 주민 목록" 탭에서 주민을 추가하세요.'],
     ['villagers.detail.color', '선호 색상'],
     ['villagers.detail.style', '선호 스타일'],
+    ['villagers.my.defaultclothes', '기본 옷'],
     // Points
     ['points.main.title', '내 주민과 친밀도'],
     ['points.main.error', '오류가 발생하였습니다. 로그인하지 않았다면 로그인을 해주세요.']

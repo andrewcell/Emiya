@@ -136,6 +136,7 @@ export default new Map([
     ['villagers.my.novillagers', 'No villagers added. Go to \'All\' tab, add some villagers.'],
     ['villagers.detail.color', 'Likes Color'],
     ['villagers.detail.style', 'Likes Style'],
+    ['villagers.my.defaultclothes', 'Default clothes'],
     // Points
     ['points.main.title', 'Friendship Points'],
     ['points.main.error', 'Error occurred. Please login if you not logged in.']
