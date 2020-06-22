@@ -137,6 +137,7 @@ export default new Map([
     ['villagers.detail.color', 'Likes Color'],
     ['villagers.detail.style', 'Likes Style'],
     ['villagers.my.defaultclothes', 'Default clothes'],
+    ['villagers.detail.loadingclothesname', 'Loading clothes...'],
     // Points
     ['points.main.title', 'Friendship Points'],
     ['points.main.error', 'Error occurred. Please login if you not logged in.']
