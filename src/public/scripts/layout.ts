@@ -51,6 +51,7 @@ $(() => {
             .then((result: AjaxResult) => {
                 switch (result.code as string) {
                     case 'login00':
+                        localStorage.setItem('token', result.comment)
                         location.reload()
                         break;
                     case 'login01':

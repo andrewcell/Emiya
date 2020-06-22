@@ -68,7 +68,7 @@ router.post('/login', (req: Request, res: Response, next: NextFunction) => {
                     const token = JSON.parse(tokenRes.data.data).token
                     res.cookie('locale', userAsDocument.language);
                     res.cookie('token', token);
-                    res.json({code: 'login00', comment: 'success'});
+                    res.json({code: 'login00', comment: token});
                     return user
                 })
                 .catch(() => {
