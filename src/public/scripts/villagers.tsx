@@ -85,9 +85,9 @@ class Villagers extends React.Component<any, VillagersState> {
         const vill = this.state.allVillagers.filter((item: Villager) => {
             return villager === item.code;
         })
-        this.setState((prevState) => {
-            {myVillagers: prevState.myVillagers?.push(vill[0])}
-        })
+        this.setState(prevState => ({
+            myVillagers: [...prevState.myVillagers, vill[0]]
+        }));
     }
 
     removeVillager = (code: string): void => {
@@ -95,10 +95,11 @@ class Villagers extends React.Component<any, VillagersState> {
             const index = prevState.myVillagers?.findIndex(i => {
                 return i.code === code;
             });
+            const prevMyVillagers = prevState.myVillagers;
             if (index !== -1 && index != null) {
-                myVillagers: prevState.myVillagers?.splice(index, 1)
+                prevMyVillagers.splice(index, 1);
             }
-            return {myVillagers: prevState.myVillagers}
+            return {myVillagers: prevMyVillagers}
         })
     }
 
