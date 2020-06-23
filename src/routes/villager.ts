@@ -9,6 +9,7 @@ import {decrypt, encrypt} from '@shared/Encryption';
 import MyVillagers, {resize} from '@interfaces/MyVillagersDatabase';
 import {UserDocument} from '@shared/User';
 import {internalError} from '@shared/constants';
+import logger from '@shared/Logger';
 
 const router = Router();
 router.use((req, res, next) => {
@@ -148,6 +149,7 @@ router.delete('/react/my/set', validateReact, (req, res) => {
     }
     return res.json({code: 'villagers00', comment: res.__('ts.villagers.deletesuccess')})
   } catch (e) {
+    logger.error(e.message, e);
     return res.json({code: 500, comment: internalError})
   }
 });
