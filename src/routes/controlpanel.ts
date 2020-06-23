@@ -6,7 +6,7 @@ import path from 'path'
 import { Reader, AsnResponse, CityResponse, CountryResponse } from 'maxmind';
 import { getDataPath } from '@shared/functions'
 import { validateAdmin } from '@shared/validation';
-import User, {UserDocument, userSchema} from '@shared/User';
+import User from '@shared/User';
 import moment from 'moment';
 const router = Router();
 

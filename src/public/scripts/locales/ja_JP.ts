@@ -138,6 +138,8 @@ export default new Map([
     ['villagers.my.code', '고유 번호'],
     ['villagers.my.birthday', '🎂'],
     ['villagers.my.phrase', '말버릇'],
+    ['villagers.my.defaultclothes', '기본 옷'],
+    ['villagers.detail.loadingclothesname', '옷 정보를 가져오는 중...'],
     // Points
     ['points.main.title', '友情ポ'],
     ['points.main.error', 'エラーが発生しました。 ログインしていない場合はログインしてください。']

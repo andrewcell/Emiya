@@ -35,7 +35,7 @@ router.get('/info', (req, res) => {
     }).then(response => {
         const github = moment(response.data[0].commit.author.date);
         return res.render('info', {lastBuildTime, lastCommitTime: github.format('LLLL'), title});
-    }).catch(err => {
+    }).catch(() => {
         return res.render('info', {lastBuildTime, title});
     })
 

@@ -59,7 +59,8 @@ class Villagers extends React.Component<any, VillagersState> {
                     mottoKor: v.motto_kor,
                     mottoEng: v.motto_english,
                     phraseKor: v.phrase_kor,
-                    phraseEng: v.phrase_english
+                    phraseEng: v.phrase_english,
+                    defaultClothes: v.defaultclothes
                 }
                 array.push(data);
             });

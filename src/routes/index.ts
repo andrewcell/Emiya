@@ -1,12 +1,10 @@
 import { Request, Response, Router} from 'express';
-import {readSync, readFileSync, existsSync, writeFileSync} from 'fs';
+import {readFileSync, existsSync, writeFileSync} from 'fs';
 import path from 'path';
 
 import {Villager} from '@interfaces/villagerData';
 import {DownloadKey} from '@interfaces/downloadKey';
-import {Log, LogJson} from '@interfaces/logJson';
-
-import {Session} from 'inspector';
+import {LogJson} from '@interfaces/logJson';
 
 const downloadKey = new Map<string, DownloadKey>();
 
@@ -172,11 +170,6 @@ router.get('/data/:key', ((req: Request, res: Response) => {
         }
     }
 }));
-
-interface Ranking {
-    name: string;
-    count: number;
-}
 
 interface RankingPublic {
     image: string;

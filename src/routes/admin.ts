@@ -21,11 +21,7 @@ const validatePassword = (password: string): boolean => {
         return false;
     }
 
-    if (regex.exec(password)) {
-        return true;
-    } else {
-        return false;
-    }
+    return !!regex.exec(password);
 }
 
 const validateUsername = (username: string): boolean => {
@@ -33,11 +29,7 @@ const validateUsername = (username: string): boolean => {
     if (username.length < 4 || username.length > 24) {
         return false;
     }
-    if (regex.exec(username)) {
-        return false;
-    } else {
-        return true;
-    }
+    return !regex.exec(username);
 }
 
 const generateSalt = (len = 32): string => {
@@ -68,7 +60,7 @@ router.post('/login', (req: Request, res: Response, next: NextFunction) => {
                     const token = JSON.parse(tokenRes.data.data).token
                     res.cookie('locale', userAsDocument.language);
                     res.cookie('token', token);
-                    res.json({code: 'login00', comment: 'success'});
+                    res.json({code: 'login00', comment: token});
                     return user
                 })
                 .catch(() => {
@@ -172,7 +164,7 @@ router.post('/help/resetpassword', (req, res) => {
                     return res.json({code: 'help01', comment: res.__('ts.accounthelp.help.alreadysent')})
                 }
                 const hash = getRandomString(24);
-                const result = await User.findOneAndUpdate({email}, {resetPasswordHash: hash, resetPasswordTime: Date.now()});
+                await User.findOneAndUpdate({email}, {resetPasswordHash: hash, resetPasswordTime: Date.now()});
                 const html = Mail.generateResetPassword(email, hash, res.__('ts.accounthelp.clickheretoresetpassword'));
                 SendGrid.send(email, res.__('ts.accounthelp.clickheretoresetpasswordtitle'), html).then(() => {
                     return res.json({code: 'help00', comment: res.__('ts.accounthelp.help.sentemail')})
@@ -204,7 +196,7 @@ router.get('/help/resetpassword/:hash', (req, res) => {
                 return res.render('resetpassword', {hash: req.params.hash, title});
             }
         })
-        .catch(error => {
+        .catch(() => {
            return res.status(500).render('error');
         });
 });
@@ -239,7 +231,7 @@ router.post('/help/resetpassword/:hash', (req, res) => {
                 }
             }
         })
-        .catch(error => {
+        .catch(() => {
             return res.json({code: 500, comment: internalError});
         });
 });

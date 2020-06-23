@@ -15,7 +15,7 @@ $(() => {
         axios.post('/admin/help/resetpassword/' + hash, {data: encrypted}).then(res => {
             if (res.data.code === 'help00') {
                 $('.row').remove();
-                $('.container').append('<h6>' + res.data.comment + '</h6>')
+                $('.container').append(`<h6>${res.data.comment}</h6>`)
             }
             M.toast({html: res.data.comment, classes: 'rounded'})
         }).catch(() => {
