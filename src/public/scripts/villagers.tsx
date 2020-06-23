@@ -113,7 +113,7 @@ class Villagers extends React.Component<any, VillagersState> {
                             <LinkButtons />
                             <Switch>
                                 <Route exact path={'/villagers'}>
-                                    <MyVillagers locale={getLanguage()} data={this.state.allVillagers} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus == PageStatus.LOADED} />
+                                    <MyVillagers locale={getLanguage()} data={this.state.allVillagers} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus == PageStatus.LOADED} removeVillager={this.removeVillager} />
                                 </Route>
                                 <Route exact path={'/villagers/list'}>
                                     <VillagersList locale={getLanguage()} data={this.state.allVillagers} addVillager={this.addToMyVillagers} />
