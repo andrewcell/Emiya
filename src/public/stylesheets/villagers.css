@@ -22,4 +22,19 @@
     .villagerImage {
         width:20%;
     }
+
+    #detail {
+        width: 95% !important;
+        max-width: 100% !important;
+    }
+
+    #detail > p{
+        font-size: 7px !important;
+    }
+
+    #detail > .modal-content {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
 }
