@@ -113,7 +113,7 @@
     "jquery": "^3.5.1",
     "json-loader": "^0.5.7",
     "jsonfile": "^6.0.1",
-    "materialinse-react": "0.0.1",
+    "materialinse-reactjs": "0.0.1",
     "materialize-css": "^1.0.0",
     "nodemon": "^2.0.4",
     "nodemon-webpack-plugin": "^4.3.2",
