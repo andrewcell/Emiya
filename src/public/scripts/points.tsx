@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Card, Col, Collection, Container, ProgressBar, Row} from 'react-materialize';
+import {Card, Col, Collection, Container, ProgressBar, Row} from 'materialinse-react';
 import {detectLanguage, l, setLanguage} from './locale';
 import Cookies from 'js-cookie';
 import Axios from 'axios';

@@ -15,7 +15,7 @@ import VillagerDetail from './villagers/VillagerDetail';
 import VillagerSearchByClothes from './villagers/VillagerSearchByClothes';
 import VillagersPreferGift from './villagers/VillagersPreferGift';
 import {PageStatus} from './points/enums';
-import {Container, ProgressBar} from 'react-materialize';
+import {Container, ProgressBar} from 'materialinse-react';
 
 interface VillagersState {
     pageStatus: PageStatus;

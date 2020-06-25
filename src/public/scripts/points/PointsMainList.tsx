@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Collection, ProgressBar, Row} from 'react-materialize';
+import {Col, Collection, ProgressBar, Row} from 'materialinse-react';
 
 interface PointsMainListProps {
     myPoints: Map<string, number>;
