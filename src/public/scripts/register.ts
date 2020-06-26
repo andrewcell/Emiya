@@ -6,19 +6,7 @@ export class Register {
     public static async register(username: string, password: string, password2: string, email: string): Promise<AjaxResult> {
         const result: AjaxResult = await AJAX.send({data: encrypt(JSON.stringify({username, password, password2, email}))}, new b64('L2FkbWluL3JlZ2lzdGVy'));
         const registerResult: RegisterCode = RegisterCode[result.code as keyof typeof RegisterCode]
-        switch (registerResult) {
-            case RegisterCode.Success:
-                return Promise.resolve({code: result.code, comment: 'success'});
-            case RegisterCode.EmailVerificationRequired:
-            case RegisterCode.PasswordValidationFailed:
-            case RegisterCode.PasswordDoNotMatch:
-            case RegisterCode.UsernameOccupied:
-            case RegisterCode.EmailOccupied:
-            case RegisterCode.BannedClient:
-            case RegisterCode.RegisterNotAllowed:
-            default:
-                return Promise.resolve({code: result.code, comment: result.comment, enumResult: registerResult});
-        }
+        return Promise.resolve({code: result.code, comment: result.comment, enumResult: registerResult});
     }
 
     public static checkPassword(password: string, password2: string): boolean {

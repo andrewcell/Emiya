@@ -70,13 +70,13 @@ $(() => {
             disableButton($('#registerButton'));
             Register.register(registerUsername.val() as string, registerPassword.val() as string, registerPassword2.val() as string, registerEmail.val() as string)
                 .then(result => {
+                    M.toast({html: result.comment, classes: 'rounded'});
                     if (result.code === 'register07') {
                         const modal = document.querySelector('#register-modal');
                         if (modal != null) {
                             M.Modal.getInstance(modal).close();
                         }
                     } else {
-                        M.toast({html: result.comment, classes: 'rounded'});
                         enableButton($('#registerButton'));
                     }
                 });
