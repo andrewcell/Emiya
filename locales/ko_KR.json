@@ -41,7 +41,7 @@
 	"modal.register.passwordnotmatched": "두 개의 입력 값이 일치하지 않습니다.",
 	"modal.register.password2helper": "비밀번호를 동일하게 한번 더 입력해야 합니다.",
 	"modal.register.username": "사용자 이름 (아이디)",
-	"modal.register.registerbutton": "회원가입",
+	"modal.register.registerbutton": "가입 및 이메일 인증메일 전송",
 	"modal.register.close": "닫기",
 	"ts.constants.internalerror": "내부 서버 오류.",
 	"ts.admin.login.invalidlogin": "사용자 이름 혹은 비밀번호가 잘못되었습니다.",
