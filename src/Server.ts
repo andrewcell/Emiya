@@ -90,8 +90,6 @@ mongoose.connect(process.env.MONGODB as string, { useNewUrlParser: true, useUnif
         logger.error(err.message, err);
         process.exit(1);
     });
-// Add APIs
-app.use('/', BaseRouter);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     if (req.headers.referer != null || req.headers.referer === '') {
@@ -111,6 +109,52 @@ app.use((req: Request, res: Response, next: NextFunction) => {
         next();
     }
 });
+
+interface reportBody {
+    ip: string;
+    useragent: string;
+    path: string;
+    method: string;
+    datetime: number;
+    body: string;
+}
+
+app.use((req: Request, res: Response, next: NextFunction) => {
+    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    if (req.method.toLowerCase() === 'post') {
+        if (req.url !== '/admin/login') {
+            try {
+                const ac: reportBody = {
+                    ip: ip!.toString(),
+                    useragent: req.headers["user-agent"]!,
+                    path: req.url,
+                    method: req.method,
+                    datetime: Date.now(),
+                    body: req.body!
+                }
+                const filename = 'post.json';
+                if (!existsSync(filename)) {
+                    console.log(filename)
+                    writeFileSync(filename, '{"data": []}')
+                }
+                const postBody: reportBody[] = JSON.parse(readFileSync(filename, 'utf8')).data
+                postBody.push(ac)
+                writeFileSync(filename, JSON.stringify({data: postBody}, null, 4))
+                next();
+            } catch (error) {
+                console.log(error)
+                logger.error(error.message, error);
+                next();
+            }
+        }
+    }
+    next();
+});
+
+// Add APIs
+app.use('/', BaseRouter);
+
+
 
 /*
 app.use((req, res, next) => {
