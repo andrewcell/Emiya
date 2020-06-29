@@ -31,7 +31,7 @@ module.exports = {
         points: './src/public/scripts/points.tsx',
         accounthelp: './src/public/scripts/accounthelp.ts',
         resetpw: './src/public/scripts/resetpw.ts',
-        campsite: './src/public/scripts/campsite/App.vue',
+        campsite: './src/public/scripts/campsite.ts',
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.vue']

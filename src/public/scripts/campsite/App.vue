@@ -1,8 +1,9 @@
 <template>
-    <div id="app">
+    <div class="container">
+        <h1>It works!</h1>
     </div>
 </template>
-<script>
+<script lang='ts'>
     export default {
         name: 'App'
     }

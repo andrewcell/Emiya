@@ -43,7 +43,12 @@ router.get('/info', (req, res) => {
 
 router.get(['/points', '/points/:param'], (req, res) => {
     return res.render('points', {title: res.__('global.title.subtitle', res.__('points.title'))})
+});
+
+router.get(['/campsite', '/campsite/:param'], (req, res) => {
+    return res.render('campsite', {title: res.__('global.title.subtitle', res.__('campsite.title'))})
 })
+
 
 // Add sub-routes
 router.use('/emibo', emiboRouter);
