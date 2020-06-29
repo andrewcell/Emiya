@@ -1,14 +1,18 @@
 const path = require('path');
 const nodemon = require('nodemon-webpack-plugin');
 const shell = require('webpack-shell-plugin');
+const vueLoaderPlugin = require('vue-loader/lib/plugin');
+
 module.exports = {
     mode: 'development',
     module: {
         rules: [
+            { test: /\.vue$/, loader: 'vue-loader' },
             {
                 test: /\.ts|\.tsx?$/,
-                use: 'ts-loader',
-                exclude: '/node_modules/'
+                loader: 'ts-loader',
+                exclude: '/node_modules/',
+                options: { appendTsSuffixTo: [/\.vue$/] }
             },
             {
                 test: /\.jsx?$/,
@@ -27,15 +31,16 @@ module.exports = {
         points: './src/public/scripts/points.tsx',
         accounthelp: './src/public/scripts/accounthelp.ts',
         resetpw: './src/public/scripts/resetpw.ts',
+        campsite: './src/public/scripts/campsite/App.vue',
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js']
+        extensions: ['.ts', '.tsx', '.js', '.vue']
     },
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'src', 'public', 'scripts')
     },
     plugins: [
-
+        new vueLoaderPlugin()
     ]
 }

@@ -10,6 +10,7 @@ src/public/scripts/resetpw.js
 src/public/scripts/accounthelp.js
 src/public/scripts/villagers.js
 src/public/scripts/points.js
+src/public/scripts/campsite.js
 built/*
 tests/cases/rwc/*
 tests/cases/test262/*

@@ -7,6 +7,7 @@ module.exports = {
     module: config.module,
     entry: config.entry,
     resolve: config.resolve,
+    plugins: config.plugins,
     optimization: {
         minimize: true,
         minimizer: [new terserPlugin()]
