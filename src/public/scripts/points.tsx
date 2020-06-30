@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Card, Col, Collection, Container, ProgressBar, Row} from 'materialinse-reactjs';
 import {detectLanguage, l, setLanguage} from './locale';
 import Cookies from 'js-cookie';
 import Axios from 'axios';
@@ -9,6 +8,7 @@ import {emiyaJ, url} from './api';
 import {decryptJava} from './encryption/AES';
 import {PageStatus} from './points/enums';
 import PointsMainList from './points/PointsMainList';
+import Header from './materialui/header';
 
 class Points extends React.Component<any, PointsMainStates> {
     constructor(props: any) {
@@ -32,30 +32,41 @@ class Points extends React.Component<any, PointsMainStates> {
             });
     }
 
-    render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    getContent(): JSX.Element {
         switch (this.state?.pageStatus) {
             case PageStatus.LOADED:
                 return (
                     <div>
-                        <Card title={l('points.main.title')}>
-                            <PointsMainList myPoints={this.state.myPoints} />
-                        </Card>
+
+                        <PointsMainList myPoints={this.state.myPoints} />
+
                     </div>
                 )
             case PageStatus.ERROR:
                 return (
-                    <Container>
-                        <h5>{l('points.main.error')}</h5>
-                    </Container>
+
+                    <h5>{l('points.main.error')}</h5>
+
                 )
             case PageStatus.LOADING:
             default:
                 return (
-                    <Container>
-                        <ProgressBar />
-                    </Container>
+                    <h3>Loading</h3>
                 )
         }
+    }
+
+    render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+        return (
+            <div>
+                <header>
+                    <Header/>
+                </header>
+                <section>
+                    {this.getContent()}
+                </section>
+            </div>
+        )
     }
 }
 
