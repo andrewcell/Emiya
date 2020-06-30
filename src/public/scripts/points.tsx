@@ -9,7 +9,7 @@ import {decryptJava} from './encryption/AES';
 import {PageStatus} from './points/enums';
 import PointsMainList from './points/PointsMainList';
 import Header from './materialui/header';
-import {CircularProgress, Container, Grid} from '@material-ui/core';
+import {CircularProgress, Container, Grid, Typography, BottomNavigationAction} from '@material-ui/core';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 
 class Points extends React.Component<any, PointsMainStates> {
@@ -39,17 +39,11 @@ class Points extends React.Component<any, PointsMainStates> {
             case PageStatus.LOADED:
                 return (
                     <div>
-
                         <PointsMainList myPoints={this.state.myPoints} />
-
                     </div>
                 )
             case PageStatus.ERROR:
-                return (
-
-                    <h5>{l('points.main.error')}</h5>
-
-                )
+                return <Typography variant={'h3'}>{l('points.main.error')}</Typography>
             case PageStatus.LOADING:
             default:
                 return <Grid
@@ -69,15 +63,15 @@ class Points extends React.Component<any, PointsMainStates> {
         return (
             <div>
                 <header>
-                    <Header/>
+                    <Header loginStatus={true} username={'asc'}/>
                 </header>
                 <Container>
                     <Grid alignContent={'center'}>
                         {this.getContent()}
                     </Grid>
                 </Container>
-                <BottomNavigation>
-
+                <BottomNavigation value={''} style={{width: '500px'}}>
+                    <BottomNavigationAction label="test" />
                 </BottomNavigation>
             </div>
         )
