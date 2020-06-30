@@ -144,6 +144,7 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
+    "vue-eslint-parser": "^7.1.0",
     "vue-loader": "^15.9.3",
     "vue-property-decorator": "^9.0.0",
     "vue-template-compiler": "^2.6.11",

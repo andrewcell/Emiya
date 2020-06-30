@@ -17,29 +17,56 @@ module.exports = {
         "es6": true,
         "node": true
     },
-    "extends": [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:react/recommended",
-
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "project": "tsconfig.json",
-        "sourceType": "module",
-    },
-    "overrides": [
+    overrides: [
         {
-            files: ["*.vue"],
+            "files": ["*.tsx", "*.jsx", "*.ts", "*.js"],
+            "parserOptions": {
+                "project": "tsconfig.json",
+                "sourceType": "module",
+                "extraFileExtensions": ".vue"
+            },
+            "parser": "@typescript-eslint/parser",
             extends: [
-                "plugin:vue/base", "plugin:vue/vue3-strongly-recommended", "@vue/typescript"
-            ]
+                "plugin:@typescript-eslint/recommended",
+                "plugin:@typescript-eslint/recommended-requiring-type-checking",
+                "plugin:react/recommended"
+            ],
+        },
+        {
+            "files": ["*.vue"],
+            "extends": [
+                "@vue/typescript",
+                "plugin:vue/recommended"
+            ],
+            parserOptions: {
+                sourceType: "module",
+                ecmaVersion: 6,
+            },
+            parser: "vue-eslint-parser",
+
         }
     ],
+    /*
+
+
+
+    ],*/
+
+    /*"overrides": [
+        {
+            "files": ["*.tsx", "*.jsx", "*.ts"],
+
+        },
+        {
+            "files": ["*.vue"],
+            "extends":
+        }
+
+    ],*/
     "plugins": [
         "@typescript-eslint",
         "jsdoc",
-        "prefer-arrow"
+        "prefer-arrow",
     ],
     "rules": {
         "@typescript-eslint/array-type": [
@@ -193,13 +220,6 @@ module.exports = {
             }
         ],
         "use-isnan": "error",
-        "valid-typeof": "off",
-        "vue/max-attributes-per-line": ["error", {
-            "singleline": 1,
-            "multiline": {
-                "max": 1,
-                "allowFirstLine": false
-            }
-        }]
+        "valid-typeof": "off"
     }
 };
