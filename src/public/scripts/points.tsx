@@ -9,7 +9,7 @@ import {decryptJava} from './encryption/AES';
 import {PageStatus} from './points/enums';
 import PointsMainList from './points/PointsMainList';
 import Header from './materialui/header';
-import {CircularProgress, Container, Grid, Typography, BottomNavigationAction} from '@material-ui/core';
+import {BottomNavigationAction, CircularProgress, Container, Grid, Typography} from '@material-ui/core';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 
 class Points extends React.Component<any, PointsMainStates> {
@@ -39,11 +39,11 @@ class Points extends React.Component<any, PointsMainStates> {
             case PageStatus.LOADED:
                 return (
                     <div>
-                        <PointsMainList myPoints={this.state.myPoints} />
+                        <PointsMainList myPoints={this.state.myPoints}/>
                     </div>
                 )
             case PageStatus.ERROR:
-                return <Typography variant={'h3'}>{l('points.main.error')}</Typography>
+                return <Typography variant={'h5'}>{l('points.main.error')}</Typography>
             case PageStatus.LOADING:
             default:
                 return <Grid
@@ -52,9 +52,9 @@ class Points extends React.Component<any, PointsMainStates> {
                     direction={'column'}
                     alignItems={'center'}
                     justify={'center'}
-                    style={{ minHeight: '100vh' }}
-                    >
-                        <CircularProgress />
+                    style={{minHeight: '100vh'}}
+                >
+                    <CircularProgress/>
                 </Grid>
         }
     }
@@ -63,7 +63,7 @@ class Points extends React.Component<any, PointsMainStates> {
         return (
             <div>
                 <header>
-                    <Header loginStatus={true} username={'asc'}/>
+                    <Header loginStatus={true} username={'asc'} />
                 </header>
                 <Container>
                     <Grid alignContent={'center'}>
@@ -71,11 +71,11 @@ class Points extends React.Component<any, PointsMainStates> {
                     </Grid>
                 </Container>
                 <BottomNavigation value={''} style={{width: '500px'}}>
-                    <BottomNavigationAction label="test" />
+                    <BottomNavigationAction label="test"/>
                 </BottomNavigation>
             </div>
         )
     }
 }
 
-ReactDOM.render(<Points />, document.getElementById('reactApp'));
+ReactDOM.render(<Points/>, document.getElementById('reactApp'));

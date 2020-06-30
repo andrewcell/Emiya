@@ -11,6 +11,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import useTheme from '@material-ui/core/styles/useTheme';
 import clsx from 'clsx';
+import {l} from "../locale";
 
 const drawerWidth = 240;
 
@@ -76,70 +77,69 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
- const Header = (props: HeaderProp): JSX.Element => {
+const Header = (props: HeaderProp): JSX.Element => {
     const classes = useStyles();
     const theme = useTheme();
     const {window} = props;
-     const [open, setOpen] = React.useState(false);
-     const handleDrawerOpen = (): void => {
-         setOpen(true);
-     };
+    const [open, setOpen] = React.useState(false);
+    const handleDrawerOpen = (): void => {
+     setOpen(true);
+    };
 
-     const handleDrawerClose = (): void => {
-         setOpen(false);
-     };
+    const handleDrawerClose = (): void => {
+     setOpen(false);
+    };
 
-     const container = window != null ? (): HTMLElement => window().document.body : null;
+    const container = window != null ? (): HTMLElement => window().document.body : null;
 
     return (
-        <div className={classes.root}>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton edge="start" className={clsx(classes.menuButton, open && classes.hide)} onClick={handleDrawerOpen} color="inherit" aria-label="menu">
+         <div className={classes.root}>
+             <AppBar position="static" style={{backgroundColor: '#4caf50'}}>
+                 <Toolbar>
+                     <IconButton edge="start" className={clsx(classes.menuButton, open)} onClick={handleDrawerOpen} color="inherit" aria-label="menu">
                         <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" className={classes.title}>
-                        News
-                    </Typography>
-                    <Button color="inherit">Login</Button>
-                </Toolbar>
-            </AppBar>
-            <Drawer
-                container={container}
-                className={classes.drawer}
-                variant="persistent"
-                anchor={'left'}
-                open={open}
-                classes={{paper: classes.drawerPaper}}
-                ModalProps={{
-                    keepMounted: true, // Better open performance on mobile.
-                }}
-            >
-                <div className={classes.drawerHeader}>
-                    <IconButton onClick={handleDrawerClose}>
-                        {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-                    </IconButton>
-                </div>
-                <Divider />
-                <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon />
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>
-                <Divider />
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon />
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>
-            </Drawer>
-
+                     </IconButton>
+                     <Typography variant="h5" className={classes.title}>
+                         DodoSeki
+                     </Typography>
+                     <Button color="inherit">{l('layout.login')}</Button>
+                 </Toolbar>
+             </AppBar>
+             <Drawer
+                 container={container}
+                 className={classes.drawer}
+                 variant="persistent"
+                 anchor={'left'}
+                 open={open}
+                 classes={{paper: classes.drawerPaper}}
+                 ModalProps={{
+                     keepMounted: true, // Better open performance on mobile.
+                 }}
+             >
+                 <div className={classes.drawerHeader}>
+                     <IconButton onClick={handleDrawerClose}>
+                         <ChevronLeftIcon />
+                     </IconButton>
+                 </div>
+                 <Divider />
+                 <List>
+                     {['1', '2', '3', '4'].map((text, index) => (
+                         <ListItem button key={text}>
+                             <ListItemIcon />
+                             <ListItemText primary={text} />
+                         </ListItem>
+                     ))}
+                 </List>
+                 <Divider />
+                 <List>
+                     {['A', 'B', 'C'].map((text, index) => (
+                         <ListItem button key={text}>
+                             <ListItemIcon />
+                             <ListItemText primary={text} />
+                         </ListItem>
+                     ))}
+                 </List>
+             </Drawer>
         </div>
     )
 }

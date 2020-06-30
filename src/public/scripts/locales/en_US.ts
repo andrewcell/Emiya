@@ -140,5 +140,6 @@ export default new Map([
     ['villagers.detail.loadingclothesname', 'Loading clothes...'],
     // Points
     ['points.main.title', 'Friendship Points'],
-    ['points.main.error', 'Error occurred. Please login if you not logged in.']
+    ['points.main.error', 'Error occurred. Please login if you not logged in.'],
+    ['layout.login', 'Login'],
 ]);

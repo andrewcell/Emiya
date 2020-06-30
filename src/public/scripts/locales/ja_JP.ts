@@ -142,5 +142,6 @@ export default new Map([
     ['villagers.detail.loadingclothesname', '옷 정보를 가져오는 중...'],
     // Points
     ['points.main.title', '友情ポ'],
-    ['points.main.error', 'エラーが発生しました。 ログインしていない場合はログインしてください。']
+    ['points.main.error', 'エラーが発生しました。 ログインしていない場合はログインしてください。'],
+    ['layout.login', '로그인'],
 ]);

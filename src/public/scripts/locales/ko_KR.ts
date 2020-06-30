@@ -145,5 +145,7 @@ export default new Map([
     ['villagers.detail.loadingclothesname', '옷 정보를 가져오는 중...'],
     // Points
     ['points.main.title', '내 주민과 친밀도'],
-    ['points.main.error', '오류가 발생하였습니다. 로그인하지 않았다면 로그인을 해주세요.']
+    ['points.main.error', '오류가 발생하였습니다. 로그인하지 않았다면 로그인을 해주세요.'],
+    // LAyout
+    ['layout.login', '로그인'],
 ]);
