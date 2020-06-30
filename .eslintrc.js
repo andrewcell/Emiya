@@ -20,13 +20,22 @@ module.exports = {
     "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "project": "tsconfig.json",
-        "sourceType": "module"
+        "sourceType": "module",
     },
+    "overrides": [
+        {
+            files: ["*.vue"],
+            extends: [
+                "plugin:vue/base", "plugin:vue/vue3-strongly-recommended", "@vue/typescript"
+            ]
+        }
+    ],
     "plugins": [
         "@typescript-eslint",
         "jsdoc",
@@ -184,6 +193,13 @@ module.exports = {
             }
         ],
         "use-isnan": "error",
-        "valid-typeof": "off"
+        "valid-typeof": "off",
+        "vue/max-attributes-per-line": ["error", {
+            "singleline": 1,
+            "multiline": {
+                "max": 1,
+                "allowFirstLine": false
+            }
+        }]
     }
 };

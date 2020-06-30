@@ -43,6 +43,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/public/scripts/*.tsx",
+    "src/public/scripts/**/*.vue",
     "spec/**/*.ts"
   ],
   "exclude": [

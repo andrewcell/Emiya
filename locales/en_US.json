@@ -127,5 +127,6 @@
 	"residentservices.information.email": "Email",
 	"residentservices.information.dicord": "Discord",
 	"residentservices.information.dcinside": "Dcinside (Korean)",
-	"points.title": "Friendship Points"
+	"points.title": "Friendship Points",
+	"campsite.title": "Campsite"
 }
