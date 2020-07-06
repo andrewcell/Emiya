@@ -58,6 +58,7 @@
     "sqlite3": "^5.0.0",
     "tslint-to-eslint-config": "^1.0.0",
     "uglify-js": "^3.10.0",
+    "vue-material": "^1.0.0-beta-14",
     "webpack-shell-plugin": "^0.5.0",
     "winston": "^3.3.3"
   },

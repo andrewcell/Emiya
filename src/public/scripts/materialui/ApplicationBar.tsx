@@ -1,5 +1,16 @@
 import React from 'react';
-import {AppBar, IconButton, Theme, Toolbar, Typography, Button, createStyles, List, Drawer} from '@material-ui/core';
+import {
+    AppBar,
+    IconButton,
+    Theme,
+    Toolbar,
+    Typography,
+    Button,
+    createStyles,
+    List,
+    Drawer,
+    Hidden
+} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import {makeStyles} from '@material-ui/core/styles';
 import {HeaderProp} from './interfaces';
@@ -12,6 +23,9 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import useTheme from '@material-ui/core/styles/useTheme';
 import clsx from 'clsx';
 import {l} from '../locale';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import ListItemLink from './LinkItemLink';
 
 const drawerWidth = 240;
 
@@ -20,59 +34,26 @@ const useStyles = makeStyles((theme: Theme) =>
         root: {
             display: 'flex',
         },
-        appBar: {
-            transition: theme.transitions.create(['margin', 'width'], {
-                easing: theme.transitions.easing.sharp,
-                duration: theme.transitions.duration.leavingScreen,
-            }),
+        drawer: {
+
+                width: drawerWidth,
+                flexShrink: 0,
+
         },
-        appBarShift: {
-            width: `calc(100% - ${drawerWidth}px)`,
-            marginLeft: drawerWidth,
-            transition: theme.transitions.create(['margin', 'width'], {
-                easing: theme.transitions.easing.easeOut,
-                duration: theme.transitions.duration.enteringScreen,
-            }),
+        appBar: {
+            backgroundColor: '#4caf50',
+        },
+        title: {
+            flexGrow: 1
         },
         menuButton: {
-            marginRight: theme.spacing(2),
-        },
-        hide: {
-            display: 'none',
-        },
-        drawer: {
-            width: drawerWidth,
-            flexShrink: 0,
+            marginRight: theme.spacing(2)
         },
         drawerPaper: {
             width: drawerWidth,
         },
-        drawerHeader: {
-            display: 'flex',
-            alignItems: 'center',
-            padding: theme.spacing(0, 1),
-            // necessary for content to be below app bar
-            ...theme.mixins.toolbar,
-            justifyContent: 'flex-end',
-        },
-        content: {
-            flexGrow: 1,
-            padding: theme.spacing(3),
-            transition: theme.transitions.create('margin', {
-                easing: theme.transitions.easing.sharp,
-                duration: theme.transitions.duration.leavingScreen,
-            }),
-            marginLeft: -drawerWidth,
-        },
-        contentShift: {
-            transition: theme.transitions.create('margin', {
-                easing: theme.transitions.easing.easeOut,
-                duration: theme.transitions.duration.enteringScreen,
-            }),
-            marginLeft: 0,
-        },
-        title: {
-            flexGrow: 1
+        menuTitle: {
+            margin: theme.spacing(4, 0, 2)
         }
     }),
 );
@@ -80,23 +61,75 @@ const useStyles = makeStyles((theme: Theme) =>
 const Header = (props: HeaderProp): JSX.Element => {
     const classes = useStyles();
     const theme = useTheme();
-    const {window} = props;
     const [open, setOpen] = React.useState(false);
-    const handleDrawerOpen = (): void => {
-        setOpen(true);
+    const closeDrawer = (value: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+        if (
+            event.type === 'keydown' &&
+            ((event as React.KeyboardEvent).key === 'Tab' ||
+                (event as React.KeyboardEvent).key === 'Shift')
+        ) {
+            return;
+        }
+        setOpen(value);
     };
 
-    const handleDrawerClose = (): void => {
-        setOpen(false);
-    };
+    const toggleDrawer = (): void => {
+        setOpen(!open);
+    }
 
-    const container = window != null ? (): HTMLElement => window().document.body : null;
+    const villagerMenu = [
+        {title: 'My Villagers', link: '/villagers/my'},
+        {title: 'Villagers List', link: '/villagers/my'},
+        {title: 'Search by Clothes', link: '/villagers/my'},
+        {title: 'Search prefer clothes', link: '/villagers/my'},
+    ]
 
+
+
+    const menuItem = (
+        <div onClick={closeDrawer(false)} onKeyDown={closeDrawer(false)}>
+            <ListSubheader>{'Emibo'}</ListSubheader>
+            <List>
+                {['1', '2', '3', '4'].map((text, index) => (
+                    <ListItem button key={text}>
+                        <ListItemIcon />
+                        <ListItemText primary={text} />
+                    </ListItem>
+                ))}
+            </List>
+            <ListSubheader>{'villagers'}</ListSubheader>
+            {villagerMenu.map((menu, index) => (
+                <ListItemLink href={menu.link} key={index}>
+                    <ListItemText primary={menu.title} />
+                </ListItemLink>
+            ))}
+            <ListSubheader>{'points'}</ListSubheader>
+            {villagerMenu.map((menu, index) => (
+                <ListItemLink href={menu.link} key={index}>
+                    <ListItemText primary={menu.title} />
+                </ListItemLink>
+            ))}
+            <ListSubheader>{'campsite'}</ListSubheader>
+            {villagerMenu.map((menu, index) => (
+                <ListItemLink href={menu.link} key={index}>
+                    <ListItemText primary={menu.title} />
+                </ListItemLink>
+            ))}
+            <ListSubheader>{'resident services'}</ListSubheader>
+            {villagerMenu.map((menu, index) => (
+                <ListItemLink href={menu.link} key={index}>
+                    <ListItemText primary={menu.title} />
+                </ListItemLink>
+            ))}
+
+        </div>
+    )
     return (
         <div className={classes.root}>
-            <AppBar position="static" style={{backgroundColor: '#4caf50'}}>
+            <CssBaseline />
+            <AppBar position="static" className={classes.appBar}>
                 <Toolbar>
-                    <IconButton edge="start" className={clsx(classes.menuButton, open)} onClick={handleDrawerOpen} color="inherit" aria-label="menu">
+                    <IconButton edge="start" className={classes.menuButton} onClick={toggleDrawer} color="inherit" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h5" className={classes.title}>
@@ -105,40 +138,8 @@ const Header = (props: HeaderProp): JSX.Element => {
                     <Button color="inherit">{l('layout.login')}</Button>
                 </Toolbar>
             </AppBar>
-            <Drawer
-                container={container}
-                className={classes.drawer}
-                variant="persistent"
-                anchor={'left'}
-                open={open}
-                classes={{paper: classes.drawerPaper}}
-                ModalProps={{
-                    keepMounted: true, // Better open performance on mobile.
-                }}
-            >
-                <div className={classes.drawerHeader}>
-                    <IconButton onClick={handleDrawerClose}>
-                        <ChevronLeftIcon />
-                    </IconButton>
-                </div>
-                <Divider />
-                <List>
-                    {['1', '2', '3', '4'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon />
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>
-                <Divider />
-                <List>
-                    {['A', 'B', 'C'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon />
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>
+            <Drawer className={classes.drawer} variant="temporary" anchor={'left'} open={open} onClose={toggleDrawer} ModalProps={{keepMounted: true}} classes={{paper: classes.drawerPaper}}>
+                {menuItem}
             </Drawer>
         </div>
     )

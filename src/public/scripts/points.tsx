@@ -8,7 +8,7 @@ import {emiyaJ, url} from './api';
 import {decryptJava} from './encryption/AES';
 import {PageStatus} from './points/enums';
 import PointsMainList from './points/PointsMainList';
-import Header from './materialui/header';
+import Header from './materialui/Header';
 import {BottomNavigationAction, CircularProgress, Container, Grid, Typography} from '@material-ui/core';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 
