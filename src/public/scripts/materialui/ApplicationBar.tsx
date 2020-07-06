@@ -26,6 +26,7 @@ import {l} from '../locale';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import ListItemLink from './LinkItemLink';
+import ApplicationBarMenuGroup from './ApplicationBarMenuGroup';
 
 const drawerWidth = 240;
 
@@ -88,40 +89,33 @@ const Header = (props: HeaderProp): JSX.Element => {
 
     const menuItem = (
         <div onClick={closeDrawer(false)} onKeyDown={closeDrawer(false)}>
-            <ListSubheader>{'Emibo'}</ListSubheader>
             <List>
-                {['1', '2', '3', '4'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon />
-                        <ListItemText primary={text} />
-                    </ListItem>
+                <ApplicationBarMenuGroup title={'villagers'} menu={villagerMenu} />
+                <ListSubheader>{'villagers'}</ListSubheader>
+                {villagerMenu.map((menu, index) => (
+                    <ListItemLink href={menu.link} key={index}>
+                        <ListItemText primary={menu.title} />
+                    </ListItemLink>
+                ))}
+                <ListSubheader>{'points'}</ListSubheader>
+                {villagerMenu.map((menu, index) => (
+                    <ListItemLink href={menu.link} key={index}>
+                        <ListItemText primary={menu.title} />
+                    </ListItemLink>
+                ))}
+                <ListSubheader>{'campsite'}</ListSubheader>
+                {villagerMenu.map((menu, index) => (
+                    <ListItemLink href={menu.link} key={index}>
+                        <ListItemText primary={menu.title} />
+                    </ListItemLink>
+                ))}
+                <ListSubheader>{'resident services'}</ListSubheader>
+                {villagerMenu.map((menu, index) => (
+                    <ListItemLink href={menu.link} key={index}>
+                        <ListItemText primary={menu.title} />
+                    </ListItemLink>
                 ))}
             </List>
-            <ListSubheader>{'villagers'}</ListSubheader>
-            {villagerMenu.map((menu, index) => (
-                <ListItemLink href={menu.link} key={index}>
-                    <ListItemText primary={menu.title} />
-                </ListItemLink>
-            ))}
-            <ListSubheader>{'points'}</ListSubheader>
-            {villagerMenu.map((menu, index) => (
-                <ListItemLink href={menu.link} key={index}>
-                    <ListItemText primary={menu.title} />
-                </ListItemLink>
-            ))}
-            <ListSubheader>{'campsite'}</ListSubheader>
-            {villagerMenu.map((menu, index) => (
-                <ListItemLink href={menu.link} key={index}>
-                    <ListItemText primary={menu.title} />
-                </ListItemLink>
-            ))}
-            <ListSubheader>{'resident services'}</ListSubheader>
-            {villagerMenu.map((menu, index) => (
-                <ListItemLink href={menu.link} key={index}>
-                    <ListItemText primary={menu.title} />
-                </ListItemLink>
-            ))}
-
         </div>
     )
     return (
