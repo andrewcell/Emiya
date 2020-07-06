@@ -142,4 +142,11 @@ export default new Map([
     ['points.main.title', 'Friendship Points'],
     ['points.main.error', 'Error occurred. Please login if you not logged in.'],
     ['layout.login', 'Login'],
+    ['layout.points.title', 'Friendship Points'],
+    ['layout.campsite.title', 'Campsite'],
+    ['layout.emibo.title', 'Emibo'],
+    ['layout.villagers.title', 'Villagers'],
+    ['layout.villagers.gift', 'Search by Clothes'],
+    ['layout.villagers.prefer', 'Search Prefer Clothes'],
+    ['layout.info.title', 'Resident Services'],
 ]);

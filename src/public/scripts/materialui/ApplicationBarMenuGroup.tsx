@@ -8,6 +8,7 @@ import React from 'react';
 import ListItemLink from './LinkItemLink';
 
 const ApplicationBarMenuGroup = (props: ApplicationBarMenuGroupProp): JSX.Element => {
+    console.log(props)
     return (
         <>
             <ListSubheader>{props.title}</ListSubheader>

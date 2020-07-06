@@ -148,4 +148,11 @@ export default new Map([
     ['points.main.error', '오류가 발생하였습니다. 로그인하지 않았다면 로그인을 해주세요.'],
     // LAyout
     ['layout.login', '로그인'],
+    ['layout.points.title', '친밀도 계산기'],
+    ['layout.campsite.title', '캠핑장'],
+    ['layout.emibo.title', 'Emibo'],
+    ['layout.villagers.title', '주민'],
+    ['layout.villagers.gift', '옷으로 검색'],
+    ['layout.villagers.prefer', '선호 옷 검색'],
+    ['layout.info.title', '안내소'],
 ]);
