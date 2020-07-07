@@ -6,13 +6,22 @@ import DialogActions from '@material-ui/core/DialogActions';
 import {LoginDialogProp} from './interfaces';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import Button from '@material-ui/core/Button';
+import Snackbar from '@material-ui/core/Snackbar';
 import {AJAX, AjaxResult} from '../ajax';
-import $ from 'jquery';
 import {b64} from '../b64';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+
+enum MessageType {
+    ERROR, SUCCESS, STANDBY
+}
 
 interface LoginDialogState {
     username: string;
     password: string;
+    messageType: MessageType;
+    message: string;
+    snackbarOpen: boolean;
 }
 
 class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
@@ -20,7 +29,10 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
         super(props);
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            messageType: MessageType.STANDBY,
+            message: '',
+            snackbarOpen: false
         }
     }
 
@@ -32,11 +44,8 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
                         localStorage.setItem('token', result.comment)
                         location.reload()
                         break;
-                    case 'login01':
-                        M.toast({html: result.comment, classes: 'rounded'});
-                        break;
-                    case '500':
-                        M.toast({html: result.comment, classes: 'rounded'});
+                    default:
+                        this.setState({messageType: MessageType.ERROR, message: result.comment, snackbarOpen: true});
                         break;
                 }
             })
@@ -54,27 +63,52 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
         }
     }
 
+    handleSnackbarClose = (): void => {
+        this.setState({snackbarOpen: false});
+    }
+
+    getSnackbar = (type: MessageType, message: string): JSX.Element => {
+        let severity = 'success'
+        const closeButton: JSX.Element = (
+            <IconButton aria-label="close" color="secondary" onClick={this.handleSnackbarClose}>
+                <CloseIcon />
+            </IconButton>
+        )
+        switch (type) {
+            case MessageType.ERROR:
+                severity = 'error'
+            case MessageType.SUCCESS:
+                /* <MuiAlert elevation={6} variant={'filled'} severity={severity}> */
+                return <Snackbar open={this.state.snackbarOpen} autoHideDuration={4000} onClose={this.handleSnackbarClose} message={message} action={closeButton} />
+            case MessageType.STANDBY:
+            default:
+                return <></>
+        }
+    }
+
     render(): React.ReactElement {
         return (
-            <Dialog open={this.props.open} onClose={this.props.handleClose}>
-                <DialogTitle>Login</DialogTitle>
-                <DialogContent>
-                    <DialogContentText>
-                        To save your progress, Login to DodoSeki.
-                    </DialogContentText>
-                    <TextField autoFocus margin={'dense'} id={'username'} label={'Username'} type={'text'} fullWidth onChange={this.handleFieldChange}/>
-                    <TextField autoFocus margin={'normal'} id={'password'} label={'Password'} type={'password'} fullWidth onChange={this.handleFieldChange}/>
-
-                    <DialogActions>
-                        <Button onClick={this.props.handleClose} color={'secondary'}>
-                            Close
-                        </Button>
-                        <Button onClick={this.handleLogin} color={'primary'}>
-                            Login
-                        </Button>
-                    </DialogActions>
-                </DialogContent>
-            </Dialog>
+            <>
+                <Dialog open={this.props.open} onClose={this.props.handleClose}>
+                    <DialogTitle>Login</DialogTitle>
+                    <DialogContent>
+                        <DialogContentText>
+                            To save your progress, Login to DodoSeki.
+                        </DialogContentText>
+                        <TextField autoFocus margin={'dense'} id={'username'} label={'Username'} type={'text'} fullWidth onChange={this.handleFieldChange}/>
+                        <TextField autoFocus margin={'normal'} id={'password'} label={'Password'} type={'password'} fullWidth onChange={this.handleFieldChange}/>
+                        <DialogActions>
+                            <Button onClick={this.props.handleClose} color={'secondary'}>
+                                Close
+                            </Button>
+                            <Button onClick={this.handleLogin} color={'primary'}>
+                                Login
+                            </Button>
+                        </DialogActions>
+                    </DialogContent>
+                </Dialog>
+                {this.getSnackbar(this.state.messageType, this.state.message)}
+            </>
         )
     }
 }
