@@ -21,8 +21,8 @@ const setLanguage = (lang: string): void | Promise<void> => {
         Cookies.set('locale', 'en_US');
     } else {
         language = data;
-        languageConfigured = 'ko_KR';
-        Cookies.set('locale', 'ko_KR');
+        languageConfigured = lang;
+        Cookies.set('locale', lang);
     }
     return Promise.resolve()
 }

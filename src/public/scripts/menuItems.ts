@@ -1,8 +1,8 @@
 import {l} from './locale';
 
 const villagerMenu = [
-    {title: l('villagers.nav.myvillagers'), link: '/villagers/my'},
-    {title: l('villagers.nav.allvillagers'), link: '/villagers/my'},
+    {title: l('villagers.nav.myvillagers'), link: '/villagers/'},
+    {title: l('villagers.nav.allvillagers'), link: '/villagers/list'},
     {title: l('layout.villagers.gift'), link: '/villagers/gift'},
     {title: l('layout.villagers.prefer'), link: '/villagers/prefer'},
 ]
