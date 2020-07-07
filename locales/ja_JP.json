@@ -127,5 +127,6 @@
 	"residentservices.information.dicord": "Discord",
 	"residentservices.information.dcinside": "Dcinside (Korean)",
 	"points.title": "친밀도 계산기",
-	"campsite.title": "Campsite"
+	"campsite.title": "Campsite",
+	"global.title.subtitle": "global.title.subtitle"
 }

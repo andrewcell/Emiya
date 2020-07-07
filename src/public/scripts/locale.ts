@@ -13,7 +13,7 @@ let language = new Map();
 
 let languageConfigured = '';
 
-const setLanguage = (lang: string): void => {
+const setLanguage = (lang: string): void | Promise<void> => {
     const data = whitelist.get(lang);
     if (data == null) {
         language = en;
@@ -24,6 +24,7 @@ const setLanguage = (lang: string): void => {
         languageConfigured = 'ko_KR';
         Cookies.set('locale', 'ko_KR');
     }
+    return Promise.resolve()
 }
 
 const getLanguage = (): string => {
@@ -48,16 +49,20 @@ const detectLanguage = (lang: string | null): string => {
     }
 }
 
-const missingLanguage = (): void => {
-    const lang = Cookies.get('locale');
-    if (lang == null || language.size <= 0) {
-        setLanguage(detectLanguage(navigator.language));
-    } else {
-        if (!whitelist.has(lang)) {
-            setLanguage('en_US');
-            Cookies.set('locale', 'en_US');
+const missingLanguage = (): Promise<void> => {
+    return new Promise<void>((resolve, reject) => {
+        const lang = Cookies.get('locale');
+        if (lang == null || language.size <= 0) {
+            setLanguage(detectLanguage(navigator.language));
+
+        } else {
+            if (!whitelist.has(lang)) {
+                setLanguage('en_US');
+                Cookies.set('locale', 'en_US');
+            }
         }
-    }
+        return resolve()
+    })
 }
 
 const l = (key: string): string => {
