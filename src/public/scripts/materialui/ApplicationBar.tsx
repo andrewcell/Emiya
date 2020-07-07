@@ -13,15 +13,8 @@ import {
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import {makeStyles} from '@material-ui/core/styles';
-import {ApplicationBarMenuGroupProp, HeaderProp} from './interfaces';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import {ApplicationBarMenuGroupProp, ApplicationBarProp} from './interfaces';
 import useTheme from '@material-ui/core/styles/useTheme';
-import clsx from 'clsx';
 import {l} from '../locale';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import ListSubheader from '@material-ui/core/ListSubheader';
@@ -42,9 +35,6 @@ const useStyles = makeStyles((theme: Theme) =>
                 flexShrink: 0,
 
         },
-        appBar: {
-            backgroundColor: '#4caf50',
-        },
         title: {
             flexGrow: 1
         },
@@ -60,7 +50,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-const Header = (props: HeaderProp): JSX.Element => {
+const Header = (props: ApplicationBarProp): JSX.Element => {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -91,7 +81,7 @@ const Header = (props: HeaderProp): JSX.Element => {
     return (
         <div className={classes.root}>
             <CssBaseline />
-            <AppBar position="static" className={classes.appBar}>
+            <AppBar position="static">
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} onClick={toggleDrawer} color="inherit" aria-label="menu">
                         <MenuIcon />
@@ -99,7 +89,7 @@ const Header = (props: HeaderProp): JSX.Element => {
                     <Typography variant="h5" className={classes.title}>
                         DodoSeki
                     </Typography>
-                    <Button color="inherit">{l('layout.login')}</Button>
+                    <Button color="inherit" onClick={props.handleOpen}>{l('layout.login')}</Button>
                 </Toolbar>
             </AppBar>
             <Drawer className={classes.drawer} variant="temporary" anchor={'left'} open={open} onClose={toggleDrawer} ModalProps={{keepMounted: true}} classes={{paper: classes.drawerPaper}}>

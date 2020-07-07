@@ -8,9 +8,10 @@ import {emiyaJ, url} from './api';
 import {decryptJava} from './encryption/AES';
 import {PageStatus} from './points/enums';
 import PointsMainList from './points/PointsMainList';
-import Header from './materialui/Header';
-import {BottomNavigationAction, CircularProgress, Container, Grid, Typography} from '@material-ui/core';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
+import Layout from './materialui/Layout';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 class Points extends React.Component<any, PointsMainStates> {
     constructor(props: any) {
@@ -61,19 +62,9 @@ class Points extends React.Component<any, PointsMainStates> {
 
     render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
-            <div>
-                <header>
-                    <Header loginStatus={true} username={'asc'} />
-                </header>
-                <Container>
-                    <Grid alignContent={'center'}>
-                        {this.getContent()}
-                    </Grid>
-                </Container>
-                <BottomNavigation value={''} style={{width: '500px'}}>
-                    <BottomNavigationAction label="test"/>
-                </BottomNavigation>
-            </div>
+            <>
+                <Layout content={this.getContent()} username={''} loginStatus={false}/>
+            </>
         )
     }
 }

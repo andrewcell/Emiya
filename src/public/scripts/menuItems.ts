@@ -7,10 +7,6 @@ const villagerMenu = [
     {title: l('layout.villagers.prefer'), link: '/villagers/prefer'},
 ]
 
-const emiboMenu = [
-    {title: 'Emibo', link: '/emibo'}
-]
-
 const villagers = {
     title: l('layout.villagers.title'),
     menu: villagerMenu
@@ -18,7 +14,12 @@ const villagers = {
 
 const emibo = {
     title: l('layout.emibo.title'),
-    menu: emiboMenu
+    menu: [{title: 'Emibo', link: '/emibo'}]
 }
 
-export default [emibo, villagers]
+const points = {
+    title: l('layout.points.title'),
+    menu: [{title: l('layout.points.title'), link: '/points'}]
+}
+
+export default [emibo, villagers, points]
