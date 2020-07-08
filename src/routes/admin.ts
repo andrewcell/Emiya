@@ -7,7 +7,7 @@ import {internalError} from '@shared/constants';
 import {SendGrid} from '@shared/SendGrid';
 import {Mail} from '@shared/Mail';
 import {getRandomString} from '@shared/functions';
-import {decrypt, encryptJava} from '@shared/Encryption';
+import {decrypt, encrypt, encryptJava} from '@shared/Encryption';
 import crypto from 'crypto';
 import { validateLoggedIn } from '@shared/validation';
 import Axios from 'axios';
@@ -246,6 +246,12 @@ router.post('/config', validateLoggedIn, (req, res) => {
     } catch (e) {
         return res.status(500).json({'code': 500, comment: internalError});
     }
+});
+
+router.get('/loginstatus', validateLoggedIn, (req, res) => {
+    const user = req.user as UserDocument;
+    const encrypted = encrypt(JSON.stringify({username: user.username, email: user.email}));
+    return res.json({data: encrypted});
 });
 
 export default router;

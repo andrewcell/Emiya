@@ -95,6 +95,7 @@ $(() => {
     });
 
     $('#logoutButton').on('click', () => {
+        localStorage.clear();
         window.location.replace('/admin/logout');
     });
 
@@ -121,6 +122,5 @@ $(() => {
         }
     });
 });
-
 
 export {$}

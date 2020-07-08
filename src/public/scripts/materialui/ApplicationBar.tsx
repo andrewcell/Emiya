@@ -1,26 +1,14 @@
 import React from 'react';
-import {
-    AppBar,
-    IconButton,
-    Theme,
-    Toolbar,
-    Typography,
-    Button,
-    createStyles,
-    List,
-    Drawer,
-    Hidden
-} from '@material-ui/core';
+import {AppBar, Button, createStyles, Drawer, IconButton, List, Theme, Toolbar, Typography} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import {makeStyles} from '@material-ui/core/styles';
 import {ApplicationBarMenuGroupProp, ApplicationBarProp} from './interfaces';
 import useTheme from '@material-ui/core/styles/useTheme';
 import {l} from '../locale';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import ListItemLink from './LinkItemLink';
 import ApplicationBarMenuGroup from './ApplicationBarMenuGroup';
 import menuItems from '../menuItems';
+import {PageStatus} from '../points/enums';
 
 const drawerWidth = 240;
 
@@ -78,6 +66,21 @@ const Header = (props: ApplicationBarProp): JSX.Element => {
             </List>
         </div>
     )
+
+    const TopRightButton = (): JSX.Element => {
+        if (props.loginStatus) {
+            return <Button color="inherit" onClick={props.handleOpen}>{props.username}</Button>
+        } else {
+            switch (props.pageStatus) {
+                case PageStatus.LOADED:
+                case PageStatus.ERROR:
+                    return <Button color="inherit" onClick={props.handleOpen}>{l('layout.login')}</Button>
+                default:
+                    return <Typography>Loading</Typography>
+            }
+        }
+    }
+
     return (
         <div className={classes.root}>
             <CssBaseline />
@@ -89,7 +92,7 @@ const Header = (props: ApplicationBarProp): JSX.Element => {
                     <Typography variant="h5" className={classes.title}>
                         DodoSeki
                     </Typography>
-                    <Button color="inherit" onClick={props.handleOpen}>{l('layout.login')}</Button>
+                    {TopRightButton()}
                 </Toolbar>
             </AppBar>
             <Drawer className={classes.drawer} variant="temporary" anchor={'left'} open={open} onClose={toggleDrawer} ModalProps={{keepMounted: true}} classes={{paper: classes.drawerPaper}}>

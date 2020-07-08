@@ -42,6 +42,7 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
                 switch (result.code as string) {
                     case 'login00':
                         localStorage.setItem('token', result.comment)
+                        // this.props.setLoginStatus(true, result.comment)
                         location.reload()
                         break;
                     default:

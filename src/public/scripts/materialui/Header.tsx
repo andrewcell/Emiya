@@ -3,10 +3,11 @@ import ApplicationBar from './ApplicationBar';
 import {HeaderProp} from './interfaces';
 import LoginDialog from './LoginDialog';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import Axios from 'axios';
+import AccountDialog from './AccountDialog';
 
 interface HeaderState {
-    loginDialog: boolean;
-
+    TopRightDialog: boolean;
 }
 
 class Header extends React.Component<HeaderProp, HeaderState> {
@@ -14,21 +15,21 @@ class Header extends React.Component<HeaderProp, HeaderState> {
         super(props);
         createMuiTheme()
         this.state = {
-            loginDialog: false
+            TopRightDialog: false,
         }
     }
 
     openDialog = (type: string): void => {
         switch (type) {
-            case 'login':
-                this.setState({loginDialog: true})
+            case 'TopRight':
+                this.setState({TopRightDialog: true})
         }
     }
 
     getOpenDialogFunction = (type: string): () => void => {
         switch (type) {
-            case 'login':
-                return (): void => { this.setState({loginDialog: true}) }
+            case 'TopRight':
+                return (): void => { this.setState({TopRightDialog: true}) }
             default:
                 return (): void => {return;}
         }
@@ -36,20 +37,28 @@ class Header extends React.Component<HeaderProp, HeaderState> {
 
     closeDialog = (type: string): () => void => {
         switch (type) {
-            case 'login':
+            case 'TopRight':
                 return (): void => {
-                    this.setState({loginDialog: false})
+                    this.setState({TopRightDialog: false})
                 }
             default:
                 return (): void => {return;}
         }
     }
 
+    getTopRightDialog = (): JSX.Element => {
+        if (this.props.loginStatus && this.props.username != null) {
+            return <AccountDialog open={this.state.TopRightDialog} handleClose={this.closeDialog('TopRight')} username={this.props.username} />
+        } else {
+            return <LoginDialog open={this.state.TopRightDialog} handleClose={this.closeDialog('TopRight')} setLoginStatus={this.props.setLoginStatus}/>
+        }
+    }
+
     render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
             <>
-                <ApplicationBar loginStatus={this.props.loginStatus} username={this.props.username} handleOpen={this.getOpenDialogFunction('login')}/>
-                <LoginDialog open={this.state.loginDialog} handleClose={this.closeDialog('login')} />
+                <ApplicationBar pageStatus={this.props.pageStatus} loginStatus={this.props.loginStatus} username={this.props.username} handleOpen={this.getOpenDialogFunction('TopRight')}/>
+                {this.getTopRightDialog()}
             </>
         )
     }

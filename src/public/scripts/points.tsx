@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {detectLanguage, l, setLanguage} from './locale';
 import Cookies from 'js-cookie';
 import Axios from 'axios';
-import {PointsMainStates} from './points/interfaces';
+import {PointsState} from './points/interfaces';
 import {emiyaJ, url} from './api';
 import {decryptJava} from './encryption/AES';
 import {PageStatus} from './points/enums';
@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-class Points extends React.Component<any, PointsMainStates> {
+class Points extends React.Component<any, PointsState> {
     constructor(props: any) {
         super(props);
         if (Cookies.get('locale') == null) {
@@ -21,18 +21,27 @@ class Points extends React.Component<any, PointsMainStates> {
             Cookies.set('locale', lang);
         }
         setLanguage(Cookies.get('locale') as string);
+        this.state = {
+            token: localStorage.getItem('token'),
+            pageStatus: PageStatus.LOADING,
+            myPoints: new Map()
+        }
     }
 
     componentDidMount(): void {
-        const token = Cookies.get('token');
-        Axios.get(url(emiyaJ, 'points', 'get'), {headers: {token}})
-            .then(r => {
-                const data = JSON.parse(decryptJava(r.data.data))
-                this.setState({pageStatus: PageStatus.LOADED, myPoints: new Map(Object.entries(data))})
-            })
-            .catch(() => {
-                this.setState({pageStatus: PageStatus.ERROR, myPoints: new Map<string, number>()})
-            });
+        const token = this.state.token;
+        if (token != null) {
+            Axios.get(url(emiyaJ, 'points', 'get'), {headers: {token}})
+                .then(r => {
+                    const data = JSON.parse(decryptJava(r.data.data))
+                    this.setState({pageStatus: PageStatus.LOADED, myPoints: new Map(Object.entries(data))})
+                })
+                .catch(() => {
+                    this.setState({pageStatus: PageStatus.ERROR, myPoints: new Map<string, number>()})
+                });
+        } else {
+            this.setState({pageStatus: PageStatus.ERROR})
+        }
     }
 
     getContent(): JSX.Element {
@@ -63,10 +72,10 @@ class Points extends React.Component<any, PointsMainStates> {
     render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
             <>
-                <Layout content={this.getContent()} username={''} loginStatus={false}/>
+                <Layout content={this.getContent()} pageStatus={this.state.pageStatus}/>
             </>
         )
     }
 }
 
-ReactDOM.render(<Points/>, document.getElementById('reactApp'));
+ReactDOM.render(<Points />, document.getElementById('reactApp'));

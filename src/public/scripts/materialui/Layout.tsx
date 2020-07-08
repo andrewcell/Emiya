@@ -3,17 +3,43 @@ import {createMuiTheme, MuiThemeProvider} from '@material-ui/core';
 import Header from './Header';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import Axios from 'axios';
+import {decrypt} from '../encryption/AES';
+import {PageStatus} from '../points/enums';
 
 interface LayoutProp {
     content: JSX.Element;
-    loginStatus: boolean;
-    username: string;
+    pageStatus: PageStatus;
     customProp?: any;
 }
 
-class Layout extends React.Component<LayoutProp, any> {
+interface LayoutState {
+    loginStatus: boolean;
+    username?: string;
+}
+
+class Layout extends React.Component<LayoutProp, LayoutState> {
     constructor(props: LayoutProp) {
         super(props);
+        this.state = {
+            loginStatus: false
+        }
+    }
+
+    componentDidMount(): void {
+        Axios.get('/admin/loginstatus')
+            .then((res) => {
+                const encryptedData = res.data.data;
+                const data = JSON.parse(decrypt(encryptedData)) as {username: string; email: string};
+                this.setState({
+                    loginStatus: true,
+                    username: data.username
+                })
+            })
+    }
+
+    setLoginStatus = (loginStatus: boolean, username?: string): void => {
+        this.setState({loginStatus, username})
     }
 
     render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
@@ -29,7 +55,7 @@ class Layout extends React.Component<LayoutProp, any> {
         })
         return (
             <MuiThemeProvider theme={theme}>
-                <Header loginStatus={this.props.loginStatus} username={this.props.username} />
+                <Header loginStatus={this.state.loginStatus} username={this.state.username} setLoginStatus={this.setLoginStatus} pageStatus={this.props.pageStatus} />
                 <Container>
                     {this.props.content}
                 </Container>
