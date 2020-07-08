@@ -1,6 +1,6 @@
 import { Request, Response, Router} from 'express';
 import {VillagerDatabase} from '@interfaces/VillagerDatabase';
-import {validateReact} from '@shared/validation';
+import {validateLoggedIn, validateReact} from '@shared/validation';
 import {decrypt, encrypt} from '@shared/Encryption';
 import MyVillagers, {resize} from '@interfaces/MyVillagersDatabase';
 import {UserDocument} from '@shared/User';
@@ -144,5 +144,19 @@ router.delete('/react/my/set', validateReact, (req, res) => {
     logger.error(e.message, e);
     return res.json({code: 500, comment: internalError})
   }
+});
+
+router.post('/getvillager', validateReact, validateLoggedIn, (req, res) => {
+  const code = decrypt(req.body.code as string);
+  if (!validateCode(code)) {
+    return res.json({code: 500, comment: internalError});
+  }
+  const villager = villagerList.filter(v => v.code === code)
+  if (villager.length === 1) {
+    return res.json({data: encrypt(JSON.stringify(villager[0]))})
+  } else {
+    return res.json({code: 500, comment: internalError});
+  }
+
 });
 export default router;

@@ -99,7 +99,7 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
                         <TextField autoFocus margin={'dense'} id={'username'} label={'Username'} type={'text'} fullWidth onChange={this.handleFieldChange}/>
                         <TextField autoFocus margin={'normal'} id={'password'} label={'Password'} type={'password'} fullWidth onChange={this.handleFieldChange}/>
                         <DialogActions>
-                            <Button onClick={this.props.handleClose} color={'secondary'}>
+                            <Button onClick={this.props.handleClose} color={'inherit'}>
                                 Close
                             </Button>
                             <Button onClick={this.handleLogin} color={'primary'}>

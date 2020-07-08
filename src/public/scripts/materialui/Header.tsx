@@ -3,7 +3,6 @@ import ApplicationBar from './ApplicationBar';
 import {HeaderProp} from './interfaces';
 import LoginDialog from './LoginDialog';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-import Axios from 'axios';
 import AccountDialog from './AccountDialog';
 
 interface HeaderState {

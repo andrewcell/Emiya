@@ -84,7 +84,7 @@ const Header = (props: ApplicationBarProp): JSX.Element => {
     return (
         <div className={classes.root}>
             <CssBaseline />
-            <AppBar position="static">
+            <AppBar position="static" elevation={0}>
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} onClick={toggleDrawer} color="inherit" aria-label="menu">
                         <MenuIcon />

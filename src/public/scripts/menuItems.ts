@@ -22,4 +22,12 @@ const points = {
     menu: [{title: l('layout.points.title'), link: '/points'}]
 }
 
-export default [emibo, villagers, points]
+const language = {
+    title: 'Languages',
+    menu: [
+        {title: 'English (U.S.)', link: '/lang/en'},
+        {title: '한국어 (대한민국)', link: '/lang/ko'},
+    ]
+}
+
+export default [emibo, villagers, points, language]

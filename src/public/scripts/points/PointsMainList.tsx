@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Collection, ProgressBar, Row} from 'materialinse-reactjs';
+import VillagerCard from './VillagerCard';
 
 interface PointsMainListProps {
     myPoints: Map<string, number>;
@@ -12,6 +12,13 @@ class PointsMainList extends React.Component<PointsMainListProps, any> {
 
     render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
+            <>
+                {Array.from(this.props.myPoints).map(([villagerCode, point]) => (
+                    <VillagerCard key={villagerCode} villagerCode={villagerCode} points={point} />
+                ))}
+            </>
+        )
+        /* return (
             <Collection>
                 {Array.from(this.props.myPoints).map(([villagerCode, point]) => {
                     return (<div className={'collection-item'} key={villagerCode}>
@@ -29,7 +36,7 @@ class PointsMainList extends React.Component<PointsMainListProps, any> {
                     </div>)
                 })}
             </Collection>
-        )
+        ) */
     }
 }
 
