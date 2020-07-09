@@ -19,7 +19,6 @@ export interface ApplicationBarMenuGroupProp {
 }
 
 export interface LoginDialogProp extends DialogProp {
-
     setLoginStatus: (loginStatus: boolean, username: string) => void;
 }
 

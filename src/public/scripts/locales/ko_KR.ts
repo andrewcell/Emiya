@@ -146,7 +146,7 @@ export default new Map([
     // Points
     ['points.main.title', '내 주민과 친밀도'],
     ['points.main.error', '오류가 발생하였습니다. 로그인하지 않았다면 로그인을 해주세요.'],
-    // LAyout
+    // Layout for Material UI, Vue Material, Vuetify
     ['layout.login', '로그인'],
     ['layout.points.title', '친밀도 계산기'],
     ['layout.campsite.title', '캠핑장'],
@@ -155,4 +155,10 @@ export default new Map([
     ['layout.villagers.gift', '옷으로 검색'],
     ['layout.villagers.prefer', '선호 옷 검색'],
     ['layout.info.title', '안내소'],
+    ['layout.login.title',' 로그인'],
+    ['layout.login.description','로그인을 하지 않으면 변경 내용은 저장되지 않습니다.'],
+    ['layout.login.close',' 취소'],
+    ['layout.login.login',' 로그인'],
+    ['layout.login.username',' 사용자 이름(아이디)'],
+    ['layout.login.password',' 비밀번호'],
 ]);

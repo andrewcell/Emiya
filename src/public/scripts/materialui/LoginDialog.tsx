@@ -1,6 +1,6 @@
 import Dialog from '@material-ui/core/Dialog';
 import React from 'react';
-import {DialogTitle, TextField} from '@material-ui/core';
+import {CircularProgress, createStyles, DialogTitle, TextField, Theme} from '@material-ui/core';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
 import {LoginDialogProp} from './interfaces';
@@ -11,6 +11,15 @@ import {AJAX, AjaxResult} from '../ajax';
 import {b64} from '../b64';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
+import {l} from '../locale';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Box from '@material-ui/core/Box';
+import CardActions from '@material-ui/core/CardActions';
+import Typography from '@material-ui/core/Typography';
+import Backdrop from '@material-ui/core/Backdrop';
+import zIndex from '@material-ui/core/styles/zIndex';
+import withStyles from '@material-ui/core/styles/withStyles';
 
 enum MessageType {
     ERROR, SUCCESS, STANDBY
@@ -22,6 +31,7 @@ interface LoginDialogState {
     messageType: MessageType;
     message: string;
     snackbarOpen: boolean;
+    process: boolean;
 }
 
 class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
@@ -32,11 +42,13 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
             password: '',
             messageType: MessageType.STANDBY,
             message: '',
-            snackbarOpen: false
+            snackbarOpen: false,
+            process: false
         }
     }
 
     handleLogin = (e: React.MouseEvent<HTMLButtonElement>): void => {
+        this.setState({process: true});
         AJAX.send({username: this.state.username, password: this.state.password}, new b64('L2FkbWluL2xvZ2lu'))
             .then((result: AjaxResult) => {
                 switch (result.code as string) {
@@ -46,7 +58,12 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
                         location.reload()
                         break;
                     default:
-                        this.setState({messageType: MessageType.ERROR, message: result.comment, snackbarOpen: true});
+                        this.setState({
+                            messageType: MessageType.ERROR,
+                            message: result.comment,
+                            snackbarOpen: true,
+                            process: false
+                        });
                         break;
                 }
             })
@@ -72,7 +89,7 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
         let severity = 'success'
         const closeButton: JSX.Element = (
             <IconButton aria-label="close" color="secondary" onClick={this.handleSnackbarClose}>
-                <CloseIcon />
+                <CloseIcon/>
             </IconButton>
         )
         switch (type) {
@@ -80,7 +97,8 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
                 severity = 'error'
             case MessageType.SUCCESS:
                 /* <MuiAlert elevation={6} variant={'filled'} severity={severity}> */
-                return <Snackbar open={this.state.snackbarOpen} autoHideDuration={4000} onClose={this.handleSnackbarClose} message={message} action={closeButton} />
+                return <Snackbar open={this.state.snackbarOpen} autoHideDuration={4000}
+                                 onClose={this.handleSnackbarClose} message={message} action={closeButton}/>
             case MessageType.STANDBY:
             default:
                 return <></>
@@ -91,27 +109,33 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
         return (
             <>
                 <Dialog open={this.props.open} onClose={this.props.handleClose}>
-                    <DialogTitle>Login</DialogTitle>
+                    <DialogTitle>{l('layout.login.title')}</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            To save your progress, Login to DodoSeki.
+                            {l('layout.login.description')}
                         </DialogContentText>
-                        <TextField autoFocus margin={'dense'} id={'username'} label={'Username'} type={'text'} fullWidth onChange={this.handleFieldChange}/>
-                        <TextField autoFocus margin={'normal'} id={'password'} label={'Password'} type={'password'} fullWidth onChange={this.handleFieldChange}/>
+                        <TextField autoFocus margin={'dense'} id={'username'} label={l('layout.login.username')}
+                                   type={'text'} fullWidth onChange={this.handleFieldChange}/>
+                        <TextField autoFocus margin={'normal'} id={'password'} label={l('layout.login.password')}
+                                   type={'password'} fullWidth onChange={this.handleFieldChange}/>
                         <DialogActions>
                             <Button onClick={this.props.handleClose} color={'inherit'}>
-                                Close
+                                {l('layout.login.close')}
                             </Button>
                             <Button onClick={this.handleLogin} color={'primary'}>
-                                Login
+                                {l('layout.login.login')}
                             </Button>
                         </DialogActions>
                     </DialogContent>
                 </Dialog>
+                <Backdrop open={this.state.process} style={{zIndex: 999999}}>
+                    <CircularProgress color={'inherit'}/>
+                </Backdrop>
                 {this.getSnackbar(this.state.messageType, this.state.message)}
             </>
         )
     }
 }
+
 
 export default LoginDialog;

@@ -9,6 +9,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import ApplicationBarMenuGroup from './ApplicationBarMenuGroup';
 import menuItems from '../menuItems';
 import {PageStatus} from '../points/enums';
+import Link from '@material-ui/core/Link';
 
 const drawerWidth = 240;
 
@@ -90,7 +91,9 @@ const Header = (props: ApplicationBarProp): JSX.Element => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h5" className={classes.title}>
-                        DodoSeki
+                        <Link href={'/'} color={'inherit'} style={{textDecoration: 'none'}}>
+                            DodoSeki
+                        </Link>
                     </Typography>
                     {TopRightButton()}
                 </Toolbar>
