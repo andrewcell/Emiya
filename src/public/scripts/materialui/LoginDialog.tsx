@@ -21,9 +21,9 @@ enum MessageType {
 
 interface LoginDialogState {
     username: string;
-    usernameValidation: boolean;
+    usernameInvalid: boolean;
     password: string;
-    passwordValidation: boolean;
+    passwordInvalid: boolean;
     messageType: MessageType;
     message: string;
     snackbarOpen: boolean;
@@ -35,9 +35,9 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
         super(props);
         this.state = {
             username: '',
-            usernameValidation: false,
+            usernameInvalid: true,
             password: '',
-            passwordValidation: false,
+            passwordInvalid: true,
             messageType: MessageType.STANDBY,
             message: '',
             snackbarOpen: false,
@@ -46,7 +46,7 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
     }
 
     handleLogin = (e: React.MouseEvent<HTMLButtonElement>): void => {
-        if (this.state.usernameValidation || this.state.passwordValidation) {
+        if (this.state.usernameInvalid || this.state.passwordInvalid) {
             this.setState({
                 messageType: MessageType.ERROR,
                 message: l('layout.login.invalidinput'),
@@ -79,10 +79,10 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
         const value = e.currentTarget.value;
         switch (e.currentTarget.id) {
             case 'username':
-                this.setState({username: value, usernameValidation: !Register.validateUsername(value)})
+                this.setState({username: value, usernameInvalid: !Register.validateUsername(value)})
                 break;
             case 'password':
-                this.setState({password: value, passwordValidation: !Register.validatePassword(value)})
+                this.setState({password: value, passwordInvalid: !Register.validatePassword(value)})
                 break;
         }
     }
@@ -121,9 +121,9 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
                             {l('layout.login.description')}
                         </DialogContentText>
                         <TextField margin={'dense'} id={'username'} label={l('layout.login.username')}
-                                   type={'text'} fullWidth onChange={this.handleFieldChange} error={this.state.usernameValidation}/>
+                                   type={'text'} fullWidth onChange={this.handleFieldChange} error={this.state.usernameInvalid}/>
                         <TextField margin={'normal'} id={'password'} label={l('layout.login.password')}
-                                   type={'password'} fullWidth onChange={this.handleFieldChange} error={this.state.passwordValidation}/>
+                                   type={'password'} fullWidth onChange={this.handleFieldChange} error={this.state.passwordInvalid}/>
                         <DialogActions>
                             <Button onClick={this.props.handleClose} color={'inherit'}>
                                 {l('layout.login.close')}
