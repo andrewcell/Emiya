@@ -12,14 +12,7 @@ import {b64} from '../b64';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import {l} from '../locale';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Box from '@material-ui/core/Box';
-import CardActions from '@material-ui/core/CardActions';
-import Typography from '@material-ui/core/Typography';
 import Backdrop from '@material-ui/core/Backdrop';
-import zIndex from '@material-ui/core/styles/zIndex';
-import withStyles from '@material-ui/core/styles/withStyles';
 import {Register} from '../register';
 
 enum MessageType {
