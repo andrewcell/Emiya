@@ -1,6 +1,6 @@
 import {AES, enc, mode, pad, WordArray} from 'crypto-js';
 
-export const getKey = () => {
+export const getKey = (): string => {
     return [***REMOVED***].toString()
 }
 

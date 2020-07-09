@@ -19,10 +19,8 @@ const useStyles = makeStyles((theme: Theme) =>
             display: 'flex',
         },
         drawer: {
-
-                width: drawerWidth,
-                flexShrink: 0,
-
+            width: drawerWidth,
+            flexShrink: 0,
         },
         title: {
             flexGrow: 1
