@@ -21,6 +21,14 @@ export class Register {
 
         return !!password.match(regex);
     }
+
+    public static validateUsername(username: string): boolean {
+        const regex = /[^a-z\d]/i;
+        if (username.length < 4 || username.length > 24) {
+            return false;
+        }
+        return !regex.exec(username);
+    }
 }
 
 export enum RegisterCode {

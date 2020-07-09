@@ -161,4 +161,5 @@ export default new Map([
     ['layout.login.login',' 로그인'],
     ['layout.login.username',' 사용자 이름(아이디)'],
     ['layout.login.password',' 비밀번호'],
+    ['layout.login.invalidinput', '사용할 수 없는 사용자 이름 혹은 비밀번호입니다.']
 ]);
