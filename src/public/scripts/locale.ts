@@ -3,6 +3,8 @@ import en from './locales/en_US';
 import ja from './locales/ja_JP';
 import Cookies from 'js-cookie';
 
+import koKR from './locales/ko_KR.json';
+
 const whitelist = new Map([
         ['en_US', en],
         ['ko_KR', ko],
