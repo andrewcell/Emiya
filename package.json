@@ -128,7 +128,7 @@
     "nodemon-webpack-plugin": "^4.3.2",
     "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
-    "pug-as-jsx-loader": "^1.0.86",
+    "pug-as-jsx-loader": "^1.0.87",
     "raw-loader": "^4.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
