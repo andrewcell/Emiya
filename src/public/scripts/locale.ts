@@ -50,15 +50,18 @@ const detectLanguage = (lang: string | null): string => {
 }
 
 const missingLanguage = (): Promise<void> => {
-    return new Promise<void>((resolve, reject) => {
+    return new Promise<void>((resolve) => {
         const lang = Cookies.get('locale');
-        if (lang == null || language.size <= 0) {
+        if (lang == null) {
             setLanguage(detectLanguage(navigator.language));
-
+            return resolve();
+        }
+        if (!whitelist.has(lang)) {
+            setLanguage('en_US');
+            Cookies.set('locale', 'en_US');
         } else {
-            if (!whitelist.has(lang)) {
-                setLanguage('en_US');
-                Cookies.set('locale', 'en_US');
+            if (language.size <= 0) {
+                setLanguage(lang);
             }
         }
         return resolve()
@@ -66,10 +69,9 @@ const missingLanguage = (): Promise<void> => {
 }
 
 const l = (key: string): string => {
-    missingLanguage();
+    missingLanguage().then();
     const data = language.get(key)
     if (data == null) {
-        // console.log(`"${key}": ""`);
         return '';
 
     } else {
