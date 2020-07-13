@@ -149,4 +149,11 @@ export default new Map([
     ['layout.villagers.gift', 'Search by Clothes'],
     ['layout.villagers.prefer', 'Search Prefer Clothes'],
     ['layout.info.title', 'Resident Services'],
+    ['layout.login.title',' Login'],
+    ['layout.login.description','All modified data will be lost if you\'re stay in logout.'],
+    ['layout.login.close','Close'],
+    ['layout.login.login','Login'],
+    ['layout.login.username','Username'],
+    ['layout.login.password','Password'],
+    ['layout.login.invalidinput', 'Unacceptable username or password.']
 ]);

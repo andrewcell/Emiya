@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-const Header = (props: ApplicationBarProp): JSX.Element => {
+const ApplicationBar = (props: ApplicationBarProp): JSX.Element => {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -103,4 +103,4 @@ const Header = (props: ApplicationBarProp): JSX.Element => {
     )
 }
 
-export default Header;
+export default ApplicationBar;

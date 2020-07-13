@@ -11,6 +11,7 @@ import Axios from 'axios';
 import {decrypt, encrypt} from '../encryption/AES';
 import {Villager} from '../villagers/interfaces';
 import villagerObjectToVillager from '../villagers/villagerObjectToVillager';
+import AddPointsCard from './AddPointsCard';
 
 interface VillagerCardProp {
     villagerCode: string;
@@ -65,6 +66,7 @@ class VillagerCard extends React.Component<VillagerCardProp, VillagerCardState> 
                 return (
                     <Box p={1}>
                         <Card>
+                            <AddPointsCard code={'cat23'} />
                             <CardContent>
                                 <img src={'/images/villagers/' + this.props.villagerCode + '.png'} />
                                 <Typography>
