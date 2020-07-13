@@ -51,6 +51,14 @@ const validateCode = (code: string): boolean => {
   return villagerList.some(e => e.code === code);
 }
 
+const getVillagerMapId = (req: Request): string => {
+  if (req.session!.myvillagersmap != null) {
+    return req.session!.myvillagersmap;
+  } else {
+    return '1';
+  }
+}
+
 loadDb()
 
 router.get(['/', '/:param'], (req: Request, res: Response) => {
@@ -66,6 +74,7 @@ router.get('/react/villagers', validateReact, ((req, res) => {
 }));
 
 router.get('/react/my/get', validateReact, async (req, res) => {
+  const myVillagersMap = new Map<string, string[]>()
   if (req.user) {
     const db = MyVillagers.getInstance();
     const user = req.user as UserDocument;
