@@ -33,7 +33,7 @@
       ]
     },
     "types": [
-      "node"
+      "node", "vuetify"
     ],
     "typeRoots": [
       "node_modules/@types",

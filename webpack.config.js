@@ -2,6 +2,7 @@ const path = require('path');
 const nodemon = require('nodemon-webpack-plugin');
 const shell = require('webpack-shell-plugin');
 const vueLoaderPlugin = require('vue-loader/lib/plugin');
+const { VuetifyLoaderPlugin } = require('vuetify-loader');
 
 module.exports = {
     mode: 'development',
@@ -22,9 +23,23 @@ module.exports = {
                 }
             },
             {
-                test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            }
+                test: /\.s(c|a)ss$/,
+                use: [
+                    'vue-style-loader',
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            implementation: require('sass'),
+                            sassOptions: {
+                                fiber: require('fibers'),
+                                indentedSyntax: true // optional
+                            },
+                        },
+                    },
+                ],
+            },
         ],
 
     },
@@ -45,6 +60,7 @@ module.exports = {
         path: path.resolve(__dirname, 'src', 'public', 'scripts')
     },
     plugins: [
-        new vueLoaderPlugin()
+        new vueLoaderPlugin(),
+        new VuetifyLoaderPlugin()
     ]
 }

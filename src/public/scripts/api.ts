@@ -4,6 +4,6 @@ export const url = (api: string, ...parameter: string[]): string => {
     let apiUrl = api;
     parameter.map(value => {
         apiUrl += `/${value}`;
-    })
+    })q
     return apiUrl;
 }
