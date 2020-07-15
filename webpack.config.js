@@ -26,7 +26,6 @@ module.exports = {
                 test: /\.s(c|a)ss$/,
                 use: [
                     'vue-style-loader',
-                    'style-loader',
                     'css-loader',
                     {
                         loader: 'sass-loader',
@@ -36,7 +35,7 @@ module.exports = {
                                 fiber: require('fibers'),
                                 indentedSyntax: true // optional
                             },
-                        },
+                          },
                     },
                 ],
             },
