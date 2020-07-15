@@ -5,6 +5,6 @@ import vuetify from './vuetify';
 Vue.config.productionTip = false;
 
 new Vue({
+    vuetify,
     render: (h): VNode => h(Campsite),
-    vuetify
 }).$mount('#app');
