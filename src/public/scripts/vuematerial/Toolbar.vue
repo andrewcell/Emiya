@@ -3,7 +3,6 @@
     absolute
     color="green"
     flat
-    @click.stop="drawer = !drawer"
   >
     <v-app-bar-nav-icon
       class="white--text"

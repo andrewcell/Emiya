@@ -1,5 +1,15 @@
 import {l} from './locale';
 
+export interface MenuItem {
+    title: string;
+    link: string;
+}
+
+export interface MenuEntry {
+    title: string;
+    menu: MenuItem[];
+}
+
 const villagerMenu = [
     {title: l('villagers.nav.myvillagers'), link: '/villagers/'},
     {title: l('villagers.nav.allvillagers'), link: '/villagers/list'},

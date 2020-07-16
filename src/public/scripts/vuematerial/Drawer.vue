@@ -1,27 +1,41 @@
 <template>
   <v-navigation-drawer
     v-model="drawer"
-    absolute
-    bottom
     temporary
   >
     <v-list
       nav
       dense
+      flat
     >
-      <v-list-item-group>
-        <v-list-item>
-          <v-list-item-title>Test1</v-list-item-title>
+      <v-list-group
+        v-for="item in menuItems"
+        :key="item.title"
+        no-action
+        sub-group
+        value="true"
+      >
+        <template #activator>
+          <v-list-item-title v-text="item.title" />
+        </template>
+        <v-list-item
+          v-for="menu in item.menu"
+          :key="menu.link"
+          :href="menu.link"
+        >
+          <v-list-item-title>{{ menu.title }}</v-list-item-title>
         </v-list-item>
-      </v-list-item-group>
+      </v-list-group>
     </v-list>
   </v-navigation-drawer>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue, Prop } from 'vue-property-decorator'
+import menuItems, { MenuItem, MenuEntry } from '../menuItems';
 
 @Component
 export default class Drawer extends Vue {
-  drawer = false
+  drawer = false;
+  menuItems = menuItems as MenuEntry[];
 }
 </script>
