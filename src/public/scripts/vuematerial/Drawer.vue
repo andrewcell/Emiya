@@ -9,9 +9,7 @@
       nav
       dense
     >
-      <v-list-item-group
-        v-model="group"
-      >
+      <v-list-item-group>
         <v-list-item>
           <v-list-item-title>Test1</v-list-item-title>
         </v-list-item>
@@ -20,11 +18,10 @@
   </v-navigation-drawer>
 </template>
 <script lang="ts">
-import { Component, Vue, Prop, PropSync, Inject } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class Drawer extends Vue {
-    @Prop(Boolean) drawer: boolean | undefined
-    @Inject('group') readonly group!: void
+  drawer = false
 }
 </script>

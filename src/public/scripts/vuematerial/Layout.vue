@@ -1,41 +1,23 @@
 <template>
   <v-app>
-    <v-app-bar
-      absolute
-      color="green"
-      flat
-      @click.stop="drawer = !drawer"
-    >
-      <v-app-bar-nav-icon class="white--text" />
-      <v-toolbar-title
-        class="white--text"
-      >
-        {{ title }}
-      </v-toolbar-title>
-      <v-spacer />
-      <v-btn
-        color="green"
-        depressed
-        class="white--text"
-      >
-        Login
-      </v-btn>
-    </v-app-bar>
-    <Drawer :drawer="drawer" />
+    <Toolbar
+      :title="title"
+      @toggle-drawer="$refs.drawer.drawer = !$refs.drawer.drawer"
+    />
+    <Drawer
+      ref="drawer"
+    />
   </v-app>
 </template>
 <script lang="ts">
 import {Vue, Component, Watch} from 'vue-property-decorator';
 import Drawer from './Drawer.vue';
+import Toolbar from './Toolbar.vue';
+
 @Component({
-  components: {Drawer}
+  components: {Drawer, Toolbar}
 })
 export default class Layout extends Vue {
     private title = 'DodoSeki'
-    drawer = false
-    @Watch('group')
-    change() {
-      this.drawer = false
-    }
 }
 </script>
