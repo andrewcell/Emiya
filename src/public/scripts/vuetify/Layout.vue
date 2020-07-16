@@ -3,11 +3,15 @@
     <Toolbar
       :title="title"
       @toggle-drawer="$refs.drawer.drawer = !$refs.drawer.drawer"
+      @toggle-toprightdialog="$refs.toprightdialog.toprightdialog = !$refs.toprightdialog.toprightdialog"
     />
     <Drawer
       ref="drawer"
     />
-    <LoginDialog v-if="loginStatus == false" />
+    <LoginDialog
+      v-if="loginStatus == false"
+      ref="toprightdialog"
+    />
   </v-app>
 </template>
 <script lang="ts">

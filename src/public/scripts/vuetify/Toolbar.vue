@@ -18,6 +18,7 @@
       color="green"
       depressed
       class="white--text"
+      @click="$emit('toggle-toprightdialog')"
     >
       Login
     </v-btn>
