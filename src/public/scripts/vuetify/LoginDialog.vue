@@ -62,6 +62,7 @@ import { Vue, Component } from 'vue-property-decorator';
 import { Register } from '../register';
 import Axios, { AxiosResponse } from 'axios';
 import { b64 } from '../b64';
+import {decrypt} from '../encryption/AES';
 
 @Component
 export default class LoginDialog extends Vue {
