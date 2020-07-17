@@ -25,10 +25,6 @@ import Vuex from 'vuex';
 import LoginStatusStore from './LoginStatusStore';
 import {getModule} from 'vuex-module-decorators';
 
-Vue.use(Vuex)
-
-const store = new Vuex.Store({modules: {LoginStatusStore}})
-
 @Component({
   components: {Drawer, Toolbar, LoginDialog}
 })
@@ -36,7 +32,6 @@ export default class Layout extends Vue {
   private title = 'DodoSeki';
   loginStatus = false;
   username = '';
-  module: LoginStatusStore = getModule(LoginStatusStore, this.$store);
   /* mounted() {
     Axios.get('/admin/loginstatus')
             .then((res: AxiosResponse) => {

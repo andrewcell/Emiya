@@ -42,7 +42,7 @@
           <v-btn
             color="green"
             text
-            @click="login"
+            @click="logian"
           >
             Login
           </v-btn>
@@ -59,12 +59,22 @@
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
+import {getModule} from 'vuex-module-decorators';
 import { Register } from '../register';
 import Axios, { AxiosResponse } from 'axios';
 import { b64 } from '../b64';
 import {decrypt} from '../encryption/AES';
+import LoginStatusStore from './LoginStatusStore';
+import { mapGetters, mapState } from 'vuex';
 
-@Component
+@Component({
+  computed: {
+    ...mapState({
+           asd: 'asd'
+  })
+  }
+     
+})
 export default class LoginDialog extends Vue {
   snackbarMessage = '';
   valid = false;
@@ -82,8 +92,10 @@ export default class LoginDialog extends Vue {
   password = '';
   toprightdialog = true;
   snackbar = false;
-
-  login() {
+  asd!: boolean;
+  logian() {
+    this.$store.commit('setLoginStatus', true) // to Change value in store
+    console.log(this.$store.state.LoginStatusStore.username) // get value from store
       if (this.valid) {
         Axios.post(new b64('L2FkbWluL2xvZ2lu').decode(), {username: this.username, password: this.password})
           .then((res: AxiosResponse) => {
@@ -91,6 +103,7 @@ export default class LoginDialog extends Vue {
             switch (result.code as string) {
               case 'login00':
                 localStorage.setItem('token', result.comment)
+                this.$store.commit('LoginStatusStore/setLoginStatus', true)
                 location.reload()
                 break;
               default:

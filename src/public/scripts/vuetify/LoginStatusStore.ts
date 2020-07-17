@@ -1,6 +1,10 @@
 import {Module, Mutation, VuexModule} from 'vuex-module-decorators';
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-@Module
+Vue.use(Vuex);
+
+@Module({name: 'LoginStatusStore'})
 export default class LoginStatusStore extends VuexModule {
     login = false;
     username = '';
