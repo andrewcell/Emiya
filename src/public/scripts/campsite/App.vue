@@ -1,9 +1,8 @@
 <template>
   <div>
     <Layout />
-    <h1 class="title">
-      It works! - {{ title }}
-    </h1>
+    <v-container>
+    </v-container>
   </div>
 </template>
 <script lang='ts'>
