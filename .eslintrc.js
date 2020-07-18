@@ -19,7 +19,7 @@ module.exports = {
     },
     overrides: [
         {
-            "files": ["*.tsx", "*.jsx", "*.ts", "*.js"],
+            "files": ["*.tsx", "*.jsx", "*.ts"],
             "parserOptions": {
                 "project": "tsconfig.json",
                 "sourceType": "module",
