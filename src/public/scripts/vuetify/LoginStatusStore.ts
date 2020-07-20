@@ -13,4 +13,9 @@ export default class LoginStatusStore extends VuexModule {
     setLoginStatus(status: boolean): void {
         this.login = status;
     }
+
+    @Mutation
+    setUsername(username: string): void {
+        this.username = username;
+    }
 }

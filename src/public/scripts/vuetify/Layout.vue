@@ -12,6 +12,11 @@
       v-if="loginStatus === false"
       ref="toprightdialog"
     />
+    <AccountDialog
+      v-else
+      ref="toprightdialog"
+      :username="username"
+    />
   </v-app>
 </template>
 <script lang="ts">
@@ -19,27 +24,27 @@ import {Vue, Component, Watch} from 'vue-property-decorator';
 import Drawer from './Drawer.vue';
 import Toolbar from './Toolbar.vue';
 import LoginDialog from './LoginDialog.vue';
+import AccountDialog from './AccountDialog.vue';
 import Axios, {AxiosResponse} from 'axios';
 import {decrypt} from '../encryption/AES';
-import Vuex from 'vuex';
-import LoginStatusStore from './LoginStatusStore';
-import {getModule} from 'vuex-module-decorators';
 
 @Component({
-  components: {Drawer, Toolbar, LoginDialog}
+  components: {Drawer, Toolbar, LoginDialog, AccountDialog}
 })
 export default class Layout extends Vue {
   private title = 'DodoSeki';
   loginStatus = false;
   username = '';
-  /* mounted() {
+  beforeCreate() {
     Axios.get('/admin/loginstatus')
             .then((res: AxiosResponse) => {
               const encryptedData = res.data.data;
               const data = JSON.parse(decrypt(encryptedData)) as { username: string; email: string };
-              this.module.setLoginStatus(true);
-              // this.module.username = data.username;
+              this.$store.commit('setLoginStatus', true)
+              this.loginStatus = true;
+              this.$store.commit('setUsername', data.username);
+              this.username = data.username;
             })
-  }*/
+  }
 }
 </script>

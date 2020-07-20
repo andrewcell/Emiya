@@ -15,12 +15,22 @@
     </v-toolbar-title>
     <v-spacer />
     <v-btn
+      v-if="this.$store.state.LoginStatusStore.login === false"
       color="green"
       depressed
       class="white--text"
       @click="$emit('toggle-toprightdialog')"
     >
       Login
+    </v-btn>
+    <v-btn
+      v-else
+      color="green"
+      depressed
+      class="white--text"
+      @click="$emit('toggle-toprightdialog')"
+    >
+      {{ this.$store.state.LoginStatusStore.username }}
     </v-btn>
   </v-app-bar>
 </template>
