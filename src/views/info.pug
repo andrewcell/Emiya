@@ -1,7 +1,9 @@
-extends layout
+extends emptyLayout
 
 block content
-    .container
+    #app
+    script(src='/scripts/about.js')
+    //- .container
         h3=__('residentservices.title')
         .card
             .card-content
@@ -50,7 +52,7 @@ block content
                     li.collection-item
                         div=__("residentservices.information.dcinside")
                             .secondary-content 프랑소와 (kmz2019)
-                        
+
 
             .col.s12.l12
                 .card

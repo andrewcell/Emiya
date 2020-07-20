@@ -162,5 +162,24 @@ export default new Map([
     ['layout.login.username',' 사용자 이름(아이디)'],
     ['layout.login.password',' 비밀번호'],
     ['layout.login.invalidinput', '사용할 수 없는 사용자 이름 혹은 비밀번호입니다.'],
-    ['emiyaj.tokenempty','인증 매체가 없습니다. 로그인을 하거나 다시 로그인하세요.']
+    ['emiyaj.tokenempty','인증 매체가 없습니다. 로그인을 하거나 다시 로그인하세요.'],
+    // Resident services
+    ['about.title', '안내소'],
+    ['about.help.title', '기능 도움말'],
+    ['about.help.villagers.title', '내 주민'],
+    ['about.help.villagers.desc', '주민의 성격과 종 뿐만 아니라, 취미, 성격 보조타입 등의 상세한 정보를 이용하여 검색할 수 있는 기능을 제공하며, 내 주민에 추가하면 상세정보를 이용하여 중복된 성향, 성격 등을 파악할 수 있습니다. 검색 기능은 \'전체 주민 목록\' 을 이용하면 되고, 각 주민 항목 오른쪽 + 버튼을 누르면 내 주민에 추가 할 수 있습니다. 최대 추가 할 수 있는 주민의 수는 14마리입니다. (게임도 확장하길 빕니다)\n' +
+    '\n' +
+    '내 주민에서 주민의 그림을 누르면 주민의 상세 페이지로 이동하며, 버튼을 눌러 내 주민에서 삭제 할 수 있습니다.\n' +
+    '\n' +
+    'Javascript 파일이 크고 서버의 위치로 인해 접속 후 한동안 빈 페이지가 출력될 수 있으나 정상적인 로딩 과정입니다.'],
+    ['about.help.emibo.title', 'Emibo'],
+    ['about.help.emibo.desc', 'Emibo는 현재 출시된 피규어, 카드의 백업 데이터를 제공합니다. 이 백업 데이터는 피규어, 카드 분실 시 다시 사용할 수 있도록 파일화 한 것입니다. 기록 시 NTAG215 와 작성 프로그램, NFC 탑재 장비가 필요합니다.\n' +
+    '\n' +
+    'Search 칸에 키워드를 입력하면 바로 결과물을 보여주며 검색할 수 있는 키워드는 다음과 같습니다 : 이름, 영문 번역명, 성격, 성격 영문 번역명, 카드 번호, 웰컴 여부, 별명. 사진을 누르면 bin 파일이 다운로드 됩니다.'],
+    /* ['about.help.villagers.title', '내 주민'],
+    ['about.help.villagers.desc', '설명'],
+    ['about.help.villagers.title', '내 주민'],
+    ['about.help.villagers.desc', '설명'],
+    ['about.help.villagers.title', '내 주민'],
+    ['about.help.villagers.desc', '설명'], */
 ]);

@@ -20,7 +20,7 @@
       class="white--text"
       @click="$emit('toggle-toprightdialog')"
     >
-      Login
+      {{ l('layout.login') }}
     </v-btn>
     <v-btn
       v-else
@@ -35,9 +35,11 @@
 </template>
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
+import {l} from '../locale';
 
 @Component
 export default class Toolbar extends Vue {
     @Prop(String) readonly title: string | undefined;
+    l = l;
 }
 </script>
