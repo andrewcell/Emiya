@@ -50,6 +50,7 @@ module.exports = {
         accounthelp: './src/public/scripts/accounthelp.ts',
         resetpw: './src/public/scripts/resetpw.ts',
         campsite: './src/public/scripts/campsite.ts',
+        about: './src/public/scripts/about.ts'
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.vue']
