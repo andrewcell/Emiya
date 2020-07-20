@@ -1,6 +1,5 @@
 <template>
   <v-app-bar
-    absolute
     color="green"
     flat
   >

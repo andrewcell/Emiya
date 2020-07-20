@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <Toolbar
       :title="title"
       @toggle-drawer="$refs.drawer.drawer = !$refs.drawer.drawer"
@@ -17,7 +17,7 @@
       ref="toprightdialog"
       :username="username"
     />
-  </v-app>
+  </div>
 </template>
 <script lang="ts">
 import {Vue, Component, Watch} from 'vue-property-decorator';
