@@ -5,6 +5,9 @@
       <div class="pa-1 text-h4">
         {{ l('about.title') }}
       </div>
+      <v-banner>
+        Do you want recover your account? Click here.
+      </v-banner>
       <HelpSection />
       <v-divider />
 
