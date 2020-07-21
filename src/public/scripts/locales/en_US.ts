@@ -186,5 +186,10 @@ export default new Map([
     ['about.service.emiya', 'Emiya'],
     ['about.service.emiyaj', 'EmiyaJ'],
     ['about.service.emiyap', 'EmiyaP'],
-
+    ['villagers.gift.color', ''],
+    ['villagers.gift.style', ''],
+    ['villagers.gift.resulttitle.ecolors', ''],
+    ['villagers.gift.resulttitle.eall', ''],
+    ['villagers.my.birthday', 'Birthday'],
+    ['emiyaj.tokenempty', 'Token value is empty. Please re-login.'],
 ]);

@@ -1,4 +1,3 @@
-
 export default new Map([
     ['villagers.card.personality', '성격'],
     ['villagers.personalities.smug', '느끼함'],
