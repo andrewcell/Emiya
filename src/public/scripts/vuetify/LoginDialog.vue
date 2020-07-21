@@ -5,9 +5,16 @@
       max-width="450px"
     >
       <v-card>
-        <v-card-title>Login</v-card-title>
+        <v-progress-linear
+          :active="loading"
+          :indeterminate="loading"
+          absolute
+          top
+          color="green"
+        />
+        <v-card-title>{{ l('layout.login.title') }}</v-card-title>
         <v-card-text>
-          Do not loose your data! login to save.
+          {{ l('layout.login.description') }}
           <v-container>
             <v-form
               ref="form"
@@ -16,14 +23,16 @@
               <v-text-field
                 v-model="username"
                 :rules="usernameRules"
-                label="Username"
+                :label="l('layout.login.username')"
+                :disabled="loading"
                 required
               />
               <v-text-field
                 v-model="password"
                 :rules="passwordRules"
                 type="password"
-                label="Password"
+                :label="l('layout.login.password')"
+                :disabled="loading"
                 required
               />
             </v-form>
@@ -37,14 +46,15 @@
             text
             @click="toprightdialog = false"
           >
-            Close
+            {{ l('layout.login.close') }}
           </v-btn>
           <v-btn
             color="green"
             text
+            :disabled="loading"
             @click="login"
           >
-            Login
+            {{ l('layout.login.login') }}
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -63,47 +73,49 @@ import {getModule} from 'vuex-module-decorators';
 import { Register } from '../register';
 import Axios, { AxiosResponse } from 'axios';
 import { b64 } from '../b64';
-import {decrypt} from '../encryption/AES';
-import LoginStatusStore from './LoginStatusStore';
-import { mapGetters, mapState } from 'vuex';
+import { l } from '../locale';
 
 @Component
 export default class LoginDialog extends Vue {
   snackbarMessage = '';
   valid = false;
   validateUsername = Register.validateUsername
+  validatePassword = Register.validatePassword
   usernameRules = [
-    (v: string) => !!v || 'Username empty',
-    (v: string) => this.validateUsername(v) || 'Wrong Username'
+    (v: string) => !!v || l('layout.login.usernameempty'),
+    (v: string) => this.validateUsername(v) || l('layout.login.usernameinvalid')
   ]
   passwordRules = [
-    (v: string) => !!v || 'Password empty',
-    (v: string) => this.validatePassword(v) || 'Wrong Password'
+    (v: string) => !!v ||  l('layout.login.passwordempty'),
+    (v: string) => this.validatePassword(v) || l('layout.login.passwordinvalid')
   ]
-  validatePassword = Register.validatePassword
   username = '';
   password = '';
   toprightdialog = false;
   snackbar = false;
+  loading = false;
+  l = l;
   login() {
     /* this.$store.commit('setLoginStatus', true) // to Change value in store
     console.log(this.$store.state.LoginStatusStore.username) // get value from store */
-      if (this.valid) {
-        Axios.post(new b64('L2FkbWluL2xvZ2lu').decode(), {username: this.username, password: this.password})
-          .then((res: AxiosResponse) => {
-            const result = res.data
-            switch (result.code as string) {
-              case 'login00':
-                localStorage.setItem('token', result.comment)
-                location.reload()
-                break;
-              default:
-                this.snackbar = true;
-                this.snackbarMessage = result.comment;
-                break;
-            }
-          })
-      }
+    if (this.valid) {
+      this.loading = true;
+      Axios.post(new b64('L2FkbWluL2xvZ2lu').decode(), {username: this.username, password: this.password})
+        .then((res: AxiosResponse) => {
+          const result = res.data
+          switch (result.code as string) {
+            case 'login00':
+              localStorage.setItem('token', result.comment)
+              location.reload()
+              break;
+            default:
+              this.snackbar = true;
+              this.snackbarMessage = result.comment;
+              break;
+          }
+          this.loading = false;
+        })
+    }
   }
 }
 </script>

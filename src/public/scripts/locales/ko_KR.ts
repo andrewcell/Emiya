@@ -161,6 +161,10 @@ export default new Map([
     ['layout.login.login',' 로그인'],
     ['layout.login.username',' 사용자 이름(아이디)'],
     ['layout.login.password',' 비밀번호'],
+    ['layout.login.usernameempty', '사용자 이름이 비어있습니다.'],
+    ['layout.login.passwordempty', '비밀번호가 비어있습니다.'],
+    ['layout.login.usernameinvalid', '사용할 수 없는 사용자 이름입니다.'],
+    ['layout.login.passwordinvalid', '사용할 수 없는 비밀번호입니다.'],
     ['layout.login.invalidinput', '사용할 수 없는 사용자 이름 혹은 비밀번호입니다.'],
     ['emiyaj.tokenempty','인증 매체가 없습니다. 로그인을 하거나 다시 로그인하세요.'],
     // Resident services
