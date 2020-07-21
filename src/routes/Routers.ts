@@ -8,6 +8,7 @@ import {existsSync, readFileSync} from 'fs';
 import moment from 'moment';
 import axios from 'axios';
 import path from 'path';
+import {encrypt} from '@shared/Encryption';
 
 // Init router and path
 const router = Router();
@@ -20,7 +21,7 @@ router.get('/favicon.ico', (req, res) => {
     return res.sendFile(path.join(__dirname, '../public/images/favicon.ico'));
 });
 
-router.get('/info', (req, res) => {
+router.get('/status', (req, res) => {
     const title = res.__('global.title.subtitle', res.__('info.title'))
     let lastBuildTime: string;
     if (existsSync('buildtime.txt')) {
@@ -34,11 +35,14 @@ router.get('/info', (req, res) => {
         }
     }).then(response => {
         const github = moment(response.data[0].commit.author.date);
-        return res.render('info', {lastBuildTime, lastCommitTime: github.format('LLLL'), title});
+        return res.json({data: encrypt(JSON.stringify({lastBuildTime, lastCommitTime: github.format('LLLL'), title}))});
     }).catch(() => {
         return res.render('info', {lastBuildTime, title});
     })
+});
 
+router.get(['/info', '/info/:param'], (req, res) => {
+    return res.render('info');
 });
 
 router.get(['/points', '/points/:param'], (req, res) => {
