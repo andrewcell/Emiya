@@ -26,29 +26,32 @@
             <div class="pa-4 text-h5">
               {{ l('about.links.title') }}
             </div>
-            <v-card
-              v-for="link in links"
-              :key="link[0]"
-            >
-              <v-list-item
-                two-line
-                :href="link[1]"
+            <v-card>
+              <v-list-item-group
+                v-for="link in links"
+                :key="link[0]"
               >
-                <v-list-item-avatar
-                  tile
-                  width="30"
-                  height="30"
+                <v-list-item
+                  two-line
+                  :href="link[1]"
                 >
-                  <span
-                    class="fa-fw fa-lg"
-                    :class="link[2]"
-                  />
-                </v-list-item-avatar>
-                <v-list-item-content>
-                  <v-list-item-title>{{ l('about.links.' + link[0] + '.title') }}</v-list-item-title>
-                  <v-list-item-subtitle>{{ l('about.links.' + link[0] + '.desc') }}</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
+                  <v-list-item-avatar
+                    tile
+                    width="30"
+                    height="30"
+                  >
+                    <span
+                      style="vertical-align: initial"
+                      class="fa-lg"
+                      :class="link[2]"
+                    />
+                  </v-list-item-avatar>
+                  <v-list-item-content>
+                    <v-list-item-title>{{ l('about.links.' + link[0] + '.title') }}</v-list-item-title>
+                    <v-list-item-subtitle>{{ l('about.links.' + link[0] + '.desc') }}</v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list-item-group>
             </v-card>
           </v-col>
           <v-col
@@ -134,6 +137,9 @@
           </v-col>
         </v-row>
       </v-container>
+    </div>
+    <div v-else>
+      <h1>Loading</h1>
     </div>
   </v-app>
 </template>
