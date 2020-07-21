@@ -40,4 +40,12 @@ const language = {
     ]
 }
 
-export default [emibo, villagers, points, language]
+const system = {
+    title: l('layout.system.title'),
+    menu: [
+        {title: l('layout.system.about'), link: '/info'},
+        {title: l('layout.system.logout'), link: '/admin/logout'}
+    ]
+}
+
+export default [emibo, villagers, points, system, language]

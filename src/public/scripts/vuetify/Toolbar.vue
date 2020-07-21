@@ -10,7 +10,13 @@
     <v-toolbar-title
       class="white--text"
     >
-      {{ title }}
+      <a
+        href="/"
+        class="white--text text-h5"
+        style="text-decoration: none"
+      >
+        {{ title }}
+      </a>
     </v-toolbar-title>
     <v-spacer />
     <v-btn
