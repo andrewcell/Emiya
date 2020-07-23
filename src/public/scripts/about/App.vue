@@ -139,7 +139,14 @@
       </v-container>
     </div>
     <div v-else>
-      <h1>Loading</h1>
+      <v-overlay
+        :value="!loaded()"
+      >
+        <v-progress-circular
+          indeterminate
+          size="64"
+        />
+      </v-overlay>
     </div>
   </v-app>
 </template>
