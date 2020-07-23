@@ -37,7 +37,7 @@ router.get('/status', (req, res) => {
         const github = moment(response.data[0].commit.author.date);
         const emiya = 1;
         const emiyaj = 1;
-        const emiyap = 1;
+        const emiyap = 3;
         return res.json({data: encrypt(JSON.stringify({lastBuildTime, lastCommitTime: github.format('LLLL'), title, emiya, emiyaj, emiyap}))});
     }).catch(() => {
         return res.render('info', {lastBuildTime, title});

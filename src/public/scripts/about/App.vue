@@ -97,7 +97,7 @@
                 <v-list-item-content>
                   <v-list-item-title>{{ l('about.service.emiyaj') }}</v-list-item-title>
                   <v-list-item-subtitle :class="getServerColor(this.emiyaJ)">
-                    {{ getServerStatus(this.emiya) }}
+                    {{ getServerStatus(this.emiyaJ) }}
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
@@ -116,7 +116,7 @@
                 <v-list-item-content>
                   <v-list-item-title>{{ l('about.service.emiyap') }}</v-list-item-title>
                   <v-list-item-subtitle :class="getServerColor(this.emiyaP)">
-                    {{ getServerStatus(this.emiya) }}
+                    {{ getServerStatus(this.emiyaP) }}
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
@@ -222,6 +222,7 @@ export default class App extends Vue {
       case 1:
         return 'orange--text'
       case 2:
+      case 3:
         return 'red--text'
       default:
         return 'gray--text'
@@ -236,6 +237,8 @@ export default class App extends Vue {
         return 'Warning';
       case 2:
         return 'Critical';
+      case 3:
+        return 'Maintenance';
       default:
         return 'Unknown';
     }
