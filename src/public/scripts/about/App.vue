@@ -151,16 +151,16 @@
   </v-app>
 </template>
 <script lang="ts">
-  import {Component, Vue} from 'vue-property-decorator';
-  import Layout from '../vuetify/Layout.vue';
-  import HelpSection from '../about/HelpSection.vue';
-  import DevInfo from './DevInfo.vue';
-  import {l} from '../locale';
-  import Axios, {AxiosResponse} from 'axios';
-  import {decrypt} from '../encryption/AES';
-  import {PageStatus} from '../points/enums';
+import {Component, Vue} from 'vue-property-decorator';
+import Layout from '../vuetify/Layout.vue';
+import HelpSection from '../about/HelpSection.vue';
+import DevInfo from './DevInfo.vue';
+import {l} from '../locale';
+import Axios, {AxiosError, AxiosResponse} from 'axios';
+import {decrypt} from '../encryption/AES';
+import {PageStatus} from '../points/enums';
 
-  @Component({
+@Component({
   components: {
     Layout, HelpSection, DevInfo
   }
@@ -183,6 +183,9 @@ export default class App extends Vue {
         this.lastBuildTime = data.lastBuildTime;
         this.lastCommitTime = data.lastCommitTime;
         this.pageStatus = PageStatus.LOADED;
+      })
+      .catch(() => {
+        this.pageStatus = PageStatus.ERROR;
       })
   }
 
