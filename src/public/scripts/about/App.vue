@@ -77,8 +77,8 @@
                 </v-list-item-avatar>
                 <v-list-item-content>
                   <v-list-item-title>{{ l('about.service.emiya') }}</v-list-item-title>
-                  <v-list-item-subtitle class="orange--text">
-                    Warning
+                  <v-list-item-subtitle :class="getServerColor(this.emiya)">
+                    {{ getServerStatus(this.emiya) }}
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
@@ -96,8 +96,8 @@
                 </v-list-item-avatar>
                 <v-list-item-content>
                   <v-list-item-title>{{ l('about.service.emiyaj') }}</v-list-item-title>
-                  <v-list-item-subtitle class="green--text">
-                    Normal
+                  <v-list-item-subtitle :class="getServerColor(this.emiyaJ)">
+                    {{ getServerStatus(this.emiya) }}
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
@@ -115,8 +115,8 @@
                 </v-list-item-avatar>
                 <v-list-item-content>
                   <v-list-item-title>{{ l('about.service.emiyap') }}</v-list-item-title>
-                  <v-list-item-subtitle class="red--text">
-                    Critical
+                  <v-list-item-subtitle :class="getServerColor(this.emiyaP)">
+                    {{ getServerStatus(this.emiya) }}
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
@@ -160,6 +160,15 @@ import Axios, {AxiosError, AxiosResponse} from 'axios';
 import {decrypt} from '../encryption/AES';
 import {PageStatus} from '../points/enums';
 
+enum ServerStatus {
+  Normal = 0,
+  Warning = 1,
+  Critical = 2,
+  Slow = 3,
+  Maintenance = 4,
+  Unknown = 9
+}
+
 @Component({
   components: {
     Layout, HelpSection, DevInfo
@@ -176,12 +185,25 @@ export default class App extends Vue {
   pageStatus = PageStatus.LOADING
   lastCommitTime = '';
   lastBuildTime = '';
+  emiya = 9;
+  emiyaJ = 9;
+  emiyaP = 9;
   created(): void {
     Axios.get('/status')
       .then((r: AxiosResponse) => {
-        const data = JSON.parse(decrypt(r.data.data)) as {lastBuildTime: string, lastCommitTime: string, title: string};
+        const data = JSON.parse(decrypt(r.data.data)) as {
+          lastBuildTime: string,
+          lastCommitTime: string,
+          title: string,
+          emiya: number,
+          emiyaj: number,
+          emiyap: number
+        };
         this.lastBuildTime = data.lastBuildTime;
         this.lastCommitTime = data.lastCommitTime;
+        this.emiya = data.emiya;
+        this.emiyaJ = data.emiyaj;
+        this.emiyaP = data.emiyap;
         this.pageStatus = PageStatus.LOADED;
       })
       .catch(() => {
@@ -191,6 +213,32 @@ export default class App extends Vue {
 
   loaded(): boolean {
     return this.pageStatus === PageStatus.LOADED
+  }
+
+  getServerColor(status: number | undefined): string {
+    switch (status) {
+      case 0:
+        return 'green--text'
+      case 1:
+        return 'orange--text'
+      case 2:
+        return 'red--text'
+      default:
+        return 'gray--text'
+    }
+  }
+
+  getServerStatus(status: number | undefined): string {
+    switch (status) {
+      case 0:
+        return 'Normal';
+      case 1:
+        return 'Warning';
+      case 2:
+        return 'Critical';
+      default:
+        return 'Unknown';
+    }
   }
 }
 </script>
