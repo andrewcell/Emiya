@@ -37,6 +37,8 @@ const language = {
     menu: [
         {title: 'English (U.S.)', link: '/lang/en'},
         {title: '한국어 (대한민국)', link: '/lang/ko'},
+        {title: '日本語 (日本)', link: '/lang/ja'},
+        {title: '조선어 (북조선)', link: '/lang/kp'},
     ]
 }
 
