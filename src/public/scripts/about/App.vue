@@ -77,8 +77,8 @@
                 </v-list-item-avatar>
                 <v-list-item-content>
                   <v-list-item-title>{{ l('about.service.emiya') }}</v-list-item-title>
-                  <v-list-item-subtitle :class="getServerColor(this.emiya)">
-                    {{ getServerStatus(this.emiya) }}
+                  <v-list-item-subtitle :class="getServerColor(emiya)">
+                    {{ getServerStatus(emiya) }}
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
@@ -96,8 +96,8 @@
                 </v-list-item-avatar>
                 <v-list-item-content>
                   <v-list-item-title>{{ l('about.service.emiyaj') }}</v-list-item-title>
-                  <v-list-item-subtitle :class="getServerColor(this.emiyaJ)">
-                    {{ getServerStatus(this.emiyaJ) }}
+                  <v-list-item-subtitle :class="getServerColor(emiyaJ)">
+                    {{ getServerStatus(emiyaJ) }}
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
@@ -115,8 +115,8 @@
                 </v-list-item-avatar>
                 <v-list-item-content>
                   <v-list-item-title>{{ l('about.service.emiyap') }}</v-list-item-title>
-                  <v-list-item-subtitle :class="getServerColor(this.emiyaP)">
-                    {{ getServerStatus(this.emiyaP) }}
+                  <v-list-item-subtitle :class="getServerColor(emiyaP)">
+                    {{ getServerStatus(emiyaP) }}
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
