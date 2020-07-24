@@ -25,7 +25,7 @@
   "layout.campsite.title": "キャンプサイト",
   "layout.emibo.title": "Emibo",
   "layout.info.title": "案內所",
-  "layout.login": "로그인",
+  "layout.login": "ログインする",
   "layout.login.close": "閉じる",
   "layout.login.description": "All modified data will be lost if you're stay in logout.",
   "layout.login.invalidinput": "許可されないユーザー名またはパスワード。",
