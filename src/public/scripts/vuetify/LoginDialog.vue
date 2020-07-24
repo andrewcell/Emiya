@@ -106,7 +106,11 @@ export default class LoginDialog extends Vue {
           switch (result.code as string) {
             case 'login00':
               localStorage.setItem('token', result.comment)
-              location.reload()
+              this.$store.commit('setLoginStatus', true)
+              this.$store.commit('setUsername', this.username);
+              this.snackbar = true;
+              this.snackbarMessage = l('layout.login.success') + ' ' + this.username;
+              this.toprightdialog = false;
               break;
             default:
               this.snackbar = true;

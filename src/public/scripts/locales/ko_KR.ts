@@ -197,6 +197,7 @@ export default new Map([
     ['layout.system.title', '안내소'],
     ['layout.system.about', '안내소'],
     ['layout.system.logout', '로그아웃'],
+    ['layout.login.success', '환영합니다.'],
     /* ['about.help.villagers.title', '내 주민'],
     ['about.help.villagers.desc', '설명'],
     ['about.help.villagers.title', '내 주민'],
