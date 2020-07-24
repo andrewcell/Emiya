@@ -27,7 +27,7 @@
   "layout.info.title": "案內所",
   "layout.login": "ログインする",
   "layout.login.close": "閉じる",
-  "layout.login.description": "All modified data will be lost if you're stay in logout.",
+  "layout.login.description": "ログアウトしたままにすると、変更されたデータはすべて失われます。",
   "layout.login.invalidinput": "許可されないユーザー名またはパスワード。",
   "layout.login.login": "ログインする",
   "layout.login.password": "パスワード",
