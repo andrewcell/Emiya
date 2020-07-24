@@ -1,0 +1,13 @@
+phrase:
+  access_token: 9f175303bb5efcf1f6ee0ef47af944e95c21613c76549ff536553074e63438f1
+  project_id: f250fe4162fc824277e23a528175df66
+  push:
+    sources:
+    - file: ./src/public/scripts/locales/<locale_name>.json
+      params:
+        file_format: simple_json
+  pull:
+    targets:
+    - file: ./src/public/scripts/locales/<locale_name>.json
+      params:
+        file_format: simple_json
