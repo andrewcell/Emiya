@@ -188,5 +188,6 @@
   "layout.system.title": "안내소",
   "layout.system.about": "안내소",
   "layout.system.logout": "로그아웃",
-  "layout.login.success": "환영합니다."
+  "layout.login.success": "환영합니다.",
+  "test": "테스트"
 }
