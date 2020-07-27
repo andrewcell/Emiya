@@ -50,4 +50,12 @@ const system = {
     ]
 }
 
-export default [emibo, villagers, points, system, language]
+const campsite = {
+    title: l('layout.system.campsite'),
+    menu: [
+        {title: l('layout.system.campsite'), link: '/campsite'},
+        {title: l('layout.campsite.history'), link: '/campsite/history'}
+    ]
+}
+
+export default [emibo, villagers, campsite, /* points, */ system, language]

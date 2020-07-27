@@ -22,6 +22,7 @@
   "about.title": "Resident services",
   "accounthelp.resetpw.twopasswordnotmatch": "Passwords do not match.",
   "emiyaj.tokenempty": "Token value is empty. Please re-login.",
+  "layout.campsite.history": "Campsite History",
   "layout.campsite.title": "Campsite",
   "layout.emibo.title": "Emibo",
   "layout.info.title": "Resident Services",
@@ -40,6 +41,7 @@
   "layout.login.usernameinvalid": "Unacceptable username.",
   "layout.points.title": "Friendship Points",
   "layout.system.about": "Resident services",
+  "layout.system.campsite": "Campsite",
   "layout.system.logout": "Logout",
   "layout.system.title": "Resident services",
   "layout.villagers.gift": "Search by Clothes",
@@ -188,5 +190,7 @@
   "villagers.styles.cute": "Cute",
   "villagers.styles.elegant": "Elegant",
   "villagers.styles.gorgeous": "Gorgeous",
-  "villagers.styles.simple": "Simple"
+  "villagers.styles.simple": "Simple",
+  "campsite.layout.history": "History",
+  "campsite.layout.main": "Campsite"
 }

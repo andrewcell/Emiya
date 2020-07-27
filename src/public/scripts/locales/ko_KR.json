@@ -22,6 +22,7 @@
   "about.title": "안내소",
   "accounthelp.resetpw.twopasswordnotmatch": "두 개의 비밀번호가 일치하지 않습니다.",
   "emiyaj.tokenempty": "인증 매체가 없습니다. 로그인을 하거나 다시 로그인하세요.",
+  "layout.campsite.history": "캠핑장 기록",
   "layout.campsite.title": "캠핑장",
   "layout.emibo.title": "Emibo",
   "layout.info.title": "안내소",
@@ -40,6 +41,7 @@
   "layout.login.usernameinvalid": "사용할 수 없는 사용자 이름입니다.",
   "layout.points.title": "친밀도 계산기",
   "layout.system.about": "안내소",
+  "layout.system.campsite": "캠핑장",
   "layout.system.logout": "로그아웃",
   "layout.system.title": "안내소",
   "layout.villagers.gift": "옷으로 검색",
@@ -188,5 +190,7 @@
   "villagers.styles.cute": "Cute",
   "villagers.styles.elegant": "Elegant",
   "villagers.styles.gorgeous": "Gorgeous",
-  "villagers.styles.simple": "Simple"
+  "villagers.styles.simple": "Simple",
+  "campsite.layout.history": "지난 기록",
+  "campsite.layout.main": "캠핑장"
 }

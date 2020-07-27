@@ -151,6 +151,7 @@
     "vue-eslint-parser": "^7.1.0",
     "vue-loader": "^15.9.3",
     "vue-property-decorator": "^9.0.0",
+    "vue-router": "^3.3.4",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",
     "vuetify": "^2.3.5",
