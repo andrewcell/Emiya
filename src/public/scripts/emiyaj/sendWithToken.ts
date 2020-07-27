@@ -18,15 +18,16 @@ export class EmiyaJ {
 
     public send(data: string, path: string): Promise<string> {
         if (this.token == null) {
-            return Promise.reject(l('emiyaj.tokenempty'))
+            return Promise.resolve(l('emiyaj.tokenempty'))
         }
         return new Promise<string>((resolve, reject) => {
             Axios.post(emiyaJ + path, {data}, {headers: {token: this.token}})
                 .then(r => {
+
                     return resolve('')
                 })
                 .catch(e => {
-                    return reject('')
+                    return reject(e)
                 })
         })
     }
