@@ -192,5 +192,7 @@
   "villagers.styles.gorgeous": "Gorgeous",
   "villagers.styles.simple": "Simple",
   "campsite.layout.history": "지난 기록",
-  "campsite.layout.main": "캠핑장"
+  "campsite.layout.main": "캠핑장",
+  "campsite.layout.retrieving": "불러오는 중",
+  "campsite.layout.processing": "처리하는 중"
 }
