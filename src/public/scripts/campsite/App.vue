@@ -49,18 +49,21 @@
   import {l} from '../locale';
   import {EmiyaJ} from '../emiyaj/sendWithToken';
   import {url} from '../api';
+  import {decryptJava} from '../encryption/AES';
+  import {CampsiteContent} from './CampsiteObjects';
+  import CampsiteEmpty from './CampsiteEmpty.vue';
 
   enum PageStatus {
     NORMAL = 0,
     RETRIEVING = 1,
     PROCESSING = 2,
     UNAUTHORIZED = 3,
-    EMPTY = 4
+    ERROR = 4
   }
 
   @Component({
     components: {
-      Layout
+      Layout, CampsiteEmpty
     }
   })
   export default class App extends Vue {
@@ -71,8 +74,14 @@
     created(): void {
       EmiyaJ.getInstance().get(EmiyaJ.path('campsite/'))
         .then(r => {
-          console.log(r)
           this.pageStatus = PageStatus.PROCESSING;
+          const data = decryptJava(r)
+          if (data === '' || data == null) {
+            this.$store.commit('setCurrent', null);
+            this.pageStatus = PageStatus.NORMAL;
+            return;
+          }
+          const content = JSON.parse(decryptJava(r)) as CampsiteContent;
           this.pageStatus = PageStatus.NORMAL;
         })
     }

@@ -1,7 +1,6 @@
 import Axios from 'axios';
 import {emiyaJ} from '../api';
 import {l} from '../locale';
-import {convertRelativeUrlPrefix} from 'tslint-to-eslint-config/src/rules/converters/codelyzer/relative-url-prefix';
 
 export class EmiyaJ {
     private static instance: EmiyaJ;

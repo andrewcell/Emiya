@@ -6,12 +6,13 @@ import LoginStatusStore from './vuetify/LoginStatusStore';
 import VueRouter from 'vue-router'
 import CampsiteMain from './campsite/Campsite.vue';
 import CampsiteHistory from './campsite/CampsiteHistory.vue';
+import CampsiteStore from './campsite/CampsiteStore';
 
 Vue.config.productionTip = false;
 
 const store = new Vuex.Store({
     modules: {
-        LoginStatusStore
+        LoginStatusStore, CampsiteStore
     }
 });
 

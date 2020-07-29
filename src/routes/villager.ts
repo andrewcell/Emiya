@@ -6,6 +6,7 @@ import MyVillagers, {resize} from '@interfaces/MyVillagersDatabase';
 import {UserDocument} from '@shared/User';
 import {internalError} from '@shared/constants';
 import logger from '@shared/Logger';
+import {Villager} from "@interfaces/villagerData";
 
 const router = Router();
 router.use((req, res, next) => {
@@ -166,6 +167,17 @@ router.post('/getvillager', validateReact, validateLoggedIn, (req, res) => {
   } else {
     return res.json({code: 500, comment: internalError});
   }
-
 });
+
+router.post('/search', validateReact, (req, res) => {
+  const decrypted: string = decrypt(req.body.data)
+  if (decrypted === '' || decrypted.length <= 1) {
+    return res.json({data: encrypt('')});
+  }
+  const result = villagerList.filter(v => {
+    return v.name_kor.includes(decrypted) || v.name_english.toLowerCase().includes(decrypted)
+  });
+  return res.json({data: encrypt(JSON.stringify(result))});
+});
+
 export default router;
