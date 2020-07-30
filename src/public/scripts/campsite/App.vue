@@ -74,14 +74,35 @@
     created(): void {
       EmiyaJ.getInstance().get(EmiyaJ.path('campsite/'))
         .then(r => {
-          this.pageStatus = PageStatus.PROCESSING;
+          this.pageStatus = PageStatus.PROCESSING
           const data = decryptJava(r)
+          console.log(data)
           if (data === '' || data == null) {
             this.$store.commit('setCurrent', null);
             this.pageStatus = PageStatus.NORMAL;
             return;
           }
-          const content = JSON.parse(decryptJava(r)) as CampsiteContent;
+          const contentArrays = JSON.parse(data) as CampsiteContent[];
+          const history: CampsiteContent[] = []
+          let currentSet = false;
+          if (contentArrays != null) {
+            contentArrays.map(content => {
+              if (content.done) {
+                history.push(content);
+              } else {
+                if (currentSet) {
+                  history.push(content);
+                } else {
+                  this.$store.commit('setCurrentWithoutApply', content);
+                  currentSet = true;
+                }
+              }
+            });
+          } else {
+            this.$store.commit('setCurrentWithoutApply', null);
+            currentSet = true;
+          }
+          this.$store.commit('setContentsWithoutApply', history);
           this.pageStatus = PageStatus.NORMAL;
         })
     }

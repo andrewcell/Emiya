@@ -1,6 +1,13 @@
 import Axios from 'axios';
 import {emiyaJ} from '../api';
 import {l} from '../locale';
+import {TokenResult} from './TokenResult';
+
+interface Response {
+    code: string;
+    comment: string;
+    data: string | null;
+}
 
 export class EmiyaJ {
     private static instance: EmiyaJ;
@@ -29,7 +36,6 @@ export class EmiyaJ {
     }
 
     public get(path: string): Promise<string> {
-        console.log(this.token);
         this.setToken();
         if (this.token == null) {
             return Promise.reject(l('emiyaj.tokenempty'))
@@ -37,8 +43,18 @@ export class EmiyaJ {
         return new Promise<string>((resolve, reject) => {
             Axios.get(emiyaJ + path, {headers: {token: this.token}})
                 .then(r => {
-                    console.log(r)
-                    return resolve(r.data)
+                    const res = r.data as Response
+                    switch (res.code) {
+                        case TokenResult.EXPIRED:
+                            location.reload();
+                            return reject(l('emiya.tokenexpired'));
+                        default:
+                            if (res.data != null) {
+                                return resolve(res.data);
+                            } else {
+                                return resolve('');
+                            }
+                    }
                 })
                 .catch(e => {
                     return reject(e);
@@ -47,19 +63,39 @@ export class EmiyaJ {
     }
 
     public send(data: string, path: string): Promise<string> {
+        const message = this.prehandleToken()
+        if (this.prehandleToken() == null) {
+            return new Promise<string>((resolve, reject) => {
+                Axios.post(emiyaJ + path, {data}, {headers: {token: this.token}})
+                    .then(r => {
+                        const res = r.data as Response
+                        switch (res.code) {
+                            case TokenResult.EXPIRED:
+                                location.reload();
+                                return reject(l('emiya.tokenexpired'));
+                            default:
+                                if (res.data != null) {
+                                    return resolve(res.data);
+                                } else {
+                                    return resolve('');
+                                }
+                        }
+                    })
+                    .catch(e => {
+                        return reject(l('emiyaj.invaliderror'))
+                    })
+            })
+        } else {
+            return Promise.reject(message);
+        }
+    }
+
+    private prehandleToken(): string | null {
         this.setToken();
         if (this.token == null) {
-            return Promise.reject(l('emiyaj.tokenempty'))
+            return l('emiyaj.tokenempty')
+        } else {
+            return null
         }
-        return new Promise<string>((resolve, reject) => {
-            Axios.post(emiyaJ + path, {data}, {headers: {token: this.token}})
-                .then(r => {
-                    console.log(r)
-                    return resolve('')
-                })
-                .catch(e => {
-                    return reject(e)
-                })
-        })
     }
 }
