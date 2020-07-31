@@ -7,7 +7,7 @@ Vue.use(Vuex);
 @Module({name: 'LoginStatusStore'})
 export default class LoginStatusStore extends VuexModule {
     login = false;
-    username = '';
+    username: string | null = '';
 
     @Mutation
     setLoginStatus(status: boolean): void {

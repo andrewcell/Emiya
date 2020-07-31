@@ -34,17 +34,25 @@ import {decrypt} from '../encryption/AES';
 export default class Layout extends Vue {
   private title = 'DodoSeki';
   loginStatus = false;
-  username = '';
+  username: string | null = null;
+
   beforeCreate() {
     Axios.get('/admin/loginstatus')
-            .then((res: AxiosResponse) => {
-              const encryptedData = res.data.data;
-              const data = JSON.parse(decrypt(encryptedData)) as { username: string; email: string };
-              this.$store.commit('setLoginStatus', true)
-              this.loginStatus = true;
-              this.$store.commit('setUsername', data.username);
-              this.username = data.username;
-            })
+      .then((res: AxiosResponse) => {
+        const encryptedData = res.data.data;
+        const data = JSON.parse(decrypt(encryptedData)) as { username: string; email: string };
+        this.$store.commit('setLoginStatus', true)
+        this.loginStatus = true;
+        this.$store.commit('setUsername', data.username);
+        this.username = data.username;
+      })
+      .catch(() => {
+        this.$store.commit('setLoginStatus', false)
+        this.loginStatus = false;
+        this.$store.commit('setUsername', null);
+        this.username = null;
+      })
   }
+
 }
 </script>

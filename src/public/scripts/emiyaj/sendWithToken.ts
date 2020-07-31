@@ -46,7 +46,7 @@ export class EmiyaJ {
                     const res = r.data as Response
                     switch (res.code) {
                         case TokenResult.EXPIRED:
-                            location.reload();
+                            location.replace('/admin/logout');
                             return reject(l('emiya.tokenexpired'));
                         default:
                             if (res.data != null) {
@@ -71,7 +71,7 @@ export class EmiyaJ {
                         const res = r.data as Response
                         switch (res.code) {
                             case TokenResult.EXPIRED:
-                                location.reload();
+                                location.replace('/admin/logout');
                                 return reject(l('emiya.tokenexpired'));
                             default:
                                 if (res.data != null) {

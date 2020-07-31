@@ -1,5 +1,9 @@
 <template>
-  <v-app v-if="pageStatus === 0">
+  <v-app v-if="pageStatus === 3">
+    <Layout />
+    <h1>이 모듈은 비회원 저장 기능을 지원하지 않습니다. 계속 사용하려면 로그인해주세요.</h1>
+  </v-app>
+  <v-app v-else-if="pageStatus === 0">
     <Layout />
     <v-tabs
       background-color="green"
@@ -44,7 +48,7 @@
   </v-app>
 </template>
 <script lang='ts'>
-  import {Vue, Component} from 'vue-property-decorator';
+  import {Vue, Component, Watch} from 'vue-property-decorator';
   import Layout from '../vuetify/Layout.vue';
   import {l} from '../locale';
   import {EmiyaJ} from '../emiyaj/sendWithToken';
@@ -71,45 +75,54 @@
     l = l;
     pageStatus = PageStatus.RETRIEVING
 
-    created(): void {
-      EmiyaJ.getInstance().get(EmiyaJ.path('campsite/'))
-        .then(r => {
-          this.pageStatus = PageStatus.PROCESSING
-          const data = decryptJava(r)
-          console.log(data)
-          if (data === '' || data == null) {
-            this.$store.commit('setCurrent', null);
-            this.pageStatus = PageStatus.NORMAL;
-            return;
-          }
-          const contentArrays = JSON.parse(data) as CampsiteContent[];
-          const history: CampsiteContent[] = []
-          let currentSet = false;
-          if (contentArrays != null) {
-            contentArrays.map(content => {
-              if (content.done) {
-                history.push(content);
-              } else {
-                if (currentSet) {
-                  history.push(content);
-                } else {
-                  this.$store.commit('setCurrentWithoutApply', content);
-                  currentSet = true;
-                }
+    @Watch('$store.state.LoginStatusStore', {deep: true})
+    loginChanged(newValue: {login: boolean}, oldValue: {login: boolean}) {
+        if (newValue.login) {
+          this.pageStatus = PageStatus.RETRIEVING
+          EmiyaJ.getInstance().get(EmiyaJ.path('campsite/'))
+            .then(r => {
+              this.pageStatus = PageStatus.PROCESSING
+              const data = decryptJava(r)
+              if (data === '' || data == null) {
+                this.$store.commit('setCurrent', null);
+                this.pageStatus = PageStatus.NORMAL;
+                return;
               }
-            });
-          } else {
-            this.$store.commit('setCurrentWithoutApply', null);
-            currentSet = true;
-          }
-          this.$store.commit('setContentsWithoutApply', history);
-          this.pageStatus = PageStatus.NORMAL;
-        })
-    }
+              const contentArrays = JSON.parse(data) as CampsiteContent[];
+              const history: CampsiteContent[] = []
+              let currentSet = false;
+              if (contentArrays != null) {
+                contentArrays.map(content => {
+                  if (content.done) {
+                    history.push(content);
+                  } else {
+                    if (currentSet) {
+                      history.push(content);
+                    } else {
+                      this.$store.commit('setCurrentWithoutApply', content);
+                      currentSet = true;
+                    }
+                  }
+                });
+              } else {
+                this.$store.commit('setCurrentWithoutApply', null);
+                currentSet = true;
+              }
+              this.$store.commit('setContentsWithoutApply', history);
+              this.pageStatus = PageStatus.NORMAL;
+            })
+        } else {
+          this.pageStatus = PageStatus.UNAUTHORIZED;
+        }
+      }
 
-    isPageLoaded(): boolean {
-      return this.pageStatus === PageStatus.NORMAL;
-    }
+      beforeUpdate(): void {
+        
+      }
+
+      isPageLoaded(): boolean {
+        return this.pageStatus === PageStatus.NORMAL;
+      }
   }
 </script>
 <style lang="sass">
