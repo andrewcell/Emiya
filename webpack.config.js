@@ -44,7 +44,7 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     entry: {
-        layout: './src/public/scripts/layout.ts',
+        layout: './src/public/scripts/layout.tsx',
         villagers: './src/public/scripts/villagers.tsx',
         points: './src/public/scripts/points.tsx',
         accounthelp: './src/public/scripts/accounthelp.ts',

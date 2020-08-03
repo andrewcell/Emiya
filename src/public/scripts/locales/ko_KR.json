@@ -196,5 +196,20 @@
   "campsite.layout.retrieving": "불러오는 중",
   "campsite.layout.processing": "처리하는 중",
   "emiya.tokenexpired": "인증 정보가 만료되었습니다. 다시 로그인해주세요.",
-  "emiyaj.invaliderror": "알 수 없는 오류가 발생하였습니다. 관리자에게 문의해주세요."
+  "emiyaj.invaliderror": "알 수 없는 오류가 발생하였습니다. 관리자에게 문의해주세요.",
+  "home.emibo.title": "Emibo",
+  "home.emibo.description": "비공식 짐승의 숲 주민, 특수 주민 NFC 백업 데이터 데이터베이스",
+  "home.emibo.moredescription": "Emibo",
+  "home.villagers.title": "주민",
+  "home.villagers.description": "모여봐요 동물의 숲 전체 주민 상세 데이터베이스, 주민에 대한 통계, 차트 제공",
+  "home.villagers.moredescription": "Emibo",
+  "home.about.title": "안내소",
+  "home.about.description": "DodoSeki, 웹 사이트에 대한 정보(업데이트 내역, 관리 모드, 도움말)를 제공하는 곳",
+  "home.about.moredescription": "Emibo",
+  "home.campsite.title": "캠핑장",
+  "home.campsite.description": "캠핑 노가다(캠노)중 인가요? 여기서 캠핑장에 왔던 주민들을 기록하세요",
+  "home.campsite.moredescription": "Emibo",
+  "home.points.title": "친밀도 계산기",
+  "home.points.description": "친밀도 계산기가 여기에 링크될 예정.",
+  "home.points.moredescription": "Emibo"
 }
