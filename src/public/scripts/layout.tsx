@@ -19,6 +19,7 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
+
         },
         expand: {
             transform: 'rotate(0deg)',
@@ -59,14 +60,7 @@ const ModuleCard = (prop: CardProp): JSX.Element => {
             </CardContent>
             <CardActions disableSpacing>
                 <Button color={'primary'}>Enter</Button>
-                <IconButton
-                    className={clsx(classes.expand, {
-                        [classes.expandOpen]: expanded,
-                    })}
-                    onClick={handleExpandClick}
-                    aria-expanded={expanded}
-                    aria-label="show more"
-                >
+                <IconButton className={clsx(classes.expand, {[classes.expandOpen]: expanded})} onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more">
                     <ExpandMoreIcon />
                 </IconButton>
             </CardActions>
@@ -117,10 +111,10 @@ const modules: CardProp[] = [
 const Element = (): JSX.Element => {
     return (
         <>
-            <Grid container spacing={2}>
+            <Grid container spacing={3}>
                 {modules.map(module => {
                     return (
-                        <Grid item lg={4} key={module.link}>
+                        <Grid item key={module.link} xs={12}>
                             <ModuleCard title={module.title} description={module.description} link={module.link} moreDescription={module.moreDescription} />
                         </Grid>
                     )
