@@ -9,13 +9,13 @@ import VillagersList from './villagers/VillagersList';
 import LinkButtons from './villagers/LinkButtons';
 import axios from 'axios';
 import {Villager} from './villagers/interfaces';
-import {Color, Style} from './villagers/enums';
 import {decrypt} from './encryption/AES';
 import VillagerDetail from './villagers/VillagerDetail';
 import VillagerSearchByClothes from './villagers/VillagerSearchByClothes';
 import VillagersPreferGift from './villagers/VillagersPreferGift';
 import {PageStatus} from './points/enums';
 import {Container, ProgressBar} from 'materialinse-reactjs';
+import {objectToVillager} from './villagers/ObjectToVillager';
 
 interface VillagersState {
     pageStatus: PageStatus;
@@ -41,27 +41,7 @@ class Villagers extends React.Component<any, VillagersState> {
             const villagersJson = JSON.parse(decrypt(response.data.data))
             const array: Villager[] = [];
             villagersJson.forEach((v: any) => {
-                const data: Villager = {
-                    id: v.id,
-                    personality: v.personality,
-                    hobby: v.hobby,
-                    type: (v.type === 0) ? 'A' : 'B',
-                    birthday: v.birthday,
-                    style1: v.style1 as Style,
-                    style2: v.style2 as Style,
-                    color1: v.color1 as Color,
-                    color2: v.color2 as Color,
-                    voicetone: v.voicetone,
-                    species: v.species,
-                    code: v.code,
-                    nameKor: v.name_kor,
-                    nameEng: v.name_english,
-                    mottoKor: v.motto_kor,
-                    mottoEng: v.motto_english,
-                    phraseKor: v.phrase_kor,
-                    phraseEng: v.phrase_english,
-                    defaultClothes: v.defaultclothes
-                }
+                const data = objectToVillager(v);
                 array.push(data);
             });
             axios.get('/villagers/react/my/get').then(res => {
