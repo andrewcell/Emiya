@@ -15,6 +15,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 import {l} from './locale';
 import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -130,7 +131,7 @@ const modules: CardProp[] = [
 
 const Element = (): JSX.Element => {
     return (
-        <>
+        <Container>
             <Grid container spacing={3}>
                 {modules.map(module => {
                     return (
@@ -140,7 +141,7 @@ const Element = (): JSX.Element => {
                     )
                 })}
             </Grid>
-        </>
+        </Container>
     )
 }
 

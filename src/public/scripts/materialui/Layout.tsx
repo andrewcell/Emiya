@@ -1,8 +1,6 @@
 import React from 'react';
 import {createMuiTheme, MuiThemeProvider} from '@material-ui/core';
 import Header from './Header';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
 import Axios from 'axios';
 import {decrypt} from '../encryption/AES';
 import {PageStatus} from '../points/enums';
@@ -56,9 +54,7 @@ class Layout extends React.Component<LayoutProp, LayoutState> {
         return (
             <MuiThemeProvider theme={theme}>
                 <Header loginStatus={this.state.loginStatus} username={this.state.username} setLoginStatus={this.setLoginStatus} pageStatus={this.props.pageStatus} />
-                <Container>
-                    {this.props.content}
-                </Container>
+                {this.props.content}
             </MuiThemeProvider>
         )
     }

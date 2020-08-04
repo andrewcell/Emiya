@@ -12,6 +12,7 @@ import Layout from './materialui/Layout';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Container from '@material-ui/core/Container';
 
 class Points extends React.Component<any, PointsState> {
     constructor(props: any) {
@@ -72,7 +73,7 @@ class Points extends React.Component<any, PointsState> {
     render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
             <>
-                <Layout content={this.getContent()} pageStatus={this.state.pageStatus}/>
+                <Layout content={<Container>{this.getContent()}</Container>} pageStatus={this.state.pageStatus}/>
             </>
         )
     }

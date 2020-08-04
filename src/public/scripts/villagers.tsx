@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './locale';
 import MyVillagers from './villagers/MyVillagers';
 import Cookies from 'js-cookie';
-import {detectLanguage, getLanguage, setLanguage} from './locale';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {detectLanguage, getLanguage, l, setLanguage} from './locale';
+import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import VillagersList from './villagers/VillagersList';
 import LinkButtons from './villagers/LinkButtons';
 import axios from 'axios';
@@ -16,6 +16,9 @@ import VillagersPreferGift from './villagers/VillagersPreferGift';
 import {PageStatus} from './points/enums';
 import {Container, ProgressBar} from 'materialinse-reactjs';
 import {objectToVillager} from './villagers/ObjectToVillager';
+import Layout from './materialui/Layout';
+import {Tabs} from '@material-ui/core';
+import Tab from '@material-ui/core/Tab';
 
 interface VillagersState {
     pageStatus: PageStatus;
@@ -88,26 +91,36 @@ class Villagers extends React.Component<any, VillagersState> {
         switch (this.state?.pageStatus) {
             case PageStatus.LOADED:
                 return (
-                    <div>
+                    <>
                         <BrowserRouter>
-                            <LinkButtons />
-                            <Switch>
-                                <Route exact path={'/villagers'}>
-                                    <MyVillagers locale={getLanguage()} data={this.state.allVillagers} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus == PageStatus.LOADED} removeVillager={this.removeVillager} />
-                                </Route>
-                                <Route exact path={'/villagers/list'}>
-                                    <VillagersList locale={getLanguage()} data={this.state.allVillagers} addVillager={this.addToMyVillagers} />
-                                </Route>
-                                <Route exact path={'/villagers/gift'}>
-                                    <VillagerSearchByClothes my={this.state.myVillagers} />
-                                </Route>
-                                <Route exact path={'/villagers/prefer'}>
-                                    <VillagersPreferGift data={this.state.allVillagers} />
-                                </Route>
-                                <Route path={'/villagers/:code'}  component={(props: any): React.ReactElement => <VillagerDetail {...props} data={this.state.allVillagers} removeVillager={this.removeVillager}/>}  />
-                            </Switch>
+                            <Route path={'/villagers'} render={({ location }) => (
+                                    <>
+                                        <Tabs value={location.pathname} style={{backgroundColor: '#4caf50'}} textColor={'inherit'} indicatorColor={'secondary'}>
+                                            <Tab label={l('villagers.nav.myvillagers')} value={'/villagers'} component={Link} to={'/villagers'} />
+                                            <Tab label={l('villagers.nav.allvillagers')} value={'/villagers/list'} component={Link} to={'/villagers/list'} />
+                                            <Tab label={l('villagers.nav.giftforvillagers')} value={'/villagers/gift'} component={Link} to={'/villagers/gift'} />
+                                            <Tab label={l('villagers.nav.villagerstogift')} value={'/villagers/prefer'} component={Link} to={'/villagers/prefer'} />
+                                        </Tabs>
+                                        <Switch>
+                                            <Route exact path={'/villagers'}>
+                                                <MyVillagers locale={getLanguage()} data={this.state.allVillagers} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus == PageStatus.LOADED} removeVillager={this.removeVillager} />
+                                            </Route>
+                                            <Route exact path={'/villagers/list'}>
+                                                <VillagersList locale={getLanguage()} data={this.state.allVillagers} addVillager={this.addToMyVillagers} />
+                                            </Route>
+                                            <Route exact path={'/villagers/gift'}>
+                                                <VillagerSearchByClothes my={this.state.myVillagers} />
+                                            </Route>
+                                            <Route exact path={'/villagers/prefer'}>
+                                                <VillagersPreferGift data={this.state.allVillagers} />
+                                            </Route>
+                                            <Route path={'/villagers/:code'}  component={(props: any): React.ReactElement => <VillagerDetail {...props} data={this.state.allVillagers} removeVillager={this.removeVillager}/>}  />
+                                        </Switch>
+                                    </>
+                                )}
+                            />
                         </BrowserRouter>
-                    </div>
+                    </>
                 )
             default:
                 return (
@@ -121,4 +134,4 @@ class Villagers extends React.Component<any, VillagersState> {
 
 export default Villagers;
 
-ReactDOM.render(<Villagers />, document.getElementById('reactApp'));
+ReactDOM.render(<Layout content={<Villagers />}  pageStatus={PageStatus.LOADED}/>, document.getElementById('reactApp'));
