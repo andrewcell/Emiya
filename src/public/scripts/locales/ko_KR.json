@@ -211,5 +211,9 @@
   "home.campsite.moredescription": "캠핑장 노가다를 하고 있다면, 새로 시작하여 방문했던 주민들을 기록하세요. 성격을 비우고 하는 중이라면 남은 동향 주민들을 살펴볼 수 있고, 기록을 파일로 뽑아낼 수 있습니다.",
   "home.points.title": "친밀도 계산기",
   "home.points.description": "친밀도 계산기가 여기에 링크될 예정.",
-  "home.points.moredescription": "증감 항목을 선택하여 주민의 친밀도 상태가 어떠한지 대략적으로 알 수 있게 해주는 계산기. 다만 행동에 따라 확률적으로 증감이 발생하는 경우가 있어 정확하지 않을 수 있습니다."
+  "home.points.moredescription": "증감 항목을 선택하여 주민의 친밀도 상태가 어떠한지 대략적으로 알 수 있게 해주는 계산기. 다만 행동에 따라 확률적으로 증감이 발생하는 경우가 있어 정확하지 않을 수 있습니다.",
+  "home.enter": "들어가기",
+  "home.emibo.ranking": "주민 순위",
+  "home.villagers.list": "주민 검색",
+  "home.campsite.history": "지난 기록"
 }

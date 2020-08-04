@@ -37,10 +37,15 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 )
 
+interface CardButton {
+    title: string;
+    link: string;
+}
+
 interface CardProp {
     title: string;
     description: string;
-    link: string;
+    links: CardButton[];
     moreDescription: string;
 }
 
@@ -59,7 +64,9 @@ const ModuleCard = (prop: CardProp): JSX.Element => {
                 {prop.description}
             </CardContent>
             <CardActions disableSpacing>
-                <Button color={'primary'} href={prop.link}>Enter</Button>
+                {prop.links.map(button => {
+                    return <Button color={'primary'} href={button.link} key={button.link}>{button.title}</Button>
+                })}
                 <IconButton className={clsx(classes.expand, {[classes.expandOpen]: expanded})} onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more">
                     <ExpandMoreIcon />
                 </IconButton>
@@ -80,31 +87,44 @@ const modules: CardProp[] = [
         title: l('home.emibo.title'),
         description: l('home.emibo.description'),
         moreDescription: l('home.emibo.moredescription'),
-        link: '/emibo'
+        links: [
+            {link: '/emibo', title: l('home.enter')},
+            {link: '/emibo/menu', title: l('home.emibo.ranking')}
+        ]
     },
     {
         title: l('home.villagers.title'),
         description: l('home.villagers.description'),
         moreDescription: l('home.villagers.moredescription'),
-        link: '/villagers'
+        links: [
+            {link: '/villagers', title: l('home.enter')},
+            {link: '/villagers/all', title: l('home.villagers.list')}
+        ]
     },
     {
         title: l('home.campsite.title'),
         description: l('home.campsite.description'),
         moreDescription: l('home.campsite.moredescription'),
-        link: '/campsite'
+        links: [
+            {link: '/campsite', title: l('home.enter')},
+            {link: '/campsite/history', title: l('home.campsite.history')}
+        ]
     },
     {
         title: l('home.points.title'),
         description: l('home.points.description'),
         moreDescription: l('home.points.moredescription'),
-        link: '/points'
+        links: [
+            {link: '/points', title: l('home.enter')}
+        ]
     },
     {
         title: l('home.about.title'),
         description: l('home.about.description'),
         moreDescription: l('home.about.moredescription'),
-        link: '/about'
+        links: [
+            {link: '/info', title: l('home.enter')}
+        ]
     }
 ]
 
@@ -114,8 +134,8 @@ const Element = (): JSX.Element => {
             <Grid container spacing={3}>
                 {modules.map(module => {
                     return (
-                        <Grid item key={module.link} xs={12}>
-                            <ModuleCard title={module.title} description={module.description} link={module.link} moreDescription={module.moreDescription} />
+                        <Grid item key={module.title} xs={12}>
+                            <ModuleCard title={module.title} description={module.description} links={module.links} moreDescription={module.moreDescription} />
                         </Grid>
                     )
                 })}
