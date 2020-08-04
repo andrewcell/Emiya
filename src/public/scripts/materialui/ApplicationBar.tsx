@@ -33,6 +33,15 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         menuTitle: {
             margin: theme.spacing(4, 0, 2)
+        },
+        list: {
+            width: '100%',
+            backgroundColor: theme.palette.background.paper,
+            position: 'relative',
+            overflow: 'auto',
+        },
+        ul: {
+            padding: 0
         }
     }),
 );
@@ -58,7 +67,7 @@ const ApplicationBar = (props: ApplicationBarProp): JSX.Element => {
 
     const menuItem = (
         <div onClick={closeDrawer(false)} onKeyDown={closeDrawer(false)}>
-            <List>
+            <List className={classes.list} subheader={<li />}>
                 {menuItems.map((item: ApplicationBarMenuGroupProp) => (
                     <ApplicationBarMenuGroup title={item.title} menu={item.menu} key={item.title} />
                 ))}
