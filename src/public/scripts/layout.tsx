@@ -59,7 +59,7 @@ const ModuleCard = (prop: CardProp): JSX.Element => {
                 {prop.description}
             </CardContent>
             <CardActions disableSpacing>
-                <Button color={'primary'}>Enter</Button>
+                <Button color={'primary'} href={prop.link}>Enter</Button>
                 <IconButton className={clsx(classes.expand, {[classes.expandOpen]: expanded})} onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more">
                     <ExpandMoreIcon />
                 </IconButton>
@@ -80,31 +80,31 @@ const modules: CardProp[] = [
         title: l('home.emibo.title'),
         description: l('home.emibo.description'),
         moreDescription: l('home.emibo.moredescription'),
-        link: 'emibo'
+        link: '/emibo'
     },
     {
         title: l('home.villagers.title'),
         description: l('home.villagers.description'),
         moreDescription: l('home.villagers.moredescription'),
-        link: 'villagers'
+        link: '/villagers'
     },
     {
         title: l('home.campsite.title'),
         description: l('home.campsite.description'),
         moreDescription: l('home.campsite.moredescription'),
-        link: 'campsite'
+        link: '/campsite'
     },
     {
         title: l('home.points.title'),
         description: l('home.points.description'),
         moreDescription: l('home.points.moredescription'),
-        link: 'points'
+        link: '/points'
     },
     {
         title: l('home.about.title'),
         description: l('home.about.description'),
         moreDescription: l('home.about.moredescription'),
-        link: 'about'
+        link: '/about'
     }
 ]
 
