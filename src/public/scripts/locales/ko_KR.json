@@ -216,5 +216,10 @@
   "home.emibo.ranking": "주민 순위",
   "home.villagers.list": "주민 검색",
   "home.campsite.history": "지난 기록",
-  "villagers.tooltip.livesearch": "체크되어 있으면 검색 내용이 바뀌는 순간 검색됩니다."
+  "villagers.tooltip.livesearch": "체크되어 있으면 검색 내용이 바뀌는 순간 검색됩니다.",
+  "villagers.tooltip.addtomyvillagers": "선택된 주민 그룹에 추가합니다.",
+  "villagers.tooltip.deletemyvillagers": "선택된 주민 그룹에서 제거합니다.",
+  "villagers.detail.add": "추가",
+  "villagers.detail.delete": "제거",
+  "villagers.detail.close": "닫기"
 }
