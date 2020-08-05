@@ -221,5 +221,7 @@
   "villagers.tooltip.deletemyvillagers": "선택된 주민 그룹에서 제거합니다.",
   "villagers.detail.add": "추가",
   "villagers.detail.delete": "제거",
-  "villagers.detail.close": "닫기"
+  "villagers.detail.close": "닫기",
+  "villagers.prefer.villager": "검색할 주민",
+  "villagers.prefer.match": "매칭 수준"
 }
