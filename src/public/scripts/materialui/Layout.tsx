@@ -48,6 +48,9 @@ class Layout extends React.Component<LayoutProp, LayoutState> {
                     main: '#4caf50',
                     dark: '#087f23',
                     contrastText: '#fff'
+                },
+                secondary: {
+                    main: '#c8e6c9'
                 }
             },
         })

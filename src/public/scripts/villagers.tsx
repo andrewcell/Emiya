@@ -93,9 +93,9 @@ class Villagers extends React.Component<any, VillagersState> {
                 return (
                     <>
                         <BrowserRouter>
-                            <Route path={'/villagers'} render={({ location }) => (
+                            <Route path={'/villagers'} render={({ location }): JSX.Element => (
                                     <>
-                                        <Tabs value={location.pathname} style={{backgroundColor: '#4caf50'}} textColor={'inherit'} indicatorColor={'secondary'}>
+                                        <Tabs value={location.pathname} style={{backgroundColor: '#4caf50', color: 'white'}}>
                                             <Tab label={l('villagers.nav.myvillagers')} value={'/villagers'} component={Link} to={'/villagers'} />
                                             <Tab label={l('villagers.nav.allvillagers')} value={'/villagers/list'} component={Link} to={'/villagers/list'} />
                                             <Tab label={l('villagers.nav.giftforvillagers')} value={'/villagers/gift'} component={Link} to={'/villagers/gift'} />
@@ -103,7 +103,7 @@ class Villagers extends React.Component<any, VillagersState> {
                                         </Tabs>
                                         <Switch>
                                             <Route exact path={'/villagers'}>
-                                                <MyVillagers locale={getLanguage()} data={this.state.allVillagers} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus == PageStatus.LOADED} removeVillager={this.removeVillager} />
+                                                <MyVillagers locale={getLanguage()} data={this.state.allVillagers} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} />
                                             </Route>
                                             <Route exact path={'/villagers/list'}>
                                                 <VillagersList locale={getLanguage()} data={this.state.allVillagers} addVillager={this.addToMyVillagers} />
