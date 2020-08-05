@@ -114,7 +114,7 @@ class Villagers extends React.Component<any, VillagersState> {
                                             <Route exact path={'/villagers/prefer'}>
                                                 <VillagersPreferGift data={this.state.allVillagers} />
                                             </Route>
-                                            <Route path={'/villagers/:code'}  component={(props: any): React.ReactElement => <VillagerDetail code={props.match.params.code} data={this.state.allVillagers} removeVillager={this.removeVillager}/>}  />
+                                            <Route path={'/villagers/:code'}  component={(props: any): React.ReactElement => <VillagerDetail fromParam={true} code={props.match.params.code} data={this.state.allVillagers} removeVillager={this.removeVillager}/>} addVillager={this.addToMyVillagers} />
                                         </Switch>
                                     </>
                                 )}
