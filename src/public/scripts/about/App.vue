@@ -179,7 +179,7 @@ export default class App extends Vue {
   private links = [
     ['github', 'https://github.com/EmiyaSuite', 'fab fa-github'],
     ['email', 'mailto:judy@ij.rs', 'fas fa-envelope'],
-    ['board', 'https://', 'fas fa-chalkboard']
+    ['board', 'https://gall.dcinside.com/francine', 'fas fa-chalkboard']
   ]
   l = l;
   pageStatus = PageStatus.LOADING
