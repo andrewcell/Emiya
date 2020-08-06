@@ -109,7 +109,7 @@ class Villagers extends React.Component<any, VillagersState> {
                                                 <VillagersList locale={getLanguage()} data={this.state.allVillagers} addVillager={this.addToMyVillagers} />
                                             </Route>
                                             <Route exact path={'/villagers/gift'}>
-                                                <VillagerSearchByClothes my={this.state.myVillagers} />
+                                                <VillagerSearchByClothes myVillagers={this.state.myVillagers} />
                                             </Route>
                                             <Route exact path={'/villagers/prefer'}>
                                                 <VillagersPreferGift data={this.state.allVillagers} />
