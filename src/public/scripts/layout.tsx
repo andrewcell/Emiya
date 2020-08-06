@@ -99,7 +99,7 @@ const modules: CardProp[] = [
         moreDescription: l('home.villagers.moredescription'),
         links: [
             {link: '/villagers', title: l('home.enter')},
-            {link: '/villagers/all', title: l('home.villagers.list')}
+            {link: '/villagers/list', title: l('home.villagers.list')}
         ]
     },
     {
