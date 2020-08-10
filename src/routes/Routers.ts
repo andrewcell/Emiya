@@ -9,6 +9,7 @@ import moment from 'moment';
 import axios from 'axios';
 import path from 'path';
 import {encrypt} from '@shared/Encryption';
+import Github from '@shared/Github';
 
 // Init router and path
 const router = Router();
@@ -38,7 +39,15 @@ router.get('/status', (req, res) => {
         const emiya = 1;
         const emiyaj = 1;
         const emiyap = 3;
-        return res.json({data: encrypt(JSON.stringify({lastBuildTime, lastCommitTime: github.format('LLLL'), title, emiya, emiyaj, emiyap}))});
+        return res.json({data: encrypt(JSON.stringify({
+                lastBuildTime,
+                lastCommitTime: github.format('LLLL'),
+                title,
+                emiya,
+                emiyaj,
+                emiyap,
+                languages: Github.data
+        }))});
     }).catch(() => {
         return res.render('info', {lastBuildTime, title});
     })

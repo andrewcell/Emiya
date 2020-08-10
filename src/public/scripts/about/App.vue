@@ -136,6 +136,40 @@
             />
           </v-col>
         </v-row>
+        <v-row>
+          <v-col
+            class="px-1"
+            cols="12"
+            sm="6"
+          >
+            <div class="pa-4 text-h5">
+              개발 현황판
+            </div>
+            <v-card>
+              <v-list dense>
+                <v-subheader>사용 언어</v-subheader>
+                <v-list-item-group
+                  v-for="item in languages"
+                  :key="item.language"
+                >
+                  <v-list-item>
+                    <v-list-item-content>
+                      <v-list-item-title
+                        v-text="item.language"
+                      />
+                    </v-list-item-content>
+                    <v-list-item-avatar tile>
+                      <div class="text-caption">
+                        {{ item.lines + '%' }}
+                      </div>
+                    </v-list-item-avatar>
+                  </v-list-item>
+                </v-list-item-group>
+              </v-list>
+              <canvas id="chart" />
+            </v-card>
+          </v-col>
+        </v-row>
       </v-container>
     </div>
     <div v-else>
@@ -159,6 +193,8 @@ import {l} from '../locale';
 import Axios, {AxiosError, AxiosResponse} from 'axios';
 import {decrypt} from '../encryption/AES';
 import {PageStatus} from '../points/enums';
+import Chart from 'chart.js';
+import languageColors from './languageColors.json';
 
 enum ServerStatus {
   Normal = 0,
@@ -168,6 +204,8 @@ enum ServerStatus {
   Maintenance = 4,
   Unknown = 9
 }
+
+type Language = {language: string; lines: string};
 
 @Component({
   components: {
@@ -188,6 +226,54 @@ export default class App extends Vue {
   emiya = 9;
   emiyaJ = 9;
   emiyaP = 9;
+  languages: Language[] = [];
+  /* chart = new Chart(document.getElementById('chart')! as HTMLCanvasElement, {
+    type: 'pie',
+    data: {
+      datasets: [{
+        data: [1, 2, 3]
+      }],
+      labels: [
+        '1', '2', '3'
+      ]
+    },
+    options: {
+      responsive: true
+    }
+  });*/
+
+  updated(): void {
+    const data: number[] = [];
+    const labels: string[] = [];
+    const colors: string[] = [];
+    this.languages.map(la => {
+      data.push(+la.lines);
+      labels.push(la.language);
+      colors.push(this.getColor(la.language));
+    });
+    new Chart(document.getElementById('chart')! as HTMLCanvasElement, {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data,
+          backgroundColor: colors
+        }],
+        labels
+      },
+      options: {
+        responsive: true,
+        tooltips: {
+          callbacks: {
+            label: (item, chartData) => {
+              const datasets = chartData.datasets![0];
+              return chartData.labels![item.index!] + ': ' + datasets.data![item.index!] + '%'
+            }
+          }
+        }
+      }
+    });
+  }
+
   created(): void {
     Axios.get('/status')
       .then((r: AxiosResponse) => {
@@ -197,14 +283,28 @@ export default class App extends Vue {
           title: string,
           emiya: number,
           emiyaj: number,
-          emiyap: number
+          emiyap: number,
+          languages: Language[]
         };
         this.lastBuildTime = data.lastBuildTime;
         this.lastCommitTime = data.lastCommitTime;
         this.emiya = data.emiya;
         this.emiyaJ = data.emiyaj;
         this.emiyaP = data.emiyap;
+        let totalBytes: number = 0;
+        let languages: Language[] = [];
+        data.languages.map(lang => {
+          totalBytes += +lang.lines;
+        });
+        data.languages.map(lang => {
+          languages.push({
+            language: lang.language,
+            lines: (+lang.lines / totalBytes * 100).toFixed(2)
+          });
+        });
+        this.languages = languages;
         this.pageStatus = PageStatus.LOADED;
+
       })
       .catch(() => {
         this.pageStatus = PageStatus.ERROR;
@@ -242,6 +342,13 @@ export default class App extends Vue {
       default:
         return 'Unknown';
     }
+  }
+
+  getColor(language: string): string {
+    interface json {
+      [key: string]: {color: string; url: string}
+    }
+    return (languageColors as unknown as json)[language].color
   }
 }
 </script>

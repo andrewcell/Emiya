@@ -14,7 +14,6 @@ const store = new Vuex.Store({
 
 Vue.use(Vuex)
 
-
 new Vue({
     vuetify,
     store,

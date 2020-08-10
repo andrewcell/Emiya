@@ -18,9 +18,12 @@ import {VillagerDatabase} from '@interfaces/VillagerDatabase';
 import User from '@shared/User';
 import mongoose from 'mongoose';
 import MyVillagersDatabase from '@interfaces/MyVillagersDatabase';
+import cron from 'node-cron';
+import Github from '@shared/Github';
 
 // Init express
 const app = express();
+Github.refresh();
 
 i18n.configure({
     locales: ['en_US', 'ko_KR', 'ja_JP'],
@@ -63,10 +66,7 @@ app.use(session({
         maxAge: 3600 * 1000
     }
 
-}))
-
-
-
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(User.createStrategy());
@@ -155,7 +155,7 @@ app.use((req, res, next) => {
     return next();
 });*/
 
-/** **********************************************************************************
+/** **********************************************************************************.
  *                              Serve front-end content
  ***********************************************************************************/
 
@@ -177,6 +177,9 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     /* return res.status(BAD_REQUEST).json({
         error: err.message,
     }); */
+});
+cron.schedule('0 0 * * *', () => {
+    Github.refresh();
 });
 process.on('exit', () => {
     VillagerDatabase.getInstance().close();
