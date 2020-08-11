@@ -2,6 +2,18 @@ import {AJAX, AjaxResult} from './ajax';
 import { b64 } from './b64';
 import {encrypt, decrypt} from './encryption/AES';
 
+export enum RegisterCode {
+    Success = 'register00',
+    PasswordValidationFailed = 'register01',
+    PasswordDoNotMatch = 'register02',
+    UsernameOccupied = 'register03',
+    EmailOccupied = 'register04',
+    BannedClient = 'register05',
+    RegisterNotAllowed = 'register06',
+    EmailVerificationRequired = 'register07',
+    InternalError = '500'
+}
+
 export class Register {
     public static async register(username: string, password: string, password2: string, email: string): Promise<AjaxResult> {
         const result: AjaxResult = await AJAX.send({data: encrypt(JSON.stringify({username, password, password2, email}))}, new b64('L2FkbWluL3JlZ2lzdGVy'));
@@ -18,8 +30,7 @@ export class Register {
         if (password.length < 6) {
             return false;
         }
-
-        return !!password.match(regex);
+        return !!regex.exec(password)
     }
 
     public static validateUsername(username: string): boolean {
@@ -30,16 +41,3 @@ export class Register {
         return !regex.exec(username);
     }
 }
-
-export enum RegisterCode {
-    Success = 'register00',
-    PasswordValidationFailed = 'register01',
-    PasswordDoNotMatch = 'register02',
-    UsernameOccupied = 'register03',
-    EmailOccupied = 'register04',
-    BannedClient = 'register05',
-    RegisterNotAllowed = 'register06',
-    EmailVerificationRequired = 'register07',
-    InternalError = '500'
-}
-
