@@ -14,6 +14,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import {l} from '../locale';
 import Backdrop from '@material-ui/core/Backdrop';
 import {Register} from '../register';
+import RegisterDialog from './RegisterDialog';
 
 enum MessageType {
     ERROR, SUCCESS, STANDBY
@@ -28,6 +29,7 @@ interface LoginDialogState {
     message: string;
     snackbarOpen: boolean;
     process: boolean;
+    registerDialog: boolean;
 }
 
 class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
@@ -41,7 +43,8 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
             messageType: MessageType.STANDBY,
             message: '',
             snackbarOpen: false,
-            process: false
+            process: false,
+            registerDialog: false
         }
     }
 
@@ -111,6 +114,14 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
         }
     }
 
+    handleRegister = (): void => {
+        this.setState({registerDialog: true});
+    }
+
+    closeRegister = (): void => {
+        this.setState({registerDialog: false});
+    }
+
     render(): React.ReactElement {
         return (
             <>
@@ -128,6 +139,9 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
                             <Button onClick={this.props.handleClose} color={'inherit'}>
                                 {l('layout.login.close')}
                             </Button>
+                            <Button onClick={this.handleRegister} color={'inherit'}>
+                                {l('layout.login.register')}
+                            </Button>
                             <Button onClick={this.handleLogin} color={'primary'}>
                                 {l('layout.login.login')}
                             </Button>
@@ -138,6 +152,7 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
                     <CircularProgress color={'inherit'}/>
                 </Backdrop>
                 {this.getSnackbar(this.state.messageType, this.state.message)}
+                <RegisterDialog open={this.state.registerDialog} handleClose={this.closeRegister} />
             </>
         )
     }

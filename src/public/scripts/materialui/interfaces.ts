@@ -33,7 +33,7 @@ export interface ApplicationBarProp {
     pageStatus: PageStatus;
 }
 
-interface DialogProp {
+export interface DialogProp {
     open: boolean;
     handleClose: () => void;
 }
