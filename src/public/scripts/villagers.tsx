@@ -106,7 +106,7 @@ class Villagers extends React.Component<any, VillagersState> {
                                                 <MyVillagers locale={getLanguage()} data={this.state.allVillagers} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} />
                                             </Route>
                                             <Route exact path={'/villagers/list'}>
-                                                <VillagersList locale={getLanguage()} data={this.state.allVillagers} addVillager={this.addToMyVillagers} />
+                                                <VillagersList locale={getLanguage()} data={this.state.allVillagers} addVillager={this.addToMyVillagers} removeVillager={this.removeVillager}/>
                                             </Route>
                                             <Route exact path={'/villagers/gift'}>
                                                 <VillagerSearchByClothes myVillagers={this.state.myVillagers} />
