@@ -3,16 +3,12 @@ import en from './locales/en_US.json';
 import ja from './locales/ja_JP.json';
 import Cookies from 'js-cookie';
 
-const whitelist = new Map([
-    ['en_US', en],
-    ['ko_KR', ko],
-    ['ja_JP', ja]
-]);
+const whitelist = ['en_US', 'ko_KR', 'ja_JP'];
 
 let languageConfigured = '';
 
 const setLanguage = (lang: string): void | Promise<void> => {
-    const data = whitelist.get(lang);
+    const data = whitelist.find(language => language === lang);
     if (data == null) {
         languageConfigured = 'en_US';
         Cookies.set('locale', 'en_US');
@@ -52,7 +48,8 @@ const missingLanguage = (): Promise<void> => {
             setLanguage(detectLanguage(navigator.language));
             return resolve();
         }
-        if (!whitelist.has(lang)) {
+        const whitelisted = whitelist.find(language => language === lang)
+        if (whitelisted == null) {
             setLanguage('en_US');
             Cookies.set('locale', 'en_US');
         } else {
