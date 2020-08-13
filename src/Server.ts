@@ -8,13 +8,9 @@ import 'express-async-errors';
 import * as url from 'url';
 import i18n from 'i18n';
 import passport from 'passport';
-import passportlocal from 'passport-local';
-
-import {getRandomInt} from '@shared/functions';
 import BaseRouter from './routes/Routers';
 import logger from '@shared/Logger';
 import {existsSync, readFileSync, writeFileSync} from 'fs';
-import {VillagerDatabase} from '@interfaces/VillagerDatabase';
 import User from '@shared/User';
 import mongoose from 'mongoose';
 import MyVillagersDatabase from '@interfaces/MyVillagersDatabase';
@@ -182,7 +178,6 @@ cron.schedule('0 0 * * *', () => {
     Github.refresh();
 });
 process.on('exit', () => {
-    VillagerDatabase.getInstance().close();
     MyVillagersDatabase.getInstance().close();
     mongoose.disconnect().then(r => logger.info('Mongoose disconnected. ' + r));
 });

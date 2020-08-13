@@ -9,9 +9,9 @@ import {PageStatus} from './enums';
 import {CircularProgress} from '@material-ui/core';
 import Axios from 'axios';
 import {decrypt, encrypt} from '../encryption/AES';
-import {Villager} from '../villagers/interfaces';
-import villagerObjectToVillager from '../villagers/villagerObjectToVillager';
 import AddPointsCard from './AddPointsCard';
+import {Villager} from 'animal-crossing/lib/types/Villager';
+import {getName, getPhrase} from '../villagers/Locales';
 
 interface VillagerCardProp {
     villagerCode: string;
@@ -51,7 +51,7 @@ class VillagerCard extends React.Component<VillagerCardProp, VillagerCardState> 
             .then(r => {
                 const data = JSON.parse(decrypt(r.data.data as string));
                 this.setState({
-                    villager: villagerObjectToVillager(data),
+                    villager: data,
                     status: PageStatus.LOADED
                 });
             })
@@ -63,28 +63,30 @@ class VillagerCard extends React.Component<VillagerCardProp, VillagerCardState> 
     render(): React.ReactElement {
         switch (this.state.status) {
             case PageStatus.LOADED:
-                return (
-                    <Box p={1}>
-                        <Card>
-                            <AddPointsCard code={'cat23'} />
-                            <CardContent>
-                                <img src={'/images/villagers/' + this.props.villagerCode + '.png'} />
-                                <Typography>
-                                    {this.state.villager?.nameKor}
-                                </Typography>
-                                <Typography>
-                                    {this.state.villager?.phraseKor}
-                                </Typography>
-                                <Typography>
-                                    {this.props.points}
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Button>Delete</Button>
-                            </CardActions>
-                        </Card>
-                    </Box>
-                )
+                if (this.state.villager != null) {
+                    return (
+                        <Box p={1}>
+                            <Card>
+                                <AddPointsCard code={'cat23'}/>
+                                <CardContent>
+                                    <img src={'/images/villagers/' + this.props.villagerCode + '.png'}/>
+                                    <Typography>
+                                        {getName(this.state.villager)}
+                                    </Typography>
+                                    <Typography>
+                                        {getPhrase(this.state.villager)}
+                                    </Typography>
+                                    <Typography>
+                                        {this.props.points}
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button>Delete</Button>
+                                </CardActions>
+                            </Card>
+                        </Box>
+                    )
+                }
             default:
                 return <CenteredCircularProgress />
         }

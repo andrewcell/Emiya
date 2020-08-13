@@ -2,9 +2,9 @@ import {Module, Mutation, VuexModule} from 'vuex-module-decorators';
 import Vue from 'vue';
 import Vuex from 'vuex';
 import {CampsiteContent} from './CampsiteObjects';
-import {Villager} from '../villagers/interfaces';
 import {EmiyaJ} from '../emiyaj/sendWithToken';
 import {encryptJava} from '../encryption/AES';
+import {Villager} from 'animal-crossing/lib/types/Villager';
 
 Vue.use(Vuex);
 

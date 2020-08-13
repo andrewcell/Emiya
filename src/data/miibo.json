@@ -3,7 +3,7 @@
     {
       "name": "Isabelle",
       "name_kor": "여울",
-      "number": 1,
+      "num": 1,
       "file": "Series 1/[AC] 001 - Isabelle.bin",
       "image": "cards/1-Isabelle.png",
       "series": 1,
@@ -23,7 +23,7 @@
     {
       "name": "Tom Nook",
       "name_kor": "너굴",
-      "number": 2,
+      "num": 2,
       "file": "Series 1/[AC] 002 - Tom Nook.bin",
       "image": "cards/2-Tom Nook.png",
       "series": 1,
@@ -43,7 +43,7 @@
     {
       "name": "DJ KK",
       "name_kor": "DJ K.K.",
-      "number": 3,
+      "num": 3,
       "file": "Series 1/[AC] 003 - DJ KK.bin",
       "image": "cards/3-DJ KK.png",
       "series": 1,
@@ -63,7 +63,7 @@
     {
       "name": "Sable",
       "name_kor": "고옥이",
-      "number": 4,
+      "num": 4,
       "file": "Series 1/[AC] 004 - Sable.bin",
       "image": "cards/4-Sable.png",
       "series": 1,
@@ -83,7 +83,7 @@
     {
       "name": "Kapp'n",
       "name_kor": "갑돌이",
-      "number": 5,
+      "num": 5,
       "file": "Series 1/[AC] 005 - Kappn.bin",
       "image": "cards/5-Kappn.png",
       "series": 1,
@@ -103,7 +103,7 @@
     {
       "name": "Resetti",
       "name_kor": "도루묵씨",
-      "number": 6,
+      "num": 6,
       "file": "Series 1/[AC] 006 - Resetti.bin",
       "image": "cards/6-Resetti.png",
       "series": 1,
@@ -123,7 +123,7 @@
     {
       "name": "Joan",
       "name_kor": "무파라",
-      "number": 7,
+      "num": 7,
       "file": "Series 1/[AC] 007 - Joan.bin",
       "image": "cards/7-Joan.png",
       "series": 1,
@@ -143,7 +143,7 @@
     {
       "name": "Timmy",
       "name_kor": "콩돌",
-      "number": 8,
+      "num": 8,
       "file": "Series 1/[AC] 008 - Timmy.bin",
       "image": "cards/8-Timmy.png",
       "series": 1,
@@ -163,7 +163,7 @@
     {
       "name": "Digby",
       "name_kor": "켄트",
-      "number": 9,
+      "num": 9,
       "file": "Series 1/[AC] 009 - Digby.bin",
       "image": "cards/9-Digby.png",
       "series": 1,
@@ -183,7 +183,7 @@
     {
       "name": "Pascal",
       "name_kor": "해탈한",
-      "number": 10,
+      "num": 10,
       "file": "Series 1/[AC] 010 - Pascal.bin",
       "image": "cards/10-Pascal.png",
       "series": 1,
@@ -203,7 +203,7 @@
     {
       "name": "Harriet",
       "name_kor": "카트리나",
-      "number": 11,
+      "num": 11,
       "file": "Series 1/[AC] 011 - Harriet.bin",
       "image": "cards/11-Harriet.png",
       "series": 1,
@@ -223,7 +223,7 @@
     {
       "name": "Redd",
       "name_kor": "여욱",
-      "number": 12,
+      "num": 12,
       "file": "Series 1/[AC] 012 - Redd.bin",
       "image": "cards/12-Redd.png",
       "series": 1,
@@ -243,7 +243,7 @@
     {
       "name": "Saharah",
       "name_kor": "사라하",
-      "number": 13,
+      "num": 13,
       "file": "Series 1/[AC] 013 - Saharah.bin",
       "image": "cards/13-Saharah.png",
       "series": 1,
@@ -263,7 +263,7 @@
     {
       "name": "Luna",
       "name_kor": "몽셰르",
-      "number": 14,
+      "num": 14,
       "file": "Series 1/[AC] 014 - Luna.bin",
       "image": "cards/14-Luna.png",
       "series": 1,
@@ -283,7 +283,7 @@
     {
       "name": "Tortimer",
       "name_kor": "고북",
-      "number": 15,
+      "num": 15,
       "file": "Series 1/[AC] 015 - Tortimer.bin",
       "image": "cards/15-Tortimer.png",
       "series": 1,
@@ -303,7 +303,7 @@
     {
       "name": "Lyle",
       "name_kor": "안심해",
-      "number": 16,
+      "num": 16,
       "file": "Series 1/[AC] 016 - Lyle.bin",
       "image": "cards/16-Lyle.png",
       "series": 1,
@@ -323,7 +323,7 @@
     {
       "name": "Lottie",
       "name_kor": "솜이",
-      "number": 17,
+      "num": 17,
       "file": "Series 1/[AC] 017 - Lottie.bin",
       "image": "cards/17-Lottie.png",
       "series": 1,
@@ -343,7 +343,7 @@
     {
       "name": "Bob",
       "name_kor": "히죽",
-      "number": 18,
+      "num": 18,
       "file": "Series 1/[AC] 018 - Bob.bin",
       "image": "cards/18-Bob.png",
       "series": 1,
@@ -366,7 +366,7 @@
     {
       "name": "Fauna",
       "name_kor": "솔미",
-      "number": 19,
+      "num": 19,
       "file": "Series 1/[AC] 019 - Fauna.bin",
       "image": "cards/19-Fauna.png",
       "series": 1,
@@ -389,7 +389,7 @@
     {
       "name": "Curt",
       "name_kor": "뚝심",
-      "number": 20,
+      "num": 20,
       "file": "Series 1/[AC] 020 - Curt.bin",
       "image": "cards/20-Curt.png",
       "series": 1,
@@ -412,7 +412,7 @@
     {
       "name": "Portia",
       "name_kor": "블랜더",
-      "number": 21,
+      "num": 21,
       "file": "Series 1/[AC] 021 - Portia.bin",
       "image": "cards/21-Portia.png",
       "series": 1,
@@ -435,7 +435,7 @@
     {
       "name": "Leonardo",
       "name_kor": "범호",
-      "number": 22,
+      "num": 22,
       "file": "Series 1/[AC] 022 - Leonardo.bin",
       "image": "cards/22-Leonardo.png",
       "series": 1,
@@ -458,7 +458,7 @@
     {
       "name": "Cheri",
       "name_kor": "아세로라",
-      "number": 23,
+      "num": 23,
       "file": "Series 1/[AC] 023 - Cheri.bin",
       "image": "cards/23-Cheri.png",
       "series": 1,
@@ -481,7 +481,7 @@
     {
       "name": "Kyle",
       "name_kor": "리카르도",
-      "number": 24,
+      "num": 24,
       "file": "Series 1/[AC] 024 - Kyle.bin",
       "image": "cards/24-Kyle.png",
       "series": 1,
@@ -504,7 +504,7 @@
     {
       "name": "Al",
       "name_kor": "우락",
-      "number": 25,
+      "num": 25,
       "file": "Series 1/[AC] 025 - Al.bin",
       "image": "cards/25-Al.png",
       "series": 1,
@@ -527,7 +527,7 @@
     {
       "name": "Renee",
       "name_kor": "뿔님이",
-      "number": 26,
+      "num": 26,
       "file": "Series 1/[AC] 026 - Renee.bin",
       "image": "cards/26-Renee.png",
       "series": 1,
@@ -550,7 +550,7 @@
     {
       "name": "Lopez",
       "name_kor": "톰슨",
-      "number": 27,
+      "num": 27,
       "file": "Series 1/[AC] 027 - Lopez.bin",
       "image": "cards/27-Lopez.png",
       "series": 1,
@@ -573,7 +573,7 @@
     {
       "name": "Jambette",
       "name_kor": "에스메랄다",
-      "number": 28,
+      "num": 28,
       "file": "Series 1/[AC] 028 - Jambette.bin",
       "image": "cards/28-Jambette.png",
       "series": 1,
@@ -596,7 +596,7 @@
     {
       "name": "Rasher",
       "name_kor": "글레이",
-      "number": 29,
+      "num": 29,
       "file": "Series 1/[AC] 029 - Rasher.bin",
       "image": "cards/29-Rasher.png",
       "series": 1,
@@ -619,7 +619,7 @@
     {
       "name": "Tiffany",
       "name_kor": "바슬레",
-      "number": 30,
+      "num": 30,
       "file": "Series 1/[AC] 030 - Tiffany.bin",
       "image": "cards/30-Tiffany.png",
       "series": 1,
@@ -642,7 +642,7 @@
     {
       "name": "Sheldon",
       "name_kor": "크리스",
-      "number": 31,
+      "num": 31,
       "file": "Series 1/[AC] 031 - Sheldon.bin",
       "image": "cards/31-Sheldon.png",
       "series": 1,
@@ -665,7 +665,7 @@
     {
       "name": "Bluebear",
       "name_kor": "글루민",
-      "number": 32,
+      "num": 32,
       "file": "Series 1/[AC] 032 - Bluebear.bin",
       "image": "cards/32-Bluebear.png",
       "series": 1,
@@ -688,7 +688,7 @@
     {
       "name": "Bill",
       "name_kor": "코코아",
-      "number": 33,
+      "num": 33,
       "file": "Series 1/[AC] 033 - Bill.bin",
       "image": "cards/33-Bill.png",
       "series": 1,
@@ -711,7 +711,7 @@
     {
       "name": "Kiki",
       "name_kor": "캐비어",
-      "number": 34,
+      "num": 34,
       "file": "Series 1/[AC] 034 - Kiki.bin",
       "image": "cards/34-Kiki.png",
       "series": 1,
@@ -734,7 +734,7 @@
     {
       "name": "Deli",
       "name_kor": "델리",
-      "number": 35,
+      "num": 35,
       "file": "Series 1/[AC] 035 - Deli.bin",
       "image": "cards/35-Deli.png",
       "series": 1,
@@ -757,7 +757,7 @@
     {
       "name": "Alli",
       "name_kor": "크로크",
-      "number": 36,
+      "num": 36,
       "file": "Series 1/[AC] 036 - Alli.bin",
       "image": "cards/36-Alli.png",
       "series": 1,
@@ -780,7 +780,7 @@
     {
       "name": "Kabuki",
       "name_kor": "가북희",
-      "number": 37,
+      "num": 37,
       "file": "Series 1/[AC] 037 - Kabuki.bin",
       "image": "cards/37-Kabuki.png",
       "series": 1,
@@ -803,7 +803,7 @@
     {
       "name": "Patty",
       "name_kor": "밀크",
-      "number": 38,
+      "num": 38,
       "file": "Series 1/[AC] 038 - Patty.bin",
       "image": "cards/38-Patty.png",
       "series": 1,
@@ -826,7 +826,7 @@
     {
       "name": "Jitters",
       "name_kor": "딩요",
-      "number": 39,
+      "num": 39,
       "file": "Series 1/[AC] 039 - Jitters.bin",
       "image": "cards/39-Jitters.png",
       "series": 1,
@@ -849,7 +849,7 @@
     {
       "name": "Gigi",
       "name_kor": "린다",
-      "number": 40,
+      "num": 40,
       "file": "Series 1/[AC] 040 - Gigi.bin",
       "image": "cards/40-Gigi.png",
       "series": 1,
@@ -872,7 +872,7 @@
     {
       "name": "Quillson",
       "name_kor": "덕근",
-      "number": 41,
+      "num": 41,
       "file": "Series 1/[AC] 041 - Quillson.bin",
       "image": "cards/41-Quillson.png",
       "series": 1,
@@ -895,7 +895,7 @@
     {
       "name": "Marcie",
       "name_kor": "마리아",
-      "number": 42,
+      "num": 42,
       "file": "Series 1/[AC] 042 - Marcie.bin",
       "image": "cards/42-Marcie.png",
       "series": 1,
@@ -918,7 +918,7 @@
     {
       "name": "Puck",
       "name_kor": "하키",
-      "number": 43,
+      "num": 43,
       "file": "Series 1/[AC] 043 - Puck.bin",
       "image": "cards/43-Puck.png",
       "series": 1,
@@ -941,7 +941,7 @@
     {
       "name": "Shari",
       "name_kor": "젤리",
-      "number": 44,
+      "num": 44,
       "file": "Series 1/[AC] 044 - Shari.bin",
       "image": "cards/44-Shari.png",
       "series": 1,
@@ -964,7 +964,7 @@
     {
       "name": "Octavian",
       "name_kor": "문복",
-      "number": 45,
+      "num": 45,
       "file": "Series 1/[AC] 045 - Octavian.bin",
       "image": "cards/45-Octavian.png",
       "series": 1,
@@ -987,7 +987,7 @@
     {
       "name": "Winnie",
       "name_kor": "카로틴",
-      "number": 46,
+      "num": 46,
       "file": "Series 1/[AC] 046 - Winnie.bin",
       "image": "cards/46-Winnie.png",
       "series": 1,
@@ -1010,7 +1010,7 @@
     {
       "name": "Knox",
       "name_kor": "금끼오",
-      "number": 47,
+      "num": 47,
       "file": "Series 1/[AC] 047 - Knox.bin",
       "image": "cards/47-Knox.png",
       "series": 1,
@@ -1033,7 +1033,7 @@
     {
       "name": "Sterling",
       "name_kor": "은수리",
-      "number": 48,
+      "num": 48,
       "file": "Series 1/[AC] 048 - Sterling.bin",
       "image": "cards/48-Sterling.png",
       "series": 1,
@@ -1056,7 +1056,7 @@
     {
       "name": "Bonbon",
       "name_kor": "미미",
-      "number": 49,
+      "num": 49,
       "file": "Series 1/[AC] 049 - Bonbon.bin",
       "image": "cards/49-Bonbon.png",
       "series": 1,
@@ -1079,7 +1079,7 @@
     {
       "name": "Punchy",
       "name_kor": "빙티",
-      "number": 50,
+      "num": 50,
       "file": "Series 1/[AC] 050 - Punchy.bin",
       "image": "cards/50-Punchy.png",
       "series": 1,
@@ -1102,7 +1102,7 @@
     {
       "name": "Opal",
       "name_kor": "오팔",
-      "number": 51,
+      "num": 51,
       "file": "Series 1/[AC] 051 - Opal.bin",
       "image": "cards/51-Opal.png",
       "series": 1,
@@ -1125,7 +1125,7 @@
     {
       "name": "Poppy",
       "name_kor": "다람",
-      "number": 52,
+      "num": 52,
       "file": "Series 1/[AC] 052 - Poppy.bin",
       "image": "cards/52-Poppy.png",
       "series": 1,
@@ -1148,7 +1148,7 @@
     {
       "name": "Limberg",
       "name_kor": "단무지",
-      "number": 53,
+      "num": 53,
       "file": "Series 1/[AC] 053 - Limberg.bin",
       "image": "cards/53-Limberg.png",
       "series": 1,
@@ -1171,7 +1171,7 @@
     {
       "name": "Deena",
       "name_kor": "마리모",
-      "number": 54,
+      "num": 54,
       "file": "Series 1/[AC] 054 - Deena.bin",
       "image": "cards/54-Deena.png",
       "series": 1,
@@ -1194,7 +1194,7 @@
     {
       "name": "Snake",
       "name_kor": "닌토",
-      "number": 55,
+      "num": 55,
       "file": "Series 1/[AC] 055 - Snake.bin",
       "image": "cards/55-Snake.png",
       "series": 1,
@@ -1217,7 +1217,7 @@
     {
       "name": "Bangle",
       "name_kor": "루주",
-      "number": 56,
+      "num": 56,
       "file": "Series 1/[AC] 056 - Bangle.bin",
       "image": "cards/56-Bangle.png",
       "series": 1,
@@ -1240,7 +1240,7 @@
     {
       "name": "Phil",
       "name_kor": "케인",
-      "number": 57,
+      "num": 57,
       "file": "Series 1/[AC] 057 - Phil.bin",
       "image": "cards/57-Phil.png",
       "series": 1,
@@ -1263,7 +1263,7 @@
     {
       "name": "Monique",
       "name_kor": "제인",
-      "number": 58,
+      "num": 58,
       "file": "Series 1/[AC] 058 - Monique.bin",
       "image": "cards/58-Monique.png",
       "series": 1,
@@ -1286,7 +1286,7 @@
     {
       "name": "Nate",
       "name_kor": "박하스",
-      "number": 59,
+      "num": 59,
       "file": "Series 1/[AC] 059 - Nate.bin",
       "image": "cards/59-Nate.png",
       "series": 1,
@@ -1309,7 +1309,7 @@
     {
       "name": "Samson",
       "name_kor": "피스",
-      "number": 60,
+      "num": 60,
       "file": "Series 1/[AC] 060 - Samson.bin",
       "image": "cards/60-Samson.png",
       "series": 1,
@@ -1332,7 +1332,7 @@
     {
       "name": "Tutu",
       "name_kor": "연유",
-      "number": 61,
+      "num": 61,
       "file": "Series 1/[AC] 061 - Tutu.bin",
       "image": "cards/61-Tutu.png",
       "series": 1,
@@ -1355,7 +1355,7 @@
     {
       "name": "T-Bone",
       "name_kor": "티본",
-      "number": 62,
+      "num": 62,
       "file": "Series 1/[AC] 062 - T-Bone.bin",
       "image": "cards/62-T.png",
       "series": 1,
@@ -1378,7 +1378,7 @@
     {
       "name": "Mint",
       "name_kor": "민트",
-      "number": 63,
+      "num": 63,
       "file": "Series 1/[AC] 063 - Mint.bin",
       "image": "cards/63-Mint.png",
       "series": 1,
@@ -1401,7 +1401,7 @@
     {
       "name": "Pudge",
       "name_kor": "우띠",
-      "number": 64,
+      "num": 64,
       "file": "Series 1/[AC] 064 - Pudge.bin",
       "image": "cards/64-Pudge.png",
       "series": 1,
@@ -1424,7 +1424,7 @@
     {
       "name": "Midge",
       "name_kor": "핑글이",
-      "number": 65,
+      "num": 65,
       "file": "Series 1/[AC] 065 - Midge.bin",
       "image": "cards/65-Midge.png",
       "series": 1,
@@ -1447,7 +1447,7 @@
     {
       "name": "Gruff",
       "name_kor": "빌리",
-      "number": 66,
+      "num": 66,
       "file": "Series 1/[AC] 066 - Gruff.bin",
       "image": "cards/66-Gruff.png",
       "series": 1,
@@ -1470,7 +1470,7 @@
     {
       "name": "Flurry",
       "name_kor": "뽀야미",
-      "number": 67,
+      "num": 67,
       "file": "Series 1/[AC] 067 - Flurry.bin",
       "image": "cards/67-Flurry.png",
       "series": 1,
@@ -1493,7 +1493,7 @@
     {
       "name": "Clyde",
       "name_kor": "마철이",
-      "number": 68,
+      "num": 68,
       "file": "Series 1/[AC] 068 - Clyde.bin",
       "image": "cards/68-Clyde.png",
       "series": 1,
@@ -1516,7 +1516,7 @@
     {
       "name": "Bella",
       "name_kor": "이자벨",
-      "number": 69,
+      "num": 69,
       "file": "Series 1/[AC] 069 - Bella.bin",
       "image": "cards/69-Bella.png",
       "series": 1,
@@ -1539,7 +1539,7 @@
     {
       "name": "Biff",
       "name_kor": "가브리엘",
-      "number": 70,
+      "num": 70,
       "file": "Series 1/[AC] 070 - Biff.bin",
       "image": "cards/70-Biff.png",
       "series": 1,
@@ -1562,7 +1562,7 @@
     {
       "name": "Yuka",
       "name_kor": "유카리",
-      "number": 71,
+      "num": 71,
       "file": "Series 1/[AC] 071 - Yuka.bin",
       "image": "cards/71-Yuka.png",
       "series": 1,
@@ -1585,7 +1585,7 @@
     {
       "name": "Lionel",
       "name_kor": "라이오넬",
-      "number": 72,
+      "num": 72,
       "file": "Series 1/[AC] 072 - Lionel.bin",
       "image": "cards/72-Lionel.png",
       "series": 1,
@@ -1608,7 +1608,7 @@
     {
       "name": "Flo",
       "name_kor": "레이라",
-      "number": 73,
+      "num": 73,
       "file": "Series 1/[AC] 073 - Flo.bin",
       "image": "cards/73-Flo.png",
       "series": 1,
@@ -1631,7 +1631,7 @@
     {
       "name": "Cobb",
       "name_kor": "박사",
-      "number": 74,
+      "num": 74,
       "file": "Series 1/[AC] 074 - Cobb.bin",
       "image": "cards/74-Cobb.png",
       "series": 1,
@@ -1654,7 +1654,7 @@
     {
       "name": "Amelia",
       "name_kor": "안데스",
-      "number": 75,
+      "num": 75,
       "file": "Series 1/[AC] 075 - Amelia.bin",
       "image": "cards/75-Amelia.png",
       "series": 1,
@@ -1677,7 +1677,7 @@
     {
       "name": "Jeremiah",
       "name_kor": "",
-      "number": 76,
+      "num": 76,
       "file": "Series 1/[AC] 076 - Jeramiah.bin",
       "image": "cards/76-Jeramiah.png",
       "series": 1,
@@ -1700,7 +1700,7 @@
     {
       "name": "Cherry",
       "name_kor": "한나",
-      "number": 77,
+      "num": 77,
       "file": "Series 1/[AC] 077 - Cherry.bin",
       "image": "cards/77-Cherry.png",
       "series": 1,
@@ -1723,7 +1723,7 @@
     {
       "name": "Roscoe",
       "name_kor": "슈베르트",
-      "number": 78,
+      "num": 78,
       "file": "Series 1/[AC] 078 - Roscoe.bin",
       "image": "cards/78-Roscoe.png",
       "series": 1,
@@ -1746,7 +1746,7 @@
     {
       "name": "Truffles",
       "name_kor": "탱고",
-      "number": 79,
+      "num": 79,
       "file": "Series 1/[AC] 079 - Truffles.bin",
       "image": "cards/79-Truffles.png",
       "series": 1,
@@ -1769,7 +1769,7 @@
     {
       "name": "Eugene",
       "name_kor": "코알",
-      "number": 80,
+      "num": 80,
       "file": "Series 1/[AC] 080 - Eugene.bin",
       "image": "cards/80-Eugene.png",
       "series": 1,
@@ -1792,7 +1792,7 @@
     {
       "name": "Eunice",
       "name_kor": "곱슬이",
-      "number": 81,
+      "num": 81,
       "file": "Series 1/[AC] 081 - Eunice.bin",
       "image": "cards/81-Eunice.png",
       "series": 1,
@@ -1815,7 +1815,7 @@
     {
       "name": "Goose",
       "name_kor": "건태",
-      "number": 82,
+      "num": 82,
       "file": "Series 1/[AC] 082 - Goose.bin",
       "image": "cards/82-Goose.png",
       "series": 1,
@@ -1838,7 +1838,7 @@
     {
       "name": "Annalisa",
       "name_kor": "설백",
-      "number": 83,
+      "num": 83,
       "file": "Series 1/[AC] 083 - Annalisa.bin",
       "image": "cards/83-Annalisa.png",
       "series": 1,
@@ -1861,7 +1861,7 @@
     {
       "name": "Benjamin",
       "name_kor": "땡칠이",
-      "number": 84,
+      "num": 84,
       "file": "Series 1/[AC] 084 - Benjamin.bin",
       "image": "cards/84-Benjamin.png",
       "series": 1,
@@ -1884,7 +1884,7 @@
     {
       "name": "Pancetti",
       "name_kor": "브리트니",
-      "number": 85,
+      "num": 85,
       "file": "Series 1/[AC] 085 - Pancetti.bin",
       "image": "cards/85-Pancetti.png",
       "series": 1,
@@ -1907,7 +1907,7 @@
     {
       "name": "Chief",
       "name_kor": "대장",
-      "number": 86,
+      "num": 86,
       "file": "Series 1/[AC] 086 - Chief.bin",
       "image": "cards/86-Chief.png",
       "series": 1,
@@ -1930,7 +1930,7 @@
     {
       "name": "Bunnie",
       "name_kor": "릴리안",
-      "number": 87,
+      "num": 87,
       "file": "Series 1/[AC] 087 - Bunnie.bin",
       "image": "cards/87-Bunnie.png",
       "series": 1,
@@ -1953,7 +1953,7 @@
     {
       "name": "Clay",
       "name_kor": "햄둥",
-      "number": 88,
+      "num": 88,
       "file": "Series 1/[AC] 088 - Clay.bin",
       "image": "cards/88-Clay.png",
       "series": 1,
@@ -1976,7 +1976,7 @@
     {
       "name": "Diana",
       "name_kor": "나탈리",
-      "number": 89,
+      "num": 89,
       "file": "Series 1/[AC] 089 - Diana.bin",
       "image": "cards/89-Diana.png",
       "series": 1,
@@ -1999,7 +1999,7 @@
     {
       "name": "Axel",
       "name_kor": "엑스엘리",
-      "number": 90,
+      "num": 90,
       "file": "Series 1/[AC] 090 - Axel.bin",
       "image": "cards/90-Axel.png",
       "series": 1,
@@ -2022,7 +2022,7 @@
     {
       "name": "Muffy",
       "name_kor": "프릴",
-      "number": 91,
+      "num": 91,
       "file": "Series 1/[AC] 091 - Muffy.bin",
       "image": "cards/91-Muffy.png",
       "series": 1,
@@ -2045,7 +2045,7 @@
     {
       "name": "Henry",
       "name_kor": "헨리",
-      "number": 92,
+      "num": 92,
       "file": "Series 1/[AC] 092 - Henry.bin",
       "image": "cards/92-Henry.png",
       "series": 1,
@@ -2068,7 +2068,7 @@
     {
       "name": "Bertha",
       "name_kor": "베티",
-      "number": 93,
+      "num": 93,
       "file": "Series 1/[AC] 093 - Bertha.bin",
       "image": "cards/93-Bertha.png",
       "series": 1,
@@ -2091,7 +2091,7 @@
     {
       "name": "Cyrano",
       "name_kor": "사지마",
-      "number": 94,
+      "num": 94,
       "file": "Series 1/[AC] 094 - Cyrano.bin",
       "image": "cards/94-Cyrano.png",
       "series": 1,
@@ -2114,7 +2114,7 @@
     {
       "name": "Peanut",
       "name_kor": "핑키",
-      "number": 95,
+      "num": 95,
       "file": "Series 1/[AC] 095 - Peanut.bin",
       "image": "cards/95-Peanut.png",
       "series": 1,
@@ -2137,7 +2137,7 @@
     {
       "name": "Cole",
       "name_kor": "아마민",
-      "number": 96,
+      "num": 96,
       "file": "Series 1/[AC] 096 - Cole.bin",
       "image": "cards/96-Cole.png",
       "series": 1,
@@ -2160,7 +2160,7 @@
     {
       "name": "Willow",
       "name_kor": "마리",
-      "number": 97,
+      "num": 97,
       "file": "Series 1/[AC] 097 - Willow.bin",
       "image": "cards/97-Willow.png",
       "series": 1,
@@ -2183,7 +2183,7 @@
     {
       "name": "Roald",
       "name_kor": "펭수",
-      "number": 98,
+      "num": 98,
       "file": "Series 1/[AC] 098 - Roald.bin",
       "image": "cards/98-Roald.png",
       "series": 1,
@@ -2206,7 +2206,7 @@
     {
       "name": "Molly",
       "name_kor": "귀오미",
-      "number": 99,
+      "num": 99,
       "file": "Series 1/[AC] 099 - Molly.bin",
       "image": "cards/99-Molly.png",
       "series": 1,
@@ -2229,7 +2229,7 @@
     {
       "name": "Walker",
       "name_kor": "벤",
-      "number": 100,
+      "num": 100,
       "file": "Series 1/[AC] 100 - Walker.bin",
       "image": "cards/100-Walker.png",
       "series": 1,
@@ -2252,7 +2252,7 @@
     {
       "name": "K",
       "name_kor": "T.K.",
-      "number": 101,
+      "num": 101,
       "file": "Series 2/[AC] 101 - K.K. Slider.bin",
       "image": "cards/101-K.png",
       "series": 2,
@@ -2275,7 +2275,7 @@
     {
       "name": "Reese",
       "name_kor": "리사",
-      "number": 102,
+      "num": 102,
       "file": "Series 2/[AC] 102 - Reese.bin",
       "image": "cards/102-Reese.png",
       "series": 2,
@@ -2298,7 +2298,7 @@
     {
       "name": "Kicks",
       "name_kor": "패트릭",
-      "number": 103,
+      "num": 103,
       "file": "Series 2/[AC] 103 - Kicks.bin",
       "image": "cards/103-Kicks.png",
       "series": 2,
@@ -2321,7 +2321,7 @@
     {
       "name": "Labelle",
       "name_kor": "케이트",
-      "number": 104,
+      "num": 104,
       "file": "Series 2/[AC] 104 - Labelle.bin",
       "image": "cards/104-Labelle.png",
       "series": 2,
@@ -2344,7 +2344,7 @@
     {
       "name": "Copper",
       "name_kor": "경찰관A",
-      "number": 105,
+      "num": 105,
       "file": "Series 2/[AC] 105 - Copper.bin",
       "image": "cards/105-Copper.png",
       "series": 2,
@@ -2367,7 +2367,7 @@
     {
       "name": "Booker",
       "name_kor": "경찰관B",
-      "number": 106,
+      "num": 106,
       "file": "Series 2/[AC] 106 - Booker.bin",
       "image": "cards/106-Booker.png",
       "series": 2,
@@ -2390,7 +2390,7 @@
     {
       "name": "Katie",
       "name_kor": "미야",
-      "number": 107,
+      "num": 107,
       "file": "Series 2/[AC] 107 - Katie.bin",
       "image": "cards/107-Katie.png",
       "series": 2,
@@ -2413,7 +2413,7 @@
     {
       "name": "Tommy",
       "name_kor": "밤돌이",
-      "number": 108,
+      "num": 108,
       "file": "Series 2/[AC] 108 - Tommy.bin",
       "image": "cards/108-Tommy.png",
       "series": 2,
@@ -2436,7 +2436,7 @@
     {
       "name": "Porter",
       "name_kor": "역무원",
-      "number": 109,
+      "num": 109,
       "file": "Series 2/[AC] 109 - Porter.bin",
       "image": "cards/109-Porter.png",
       "series": 2,
@@ -2459,7 +2459,7 @@
     {
       "name": "Leila",
       "name_kor": "꼬미",
-      "number": 110,
+      "num": 110,
       "file": "Series 2/[AC] 110 - Leila.bin",
       "image": "cards/110-Leila.png",
       "series": 2,
@@ -2482,7 +2482,7 @@
     {
       "name": "Shrunk",
       "name_kor": "스승",
-      "number": 111,
+      "num": 111,
       "file": "Series 2/[AC] 111 - Shrunk.bin",
       "image": "cards/111-Shrunk.png",
       "series": 2,
@@ -2505,7 +2505,7 @@
     {
       "name": "Don Resetti",
       "name_kor": "오루묵씨",
-      "number": 112,
+      "num": 112,
       "file": "Series 2/[AC] 112 - Don Resetti.bin",
       "image": "cards/112-Don Resetti.png",
       "series": 2,
@@ -2528,7 +2528,7 @@
     {
       "name": "Isabelle",
       "name_kor": "여울",
-      "number": 113,
+      "num": 113,
       "file": "Series 2/[AC] 113 - Isabelle.bin",
       "image": "cards/113-Isabelle.png",
       "series": 2,
@@ -2551,7 +2551,7 @@
     {
       "name": "Blanca",
       "name_kor": "아트고양이",
-      "number": 114,
+      "num": 114,
       "file": "Series 2/[AC] 114 - Blanca.bin",
       "image": "cards/114-Blanca.png",
       "series": 2,
@@ -2574,7 +2574,7 @@
     {
       "name": "Nat",
       "name_kor": "멜레옹",
-      "number": 115,
+      "num": 115,
       "file": "Series 2/[AC] 115 - Nat.bin",
       "image": "cards/115-Nat.png",
       "series": 2,
@@ -2597,7 +2597,7 @@
     {
       "name": "Chip",
       "name_kor": "뚱달",
-      "number": 116,
+      "num": 116,
       "file": "Series 2/[AC] 116 - Chip.bin",
       "image": "cards/116-Chip.png",
       "series": 2,
@@ -2620,7 +2620,7 @@
     {
       "name": "Jack",
       "name_kor": "펌킹",
-      "number": 117,
+      "num": 117,
       "file": "Series 2/[AC] 117 - Jack.bin",
       "image": "cards/117-Jack.png",
       "series": 2,
@@ -2643,7 +2643,7 @@
     {
       "name": "Poncho",
       "name_kor": "봉추",
-      "number": 118,
+      "num": 118,
       "file": "Series 2/[AC] 118 - Poncho.bin",
       "image": "cards/118-Poncho.png",
       "series": 2,
@@ -2666,7 +2666,7 @@
     {
       "name": "Felicity",
       "name_kor": "예링",
-      "number": 119,
+      "num": 119,
       "file": "Series 2/[AC] 119 - Felicity.bin",
       "image": "cards/119-Felicity.png",
       "series": 2,
@@ -2689,7 +2689,7 @@
     {
       "name": "Ozzie",
       "name_kor": "동동이",
-      "number": 120,
+      "num": 120,
       "file": "Series 2/[AC] 120 - Ozzie.bin",
       "image": "cards/120-Ozzie.png",
       "series": 2,
@@ -2712,7 +2712,7 @@
     {
       "name": "Tia",
       "name_kor": "티나",
-      "number": 121,
+      "num": 121,
       "file": "Series 2/[AC] 121 - Tia.bin",
       "image": "cards/121-Tia.png",
       "series": 2,
@@ -2735,7 +2735,7 @@
     {
       "name": "Lucha",
       "name_kor": "마스카라스",
-      "number": 122,
+      "num": 122,
       "file": "Series 2/[AC] 122 - Lucha.bin",
       "image": "cards/122-Lucha.png",
       "series": 2,
@@ -2758,7 +2758,7 @@
     {
       "name": "Fuchsia",
       "name_kor": "제시카",
-      "number": 123,
+      "num": 123,
       "file": "Series 2/[AC] 123 - Fuchsia.bin",
       "image": "cards/123-Fuchsia.png",
       "series": 2,
@@ -2781,7 +2781,7 @@
     {
       "name": "Harry",
       "name_kor": "올리버",
-      "number": 124,
+      "num": 124,
       "file": "Series 2/[AC] 124 - Harry.bin",
       "image": "cards/124-Harry.png",
       "series": 2,
@@ -2804,7 +2804,7 @@
     {
       "name": "Gwen",
       "name_kor": "폴라",
-      "number": 125,
+      "num": 125,
       "file": "Series 2/[AC] 125 - Gwen.bin",
       "image": "cards/125-Gwen.png",
       "series": 2,
@@ -2827,7 +2827,7 @@
     {
       "name": "Coach",
       "name_kor": "철소",
-      "number": 126,
+      "num": 126,
       "file": "Series 2/[AC] 126 - Coach.bin",
       "image": "cards/126-Coach.png",
       "series": 2,
@@ -2850,7 +2850,7 @@
     {
       "name": "Kitt",
       "name_kor": "애플리케",
-      "number": 127,
+      "num": 127,
       "file": "Series 2/[AC] 127 - Kitt.bin",
       "image": "cards/127-Kitt.png",
       "series": 2,
@@ -2873,7 +2873,7 @@
     {
       "name": "Tom",
       "name_kor": "밴덤",
-      "number": 128,
+      "num": 128,
       "file": "Series 2/[AC] 128 - Tom.bin",
       "image": "cards/128-Tom.png",
       "series": 2,
@@ -2896,7 +2896,7 @@
     {
       "name": "Tipper",
       "name_kor": "마틸다",
-      "number": 129,
+      "num": 129,
       "file": "Series 2/[AC] 129 - Tipper.bin",
       "image": "cards/129-Tipper.png",
       "series": 2,
@@ -2919,7 +2919,7 @@
     {
       "name": "Prince",
       "name_kor": "카일",
-      "number": 130,
+      "num": 130,
       "file": "Series 2/[AC] 130 - Prince.bin",
       "image": "cards/130-Prince.png",
       "series": 2,
@@ -2942,7 +2942,7 @@
     {
       "name": "Pate",
       "name_kor": "나키",
-      "number": 131,
+      "num": 131,
       "file": "Series 2/[AC] 131 - Pate.bin",
       "image": "cards/131-Pate.png",
       "series": 2,
@@ -2965,7 +2965,7 @@
     {
       "name": "Vladimir",
       "name_kor": "곰비",
-      "number": 132,
+      "num": 132,
       "file": "Series 2/[AC] 132 - Vladimir.bin",
       "image": "cards/132-Vladimir.png",
       "series": 2,
@@ -2988,7 +2988,7 @@
     {
       "name": "Savannah",
       "name_kor": "사반나",
-      "number": 133,
+      "num": 133,
       "file": "Series 2/[AC] 133 - Savannah.bin",
       "image": "cards/133-Savannah.png",
       "series": 2,
@@ -3011,7 +3011,7 @@
     {
       "name": "Kidd",
       "name_kor": "염두리",
-      "number": 134,
+      "num": 134,
       "file": "Series 2/[AC] 134 - Kidd.bin",
       "image": "cards/134-Kidd.png",
       "series": 2,
@@ -3034,7 +3034,7 @@
     {
       "name": "Phoebe",
       "name_kor": "휘니",
-      "number": 135,
+      "num": 135,
       "file": "Series 2/[AC] 135 - Phoebe.bin",
       "image": "cards/135-Phoebe.png",
       "series": 2,
@@ -3057,7 +3057,7 @@
     {
       "name": "Egbert",
       "name_kor": "김희",
-      "number": 136,
+      "num": 136,
       "file": "Series 2/[AC] 136 - Egbert.bin",
       "image": "cards/136-Egbert.png",
       "series": 2,
@@ -3080,7 +3080,7 @@
     {
       "name": "Cookie",
       "name_kor": "베리",
-      "number": 137,
+      "num": 137,
       "file": "Series 2/[AC] 137 - Cookie.bin",
       "image": "cards/137-Cookie.png",
       "series": 2,
@@ -3103,7 +3103,7 @@
     {
       "name": "Sly",
       "name_kor": "하이드",
-      "number": 138,
+      "num": 138,
       "file": "Series 2/[AC] 138 - Sly.bin",
       "image": "cards/138-Sly.png",
       "series": 2,
@@ -3126,7 +3126,7 @@
     {
       "name": "Blaire",
       "name_kor": "실루엣",
-      "number": 139,
+      "num": 139,
       "file": "Series 2/[AC] 139 - Blaire.bin",
       "image": "cards/139-Blaire.png",
       "series": 2,
@@ -3149,7 +3149,7 @@
     {
       "name": "Avery",
       "name_kor": "쿠스케처",
-      "number": 140,
+      "num": 140,
       "file": "Series 2/[AC] 140 - Avery.bin",
       "image": "cards/140-Avery.png",
       "series": 2,
@@ -3172,7 +3172,7 @@
     {
       "name": "Nana",
       "name_kor": "키키",
-      "number": 141,
+      "num": 141,
       "file": "Series 2/[AC] 141 - Nana.bin",
       "image": "cards/141-Nana.png",
       "series": 2,
@@ -3195,7 +3195,7 @@
     {
       "name": "Peck",
       "name_kor": "문대",
-      "number": 142,
+      "num": 142,
       "file": "Series 2/[AC] 142 - Peck.bin",
       "image": "cards/142-Peck.png",
       "series": 2,
@@ -3218,7 +3218,7 @@
     {
       "name": "Olivia",
       "name_kor": "올리비아",
-      "number": 143,
+      "num": 143,
       "file": "Series 2/[AC] 143 - Olivia.bin",
       "image": "cards/143-Olivia.png",
       "series": 2,
@@ -3241,7 +3241,7 @@
     {
       "name": "Cesar",
       "name_kor": "앨런",
-      "number": 144,
+      "num": 144,
       "file": "Series 2/[AC] 144 - Cesar.bin",
       "image": "cards/144-Cesar.png",
       "series": 2,
@@ -3264,7 +3264,7 @@
     {
       "name": "Carmen",
       "name_kor": "초코",
-      "number": 145,
+      "num": 145,
       "file": "Series 2/[AC] 145 - Carmen.bin",
       "image": "cards/145-Carmen.png",
       "series": 2,
@@ -3287,7 +3287,7 @@
     {
       "name": "Rodney",
       "name_kor": "지미",
-      "number": 146,
+      "num": 146,
       "file": "Series 2/[AC] 146 - Rodney.bin",
       "image": "cards/146-Rodney.png",
       "series": 2,
@@ -3310,7 +3310,7 @@
     {
       "name": "Scoot",
       "name_kor": "지키미",
-      "number": 147,
+      "num": 147,
       "file": "Series 2/[AC] 147 - Scoot.bin",
       "image": "cards/147-Scoot.png",
       "series": 2,
@@ -3333,7 +3333,7 @@
     {
       "name": "Whitney",
       "name_kor": "비앙카",
-      "number": 148,
+      "num": 148,
       "file": "Series 2/[AC] 148 - Whitney.bin",
       "image": "cards/148-Whitney.png",
       "series": 2,
@@ -3356,7 +3356,7 @@
     {
       "name": "Broccolo",
       "name_kor": "브로콜리",
-      "number": 149,
+      "num": 149,
       "file": "Series 2/[AC] 149 - Broccolo.bin",
       "image": "cards/149-Broccolo.png",
       "series": 2,
@@ -3379,7 +3379,7 @@
     {
       "name": "Coco",
       "name_kor": "이요",
-      "number": 150,
+      "num": 150,
       "file": "Series 2/[AC] 150 - Coco.bin",
       "image": "cards/150-Coco.png",
       "series": 2,
@@ -3402,7 +3402,7 @@
     {
       "name": "Groucho",
       "name_kor": "거무틱",
-      "number": 151,
+      "num": 151,
       "file": "Series 2/[AC] 151 - Groucho.bin",
       "image": "cards/151-Groucho.png",
       "series": 2,
@@ -3425,7 +3425,7 @@
     {
       "name": "Wendy",
       "name_kor": "눈송이",
-      "number": 152,
+      "num": 152,
       "file": "Series 2/[AC] 152 - Wendy.bin",
       "image": "cards/152-Wendy.png",
       "series": 2,
@@ -3448,7 +3448,7 @@
     {
       "name": "Alfonso",
       "name_kor": "알베르트",
-      "number": 153,
+      "num": 153,
       "file": "Series 2/[AC] 153 - Alfonso.bin",
       "image": "cards/153-Alfonso.png",
       "series": 2,
@@ -3471,7 +3471,7 @@
     {
       "name": "Rhonda",
       "name_kor": "론다",
-      "number": 154,
+      "num": 154,
       "file": "Series 2/[AC] 154 - Rhonda.bin",
       "image": "cards/154-Rhonda.png",
       "series": 2,
@@ -3494,7 +3494,7 @@
     {
       "name": "Butch",
       "name_kor": "존",
-      "number": 155,
+      "num": 155,
       "file": "Series 2/[AC] 155 - Butch.bin",
       "image": "cards/155-Butch.png",
       "series": 2,
@@ -3517,7 +3517,7 @@
     {
       "name": "Gabi",
       "name_kor": "패티카",
-      "number": 156,
+      "num": 156,
       "file": "Series 2/[AC] 156 - Gabi.bin",
       "image": "cards/156-Gabi.png",
       "series": 2,
@@ -3540,7 +3540,7 @@
     {
       "name": "Moose",
       "name_kor": "핑",
-      "number": 157,
+      "num": 157,
       "file": "Series 2/[AC] 157 - Moose.bin",
       "image": "cards/157-Moose.png",
       "series": 2,
@@ -3563,7 +3563,7 @@
     {
       "name": "Timbra",
       "name_kor": "잔디",
-      "number": 158,
+      "num": 158,
       "file": "Series 2/[AC] 158 - Timbra.bin",
       "image": "cards/158-Timbra.png",
       "series": 2,
@@ -3586,7 +3586,7 @@
     {
       "name": "Zell",
       "name_kor": "넬슨",
-      "number": 159,
+      "num": 159,
       "file": "Series 2/[AC] 159 - Zell.bin",
       "image": "cards/159-Zell.png",
       "series": 2,
@@ -3609,7 +3609,7 @@
     {
       "name": "Pekoe",
       "name_kor": "재스민",
-      "number": 160,
+      "num": 160,
       "file": "Series 2/[AC] 160 - Pekoe.bin",
       "image": "cards/160-Pekoe.png",
       "series": 2,
@@ -3632,7 +3632,7 @@
     {
       "name": "Teddy",
       "name_kor": "병태",
-      "number": 161,
+      "num": 161,
       "file": "Series 2/[AC] 161 - Teddy.bin",
       "image": "cards/161-Teddy.png",
       "series": 2,
@@ -3655,7 +3655,7 @@
     {
       "name": "Mathilda",
       "name_kor": "안젤라",
-      "number": 162,
+      "num": 162,
       "file": "Series 2/[AC] 162 - Mathilda.bin",
       "image": "cards/162-Mathilda.png",
       "series": 2,
@@ -3678,7 +3678,7 @@
     {
       "name": "Ed",
       "name_kor": "꺼벙",
-      "number": 163,
+      "num": 163,
       "file": "Series 2/[AC] 163 - Ed.bin",
       "image": "cards/163-Ed.png",
       "series": 2,
@@ -3701,7 +3701,7 @@
     {
       "name": "Bianca",
       "name_kor": "백희",
-      "number": 164,
+      "num": 164,
       "file": "Series 2/[AC] 164 - Bianca.bin",
       "image": "cards/164-Bianca.png",
       "series": 2,
@@ -3724,7 +3724,7 @@
     {
       "name": "Filbert",
       "name_kor": "리키",
-      "number": 165,
+      "num": 165,
       "file": "Series 2/[AC] 165 - Filbert.bin",
       "image": "cards/165-Filbert.png",
       "series": 2,
@@ -3747,7 +3747,7 @@
     {
       "name": "Kitty",
       "name_kor": "쇼콜라",
-      "number": 166,
+      "num": 166,
       "file": "Series 2/[AC] 166 - Kitty.bin",
       "image": "cards/166-Kitty.png",
       "series": 2,
@@ -3770,7 +3770,7 @@
     {
       "name": "Beau",
       "name_kor": "피터",
-      "number": 167,
+      "num": 167,
       "file": "Series 2/[AC] 167 - Beau.bin",
       "image": "cards/167-Beau.png",
       "series": 2,
@@ -3793,7 +3793,7 @@
     {
       "name": "Nan",
       "name_kor": "순이",
-      "number": 168,
+      "num": 168,
       "file": "Series 2/[AC] 168 - Nan.bin",
       "image": "cards/168-Nan.png",
       "series": 2,
@@ -3816,7 +3816,7 @@
     {
       "name": "Bud",
       "name_kor": "선글",
-      "number": 169,
+      "num": 169,
       "file": "Series 2/[AC] 169 - Bud.bin",
       "image": "cards/169-Bud.png",
       "series": 2,
@@ -3839,7 +3839,7 @@
     {
       "name": "Ruby",
       "name_kor": "루나",
-      "number": 170,
+      "num": 170,
       "file": "Series 2/[AC] 170 - Ruby.bin",
       "image": "cards/170-Ruby.png",
       "series": 2,
@@ -3862,7 +3862,7 @@
     {
       "name": "Benedict",
       "name_kor": "페니실린",
-      "number": 171,
+      "num": 171,
       "file": "Series 2/[AC] 171 - Benedict.bin",
       "image": "cards/171-Benedict.png",
       "series": 2,
@@ -3885,7 +3885,7 @@
     {
       "name": "Agnes",
       "name_kor": "아그네스",
-      "number": 172,
+      "num": 172,
       "file": "Series 2/[AC] 172 - Agnes.bin",
       "image": "cards/172-Agnes.png",
       "series": 2,
@@ -3908,7 +3908,7 @@
     {
       "name": "Julian",
       "name_kor": "유니오",
-      "number": 173,
+      "num": 173,
       "file": "Series 2/[AC] 173 - Julian.bin",
       "image": "cards/173-Julian.png",
       "series": 2,
@@ -3931,7 +3931,7 @@
     {
       "name": "Bettina",
       "name_kor": "마르카",
-      "number": 174,
+      "num": 174,
       "file": "Series 2/[AC] 174 - Bettina.bin",
       "image": "cards/174-Bettina.png",
       "series": 2,
@@ -3954,7 +3954,7 @@
     {
       "name": "Jay",
       "name_kor": "참돌이",
-      "number": 175,
+      "num": 175,
       "file": "Series 2/[AC] 175 - Jay.bin",
       "image": "cards/175-Jay.png",
       "series": 2,
@@ -3977,7 +3977,7 @@
     {
       "name": "Sprinkle",
       "name_kor": "크리미",
-      "number": 176,
+      "num": 176,
       "file": "Series 2/[AC] 176 - Sprinkle.bin",
       "image": "cards/176-Sprinkle.png",
       "series": 2,
@@ -4000,7 +4000,7 @@
     {
       "name": "Flip",
       "name_kor": "원승",
-      "number": 177,
+      "num": 177,
       "file": "Series 2/[AC] 177 - Flip.bin",
       "image": "cards/177-Flip.png",
       "series": 2,
@@ -4023,7 +4023,7 @@
     {
       "name": "Hugh",
       "name_kor": "먹고파",
-      "number": 178,
+      "num": 178,
       "file": "Series 2/[AC] 178 - Hugh.bin",
       "image": "cards/178-Hugh.png",
       "series": 2,
@@ -4046,7 +4046,7 @@
     {
       "name": "Hopper",
       "name_kor": "달만이",
-      "number": 179,
+      "num": 179,
       "file": "Series 2/[AC] 179 - Hopper.bin",
       "image": "cards/179-Hopper.png",
       "series": 2,
@@ -4069,7 +4069,7 @@
     {
       "name": "Pecan",
       "name_kor": "레베카",
-      "number": 180,
+      "num": 180,
       "file": "Series 2/[AC] 180 - Pecan.bin",
       "image": "cards/180-Pecan.png",
       "series": 2,
@@ -4092,7 +4092,7 @@
     {
       "name": "Drake",
       "name_kor": "푸아그라",
-      "number": 181,
+      "num": 181,
       "file": "Series 2/[AC] 181 - Drake.bin",
       "image": "cards/181-Drake.png",
       "series": 2,
@@ -4115,7 +4115,7 @@
     {
       "name": "Alice",
       "name_kor": "멜버른",
-      "number": 182,
+      "num": 182,
       "file": "Series 2/[AC] 182 - Alice.bin",
       "image": "cards/182-Alice.png",
       "series": 2,
@@ -4138,7 +4138,7 @@
     {
       "name": "Camofrog",
       "name_kor": "충성",
-      "number": 183,
+      "num": 183,
       "file": "Series 2/[AC] 183 - Camofrog.bin",
       "image": "cards/183-Camofrog.png",
       "series": 2,
@@ -4161,7 +4161,7 @@
     {
       "name": "Anicotti",
       "name_kor": "라자냐",
-      "number": 184,
+      "num": 184,
       "file": "Series 2/[AC] 184 - Anicotti.bin",
       "image": "cards/184-Anicotti.png",
       "series": 2,
@@ -4184,7 +4184,7 @@
     {
       "name": "Chops",
       "name_kor": "돈후앙",
-      "number": 185,
+      "num": 185,
       "file": "Series 2/[AC] 185 - Chops.bin",
       "image": "cards/185-Chops.png",
       "series": 2,
@@ -4207,7 +4207,7 @@
     {
       "name": "Charlise",
       "name_kor": "챠미",
-      "number": 186,
+      "num": 186,
       "file": "Series 2/[AC] 186 - Charlise.bin",
       "image": "cards/186-Charlise.png",
       "series": 2,
@@ -4230,7 +4230,7 @@
     {
       "name": "Vic",
       "name_kor": "노르망",
-      "number": 187,
+      "num": 187,
       "file": "Series 2/[AC] 187 - Vic.bin",
       "image": "cards/187-Vic.png",
       "series": 2,
@@ -4253,7 +4253,7 @@
     {
       "name": "Ankha",
       "name_kor": "클레오",
-      "number": 188,
+      "num": 188,
       "file": "Series 2/[AC] 188 - Ankha.bin",
       "image": "cards/188-Ankha.png",
       "series": 2,
@@ -4276,7 +4276,7 @@
     {
       "name": "Drift",
       "name_kor": "덕",
-      "number": 189,
+      "num": 189,
       "file": "Series 2/[AC] 189 - Drift.bin",
       "image": "cards/189-Drift.png",
       "series": 2,
@@ -4299,7 +4299,7 @@
     {
       "name": "Vesta",
       "name_kor": "메리어스",
-      "number": 190,
+      "num": 190,
       "file": "Series 2/[AC] 190 - Vesta.bin",
       "image": "cards/190-Vesta.png",
       "series": 2,
@@ -4322,7 +4322,7 @@
     {
       "name": "Marcel",
       "name_kor": "에드워드",
-      "number": 191,
+      "num": 191,
       "file": "Series 2/[AC] 191 - Marcel.bin",
       "image": "cards/191-Marcel.png",
       "series": 2,
@@ -4345,7 +4345,7 @@
     {
       "name": "Pango",
       "name_kor": "패트라",
-      "number": 192,
+      "num": 192,
       "file": "Series 2/[AC] 192 - Pango.bin",
       "image": "cards/192-Pango.png",
       "series": 2,
@@ -4368,7 +4368,7 @@
     {
       "name": "Keaton",
       "name_kor": "프랭크",
-      "number": 193,
+      "num": 193,
       "file": "Series 2/[AC] 193 - Keaton.bin",
       "image": "cards/193-Keaton.png",
       "series": 2,
@@ -4391,7 +4391,7 @@
     {
       "name": "Gladys",
       "name_kor": "빅토리아",
-      "number": 194,
+      "num": 194,
       "file": "Series 2/[AC] 194 - Gladys.bin",
       "image": "cards/194-Gladys.png",
       "series": 2,
@@ -4414,7 +4414,7 @@
     {
       "name": "Hamphrey",
       "name_kor": "햄쥐",
-      "number": 195,
+      "num": 195,
       "file": "Series 2/[AC] 195 - Hamphrey.bin",
       "image": "cards/195-Hamphrey.png",
       "series": 2,
@@ -4437,7 +4437,7 @@
     {
       "name": "Freya",
       "name_kor": "산드라",
-      "number": 196,
+      "num": 196,
       "file": "Series 2/[AC] 196 - Freya.bin",
       "image": "cards/196-Freya.png",
       "series": 2,
@@ -4460,7 +4460,7 @@
     {
       "name": "Kid Cat",
       "name_kor": "1호",
-      "number": 197,
+      "num": 197,
       "file": "Series 2/[AC] 197 - Kid Cat.bin",
       "image": "cards/197-Kid Cat.png",
       "series": 2,
@@ -4483,7 +4483,7 @@
     {
       "name": "Agent S",
       "name_kor": "2호",
-      "number": 198,
+      "num": 198,
       "file": "Series 2/[AC] 198 - Agent S.bin",
       "image": "cards/198-Agent S.png",
       "series": 2,
@@ -4506,7 +4506,7 @@
     {
       "name": "Big Top",
       "name_kor": "3호",
-      "number": 199,
+      "num": 199,
       "file": "Series 2/[AC] 199 - Big Top.bin",
       "image": "cards/199-Big Top.png",
       "series": 2,
@@ -4529,7 +4529,7 @@
     {
       "name": "Rocket",
       "name_kor": "4호",
-      "number": 200,
+      "num": 200,
       "file": "Series 2/[AC] 200 - Rocket.bin",
       "image": "cards/200-Rocket.png",
       "series": 2,
@@ -4552,7 +4552,7 @@
     {
       "name": "Rover",
       "name_kor": "낯선고양이",
-      "number": 201,
+      "num": 201,
       "file": "Series 3/[AC] 201 - Rover.bin",
       "image": "cards/201-Rover.png",
       "series": 3,
@@ -4575,7 +4575,7 @@
     {
       "name": "Blathers",
       "name_kor": "부엉",
-      "number": 202,
+      "num": 202,
       "file": "Series 3/[AC] 202 - Blathers.bin",
       "image": "cards/202-Blathers.png",
       "series": 3,
@@ -4598,7 +4598,7 @@
     {
       "name": "Tom Nook",
       "name_kor": "너굴",
-      "number": 203,
+      "num": 203,
       "file": "Series 3/[AC] 203 - Tom Nook.bin",
       "image": "cards/203-Tom Nook.png",
       "series": 3,
@@ -4621,7 +4621,7 @@
     {
       "name": "Pelly",
       "name_kor": "펠리",
-      "number": 204,
+      "num": 204,
       "file": "Series 3/[AC] 204 - Pelly.bin",
       "image": "cards/204-Pelly.png",
       "series": 3,
@@ -4644,7 +4644,7 @@
     {
       "name": "Phyllis",
       "name_kor": "펠리미",
-      "number": 205,
+      "num": 205,
       "file": "Series 3/[AC] 205 - Phyllis.bin",
       "image": "cards/205-Phyllis.png",
       "series": 3,
@@ -4667,7 +4667,7 @@
     {
       "name": "Pete",
       "name_kor": "펠리오",
-      "number": 206,
+      "num": 206,
       "file": "Series 3/[AC] 206 - Pete.bin",
       "image": "cards/206-Pete.png",
       "series": 3,
@@ -4690,7 +4690,7 @@
     {
       "name": "Mabel",
       "name_kor": "고순이",
-      "number": 207,
+      "num": 207,
       "file": "Series 3/[AC] 207 - Mabel.bin",
       "image": "cards/207-Mabel.png",
       "series": 3,
@@ -4713,7 +4713,7 @@
     {
       "name": "Leif",
       "name_kor": "늘봉",
-      "number": 208,
+      "num": 208,
       "file": "Series 3/[AC] 208 - Leif.bin",
       "image": "cards/208-Leif.png",
       "series": 3,
@@ -4736,7 +4736,7 @@
     {
       "name": "Wendell",
       "name_kor": "",
-      "number": 209,
+      "num": 209,
       "file": "Series 3/[AC] 209 - Wendell.bin",
       "image": "cards/209-Wendell.png",
       "series": 3,
@@ -4759,7 +4759,7 @@
     {
       "name": "Cyrus",
       "name_kor": "리포",
-      "number": 210,
+      "num": 210,
       "file": "Series 3/[AC] 210 - Cyrus.bin",
       "image": "cards/210-Cyrus.png",
       "series": 3,
@@ -4782,7 +4782,7 @@
     {
       "name": "Grams",
       "name_kor": "귀녀",
-      "number": 211,
+      "num": 211,
       "file": "Series 3/[AC] 211 - Grams.bin",
       "image": "cards/211-Grams.png",
       "series": 3,
@@ -4805,7 +4805,7 @@
     {
       "name": "Timmy",
       "name_kor": "콩돌",
-      "number": 212,
+      "num": 212,
       "file": "Series 3/[AC] 212 - Timmy.bin",
       "image": "cards/212-Timmy.png",
       "series": 3,
@@ -4828,7 +4828,7 @@
     {
       "name": "Digby",
       "name_kor": "켄트",
-      "number": 213,
+      "num": 213,
       "file": "Series 3/[AC] 213 - Digby.bin",
       "image": "cards/213-Digby.png",
       "series": 3,
@@ -4851,7 +4851,7 @@
     {
       "name": "Don Resetti",
       "name_kor": "오루묵씨",
-      "number": 214,
+      "num": 214,
       "file": "Series 3/[AC] 214 - Don Resetti.bin",
       "image": "cards/214-Don Resetti.png",
       "series": 3,
@@ -4874,7 +4874,7 @@
     {
       "name": "Isabelle",
       "name_kor": "여울 (기모노)",
-      "number": 215,
+      "num": 215,
       "file": "Series 3/[AC] 215 - Isabelle.bin",
       "image": "cards/215-Isabelle.png",
       "series": 3,
@@ -4897,7 +4897,7 @@
     {
       "name": "Franklin",
       "name_kor": "",
-      "number": 216,
+      "num": 216,
       "file": "Series 3/[AC] 216 - Franklin.bin",
       "image": "cards/216-Franklin.png",
       "series": 3,
@@ -4920,7 +4920,7 @@
     {
       "name": "Jingle",
       "name_kor": "",
-      "number": 217,
+      "num": 217,
       "file": "Series 3/[AC] 217 - Jingle.bin",
       "image": "cards/217-Jingle.png",
       "series": 3,
@@ -4943,7 +4943,7 @@
     {
       "name": "Lily",
       "name_kor": "레이니",
-      "number": 218,
+      "num": 218,
       "file": "Series 3/[AC] 218 - Lily.bin",
       "image": "cards/218-Lily.png",
       "series": 3,
@@ -4966,7 +4966,7 @@
     {
       "name": "Anchovy",
       "name_kor": "안쵸비",
-      "number": 219,
+      "num": 219,
       "file": "Series 3/[AC] 219 - Anchovy.bin",
       "image": "cards/219-Anchovy.png",
       "series": 3,
@@ -4989,7 +4989,7 @@
     {
       "name": "Tabby",
       "name_kor": "호냥이",
-      "number": 220,
+      "num": 220,
       "file": "Series 3/[AC] 220 - Tabby.bin",
       "image": "cards/220-Tabby.png",
       "series": 3,
@@ -5012,7 +5012,7 @@
     {
       "name": "Kody",
       "name_kor": "아이다호",
-      "number": 221,
+      "num": 221,
       "file": "Series 3/[AC] 221 - Kody.bin",
       "image": "cards/221-Kody.png",
       "series": 3,
@@ -5035,7 +5035,7 @@
     {
       "name": "Miranda",
       "name_kor": "미란다",
-      "number": 222,
+      "num": 222,
       "file": "Series 3/[AC] 222 - Miranda.bin",
       "image": "cards/222-Miranda.png",
       "series": 3,
@@ -5058,7 +5058,7 @@
     {
       "name": "Del",
       "name_kor": "파도맨",
-      "number": 223,
+      "num": 223,
       "file": "Series 3/[AC] 223 - Del.bin",
       "image": "cards/223-Del.png",
       "series": 3,
@@ -5081,7 +5081,7 @@
     {
       "name": "Paula",
       "name_kor": "레이첼",
-      "number": 224,
+      "num": 224,
       "file": "Series 3/[AC] 224 - Paula.bin",
       "image": "cards/224-Paula.png",
       "series": 3,
@@ -5104,7 +5104,7 @@
     {
       "name": "Ken",
       "name_kor": "오골",
-      "number": 225,
+      "num": 225,
       "file": "Series 3/[AC] 225 - Ken.bin",
       "image": "cards/225-Ken.png",
       "series": 3,
@@ -5127,7 +5127,7 @@
     {
       "name": "Mitzi",
       "name_kor": "마르",
-      "number": 226,
+      "num": 226,
       "file": "Series 3/[AC] 226 - Mitzi.bin",
       "image": "cards/226-Mitzi.png",
       "series": 3,
@@ -5150,7 +5150,7 @@
     {
       "name": "Rodeo",
       "name_kor": "로데오",
-      "number": 227,
+      "num": 227,
       "file": "Series 3/[AC] 227 - Rodeo.bin",
       "image": "cards/227-Rodeo.png",
       "series": 3,
@@ -5173,7 +5173,7 @@
     {
       "name": "Bubbles",
       "name_kor": "차코",
-      "number": 228,
+      "num": 228,
       "file": "Series 3/[AC] 228 - Bubbles.bin",
       "image": "cards/228-Bubbles.png",
       "series": 3,
@@ -5196,7 +5196,7 @@
     {
       "name": "Cousteau",
       "name_kor": "왕서방",
-      "number": 229,
+      "num": 229,
       "file": "Series 3/[AC] 229 - Cousteau.bin",
       "image": "cards/229-Cousteau.png",
       "series": 3,
@@ -5219,7 +5219,7 @@
     {
       "name": "Velma",
       "name_kor": "벨마",
-      "number": 230,
+      "num": 230,
       "file": "Series 3/[AC] 230 - Velma.bin",
       "image": "cards/230-Velma.png",
       "series": 3,
@@ -5242,7 +5242,7 @@
     {
       "name": "Elvis",
       "name_kor": "킹",
-      "number": 231,
+      "num": 231,
       "file": "Series 3/[AC] 231 - Elvis.bin",
       "image": "cards/231-Elvis.png",
       "series": 3,
@@ -5265,7 +5265,7 @@
     {
       "name": "Canberra",
       "name_kor": "캔버라",
-      "number": 232,
+      "num": 232,
       "file": "Series 3/[AC] 232 - Canberra.bin",
       "image": "cards/232-Canberra.png",
       "series": 3,
@@ -5288,7 +5288,7 @@
     {
       "name": "Colton",
       "name_kor": "안소니",
-      "number": 233,
+      "num": 233,
       "file": "Series 3/[AC] 233 - Colton.bin",
       "image": "cards/233-Colton.png",
       "series": 3,
@@ -5311,7 +5311,7 @@
     {
       "name": "Marina",
       "name_kor": "문리나",
-      "number": 234,
+      "num": 234,
       "file": "Series 3/[AC] 234 - Marina.bin",
       "image": "cards/234-Marina.png",
       "series": 3,
@@ -5334,7 +5334,7 @@
     {
       "name": "Spork",
       "name_kor": "포크",
-      "number": 235,
+      "num": 235,
       "file": "Series 3/[AC] 235 - Spork-Crackle.bin",
       "image": "cards/235-Spork.png",
       "series": 3,
@@ -5357,7 +5357,7 @@
     {
       "name": "Freckles",
       "name_kor": "다랑어",
-      "number": 236,
+      "num": 236,
       "file": "Series 3/[AC] 236 - Freckles.bin",
       "image": "cards/236-Freckles.png",
       "series": 3,
@@ -5380,7 +5380,7 @@
     {
       "name": "Bam",
       "name_kor": "록키",
-      "number": 237,
+      "num": 237,
       "file": "Series 3/[AC] 237 - Bam.bin",
       "image": "cards/237-Bam.png",
       "series": 3,
@@ -5403,7 +5403,7 @@
     {
       "name": "Friga",
       "name_kor": "사브리나",
-      "number": 238,
+      "num": 238,
       "file": "Series 3/[AC] 238 - Friga.bin",
       "image": "cards/238-Friga.png",
       "series": 3,
@@ -5426,7 +5426,7 @@
     {
       "name": "Ricky",
       "name_kor": "갈가리",
-      "number": 239,
+      "num": 239,
       "file": "Series 3/[AC] 239 - Ricky.bin",
       "image": "cards/239-Ricky.png",
       "series": 3,
@@ -5449,7 +5449,7 @@
     {
       "name": "Deirdre",
       "name_kor": "나디아",
-      "number": 240,
+      "num": 240,
       "file": "Series 3/[AC] 240 - Deirdre.bin",
       "image": "cards/240-Deirdre.png",
       "series": 3,
@@ -5472,7 +5472,7 @@
     {
       "name": "Hans",
       "name_kor": "스나일",
-      "number": 241,
+      "num": 241,
       "file": "Series 3/[AC] 241 - Hans.bin",
       "image": "cards/241-Hans.png",
       "series": 3,
@@ -5495,7 +5495,7 @@
     {
       "name": "Chevre",
       "name_kor": "윤이",
-      "number": 242,
+      "num": 242,
       "file": "Series 3/[AC] 242 - Chevre.bin",
       "image": "cards/242-Chevre.png",
       "series": 3,
@@ -5518,7 +5518,7 @@
     {
       "name": "Drago",
       "name_kor": "용남이",
-      "number": 243,
+      "num": 243,
       "file": "Series 3/[AC] 243 - Drago.bin",
       "image": "cards/243-Drago.png",
       "series": 3,
@@ -5541,7 +5541,7 @@
     {
       "name": "Tangy",
       "name_kor": "백프로",
-      "number": 244,
+      "num": 244,
       "file": "Series 3/[AC] 244 - Tangy.bin",
       "image": "cards/244-Tangy.png",
       "series": 3,
@@ -5564,7 +5564,7 @@
     {
       "name": "Mac",
       "name_kor": "챔프",
-      "number": 245,
+      "num": 245,
       "file": "Series 3/[AC] 245 - Mac.bin",
       "image": "cards/245-Mac.png",
       "series": 3,
@@ -5587,7 +5587,7 @@
     {
       "name": "Eloise",
       "name_kor": "엘레핀",
-      "number": 246,
+      "num": 246,
       "file": "Series 3/[AC] 246 - Eloise.bin",
       "image": "cards/246-Eloise.png",
       "series": 3,
@@ -5610,7 +5610,7 @@
     {
       "name": "Wart Jr",
       "name_kor": "샘",
-      "number": 247,
+      "num": 247,
       "file": "Series 3/[AC] 247 - Wart Jr..bin",
       "image": "cards/247-Wart Jr.png",
       "series": 3,
@@ -5633,7 +5633,7 @@
     {
       "name": "Hazel",
       "name_kor": "아이리스",
-      "number": 248,
+      "num": 248,
       "file": "Series 3/[AC] 248 - Hazel.bin",
       "image": "cards/248-Hazel.png",
       "series": 3,
@@ -5656,7 +5656,7 @@
     {
       "name": "Beardo",
       "name_kor": "베어드",
-      "number": 249,
+      "num": 249,
       "file": "Series 3/[AC] 249 - Beardo.bin",
       "image": "cards/249-Beardo.png",
       "series": 3,
@@ -5679,7 +5679,7 @@
     {
       "name": "Ava",
       "name_kor": "에바",
-      "number": 250,
+      "num": 250,
       "file": "Series 3/[AC] 250 - Ava.bin",
       "image": "cards/250-Ava.png",
       "series": 3,
@@ -5702,7 +5702,7 @@
     {
       "name": "Chester",
       "name_kor": "",
-      "number": 251,
+      "num": 251,
       "file": "Series 3/[AC] 251 - Chester.bin",
       "image": "cards/251-Chester.png",
       "series": 3,
@@ -5725,7 +5725,7 @@
     {
       "name": "Merry",
       "name_kor": "유네찌",
-      "number": 252,
+      "num": 252,
       "file": "Series 3/[AC] 252 - Merry.bin",
       "image": "cards/252-Merry.png",
       "series": 3,
@@ -5748,7 +5748,7 @@
     {
       "name": "Genji",
       "name_kor": "토시",
-      "number": 253,
+      "num": 253,
       "file": "Series 3/[AC] 253 - Genji.bin",
       "image": "cards/253-Genji.png",
       "series": 3,
@@ -5771,7 +5771,7 @@
     {
       "name": "Greta",
       "name_kor": "복자",
-      "number": 254,
+      "num": 254,
       "file": "Series 3/[AC] 254 - Greta.bin",
       "image": "cards/254-Greta.png",
       "series": 3,
@@ -5794,7 +5794,7 @@
     {
       "name": "Wolfgang",
       "name_kor": "로보",
-      "number": 255,
+      "num": 255,
       "file": "Series 3/[AC] 255 - Wolfgang.bin",
       "image": "cards/255-Wolfgang.png",
       "series": 3,
@@ -5817,7 +5817,7 @@
     {
       "name": "Diva",
       "name_kor": "아이다",
-      "number": 256,
+      "num": 256,
       "file": "Series 3/[AC] 256 - Diva.bin",
       "image": "cards/256-Diva.png",
       "series": 3,
@@ -5840,7 +5840,7 @@
     {
       "name": "Klaus",
       "name_kor": "곰도로스",
-      "number": 257,
+      "num": 257,
       "file": "Series 3/[AC] 257 - Klaus.bin",
       "image": "cards/257-Klaus.png",
       "series": 3,
@@ -5863,7 +5863,7 @@
     {
       "name": "Daisy",
       "name_kor": "바닐라",
-      "number": 258,
+      "num": 258,
       "file": "Series 3/[AC] 258 - Daisy.bin",
       "image": "cards/258-Daisy.png",
       "series": 3,
@@ -5886,7 +5886,7 @@
     {
       "name": "Stinky",
       "name_kor": "땀띠",
-      "number": 259,
+      "num": 259,
       "file": "Series 3/[AC] 259 - Stinky.bin",
       "image": "cards/259-Stinky.png",
       "series": 3,
@@ -5909,7 +5909,7 @@
     {
       "name": "Tammi",
       "name_kor": "에이프릴",
-      "number": 260,
+      "num": 260,
       "file": "Series 3/[AC] 260 - Tammi.bin",
       "image": "cards/260-Tammi.png",
       "series": 3,
@@ -5932,7 +5932,7 @@
     {
       "name": "Tucker",
       "name_kor": "맘모",
-      "number": 261,
+      "num": 261,
       "file": "Series 3/[AC] 261 - Tucker.bin",
       "image": "cards/261-Tucker.png",
       "series": 3,
@@ -5955,7 +5955,7 @@
     {
       "name": "Blanche",
       "name_kor": "신옥",
-      "number": 262,
+      "num": 262,
       "file": "Series 3/[AC] 262 - Blanche.bin",
       "image": "cards/262-Blanche.png",
       "series": 3,
@@ -5978,7 +5978,7 @@
     {
       "name": "Gaston",
       "name_kor": "대길",
-      "number": 263,
+      "num": 263,
       "file": "Series 3/[AC] 263 - Gaston.bin",
       "image": "cards/263-Gaston.png",
       "series": 3,
@@ -6001,7 +6001,7 @@
     {
       "name": "Marshal",
       "name_kor": "쭈니",
-      "number": 264,
+      "num": 264,
       "file": "Series 3/[AC] 264 - Marshal.bin",
       "image": "cards/264-Marshal.png",
       "series": 3,
@@ -6024,7 +6024,7 @@
     {
       "name": "Gala",
       "name_kor": "꽃지",
-      "number": 265,
+      "num": 265,
       "file": "Series 3/[AC] 265 - Gala.bin",
       "image": "cards/265-Gala.png",
       "series": 3,
@@ -6047,7 +6047,7 @@
     {
       "name": "Joey",
       "name_kor": "리처드",
-      "number": 266,
+      "num": 266,
       "file": "Series 3/[AC] 266 - Joey.bin",
       "image": "cards/266-Joey.png",
       "series": 3,
@@ -6070,7 +6070,7 @@
     {
       "name": "Pippy",
       "name_kor": "로타",
-      "number": 267,
+      "num": 267,
       "file": "Series 3/[AC] 267 - Pippy.bin",
       "image": "cards/267-Pippy.png",
       "series": 3,
@@ -6093,7 +6093,7 @@
     {
       "name": "Buck",
       "name_kor": "바야시코프",
-      "number": 268,
+      "num": 268,
       "file": "Series 3/[AC] 268 - Buck.bin",
       "image": "cards/268-Buck.png",
       "series": 3,
@@ -6116,7 +6116,7 @@
     {
       "name": "Bree",
       "name_kor": "사라",
-      "number": 269,
+      "num": 269,
       "file": "Series 3/[AC] 269 - Bree.bin",
       "image": "cards/269-Bree.png",
       "series": 3,
@@ -6139,7 +6139,7 @@
     {
       "name": "Rooney",
       "name_kor": "마이크",
-      "number": 270,
+      "num": 270,
       "file": "Series 3/[AC] 270 - Rooney.bin",
       "image": "cards/270-Rooney.png",
       "series": 3,
@@ -6162,7 +6162,7 @@
     {
       "name": "Curlos",
       "name_kor": "카를로스",
-      "number": 271,
+      "num": 271,
       "file": "Series 3/[AC] 271 - Curlos.bin",
       "image": "cards/271-Curlos.png",
       "series": 3,
@@ -6185,7 +6185,7 @@
     {
       "name": "Skye",
       "name_kor": "릴리",
-      "number": 272,
+      "num": 272,
       "file": "Series 3/[AC] 272 - Skye.bin",
       "image": "cards/272-Skye.png",
       "series": 3,
@@ -6208,7 +6208,7 @@
     {
       "name": "Moe",
       "name_kor": "진상",
-      "number": 273,
+      "num": 273,
       "file": "Series 3/[AC] 273 - Moe.bin",
       "image": "cards/273-Moe.png",
       "series": 3,
@@ -6231,7 +6231,7 @@
     {
       "name": "Flora",
       "name_kor": "플라라",
-      "number": 274,
+      "num": 274,
       "file": "Series 3/[AC] 274 - Flora.bin",
       "image": "cards/274-Flora.png",
       "series": 3,
@@ -6254,7 +6254,7 @@
     {
       "name": "Hamlet",
       "name_kor": "햄스틴",
-      "number": 275,
+      "num": 275,
       "file": "Series 3/[AC] 275 - Hamlet.bin",
       "image": "cards/275-Hamlet.png",
       "series": 3,
@@ -6277,7 +6277,7 @@
     {
       "name": "Astrid",
       "name_kor": "펑키맘",
-      "number": 276,
+      "num": 276,
       "file": "Series 3/[AC] 276 - Astrid.bin",
       "image": "cards/276-Astrid.png",
       "series": 3,
@@ -6300,7 +6300,7 @@
     {
       "name": "Monty",
       "name_kor": "몽티",
-      "number": 277,
+      "num": 277,
       "file": "Series 3/[AC] 277 - Monty.bin",
       "image": "cards/277-Monty.png",
       "series": 3,
@@ -6323,7 +6323,7 @@
     {
       "name": "Dora",
       "name_kor": "티미",
-      "number": 278,
+      "num": 278,
       "file": "Series 3/[AC] 278 - Dora.bin",
       "image": "cards/278-Dora.png",
       "series": 3,
@@ -6346,7 +6346,7 @@
     {
       "name": "Biskit",
       "name_kor": "로빈",
-      "number": 279,
+      "num": 279,
       "file": "Series 3/[AC] 279 - Biskit.bin",
       "image": "cards/279-Biskit.png",
       "series": 3,
@@ -6369,7 +6369,7 @@
     {
       "name": "Victoria",
       "name_kor": "센트엘로",
-      "number": 280,
+      "num": 280,
       "file": "Series 3/[AC] 280 - Victoria.bin",
       "image": "cards/280-Victoria.png",
       "series": 3,
@@ -6392,7 +6392,7 @@
     {
       "name": "Lyman",
       "name_kor": "오즈먼드",
-      "number": 281,
+      "num": 281,
       "file": "Series 3/[AC] 281 - Lyman.bin",
       "image": "cards/281-Lyman.png",
       "series": 3,
@@ -6415,7 +6415,7 @@
     {
       "name": "Violet",
       "name_kor": "줌마",
-      "number": 282,
+      "num": 282,
       "file": "Series 3/[AC] 282 - Violet.bin",
       "image": "cards/282-Violet.png",
       "series": 3,
@@ -6438,7 +6438,7 @@
     {
       "name": "Frank",
       "name_kor": "헐크",
-      "number": 283,
+      "num": 283,
       "file": "Series 3/[AC] 283 - Frank.bin",
       "image": "cards/283-Frank.png",
       "series": 3,
@@ -6461,7 +6461,7 @@
     {
       "name": "Chadder",
       "name_kor": "치즈",
-      "number": 284,
+      "num": 284,
       "file": "Series 3/[AC] 284 - Chadder.bin",
       "image": "cards/284-Chadder.png",
       "series": 3,
@@ -6484,7 +6484,7 @@
     {
       "name": "Merengue",
       "name_kor": "스트로베리",
-      "number": 285,
+      "num": 285,
       "file": "Series 3/[AC] 285 - Merengue.bin",
       "image": "cards/285-Merengue.png",
       "series": 3,
@@ -6507,7 +6507,7 @@
     {
       "name": "Cube",
       "name_kor": "빙수",
-      "number": 286,
+      "num": 286,
       "file": "Series 3/[AC] 286 - Cube.bin",
       "image": "cards/286-Cube.png",
       "series": 3,
@@ -6530,7 +6530,7 @@
     {
       "name": "Claudia",
       "name_kor": "신디",
-      "number": 287,
+      "num": 287,
       "file": "Series 3/[AC] 287 - Claudia.bin",
       "image": "cards/287-Claudia.png",
       "series": 3,
@@ -6553,7 +6553,7 @@
     {
       "name": "Curly",
       "name_kor": "햄까스",
-      "number": 288,
+      "num": 288,
       "file": "Series 3/[AC] 288 - Curly.bin",
       "image": "cards/288-Curly.png",
       "series": 3,
@@ -6576,7 +6576,7 @@
     {
       "name": "Boomer",
       "name_kor": "팽기",
-      "number": 289,
+      "num": 289,
       "file": "Series 3/[AC] 289 - Boomer.bin",
       "image": "cards/289-Boomer.png",
       "series": 3,
@@ -6599,7 +6599,7 @@
     {
       "name": "Caroline",
       "name_kor": "캐롤라인",
-      "number": 290,
+      "num": 290,
       "file": "Series 3/[AC] 290 - Caroline.bin",
       "image": "cards/290-Caroline.png",
       "series": 3,
@@ -6622,7 +6622,7 @@
     {
       "name": "Sparro",
       "name_kor": "춘섭",
-      "number": 291,
+      "num": 291,
       "file": "Series 3/[AC] 291 - Sparro.bin",
       "image": "cards/291-Sparro.png",
       "series": 3,
@@ -6645,7 +6645,7 @@
     {
       "name": "Baabara",
       "name_kor": "트로와",
-      "number": 292,
+      "num": 292,
       "file": "Series 3/[AC] 292 - Baabara.bin",
       "image": "cards/292-Baabara.png",
       "series": 3,
@@ -6668,7 +6668,7 @@
     {
       "name": "Rolf",
       "name_kor": "호랭이",
-      "number": 293,
+      "num": 293,
       "file": "Series 3/[AC] 293 - Rolf.bin",
       "image": "cards/293-Rolf.png",
       "series": 3,
@@ -6691,7 +6691,7 @@
     {
       "name": "Maple",
       "name_kor": "메이첼",
-      "number": 294,
+      "num": 294,
       "file": "Series 3/[AC] 294 - Maple.bin",
       "image": "cards/294-Maple.png",
       "series": 3,
@@ -6714,7 +6714,7 @@
     {
       "name": "Antonio",
       "name_kor": "퍼머거",
-      "number": 295,
+      "num": 295,
       "file": "Series 3/[AC] 295 - Antonio.bin",
       "image": "cards/295-Antonio.png",
       "series": 3,
@@ -6737,7 +6737,7 @@
     {
       "name": "Soleil",
       "name_kor": "샨티",
-      "number": 296,
+      "num": 296,
       "file": "Series 3/[AC] 296 - Soleil.bin",
       "image": "cards/296-Soleil.png",
       "series": 3,
@@ -6760,7 +6760,7 @@
     {
       "name": "Apollo",
       "name_kor": "아폴로",
-      "number": 297,
+      "num": 297,
       "file": "Series 3/[AC] 297 - Apollo.bin",
       "image": "cards/297-Apollo.png",
       "series": 3,
@@ -6783,7 +6783,7 @@
     {
       "name": "Derwin",
       "name_kor": "봉",
-      "number": 298,
+      "num": 298,
       "file": "Series 3/[AC] 298 - Derwin.bin",
       "image": "cards/298-Derwin.png",
       "series": 3,
@@ -6806,7 +6806,7 @@
     {
       "name": "Francine",
       "name_kor": "프랑소와",
-      "number": 299,
+      "num": 299,
       "file": "Series 3/[AC] 299 - Francine.bin",
       "image": "cards/299-Francine.png",
       "series": 3,
@@ -6829,7 +6829,7 @@
     {
       "name": "Chrissy",
       "name_kor": "크리스틴",
-      "number": 300,
+      "num": 300,
       "file": "Series 3/[AC] 300 - Chrissy.bin",
       "image": "cards/300-Chrissy.png",
       "series": 3,
@@ -6852,7 +6852,7 @@
     {
       "name": "Isabelle",
       "name_kor": "여울",
-      "number": 301,
+      "num": 301,
       "file": "Series 4/[AC] 301 - Isabelle.bin",
       "image": "cards/301-Isabelle.png",
       "series": 4,
@@ -6875,7 +6875,7 @@
     {
       "name": "Brewster",
       "name_kor": "마스터",
-      "number": 302,
+      "num": 302,
       "file": "Series 4/[AC] 302 - Brewster.bin",
       "image": "cards/302-Brewster.png",
       "series": 4,
@@ -6898,7 +6898,7 @@
     {
       "name": "Katrina",
       "name_kor": "카트리나",
-      "number": 303,
+      "num": 303,
       "file": "Series 4/[AC] 303 - Katrina.bin",
       "image": "cards/303-Katrina.png",
       "series": 4,
@@ -6921,7 +6921,7 @@
     {
       "name": "Phineas",
       "name_kor": "파론티노 옹",
-      "number": 304,
+      "num": 304,
       "file": "Series 4/[AC] 304 - Phineas.bin",
       "image": "cards/304-Phineas.png",
       "series": 4,
@@ -6944,7 +6944,7 @@
     {
       "name": "Celeste",
       "name_kor": "부옥",
-      "number": 305,
+      "num": 305,
       "file": "Series 4/[AC] 305 - Celeste.bin",
       "image": "cards/305-Celeste.png",
       "series": 4,
@@ -6967,7 +6967,7 @@
     {
       "name": "Tommy",
       "name_kor": "밤돌",
-      "number": 306,
+      "num": 306,
       "file": "Series 4/[AC] 306 - Tommy.bin",
       "image": "cards/306-Tommy.png",
       "series": 4,
@@ -6990,7 +6990,7 @@
     {
       "name": "Gracie",
       "name_kor": "그레이스",
-      "number": 307,
+      "num": 307,
       "file": "Series 4/[AC] 307 - Gracie.bin",
       "image": "cards/307-Gracie.png",
       "series": 4,
@@ -7013,7 +7013,7 @@
     {
       "name": "Leilani",
       "name_kor": "갑순이",
-      "number": 308,
+      "num": 308,
       "file": "Series 4/[AC] 308 - Leilani.bin",
       "image": "cards/308-Leilani.png",
       "series": 4,
@@ -7036,7 +7036,7 @@
     {
       "name": "Resetti",
       "name_kor": "도루묵씨",
-      "number": 309,
+      "num": 309,
       "file": "Series 4/[AC] 309 - Resetti.bin",
       "image": "cards/309-Resetti.png",
       "series": 4,
@@ -7059,7 +7059,7 @@
     {
       "name": "Timmy",
       "name_kor": "콩돌",
-      "number": 310,
+      "num": 310,
       "file": "Series 4/[AC] 310 - Timmy.bin",
       "image": "cards/310-Timmy.png",
       "series": 4,
@@ -7082,7 +7082,7 @@
     {
       "name": "Lottie",
       "name_kor": "타쿠미",
-      "number": 311,
+      "num": 311,
       "file": "Series 4/[AC] 311 - Lottie.bin",
       "image": "cards/311-Lottie.png",
       "series": 4,
@@ -7105,7 +7105,7 @@
     {
       "name": "Shrunk",
       "name_kor": "스승",
-      "number": 312,
+      "num": 312,
       "file": "Series 4/[AC] 312 - Shrunk.bin",
       "image": "cards/312-Shrunk.png",
       "series": 4,
@@ -7128,7 +7128,7 @@
     {
       "name": "Pave",
       "name_kor": "베르리나",
-      "number": 313,
+      "num": 313,
       "file": "Series 4/[AC] 313 - Pave.bin",
       "image": "cards/313-Pave.png",
       "series": 4,
@@ -7151,7 +7151,7 @@
     {
       "name": "Gulliver",
       "name_kor": "죠니",
-      "number": 314,
+      "num": 314,
       "file": "Series 4/[AC] 314 - Gulliver.bin",
       "image": "cards/314-Gulliver.png",
       "series": 4,
@@ -7174,7 +7174,7 @@
     {
       "name": "Redd",
       "name_kor": "여욱",
-      "number": 315,
+      "num": 315,
       "file": "Series 4/[AC] 315 - Redd.bin",
       "image": "cards/315-Redd.png",
       "series": 4,
@@ -7197,7 +7197,7 @@
     {
       "name": "Zipper",
       "name_kor": "토빗",
-      "number": 316,
+      "num": 316,
       "file": "Series 4/[AC] 316 - Zipper.bin",
       "image": "cards/316-Zipper.png",
       "series": 4,
@@ -7220,7 +7220,7 @@
     {
       "name": "Goldie",
       "name_kor": "카라멜",
-      "number": 317,
+      "num": 317,
       "file": "Series 4/[AC] 317 - Goldie.bin",
       "image": "cards/317-Goldie.png",
       "series": 4,
@@ -7243,7 +7243,7 @@
     {
       "name": "Stitches",
       "name_kor": "패치",
-      "number": 318,
+      "num": 318,
       "file": "Series 4/[AC] 318 - Stitches.bin",
       "image": "cards/318-Stitches.png",
       "series": 4,
@@ -7266,7 +7266,7 @@
     {
       "name": "Pinky",
       "name_kor": "링링",
-      "number": 319,
+      "num": 319,
       "file": "Series 4/[AC] 319 - Pinky.bin",
       "image": "cards/319-Pinky.png",
       "series": 4,
@@ -7289,7 +7289,7 @@
     {
       "name": "Mott",
       "name_kor": "릭",
-      "number": 320,
+      "num": 320,
       "file": "Series 4/[AC] 320 - Mott.bin",
       "image": "cards/320-Mott.png",
       "series": 4,
@@ -7312,7 +7312,7 @@
     {
       "name": "Mallary",
       "name_kor": "스미모",
-      "number": 321,
+      "num": 321,
       "file": "Series 4/[AC] 321 - Mallary.bin",
       "image": "cards/321-Mallary.png",
       "series": 4,
@@ -7335,7 +7335,7 @@
     {
       "name": "Rocco",
       "name_kor": "브로콜리",
-      "number": 322,
+      "num": 322,
       "file": "Series 4/[AC] 322 - Rocco.bin",
       "image": "cards/322-Rocco.png",
       "series": 4,
@@ -7358,7 +7358,7 @@
     {
       "name": "Katt",
       "name_kor": "쵸이",
-      "number": 323,
+      "num": 323,
       "file": "Series 4/[AC] 323 - Katt.bin",
       "image": "cards/323-Katt.png",
       "series": 4,
@@ -7381,7 +7381,7 @@
     {
       "name": "Graham",
       "name_kor": "글라햄",
-      "number": 324,
+      "num": 324,
       "file": "Series 4/[AC] 324 - Graham.bin",
       "image": "cards/324-Graham.png",
       "series": 4,
@@ -7404,7 +7404,7 @@
     {
       "name": "Peaches",
       "name_kor": "말자",
-      "number": 325,
+      "num": 325,
       "file": "Series 4/[AC] 325 - Peaches.bin",
       "image": "cards/325-Peaches.png",
       "series": 4,
@@ -7427,7 +7427,7 @@
     {
       "name": "Dizzy",
       "name_kor": "휴지",
-      "number": 326,
+      "num": 326,
       "file": "Series 4/[AC] 326 - Dizzy.bin",
       "image": "cards/326-Dizzy.png",
       "series": 4,
@@ -7450,7 +7450,7 @@
     {
       "name": "Penelope",
       "name_kor": "찍순이",
-      "number": 327,
+      "num": 327,
       "file": "Series 4/[AC] 327 - Penelope.bin",
       "image": "cards/327-Penelope.png",
       "series": 4,
@@ -7473,7 +7473,7 @@
     {
       "name": "Boone",
       "name_kor": "만복이",
-      "number": 328,
+      "num": 328,
       "file": "Series 4/[AC] 328 - Boone.bin",
       "image": "cards/328-Boone.png",
       "series": 4,
@@ -7496,7 +7496,7 @@
     {
       "name": "Broffina",
       "name_kor": "히킨",
-      "number": 329,
+      "num": 329,
       "file": "Series 4/[AC] 329 - Broffina.bin",
       "image": "cards/329-Broffina.png",
       "series": 4,
@@ -7519,7 +7519,7 @@
     {
       "name": "Croque",
       "name_kor": "투투",
-      "number": 330,
+      "num": 330,
       "file": "Series 4/[AC] 330 - Croque.bin",
       "image": "cards/330-Croque.png",
       "series": 4,
@@ -7542,7 +7542,7 @@
     {
       "name": "Pashmina",
       "name_kor": "바바라",
-      "number": 331,
+      "num": 331,
       "file": "Series 4/[AC] 331 - Pashmina.bin",
       "image": "cards/331-Pashmina.png",
       "series": 4,
@@ -7565,7 +7565,7 @@
     {
       "name": "Shep",
       "name_kor": "밥",
-      "number": 332,
+      "num": 332,
       "file": "Series 4/[AC] 332 - Shep.bin",
       "image": "cards/332-Shep.png",
       "series": 4,
@@ -7588,7 +7588,7 @@
     {
       "name": "Lolly",
       "name_kor": "사이다",
-      "number": 333,
+      "num": 333,
       "file": "Series 4/[AC] 333 - Lolly.bin",
       "image": "cards/333-Lolly.png",
       "series": 4,
@@ -7611,7 +7611,7 @@
     {
       "name": "Erik",
       "name_kor": "자끄",
-      "number": 334,
+      "num": 334,
       "file": "Series 4/[AC] 334 - Erik.bin",
       "image": "cards/334-Erik.png",
       "series": 4,
@@ -7634,7 +7634,7 @@
     {
       "name": "Dotty",
       "name_kor": "서머",
-      "number": 335,
+      "num": 335,
       "file": "Series 4/[AC] 335 - Dotty.bin",
       "image": "cards/335-Dotty.png",
       "series": 4,
@@ -7657,7 +7657,7 @@
     {
       "name": "Pierce",
       "name_kor": "세바스찬",
-      "number": 336,
+      "num": 336,
       "file": "Series 4/[AC] 336 - Pierce.bin",
       "image": "cards/336-Pierce.png",
       "series": 4,
@@ -7680,7 +7680,7 @@
     {
       "name": "Queenie",
       "name_kor": "택주",
-      "number": 337,
+      "num": 337,
       "file": "Series 4/[AC] 337 - Queenie.bin",
       "image": "cards/337-Queenie.png",
       "series": 4,
@@ -7703,7 +7703,7 @@
     {
       "name": "Fang",
       "name_kor": "시베리아",
-      "number": 338,
+      "num": 338,
       "file": "Series 4/[AC] 338 - Fang.bin",
       "image": "cards/338-Fang.png",
       "series": 4,
@@ -7726,7 +7726,7 @@
     {
       "name": "Frita",
       "name_kor": "웬디",
-      "number": 339,
+      "num": 339,
       "file": "Series 4/[AC] 339 - Fritta.bin",
       "image": "cards/339-Fritta.png",
       "series": 4,
@@ -7749,7 +7749,7 @@
     {
       "name": "Tex",
       "name_kor": "볼트",
-      "number": 340,
+      "num": 340,
       "file": "Series 4/[AC] 340 - Tex.bin",
       "image": "cards/340-Tex.png",
       "series": 4,
@@ -7772,7 +7772,7 @@
     {
       "name": "Melba",
       "name_kor": "아델레이드",
-      "number": 341,
+      "num": 341,
       "file": "Series 4/[AC] 341 - Melba.bin",
       "image": "cards/341-Melba.png",
       "series": 4,
@@ -7795,7 +7795,7 @@
     {
       "name": "Bones",
       "name_kor": "토미",
-      "number": 342,
+      "num": 342,
       "file": "Series 4/[AC] 342 - Bones.bin",
       "image": "cards/342-Bones.png",
       "series": 4,
@@ -7818,7 +7818,7 @@
     {
       "name": "Anabelle",
       "name_kor": "아롱이",
-      "number": 343,
+      "num": 343,
       "file": "Series 4/[AC] 343 - Anabelle.bin",
       "image": "cards/343-Anabelle.png",
       "series": 4,
@@ -7841,7 +7841,7 @@
     {
       "name": "Rudy",
       "name_kor": "찰스",
-      "number": 344,
+      "num": 344,
       "file": "Series 4/[AC] 344 - Rudy.bin",
       "image": "cards/344-Rudy.png",
       "series": 4,
@@ -7864,7 +7864,7 @@
     {
       "name": "Naomi",
       "name_kor": "화자",
-      "number": 345,
+      "num": 345,
       "file": "Series 4/[AC] 345 - Naomi.bin",
       "image": "cards/345-Naomi.png",
       "series": 4,
@@ -7887,7 +7887,7 @@
     {
       "name": "Peewee",
       "name_kor": "덤벨",
-      "number": 346,
+      "num": 346,
       "file": "Series 4/[AC] 346 - Peewee.bin",
       "image": "cards/346-Peewee.png",
       "series": 4,
@@ -7910,7 +7910,7 @@
     {
       "name": "Tammy",
       "name_kor": "아네사",
-      "number": 347,
+      "num": 347,
       "file": "Series 4/[AC] 347 - Tammy.bin",
       "image": "cards/347-Tammy.png",
       "series": 4,
@@ -7933,7 +7933,7 @@
     {
       "name": "Olaf",
       "name_kor": "안토니오",
-      "number": 348,
+      "num": 348,
       "file": "Series 4/[AC] 348 - Olaf.bin",
       "image": "cards/348-Olaf.png",
       "series": 4,
@@ -7956,7 +7956,7 @@
     {
       "name": "Lucy",
       "name_kor": "루시",
-      "number": 349,
+      "num": 349,
       "file": "Series 4/[AC] 349 - Lucy.bin",
       "image": "cards/349-Lucy.png",
       "series": 4,
@@ -7979,7 +7979,7 @@
     {
       "name": "Elmer",
       "name_kor": "샤브렌",
-      "number": 350,
+      "num": 350,
       "file": "Series 4/[AC] 350 - Elmer.bin",
       "image": "cards/350-Elmer.png",
       "series": 4,
@@ -8002,7 +8002,7 @@
     {
       "name": "Puddles",
       "name_kor": "가위",
-      "number": 351,
+      "num": 351,
       "file": "Series 4/[AC] 351 - Puddles.bin",
       "image": "cards/351-Puddles.png",
       "series": 4,
@@ -8025,7 +8025,7 @@
     {
       "name": "Rory",
       "name_kor": "아더",
-      "number": 352,
+      "num": 352,
       "file": "Series 4/[AC] 352 - Rory.bin",
       "image": "cards/352-Rory.png",
       "series": 4,
@@ -8048,7 +8048,7 @@
     {
       "name": "Elise",
       "name_kor": "몽자",
-      "number": 353,
+      "num": 353,
       "file": "Series 4/[AC] 353 - Elise.bin",
       "image": "cards/353-Elise.png",
       "series": 4,
@@ -8071,7 +8071,7 @@
     {
       "name": "Walt",
       "name_kor": "관록",
-      "number": 354,
+      "num": 354,
       "file": "Series 4/[AC] 354 - Walt.bin",
       "image": "cards/354-Walt.png",
       "series": 4,
@@ -8094,7 +8094,7 @@
     {
       "name": "Mira",
       "name_kor": "미랑",
-      "number": 355,
+      "num": 355,
       "file": "Series 4/[AC] 355 - Mira.bin",
       "image": "cards/355-Mira.png",
       "series": 4,
@@ -8117,7 +8117,7 @@
     {
       "name": "Pietro",
       "name_kor": "피엘",
-      "number": 356,
+      "num": 356,
       "file": "Series 4/[AC] 356 - Pietro.bin",
       "image": "cards/356-Pietro.png",
       "series": 4,
@@ -8140,7 +8140,7 @@
     {
       "name": "Aurora",
       "name_kor": "오로라",
-      "number": 357,
+      "num": 357,
       "file": "Series 4/[AC] 357 - Aurora.bin",
       "image": "cards/357-Aurora.png",
       "series": 4,
@@ -8163,7 +8163,7 @@
     {
       "name": "Papi",
       "name_kor": "마사마",
-      "number": 358,
+      "num": 358,
       "file": "Series 4/[AC] 358 - Papi.bin",
       "image": "cards/358-Papi.png",
       "series": 4,
@@ -8186,7 +8186,7 @@
     {
       "name": "Apple",
       "name_kor": "애플",
-      "number": 359,
+      "num": 359,
       "file": "Series 4/[AC] 359 - Apple.bin",
       "image": "cards/359-Apple.png",
       "series": 4,
@@ -8209,7 +8209,7 @@
     {
       "name": "Rod",
       "name_kor": "쟝",
-      "number": 360,
+      "num": 360,
       "file": "Series 4/[AC] 360 - Rod.bin",
       "image": "cards/360-Rod.png",
       "series": 4,
@@ -8232,7 +8232,7 @@
     {
       "name": "Purrl",
       "name_kor": "타마",
-      "number": 361,
+      "num": 361,
       "file": "Series 4/[AC] 361 - Purrl.bin",
       "image": "cards/361-Purrl.png",
       "series": 4,
@@ -8255,7 +8255,7 @@
     {
       "name": "Static",
       "name_kor": "스파크",
-      "number": 362,
+      "num": 362,
       "file": "Series 4/[AC] 362 - Static.bin",
       "image": "cards/362-Static.png",
       "series": 4,
@@ -8278,7 +8278,7 @@
     {
       "name": "Celia",
       "name_kor": "티파니",
-      "number": 363,
+      "num": 363,
       "file": "Series 4/[AC] 363 - Celia.bin",
       "image": "cards/363-Celia.png",
       "series": 4,
@@ -8301,7 +8301,7 @@
     {
       "name": "Zucker",
       "name_kor": "탁호",
-      "number": 364,
+      "num": 364,
       "file": "Series 4/[AC] 364 - Zucker.bin",
       "image": "cards/364-Zucker.png",
       "series": 4,
@@ -8324,7 +8324,7 @@
     {
       "name": "Peggy",
       "name_kor": "체리",
-      "number": 365,
+      "num": 365,
       "file": "Series 4/[AC] 365 - Peggy.bin",
       "image": "cards/365-Peggy.png",
       "series": 4,
@@ -8347,7 +8347,7 @@
     {
       "name": "Ribbot",
       "name_kor": "철컥",
-      "number": 366,
+      "num": 366,
       "file": "Series 4/[AC] 366 - Ribbot.bin",
       "image": "cards/366-Ribbot.png",
       "series": 4,
@@ -8370,7 +8370,7 @@
     {
       "name": "Annalise",
       "name_kor": "실부플레",
-      "number": 367,
+      "num": 367,
       "file": "Series 4/[AC] 367 - Annalise.bin",
       "image": "cards/367-Annalise.png",
       "series": 4,
@@ -8393,7 +8393,7 @@
     {
       "name": "Chow",
       "name_kor": "츄양",
-      "number": 368,
+      "num": 368,
       "file": "Series 4/[AC] 368 - Chow.bin",
       "image": "cards/368-Chow.png",
       "series": 4,
@@ -8416,7 +8416,7 @@
     {
       "name": "Sylvia",
       "name_kor": "실비아",
-      "number": 369,
+      "num": 369,
       "file": "Series 4/[AC] 369 - Sylvia.bin",
       "image": "cards/369-Sylvia.png",
       "series": 4,
@@ -8439,7 +8439,7 @@
     {
       "name": "Jacques",
       "name_kor": "쪼끼",
-      "number": 370,
+      "num": 370,
       "file": "Series 4/[AC] 370 - Jacques.bin",
       "image": "cards/370-Jacques.png",
       "series": 4,
@@ -8462,7 +8462,7 @@
     {
       "name": "Sally",
       "name_kor": "라라미",
-      "number": 371,
+      "num": 371,
       "file": "Series 4/[AC] 371 - Sally.bin",
       "image": "cards/371-Sally.png",
       "series": 4,
@@ -8485,7 +8485,7 @@
     {
       "name": "Doc",
       "name_kor": "토니",
-      "number": 372,
+      "num": 372,
       "file": "Series 4/[AC] 372 - Doc.bin",
       "image": "cards/372-Doc.png",
       "series": 4,
@@ -8508,7 +8508,7 @@
     {
       "name": "Pompom",
       "name_kor": "주디",
-      "number": 373,
+      "num": 373,
       "file": "Series 4/[AC] 373 - Pompom.bin",
       "image": "cards/373-Pompom.png",
       "series": 4,
@@ -8531,7 +8531,7 @@
     {
       "name": "Tank",
       "name_kor": "탱크",
-      "number": 374,
+      "num": 374,
       "file": "Series 4/[AC] 374 - Tank.bin",
       "image": "cards/374-Tank.png",
       "series": 4,
@@ -8554,7 +8554,7 @@
     {
       "name": "Becky",
       "name_kor": "아리아",
-      "number": 375,
+      "num": 375,
       "file": "Series 4/[AC] 375 - Becky.bin",
       "image": "cards/375-Becky.png",
       "series": 4,
@@ -8577,7 +8577,7 @@
     {
       "name": "Rizzo",
       "name_kor": "조르쥐",
-      "number": 376,
+      "num": 376,
       "file": "Series 4/[AC] 376 - Rizzo.bin",
       "image": "cards/376-Rizzo.png",
       "series": 4,
@@ -8600,7 +8600,7 @@
     {
       "name": "Sydney",
       "name_kor": "시드니",
-      "number": 377,
+      "num": 377,
       "file": "Series 4/[AC] 377 - Sydney.bin",
       "image": "cards/377-Sydney.png",
       "series": 4,
@@ -8623,7 +8623,7 @@
     {
       "name": "Barold",
       "name_kor": "곰시",
-      "number": 378,
+      "num": 378,
       "file": "Series 4/[AC] 378 - Barold.bin",
       "image": "cards/378-Barold.png",
       "series": 4,
@@ -8646,7 +8646,7 @@
     {
       "name": "Nibbles",
       "name_kor": "그리미",
-      "number": 379,
+      "num": 379,
       "file": "Series 4/[AC] 379 - Nibbles.bin",
       "image": "cards/379-Nibbles.png",
       "series": 4,
@@ -8669,7 +8669,7 @@
     {
       "name": "Kevin",
       "name_kor": "멧지",
-      "number": 380,
+      "num": 380,
       "file": "Series 4/[AC] 380 - Kevin.bin",
       "image": "cards/380-Kevin.png",
       "series": 4,
@@ -8692,7 +8692,7 @@
     {
       "name": "Gloria",
       "name_kor": "마릴린",
-      "number": 381,
+      "num": 381,
       "file": "Series 4/[AC] 381 - Gloria.bin",
       "image": "cards/381-Gloria.png",
       "series": 4,
@@ -8715,7 +8715,7 @@
     {
       "name": "Lobo",
       "name_kor": "늑태",
-      "number": 382,
+      "num": 382,
       "file": "Series 4/[AC] 382 - Lobo.bin",
       "image": "cards/382-Lobo.png",
       "series": 4,
@@ -8738,7 +8738,7 @@
     {
       "name": "Hippeux",
       "name_kor": "데이빗",
-      "number": 383,
+      "num": 383,
       "file": "Series 4/[AC] 383 - Hippeux.bin",
       "image": "cards/383-Hippeux.png",
       "series": 4,
@@ -8761,7 +8761,7 @@
     {
       "name": "Margie",
       "name_kor": "샐리",
-      "number": 384,
+      "num": 384,
       "file": "Series 4/[AC] 384 - Margie.bin",
       "image": "cards/384-Margie.png",
       "series": 4,
@@ -8784,7 +8784,7 @@
     {
       "name": "Lucky",
       "name_kor": "럭키",
-      "number": 385,
+      "num": 385,
       "file": "Series 4/[AC] 385 - Lucky.bin",
       "image": "cards/385-Lucky.png",
       "series": 4,
@@ -8807,7 +8807,7 @@
     {
       "name": "Rosie",
       "name_kor": "부케",
-      "number": 386,
+      "num": 386,
       "file": "Series 4/[AC] 386 - Rosie.bin",
       "image": "cards/386-Rosie.png",
       "series": 4,
@@ -8830,7 +8830,7 @@
     {
       "name": "Rowan",
       "name_kor": "고메스",
-      "number": 387,
+      "num": 387,
       "file": "Series 4/[AC] 387 - Rowan.bin",
       "image": "cards/387-Rowan.png",
       "series": 4,
@@ -8853,7 +8853,7 @@
     {
       "name": "Maelle",
       "name_kor": "앤",
-      "number": 388,
+      "num": 388,
       "file": "Series 4/[AC] 388 - Maelle.bin",
       "image": "cards/388-Maelle.png",
       "series": 4,
@@ -8876,7 +8876,7 @@
     {
       "name": "Bruce",
       "name_kor": "브루스",
-      "number": 389,
+      "num": 389,
       "file": "Series 4/[AC] 389 - Bruce.bin",
       "image": "cards/389-Bruce.png",
       "series": 4,
@@ -8899,7 +8899,7 @@
     {
       "name": "O'Hare",
       "name_kor": "산토스",
-      "number": 390,
+      "num": 390,
       "file": "Series 4/[AC] 390 - O'Hare.bin",
       "image": "cards/390-O'Hare.png",
       "series": 4,
@@ -8922,7 +8922,7 @@
     {
       "name": "Gayle",
       "name_kor": "앨리",
-      "number": 391,
+      "num": 391,
       "file": "Series 4/[AC] 391 - Gayle.bin",
       "image": "cards/391-Gayle.png",
       "series": 4,
@@ -8945,7 +8945,7 @@
     {
       "name": "Cranston",
       "name_kor": "타키",
-      "number": 392,
+      "num": 392,
       "file": "Series 4/[AC] 392 - Cranston.bin",
       "image": "cards/392-Cranston.png",
       "series": 4,
@@ -8968,7 +8968,7 @@
     {
       "name": "Frobert",
       "name_kor": "구리구리",
-      "number": 393,
+      "num": 393,
       "file": "Series 4/[AC] 393 - Frobert.bin",
       "image": "cards/393-Frobert.png",
       "series": 4,
@@ -8991,7 +8991,7 @@
     {
       "name": "Grizzly",
       "name_kor": "무뚝",
-      "number": 394,
+      "num": 394,
       "file": "Series 4/[AC] 394 - Grizzly.bin",
       "image": "cards/394-Grizzly.png",
       "series": 4,
@@ -9014,7 +9014,7 @@
     {
       "name": "Cally",
       "name_kor": "파슬리",
-      "number": 395,
+      "num": 395,
       "file": "Series 4/[AC] 395 - Cally.bin",
       "image": "cards/395-Cally.png",
       "series": 4,
@@ -9037,7 +9037,7 @@
     {
       "name": "Simon",
       "name_kor": "시몬",
-      "number": 396,
+      "num": 396,
       "file": "Series 4/[AC] 396 - Simon.bin",
       "image": "cards/396-Simon.png",
       "series": 4,
@@ -9060,7 +9060,7 @@
     {
       "name": "Iggly",
       "name_kor": "김말이",
-      "number": 397,
+      "num": 397,
       "file": "Series 4/[AC] 397 - Iggly.bin",
       "image": "cards/397-Iggly.png",
       "series": 4,
@@ -9083,7 +9083,7 @@
     {
       "name": "Angus",
       "name_kor": "반데스",
-      "number": 398,
+      "num": 398,
       "file": "Series 4/[AC] 398 - Angus.bin",
       "image": "cards/398-Angus.png",
       "series": 4,
@@ -9106,7 +9106,7 @@
     {
       "name": "Twiggy",
       "name_kor": "핀틱",
-      "number": 399,
+      "num": 399,
       "file": "Series 4/[AC] 399 - Twiggy.bin",
       "image": "cards/399-Twiggy.png",
       "series": 4,
@@ -9129,7 +9129,7 @@
     {
       "name": "Robin",
       "name_kor": "파틱",
-      "number": 400,
+      "num": 400,
       "file": "Series 4/[AC] 400 - Robin.bin",
       "image": "cards/400-Robin.png",
       "series": 4,
@@ -9152,7 +9152,7 @@
     {
       "name": "Judy",
       "name_kor": "미애",
-      "number": "x2",
+      "num": "x2",
       "file": "no",
       "image": "",
       "series": -1,
@@ -9175,7 +9175,7 @@
     {
       "name": "Raymond",
       "name_kor": "잭슨",
-      "number": "x3",
+      "num": "x3",
       "file": "no",
       "image": "",
       "series": -1,

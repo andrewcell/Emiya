@@ -2,7 +2,7 @@ import { Request, Response, Router} from 'express';
 import {readFileSync, existsSync, writeFileSync} from 'fs';
 import path from 'path';
 
-import {Villager} from '@interfaces/villagerData';
+import {EmiboVillager as Villager} from '@interfaces/villagerData';
 import {DownloadKey} from '@interfaces/downloadKey';
 import {LogJson} from '@interfaces/logJson';
 
@@ -84,7 +84,7 @@ const makeId = (length: number): string => {
 }
 
 mibo.forEach((ambo) => {
-    const cardNumber = Number(ambo.number);
+    const cardNumber = Number(ambo.num);
     if (cardNumber !== -1) {
         const randomKey = makeId(32)
         let sp = false;
@@ -104,7 +104,7 @@ welcome.forEach((ambo) => {
     const randomKey = makeId(64);
     downloadKey.set(randomKey, {
         file: ambo.file,
-        name: ambo.number + ' - ' + ambo.name + ' - ' + ambo.name_kor
+        name: ambo.num + ' - ' + ambo.name + ' - ' + ambo.name_kor
     });
     ambo.file = randomKey;
 })
@@ -113,7 +113,7 @@ figure.forEach((ambo) => {
     const randomKey = makeId(128);
     downloadKey.set(randomKey, {
         file: ambo.file,
-        name: ambo.number + ' - ' + ambo.name + ' - ' + ambo.name_kor,
+        name: ambo.num + ' - ' + ambo.name + ' - ' + ambo.name_kor,
         fi: true
     });
     ambo.file = randomKey;
@@ -133,7 +133,7 @@ router.get(['/category', '/category/:id'], (req: Request, res: Response) => {
         if (typeof req.params.id === 'undefined') id = 1;
         const newData: Villager[] = [];
         mibo.forEach((ambo) => {
-            const cardNumber = Number(ambo.number);
+            const cardNumber = Number(ambo.num);
             if (cardNumber !== -1) {
                 if (cardNumber >= ((id - 1) * 100) + 1 && cardNumber <= (100 * (id))) {
                     newData.push(ambo)

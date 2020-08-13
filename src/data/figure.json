@@ -2,7 +2,7 @@
   {
     "name": "Isabelle",
     "name_kor": "여울",
-    "number": "f1",
+    "num": "f1",
     "file": "[AC] 01 - Isabelle.bin",
     "image": "",
     "series": "figure",
@@ -11,7 +11,7 @@
   {
     "name": "K. K. Slider",
     "name_kor": "K. K.",
-    "number": "f2",
+    "num": "f2",
     "file": "[AC] 02 - K.K. Slider.bin",
     "image": "",
     "series": "figure",
@@ -20,7 +20,7 @@
   {
     "name": "Lottie",
     "name_kor": "솜이",
-    "number": "f3",
+    "num": "f3",
     "file": "[AC] 03 - Lottie.bin",
     "image": "",
     "series": "figure",
@@ -29,7 +29,7 @@
   {
     "name": "Reese",
     "name_kor": "리사",
-    "number": "f4",
+    "num": "f4",
     "file": "[AC] 04 - Reese.bin",
     "image": "",
     "series": "figure",
@@ -38,7 +38,7 @@
   {
     "name": "Cyrus",
     "name_kor": "리포",
-    "number": "f5",
+    "num": "f5",
     "file": "[AC] 05 - Cyrrus.bin",
     "image": "",
     "series": "figure",
@@ -47,7 +47,7 @@
   {
     "name": "Tom Nook",
     "name_kor": "너굴",
-    "number": "f6",
+    "num": "f6",
     "file": "[AC] 06 - Tom Nook.bin",
     "image": "",
     "series": "figure",
@@ -56,7 +56,7 @@
   {
     "name": "Mabel",
     "name_kor": "고순이",
-    "number": "f7",
+    "num": "f7",
     "file": "[AC] 07 - Mabel.bin",
     "image": "",
     "series": "figure",
@@ -65,7 +65,7 @@
   {
     "name": "Digby",
     "name_kor": "켄트",
-    "number": "f8",
+    "num": "f8",
     "file": "[AC] 08 - Digby.bin",
     "image": "",
     "series": "figure",
@@ -74,7 +74,7 @@
   {
     "name": "Resetti",
     "name_kor": "도루묵씨",
-    "number": "f9",
+    "num": "f9",
     "file": "[AC] 09 - Resetti.bin",
     "image": "",
     "series": "figure",
@@ -83,7 +83,7 @@
   {
     "name": "Blathers",
     "name_kor": "부엉",
-    "number": "f10",
+    "num": "f10",
     "file": "[AC] 10 - Blathers.bin",
     "image": "",
     "series": "figure",
@@ -92,7 +92,7 @@
   {
     "name": "Kicks",
     "name_kor": "패트릭",
-    "number": "f11",
+    "num": "f11",
     "file": "[AC] 11 - Kicks.bin",
     "image": "",
     "series": "figure",
@@ -101,7 +101,7 @@
   {
     "name": "Celeste",
     "name_kor": "부옥",
-    "number": "f12",
+    "num": "f12",
     "file": "[AC] 12 - Celeste.bin",
     "image": "",
     "series": "figure",
@@ -110,7 +110,7 @@
   {
     "name": "Timmy & Tommy",
     "name_kor": "콩돌 & 밤돌",
-    "number": "f13",
+    "num": "f13",
     "file": "[AC] 13 - Timmy & Tommy.bin",
     "image": "",
     "series": "figure",
@@ -119,7 +119,7 @@
   {
     "name": "Rover",
     "name_kor": "낯선고양이",
-    "number": "f14",
+    "num": "f14",
     "file": "[AC] 14 - Rover.bin",
     "image": "",
     "series": "figure",
@@ -128,7 +128,7 @@
   {
     "name": "Kapp'n",
     "name_kor": "갑돌이",
-    "number": "f15",
+    "num": "f15",
     "file": "[AC] 15 - Kappn.bin",
     "image": "",
     "series": "figure",
@@ -137,7 +137,7 @@
   {
     "name": "Isablle",
     "name_kor": "여울",
-    "number": "f16",
+    "num": "f16",
     "file": "[AC] 16 - Isablle (Summer Outfit).bin",
     "image": "",
     "series": "figure",

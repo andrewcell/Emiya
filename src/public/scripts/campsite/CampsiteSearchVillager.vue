@@ -40,11 +40,10 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import { l } from '../locale';
-import {Villager} from '../villagers/interfaces';
 import Axios from 'axios';
 import {decrypt, encrypt} from '../encryption/AES';
 import { Color, Style } from '../villagers/enums';
-import {objectToVillager} from '../villagers/ObjectToVillager';
+import {Villager} from 'animal-crossing/lib/types/Villager';
 
 @Component
 export default class CampsiteSearchVillager extends Vue {
@@ -63,15 +62,12 @@ export default class CampsiteSearchVillager extends Vue {
     this.result = [];
     Axios.post('/villagers/search', {data: encrypt(this.name)})
       .then(r => {
-        const data = JSON.parse(decrypt(r.data.data));
-        data.forEach((v: any) => {
-          this.result.push(objectToVillager(v));
-        });
+        this.result = JSON.parse(decrypt(r.data.data));
       })
   }
 
   setVillager(code: string): void {
-    const selectedVillager = this.result.filter(v => v.code === code)
+    const selectedVillager = this.result.filter(v => v.filename === code)
     if (selectedVillager.length === 1) {
       this.$store.commit('setVillager', selectedVillager[0]);
     }

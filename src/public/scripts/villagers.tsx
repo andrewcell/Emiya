@@ -6,19 +6,17 @@ import Cookies from 'js-cookie';
 import {detectLanguage, getLanguage, l, setLanguage} from './locale';
 import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import VillagersList from './villagers/VillagersList';
-import LinkButtons from './villagers/LinkButtons';
 import axios from 'axios';
-import {Villager} from './villagers/interfaces';
 import {decrypt} from './encryption/AES';
 import VillagerDetail from './villagers/VillagerDetail';
 import VillagerSearchByClothes from './villagers/VillagerSearchByClothes';
 import VillagersPreferGift from './villagers/VillagersPreferGift';
 import {PageStatus} from './points/enums';
 import {Container, ProgressBar} from 'materialinse-reactjs';
-import {objectToVillager} from './villagers/ObjectToVillager';
 import Layout from './materialui/Layout';
 import {Tabs} from '@material-ui/core';
 import Tab from '@material-ui/core/Tab';
+import {Villager} from 'animal-crossing/lib/types/Villager';
 
 interface VillagersState {
     pageStatus: PageStatus;
@@ -41,22 +39,17 @@ class Villagers extends React.Component<any, VillagersState> {
 
     componentDidMount(): void {
         axios.get('/villagers/react/villagers').then(response => {
-            const villagersJson = JSON.parse(decrypt(response.data.data))
-            const array: Villager[] = [];
-            villagersJson.forEach((v: any) => {
-                const data = objectToVillager(v);
-                array.push(data);
-            });
+            const villagersJson: Villager[] = JSON.parse(decrypt(response.data.data))
             axios.get('/villagers/react/my/get').then(res => {
                 const arr: string[] = [];
                 const list = JSON.parse(decrypt(res.data.data));
                 list.forEach((value: string) => {
                     arr.push(value);
                 });
-                const filtered: Villager[] = array.filter((item: Villager) => {
-                    return arr.includes(item.code);
+                const filtered: Villager[] = villagersJson.filter((item: Villager) => {
+                    return arr.includes(item.filename);
                 });
-                this.setState({myVillagers: filtered, allVillagers: array, pageStatus: PageStatus.LOADED});
+                this.setState({myVillagers: filtered, allVillagers: villagersJson, pageStatus: PageStatus.LOADED});
             });
         });
     }
@@ -67,7 +60,7 @@ class Villagers extends React.Component<any, VillagersState> {
 
     addToMyVillagers = (villager: string): void => {
         const vill = this.state.allVillagers.filter((item: Villager) => {
-            return villager === item.code;
+            return villager === item.filename;
         })
         this.setState(prevState => ({
             myVillagers: [...prevState.myVillagers, vill[0]]
@@ -77,7 +70,7 @@ class Villagers extends React.Component<any, VillagersState> {
     removeVillager = (code: string): void => {
         this.setState((prevState) => {
             const index = prevState.myVillagers?.findIndex(i => {
-                return i.code === code;
+                return i.filename === code;
             });
             const prevMyVillagers = prevState.myVillagers;
             if (index !== -1 && index != null) {
@@ -103,18 +96,18 @@ class Villagers extends React.Component<any, VillagersState> {
                                         </Tabs>
                                         <Switch>
                                             <Route exact path={'/villagers'}>
-                                                <MyVillagers locale={getLanguage()} data={this.state.allVillagers} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} />
+                                                <MyVillagers locale={getLanguage()} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} />
                                             </Route>
                                             <Route exact path={'/villagers/list'}>
-                                                <VillagersList locale={getLanguage()} data={this.state.allVillagers} addVillager={this.addToMyVillagers} removeVillager={this.removeVillager}/>
+                                                <VillagersList locale={getLanguage()} addVillager={this.addToMyVillagers} removeVillager={this.removeVillager}/>
                                             </Route>
                                             <Route exact path={'/villagers/gift'}>
                                                 <VillagerSearchByClothes myVillagers={this.state.myVillagers} />
                                             </Route>
                                             <Route exact path={'/villagers/prefer'}>
-                                                <VillagersPreferGift data={this.state.allVillagers} />
+                                                <VillagersPreferGift />
                                             </Route>
-                                            <Route path={'/villagers/:code'}  component={(props: any): React.ReactElement => <VillagerDetail fromParam={true} addVillager={this.addToMyVillagers} code={props.match.params.code} data={this.state.allVillagers} removeVillager={this.removeVillager}/>} />
+                                            <Route path={'/villagers/:code'}  component={(props: any): React.ReactElement => <VillagerDetail fromParam={true} addVillager={this.addToMyVillagers} code={props.match.params.code} removeVillager={this.removeVillager}/>} />
                                         </Switch>
                                     </>
                                 )}
