@@ -73,14 +73,25 @@ router.get('/cal/:code', (req, res) => {
         const splited = v.birthday.split('/')
         const birthdayMonth = +splited[0];
         const birthdayDay = +splited[1];
+        let title = ''
+        switch (req.cookies.locale) {
+            case 'ko_KR':
+                title = v.translations.korean +'의 생일';
+                break;
+            case 'ja_JP':
+                title = v.translations.japanese +'の誕生日';
+                break;
+            case 'en_US':
+            default:
+                title = v.translations.english +'\'s birthday';
+
+        }
         createEvent({
             start: [2020, birthdayMonth, birthdayDay, 5, 0],
             duration: { days: 1 },
-            description: v.translations.korean +'의 생일'
+            title
         }, (err, value) => {
-            //
             return res.header({'Content-Type': 'text/calendar'}).send(value)
-            console.log(value);
         })
     } else {
         return res.status(404).render('error');
