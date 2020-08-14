@@ -10,6 +10,8 @@ import axios from 'axios';
 import path from 'path';
 import {encrypt} from '@shared/Encryption';
 import Github from '@shared/Github';
+import {villagers} from 'animal-crossing';
+import {createEvent} from 'ics';
 
 // Init router and path
 const router = Router();
@@ -65,6 +67,26 @@ router.get(['/campsite', '/campsite/:param'], (req, res) => {
     return res.render('campsite', {title: res.__('global.title.subtitle', res.__('campsite.title'))})
 })
 
+router.get('/cal/:code', (req, res) => {
+    const v = villagers.find(vi => vi.filename === req.params.code)
+    if (v != null) {
+        const splited = v.birthday.split('/')
+        const birthdayMonth = +splited[0];
+        const birthdayDay = +splited[1];
+        createEvent({
+            start: [2020, birthdayMonth, birthdayDay, 5, 0],
+            duration: { days: 1 },
+            description: v.translations.korean +'의 생일'
+        }, (err, value) => {
+            //
+            return res.header({'Content-Type': 'text/calendar'}).send(value)
+            console.log(value);
+        })
+    } else {
+        return res.status(404).render('error');
+    }
+
+});
 
 // Add sub-routes
 router.use('/emibo', emiboRouter);
