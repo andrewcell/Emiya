@@ -96,18 +96,18 @@ class Villagers extends React.Component<any, VillagersState> {
                                         </Tabs>
                                         <Switch>
                                             <Route exact path={'/villagers'}>
-                                                <MyVillagers locale={getLanguage()} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} />
+                                                <MyVillagers locale={getLanguage()} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} data={this.state.allVillagers}/>
                                             </Route>
                                             <Route exact path={'/villagers/list'}>
-                                                <VillagersList locale={getLanguage()} addVillager={this.addToMyVillagers} removeVillager={this.removeVillager}/>
+                                                <VillagersList locale={getLanguage()} addVillager={this.addToMyVillagers} removeVillager={this.removeVillager} data={this.state.allVillagers}/>
                                             </Route>
                                             <Route exact path={'/villagers/gift'}>
                                                 <VillagerSearchByClothes myVillagers={this.state.myVillagers} />
                                             </Route>
                                             <Route exact path={'/villagers/prefer'}>
-                                                <VillagersPreferGift />
+                                                <VillagersPreferGift data={this.state.allVillagers} />
                                             </Route>
-                                            <Route path={'/villagers/:code'}  component={(props: any): React.ReactElement => <VillagerDetail fromParam={true} addVillager={this.addToMyVillagers} code={props.match.params.code} removeVillager={this.removeVillager}/>} />
+                                            <Route path={'/villagers/:code'}  component={(props: any): React.ReactElement => <VillagerDetail fromParam={true} data={this.state.allVillagers} addVillager={this.addToMyVillagers} code={props.match.params.code} removeVillager={this.removeVillager}/>} />
                                         </Switch>
                                     </>
                                 )}

@@ -47,8 +47,6 @@ module.exports = {
         layout: './src/public/scripts/layout.tsx',
         villagers: './src/public/scripts/villagers.tsx',
         points: './src/public/scripts/points.tsx',
-        accounthelp: './src/public/scripts/accounthelp.ts',
-        resetpw: './src/public/scripts/resetpw.ts',
         campsite: './src/public/scripts/campsite.ts',
         about: './src/public/scripts/about.ts'
     },
