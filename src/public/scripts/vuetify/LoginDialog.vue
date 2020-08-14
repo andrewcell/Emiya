@@ -34,6 +34,7 @@
                 :label="l('layout.login.password')"
                 :disabled="loading"
                 required
+                @keyup.enter="login"
               />
             </v-form>
           </v-container>

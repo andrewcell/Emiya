@@ -48,7 +48,7 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
         }
     }
 
-    handleLogin = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    handleLogin = (): void => {
         if (this.state.usernameInvalid || this.state.passwordInvalid) {
             this.setState({
                 messageType: MessageType.ERROR,
@@ -122,6 +122,12 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
         this.setState({registerDialog: false});
     }
 
+    handleEnterKey = (e: React.KeyboardEvent<Element>): void => {
+        if (e.keyCode === 13) {
+            this.handleLogin();
+        }
+    }
+
     render(): React.ReactElement {
         return (
             <>
@@ -134,7 +140,7 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
                         <TextField margin={'dense'} id={'username'} label={l('layout.login.username')}
                                    type={'text'} fullWidth onChange={this.handleFieldChange} error={this.state.usernameInvalid}/>
                         <TextField margin={'normal'} id={'password'} label={l('layout.login.password')}
-                                   type={'password'} fullWidth onChange={this.handleFieldChange} error={this.state.passwordInvalid}/>
+                                   type={'password'} fullWidth onChange={this.handleFieldChange} error={this.state.passwordInvalid} onKeyDown={this.handleEnterKey}/>
                         <DialogActions>
                             <Button onClick={this.props.handleClose} color={'inherit'}>
                                 {l('layout.login.close')}

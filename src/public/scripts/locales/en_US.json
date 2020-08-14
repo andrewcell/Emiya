@@ -98,7 +98,7 @@
   "villagers.colors.colorful": "Colorful",
   "villagers.colors.gray": "Gray",
   "villagers.colors.green": "Green",
-  "villagers.colors.lightblue": "Lightblue",
+  "villagers.colors.aqua": "Aqua",
   "villagers.colors.orange": "Orange",
   "villagers.colors.pink": "Pink",
   "villagers.colors.purple": "Purple",
@@ -234,5 +234,9 @@
   "villagers.styles.simple": "Simple",
   "villagers.tooltip.addtomyvillagers": "Add to selected My Villagers group.",
   "villagers.tooltip.deletemyvillagers": "Remove from selected My Villagers group.",
-  "villagers.tooltip.livesearch": "If checked, Search instantly after value changes"
+  "villagers.tooltip.livesearch": "If checked, Search instantly after value changes",
+  "villagers.search.phrase": "Catchphrase",
+  "villagers.groupdialog.group": "Group",
+  "villagers.groupdialog.title": "Change group",
+  "villagers.groupdialog.change": "Apply"
 }
