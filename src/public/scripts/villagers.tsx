@@ -88,7 +88,7 @@ class Villagers extends React.Component<any, VillagersState> {
                         <BrowserRouter>
                             <Route path={'/villagers'} render={({ location }): JSX.Element => (
                                     <>
-                                        <Tabs value={location.pathname} style={{backgroundColor: '#4caf50', color: 'white'}}>
+                                        <Tabs value={location.pathname} style={{backgroundColor: '#4caf50', color: 'white'}} scrollButtons={'auto'}>
                                             <Tab label={l('villagers.nav.myvillagers')} value={'/villagers'} component={Link} to={'/villagers'} />
                                             <Tab label={l('villagers.nav.allvillagers')} value={'/villagers/list'} component={Link} to={'/villagers/list'} />
                                             <Tab label={l('villagers.nav.giftforvillagers')} value={'/villagers/gift'} component={Link} to={'/villagers/gift'} />
