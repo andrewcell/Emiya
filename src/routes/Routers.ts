@@ -11,7 +11,7 @@ import path from 'path';
 import {encrypt} from '@shared/Encryption';
 import Github from '@shared/Github';
 import {villagers} from 'animal-crossing';
-import {createEvent} from 'ics';
+import ical, {EventData} from 'ical-generator';
 
 // Init router and path
 const router = Router();
@@ -86,13 +86,24 @@ router.get('/cal/:code', (req, res) => {
                 title = v.translations.english +'\'s birthday';
 
         }
-        createEvent({
+        const cal = ical({domain: 'dodo.ij.rs'})
+        const event = cal.createEvent({
+            start: v.birthday,
+            allDay: true,
+            summary: title,
+            repeating: {
+                freq: 'YEARLY'
+            },
+            x: []
+        });
+        return res.header({'Content-Type': 'text/calendar'}).send(cal.toString())
+        /* createEvent({
             start: [2020, birthdayMonth, birthdayDay, 5, 0],
             duration: { days: 1 },
             title
         }, (err, value) => {
-            return res.header({'Content-Type': 'text/calendar'}).send(value)
-        })
+
+        })*/
     } else {
         return res.status(404).render('error');
     }
