@@ -50,6 +50,13 @@
             {{ l('layout.login.close') }}
           </v-btn>
           <v-btn
+            color="inherit"
+            text
+            @click="$refs.registerDialog.registerDialog = !$refs.registerDialog.registerDialog"
+          >
+            {{ l('layout.login.register') }}
+          </v-btn>
+          <v-btn
             color="green"
             text
             :disabled="loading"
@@ -59,6 +66,7 @@
           </v-btn>
         </v-card-actions>
       </v-card>
+      <RegisterDialog ref="registerDialog" />
     </v-dialog>
     <v-snackbar
       v-model="snackbar"
@@ -75,8 +83,13 @@ import { Register } from '../register';
 import Axios, { AxiosResponse } from 'axios';
 import { b64 } from '../b64';
 import { l } from '../locale';
+import RegisterDialog from './RegisterDialog.vue';
 
-@Component
+@Component({
+  components: {
+    RegisterDialog
+  }
+})
 export default class LoginDialog extends Vue {
   snackbarMessage = '';
   valid = false;

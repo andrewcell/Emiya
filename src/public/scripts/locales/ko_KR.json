@@ -76,6 +76,7 @@
   "layout.register.success": "가입이 완료되었습니다. 기재한 이메일로 인증확인 메일을 보냈으니 메일을 확인 후 보낸 링크를 클릭하여 인증을 완료하세요. 인증을 완료하기 전까진 없는 계정으로 처리됩니다.",
   "layout.register.title": "계정 생성",
   "layout.register.username": "사용자 이름(아이디)",
+  "layout.register.notmatch": "비밀번호 확인이 일치하지 않습니다.",
   "layout.system.about": "안내소",
   "layout.system.campsite": "캠핑장",
   "layout.system.logout": "로그아웃",
@@ -239,5 +240,7 @@
   "villagers.search.phrase": "말버릇",
   "villagers.groupdialog.group": "선택 그룹",
   "villagers.groupdialog.title": "주민 그룹 변경",
-  "villagers.groupdialog.change": "변경"
+  "villagers.groupdialog.change": "변경",
+  "layout.register.emailempty": "이메일 주소가 비어있습니다.",
+  "layout.register.emailinvalid": "올바르지 않은 이메일 주소입니다."
 }
