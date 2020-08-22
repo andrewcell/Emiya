@@ -57,4 +57,4 @@ const campsite = {
     ]
 }
 
-export default [emibo, villagers, campsite, /* points, */ system, language]
+export default [emibo, villagers, /* campsite, points, */ system, language]
