@@ -102,7 +102,7 @@ const modules: CardProp[] = [
             {link: '/villagers/list', title: l('home.villagers.list')}
         ]
     },
-    {
+    /* {
         title: l('home.campsite.title'),
         description: l('home.campsite.description'),
         moreDescription: l('home.campsite.moredescription'),
@@ -118,7 +118,7 @@ const modules: CardProp[] = [
         links: [
             {link: '/points', title: l('home.enter')}
         ]
-    },
+    }, */
     {
         title: l('home.about.title'),
         description: l('home.about.description'),
