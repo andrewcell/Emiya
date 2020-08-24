@@ -89,4 +89,13 @@ const l = (key: string): string => {
     }
 }
 
-export {l, setLanguage, detectLanguage, getLanguage};
+const getLoadingPhrase = (): string => {
+    const random = (min: number, max: number): number => {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return  Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    return l('villagers.loading.s' + random(6, 1));
+}
+
+export {l, setLanguage, detectLanguage, getLanguage, getLoadingPhrase};

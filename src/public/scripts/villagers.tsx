@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './locale';
 import MyVillagers from './villagers/MyVillagers';
 import Cookies from 'js-cookie';
-import {detectLanguage, getLanguage, l, setLanguage} from './locale';
+import {detectLanguage, getLanguage, getLoadingPhrase, l, setLanguage} from './locale';
 import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import VillagersList from './villagers/VillagersList';
 import axios from 'axios';
@@ -12,11 +12,14 @@ import VillagerDetail from './villagers/VillagerDetail';
 import VillagerSearchByClothes from './villagers/VillagerSearchByClothes';
 import VillagersPreferGift from './villagers/VillagersPreferGift';
 import {PageStatus} from './points/enums';
-import {Container, ProgressBar} from 'materialinse-reactjs';
 import Layout from './materialui/Layout';
 import {Tabs} from '@material-ui/core';
 import Tab from '@material-ui/core/Tab';
 import {Villager} from 'animal-crossing/lib/types/Villager';
+import Container from '@material-ui/core/Container';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 interface VillagersState {
     pageStatus: PageStatus;
@@ -117,9 +120,15 @@ class Villagers extends React.Component<any, VillagersState> {
                 )
             default:
                 return (
-                    <Container>
-                        <ProgressBar />
-                    </Container>
+                    <Grid container justify={'center'} alignItems={'center'} direction={'column'} spacing={1} >
+                        <Grid item />
+                        <Grid item>
+                        <CircularProgress />
+                        </Grid>
+                        <Grid item>
+                        <Typography variant={'h6'}>{getLoadingPhrase()}</Typography>
+                        </Grid>
+                    </Grid>
                 )
         }
     }
@@ -127,4 +136,4 @@ class Villagers extends React.Component<any, VillagersState> {
 
 export default Villagers;
 
-ReactDOM.render(<Layout content={<Villagers />}  pageStatus={PageStatus.LOADED}/>, document.getElementById('reactApp'));
+ReactDOM.render(<Layout content={<Villagers />}  pageStatus={PageStatus.LOADED} />, document.getElementById('reactApp'));
