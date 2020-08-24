@@ -250,5 +250,11 @@
   "villagers.loading.s3": "미애를 함정 씨앗에 빠트리는 중",
   "villagers.loading.s4": "클레오에게 가면을 선물하는 중",
   "villagers.loading.s5": "잭슨에게 이사를 권유하는 중",
-  "villagers.loading.s6": "로드리에게 욕설을 내뱉는 중"
+  "villagers.loading.s6": "로드리에게 욕설을 내뱉는 중",
+  "villagers.comment.empty": "등록된 댓글이 없습니다.",
+  "villagers.comment.post": "댓글달기",
+  "villagers.comment.nickname": "닉네임",
+  "villagers.comment.atleast4letters": "4글자 이상 입력해주세요.",
+  "villagers.comment.error": "오류가 발생하였습니다. 관리자에게 문의해주세요."
+
 }
