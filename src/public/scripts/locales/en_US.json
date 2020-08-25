@@ -53,7 +53,7 @@
   "layout.info.title": "Resident Services",
   "layout.login": "Login",
   "layout.login.close": "Close",
-  "layout.login.description": "All modified data will be lost if you're stay in logout.",
+  "layout.login.description": "If you stay logged out, all data will save to the local storage of your browser.\n",
   "layout.login.invalidinput": "Unacceptable username or password.",
   "layout.login.login": "Login",
   "layout.login.password": "Password",

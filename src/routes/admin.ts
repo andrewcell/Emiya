@@ -254,4 +254,8 @@ router.get('/loginstatus', validateLoggedIn, (req, res) => {
     return res.json({data: encrypted});
 });
 
+router.get('/logincheck', validateLoggedIn, (req, res) => {
+    return res.json(0);
+});
+
 export default router;

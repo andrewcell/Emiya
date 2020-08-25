@@ -7,7 +7,7 @@ import {detectLanguage, getLanguage, getLoadingPhrase, l, setLanguage} from './l
 import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import VillagersList from './villagers/VillagersList';
 import axios from 'axios';
-import {decrypt} from './encryption/AES';
+import {decrypt, encrypt} from './encryption/AES';
 import VillagerDetail from './villagers/VillagerDetail';
 import VillagerSearchByClothes from './villagers/VillagerSearchByClothes';
 import VillagersPreferGift from './villagers/VillagersPreferGift';
@@ -16,19 +16,22 @@ import Layout from './materialui/Layout';
 import {Tabs} from '@material-ui/core';
 import Tab from '@material-ui/core/Tab';
 import {Villager} from 'animal-crossing/lib/types/Villager';
-import Container from '@material-ui/core/Container';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Axios from 'axios';
 
 interface VillagersState {
     pageStatus: PageStatus;
     allVillagers: Villager[];
     myVillagers: Villager[];
+    loginStatus: boolean;
 }
 
-class Villagers extends React.Component<any, VillagersState> {
-    constructor(prop: any) {
+type VillagersProps = {};
+
+class Villagers extends React.Component<VillagersProps, VillagersState> {
+    constructor(prop: VillagersProps) {
         super(prop);
 
         if (Cookies.get('locale') == null) {
@@ -36,41 +39,99 @@ class Villagers extends React.Component<any, VillagersState> {
             Cookies.set('locale', lang);
         }
         setLanguage(Cookies.get('locale') as string);
-        this.setMyVillagers = this.setMyVillagers.bind(this);
-        this.addToMyVillagers = this.addToMyVillagers.bind(this);
     }
 
     componentDidMount(): void {
         axios.get('/villagers/react/villagers').then(response => {
             const villagersJson: Villager[] = JSON.parse(decrypt(response.data.data))
-            axios.get('/villagers/react/my/get').then(res => {
-                const arr: string[] = [];
-                const list = JSON.parse(decrypt(res.data.data));
-                list.forEach((value: string) => {
-                    arr.push(value);
-                });
-                const filtered: Villager[] = villagersJson.filter((item: Villager) => {
-                    return arr.includes(item.filename);
-                });
-                this.setState({myVillagers: filtered, allVillagers: villagersJson, pageStatus: PageStatus.LOADED});
-            });
-        });
+            this.setState({allVillagers: villagersJson});
+            Axios.get('/admin/logincheck')
+                .then(() => {
+                    axios.get('/villagers/react/my/get').then(res => {
+                        const arr: string[] = [];
+                        const list = JSON.parse(decrypt(res.data.data));
+                        list.forEach((value: string) => {
+                            arr.push(value);
+                        });
+                        const filtered: Villager[] = villagersJson.filter((item: Villager) => {
+                            return arr.includes(item.filename);
+                        });
+                        this.setState({
+                            myVillagers: filtered,
+                            loginStatus: true,
+                            pageStatus: PageStatus.LOADED
+                        });
+                    });
+                })
+                .catch(() => {
+                    const villagers = localStorage.getItem('myVillagers');
+                    if (villagers == null) {
+                        this.setState({myVillagers: [], pageStatus: PageStatus.LOADED});
+                    } else {
+                        try {
+                            const parsed: string[] = JSON.parse(villagers);
+                            const filtered: Villager[] = villagersJson.filter((item: Villager) => {
+                                return parsed.includes(item.filename);
+                            });
+                            this.setState({myVillagers: filtered, pageStatus: PageStatus.LOADED});
+                        } catch {
+                            this.setState({myVillagers: [], pageStatus: PageStatus.LOADED});
+                        }
+                    }
+                })
+        })
     }
 
     setMyVillagers = (arr: Villager[]): void => {
         this.setState({myVillagers: arr});
     }
 
-    addToMyVillagers = (villager: string): void => {
-        const vill = this.state.allVillagers.filter((item: Villager) => {
-            return villager === item.filename;
-        })
+    addToMyVillagers = (villagerCode: string): Promise<string> => {
+        const v = this.state.allVillagers.find(sv => sv.filename === villagerCode);
+        if (v == null) return Promise.resolve('Internal Server Error.');
+        const { myVillagers } = this.state;
+        if (this.state.loginStatus) {
+            const data = encrypt(JSON.stringify({code: villagerCode})).toString();
+            return new Promise(resolve => {
+                axios.post('/villagers/react/my/set', {data}).then(res => {
+                    const response = res.data as { code: string; comment: string };
+                    // if (response.code === 'villagers00') { }
+                    this.addToMyVillagersState(v);
+                    resolve(response.comment);
+                }).catch(() => {
+                    resolve('Internal Server Error.');
+                });
+            });
+        } else {
+            try {
+                if (myVillagers.includes(v)) {
+                    return Promise.resolve(l('villagers.my.exists'));
+                }
+                if (myVillagers.length >= 14) {
+                    return Promise.resolve(l('villagers.my.full'));
+                }
+                this.addToMyVillagersState(v);
+                const code = v.filename;
+                const storage = localStorage.getItem('myVillagers');
+                if (storage == null) {
+                    localStorage.setItem('myVillagers', JSON.stringify([code]));
+                } else {
+                    localStorage.setItem('myVillagers', JSON.stringify(JSON.parse(storage).concat(code)));
+                }
+                return Promise.resolve(l('villagers.my.added'));
+            } catch {
+                return Promise.resolve('Internal Server Error.');
+            }
+        }
+    }
+
+    private addToMyVillagersState = (villager: Villager): void | Promise<void> => {
         this.setState(prevState => ({
-            myVillagers: [...prevState.myVillagers, vill[0]]
+            myVillagers: [...prevState.myVillagers, villager]
         }));
     }
 
-    removeVillager = (code: string): void => {
+    removeVillagerFromState = (code: string): void => {
         this.setState((prevState) => {
             const index = prevState.myVillagers?.findIndex(i => {
                 return i.filename === code;
@@ -81,6 +142,33 @@ class Villagers extends React.Component<any, VillagersState> {
             }
             return {myVillagers: prevMyVillagers}
         })
+    }
+
+    removeVillager = (v: Villager): Promise<string> => {
+        if (this.state.loginStatus) {
+            const encrypted = encrypt(JSON.stringify({code: v.filename})).toString();
+            return new Promise(resolve => {
+                axios.delete('/villagers/react/my/set', {data: {data: encrypted}}).then(res => {
+                    // if (res.data.code === 'villagers00') { }
+                    this.removeVillagerFromState(v.filename);
+                    return resolve(res.data.comment);
+                }).catch(() => {
+                    return resolve('Internal Server Error.');
+                })
+            })
+        } else {
+            const storage = localStorage.getItem('myVillagers');
+            if (storage == null) {
+                return Promise.resolve(l('villagers.my.targetnotexists'));
+            } else {
+                if (storage.includes(v.filename)) {
+                    this.removeVillagerFromState(v.filename);
+                    return Promise.resolve(l('villagers.my.deletesuccess'));
+                } else {
+                    return Promise.resolve(l('villagers.my.targetnotexists'));
+                }
+            }
+        }
     }
 
     render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
@@ -115,6 +203,7 @@ class Villagers extends React.Component<any, VillagersState> {
                                     </>
                                 )}
                             />
+                            <h1 style={{color: 'black'}}>{this.state.loginStatus}</h1>
                         </BrowserRouter>
                     </>
                 )
