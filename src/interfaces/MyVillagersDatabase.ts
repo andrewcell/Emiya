@@ -1,13 +1,18 @@
 import sqlite3, {SqliteError} from 'better-sqlite3';
 import {getDataPath} from '@shared/functions';
 import logger from '@shared/Logger';
-import User from '@shared/User';
+import User, {UserDocument} from '@shared/User';
+
 export const resize = (arr: any[], newSize: number, defaultValue: any): any[] => {
     const ad = arr;
     while(newSize > ad.length)
         ad.push(defaultValue);
     ad.length = newSize;
     return ad
+}
+
+export interface VillagerStorage {
+    [key: string]: string[];
 }
 
 class MyVillagersDatabase {
@@ -26,35 +31,66 @@ class MyVillagersDatabase {
         // this.engine.close();
     }
 
-    public getMyVillagers(userId: string): Promise<string[]> {
-        return new Promise<string[]>((resolve) => {
-            User.findOne({_id: userId}).select('myVillagers')
-                .then(res=> {
-                    if (res) {
-                        return resolve(res.myVillagers);
+    public getMyVillagers(userId: string): Promise<[string, string[]]> {
+        return new Promise<[string, string[]]>((resolve) => {
+            User.findById(userId)
+                .then(user => {
+                    if (user) {
+                        resolve([user.villagersGroup, user.villagers[user.villagersGroup]])
                     }
-                    return resolve([]);
+                    return resolve(['', []]);
                 })
                 .catch(err => {
                     logger.error(err.message, err);
-                    return resolve([]);
+                    return resolve(['', []]);
                 });
         });
     }
 
-    public setMyVillager(userId: string, dataArray: string[]): Promise<void> {
-        const data = resize(dataArray, 14, null);
-        return new Promise<void>((resolve) => {
-            User.findOneAndUpdate({_id: userId}, {myVillagers: data})
-                .then(res => {
-                    if (res) {
-                        resolve();
+    public setMyVillager(userId: string, codeArray: string[]): Promise<void> {
+        return new Promise<void>(resolve => {
+            User.findById(userId)
+                .then(user => {
+                    if (user) {
+                        const storage = user.villagers
+                        storage[user.villagersGroup] = codeArray;
+                        User.findByIdAndUpdate(userId, {villagers: storage})
+                            .then(() => resolve())
+                            .catch(err => {logger.error(err.message, err); resolve()})
                     }
                 })
                 .catch(err => {
                     logger.error(err.message, err);
                     resolve();
                 })
+        });
+    }
+
+    public changeGroup(userId: string, groupName: string): Promise<string[]> {
+        return new Promise<string[]>(resolve => {
+        User.findById(userId)
+            .then(user => {
+                if (user) {
+                    if (groupName in user.villagers) {
+                        User.findByIdAndUpdate(userId, {villagerGroup: groupName})
+                            .then(u => {
+                                if (u != null) {
+                                    resolve(u.villagers[u.villagersGroup])
+                                }
+                            })
+                            .catch(err => {
+                                logger.error(err.message, err);
+                                resolve();
+                            })
+                    } else {
+                        resolve(['error'])
+                    }
+                }
+            })
+            .catch(err => {
+                logger.error(err.message, err);
+                resolve();
+            })
         });
     }
 

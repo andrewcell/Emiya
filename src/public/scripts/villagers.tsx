@@ -7,6 +7,7 @@ import {detectLanguage, getLanguage, getLoadingPhrase, l, setLanguage} from './l
 import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import VillagersList from './villagers/VillagersList';
 import axios from 'axios';
+import Axios from 'axios';
 import {decrypt, encrypt} from './encryption/AES';
 import VillagerDetail from './villagers/VillagerDetail';
 import VillagerSearchByClothes from './villagers/VillagerSearchByClothes';
@@ -19,16 +20,20 @@ import {Villager} from 'animal-crossing/lib/types/Villager';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Axios from 'axios';
 
 interface VillagersState {
     pageStatus: PageStatus;
     allVillagers: Villager[];
     myVillagers: Villager[];
     loginStatus: boolean;
+    selectedGroup: string;
 }
 
 type VillagersProps = {};
+
+interface VillagerStorage {
+    [key: string]: string[];
+}
 
 class Villagers extends React.Component<VillagersProps, VillagersState> {
     constructor(prop: VillagersProps) {
@@ -48,34 +53,37 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
             Axios.get('/admin/logincheck')
                 .then(() => {
                     axios.get('/villagers/react/my/get').then(res => {
-                        const arr: string[] = [];
-                        const list = JSON.parse(decrypt(res.data.data));
-                        list.forEach((value: string) => {
-                            arr.push(value);
-                        });
+                        console.log(decrypt(res.data.data))
+                        const villagerStorage: VillagerStorage = JSON.parse(decrypt(res.data.data));
+                        const selectedGroup = Object.keys(villagerStorage)[0]
+                        const villagersCodes: string[] = Object.values(villagerStorage)[0]
                         const filtered: Villager[] = villagersJson.filter((item: Villager) => {
-                            return arr.includes(item.filename);
+                            return villagersCodes.includes(item.filename);
                         });
                         this.setState({
                             myVillagers: filtered,
                             loginStatus: true,
-                            pageStatus: PageStatus.LOADED
+                            pageStatus: PageStatus.LOADED,
+                            selectedGroup
                         });
                     });
                 })
                 .catch(() => {
                     const villagers = localStorage.getItem('myVillagers');
-                    if (villagers == null) {
-                        this.setState({myVillagers: [], pageStatus: PageStatus.LOADED});
+                    const selectedGroup = localStorage.getItem('group');
+                    localStorage.setItem('group', 'Default');
+                    if (villagers == null || selectedGroup == null) {
+                        this.setState({myVillagers: [], selectedGroup: 'Default', pageStatus: PageStatus.LOADED});
                     } else {
                         try {
-                            const parsed: string[] = JSON.parse(villagers);
+                            localStorage.setItem('group', selectedGroup);
+                            const parsed: VillagerStorage = JSON.parse(villagers);
                             const filtered: Villager[] = villagersJson.filter((item: Villager) => {
-                                return parsed.includes(item.filename);
+                                return parsed[selectedGroup].includes(item.filename);
                             });
-                            this.setState({myVillagers: filtered, pageStatus: PageStatus.LOADED});
+                            this.setState({myVillagers: filtered, selectedGroup, pageStatus: PageStatus.LOADED});
                         } catch {
-                            this.setState({myVillagers: [], pageStatus: PageStatus.LOADED});
+                            this.setState({myVillagers: [], selectedGroup: 'Default', pageStatus: PageStatus.LOADED});
                         }
                     }
                 })
@@ -89,7 +97,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
     addToMyVillagers = (villagerCode: string): Promise<string> => {
         const v = this.state.allVillagers.find(sv => sv.filename === villagerCode);
         if (v == null) return Promise.resolve('Internal Server Error.');
-        const { myVillagers } = this.state;
+        const { myVillagers, selectedGroup } = this.state;
         if (this.state.loginStatus) {
             const data = encrypt(JSON.stringify({code: villagerCode})).toString();
             return new Promise(resolve => {
@@ -110,14 +118,18 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                 if (myVillagers.length >= 14) {
                     return Promise.resolve(l('villagers.my.full'));
                 }
-                this.addToMyVillagersState(v);
                 const code = v.filename;
-                const storage = localStorage.getItem('myVillagers');
-                if (storage == null) {
-                    localStorage.setItem('myVillagers', JSON.stringify([code]));
+                const storageJson = localStorage.getItem('myVillagers');
+                if (storageJson == null) {
+                    const storage: VillagerStorage = {};
+                    storage[selectedGroup] = [code];
+                    localStorage.setItem('myVillagers', JSON.stringify(storage));
                 } else {
-                    localStorage.setItem('myVillagers', JSON.stringify(JSON.parse(storage).concat(code)));
+                    const storage: VillagerStorage = JSON.parse(storageJson);
+                    storage[selectedGroup].push(code);
+                    localStorage.setItem('myVillagers', JSON.stringify(storage));
                 }
+                this.addToMyVillagersState(v);
                 return Promise.resolve(l('villagers.my.added'));
             } catch {
                 return Promise.resolve('Internal Server Error.');
@@ -157,18 +169,64 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                 })
             })
         } else {
-            const storage = localStorage.getItem('myVillagers');
-            if (storage == null) {
+            const storageJson = localStorage.getItem('myVillagers');
+            if (storageJson == null) {
                 return Promise.resolve(l('villagers.my.targetnotexists'));
             } else {
-                if (storage.includes(v.filename)) {
+                const storage: VillagerStorage = JSON.parse(storageJson);
+                const myVillagersCode: string[] = storage[this.state.selectedGroup];
+                if (myVillagersCode.includes(v.filename)) {
+                    const index = myVillagersCode.indexOf(v.filename, 0);
+                    if (index > -1) {
+                        myVillagersCode.splice(index, 1);
+                    }
                     this.removeVillagerFromState(v.filename);
+                    localStorage.setItem('myVillagers', JSON.stringify(storage));
                     return Promise.resolve(l('villagers.my.deletesuccess'));
                 } else {
                     return Promise.resolve(l('villagers.my.targetnotexists'));
                 }
             }
         }
+    }
+
+    changeVillagerGroup = (groupName: string): Promise<string> => {
+        return new Promise<string>(resolve => {
+            if (this.state.loginStatus) {
+                Axios.put('/villagers/group', {data: encrypt(groupName)})
+                    .then(r => {
+                        // group01 = Group not exists.
+                        if (r.data.code === 'group00') {
+                            const villagerCodes: string[] = JSON.parse(decrypt(r.data.data));
+                            const myVillagers = this.codeArrayToVillagerArray(villagerCodes)
+                            this.setState({selectedGroup: groupName, myVillagers})
+                        }
+                        return resolve(r.data.comment);
+                    })
+                    .catch(() => {
+                        return resolve('Internal Server Error.');
+                    });
+            } else {
+                const storageJson = localStorage.getItem('myVillagers');
+                if (storageJson == null) {
+                    return resolve(l('villagers.group.notfound'));
+                } else {
+                    const storage = JSON.parse(storageJson);
+                    if (groupName in storage) {
+                        localStorage.setItem('group', groupName);
+                        this.setState({selectedGroup: groupName, myVillagers: this.codeArrayToVillagerArray(storage[groupName])})
+                    } else {
+                        return resolve(l('villagers.group.notfound'));
+                    }
+                }
+            }
+        })
+    }
+
+    private codeArrayToVillagerArray = (codes: string[]): Villager[] => {
+        return this.state.allVillagers.filter((item: Villager) => {
+            return codes.includes(item.filename);
+        });
     }
 
     render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {

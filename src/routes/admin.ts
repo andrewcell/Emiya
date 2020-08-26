@@ -92,7 +92,8 @@ router.post('/register', (req: Request, res: Response) => {
                 username: request.username,
                 verified: false,
                 verifyHash: hash,
-                myVillagers: [],
+                villagers: {'Default': []},
+                villagerGroup: 'Default',
                 registerIp: ip as string,
                 registerUserAgent: req.headers['user-agent'],
                 registerDatetime: Date.now()
