@@ -43,11 +43,11 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
             const lang = detectLanguage(navigator.language);
             Cookies.set('locale', lang);
         }
-        setLanguage(Cookies.get('locale') as string);
+        void setLanguage(Cookies.get('locale') as string);
     }
 
     componentDidMount(): void {
-        axios.get('/villagers/react/villagers').then(response => {
+        void axios.get('/villagers/react/villagers').then(response => {
             const villagersJson: Villager[] = JSON.parse(decrypt(response.data.data))
             this.setState({allVillagers: villagersJson});
             Axios.get('/admin/logincheck')
@@ -103,8 +103,9 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
             return new Promise(resolve => {
                 axios.post('/villagers/react/my/set', {data}).then(res => {
                     const response = res.data as { code: string; comment: string };
-                    // if (response.code === 'villagers00') { }
-                    this.addToMyVillagersState(v);
+                    if (response.code === 'villagers00') {
+                        this.addToMyVillagersState(v);
+                    }
                     resolve(response.comment);
                 }).catch(() => {
                     resolve('Internal Server Error.');
@@ -158,11 +159,12 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
 
     removeVillager = (v: Villager): Promise<string> => {
         if (this.state.loginStatus) {
-            const encrypted = encrypt(JSON.stringify({code: v.filename})).toString();
+            const encrypted = encrypt(JSON.stringify({code: v.filename}));
             return new Promise(resolve => {
-                axios.delete('/villagers/react/my/set', {data: {data: encrypted}}).then(res => {
-                    // if (res.data.code === 'villagers00') { }
-                    this.removeVillagerFromState(v.filename);
+                axios.post('/villagers/react/my/delete', {data: encrypted}).then(res => {
+                    if (res.data.code === 'villagers00') {
+                        this.removeVillagerFromState(v.filename);
+                    }
                     return resolve(res.data.comment);
                 }).catch(() => {
                     return resolve('Internal Server Error.');
@@ -245,7 +247,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                         </Tabs>
                                         <Switch>
                                             <Route exact path={'/villagers'}>
-                                                <MyVillagers locale={getLanguage()} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} data={this.state.allVillagers}/>
+                                                <MyVillagers locale={getLanguage()} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} addVillager={this.addToMyVillagers} data={this.state.allVillagers}/>
                                             </Route>
                                             <Route exact path={'/villagers/list'}>
                                                 <VillagersList locale={getLanguage()} addVillager={this.addToMyVillagers} removeVillager={this.removeVillager} data={this.state.allVillagers}/>

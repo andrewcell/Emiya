@@ -71,7 +71,7 @@ router.get('/react/my/get', validateReact, validateLoggedIn, async (req, res) =>
       req.session.group = storage[0];
       req.session.requireUpdate = false;
     } else {
-      storage = [req.session.storage, req.session.group];
+      storage = [req.session.group, req.session.myVillagers];
     }
     const responseData: VillagerStorage = {};
     responseData[storage[0]] = storage[1];
@@ -98,12 +98,12 @@ router.post('/react/my/set', validateReact, validateLoggedIn, async (req, res) =
   }
 });
 
-router.delete('/react/my/set', validateReact, (req, res) => {
+router.post('/react/my/delete', validateReact, (req, res) => {
   try {
     const code = JSON.parse(decrypt(req.body.data)).code as string;
     if (!validateCode(code)) return {code: 500, comment: 'Internal Server Error.'}
     if (req.session != null) {
-      if (req.session.storage == null) {
+      if (req.session.myVillagers == null) {
         return res.json({code: 'villagers02', comment: res.__('ts.villagers.targetnotexists')})
       }
       const { myVillagers } = req.session;
