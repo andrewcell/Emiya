@@ -50,9 +50,20 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // Security
-if (process.env.NODE_ENV === 'production') {
-    app.use(helmet());
-}
+// if (process.env.NODE_ENV === 'production') {
+    const self = '\'self\'';
+    app.use(helmet({
+        contentSecurityPolicy: {
+            directives: {
+                defaultSrc: [self, 'emiyaj.vxz.me'],
+                scriptSrc: [self, 'data:'],
+                styleSrc: [self, 'fonts.googleapis.com', '*.fontawesome.com', 'data:', '\'unsafe-inline\'', 'cdn.jsdelivr.net'],
+                fontSrc: [self, 'fonts.gstatic.com', 'data:', 'cdn.jsdelivr.net'],
+                imgSrc: [self, 'acnhcdn.com', 'unsafe-inline www.googletagmanager.com']
+            }
+        }
+    }));
+// }
 app.use(session({
     secret: '***REMOVED***',
     name: '***REMOVED***',
