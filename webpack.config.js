@@ -23,10 +23,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.s(c|a)ss$/,
+                test: /\.s(c)ss$/,
                 use: [
-                    'vue-style-loader',
-                    'css-loader',
                     {
                         loader: 'sass-loader',
                         options: {
@@ -39,6 +37,13 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
         ],
 
     },
