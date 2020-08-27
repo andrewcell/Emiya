@@ -1,14 +1,14 @@
 import React from 'react';
 import {createMuiTheme, MuiThemeProvider} from '@material-ui/core';
 import Header from './Header';
-import Axios from 'axios';
+import Axios, {AxiosResponse} from 'axios';
 import {decrypt} from '../encryption/AES';
 import {PageStatus} from '../points/enums';
+import {Data} from '../repsonseBody';
 
 interface LayoutProp {
     content: JSX.Element;
     pageStatus: PageStatus;
-    customProp?: any;
 }
 
 interface LayoutState {
@@ -26,7 +26,7 @@ class Layout extends React.Component<LayoutProp, LayoutState> {
 
     componentDidMount(): void {
         Axios.get('/admin/loginstatus')
-            .then((res) => {
+            .then((res: AxiosResponse<Data>) => {
                 const encryptedData = res.data.data;
                 const data = JSON.parse(decrypt(encryptedData)) as {username: string; email: string};
                 this.setState({
@@ -34,13 +34,18 @@ class Layout extends React.Component<LayoutProp, LayoutState> {
                     username: data.username
                 })
             })
+            .catch(() => {
+                this.setState({
+                    loginStatus: false
+                })
+            });
     }
 
     setLoginStatus = (loginStatus: boolean, username?: string): void => {
         this.setState({loginStatus, username})
     }
 
-    render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(): React.ReactElement | string | number | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         const theme = createMuiTheme({
             palette: {
                 primary: {

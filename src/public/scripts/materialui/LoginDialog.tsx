@@ -15,6 +15,8 @@ import {l} from '../locale';
 import Backdrop from '@material-ui/core/Backdrop';
 import {Register} from '../register';
 import RegisterDialog from './RegisterDialog';
+import Axios, {AxiosError, AxiosResponse} from 'axios';
+import {LoginResponse} from '../repsonseBody';
 
 enum MessageType {
     ERROR, SUCCESS, STANDBY
@@ -58,23 +60,23 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
             return;
         }
         this.setState({process: true});
-        AJAX.send({username: this.state.username, password: this.state.password}, new b64('L2FkbWluL2xvZ2lu'))
-            .then((result: AjaxResult) => {
-                switch (result.code as string) {
-                    case 'login00':
-                        localStorage.setItem('token', result.comment)
-                        // this.props.setLoginStatus(true, result.comment)
-                        location.reload()
-                        break;
-                    default:
-                        this.setState({
-                            messageType: MessageType.ERROR,
-                            message: result.comment,
-                            snackbarOpen: true,
-                            process: false
-                        });
-                        break;
+        Axios.post(new b64('L2FkbWluL2xvZ2lu').decode(), {username: this.state.username, password: this.state.password})
+            .then((r: AxiosResponse<LoginResponse>) => {
+                if (r.data.code === 'login00') {
+                    localStorage.setItem('token', r.data.comment)
+                    // this.props.setLoginStatus(true, result.comment)
+                    location.reload()
+                } else {
+                    throw new Error(r.data.comment);
                 }
+            })
+            .catch((e: Error) => {
+                this.setState({
+                    messageType: MessageType.ERROR,
+                    message: e.message,
+                    snackbarOpen: true,
+                    process: false
+                });
             })
     }
 

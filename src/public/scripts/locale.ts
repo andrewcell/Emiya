@@ -66,20 +66,19 @@ const l = (key: string): string => {
     let str: string | undefined = '';
     switch (languageConfigured) {
         case 'ko_KR':
-            // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/ban-ts-comment
             // @ts-ignore
             str = ko[key];
             break;
         case 'en_US':
-            // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/ban-ts-comment
             // @ts-ignore
             str = en[key];
             break;
         case 'ja_JP':
-            // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/ban-ts-comment
             // @ts-ignore
             str = ja[key];
-
     }
     if (str == null) {
         return '';
@@ -95,7 +94,7 @@ const getLoadingPhrase = (): string => {
         max = Math.floor(max);
         return  Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    return l('villagers.loading.s' + random(6, 1));
+    return l('villagers.loading.s' + random(6, 1).toString());
 }
 
 export {l, setLanguage, detectLanguage, getLanguage, getLoadingPhrase};

@@ -53,7 +53,7 @@ class Header extends React.Component<HeaderProp, HeaderState> {
         }
     }
 
-    render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(): React.ReactElement | string | number | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
             <>
                 <ApplicationBar pageStatus={this.props.pageStatus} loginStatus={this.props.loginStatus} username={this.props.username} handleOpen={this.getOpenDialogFunction('TopRight')}/>
