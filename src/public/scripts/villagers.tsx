@@ -245,11 +245,12 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                         <BrowserRouter>
                             <Route path={'/villagers'} render={({ location }): JSX.Element => (
                                     <>
-                                        <Tabs value={location.pathname} style={{backgroundColor: '#4caf50', color: 'white'}} scrollButtons={'auto'}>
+                                        <Tabs value={location.pathname} style={{backgroundColor: '#4caf50', color: 'white'}} scrollButtons={'auto'} variant={'scrollable'}>
                                             <Tab label={l('villagers.nav.myvillagers')} value={'/villagers'} component={Link} to={'/villagers'} />
                                             <Tab label={l('villagers.nav.allvillagers')} value={'/villagers/list'} component={Link} to={'/villagers/list'} />
                                             <Tab label={l('villagers.nav.giftforvillagers')} value={'/villagers/gift'} component={Link} to={'/villagers/gift'} />
                                             <Tab label={l('villagers.nav.villagerstogift')} value={'/villagers/prefer'} component={Link} to={'/villagers/prefer'} />
+                                            <Tab label={l('villagers.nav.group')} value={'/villagers/group'} component={Link} to={'/villagers/group'} />
                                         </Tabs>
                                         <Switch>
                                             <Route exact path={'/villagers'}>
@@ -263,6 +264,9 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                             </Route>
                                             <Route exact path={'/villagers/prefer'}>
                                                 <VillagersPreferGift data={this.state.allVillagers} />
+                                            </Route>
+                                            <Route exact path={'/villagers/group'}>
+                                                <h1>Groupe</h1>
                                             </Route>
                                             {/* <Route path={'/villagers/:code'}  component={(props: { code: string }): React.ReactElement => <VillagerDetail fromParam={true} data={this.state.allVillagers} addVillager={this.addToMyVillagers} code={window.location.search.substring(1)} removeVillager={this.removeVillager}/>} /> */}
                                         </Switch>
