@@ -49,7 +49,8 @@ module.exports = {
         ],
 
     },
-    devtool: 'inline-source-map',
+    devtool: 'eval',
+    // devtool: 'inline-source-map',
     entry: {
         layout: './src/public/scripts/layout.tsx',
         villagers: './src/public/scripts/villagers.tsx',
