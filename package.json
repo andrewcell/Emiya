@@ -46,7 +46,7 @@
     "maxmind": "^4.1.4",
     "module-alias": "^2.2.2",
     "moment": "^2.27.0",
-    "mongoose": "^5.10.1",
+    "mongoose": "^5.10.2",
     "morgan": "^1.10.0",
     "mssql": "^6.2.1",
     "node-cron": "^2.0.3",
