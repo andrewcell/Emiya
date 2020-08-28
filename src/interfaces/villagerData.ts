@@ -2,6 +2,7 @@ export interface EmiboVillager {
     name: string;
     name_kor: string;
     num: string;
+    number: string;
     file: string;
     image: string;
     series: string;
