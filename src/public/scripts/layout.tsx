@@ -120,6 +120,14 @@ const modules: CardProp[] = [
         ]
     }, */
     {
+        title: l('home.translations.title'),
+        description: l('home.translations.description'),
+        moreDescription: l('home.translations.moredescription'),
+        links: [
+            {link: '/translate', title: l('home.enter')}
+        ]
+    },
+    {
         title: l('home.about.title'),
         description: l('home.about.description'),
         moreDescription: l('home.about.moredescription'),

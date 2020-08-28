@@ -187,6 +187,9 @@
   "villagers.my.title": "내 주민들",
   "villagers.my.voicetone": "목소리 톤",
   "villagers.nav.allvillagers": "전체 주민 목록",
+  "home.translations.title": "번역 검색",
+  "home.translations.description": "아이템, 주민 등의 번역명을 검색할 수 있습니다.",
+  "home.translations.moredescription": "아이템, 주민 등의 번역명을 검색할 수 있습니다.",
   "villagers.nav.giftforvillagers": "옷 선물",
   "villagers.nav.myvillagers": "내 주민",
   "villagers.nav.villagerstogift": "선호 옷",
@@ -262,5 +265,6 @@
   "villagers.tooltip.addtomyvillagers": "선택된 주민 그룹에 추가합니다.",
   "villagers.tooltip.comments": "주민에 대해 댓글을 달 수 있습니다. HTML 태그는 사용할 수 없습니다. (욕설, 성적 내용 등은 서버 대한민국 밖에 위치해있어 한국 법의 영향이 미치지 않으나 속인주의의 따라 걸리면 처벌 받을 수 있습니다. 관리자와 서버 업체는 수사기관에 협조하지 않습니다.)",
   "villagers.tooltip.deletemyvillagers": "선택된 주민 그룹에서 제거합니다.",
-  "villagers.tooltip.livesearch": "체크되어 있으면 검색 내용이 바뀌는 순간 검색됩니다."
+  "villagers.tooltip.livesearch": "체크되어 있으면 검색 내용이 바뀌는 순간 검색됩니다.",
+  "translations.search": "아이템, 주민 등의 이름을 입력해주세요."
 }

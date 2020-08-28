@@ -21,6 +21,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import {CodeCommentData, Data} from './repsonseBody';
+import VillagersGroupManagement from './villagers/VillagersGroupManagement';
 
 interface VillagersState {
     pageStatus: PageStatus;
@@ -250,7 +251,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                             <Tab label={l('villagers.nav.allvillagers')} value={'/villagers/list'} component={Link} to={'/villagers/list'} />
                                             <Tab label={l('villagers.nav.giftforvillagers')} value={'/villagers/gift'} component={Link} to={'/villagers/gift'} />
                                             <Tab label={l('villagers.nav.villagerstogift')} value={'/villagers/prefer'} component={Link} to={'/villagers/prefer'} />
-                                            <Tab label={l('villagers.nav.group')} value={'/villagers/group'} component={Link} to={'/villagers/group'} />
+                                            {/* <Tab label={l('villagers.nav.group')} value={'/villagers/group'} component={Link} to={'/villagers/group'} /> */}
                                         </Tabs>
                                         <Switch>
                                             <Route exact path={'/villagers'}>
@@ -266,7 +267,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                                 <VillagersPreferGift data={this.state.allVillagers} />
                                             </Route>
                                             <Route exact path={'/villagers/group'}>
-                                                <h1>Groupe</h1>
+                                                <VillagersGroupManagement loginStatus={this.state.loginStatus} />
                                             </Route>
                                             {/* <Route path={'/villagers/:code'}  component={(props: { code: string }): React.ReactElement => <VillagerDetail fromParam={true} data={this.state.allVillagers} addVillager={this.addToMyVillagers} code={window.location.search.substring(1)} removeVillager={this.removeVillager}/>} /> */}
                                         </Switch>
