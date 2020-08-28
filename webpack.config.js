@@ -45,6 +45,10 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                 ]
+            },
+            {
+                test: /\.pug$/,
+                use: ['pug-plain-loader']
             }
         ],
 
@@ -56,7 +60,8 @@ module.exports = {
         villagers: './src/public/scripts/villagers.tsx',
         points: './src/public/scripts/points.tsx',
         campsite: './src/public/scripts/campsite.ts',
-        about: './src/public/scripts/about.ts'
+        about: './src/public/scripts/about.ts',
+        translation: './src/public/scripts/translation.ts'
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.vue']
