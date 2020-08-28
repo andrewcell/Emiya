@@ -74,6 +74,7 @@
   "layout.register.invalidinput": "유효하지 않은 값이 하나 이상 들어가있습니다.",
   "layout.register.notmatch": "비밀번호 확인이 일치하지 않습니다.",
   "layout.register.password": "비밀번호",
+  "villagers.nav.group": "그룹 관리",
   "layout.register.password2": "비밀번호 확인",
   "layout.register.register": "생성",
   "layout.register.success": "가입이 완료되었습니다. 기재한 이메일로 인증확인 메일을 보냈으니 메일을 확인 후 보낸 링크를 클릭하여 인증을 완료하세요. 인증을 완료하기 전까진 없는 계정으로 처리됩니다.",
