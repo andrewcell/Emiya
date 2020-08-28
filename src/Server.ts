@@ -50,7 +50,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // Security
-// if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
     const self = '\'self\'';
     app.use(helmet({
         contentSecurityPolicy: {
@@ -63,7 +63,7 @@ if (process.env.NODE_ENV === 'development') {
             }
         }
     }));
-// }
+}
 app.use(session({
     secret: '***REMOVED***',
     name: '***REMOVED***',
