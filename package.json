@@ -126,7 +126,7 @@
     "fs-extra": "^9.0.1",
     "i": "^0.3.6",
     "jasmine": "^3.6.1",
-    "javascript-obfuscator": "^1.11.0",
+    "javascript-obfuscator": "^1.12.0",
     "jquery": "^3.5.1",
     "json-loader": "^0.5.7",
     "jsonfile": "^6.0.1",
