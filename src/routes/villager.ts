@@ -32,18 +32,20 @@ router.get('/react/villagers', validateReact, ((req, res) => {
 router.get('/react/my/get', validateReact, validateLoggedIn, async (req, res) => {
   const db = MyVillagers.getInstance();
   const user = req.user as UserDocument;
-  let storage: [string, string[]] = ['', []];
+  let storage: [string, string[], string[]] = ['', [], []];
   if (req.session != null) {
     if (req.session.myVillagers == null || req.session.group == null || req.session.requireUpdate) {
       storage = await db.getMyVillagers(user.id);
       req.session.myVillagers = storage[1];
       req.session.group = storage[0];
+      req.session.groups = storage[2];
       req.session.requireUpdate = false;
     } else {
-      storage = [req.session.group, req.session.myVillagers];
+      storage = [req.session.group, req.session.myVillagers, req.session.groups];
     }
     const responseData: VillagerStorage = {};
     responseData[storage[0]] = storage[1];
+    responseData.groups = storage[2];
     return res.json({code: 'villagers00', comment: 'success', data: encrypt(JSON.stringify(responseData))})
   }
 });

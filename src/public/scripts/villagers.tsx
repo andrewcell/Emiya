@@ -29,6 +29,7 @@ interface VillagersState {
     myVillagers: Villager[];
     loginStatus: boolean;
     selectedGroup: string;
+    groups: string[];
 }
 
 type VillagersProps = unknown;
@@ -66,6 +67,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                 myVillagers: filtered,
                                 loginStatus: true,
                                 pageStatus: PageStatus.LOADED,
+                                groups: villagerStorage.groups,
                                 selectedGroup
                             });
                         }).catch(() => {this.setState({pageStatus: PageStatus.ERROR})})
@@ -83,9 +85,9 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                 const filtered: Villager[] = villagersJson.filter((item: Villager) => {
                                     return parsed[selectedGroup].includes(item.filename);
                                 });
-                                this.setState({myVillagers: filtered, selectedGroup, pageStatus: PageStatus.LOADED});
+                                this.setState({myVillagers: filtered, selectedGroup, pageStatus: PageStatus.LOADED, groups: Object.keys(parsed)});
                             } catch {
-                                this.setState({myVillagers: [], selectedGroup: 'Default', pageStatus: PageStatus.LOADED});
+                                this.setState({myVillagers: [], selectedGroup: 'Default', pageStatus: PageStatus.LOADED, groups: []});
                             }
                         }
                     })
@@ -251,11 +253,11 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                             <Tab label={l('villagers.nav.allvillagers')} value={'/villagers/list'} component={Link} to={'/villagers/list'} />
                                             <Tab label={l('villagers.nav.giftforvillagers')} value={'/villagers/gift'} component={Link} to={'/villagers/gift'} />
                                             <Tab label={l('villagers.nav.villagerstogift')} value={'/villagers/prefer'} component={Link} to={'/villagers/prefer'} />
-                                            {/* <Tab label={l('villagers.nav.group')} value={'/villagers/group'} component={Link} to={'/villagers/group'} /> */}
+                                            <Tab label={l('villagers.nav.group')} value={'/villagers/group'} component={Link} to={'/villagers/group'} />
                                         </Tabs>
                                         <Switch>
                                             <Route exact path={'/villagers'}>
-                                                <MyVillagers locale={getLanguage()} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} addVillager={this.addToMyVillagers} data={this.state.allVillagers}/>
+                                                <MyVillagers locale={getLanguage()} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} addVillager={this.addToMyVillagers} data={this.state.allVillagers} groups={this.state.groups} selectedGroup={this.state.selectedGroup}/>
                                             </Route>
                                             <Route exact path={'/villagers/list'}>
                                                 <VillagersList locale={getLanguage()} addVillager={this.addToMyVillagers} removeVillager={this.removeVillager} data={this.state.allVillagers}/>
@@ -267,7 +269,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                                 <VillagersPreferGift data={this.state.allVillagers} />
                                             </Route>
                                             <Route exact path={'/villagers/group'}>
-                                                <VillagersGroupManagement loginStatus={this.state.loginStatus} />
+                                                <VillagersGroupManagement loginStatus={this.state.loginStatus} groups={this.state.groups} />
                                             </Route>
                                             {/* <Route path={'/villagers/:code'}  component={(props: { code: string }): React.ReactElement => <VillagerDetail fromParam={true} data={this.state.allVillagers} addVillager={this.addToMyVillagers} code={window.location.search.substring(1)} removeVillager={this.removeVillager}/>} /> */}
                                         </Switch>
@@ -283,10 +285,10 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                     <Grid container justify={'center'} alignItems={'center'} direction={'column'} spacing={1} >
                         <Grid item />
                         <Grid item>
-                        <CircularProgress />
+                            <CircularProgress />
                         </Grid>
                         <Grid item>
-                        <Typography variant={'h6'}>{getLoadingPhrase()}</Typography>
+                            <Typography variant={'h6'}>{getLoadingPhrase()}</Typography>
                         </Grid>
                     </Grid>
                 )

@@ -31,18 +31,18 @@ class MyVillagersDatabase {
         // this.engine.close();
     }
 
-    public getMyVillagers(userId: string): Promise<[string, string[]]> {
-        return new Promise<[string, string[]]>((resolve) => {
+    public getMyVillagers(userId: string): Promise<[string, string[], string[]]> {
+        return new Promise((resolve) => {
             User.findById(userId)
                 .then(user => {
                     if (user) {
-                        resolve([user.villagersGroup, user.villagers[user.villagersGroup]])
+                        resolve([user.villagersGroup, user.villagers[user.villagersGroup], Object.keys(user.villagers)]);
                     }
-                    return resolve(['', []]);
+                    return resolve(['', [], []]);
                 })
-                .catch(err => {
+                .catch((err: Error) => {
                     logger.error(err.message, err);
-                    return resolve(['', []]);
+                    return resolve(['', [], []]);
                 });
         });
     }
