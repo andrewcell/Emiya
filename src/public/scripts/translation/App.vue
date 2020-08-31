@@ -1,5 +1,9 @@
 <template>
   <v-app>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
+      rel="stylesheet"
+    >
     <Layout />
     <v-container>
       <v-text-field
@@ -7,21 +11,29 @@
         outlined
         @keyup.enter="() => {}"
       />
-      <v-card>
-        <v-list>
-          <v-list-item
-            v-for="locale in locales"
-            :key="locale.language"
-          >
-            <v-list-item-avatar>
-              <v-icon v-text="asd" />
-            </v-list-item-avatar>
-            <v-list-item-content>
-              <v-list-item-title v-text="'sbsdfbsdfbsdfbfdb'" />
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-card>
+      <v-row>
+        <v-col
+          v-for="r in result"
+          :key="r.name"
+        >
+          <v-card>
+            <v-card-title>{{ r.name }}</v-card-title>
+            <v-list dense>
+              <v-list-item
+                v-for="locale in r.result"
+                :key="locale.language"
+              >
+                <v-list-item-avatar>
+                  <span :class="'flag-icon flag-icon-' + getConturyCode(locale.language)" />
+                </v-list-item-avatar>
+                <v-list-item-content>
+                  <v-list-item-title v-text="'sbsdfbsdfbsdfbfdb'" />
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-card>
+        </v-col>
+      </v-row>
       <v-btn
         rounded
         dark
@@ -30,6 +42,7 @@
       >
         {{ l('translations.manualbutton') }}
       </v-btn>
+
     </v-container>
   </v-app>
 </template>
