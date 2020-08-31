@@ -9,6 +9,7 @@
       <v-text-field
         :label="l('translations.search') + ' + Enter'"
         outlined
+        color="green"
         @keyup.enter="() => {}"
       />
       <v-row>

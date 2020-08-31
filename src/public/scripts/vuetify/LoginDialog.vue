@@ -25,6 +25,7 @@
                 :rules="usernameRules"
                 :label="l('layout.login.username')"
                 :disabled="loading"
+                color="green"
                 required
               />
               <v-text-field
@@ -33,6 +34,7 @@
                 type="password"
                 :label="l('layout.login.password')"
                 :disabled="loading"
+                color="green"
                 required
                 @keyup.enter="login"
               />

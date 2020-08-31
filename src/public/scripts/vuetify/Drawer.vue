@@ -14,6 +14,7 @@
         :key="item.title"
         no-action
         sub-group
+        color="green"
         value="true"
       >
         <template #activator>
