@@ -267,5 +267,8 @@
   "villagers.tooltip.deletemyvillagers": "선택된 주민 그룹에서 제거합니다.",
   "villagers.tooltip.livesearch": "체크되어 있으면 검색 내용이 바뀌는 순간 검색됩니다.",
   "translations.search": "아이템, 주민 등의 이름을 입력해주세요.",
-  "translations.manualbutton": "검색"
+  "translations.manualbutton": "검색",
+  "villagers.group.change": "그룹 변경",
+  "villagers.group.add": "추가",
+  "villagers.group.delete": "삭제"
 }

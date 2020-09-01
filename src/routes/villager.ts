@@ -6,6 +6,7 @@ import {UserDocument} from '@shared/User';
 import {internalError} from '@shared/constants';
 import logger from '@shared/Logger';
 import {villagers} from 'animal-crossing';
+import MyVillagersDatabase from '@interfaces/MyVillagersDatabase';
 
 const router = Router();
 
@@ -126,6 +127,15 @@ router.put('/group', validateLoggedIn, (req, res) => {
   const groupName: string = decrypt((req.body as dataBody).data);
   if (req.session != null) {
     req.session.group = groupName;
+  }
+});
+
+router.post('/groupmgmt', validateLoggedIn, validateReact, async (req, res) => {
+  if (req.user) {
+    const storage = await MyVillagersDatabase.getInstance().getStorage((req.user as UserDocument)._id)
+    return res.json({data: encrypt(JSON.stringify(storage))});
+  } else {
+    return res.json({})
   }
 });
 

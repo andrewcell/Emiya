@@ -56,10 +56,10 @@ class MyVillagersDatabase {
                         storage[user.villagersGroup] = codeArray;
                         User.findByIdAndUpdate(userId, {villagers: storage})
                             .then(() => resolve())
-                            .catch(err => {logger.error(err.message, err); resolve()})
+                            .catch((e: Error) => {logger.error(e.message, e); resolve()})
                     }
                 })
-                .catch(err => {
+                .catch((err: Error) => {
                     logger.error(err.message, err);
                     resolve();
                 })
@@ -78,8 +78,8 @@ class MyVillagersDatabase {
                                     resolve(u.villagers[u.villagersGroup])
                                 }
                             })
-                            .catch(err => {
-                                logger.error(err.message, err);
+                            .catch((e: Error) => {
+                                logger.error(e.message, e);
                                 resolve();
                             })
                     } else {
@@ -87,13 +87,29 @@ class MyVillagersDatabase {
                     }
                 }
             })
-            .catch(err => {
+            .catch((err: Error) => {
                 logger.error(err.message, err);
                 resolve();
             })
         });
     }
 
+    public getStorage(userId: string): Promise<VillagerStorage> {
+        return new Promise<VillagerStorage>((resolve) => {
+        User.findById(userId)
+            .then(user => {
+                if (user) {
+                    return resolve(user.villagers);
+                } else {
+                    return {};
+                }
+            })
+            .catch((e: Error) => {
+                logger.error(e.message, e);
+                return {};
+            });
+        })
+    }
 }
 /* SQLite 3
 class MyVillagersDatabase {
