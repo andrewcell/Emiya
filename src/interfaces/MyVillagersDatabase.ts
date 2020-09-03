@@ -72,10 +72,10 @@ class MyVillagersDatabase {
             .then(user => {
                 if (user) {
                     if (groupName in user.villagers) {
-                        User.findByIdAndUpdate(userId, {villagerGroup: groupName})
+                        User.findByIdAndUpdate(userId, {villagersGroup: groupName})
                             .then(u => {
                                 if (u != null) {
-                                    resolve(u.villagers[u.villagersGroup])
+                                    resolve(u.villagers[groupName])
                                 }
                             })
                             .catch((e: Error) => {

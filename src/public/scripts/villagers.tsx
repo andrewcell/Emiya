@@ -234,7 +234,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
         })
     }
 
-    private codeArrayToVillagerArray = (codes: string[]): Villager[] => {
+    codeArrayToVillagerArray = (codes: string[]): Villager[] => {
         return this.state.allVillagers.filter((item: Villager) => {
             return codes.includes(item.filename);
         });
@@ -257,7 +257,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                         </Tabs>
                                         <Switch>
                                             <Route exact path={'/villagers'}>
-                                                <MyVillagers locale={getLanguage()} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} addVillager={this.addToMyVillagers} data={this.state.allVillagers} groups={this.state.groups} selectedGroup={this.state.selectedGroup}/>
+                                                <MyVillagers locale={getLanguage()} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} addVillager={this.addToMyVillagers} data={this.state.allVillagers} groups={this.state.groups} selectedGroup={this.state.selectedGroup} changeGroup={this.changeVillagerGroup}/>
                                             </Route>
                                             <Route exact path={'/villagers/list'}>
                                                 <VillagersList locale={getLanguage()} addVillager={this.addToMyVillagers} removeVillager={this.removeVillager} data={this.state.allVillagers}/>
@@ -269,7 +269,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                                 <VillagersPreferGift data={this.state.allVillagers} />
                                             </Route>
                                             <Route exact path={'/villagers/group'}>
-                                                <VillagersGroupManagement loginStatus={this.state.loginStatus} selectedGroup={this.state.selectedGroup} changeGroup={this.changeVillagerGroup} />
+                                                <VillagersGroupManagement loginStatus={this.state.loginStatus} selectedGroup={this.state.selectedGroup} changeGroup={this.changeVillagerGroup} codeToVillagerArray={this.codeArrayToVillagerArray} />
                                             </Route>
                                             {/* <Route path={'/villagers/:code'}  component={(props: { code: string }): React.ReactElement => <VillagerDetail fromParam={true} data={this.state.allVillagers} addVillager={this.addToMyVillagers} code={window.location.search.substring(1)} removeVillager={this.removeVillager}/>} /> */}
                                         </Switch>

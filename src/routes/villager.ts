@@ -125,8 +125,17 @@ router.post('/search', validateReact, (req, res) => {
 
 router.put('/group', validateLoggedIn, (req, res) => {
   const groupName: string = decrypt((req.body as dataBody).data);
-  if (req.session != null) {
-    req.session.group = groupName;
+  if (req.session != null && req.user != null) {
+    const userTyped = req.user as UserDocument;
+    void MyVillagersDatabase.getInstance().changeGroup(userTyped._id, groupName)
+        .then(myVillagers => {
+          if (req.session != null) {
+            req.session.group = groupName;
+            req.session.myVillagers = myVillagers;
+            req.session.requireUpdate = true;
+            return res.json({code: 'group00', comment: '', data: encrypt(JSON.stringify(myVillagers))})
+          }
+        })
   }
 });
 
@@ -138,5 +147,7 @@ router.post('/groupmgmt', validateLoggedIn, validateReact, async (req, res) => {
     return res.json({})
   }
 });
+
+
 
 export default router;
