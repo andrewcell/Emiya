@@ -148,6 +148,10 @@ router.post('/groupmgmt', validateLoggedIn, validateReact, async (req, res) => {
   }
 });
 
+router.post('/creategroup', validateLoggedIn, validateReact, async (req, res) => {
+  if (req.user) {
+  }
+});
 
 
 export default router;

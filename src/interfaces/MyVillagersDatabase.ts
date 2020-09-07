@@ -110,6 +110,10 @@ class MyVillagersDatabase {
             });
         })
     }
+
+    public addGroup(userId: string, groupName): Promise<void> {
+
+    }
 }
 /* SQLite 3
 class MyVillagersDatabase {
