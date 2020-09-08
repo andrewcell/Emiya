@@ -273,6 +273,7 @@
   "villagers.group.delete": "삭제",
   "villagers.group.create": "영문자, 숫자, 한글만 사용할 수 있습니다.",
   "villagers.group.createtitle": "새 그룹 생성",
-  "villagers.group.name": "그룹 이름"
+  "villagers.group.name": "그룹 이름",
+  "villagers.group.createrror": "그룹을 생성할 수 없습니다. (중복된 이름?)"
 
 }

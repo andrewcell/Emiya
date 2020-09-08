@@ -77,7 +77,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                         const selectedGroup = localStorage.getItem('group');
                         localStorage.setItem('group', 'Default');
                         if (villagers == null || selectedGroup == null) {
-                            this.setState({myVillagers: [], selectedGroup: 'Default', pageStatus: PageStatus.LOADED});
+                            this.setState({myVillagers: [], selectedGroup: 'Default', groups: ['Default'], pageStatus: PageStatus.LOADED});
                         } else {
                             try {
                                 localStorage.setItem('group', selectedGroup);
@@ -87,7 +87,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                 });
                                 this.setState({myVillagers: filtered, selectedGroup, pageStatus: PageStatus.LOADED, groups: Object.keys(parsed)});
                             } catch {
-                                this.setState({myVillagers: [], selectedGroup: 'Default', pageStatus: PageStatus.LOADED, groups: []});
+                                this.setState({myVillagers: [], selectedGroup: 'Default', pageStatus: PageStatus.LOADED, groups: ['Default']});
                             }
                         }
                     })
@@ -95,6 +95,12 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
             .catch(() => {
                 this.setState({pageStatus: PageStatus.ERROR})
             })
+    }
+
+    createGroup = (groupName: string): void => {
+        this.setState(prevState => {
+            return {groups: [...prevState.groups, groupName]};
+        });
     }
 
     setMyVillagers = (arr: Villager[]): void => {
@@ -269,7 +275,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                                 <VillagersPreferGift data={this.state.allVillagers} />
                                             </Route>
                                             <Route exact path={'/villagers/group'}>
-                                                <VillagersGroupManagement loginStatus={this.state.loginStatus} selectedGroup={this.state.selectedGroup} changeGroup={this.changeVillagerGroup} codeToVillagerArray={this.codeArrayToVillagerArray} />
+                                                <VillagersGroupManagement loginStatus={this.state.loginStatus} selectedGroup={this.state.selectedGroup} changeGroup={this.changeVillagerGroup} codeToVillagerArray={this.codeArrayToVillagerArray} createGroup={this.createGroup} />
                                             </Route>
                                             {/* <Route path={'/villagers/:code'}  component={(props: { code: string }): React.ReactElement => <VillagerDetail fromParam={true} data={this.state.allVillagers} addVillager={this.addToMyVillagers} code={window.location.search.substring(1)} removeVillager={this.removeVillager}/>} /> */}
                                         </Switch>

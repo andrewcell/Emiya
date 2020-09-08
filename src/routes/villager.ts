@@ -1,7 +1,7 @@
 import { Request, Response, Router} from 'express';
 import {validateLoggedIn, validateReact} from '@shared/validation';
 import {decrypt, encrypt} from '@shared/Encryption';
-import MyVillagers, {resize, VillagerStorage} from '@interfaces/MyVillagersDatabase';
+import MyVillagers, {VillagerStorage} from '@interfaces/MyVillagersDatabase';
 import {UserDocument} from '@shared/User';
 import {internalError} from '@shared/constants';
 import logger from '@shared/Logger';
@@ -149,7 +149,19 @@ router.post('/groupmgmt', validateLoggedIn, validateReact, async (req, res) => {
 });
 
 router.post('/creategroup', validateLoggedIn, validateReact, async (req, res) => {
+  const failed = {code: 'group01', comment: 'failed'};
   if (req.user) {
+    const user = req.user as UserDocument;
+    const groupName: string = decrypt((req.body as dataBody).data);
+    if (!/^[ㄱ-ㅎ|가-힣|a-z|A-Z|0-9|\*]+$/.test(groupName)) {
+      return res.json(failed);
+    }
+    const addGroupSuccess = await MyVillagersDatabase.getInstance().addGroup(user._id, groupName);
+    if (addGroupSuccess) {
+      return res.json({code: 'group00', comment: 'success'})
+    } else {
+      return res.json(failed);
+    }
   }
 });
 

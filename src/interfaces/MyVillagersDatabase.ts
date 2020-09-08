@@ -1,15 +1,5 @@
-import sqlite3, {SqliteError} from 'better-sqlite3';
-import {getDataPath} from '@shared/functions';
 import logger from '@shared/Logger';
-import User, {UserDocument} from '@shared/User';
-
-export const resize = (arr: any[], newSize: number, defaultValue: any): any[] => {
-    const ad = arr;
-    while(newSize > ad.length)
-        ad.push(defaultValue);
-    ad.length = newSize;
-    return ad
-}
+import User from '@shared/User';
 
 export interface VillagerStorage {
     [key: string]: string[];
@@ -111,8 +101,31 @@ class MyVillagersDatabase {
         })
     }
 
-    public addGroup(userId: string, groupName): Promise<void> {
-
+    public addGroup(userId: string, groupName: string): Promise<boolean> {
+        return new Promise<boolean>(resolve => {
+            User.findById(userId)
+                .then(user => {
+                    if (user) {
+                        const villagers = user.villagers;
+                        if (groupName in villagers) {
+                            return resolve(false);
+                        }
+                        villagers[groupName] = [];
+                        User.findByIdAndUpdate(userId, {villagers})
+                            .then(() => {
+                                return resolve(true);
+                            })
+                            .catch((e: Error) => {
+                                logger.error(e.message, e);
+                                return resolve(false);
+                            })
+                    }
+                })
+                .catch((e: Error) => {
+                    logger.error(e.message, e);
+                    return resolve(false);
+                })
+        })
     }
 }
 /* SQLite 3
