@@ -101,6 +101,15 @@ class MyVillagersDatabase {
         })
     }
 
+    /**
+     * Add group to exist villagers storage.
+     *
+     * @param {string} userId - Reference id of user document.
+     * @param  {string} groupName - Name of new group.
+     * @returns {boolean} - If worked without any error, returns true.
+     * @example
+     * void addGroup('userid123', 'newGroup').then(isSuccess => { console.log('Created!'); });
+     */
     public addGroup(userId: string, groupName: string): Promise<boolean> {
         return new Promise<boolean>(resolve => {
             User.findById(userId)
