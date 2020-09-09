@@ -1,6 +1,22 @@
+/**
+ * @packageDocumentation
+ * @module EmiyaT
+ */
 import logger from './Logger';
 import path from 'path'
 
+/**
+ * Log error into Logger
+ * @param {Error} err - Error
+ * @example
+ * ```ts
+ * try {
+ *     const a = 1 / 0;
+ * } catch (e: Error) {
+ *     pErr(e);
+ * }
+ * ```
+ */
 export const pErr = (err: Error): void => {
     if (err) {
         logger.error(err);

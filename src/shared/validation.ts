@@ -1,3 +1,9 @@
+/**
+ * @packageDocumentation
+ * @module EmiyaT
+ * @hidden
+ */
+
 import {NextFunction, Request, Response} from 'express';
 import {UserDocument} from '@shared/User';
 

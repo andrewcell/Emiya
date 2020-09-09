@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @hidden
+ */
+
 import mail from '@sendgrid/mail';
 import logger from '@shared/Logger';
 import {MailDataRequired} from '@sendgrid/mail/src/mail';
