@@ -49,7 +49,7 @@ class VillagerCard extends React.Component<VillagerCardProp, VillagerCardState> 
     componentDidMount(): void {
         Axios.post('/villagers/getvillager', {code: encrypt(this.props.villagerCode)})
             .then(r => {
-                const data = JSON.parse(decrypt(r.data.data as string));
+                const data = JSON.parse(decrypt((r.data as {data: string}).data)) as Villager;
                 this.setState({
                     villager: data,
                     status: PageStatus.LOADED

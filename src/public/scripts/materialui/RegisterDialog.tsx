@@ -65,7 +65,7 @@ class RegisterDialog extends React.Component<DialogProp, RegisterDialogState> {
             return;
         }
         this.setState({process: true});
-        Register.register(this.state.username, this.state.password, this.state.password2, this.state.email)
+        void Register.register(this.state.username, this.state.password, this.state.password2, this.state.email)
             .then((result: AjaxResult) => {
                 this.setState({process: false, snackbarOpen: true, messageType: MessageType.SUCCESS, message: result.comment});
                 if (result.code === 'register07') {

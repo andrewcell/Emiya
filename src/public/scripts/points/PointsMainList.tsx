@@ -10,7 +10,7 @@ class PointsMainList extends React.Component<PointsMainListProps, any> {
         super(props);
     }
 
-    render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(): React.ReactElement | string | number | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
             <>
                 {Array.from(this.props.myPoints).map(([villagerCode, point]) => (

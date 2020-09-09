@@ -1,149 +1,104 @@
 import { Request, Response, Router} from 'express';
 import {validateLoggedIn, validateReact} from '@shared/validation';
 import {decrypt, encrypt} from '@shared/Encryption';
-import MyVillagers, {resize} from '@interfaces/MyVillagersDatabase';
+import MyVillagers, {VillagerStorage} from '@interfaces/MyVillagersDatabase';
 import {UserDocument} from '@shared/User';
 import {internalError} from '@shared/constants';
 import logger from '@shared/Logger';
 import {villagers} from 'animal-crossing';
+import MyVillagersDatabase from '@interfaces/MyVillagersDatabase';
 
 const router = Router();
-
-router.use((req, res, next) => {
-  res.locals.villagers = true;
-  next();
-});
-
-const getLengthWithoutNull = (arr: string[] | number[]): number => {
-  let count = 0
-  for (const item of arr) {
-    if (item != null) {
-      count++;
-    }
-  }
-  return count;
-}
-
-const pushToNull = (arr: string[], value: string): string[] => {
-  const array = arr;
-  let changed = false;
-  arr.forEach((value1, index) => {
-    if (value1 == null && !changed) {
-      array[index] = value;
-      changed = true;
-    }
-  });
-  return arr;
-}
 
 const validateCode = (code: string): boolean => {
   return villagers.find(v => v.filename === code) != null;
 }
 
-const getVillagerMapId = (req: Request): string => {
-  if (req.session!.myvillagersmap != null) {
-    return req.session!.myvillagersmap;
-  } else {
-    return '1';
-  }
-}
+type dataBody = {data: string;}
+
+type codeBody = {code: string;}
 
 router.get(['/', '/:param'], (req: Request, res: Response) => {
   const title = res.__('global.title.subtitle', res.__('villagers.title'))
-  res.render('villagers/main', {locale: req.cookies.locale, title});
+  res.render('villagers/main', {locale: (req.cookies as {locale: string}).locale, title});
 });
 
 router.get('/react/villagers', validateReact, ((req, res) => {
   const json = JSON.stringify(villagers);
   const data = encrypt(json);
 
-  return res.json({code: 200, comment: 'success', data, locale: req.cookies.locale});
+  return res.json({code: 200, comment: 'success', data, locale: (req.cookies as {locale: string}).locale});
 }));
 
-router.get('/react/my/get', validateReact, async (req, res) => {
-  const myVillagersMap = new Map<string, string[]>()
-  if (req.user) {
-    const db = MyVillagers.getInstance();
-    const user = req.user as UserDocument;
-    let data: string[];
-    if (req.session!.myvillagers == null || req.session!.myvillagersguest === true || req.session!.requireupdate === 4) {
-      data = await db.getMyVillagers(user.id);
-      req.session!.myvillagers = data;
-      req.session!.myvillagersguest = false;
-      req.session!.requireupdate = 1;
+router.get('/react/my/get', validateReact, validateLoggedIn, async (req, res) => {
+  const db = MyVillagers.getInstance();
+  const user = req.user as UserDocument;
+  let storage: [string, string[], string[]] = ['', [], []];
+  if (req.session != null) {
+    if (req.session.myVillagers == null || req.session.group == null || req.session.requireUpdate) {
+      storage = await db.getMyVillagers(user.id);
+      req.session.myVillagers = storage[1];
+      req.session.group = storage[0];
+      req.session.groups = storage[2];
+      req.session.requireUpdate = false;
     } else {
-      data = req.session!.myvillagers;
+      storage = [req.session.group, req.session.myVillagers, req.session.groups];
     }
-    return res.json({code: 'villagers00', comment: 'success', data: encrypt(JSON.stringify(data))})
-  } else {
-    if (req.session?.myvillagers == null) {
-      req.session!.myvillagers = resize([], 14, null)
-      req.session!.myvillagersguest = true;
-    }
-    return res.json({code: 'villagers00', comment: 'success', data: encrypt(JSON.stringify(req.session!.myvillagers))});
+    const responseData: VillagerStorage = {};
+    responseData[storage[0]] = storage[1];
+    responseData.groups = storage[2];
+    return res.json({code: 'villagers00', comment: 'success', data: encrypt(JSON.stringify(responseData))})
   }
 });
 
-router.post('/react/my/set', validateReact, async (req, res) => {
-  const body = JSON.parse(decrypt(req.body.data));
-  if (!validateCode(body.code as string)) return {code: 500, comment: 'Internal Server Error.'}
-  if (req.user) {
-    const db = MyVillagers.getInstance();
-
-    if (req.session!.myvillagers == null) {
-      req.session!.myvillagers =  resize([], 14, null)
-    }
-    if (getLengthWithoutNull(req.session!.myvillagers) >= 14)
+router.post('/react/my/set', validateReact, validateLoggedIn, async (req, res) => {
+  const code = (JSON.parse(decrypt((req.body as dataBody).data)) as codeBody).code;
+  if (!validateCode(code)) return {code: 500, comment: 'Internal Server Error.'}
+  const db = MyVillagers.getInstance();
+  if (req.session != null) {
+    const { myVillagers } = req.session;
+    if (myVillagers.length >= 14) {
       return res.json({code: 'villagers01', comment: res.__('ts.villagers.my.full')});
-
-    const existData: string[] = req.session!.myvillagers
-    if (existData.includes(body.code)) return res.json({code: 'villager01', comment: res.__('ts.villagers.my.alreadyexists')})
-    pushToNull(existData, body.code);
-    await db.setMyVillager((req.user as UserDocument).id, existData);
-    req.session!.requireupdate = 4;
-  } else {
-    if (req.session!.myvillagers == null) {
-      req.session!.myvillagers = resize([], 14, null);
     }
-    const arr = (req.session!.myvillagers) as string[];
-    if (getLengthWithoutNull(req.session!.myvillagers) >= 14)
-      return res.json({code: 'villagers01', comment: res.__('ts.villagers.my.full')});
-    if (arr.includes(body.code)) return res.json({code: 'villager01', comment: res.__('ts.villagers.my.alreadyexists')})
-    pushToNull(arr, body.code);
-    req.session!.myvillagers = arr;
-    req.session!.myvillagersguest = true;
+    if (myVillagers.includes(code)) return res.json({
+      code: 'villager01',
+      comment: res.__('ts.villagers.my.alreadyexists')
+    })
+    myVillagers.push(code);
+    await db.setMyVillager((req.user as UserDocument).id, myVillagers);
+    return res.json({code: 'villagers00', comment: res.__('ts.villagers.my.added')})
   }
-  return res.json({code: 'villagers00', comment: res.__('ts.villagers.my.added')})
 });
 
-router.delete('/react/my/set', validateReact, (req, res) => {
+router.post('/react/my/delete', validateReact, (req, res) => {
   try {
-    const body = JSON.parse(decrypt(req.body.data));
-    if (!validateCode(body.code as string)) return {code: 500, comment: 'Internal Server Error.'}
-    if (req.session!.myvillagers == null) {
-      return res.json({code: 'villagers02', comment: res.__('ts.villagers.targetnotexists')})
-    }
-    const villagersArray = req.session!.myvillagers as string[]
-    const targetIndex = villagersArray.indexOf(body.code);
-    if (targetIndex > -1) {
-      villagersArray.splice(targetIndex, 1);
-    } else {
-      return res.json({code: 'villagers02', comment: res.__('ts.villagers.targetnotexists')})
-    }
-    req.session!.myvillagers =  resize(villagersArray, 14, null)
-    if (req.user) {
+    const code = (JSON.parse(decrypt((req.body as dataBody).data)) as codeBody).code;
+    if (!validateCode(code)) return {code: 500, comment: 'Internal Server Error.'}
+    if (req.session != null) {
+      if (req.session.myVillagers == null) {
+        return res.json({code: 'villagers02', comment: res.__('ts.villagers.targetnotexists')})
+      }
+      const { myVillagers } = req.session;
+      const targetIndex = myVillagers.indexOf(code);
+      if (targetIndex > -1) {
+        myVillagers.splice(targetIndex, 1);
+      } else {
+        return res.json({code: 'villagers02', comment: res.__('ts.villagers.targetnotexists')})
+      }
       const db = MyVillagers.getInstance();
-      db.setMyVillager((req.user as UserDocument).id, villagersArray);
+      void db.setMyVillager((req.user as UserDocument).id, myVillagers);
+      return res.json({code: 'villagers00', comment: res.__('ts.villagers.deletesuccess')})
     }
-    return res.json({code: 'villagers00', comment: res.__('ts.villagers.deletesuccess')})
-  } catch (e) {
-    logger.error(e.message, e);
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      logger.error(e.message, e);
+    }
     return res.json({code: 500, comment: internalError})
   }
 });
 
 router.post('/getvillager', validateReact, validateLoggedIn, (req, res) => {
-  const code = decrypt(req.body.code as string);
+  const code = decrypt((req.body as codeBody).code);
   if (!validateCode(code)) {
     return res.json({code: 500, comment: internalError});
   }
@@ -156,7 +111,7 @@ router.post('/getvillager', validateReact, validateLoggedIn, (req, res) => {
 });
 
 router.post('/search', validateReact, (req, res) => {
-  const decrypted: string = decrypt(req.body.data)
+  const decrypted: string = decrypt((req.body as dataBody).data)
   if (decrypted === '' || decrypted.length <= 1) {
     return res.json({data: encrypt('')});
   }
@@ -167,5 +122,48 @@ router.post('/search', validateReact, (req, res) => {
   });
   return res.json({data: encrypt(JSON.stringify(result))});
 });
+
+router.put('/group', validateLoggedIn, (req, res) => {
+  const groupName: string = decrypt((req.body as dataBody).data);
+  if (req.session != null && req.user != null) {
+    const userTyped = req.user as UserDocument;
+    void MyVillagersDatabase.getInstance().changeGroup(userTyped._id, groupName)
+        .then(myVillagers => {
+          if (req.session != null) {
+            req.session.group = groupName;
+            req.session.myVillagers = myVillagers;
+            req.session.requireUpdate = true;
+            return res.json({code: 'group00', comment: '', data: encrypt(JSON.stringify(myVillagers))})
+          }
+        })
+  }
+});
+
+router.post('/groupmgmt', validateLoggedIn, validateReact, async (req, res) => {
+  if (req.user) {
+    const storage = await MyVillagersDatabase.getInstance().getStorage((req.user as UserDocument)._id)
+    return res.json({data: encrypt(JSON.stringify(storage))});
+  } else {
+    return res.json({})
+  }
+});
+
+router.post('/creategroup', validateLoggedIn, validateReact, async (req, res) => {
+  const failed = {code: 'group01', comment: 'failed'};
+  if (req.user) {
+    const user = req.user as UserDocument;
+    const groupName: string = decrypt((req.body as dataBody).data);
+    if (!/^[ㄱ-ㅎ|가-힣|a-z|A-Z|0-9|\*]+$/.test(groupName)) {
+      return res.json(failed);
+    }
+    const addGroupSuccess = await MyVillagersDatabase.getInstance().addGroup(user._id, groupName);
+    if (addGroupSuccess) {
+      return res.json({code: 'group00', comment: 'success'})
+    } else {
+      return res.json(failed);
+    }
+  }
+});
+
 
 export default router;

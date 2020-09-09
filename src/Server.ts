@@ -51,12 +51,24 @@ if (process.env.NODE_ENV === 'development') {
 
 // Security
 if (process.env.NODE_ENV === 'production') {
-    app.use(helmet());
+    const self = '\'self\'';
+    app.use(helmet({
+        contentSecurityPolicy: {
+            directives: {
+                defaultSrc: [self, 'emiyaj.vxz.me'],
+                scriptSrc: [self, 'data:', 'code.jquery.com', 'stackpath.bootstrapcdn.com'],
+                styleSrc: [self, 'fonts.googleapis.com', '*.fontawesome.com', 'data:', '\'unsafe-inline\'', 'cdn.jsdelivr.net', 'stackpath.bootstrapcdn.com', ],
+                fontSrc: [self, 'fonts.gstatic.com', 'data:', 'cdn.jsdelivr.net', 'stackpath.bootstrapcdn.com'],
+                imgSrc: [self, 'acnhcdn.com', '\'unsafe-inline\'',  'www.googletagmanager.com']
+            }
+        }
+    }));
 }
 app.use(session({
     secret: '***REMOVED***',
     name: '***REMOVED***',
     saveUninitialized: true,
+    resave: true,
     cookie: {
         path: '/',
         maxAge: 3600 * 1000
@@ -125,16 +137,16 @@ app.use('/', BaseRouter);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     if (req.headers.referer != null || req.headers.referer === '') {
-        const realUrl: string = url.parse(req.headers.referer!).hostname!;
+        const realUrl: string = url.parse(req.headers.referer).hostname!;
         if (!existsSync('Referer.json')) {
             writeFileSync('Referer.json', '{}');
         }
         const referer = JSON.parse(readFileSync('Referer.json').toString())
         let count = 1;
-        if (referer[req.headers.referer!] != null) {
-            count = count + referer[req.headers.referer!]
+        if (referer[req.headers.referer] != null) {
+            count = count + referer[req.headers.referer]
         }
-        referer[req.headers.referer!] = count
+        referer[req.headers.referer] = count
         writeFileSync('Referer.json', JSON.stringify(referer, null, 4));
         next();
     } else {

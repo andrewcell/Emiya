@@ -81,7 +81,7 @@ export class EmiyaJ {
                                 }
                         }
                     })
-                    .catch(e => {
+                    .catch(() => {
                         return reject(l('emiyaj.invaliderror'))
                     })
             })

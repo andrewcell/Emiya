@@ -6,6 +6,7 @@ env/
 node_modules/
 .node_modules/
 src/public/scripts/layout.js
+src/public/scripts/translation.js
 src/public/scripts/resetpw.js
 src/public/scripts/accounthelp.js
 src/public/scripts/villagers.js

@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @hidden
+ */
+
 export class Mail {
     private static host = 'dodo.ij.rs';
     public static generateVerifyEmail(email: string, verifyHash: string, locString: string, username: string): string {

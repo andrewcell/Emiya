@@ -92,7 +92,8 @@ router.post('/register', (req: Request, res: Response) => {
                 username: request.username,
                 verified: false,
                 verifyHash: hash,
-                myVillagers: [],
+                villagers: {'Default': []},
+                villagerGroup: 'Default',
                 registerIp: ip as string,
                 registerUserAgent: req.headers['user-agent'],
                 registerDatetime: Date.now()
@@ -252,6 +253,10 @@ router.get('/loginstatus', validateLoggedIn, (req, res) => {
     const user = req.user as UserDocument;
     const encrypted = encrypt(JSON.stringify({username: user.username, email: user.email}));
     return res.json({data: encrypted});
+});
+
+router.get('/logincheck', validateLoggedIn, (req, res) => {
+    return res.json(0);
 });
 
 export default router;

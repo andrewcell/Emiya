@@ -1,5 +1,11 @@
+/**
+ * @packageDocumentation
+ * @module EmiyaT
+ * @hidden
+ */
 import mongoose, {PassportLocalSchema, Schema} from 'mongoose';
 import passportLocalMongoose from 'passport-local-mongoose';
+import {VillagerStorage} from '@interfaces/MyVillagersDatabase';
 
 export type UserDocument = mongoose.Document & {
     username: string;
@@ -9,6 +15,8 @@ export type UserDocument = mongoose.Document & {
     verifyHash: string;
     verified: boolean;
     myVillagers: string[];
+    villagers: VillagerStorage;
+    villagersGroup: string;
     registerIp: string;
     registerUserAgent: string;
     registerDatetime: number;
@@ -24,6 +32,8 @@ const userSchema = new Schema({
     verifyHash: String,
     verified: Boolean,
     myVillagers: [String],
+    villagers: Object,
+    villagersGroup: String,
     registerIp: String,
     registerUserAgent: String,
     registerDatetime: Number,

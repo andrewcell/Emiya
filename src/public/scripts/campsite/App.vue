@@ -117,7 +117,6 @@
       }
 
       beforeUpdate(): void {
-        
       }
 
       isPageLoaded(): boolean {

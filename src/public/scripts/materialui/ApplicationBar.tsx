@@ -3,7 +3,6 @@ import {AppBar, Button, createStyles, Drawer, IconButton, List, Theme, Toolbar, 
 import MenuIcon from '@material-ui/icons/Menu';
 import {makeStyles} from '@material-ui/core/styles';
 import {ApplicationBarMenuGroupProp, ApplicationBarProp} from './interfaces';
-import useTheme from '@material-ui/core/styles/useTheme';
 import {l} from '../locale';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import ApplicationBarMenuGroup from './ApplicationBarMenuGroup';
@@ -48,7 +47,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const ApplicationBar = (props: ApplicationBarProp): JSX.Element => {
     const classes = useStyles();
-    const theme = useTheme();
     const [open, setOpen] = React.useState(false);
     const closeDrawer = (value: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
         if (

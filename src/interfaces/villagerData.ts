@@ -1,7 +1,12 @@
+/**
+ * @packageDocumentation
+ * @module Emibo
+ */
 export interface EmiboVillager {
-    name: string;
+    /** Name */ name: string;
     name_kor: string;
     num: string;
+    number: string;
     file: string;
     image: string;
     series: string;

@@ -56,7 +56,11 @@ router.get('/status', (req, res) => {
 });
 
 router.get(['/info', '/info/:param'], (req, res) => {
-    return res.render('info');
+    return res.render('vue', {script: 'info'});
+});
+
+router.get(['/translate', '/translate/:param'], (q, s) => {
+    return s.render('vue', {script: 'translation'});
 });
 
 router.get(['/points', '/points/:param'], (req, res) => {

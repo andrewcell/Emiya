@@ -1,4 +1,9 @@
 /**
+ * @packageDocumentation
+ * @hidden
+ */
+
+/**
  * Setup the winston logger.
  *
  * Documentation: https://github.com/winstonjs/winston

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {detectLanguage, l, setLanguage} from './locale';
 import Cookies from 'js-cookie';
-import Axios from 'axios';
+import Axios, {AxiosResponse} from 'axios';
 import {PointsState} from './points/interfaces';
 import {emiyaJ, url} from './api';
 import {decryptJava} from './encryption/AES';
@@ -14,18 +14,20 @@ import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Container from '@material-ui/core/Container';
 
-class Points extends React.Component<any, PointsState> {
-    constructor(props: any) {
+type PointsProps = unknown;
+
+class Points extends React.Component<PointsProps, PointsState> {
+    constructor(props: PointsProps) {
         super(props);
         if (Cookies.get('locale') == null) {
             const lang = detectLanguage(navigator.language);
             Cookies.set('locale', lang);
         }
-        setLanguage(Cookies.get('locale') as string);
+        void setLanguage(Cookies.get('locale') as string);
         this.state = {
             token: localStorage.getItem('token'),
             pageStatus: PageStatus.LOADING,
-            myPoints: new Map()
+            myPoints: new Map<string, number>()
         }
     }
 
@@ -33,7 +35,7 @@ class Points extends React.Component<any, PointsState> {
         const token = this.state.token;
         if (token != null) {
             Axios.get(url(emiyaJ, 'points', 'get'), {headers: {token}})
-                .then(r => {
+                .then((r: AxiosResponse<{data: string}>) => {
                     const data = JSON.parse(decryptJava(r.data.data))
                     this.setState({pageStatus: PageStatus.LOADED, myPoints: new Map(Object.entries(data))})
                 })
@@ -70,7 +72,7 @@ class Points extends React.Component<any, PointsState> {
         }
     }
 
-    render(): React.ReactElement | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(): React.ReactElement | string | number | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
             <>
                 <Layout content={<Container>{this.getContent()}</Container>} pageStatus={this.state.pageStatus}/>

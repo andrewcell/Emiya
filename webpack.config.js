@@ -25,7 +25,7 @@ module.exports = {
             {
                 test: /\.s(c|a)ss$/,
                 use: [
-                    'vue-style-loader',
+                    'style-loader',
                     'css-loader',
                     {
                         loader: 'sass-loader',
@@ -39,16 +39,29 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.pug$/,
+                use: ['pug-plain-loader']
+            }
         ],
 
     },
-    devtool: 'inline-source-map',
+    devtool: 'eval',
+    // devtool: 'inline-source-map',
     entry: {
         layout: './src/public/scripts/layout.tsx',
         villagers: './src/public/scripts/villagers.tsx',
         points: './src/public/scripts/points.tsx',
         campsite: './src/public/scripts/campsite.ts',
-        about: './src/public/scripts/about.ts'
+        about: './src/public/scripts/about.ts',
+        translation: './src/public/scripts/translation.ts'
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.vue']
