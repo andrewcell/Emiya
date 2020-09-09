@@ -1,0 +1,8 @@
+{
+  "inputFiles": ["./src"],
+  "mode": "modules",
+  "out": "docs",
+  "exclude": ["src/public/scripts"],
+  "disableSources": true,
+  "excludeNotExported": true
+}

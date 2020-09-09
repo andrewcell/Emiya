@@ -1,5 +1,9 @@
+/**
+ * @packageDocumentation
+ * @module Emibo
+ */
 export interface DownloadKey {
-    file: string;
+    /** Filename */file: string;
     name: string;
     sp?: boolean;
     fi?: boolean;

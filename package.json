@@ -7,7 +7,8 @@
     "start": "node -r module-alias/register ./dist",
     "start:dev": "concurrently \"nodemon --config nodemon.json\" \"webpack --watch\"",
     "test": "nodemon --config nodemon.test.json",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "typedoc": "typedoc --options typedoc.json --mode modules"
   },
   "_moduleAliases": {
     "@interfaces": "dist/interfaces",
@@ -98,6 +99,7 @@
     "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",
     "@types/react-lazy-load-image-component": "^1.5.1",
+    "@types/react-redux": "^7.1.9",
     "@types/react-router": "^5.1.8",
     "@types/react-router-dom": "^5.1.5",
     "@types/sqlite3": "^3.1.6",
@@ -120,6 +122,7 @@
     "eslint-plugin-prefer-arrow": "^1.2.2",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-tsdoc": "^0.2.7",
     "eslint-plugin-vue": "^7.0.0-beta.3",
     "fibers": "^5.0.0",
     "find": "^0.3.0",
@@ -142,6 +145,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-materialize": "^3.9.2",
+    "react-redux": "^7.2.1",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.1",
     "style-loader": "^1.2.1",
@@ -150,6 +154,9 @@
     "ts-loader": "^8.0.3",
     "ts-node": "^9.0.0",
     "tsconfig-paths": "^3.9.0",
+    "typedoc": "^0.19.1",
+    "typedoc-plugin-external-module-name": "^4.0.3",
+    "typedoc-plugin-sourcefile-url": "^1.0.6",
     "typescript": "^4.0.2",
     "typescript-eslint": "0.0.1-alpha.0",
     "uglifyjs-webpack-plugin": "^2.2.0",

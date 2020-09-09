@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module EmiyaT
+ */
+
 import logger from '@shared/Logger';
 import User from '@shared/User';
 
@@ -5,10 +10,28 @@ export interface VillagerStorage {
     [key: string]: string[];
 }
 
+/**
+ * Class of My villagers Database
+ */
 class MyVillagersDatabase {
     private static instance: MyVillagersDatabase;
+
+    /**
+     * Single-ton constructor ignored.
+     *
+     * @private
+     * @example
+     * const database = MyVillagersDatabase.getInstance();
+     */
     private constructor() {}
 
+    /**
+     * Get instance of MyVillagersDatabase if not initialized, create one and return.
+     *
+     * @returns {MyVillagersDatabase} - Instance of My villagers database.
+     * @example
+     * const database = MyVillagersDatabase.getInstance();
+     */
     public static getInstance(): MyVillagersDatabase {
         if (!MyVillagersDatabase.instance) {
             MyVillagersDatabase.instance = new MyVillagersDatabase();
@@ -16,11 +39,35 @@ class MyVillagersDatabase {
         return MyVillagersDatabase.instance
     }
 
+    /**
+     * Close database and disconnect remote server.
+     *
+     * @deprecated
+     * @example
+     * ```ts
+     * MyVillagersDatabase.getInstance().close();
+     * ```
+     */
     public close(): void {
         logger.info('My Villagers Database successfully closed.')
         // this.engine.close();
     }
 
+    /**
+     * Get selected group name, my villagers code list, list of groups as array.
+     *
+     * @param {string} userId - ObjectId of user.
+     * @returns {string[]} - Index 0- Selected group, 1- Code list of my villagers from selected group, 2- List of groups.
+     * @example
+     * ```ts
+     * void MyVillagersDatabase.getInstance().getMyVillagers('userid123').then(arr => {
+     *     const selectedGroup = arr[0];
+     *     const myVillagers = arr[1];
+     *     const groups = arr[2];
+     *     console.log(`You selected this group : ${selectedGroup}, Your villagers: ${myVillagers}, Your groups: ${groups}`)
+     * });
+     * ```
+     */
     public getMyVillagers(userId: string): Promise<[string, string[], string[]]> {
         return new Promise((resolve) => {
             User.findById(userId)
@@ -37,6 +84,15 @@ class MyVillagersDatabase {
         });
     }
 
+    /**
+     * Update my villager code list to database.
+     *
+     * @param {string} userId - ObjectId of user.
+     * @param {string[]} codeArray - Array of villagers codes.
+     * @returns {Promise<void>} - Returns nothing even success or fail.
+     * @example
+     * void MyVillagersDatabase.getInstance().setMyVillager('userid123', ['cat23', 'cbr19']).then(() => { console.log('Updated! or maybe failed. Check your server log!') });
+     */
     public setMyVillager(userId: string, codeArray: string[]): Promise<void> {
         return new Promise<void>(resolve => {
             User.findById(userId)
@@ -56,6 +112,17 @@ class MyVillagersDatabase {
         });
     }
 
+    /**
+     * Select a different group and update the selected group field.
+     *
+     * @param {string} userId - ObjectId of user.
+     * @param {string} groupName - Name of exists group.
+     * @returns {string[]} - Return my villagers' code list of the newly selected group. If the group does not exist or on error, return an empty array.
+     * @example
+     * void MyVillagersDatabase.getInstance().changeGroup('userid123', 'OtherNintendoVillagers').then(villagers => {
+     *     console.log(`Here is your villagers' codes: ${villagers}`);
+     * });
+     */
     public changeGroup(userId: string, groupName: string): Promise<string[]> {
         return new Promise<string[]>(resolve => {
         User.findById(userId)
@@ -70,10 +137,10 @@ class MyVillagersDatabase {
                             })
                             .catch((e: Error) => {
                                 logger.error(e.message, e);
-                                resolve();
+                                resolve([]);
                             })
                     } else {
-                        resolve(['error'])
+                        resolve([])
                     }
                 }
             })
@@ -84,6 +151,18 @@ class MyVillagersDatabase {
         });
     }
 
+    /**
+     * Get whole villagers storage of user.
+     *
+     * @param {string} userId - ObjectId of user.
+     * @returns {VillagerStorage} - Return storage from the database. If on error or not exists user, returns an empty object.
+     * @example
+     * void MyVillagersDatabase.getInstance().getStorage('userid123').then(storage => {
+     *     Object.entries(storage).map(group => {
+     *         console.log(`${group[0]}: ${group[1]}`);
+     *     });
+     * });
+     */
     public getStorage(userId: string): Promise<VillagerStorage> {
         return new Promise<VillagerStorage>((resolve) => {
         User.findById(userId)
@@ -108,7 +187,7 @@ class MyVillagersDatabase {
      * @param  {string} groupName - Name of new group.
      * @returns {boolean} - If worked without any error, returns true.
      * @example
-     * void addGroup('userid123', 'newGroup').then(isSuccess => { console.log('Created!'); });
+     * void addGroup('userid123', 'newGroup').then(isSuccess => { if (isSuccess) { console.log('Created!'); } });
      */
     public addGroup(userId: string, groupName: string): Promise<boolean> {
         return new Promise<boolean>(resolve => {
