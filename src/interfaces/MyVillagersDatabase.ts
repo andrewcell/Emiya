@@ -10,10 +10,7 @@ export interface VillagerStorage {
     [key: string]: string[];
 }
 
-/**
- * Class of My villagers Database
- */
-class MyVillagersDatabase {
+export default class MyVillagersDatabase {
     private static instance: MyVillagersDatabase;
 
     /**
@@ -21,7 +18,9 @@ class MyVillagersDatabase {
      *
      * @private
      * @example
+     * ```ts
      * const database = MyVillagersDatabase.getInstance();
+     * ```
      */
     private constructor() {}
 
@@ -30,7 +29,9 @@ class MyVillagersDatabase {
      *
      * @returns {MyVillagersDatabase} - Instance of My villagers database.
      * @example
+     * ```ts
      * const database = MyVillagersDatabase.getInstance();
+     * ```
      */
     public static getInstance(): MyVillagersDatabase {
         if (!MyVillagersDatabase.instance) {
@@ -91,7 +92,9 @@ class MyVillagersDatabase {
      * @param {string[]} codeArray - Array of villagers codes.
      * @returns {Promise<void>} - Returns nothing even success or fail.
      * @example
+     * ```ts
      * void MyVillagersDatabase.getInstance().setMyVillager('userid123', ['cat23', 'cbr19']).then(() => { console.log('Updated! or maybe failed. Check your server log!') });
+     * ```
      */
     public setMyVillager(userId: string, codeArray: string[]): Promise<void> {
         return new Promise<void>(resolve => {
@@ -119,9 +122,11 @@ class MyVillagersDatabase {
      * @param {string} groupName - Name of exists group.
      * @returns {string[]} - Return my villagers' code list of the newly selected group. If the group does not exist or on error, return an empty array.
      * @example
+     * ```ts
      * void MyVillagersDatabase.getInstance().changeGroup('userid123', 'OtherNintendoVillagers').then(villagers => {
      *     console.log(`Here is your villagers' codes: ${villagers}`);
      * });
+     * ```
      */
     public changeGroup(userId: string, groupName: string): Promise<string[]> {
         return new Promise<string[]>(resolve => {
@@ -157,11 +162,13 @@ class MyVillagersDatabase {
      * @param {string} userId - ObjectId of user.
      * @returns {VillagerStorage} - Return storage from the database. If on error or not exists user, returns an empty object.
      * @example
+     * ```ts
      * void MyVillagersDatabase.getInstance().getStorage('userid123').then(storage => {
      *     Object.entries(storage).map(group => {
      *         console.log(`${group[0]}: ${group[1]}`);
      *     });
      * });
+     * ```
      */
     public getStorage(userId: string): Promise<VillagerStorage> {
         return new Promise<VillagerStorage>((resolve) => {
@@ -187,7 +194,9 @@ class MyVillagersDatabase {
      * @param  {string} groupName - Name of new group.
      * @returns {boolean} - If worked without any error, returns true.
      * @example
+     * ```ts
      * void addGroup('userid123', 'newGroup').then(isSuccess => { if (isSuccess) { console.log('Created!'); } });
+     * ```
      */
     public addGroup(userId: string, groupName: string): Promise<boolean> {
         return new Promise<boolean>(resolve => {
@@ -216,53 +225,3 @@ class MyVillagersDatabase {
         })
     }
 }
-/* SQLite 3
-class MyVillagersDatabase {
-    private static instance: MyVillagersDatabase;
-    // private engine = sqlite3('MyVillagers.db');
-
-    // private columns = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'];
-
-    private constructor() {}
-
-    public static getInstance(): MyVillagersDatabase {
-        if (!MyVillagersDatabase.instance) {
-            MyVillagersDatabase.instance = new MyVillagersDatabase();
-        }
-        return MyVillagersDatabase.instance
-    }
-
-    public close(): void {
-        logger.info('My Villagers Database successfully closed.')
-        // this.engine.close();
-    }
-
-    public getMyVillagers(userId: string): string[] {
-        try {
-            const stmt = this.engine.prepare('SELECT first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth FROM my WHERE userid = ?').get(userId);
-            const arr: string[] = [];
-            for (const [k ,v] of Object.entries(stmt)) {
-                if (this.columns.includes(k)) {
-                    arr.push(v as string);
-                }
-            }
-            return arr;
-        } catch (e) {
-            logger.error(e.message, e);
-            return [];
-        }
-    }
-
-    public setMyVillager(userId: string, dataArray: string[]): void {
-        const length = dataArray.length;
-        const data = resize(dataArray, 10, null);
-        // UPDATE my SET first=?,second=?,third=?,fourth=?,fifth=?,sixth=?,seventh=?,eighth=?,ninth=?,tenth=? WHERE userid=?;
-        const stmt = this.engine.prepare('INSERT OR REPLACE INTO my (first,second,third,fourth,fifth,sixth,seventh,eighth,ninth,tenth,userid) VALUES (?,?,?,?,?,?,?,?,?,?,?)');
-        const result = stmt.run(data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],userId);
-        if (result.changes === 1) {
-            // return true;
-        }
-    }
-}*/
-
-export default MyVillagersDatabase

@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module EmiyaT
+ * @hidden
+ */
 import mongoose, {PassportLocalSchema, Schema} from 'mongoose';
 import passportLocalMongoose from 'passport-local-mongoose';
 import {VillagerStorage} from '@interfaces/MyVillagersDatabase';

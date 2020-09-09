@@ -1,9 +1,9 @@
 /**
- * dasda
- * @interface
+ * @packageDocumentation
+ * @module Emibo
  */
 export interface EmiboVillager {
-    /** Name*/name: string;
+    /** Name */ name: string;
     name_kor: string;
     num: string;
     number: string;

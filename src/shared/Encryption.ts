@@ -1,5 +1,14 @@
+/**
+ * @packageDocumentation
+ * @module EmiyaT
+ */
 import {WordArray, enc, mode, pad, AES, DecryptedMessage} from 'crypto-js';
 
+/**
+ * Generate a key from word combinations.
+ *
+ * @returns {string} Key - Return key for encrypt/decrypt payload.
+ */
 export const getKey = (): string => {
     return [***REMOVED***].toString()
 }
