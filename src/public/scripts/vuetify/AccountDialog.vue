@@ -40,7 +40,7 @@ export default class AccountDialog extends Vue {
   toprightdialog = false;
 
   redirectToLogout(): void {
-    localStorage.clear();
+    localStorage.removeItem('token');
     window.location.replace('/admin/logout');
   }
 }

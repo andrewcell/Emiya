@@ -13,7 +13,7 @@ class AccountDialog extends React.Component<AccountDialogProp, never> {
     }
 
     handleLogout = (): void => {
-        localStorage.clear();
+        localStorage.removeItem('token');
         window.location.replace('/admin/logout');
     }
 
