@@ -17,6 +17,9 @@ import {Register} from '../register';
 import RegisterDialog from './RegisterDialog';
 import Axios, {AxiosError, AxiosResponse} from 'axios';
 import {LoginResponse} from '../repsonseBody';
+import {Simulate} from 'react-dom/test-utils';
+import encrypted = Simulate.encrypted;
+import {encrypt} from '../encryption/AES';
 
 enum MessageType {
     ERROR, SUCCESS, STANDBY
@@ -60,7 +63,8 @@ class LoginDialog extends React.Component<LoginDialogProp, LoginDialogState> {
             return;
         }
         this.setState({process: true});
-        Axios.post(new b64('L2FkbWluL2xvZ2lu').decode(), {username: this.state.username, password: this.state.password})
+        const data = encrypt(JSON.stringify({username: this.state.username, password: this.state.password}));
+        Axios.post(new b64('L2FkbWluL2xvZ2lu').decode(), {data})
             .then((r: AxiosResponse<LoginResponse>) => {
                 if (r.data.code === 'login00') {
                     localStorage.setItem('token', r.data.comment)

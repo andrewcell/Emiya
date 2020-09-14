@@ -86,6 +86,7 @@ import Axios, { AxiosResponse } from 'axios';
 import { b64 } from '../b64';
 import { l } from '../locale';
 import RegisterDialog from './RegisterDialog.vue';
+import {encrypt} from '../encryption/AES';
 
 @Component({
   components: {
@@ -116,7 +117,8 @@ export default class LoginDialog extends Vue {
     console.log(this.$store.state.LoginStatusStore.username) // get value from store */
     if (this.valid) {
       this.loading = true;
-      Axios.post(new b64('L2FkbWluL2xvZ2lu').decode(), {username: this.username, password: this.password})
+      const data = encrypt(JSON.stringify({username: this.username, password: this.password}));
+      Axios.post(new b64('L2FkbWluL2xvZ2lu').decode(), {data})
         .then((res: AxiosResponse) => {
           const result = res.data
           switch (result.code as string) {

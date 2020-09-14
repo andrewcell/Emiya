@@ -41,8 +41,9 @@ const generateHash = (password: string, salt: string): string => {
     return crypto.pbkdf2Sync(password, salt, 25000, 512, 'sha256').toString('hex');
 }
 */
-router.post('/login', (req: Request, res: Response, next: NextFunction) => {
-    const body = req.body as {username: string; password: string}
+router.post('/login', (req: Request, res: Response) => {
+    const encryptedBody = (req.body as {data: string}).data
+    const body = JSON.parse(decrypt(encryptedBody)) as {username: string; password: string};
     User.authenticate()(body.username, body.password)
         .then((result) => {
             if (result.error) {
