@@ -7,16 +7,13 @@ import {internalError} from '@shared/constants';
 import logger from '@shared/Logger';
 import {villagers} from 'animal-crossing';
 import MyVillagersDatabase from '@interfaces/MyVillagersDatabase';
+import {dataBody, codeBody} from '@interfaces/Body';
 
 const router = Router();
 
 const validateCode = (code: string): boolean => {
   return villagers.find(v => v.filename === code) != null;
 }
-
-type dataBody = {data: string;}
-
-type codeBody = {code: string;}
 
 router.get(['/', '/:param'], (req: Request, res: Response) => {
   const title = res.__('global.title.subtitle', res.__('villagers.title'))
