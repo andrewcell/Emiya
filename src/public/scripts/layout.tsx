@@ -118,7 +118,7 @@ const modules: CardProp[] = [
         links: [
             {link: '/points', title: l('home.enter')}
         ]
-    }, */
+    },
     {
         title: l('home.translations.title'),
         description: l('home.translations.description'),
@@ -126,7 +126,7 @@ const modules: CardProp[] = [
         links: [
             {link: '/translate', title: l('home.enter')}
         ]
-    },
+    }, */
     {
         title: l('home.about.title'),
         description: l('home.about.description'),

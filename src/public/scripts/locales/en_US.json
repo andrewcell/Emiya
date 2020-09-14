@@ -209,6 +209,8 @@
   "villagers.personalities.peppy": "Peppy",
   "villagers.personalities.sisterly": "Sisterly",
   "villagers.personalities.smug": "Smug",
+  "villagers.my.changegroup": "Change group",
+  "villagers.my.changegroupdesc": "Change the villagers' group. Villagers' group system makes you able to manage multiple villagers. Only selected villagers' group can use on other pages.",
   "villagers.personalities.snooty": "Snooty",
   "villagers.prefer.match": "Match type",
   "villagers.prefer.villager": "Villager to search",

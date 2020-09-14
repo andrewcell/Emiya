@@ -5,10 +5,4 @@ declare namespace Express {
         groups: string[];
         requireUpdate: boolean;
     }
-
-    interface Request {
-        body: {
-            data: string | null;
-        }
-    }
 }
