@@ -68,14 +68,18 @@ router.post('/login', (req: Request, res: Response) => {
                 Axios.post(emiyaJ + '/admin/login', {data: encryptJava(JSON.stringify({username: userAsDocument.username, password: userAsDocument.hash, ipAddress: req.headers['x-forwarded-for']}))})
                     .then((tokenRes: AxiosResponse<{data: string}>) => {
                         const token = tokenRes.data.data
-                        res.cookie('locale', userAsDocument.language);
+                        if (userAsDocument.language != null) {
+                            res.cookie('locale', userAsDocument.language);
+                        }
                         res.cookie('token', token);
                         res.json({code: 'login00', comment: token});
                         return user
                     })
                     .catch((e: Error) => {
                         logger.error(e.message, e);
-                        res.cookie('locale', userAsDocument.language);
+                        if (userAsDocument.language != null) {
+                            res.cookie('locale', userAsDocument.language);
+                        }
                         res.json({code: 'login00', comment: 'success'});
                         return user
                     })
