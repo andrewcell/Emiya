@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import emiboRouter from './index';
 import LanguageRouter from './language';
 import ControlPanelRouter from './controlpanel';
 import VillagerRouter from './villager';
@@ -115,7 +114,6 @@ router.get('/cal/:code', (req, res) => {
 });
 
 // Add sub-routes
-router.use('/emibo', emiboRouter);
 router.use('/lang', LanguageRouter);
 router.use('/cp', ControlPanelRouter);
 router.use('/villagers', VillagerRouter);

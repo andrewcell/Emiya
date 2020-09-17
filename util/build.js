@@ -10,7 +10,6 @@ try {
     fs.copySync('./src/public/images', './dist/public/images');
     fs.copySync('./src/public/manifests', './dist/public/manifests');
     fs.copySync('./src/public/apple-touch-icon.png', './dist/public/apple-touch-icon.png');
-    fs.copySync('./src/public/scripts/emibo.js', './dist/public/scripts/emibo.js');
     fs.copySync('./src/views', './dist/views');
     fs.copySync('./src/data', './dist/data');
 
