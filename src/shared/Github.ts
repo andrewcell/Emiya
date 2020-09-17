@@ -42,6 +42,7 @@ class Github {
         get('Emiya').then(() => {return});
         get('EmiyaJ').then(() => {return});
         get('EmiyaP').then(() => {return});
+        get('Emibo').then(() => {return});
     }
 }
 
