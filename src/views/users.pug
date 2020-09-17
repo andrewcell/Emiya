@@ -17,14 +17,13 @@ block content
             tbody
                 each user in users
                     tr
-                        td=user.myVillagers
+                        td=JSON.stringify(user.villagers, null, 4)
                         td=user.email
                         td=user.username
                         td=(user.verified) ? "Verified" : "Not Verified"
                         if (user.registerDatetime)
                             td#registertime=moment(user.registerDatetime).format('YYYY-MM-DD HH:mm:ss')
-                        else 
+                        else
                             td#registertime=moment(0).format('YYYY-MM-DD HH:mm:ss')
                         td=user.registerIp
                         td=user.registerUserAgent
-                                
