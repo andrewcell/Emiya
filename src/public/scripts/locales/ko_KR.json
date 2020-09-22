@@ -276,5 +276,8 @@
   "villagers.tooltip.deletemyvillagers": "선택된 주민 그룹에서 제거합니다.",
   "villagers.tooltip.livesearch": "체크되어 있으면 검색 내용이 바뀌는 순간 검색됩니다.",
   "villagers.my.changegroup": "주민 그룹 변경",
+  "villagers.group.deleteconfirm": "그룹을 삭제하면 그룹과 그룹과 연관된 모든 데이터가 삭제됩니다. 계속하려면 승인을 누르세요.",
+  "villagers.group.confirm": "승인",
+  "villagers.group.deleted": "삭제되었습니다.",
   "villagers.my.changegroupdesc": "내 주민 그룹을 변경합니다. 주민 그룹은 여러 주민 세트를 가질 수 있게합니다. 선택하지 않은 그룹은 존재하지 않는 것처럼 됩니다. 주민 추가, 옷 검색, 친밀도 계산기 등에서 선택된 그룹 외의 주민은 선택할 수 없고 조작도 할 수 없습니다."
 }
