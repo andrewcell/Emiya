@@ -4,6 +4,7 @@ import logger from '@shared/Logger';
 
 // Start the server
 const port = Number(process.env.PORT || 3000);
-app.listen(port, '0.0.0.0', () => {
-    logger.info('Express server started on port: ' + port);
+const host = (process.env.HOST || '0.0.0.0');
+app.listen(port, host, () => {
+    logger.info(`Emiya listening on ${host}:${port}`);
 });
