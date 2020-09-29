@@ -50,7 +50,7 @@ const getLocaleInfo = (e: Villager | Item): localeInfo[] => {
 const getItemImage = (i: Item): string | null => {
     const image = (i.image || i.framedImage || i.inventoryImage || i.closetImage || i.albumImage || i.storageImage || null)
     if (image == null && i.variations != null) {
-        const vi = i.variations[0].image;
+        const vi = (i.variations[0].image || i.variations[0].closetImage || i.variations[0].storageImage);
         if (vi != null) {
             return vi
         }
