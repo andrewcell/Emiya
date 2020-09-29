@@ -276,5 +276,8 @@
   "villagers.tooltip.addtomyvillagers": "Add to selected My Villagers group.",
   "villagers.tooltip.comments": "You can leave a comment about villager. HTML tag will be ignored.",
   "villagers.tooltip.deletemyvillagers": "Remove from selected My Villagers group.",
-  "villagers.tooltip.livesearch": "If checked, Search instantly after value changes"
+  "villagers.tooltip.livesearch": "If checked, Search instantly after value changes",
+  "translations.emptyfield": "This field must be filled.",
+  "translations.atleast": "You must enter at least 4 letters.",
+  "translations.viewimage": "Show images"
 }

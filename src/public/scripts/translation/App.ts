@@ -1,6 +1,8 @@
-import {Vue, Component} from 'vue-property-decorator';
+import {Component, Vue} from 'vue-property-decorator';
 import Layout from '../vuetify/Layout.vue';
-import {l} from '../locale';
+import {getLanguage, l} from '../locale';
+import Axios, {AxiosResponse} from 'axios';
+import {encrypt} from '../encryption/AES';
 
 type localeInfo = {
     language: string;
@@ -9,6 +11,7 @@ type localeInfo = {
 
 type searchResult = {
     result: localeInfo[];
+    image: string | undefined;
     name: string;
 }
 
@@ -20,20 +23,27 @@ type searchResult = {
 export default class Translation extends Vue {
     l = l;
     languages = ['kr', 'us']
-    locales: localeInfo[] = [
-        {language: 'jp', name: 'nihonggo'},
-        {language: 'kr', name: '한국어이름'},
-        {language: 'en', name: 'EnglishName'},
-        {language: 'zh', name: 'zhongguaname'},
-        {language: 'ru', name: 'ruskiname'}
-    ];
-    result: searchResult[] = [
-        {result: this.locales, name: '테스트'},
-        {result: this.locales, name: '테스트2'},
-        {result: this.locales, name: '테스트3'},
-        {result: this.locales, name: '테스트5'},
-    ];
+    search = ''
+    locales: localeInfo[] = [];
+    result: searchResult[] = [];
+    showImage = false;
+    atLeastFour =  [
+        (v: string): string | boolean => !!v || l('translations.emptyfield'),
+        (v: string): string | boolean => v.length >= this.getLetterLimit() || l('translations.atleast'),
+    ]
 
+    getLetterLimit(): number {
+        const language = getLanguage();
+        switch (language) {
+            case 'ko_KR':
+                return 2
+            case 'ja_JP':
+                return 3
+            case 'en_US':
+            default:
+                return 4
+        }
+    }
     getConturyCode(code: string): string {
         switch (code) {
             case 'jp':
@@ -48,5 +58,12 @@ export default class Translation extends Vue {
             default:
                 return 'us';
         }
+    }
+
+    query(): void {
+        void Axios.post('translation', {data: encrypt(this.search.replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, ''))})
+            .then((r: AxiosResponse<searchResult[]>) => {
+                this.result = r.data;
+            })
     }
 }

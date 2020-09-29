@@ -7,17 +7,31 @@
     <Layout />
     <v-container>
       <v-text-field
+        v-model="search"
         :label="l('translations.search') + ' + Enter'"
         outlined
         color="green"
-        @keyup.enter="() => {}"
+        :rules="atLeastFour"
+        @keyup.enter="query"
+      />
+      <v-checkbox
+        v-model="showImage"
+        :label="l('translations.viewimage')"
       />
       <v-row>
         <v-col
           v-for="r in result"
           :key="r.name"
+          lg="4"
+          md="6"
+          sm="12"
         >
           <v-card>
+            <img
+              v-if="showImage"
+              :src="r.image"
+              alt="r"
+            >
             <v-card-title>{{ r.name }}</v-card-title>
             <v-list dense>
               <v-list-item
@@ -28,7 +42,7 @@
                   <span :class="'flag-icon flag-icon-' + getConturyCode(locale.language)" />
                 </v-list-item-avatar>
                 <v-list-item-content>
-                  <v-list-item-title v-text="'sbsdfbsdfbsdfbfdb'" />
+                  <v-list-item-title v-text="locale.name" />
                 </v-list-item-content>
               </v-list-item>
             </v-list>
@@ -40,10 +54,10 @@
         dark
         style="margin-top: 10px"
         color="green"
+        @click="query"
       >
         {{ l('translations.manualbutton') }}
       </v-btn>
-
     </v-container>
   </v-app>
 </template>

@@ -1,11 +1,9 @@
 <template />
 
 <script lang="ts">
-export default {
-name: 'MultipleResultDialog'
-}
+  export default {
+  name: 'MultipleResultDialog'
+  }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped />
