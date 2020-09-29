@@ -57,4 +57,11 @@ const campsite = {
     ]
 }
 
-export default [emibo, villagers, /* campsite, points, */ system, language]
+const translations = {
+    title: l('home.translations.title'),
+    menu: [
+        {title: l('home.translations.title'), link: '/translate'},
+    ]
+}
+
+export default [emibo, villagers, /* campsite, points, */ translations, system, language]
