@@ -31,6 +31,7 @@
               v-if="showImage && r.image"
               :src="r.image"
               alt=""
+              width="128"
             >
             <v-card-title>{{ r.name }}</v-card-title>
             <v-list dense>
