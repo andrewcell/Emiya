@@ -28,9 +28,9 @@
         >
           <v-card>
             <img
-              v-if="showImage"
+              v-if="showImage && r.image"
               :src="r.image"
-              alt="r"
+              alt=""
             >
             <v-card-title>{{ r.name }}</v-card-title>
             <v-list dense>
