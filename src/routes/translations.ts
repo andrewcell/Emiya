@@ -88,10 +88,11 @@ const getLetterLimit = (language: string): number => {
 const searchVillager = (keyword: string): Villager[] => {
     return villagers.filter(v => {
         if (v.translations != null) {
-            return v.name.toLowerCase().includes(keyword) ||
+            return v.name.toLowerCase().includes(keyword.toLowerCase()) ||
                 v.translations.korean.includes(keyword) ||
                 v.translations.japanese.includes(keyword) ||
-                v.translations?.chineseTraditional.includes(keyword)
+                v.translations?.chineseTraditional.includes(keyword) ||
+                v.translations.russian.includes(keyword.toLowerCase())
         } else {
             return false
         }
