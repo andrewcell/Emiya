@@ -92,7 +92,7 @@
   "points.main.error": "오류가 발생하였습니다. 로그인하지 않았다면 로그인을 해주세요.",
   "points.main.title": "내 주민과 친밀도",
   "translations.manualbutton": "검색",
-  "translations.search": "아이템, 주민 등의 이름을 입력해주세요.",
+  "translations.search": "검색 키워드를 입력해주세요.",
   "villagers.button.add": "내 주민에 추가",
   "villagers.card.birthday": "생일",
   "villagers.card.color": "선호 색상",
