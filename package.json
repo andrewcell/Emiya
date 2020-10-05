@@ -24,7 +24,6 @@
     "aes-js": "^3.1.2",
     "animal-crossing": "^6.7.0",
     "bcrypt": "^5.0.0",
-    "better-sqlite3": "^7.1.1",
     "chart.js": "^2.9.3",
     "chartjs-plugin-datalabels": "^0.7.0",
     "command-line-args": "^5.1.1",
