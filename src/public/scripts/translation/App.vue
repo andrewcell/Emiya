@@ -21,18 +21,23 @@
       <v-tab>{{ l('translations.reaction') }}</v-tab>
     </v-tabs>
     <v-container>
-      <v-text-field
-        v-model="search"
-        :label="l('translations.search') + ' + Enter'"
-        outlined
-        color="green"
-        :rules="atLeastFour"
-        @keyup.enter="query"
-      />
-      <v-checkbox
-        v-model="showImage"
-        :label="l('translations.viewimage')"
-      />
+      <v-form
+        v-model="valid"
+        @submit.prevent="true"
+      >
+        <v-text-field
+          v-model="search"
+          :label="l('translations.search') + ' + Enter'"
+          outlined
+          color="green"
+          :rules="atLeastFour"
+          @keyup.enter="query"
+        />
+        <v-checkbox
+          v-model="showImage"
+          :label="l('translations.viewimage')"
+        />
+      </v-form>
       <v-row>
         <v-col
           v-for="r in result"

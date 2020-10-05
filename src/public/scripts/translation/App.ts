@@ -30,8 +30,10 @@ export default class Translation extends Vue {
     atLeastFour =  [
         (v: string): string | boolean => !!v || l('translations.emptyfield'),
         (v: string): string | boolean => v.length >= this.getLetterLimit() || l('translations.atleast'),
+        (v: string): string | boolean => !/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi.test(v) || l('translations.unacceptable')
     ]
     method = 0
+    valid = false
 
     getLetterLimit(): number {
         const language = getLanguage();
@@ -45,6 +47,7 @@ export default class Translation extends Vue {
                 return 4
         }
     }
+
     getConturyCode(code: string): string {
         switch (code) {
             case 'jp':
@@ -66,9 +69,16 @@ export default class Translation extends Vue {
     }
 
     query(): void {
-        void Axios.post('translation', {data: encrypt(JSON.stringify({keyword: this.search.replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, ''), method: this.method}))})
+        if (this.valid) {
+            void Axios.post('translation', {
+                data: encrypt(JSON.stringify({
+                    keyword: this.search.replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, ''),
+                    method: this.method
+                }))
+            })
             .then((r: AxiosResponse<searchResult[]>) => {
                 this.result = r.data;
             })
+        }
     }
 }

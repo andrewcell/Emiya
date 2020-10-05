@@ -292,5 +292,6 @@
   "translations.construct": "건물",
   "translations.event": "이벤트",
   "translations.recipe": "레시피",
-  "translations.reaction": "리액션"
+  "translations.reaction": "리액션",
+  "translations.unacceptable": "사용할 수 없는 문자가 포함되어 있습니다."
 }
