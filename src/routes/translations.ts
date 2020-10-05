@@ -1,9 +1,13 @@
 import { Request, Response, Router} from 'express';
-import {items, villagers} from 'animal-crossing';
+import {creatures, items, npcs, reactions, recipes, villagers} from 'animal-crossing';
 import {dataBody} from '@interfaces/Body';
 import {decrypt} from '@shared/Encryption';
 import {Item} from 'animal-crossing/lib/types/Item';
 import {Villager} from 'animal-crossing/lib/types/Villager';
+import {Creature} from 'animal-crossing/lib/types/Creature';
+import {Npc} from 'animal-crossing/lib/types/NPC';
+import {Recipe} from 'animal-crossing/lib/types/Recipe';
+import {Reaction} from 'animal-crossing/lib/types/Reaction';
 
 const router = Router();
 
@@ -18,7 +22,9 @@ type searchResult = {
     name: string;
 }
 
-const getName = (e: Item | Villager, language: string): string => {
+type Entry = Item | Villager | Creature | Npc | Recipe | Reaction;
+
+const getName = (e: Entry, language: string): string => {
     if (e.translations == null) {
         return e.name
     } else {
@@ -33,7 +39,7 @@ const getName = (e: Item | Villager, language: string): string => {
     }
 }
 
-const getLocaleInfo = (e: Villager | Item): localeInfo[] => {
+const getLocaleInfo = (e: Entry): localeInfo[] => {
     if (e.translations != null) {
         return [
             {language: 'jp', name: e.translations.japanese},
@@ -47,13 +53,22 @@ const getLocaleInfo = (e: Villager | Item): localeInfo[] => {
     }
 }
 
-const getItemImage = (i: Item): string | null => {
-    const image = (i.image || i.framedImage || i.inventoryImage || i.closetImage || i.albumImage || i.storageImage || null)
-    if (image == null && i.variations != null) {
+const getItemImage = (i: Entry): string | null => {
+    const image: string | null = null;
+    if ('image' in i && i.image != null) return i.image
+    if ('framedImage' in i && i.framedImage != null) return i.framedImage
+    if ('inventoryImage' in i && i.inventoryImage != null) return i.inventoryImage
+    if ('closetImage' in i && i.closetImage != null) return i.closetImage
+    if ('albumImage' in i && i.albumImage != null) return i.albumImage
+    if ('storageImage' in i && i.storageImage != null) return i.storageImage
+    if ('variations' in i && i.variations != null) {
         const vi = (i.variations[0].image || i.variations[0].closetImage || i.variations[0].storageImage);
         if (vi != null) {
             return vi
         }
+    }
+    if ('iconImage' in i) {
+        return i.iconImage
     }
     return image;
 }
@@ -66,52 +81,113 @@ const getLetterLimit = (language: string): number => {
             return 3
         case 'en_US':
         default:
-            return 4
+            return 3
     }
 }
 
-router.post('/', (req: Request, res: Response) => {
-    const search = decrypt((req.body as dataBody).data).replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, '')
-    if (search === '') { return res.json([]) }
-    if (search.length < getLetterLimit(req.language)) { return res.json([]) }
-    const villagerResult = villagers.filter(v => {
+const searchVillager = (keyword: string): Villager[] => {
+    return villagers.filter(v => {
         if (v.translations != null) {
-            return v.name.toLowerCase().includes(search) ||
-                v.translations.korean.includes(search) ||
-                v.translations.japanese.includes(search) ||
-                v.translations?.chineseTraditional.includes(search)
+            return v.name.toLowerCase().includes(keyword) ||
+                v.translations.korean.includes(keyword) ||
+                v.translations.japanese.includes(keyword) ||
+                v.translations?.chineseTraditional.includes(keyword)
         } else {
             return false
         }
     });
-    const result = items.filter(i => {
+}
+
+const searchItem = (keyword: string): Item[] => {
+    return items.filter(i => {
         if (i.translations != null) {
-            return i.name.toLowerCase().includes(search.toLowerCase()) ||
-                i.translations?.korean.includes(search) ||
-                i.translations?.chineseTraditional.includes(search) ||
-                i.translations?.french.includes(search.toLowerCase()) ||
-                i.translations?.german.includes(search.toLowerCase()) ||
-                i.translations?.russian.includes(search.toLowerCase()) ||
-                i.translations?.japanese.includes(search)
+            return i.name.toLowerCase().includes(keyword.toLowerCase()) ||
+                i.translations?.korean.includes(keyword) ||
+                i.translations?.chineseTraditional.includes(keyword) ||
+                i.translations?.french.includes(keyword.toLowerCase()) ||
+                i.translations?.german.includes(keyword.toLowerCase()) ||
+                i.translations?.russian.includes(keyword.toLowerCase()) ||
+                i.translations?.japanese.includes(keyword)
         } else {
             return false;
         }
     });
-    const responseBody: searchResult[] = []
-    villagerResult.map(v => {
-        if (v.translations != null) {
-            const locales: localeInfo[] = getLocaleInfo(v)
-            const name = getName(v, req.language)
-            responseBody.push({result: locales, name, image: v.iconImage});
+}
+
+const searchCreature = (keyword: string): Creature[] => {
+    return creatures.filter(c => {
+        if (c.translations != null) {
+            return c.name.toLowerCase().includes(keyword.toLowerCase()) ||
+                c.translations.korean.includes(keyword) ||
+                c.translations.japanese.includes(keyword) ||
+                c.translations.chineseTraditional.includes(keyword) ||
+                c.translations.russian.includes(keyword.toLowerCase())
+        } else {
+            return false;
+        }
+    })
+}
+
+const searchNpc = (keyword: string): Npc[] => {
+    return npcs.filter(n => {
+        return n.name.toLowerCase().includes(keyword.toLowerCase()) ||
+            n.translations.korean.includes(keyword) ||
+            n.translations.japanese.includes(keyword) ||
+            n.translations.chineseTraditional.includes(keyword) ||
+            n.translations.russian.includes(keyword.toLowerCase())
+    });
+}
+
+const getResult = (arr: Entry[], language: string): searchResult[] => {
+    const rst: searchResult[] = [];
+    arr.forEach((e: Entry) => {
+        if (e.translations != null) {
+            const locales: localeInfo[] = getLocaleInfo(e)
+            const name = getName(e, language)
+            const image = getItemImage(e);
+            rst.push({result: locales, name, image});
         }
     });
-    result.map(i => {
-        if (i.translations != null) {
-            const locales: localeInfo[] = getLocaleInfo(i)
-            const name = getName(i, req.language)
-            responseBody.push({result: locales, name, image: getItemImage(i)});
-        }
-    });
-    return res.json(responseBody)
+    return rst;
+}
+
+
+router.post('/', (req: Request, res: Response) => {
+    const body = JSON.parse(decrypt((req.body as dataBody).data)) as {keyword: string; method: number}
+    const search = body.keyword.replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, '')
+    if (search === '') { return res.json([]) }
+    if (search.length < getLetterLimit(req.language)) { return res.json([]) }
+
+    const l = req.language;
+    switch (body.method) {
+        case 1:
+            return res.json(getResult(searchItem(search), l));
+        case 2:
+            return res.json(getResult(searchVillager(search), l));
+        case 3:
+            return res.json(getResult(searchCreature(search), l));
+        case 4:
+            return res.json(getResult(searchNpc(search), l));
+        case 5:
+            return res.json(getResult(recipes.filter(r => {
+                return r.name.toLowerCase().includes(search.toLowerCase()) ||
+                    r.translations.korean.includes(search) ||
+                    r.translations.japanese.includes(search) ||
+                    r.translations.chineseTraditional.includes(search) ||
+                    r.translations.russian.includes(search.toLowerCase())
+            }), l))
+        case 6:
+            return res.json(getResult(reactions.filter(r => {
+                return r.name.toLowerCase().includes(search.toLowerCase()) ||
+                    r.translations.korean.includes(search) ||
+                    r.translations.japanese.includes(search) ||
+                    r.translations.chineseTraditional.includes(search) ||
+                    r.translations.russian.includes(search.toLowerCase())
+            }), l))
+
+        case 0:
+        default:
+            return res.json(getResult(searchItem(search), l).concat(getResult(searchVillager(search), l)).concat(getResult(searchCreature(search), l)));
+    }
 });
 export default router;

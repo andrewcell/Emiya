@@ -3,6 +3,7 @@ import Translation from './translation/App.vue';
 import vuetify from './vuetify';
 import Vuex from 'vuex';
 import LoginStatusStore from './vuetify/LoginStatusStore';
+import VueRouter from 'vue-router';
 
 Vue.config.productionTip = false;
 
@@ -12,7 +13,7 @@ const store = new Vuex.Store({
     }
 })
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 new Vue({
     vuetify,

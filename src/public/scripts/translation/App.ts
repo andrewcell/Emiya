@@ -31,6 +31,7 @@ export default class Translation extends Vue {
         (v: string): string | boolean => !!v || l('translations.emptyfield'),
         (v: string): string | boolean => v.length >= this.getLetterLimit() || l('translations.atleast'),
     ]
+    method = 0
 
     getLetterLimit(): number {
         const language = getLanguage();
@@ -60,8 +61,12 @@ export default class Translation extends Vue {
         }
     }
 
+    clearContent(): void {
+        this.result = [];
+    }
+
     query(): void {
-        void Axios.post('translation', {data: encrypt(this.search.replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, ''))})
+        void Axios.post('translation', {data: encrypt(JSON.stringify({keyword: this.search.replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, ''), method: this.method}))})
             .then((r: AxiosResponse<searchResult[]>) => {
                 this.result = r.data;
             })

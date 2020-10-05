@@ -282,5 +282,15 @@
   "villagers.my.changegroupdesc": "내 주민 그룹을 변경합니다. 주민 그룹은 여러 주민 세트를 가질 수 있게합니다. 선택하지 않은 그룹은 존재하지 않는 것처럼 됩니다. 주민 추가, 옷 검색, 친밀도 계산기 등에서 선택된 그룹 외의 주민은 선택할 수 없고 조작도 할 수 없습니다.",
   "translations.emptyfield": "이름을 입력해주세요.",
   "translations.atleast": "두 글자 이상 입력해주세요.",
-  "translations.viewimage": "이미지 보기"
+  "translations.viewimage": "이미지 보기",
+  "translations.itemvillagercreature": "아이템, 주민, 생물",
+  "translations.item": "아이템",
+  "translations.villager": "주민",
+  "translations.creature": "생물",
+  "translations.npc": "특수주민",
+  "translations.ach": "너굴 마일리지",
+  "translations.construct": "건물",
+  "translations.event": "이벤트",
+  "translations.recipe": "레시피",
+  "translations.reaction": "리액션"
 }

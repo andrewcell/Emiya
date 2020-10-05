@@ -278,6 +278,6 @@
   "villagers.tooltip.deletemyvillagers": "Remove from selected My Villagers group.",
   "villagers.tooltip.livesearch": "If checked, Search instantly after value changes",
   "translations.emptyfield": "This field must be filled.",
-  "translations.atleast": "You must enter at least 4 letters.",
+  "translations.atleast": "You must enter at least 3 letters.",
   "translations.viewimage": "Show images"
 }

@@ -5,6 +5,21 @@
       rel="stylesheet"
     >
     <Layout />
+    <v-tabs
+      v-model="method"
+      background-color="green"
+      dark
+      style="flex: 0 !important"
+      onchange="clearContent()"
+    >
+      <v-tab>{{ l('translations.itemvillagercreature') }}</v-tab>
+      <v-tab>{{ l('translations.item') }}</v-tab>
+      <v-tab>{{ l('translations.villager') }}</v-tab>
+      <v-tab>{{ l('translations.creature') }}</v-tab>
+      <v-tab>{{ l('translations.npc') }}</v-tab>
+      <v-tab>{{ l('translations.recipe') }}</v-tab>
+      <v-tab>{{ l('translations.reaction') }}</v-tab>
+    </v-tabs>
     <v-container>
       <v-text-field
         v-model="search"
