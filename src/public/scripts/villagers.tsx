@@ -246,6 +246,59 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
         });
     }
 
+    deleteGroup = (groupName: string): Promise<void> => {
+        const { groups } = this.state;
+        const objectIsEmpty = (obj: VillagerStorage): boolean => {
+            return Object.keys(obj).length === 0 && obj.constructor === Object
+        }
+        const setToDefault = (): void => {
+            localStorage.setItem('myVillagers', JSON.stringify({'Default': []}));
+            localStorage.setItem('group', 'Default');
+        }
+        return new Promise<void>(resolve => {
+            if (this.state.loginStatus) {
+                return resolve();
+            } else {
+                const storageJson = localStorage.getItem('myVillagers');
+                if (storageJson == null) {
+                    return resolve();
+                } else {
+                    const storage = JSON.parse(storageJson) as VillagerStorage;
+                    if (groupName in storage) {
+                        const index = groups.indexOf(groupName)
+                        if (index === -1) {
+                            setToDefault();
+                            void this.changeVillagerGroup('Default');
+                            return resolve();
+                        } else {
+                            delete storage[groupName];
+                            if (objectIsEmpty(storage)) {
+                                setToDefault();
+                                void this.changeVillagerGroup('Default');
+                                return resolve();
+                            }
+                            let lastGroup = index - 1
+                            if (lastGroup <= 0) lastGroup = 0;
+                            localStorage.setItem('myVillagers', JSON.stringify(storage));
+                            localStorage.setItem('group', groups[lastGroup]);
+                            this.setState((prevState) => {
+                                const prevGroups = prevState.groups;
+                                if (index !== -1 && index != null) {
+                                    prevGroups.splice(index, 1);
+                                }
+                                return {groups: prevGroups}
+                            })
+                            void this.changeVillagerGroup(groups[lastGroup]);
+                            return resolve();
+                        }
+                    } else {
+                        return resolve();
+                    }
+                }
+            }
+        })
+    }
+
     render(): React.ReactElement | string | number | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         switch (this.state?.pageStatus) {
             case PageStatus.LOADED:
@@ -275,7 +328,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                                 <VillagersPreferGift data={this.state.allVillagers} />
                                             </Route>
                                             <Route exact path={'/villagers/group'}>
-                                                <VillagersGroupManagement loginStatus={this.state.loginStatus} selectedGroup={this.state.selectedGroup} changeGroup={this.changeVillagerGroup} codeToVillagerArray={this.codeArrayToVillagerArray} createGroup={this.createGroup} />
+                                                <VillagersGroupManagement loginStatus={this.state.loginStatus} selectedGroup={this.state.selectedGroup} changeGroup={this.changeVillagerGroup} codeToVillagerArray={this.codeArrayToVillagerArray} createGroup={this.createGroup} deleteGroup={this.deleteGroup} />
                                             </Route>
                                             {/* <Route path={'/villagers/:code'}  component={(props: { code: string }): React.ReactElement => <VillagerDetail fromParam={true} data={this.state.allVillagers} addVillager={this.addToMyVillagers} code={window.location.search.substring(1)} removeVillager={this.removeVillager}/>} /> */}
                                         </Switch>
