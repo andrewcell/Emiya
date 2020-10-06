@@ -29,56 +29,72 @@
           v-model="search"
           :label="l('translations.search') + ' + Enter'"
           outlined
+          dense
           color="green"
           :rules="atLeastFour"
           @keyup.enter="query"
         />
-        <v-checkbox
-          v-model="showImage"
-          :label="l('translations.viewimage')"
-        />
-      </v-form>
-      <v-row>
-        <v-col
-          v-for="r in result"
-          :key="r.name"
-          lg="4"
-          md="6"
-          sm="12"
+        <v-row
+          justify="space-between"
+          dense
+          no-gutters
         >
-          <v-card>
-            <img
-              v-if="showImage && r.image"
-              :src="r.image"
-              alt=""
-              width="128"
+          <v-col md="4">
+            <v-checkbox
+              v-model="showImage"
+              :label="l('translations.viewimage')"
+              class="ma-0 pa-0"
+            />
+          </v-col>
+          <v-col
+            md="4"
+            class="text-right"
+          >
+            <v-btn
+              rounded
+              dark
+              color="green"
+              @click="query"
             >
-            <v-card-title>{{ r.name }}</v-card-title>
-            <v-list dense>
-              <v-list-item
-                v-for="locale in r.result"
-                :key="locale.language"
-              >
-                <v-list-item-avatar>
-                  <span :class="'flag-icon flag-icon-' + getCountryCode(locale.language)" />
-                </v-list-item-avatar>
-                <v-list-item-content>
-                  <v-list-item-title v-text="locale.name" />
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-card>
-        </v-col>
-      </v-row>
-      <v-btn
-        rounded
-        dark
-        style="margin-top: 10px"
-        color="green"
-        @click="query"
+              {{ l('translations.manualbutton') }}
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-form>
+    </v-container>
+    </v-form>
+    <v-row>
+      <v-col
+        v-for="r in result"
+        :key="r.name"
+        lg="4"
+        md="6"
+        sm="12"
       >
-        {{ l('translations.manualbutton') }}
-      </v-btn>
+        <v-card>
+          <img
+            v-if="showImage && r.image"
+            :src="r.image"
+            alt=""
+            width="128"
+          >
+          <v-card-title>{{ r.name }}</v-card-title>
+          <v-list dense>
+            <v-list-item
+              v-for="locale in r.result"
+              :key="locale.language"
+            >
+              <v-list-item-avatar>
+                <span :class="'flag-icon flag-icon-' + getCountryCode(locale.language)" />
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title v-text="locale.name" />
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+        </v-card>
+      </v-col>
+    </v-row>
     </v-container>
   </v-app>
 </template>
