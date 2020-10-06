@@ -61,40 +61,39 @@
           </v-col>
         </v-row>
       </v-form>
-    </v-container>
-    </v-form>
-    <v-row>
-      <v-col
-        v-for="r in result"
-        :key="r.name"
-        lg="4"
-        md="6"
-        sm="12"
-      >
-        <v-card>
-          <img
-            v-if="showImage && r.image"
-            :src="r.image"
-            alt=""
-            width="128"
-          >
-          <v-card-title>{{ r.name }}</v-card-title>
-          <v-list dense>
-            <v-list-item
-              v-for="locale in r.result"
-              :key="locale.language"
+      <v-row>
+        <v-col
+          v-for="r in result"
+          :key="r.name"
+          xl="2"
+          lg="3"
+          md="4"
+          sm="6"
+        >
+          <v-card>
+            <img
+              v-if="showImage && r.image"
+              :src="r.image"
+              alt=""
+              width="128"
             >
-              <v-list-item-avatar>
-                <span :class="'flag-icon flag-icon-' + getCountryCode(locale.language)" />
-              </v-list-item-avatar>
-              <v-list-item-content>
-                <v-list-item-title v-text="locale.name" />
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-        </v-card>
-      </v-col>
-    </v-row>
+            <v-card-title>{{ r.name }}</v-card-title>
+            <v-list dense>
+              <v-list-item
+                v-for="locale in r.result"
+                :key="locale.language"
+              >
+                <v-list-item-avatar>
+                  <span :class="'flag-icon flag-icon-' + getCountryCode(locale.language)" />
+                </v-list-item-avatar>
+                <v-list-item-content>
+                  <v-list-item-title v-text="locale.name" />
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-card>
+        </v-col>
+      </v-row>
     </v-container>
   </v-app>
 </template>
