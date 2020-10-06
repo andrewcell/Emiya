@@ -30,7 +30,7 @@ export default class Translation extends Vue {
     atLeastFour =  [
         (v: string): string | boolean => !!v || l('translations.emptyfield'),
         (v: string): string | boolean => v.length >= this.getLetterLimit() || l('translations.atleast'),
-        (v: string): string | boolean => !/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi.test(v) || l('translations.unacceptable')
+        (v: string): string | boolean => !/[^A-Za-z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/g.test(v) || l('translations.unacceptable')
     ]
     method = 0
     valid = false
