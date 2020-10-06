@@ -4,6 +4,7 @@
  */
 import logger from './Logger';
 import path from 'path'
+import {VillagerStorage} from "@interfaces/MyVillagersDatabase";
 
 /**
  * Log error into Logger
@@ -39,4 +40,8 @@ export const getRandomString = (length: number): string => {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     return result;
+}
+
+export const objectIsEmpty = (obj: VillagerStorage): boolean => {
+    return Object.keys(obj).length === 0 && obj.constructor === Object
 }

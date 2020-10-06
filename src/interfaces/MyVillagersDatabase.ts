@@ -191,7 +191,7 @@ export default class MyVillagersDatabase {
      * Add group to exist villagers storage.
      *
      * @param {string} userId - Reference id of user document.
-     * @param  {string} groupName - Name of new group.
+     * @param {string} groupName - Name of new group.
      * @returns {boolean} - If worked without any error, returns true.
      * @example
      * ```ts
@@ -222,6 +222,70 @@ export default class MyVillagersDatabase {
                     logger.error(e.message, e);
                     return resolve(false);
                 })
+        })
+    }
+
+    /**
+     * Delete group from exist villagers storage.
+     *
+     * @param {string} userId - Reference id of user document.
+     * @param  {string} groupName - Name of new group.
+     * @returns {string} - If worked without any error, returns new selected group name.
+     * @example
+     * ```ts
+     * void deleteGroup('userid123', 'oldGroup').then(isSuccess => { if (isSuccess) { console.log('Deleted!'); } });
+     * ```
+     */
+    public deleteGroup(userId: string, groupName: string): Promise<[string, boolean]> {
+        const objectIsEmpty = (obj: VillagerStorage): boolean => {
+            return Object.keys(obj).length === 0 && obj.constructor === Object
+        }
+        return new Promise(r => {
+            User.findById(userId)
+                .then(user => {
+                    if (user) {
+                        const storage = user.villagers;
+                        if (groupName in storage) {
+                            const groupList = Object.keys(storage);
+                            const index = groupList.indexOf(groupName);
+                            if (index === -1) {
+                                return r(['', false]);
+                            } else {
+                                delete storage[groupName];
+                                if (objectIsEmpty(storage)) {
+                                    User.findByIdAndUpdate(userId, {villagers: {'Default': []}, villagersGroup: 'Default'})
+                                        .then(() => {
+                                            return r(['Default', true]);
+                                        })
+                                        .catch((e: Error) => {
+                                            logger.error(e.message, e);
+                                            return r(['', false]);
+                                        });
+                                } else {
+                                    let lastGroup = index - 1;
+                                    if (lastGroup < 0) lastGroup = 1;
+                                    User.findByIdAndUpdate(userId, {
+                                        villagers: storage,
+                                        villagersGroup: groupList[lastGroup]
+                                    })
+                                        .then(() => {
+                                            return r([groupList[lastGroup], false]);
+                                        })
+                                        .catch((e: Error) => {
+                                            logger.error(e.message, e);
+                                            return r(['', false]);
+                                        });
+                                }
+                            }
+                        } else {
+                            return r(['', false]);
+                        }
+                    }
+                })
+                .catch((e: Error) => {
+                    logger.error(e.message, e);
+                    return r(['', false]);
+                });
         })
     }
 }

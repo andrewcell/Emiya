@@ -8,6 +8,7 @@ import logger from '@shared/Logger';
 import {villagers} from 'animal-crossing';
 import MyVillagersDatabase from '@interfaces/MyVillagersDatabase';
 import {dataBody, codeBody} from '@interfaces/Body';
+import regex from "xregexp";
 
 const router = Router();
 
@@ -162,5 +163,17 @@ router.post('/creategroup', validateLoggedIn, validateReact, async (req, res) =>
   }
 });
 
+router.post('/deletegroup', validateLoggedIn, validateReact, async (req, res) => {
+  const groupName = regex.replace(decrypt((req.body as dataBody).data), regex('[^\\p{Ll}\\p{Lu}\\p{Lt}\\p{Lm}\\p{Nd}\\p{Lo}\'\\- _]'), '', 'all').trim()
+  if (req.user) {
+    const r = await MyVillagersDatabase.getInstance().deleteGroup((req.user as UserDocument)._id, groupName);
+    if (r[0] !== '') {
+      const code = (r[1]) ? 'group02' : 'group00';
+      return res.json({code, comment: 'success', data: r[0]});
+    } else {
+      return res.json({code: 'group01', comment: 'failed', data: ''});
+    }
+  }
+});
 
 export default router;

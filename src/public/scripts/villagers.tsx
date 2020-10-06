@@ -20,7 +20,7 @@ import {Villager} from 'animal-crossing/lib/types/Villager';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {CodeCommentData, Data} from './repsonseBody';
+import {CodeCommentData, Data, LoginResponse} from './repsonseBody';
 import VillagersGroupManagement from './villagers/VillagersGroupManagement';
 
 interface VillagersState {
@@ -246,7 +246,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
         });
     }
 
-    deleteGroup = (groupName: string): Promise<void> => {
+    deleteGroup = (groupName: string): Promise<boolean> => {
         const { groups } = this.state;
         const objectIsEmpty = (obj: VillagerStorage): boolean => {
             return Object.keys(obj).length === 0 && obj.constructor === Object
@@ -254,14 +254,36 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
         const setToDefault = (): void => {
             localStorage.setItem('myVillagers', JSON.stringify({'Default': []}));
             localStorage.setItem('group', 'Default');
+            this.setState({myVillagers: [], selectedGroup: 'Default'})
         }
-        return new Promise<void>(resolve => {
+        const removeFromState = (index: number): void => {
+            this.setState((prevState) => {
+                const prevGroups = prevState.groups;
+                if (index !== -1 && index != null) {
+                    prevGroups.splice(index, 1);
+                }
+                return {groups: prevGroups}
+            });
+        }
+        return new Promise<boolean>(resolve => {
             if (this.state.loginStatus) {
-                return resolve();
+                void Axios.post('/villagers/deletegroup', {data: encrypt(groupName)})
+                    .then((r: AxiosResponse<CodeCommentData>) => {
+                        if (r.data.code === 'group00') {
+                            const index = groups.indexOf(groupName)
+                            removeFromState(index);
+                            void this.changeVillagerGroup(r.data.data);
+                            return resolve(false);
+                        } else if (r.data.code === 'group02') {
+                            void this.changeVillagerGroup('Default').then(() => {
+                                return resolve(true);
+                            });
+                        }
+                    })
             } else {
                 const storageJson = localStorage.getItem('myVillagers');
                 if (storageJson == null) {
-                    return resolve();
+                    return resolve(false);
                 } else {
                     const storage = JSON.parse(storageJson) as VillagerStorage;
                     if (groupName in storage) {
@@ -269,16 +291,16 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                         if (index === -1) {
                             setToDefault();
                             void this.changeVillagerGroup('Default');
-                            return resolve();
+                            return resolve(true);
                         } else {
                             delete storage[groupName];
                             if (objectIsEmpty(storage)) {
                                 setToDefault();
                                 void this.changeVillagerGroup('Default');
-                                return resolve();
+                                return resolve(true);
                             }
                             let lastGroup = index - 1
-                            if (lastGroup <= 0) lastGroup = 0;
+                            if (lastGroup < 0) lastGroup = 1;
                             localStorage.setItem('myVillagers', JSON.stringify(storage));
                             localStorage.setItem('group', groups[lastGroup]);
                             this.setState((prevState) => {
@@ -289,10 +311,10 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                 return {groups: prevGroups}
                             })
                             void this.changeVillagerGroup(groups[lastGroup]);
-                            return resolve();
+                            return resolve(false);
                         }
                     } else {
-                        return resolve();
+                        return resolve(false);
                     }
                 }
             }
