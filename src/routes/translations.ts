@@ -8,6 +8,7 @@ import {Creature} from 'animal-crossing/lib/types/Creature';
 import {Npc} from 'animal-crossing/lib/types/NPC';
 import {Recipe} from 'animal-crossing/lib/types/Recipe';
 import {Reaction} from 'animal-crossing/lib/types/Reaction';
+import regex from 'xregexp';
 
 const router = Router();
 
@@ -155,7 +156,7 @@ const getResult = (arr: Entry[], language: string): searchResult[] => {
 
 router.post('/', (req: Request, res: Response) => {
     const body = JSON.parse(decrypt((req.body as dataBody).data)) as {keyword: string; method: number}
-    const search = body.keyword.replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, '')
+    const search = regex.replace(body.keyword, regex('[^\\p{Ll}\\p{Lu}\\p{Lt}\\p{Lm}\\p{Lo}\'\\- _]'), '', 'all').trim()
     if (search === '') { return res.json([]) }
     if (search.length < getLetterLimit(req.language)) { return res.json([]) }
 

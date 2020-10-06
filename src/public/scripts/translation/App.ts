@@ -3,6 +3,9 @@ import Layout from '../vuetify/Layout.vue';
 import {getLanguage, l} from '../locale';
 import Axios, {AxiosResponse} from 'axios';
 import {encrypt} from '../encryption/AES';
+import regex from 'xregexp';
+
+const regexPattern = regex('[^\\p{Ll}\\p{Lu}\\p{Lt}\\p{Lm}\\p{Lo}\'\\- _]');
 
 type localeInfo = {
     language: string;
@@ -30,7 +33,7 @@ export default class Translation extends Vue {
     atLeastFour =  [
         (v: string): string | boolean => !!v || l('translations.emptyfield'),
         (v: string): string | boolean => v.length >= this.getLetterLimit() || l('translations.atleast'),
-        (v: string): string | boolean => !/[^A-Za-z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/g.test(v) || l('translations.unacceptable')
+        (v: string): string | boolean => !regex.test(v, regexPattern) || l('translations.unacceptable')
     ]
     method = 0
     valid = false
@@ -72,7 +75,7 @@ export default class Translation extends Vue {
         if (this.valid) {
             void Axios.post('translation', {
                 data: encrypt(JSON.stringify({
-                    keyword: this.search.replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, ''),
+                    keyword: regex.replace(this.search, regexPattern, '', 'all').trim(),
                     method: this.method
                 }))
             })
