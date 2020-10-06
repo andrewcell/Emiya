@@ -48,7 +48,7 @@ export default class Translation extends Vue {
         }
     }
 
-    getConturyCode(code: string): string {
+    getCountryCode(code: string): string {
         switch (code) {
             case 'jp':
                 return 'jp';

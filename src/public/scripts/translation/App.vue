@@ -60,7 +60,7 @@
                 :key="locale.language"
               >
                 <v-list-item-avatar>
-                  <span :class="'flag-icon flag-icon-' + getConturyCode(locale.language)" />
+                  <span :class="'flag-icon flag-icon-' + getCountryCode(locale.language)" />
                 </v-list-item-avatar>
                 <v-list-item-content>
                   <v-list-item-title v-text="locale.name" />
