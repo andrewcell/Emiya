@@ -217,8 +217,10 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                             const villagerCodes = JSON.parse(decrypt(r.data.data)) as string[];
                             const myVillagers = this.codeArrayToVillagerArray(villagerCodes)
                             this.setState({selectedGroup: groupName, myVillagers})
+                            return resolve('');
+                        } else {
+                            return resolve(r.data.comment);
                         }
-                        return resolve(r.data.comment);
                     })
                     .catch(() => {
                         return resolve('Internal Server Error.');
@@ -232,6 +234,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                     if (groupName in storage) {
                         localStorage.setItem('group', groupName);
                         this.setState({selectedGroup: groupName, myVillagers: this.codeArrayToVillagerArray(storage[groupName])})
+                        return resolve('')
                     } else {
                         return resolve(l('villagers.group.notfound'));
                     }
@@ -254,7 +257,6 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
         const setToDefault = (): void => {
             localStorage.setItem('myVillagers', JSON.stringify({'Default': []}));
             localStorage.setItem('group', 'Default');
-            this.setState({myVillagers: [], selectedGroup: 'Default'})
         }
         const removeFromState = (index: number): void => {
             this.setState((prevState) => {
@@ -272,8 +274,9 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                         if (r.data.code === 'group00') {
                             const index = groups.indexOf(groupName)
                             removeFromState(index);
-                            void this.changeVillagerGroup(r.data.data);
-                            return resolve(false);
+                            void this.changeVillagerGroup(r.data.data).then(() => {
+                                return resolve(false);
+                            });
                         } else if (r.data.code === 'group02') {
                             void this.changeVillagerGroup('Default').then(() => {
                                 return resolve(true);
@@ -283,38 +286,42 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
             } else {
                 const storageJson = localStorage.getItem('myVillagers');
                 if (storageJson == null) {
-                    return resolve(false);
+                    resolve(false);
                 } else {
                     const storage = JSON.parse(storageJson) as VillagerStorage;
                     if (groupName in storage) {
                         const index = groups.indexOf(groupName)
                         if (index === -1) {
                             setToDefault();
-                            void this.changeVillagerGroup('Default');
-                            return resolve(true);
+                            void this.changeVillagerGroup('Default').then(() => {
+                                return resolve(true);
+                            });
                         } else {
                             delete storage[groupName];
                             if (objectIsEmpty(storage)) {
                                 setToDefault();
-                                void this.changeVillagerGroup('Default');
-                                return resolve(true);
+                                void this.changeVillagerGroup('Default').then(() => {
+                                    return resolve(true);
+                                });
+                            } else {
+                                let lastGroup = index - 1
+                                if (lastGroup < 0) lastGroup = 1;
+                                localStorage.setItem('myVillagers', JSON.stringify(storage));
+                                localStorage.setItem('group', groups[lastGroup]);
+                                this.setState((prevState) => {
+                                    const prevGroups = prevState.groups;
+                                    if (index !== -1 && index != null) {
+                                        prevGroups.splice(index, 1);
+                                    }
+                                    return {groups: prevGroups}
+                                })
+                                void this.changeVillagerGroup(groups[lastGroup]).then(() => {
+                                    return resolve(false);
+                                })
                             }
-                            let lastGroup = index - 1
-                            if (lastGroup < 0) lastGroup = 1;
-                            localStorage.setItem('myVillagers', JSON.stringify(storage));
-                            localStorage.setItem('group', groups[lastGroup]);
-                            this.setState((prevState) => {
-                                const prevGroups = prevState.groups;
-                                if (index !== -1 && index != null) {
-                                    prevGroups.splice(index, 1);
-                                }
-                                return {groups: prevGroups}
-                            })
-                            void this.changeVillagerGroup(groups[lastGroup]);
-                            return resolve(false);
                         }
                     } else {
-                        return resolve(false);
+                        resolve(false);
                     }
                 }
             }
