@@ -29,10 +29,12 @@ interface VillagersState {
     myVillagers: Villager[];
     loginStatus: boolean;
     selectedGroup: string;
-    groups: string[];
+    storage: {[key: string]: string[]};
 }
 
 type VillagersProps = unknown;
+
+type getVillagersData = [string, string[], string[], VillagerStorage];
 
 interface VillagerStorage {
     [key: string]: string[];
@@ -41,7 +43,6 @@ interface VillagerStorage {
 class Villagers extends React.Component<VillagersProps, VillagersState> {
     constructor(prop: VillagersProps) {
         super(prop);
-
         if (Cookies.get('locale') == null) {
             const lang = detectLanguage(navigator.language);
             Cookies.set('locale', lang);
@@ -57,9 +58,9 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                 Axios.get('/admin/logincheck')
                     .then(() => {
                         axios.get('/villagers/react/my/get').then((res: AxiosResponse<Data>) => {
-                            const villagerStorage = JSON.parse(decrypt(res.data.data)) as VillagerStorage;
-                            const selectedGroup = Object.keys(villagerStorage)[0]
-                            const villagersCodes: string[] = Object.values(villagerStorage)[0]
+                            const storage = JSON.parse(decrypt(res.data.data)) as getVillagersData;
+                            const selectedGroup = storage[0]
+                            const villagersCodes: string[] = storage[1]
                             const filtered: Villager[] = villagersJson.filter((item: Villager) => {
                                 return villagersCodes.includes(item.filename);
                             });
@@ -67,7 +68,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                 myVillagers: filtered,
                                 loginStatus: true,
                                 pageStatus: PageStatus.LOADED,
-                                groups: villagerStorage.groups,
+                                storage: storage[3],
                                 selectedGroup
                             });
                         }).catch(() => {this.setState({pageStatus: PageStatus.ERROR})})
@@ -77,17 +78,32 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                         const selectedGroup = localStorage.getItem('group');
                         localStorage.setItem('group', 'Default');
                         if (villagers == null || selectedGroup == null) {
-                            this.setState({myVillagers: [], selectedGroup: 'Default', groups: ['Default'], pageStatus: PageStatus.LOADED});
+                            this.setState({
+                                myVillagers: [],
+                                selectedGroup: 'Default',
+                                pageStatus: PageStatus.LOADED,
+                                storage: {'Default': []}
+                            });
                         } else {
                             try {
                                 localStorage.setItem('group', selectedGroup);
-                                const parsed = JSON.parse(villagers) as VillagerStorage;
-                                const filtered: Villager[] = villagersJson.filter((item: Villager) => {
-                                    return parsed[selectedGroup].includes(item.filename);
+                                const storage = JSON.parse(villagers) as VillagerStorage;
+                                const myVillagers: Villager[] = villagersJson.filter((item: Villager) => {
+                                    return storage[selectedGroup].includes(item.filename);
                                 });
-                                this.setState({myVillagers: filtered, selectedGroup, pageStatus: PageStatus.LOADED, groups: Object.keys(parsed)});
+                                this.setState({
+                                    myVillagers,
+                                    selectedGroup,
+                                    storage,
+                                    pageStatus: PageStatus.LOADED
+                                });
                             } catch {
-                                this.setState({myVillagers: [], selectedGroup: 'Default', pageStatus: PageStatus.LOADED, groups: ['Default']});
+                                this.setState({
+                                    myVillagers: [],
+                                    selectedGroup: 'Default',
+                                    pageStatus: PageStatus.LOADED,
+                                    storage: {'Default': []}
+                                });
                             }
                         }
                     })
@@ -98,9 +114,12 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
     }
 
     createGroup = (groupName: string): void => {
-        this.setState(prevState => {
-            return {groups: [...prevState.groups, groupName]};
-        });
+        this.setState(prevState => ({
+            storage: {
+                ...prevState.storage,
+                [groupName]: []
+            }
+        }));
     }
 
     setMyVillagers = (arr: Villager[]): void => {
@@ -152,8 +171,9 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
     }
 
     private addToMyVillagersState = (villager: Villager): void | Promise<void> => {
+        this.addToStorageState(villager.filename);
         this.setState(prevState => ({
-            myVillagers: [...prevState.myVillagers, villager]
+            myVillagers: [...prevState.myVillagers, villager],
         }));
     }
 
@@ -166,8 +186,34 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
             if (index !== -1 && index != null) {
                 prevMyVillagers.splice(index, 1);
             }
+            this.removeFromStorageState(prevMyVillagers);
             return {myVillagers: prevMyVillagers}
         })
+    }
+
+    addToStorageState = (code: string): void => {
+        const { storage, selectedGroup } = this.state;
+        const groupInStorage = storage[selectedGroup];
+        this.setState(prevState => ({
+            storage: {
+                ...prevState.storage,
+                [selectedGroup]: [...groupInStorage, code]
+            }
+        }));
+    }
+
+    removeFromStorageState = (arr: Villager[]): void => {
+        const { selectedGroup } = this.state;
+        const newArr: string[] = [];
+        arr.map(v => {
+            newArr.push(v.filename);
+        });
+        this.setState(p => ({
+            storage: {
+                ...p.storage,
+                [selectedGroup]: newArr
+            }
+        }));
     }
 
     removeVillager = (v: Villager): Promise<string> => {
@@ -226,11 +272,10 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                         return resolve('Internal Server Error.');
                     });
             } else {
-                const storageJson = localStorage.getItem('myVillagers');
-                if (storageJson == null) {
+                const { storage } = this.state;
+                if (storage == null) {
                     return resolve(l('villagers.group.notfound'));
                 } else {
-                    const storage = JSON.parse(storageJson) as VillagerStorage;
                     if (groupName in storage) {
                         localStorage.setItem('group', groupName);
                         this.setState({selectedGroup: groupName, myVillagers: this.codeArrayToVillagerArray(storage[groupName])})
@@ -250,35 +295,37 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
     }
 
     deleteGroup = (groupName: string): Promise<boolean> => {
-        const { groups } = this.state;
         const objectIsEmpty = (obj: VillagerStorage): boolean => {
             return Object.keys(obj).length === 0 && obj.constructor === Object
         }
         const setToDefault = (): void => {
             localStorage.setItem('myVillagers', JSON.stringify({'Default': []}));
             localStorage.setItem('group', 'Default');
+            this.setState({storage: {'Default': []}})
         }
-        const removeFromState = (index: number): void => {
-            this.setState((prevState) => {
-                const prevGroups = prevState.groups;
-                if (index !== -1 && index != null) {
-                    prevGroups.splice(index, 1);
-                }
-                return {groups: prevGroups}
+        const removeFromState = (): void => {
+            this.setState(p => {
+                const prevStorage = p.storage;
+                delete prevStorage[groupName];
+                return {storage: prevStorage};
             });
+        }
+        const resetPreventError = (): void => {
+            this.setState({storage: {'Default': [], [groupName]: []}});
         }
         return new Promise<boolean>(resolve => {
             if (this.state.loginStatus) {
                 void Axios.post('/villagers/deletegroup', {data: encrypt(groupName)})
                     .then((r: AxiosResponse<CodeCommentData>) => {
                         if (r.data.code === 'group00') {
-                            const index = groups.indexOf(groupName)
-                            removeFromState(index);
                             void this.changeVillagerGroup(r.data.data).then(() => {
+                                removeFromState();
                                 return resolve(false);
                             });
                         } else if (r.data.code === 'group02') {
+                            resetPreventError();
                             void this.changeVillagerGroup('Default').then(() => {
+                                this.setState({storage: {'Default': []}});
                                 return resolve(true);
                             });
                         }
@@ -290,17 +337,20 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                 } else {
                     const storage = JSON.parse(storageJson) as VillagerStorage;
                     if (groupName in storage) {
+                        const groups = Object.keys(storage)
                         const index = groups.indexOf(groupName)
                         if (index === -1) {
-                            setToDefault();
-                            void this.changeVillagerGroup('Default').then(() => {
+                            resetPreventError();
+                            this.setState({selectedGroup: 'Default', myVillagers: []}, () => {
+                                setToDefault();
                                 return resolve(true);
                             });
                         } else {
                             delete storage[groupName];
                             if (objectIsEmpty(storage)) {
-                                setToDefault();
-                                void this.changeVillagerGroup('Default').then(() => {
+                                resetPreventError();
+                                this.setState({selectedGroup: 'Default', myVillagers: []}, () => {
+                                    setToDefault();
                                     return resolve(true);
                                 });
                             } else {
@@ -308,14 +358,8 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                 if (lastGroup < 0) lastGroup = 1;
                                 localStorage.setItem('myVillagers', JSON.stringify(storage));
                                 localStorage.setItem('group', groups[lastGroup]);
-                                this.setState((prevState) => {
-                                    const prevGroups = prevState.groups;
-                                    if (index !== -1 && index != null) {
-                                        prevGroups.splice(index, 1);
-                                    }
-                                    return {groups: prevGroups}
-                                })
                                 void this.changeVillagerGroup(groups[lastGroup]).then(() => {
+                                    removeFromState();
                                     return resolve(false);
                                 })
                             }
@@ -326,6 +370,10 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                 }
             }
         })
+    }
+
+    setStorage = (storage: VillagerStorage): void => {
+        this.setState({storage});
     }
 
     render(): React.ReactElement | string | number | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
@@ -345,7 +393,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                         </Tabs>
                                         <Switch>
                                             <Route exact path={'/villagers'}>
-                                                <MyVillagers locale={getLanguage()} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} addVillager={this.addToMyVillagers} data={this.state.allVillagers} groups={this.state.groups} selectedGroup={this.state.selectedGroup} changeGroup={this.changeVillagerGroup}/>
+                                                <MyVillagers locale={getLanguage()} my={this.state.myVillagers} refresh={this.setMyVillagers} renderComplete={this.state.pageStatus === PageStatus.LOADED} removeVillager={this.removeVillager} addVillager={this.addToMyVillagers} data={this.state.allVillagers} groups={Object.keys(this.state.storage)} selectedGroup={this.state.selectedGroup} changeGroup={this.changeVillagerGroup}/>
                                             </Route>
                                             <Route exact path={'/villagers/list'}>
                                                 <VillagersList locale={getLanguage()} addVillager={this.addToMyVillagers} removeVillager={this.removeVillager} data={this.state.allVillagers}/>
@@ -357,7 +405,7 @@ class Villagers extends React.Component<VillagersProps, VillagersState> {
                                                 <VillagersPreferGift data={this.state.allVillagers} />
                                             </Route>
                                             <Route exact path={'/villagers/group'}>
-                                                <VillagersGroupManagement loginStatus={this.state.loginStatus} selectedGroup={this.state.selectedGroup} changeGroup={this.changeVillagerGroup} codeToVillagerArray={this.codeArrayToVillagerArray} createGroup={this.createGroup} deleteGroup={this.deleteGroup} />
+                                                <VillagersGroupManagement loginStatus={this.state.loginStatus} selectedGroup={this.state.selectedGroup} changeGroup={this.changeVillagerGroup} codeToVillagerArray={this.codeArrayToVillagerArray} createGroup={this.createGroup} deleteGroup={this.deleteGroup} storage={this.state.storage}/>
                                             </Route>
                                             {/* <Route path={'/villagers/:code'}  component={(props: { code: string }): React.ReactElement => <VillagerDetail fromParam={true} data={this.state.allVillagers} addVillager={this.addToMyVillagers} code={window.location.search.substring(1)} removeVillager={this.removeVillager}/>} /> */}
                                         </Switch>

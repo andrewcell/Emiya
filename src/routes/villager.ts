@@ -8,7 +8,7 @@ import logger from '@shared/Logger';
 import {villagers} from 'animal-crossing';
 import MyVillagersDatabase from '@interfaces/MyVillagersDatabase';
 import {dataBody, codeBody} from '@interfaces/Body';
-import regex from "xregexp";
+import regex from 'xregexp';
 
 const router = Router();
 
@@ -28,10 +28,12 @@ router.get('/react/villagers', validateReact, ((req, res) => {
   return res.json({code: 200, comment: 'success', data, locale: (req.cookies as {locale: string}).locale});
 }));
 
+type getVillagersData = [string, string[], string[], VillagerStorage];
+
 router.get('/react/my/get', validateReact, validateLoggedIn, async (req, res) => {
   const db = MyVillagers.getInstance();
   const user = req.user as UserDocument;
-  let storage: [string, string[], string[]] = ['', [], []];
+  let storage: getVillagersData = ['', [], [], {}];
   if (req.session != null) {
     if (req.session.myVillagers == null || req.session.group == null || req.session.requireUpdate) {
       storage = await db.getMyVillagers(user.id);
@@ -39,13 +41,14 @@ router.get('/react/my/get', validateReact, validateLoggedIn, async (req, res) =>
       req.session.group = storage[0];
       req.session.groups = storage[2];
       req.session.requireUpdate = false;
+      req.session.storage = storage[3];
     } else {
-      storage = [req.session.group, req.session.myVillagers, req.session.groups];
+      storage = [req.session.group, req.session.myVillagers, req.session.groups, req.session.storage] as getVillagersData;
     }
-    const responseData: VillagerStorage = {};
-    responseData[storage[0]] = storage[1];
-    responseData.groups = storage[2];
-    return res.json({code: 'villagers00', comment: 'success', data: encrypt(JSON.stringify(responseData))})
+    // const responseData: VillagerStorage = {};
+    // responseData[storage[0]] = storage[1];
+    // responseData.groups = storage[2];
+    return res.json({code: 'villagers00', comment: 'success', data: encrypt(JSON.stringify(storage))})
   }
 });
 
@@ -155,6 +158,7 @@ router.post('/creategroup', validateLoggedIn, validateReact, async (req, res) =>
       return res.json(failed);
     }
     const addGroupSuccess = await MyVillagersDatabase.getInstance().addGroup(user._id, groupName);
+    if (req.session != null) req.session.requireUpdate = true;
     if (addGroupSuccess) {
       return res.json({code: 'group00', comment: 'success'})
     } else {
@@ -169,6 +173,7 @@ router.post('/deletegroup', validateLoggedIn, validateReact, async (req, res) =>
     const r = await MyVillagersDatabase.getInstance().deleteGroup((req.user as UserDocument)._id, groupName);
     if (r[0] !== '') {
       const code = (r[1]) ? 'group02' : 'group00';
+      if (req.session != null) req.session.requireUpdate = true;
       return res.json({code, comment: 'success', data: r[0]});
     } else {
       return res.json({code: 'group01', comment: 'failed', data: ''});

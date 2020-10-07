@@ -69,18 +69,18 @@ export default class MyVillagersDatabase {
      * });
      * ```
      */
-    public getMyVillagers(userId: string): Promise<[string, string[], string[]]> {
+    public getMyVillagers(userId: string): Promise<[string, string[], string[], VillagerStorage]> {
         return new Promise((resolve) => {
             User.findById(userId)
                 .then(user => {
                     if (user) {
-                        resolve([user.villagersGroup, user.villagers[user.villagersGroup], Object.keys(user.villagers)]);
+                        resolve([user.villagersGroup, user.villagers[user.villagersGroup], Object.keys(user.villagers), user.villagers]);
                     }
-                    return resolve(['', [], []]);
+                    return resolve(['', [], [], {}]);
                 })
                 .catch((err: Error) => {
                     logger.error(err.message, err);
-                    return resolve(['', [], []]);
+                    return resolve(['', [], [], {}]);
                 });
         });
     }
