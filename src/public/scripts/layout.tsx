@@ -16,6 +16,7 @@ import clsx from 'clsx';
 import {l} from './locale';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
+import NewsModule from './news/NewsModule';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -141,9 +142,12 @@ const Element = (): JSX.Element => {
     return (
         <Container>
             <Grid container spacing={3}>
+                <Grid item xs={12}>
+                    <NewsModule />
+                </Grid>
                 {modules.map(module => {
                     return (
-                        <Grid item key={module.title} xs={12}>
+                        <Grid item key={module.title} xs={12} lg={4}>
                             <ModuleCard title={module.title} description={module.description} links={module.links} moreDescription={module.moreDescription} />
                         </Grid>
                     )
