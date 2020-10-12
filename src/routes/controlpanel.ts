@@ -12,6 +12,10 @@ import {Mail} from '@shared/Mail';
 import {SendGrid} from '@shared/SendGrid';
 const router = Router();
 
+router.get(['/', '/:param'], validateAdmin, (req, res) => {
+  return res.render('vue', { script: 'cp' });
+})
+
 router.get('/downloadlog', validateAdmin, (req: Request, res: Response) => {
   if (!fileExistsSync('logArray.json')) {
     return res.render('downloadlog', { data: false });
