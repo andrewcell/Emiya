@@ -5,14 +5,7 @@ dist/
 env/
 node_modules/
 .node_modules/
-src/public/scripts/layout.js
-src/public/scripts/translation.js
-src/public/scripts/resetpw.js
-src/public/scripts/accounthelp.js
-src/public/scripts/villagers.js
-src/public/scripts/points.js
-src/public/scripts/campsite.js
-src/public/scripts/about.js
+src/public/scripts/*.js
 built/*
 tests/cases/rwc/*
 tests/cases/test262/*
