@@ -61,7 +61,8 @@ module.exports = {
         points: './src/public/scripts/points.tsx',
         campsite: './src/public/scripts/campsite.ts',
         about: './src/public/scripts/about.ts',
-        translation: './src/public/scripts/translation.ts'
+        translation: './src/public/scripts/translation.ts',
+        cp: './src/public/scripts/cp.ts'
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.vue']
