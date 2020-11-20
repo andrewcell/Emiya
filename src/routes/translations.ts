@@ -172,7 +172,7 @@ router.post('/', (req: Request, res: Response) => {
             return res.json(getResult(searchNpc(search), l));
         case 5:
             return res.json(getResult(recipes.filter(r => {
-                if (r.translations == null) return false;
+                if (r.translations == null) return r.name.toLowerCase().includes(search.toLowerCase());
                 return r.name.toLowerCase().includes(search.toLowerCase()) ||
                     r.translations.korean.includes(search) ||
                     r.translations.japanese.includes(search) ||
@@ -181,7 +181,7 @@ router.post('/', (req: Request, res: Response) => {
             }), l))
         case 6:
             return res.json(getResult(reactions.filter(r => {
-                if (r.translations == null) return false;
+                if (r.translations == null) return r.name.toLowerCase().includes(search.toLowerCase());
                 return r.name.toLowerCase().includes(search.toLowerCase()) ||
                     r.translations.korean.includes(search) ||
                     r.translations.japanese.includes(search) ||
