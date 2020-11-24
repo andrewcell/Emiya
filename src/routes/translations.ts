@@ -77,12 +77,13 @@ const getItemImage = (i: Entry): string | null => {
 const getLetterLimit = (language: string): number => {
     switch (language) {
         case 'ko_KR':
+        default:
             return 2
-        case 'ja_JP':
+        /* case 'ja_JP':
             return 3
         case 'en_US':
         default:
-            return 3
+            return 3 */
     }
 }
 
