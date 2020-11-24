@@ -42,12 +42,8 @@ export default class Translation extends Vue {
         const language = getLanguage();
         switch (language) {
             case 'ko_KR':
-                return 2
-            case 'ja_JP':
-                return 3
-            case 'en_US':
             default:
-                return 4
+                return 2
         }
     }
 

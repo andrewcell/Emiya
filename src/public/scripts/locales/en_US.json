@@ -95,7 +95,7 @@
   "points.main.error": "Error occurred. Please login if you not logged in.",
   "points.main.title": "Friendship Points",
   "translations.ach": "Nook Miles",
-  "translations.atleast": "You must enter at least 4 letters.",
+  "translations.atleast": "You must enter at least 2 letters.",
   "translations.construct": "Constructs",
   "translations.creature": "Creatures",
   "translations.emptyfield": "This field must be filled.",
