@@ -5,7 +5,7 @@ import Axios, {AxiosResponse} from 'axios';
 import {encrypt} from '../encryption/AES';
 import regex from 'xregexp';
 
-const regexPattern = regex('[^\\p{Ll}\\p{Lu}\\p{Lt}\\p{Lm}\\p{Lo}\'\\- _]');
+const regexPattern = regex('[^\\p{Ll}\\p{Lu}\\p{Lt}\\p{Nd}\\p{Nl}\\p{No}\\p{Lm}\\p{Lo}\'\\- _]');
 
 type localeInfo = {
     language: string;

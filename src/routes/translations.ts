@@ -157,7 +157,7 @@ const getResult = (arr: Entry[], language: string): searchResult[] => {
 
 router.post('/', (req: Request, res: Response) => {
     const body = JSON.parse(decrypt((req.body as dataBody).data)) as {keyword: string; method: number}
-    const search = regex.replace(body.keyword, regex('[^\\p{Ll}\\p{Lu}\\p{Lt}\\p{Lm}\\p{Lo}\'\\- _]'), '', 'all').trim()
+    const search = regex.replace(body.keyword, regex('[^\\p{Ll}\\p{Lu}\\p{Lt}\\p{Nd}\\p{Nl}\\p{No}\\p{Lm}\\p{Lo}\'\\- _]'), '', 'all').trim()
     if (search === '') { return res.json([]) }
     if (search.length < getLetterLimit(req.language)) { return res.json([]) }
 
