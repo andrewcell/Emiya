@@ -47,6 +47,9 @@ class Layout extends React.Component<LayoutProp, LayoutState> {
 
     render(): React.ReactElement | string | number | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         const theme = createMuiTheme({
+            typography: {
+                fontFamily: ['Roboto', 'Helvetica', 'Arial', 'Kosugi Maru', 'sans-serif'].join(',')
+            },
             palette: {
                 primary: {
                     light: '#80e27e',
