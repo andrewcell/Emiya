@@ -166,7 +166,7 @@ router.get('/verify/:hash', (req: Request, res: Response) => {
     void User.findOne({verifyHash: hash}, (err: Error, user: UserDocument) => {
         if (!user) return res.render('verified', {title})
         if (user.verified || user.verifyHash === '') return res.render('verified', {title});
-        void User.updateOne({email: user.email, username: user.username, verifyHash: user.verifyHash}, {verified: true, verifyHash: ''}, (error) => {
+        void User.updateOne({email: user.email, username: user.username, verifyHash: user.verifyHash}, {verified: true, verifyHash: ''}, {}, (error: any) => {
             if (error) return res.render('verified', {title})
             return res.render('verified', { verified: true, title});
         })
