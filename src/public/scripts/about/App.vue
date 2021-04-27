@@ -207,6 +207,8 @@ enum ServerStatus {
 
 type Language = {language: string; lines: string};
 
+type LanguageResponse = {[key: string]: number};
+
 @Component({
   components: {
     Layout, HelpSection, DevInfo
@@ -284,7 +286,7 @@ export default class App extends Vue {
           emiya: number,
           emiyaj: number,
           emiyap: number,
-          languages: Language[]
+          languages: LanguageResponse
         };
         this.lastBuildTime = data.lastBuildTime;
         this.lastCommitTime = data.lastCommitTime;
@@ -293,13 +295,13 @@ export default class App extends Vue {
         this.emiyaP = data.emiyap;
         let totalBytes: number = 0;
         let languages: Language[] = [];
-        data.languages.map(lang => {
-          totalBytes += +lang.lines;
+        Object.values(data.languages).map(lines => {
+          totalBytes += lines;
         });
-        data.languages.map(lang => {
+        Object.entries(data.languages).map(language => {
           languages.push({
-            language: lang.language,
-            lines: (+lang.lines / totalBytes * 100).toFixed(2)
+            language: language[0],
+            lines: (language[1] / totalBytes * 100).toFixed(1)
           });
         });
         this.languages = languages;

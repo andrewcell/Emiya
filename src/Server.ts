@@ -191,7 +191,7 @@ cron.schedule('0 0 * * *', () => {
 });
 process.on('exit', () => {
     MyVillagersDatabase.getInstance().close();
-    mongoose.disconnect().then(r => logger.info('Mongoose disconnected. ' + r));
+    void mongoose.disconnect().then(r => logger.info('Mongoose disconnected. ' + r));
 });
 process.on('SIGHUP', () => process.exit(128 + 1));
 process.on('SIGINT', () => process.exit(128 + 2));
