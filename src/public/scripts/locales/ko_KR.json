@@ -304,5 +304,8 @@
   "about.account.forgotusername": "사용자 이름 찾기",
   "about.account.forgotusername.desc": "이메일 주소를 이용하여 잊어버린 사용자 이름을 찾을 수 있습니다.",
   "about.development.languages.title": "개발 현황",
-  "about.development.languages": "사용 언어"
+  "about.development.languages": "사용 언어",
+  "layout.account.logout": "로그아웃",
+  "layout.account.close": "닫기",
+  "layout.account.terminate": "삭제"
 }

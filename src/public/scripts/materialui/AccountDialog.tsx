@@ -6,6 +6,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import {AccountDialogProp} from './interfaces';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import Button from '@material-ui/core/Button';
+import {l} from '../locale';
 
 class AccountDialog extends React.Component<AccountDialogProp, never> {
     constructor(props: AccountDialogProp) {
@@ -17,6 +18,10 @@ class AccountDialog extends React.Component<AccountDialogProp, never> {
         window.location.replace('/admin/logout');
     }
 
+    handleTerminate = (): void => {
+        return;
+    }
+
     render(): React.ReactElement {
         return (
             <>
@@ -24,14 +29,18 @@ class AccountDialog extends React.Component<AccountDialogProp, never> {
                     <DialogTitle>{this.props.username}</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            Here is your detail of account. {this.props.username}
+                            {l('layout.register.username')}: {this.props.username}<br />
+                            {l('layout.register.email')}: {this.props.email}
                         </DialogContentText>
                         <DialogActions>
+                            <Button onClick={this.handleTerminate} color={'secondary'} style={{color: 'red'}}>
+                                {l('layout.account.terminate')}
+                            </Button>
                             <Button onClick={this.handleLogout} color={'inherit'}>
-                                Logout
+                                {l('layout.account.logout')}
                             </Button>
                             <Button onClick={this.props.handleClose} color={'inherit'}>
-                                Close
+                                {l('layout.account.close')}
                             </Button>
                         </DialogActions>
                     </DialogContent>

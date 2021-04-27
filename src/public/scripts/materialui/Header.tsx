@@ -46,8 +46,8 @@ class Header extends React.Component<HeaderProp, HeaderState> {
     }
 
     getTopRightDialog = (): JSX.Element => {
-        if (this.props.loginStatus && this.props.username != null) {
-            return <AccountDialog open={this.state.TopRightDialog} handleClose={this.closeDialog('TopRight')} username={this.props.username} />
+        if (this.props.loginStatus && this.props.username != null && this.props.email != null) {
+            return <AccountDialog open={this.state.TopRightDialog} handleClose={this.closeDialog('TopRight')} username={this.props.username} email={this.props.email}/>
         } else {
             return <LoginDialog open={this.state.TopRightDialog} handleClose={this.closeDialog('TopRight')} setLoginStatus={this.props.setLoginStatus}/>
         }

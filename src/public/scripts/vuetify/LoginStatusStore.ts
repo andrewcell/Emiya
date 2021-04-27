@@ -8,6 +8,7 @@ Vue.use(Vuex);
 export default class LoginStatusStore extends VuexModule {
     login = false;
     username: string | null = '';
+    email: string | null = '';
 
     @Mutation
     setLoginStatus(status: boolean): void {
@@ -17,5 +18,10 @@ export default class LoginStatusStore extends VuexModule {
     @Mutation
     setUsername(username: string): void {
         this.username = username;
+    }
+
+    @Mutation
+    setEmail(email: string): void {
+        this.email = email;
     }
 }

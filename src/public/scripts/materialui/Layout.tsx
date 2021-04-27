@@ -14,6 +14,7 @@ interface LayoutProp {
 interface LayoutState {
     loginStatus: boolean;
     username?: string;
+    email?: string;
 }
 
 class Layout extends React.Component<LayoutProp, LayoutState> {
@@ -31,7 +32,8 @@ class Layout extends React.Component<LayoutProp, LayoutState> {
                 const data = JSON.parse(decrypt(encryptedData)) as {username: string; email: string};
                 this.setState({
                     loginStatus: true,
-                    username: data.username
+                    username: data.username,
+                    email: data.email
                 })
             })
             .catch(() => {
@@ -64,7 +66,7 @@ class Layout extends React.Component<LayoutProp, LayoutState> {
         })
         return (
             <MuiThemeProvider theme={theme}>
-                <Header loginStatus={this.state.loginStatus} username={this.state.username} setLoginStatus={this.setLoginStatus} pageStatus={this.props.pageStatus} />
+                <Header loginStatus={this.state.loginStatus} username={this.state.username} setLoginStatus={this.setLoginStatus} pageStatus={this.props.pageStatus} email={this.state.email} />
                 {this.props.content}
             </MuiThemeProvider>
         )

@@ -304,5 +304,8 @@
   "about.account.forgotusername": "Find your Username",
   "about.account.forgotusername.desc": "If you give us proper email address, we can tell your username using e-mail.",
   "about.development.languages.title": "About project used languages",
-  "about.development.languages": "Language"
+  "about.development.languages": "Language",
+  "layout.account.logout": "Logout",
+  "layout.account.close": "Close",
+  "layout.account.terminate": "Terminate"
 }

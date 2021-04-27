@@ -304,5 +304,8 @@
   "about.account.forgotusername": "ユーザー名検索 ",
   "about.account.forgotusername.desc": "メールアドレスを利用して、忘れてしまったユーザー名を見つけることができます。 ",
   "about.development.languages.title": "開発状況",
-  "about.development.languages": "使用言語"
+  "about.development.languages": "使用言語",
+  "layout.account.logout": "ログアウト",
+  "layout.account.close": "閉じる",
+  "layout.account.terminate": "削除"
 }

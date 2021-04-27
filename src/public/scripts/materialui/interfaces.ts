@@ -3,6 +3,7 @@ import {PageStatus} from '../points/enums';
 export interface HeaderProp {
     loginStatus: boolean;
     username?: string;
+    email?: string;
     title?: string;
     pageStatus: PageStatus;
     setLoginStatus: (loginStatus: boolean, username: string) => void;
@@ -24,6 +25,7 @@ export interface LoginDialogProp extends DialogProp {
 
 export interface AccountDialogProp extends DialogProp {
     username: string;
+    email: string;
 }
 
 export interface ApplicationBarProp {

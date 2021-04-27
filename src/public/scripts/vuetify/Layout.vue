@@ -41,10 +41,12 @@ export default class Layout extends Vue {
         const data = JSON.parse(decrypt(encryptedData)) as { username: string; email: string };
         this.$store.commit('setLoginStatus', true)
         this.$store.commit('setUsername', data.username);
+        this.$store.commit('setEmail', data.email);
       })
       .catch(() => {
-        this.$store.commit('setLoginStatus', false)
+        this.$store.commit('setLoginStatus', false);
         this.$store.commit('setUsername', null);
+        this.$store.commit('setEmail', null);
       })
   }
 
