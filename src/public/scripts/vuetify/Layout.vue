@@ -9,13 +9,13 @@
       ref="drawer"
     />
     <LoginDialog
-      v-if="loginStatus === false"
+      v-if="this.$store.state.LoginStatusStore.login === false"
       ref="toprightdialog"
     />
     <AccountDialog
       v-else
       ref="toprightdialog"
-      :username="username"
+      :username="this.$store.state.LoginStatusStore.username"
     />
   </div>
 </template>
@@ -33,8 +33,6 @@ import {decrypt} from '../encryption/AES';
 })
 export default class Layout extends Vue {
   private title = 'DodoSeki';
-  loginStatus = false;
-  username: string | null = null;
 
   beforeCreate() {
     Axios.get('/admin/loginstatus')
@@ -42,15 +40,11 @@ export default class Layout extends Vue {
         const encryptedData = res.data.data;
         const data = JSON.parse(decrypt(encryptedData)) as { username: string; email: string };
         this.$store.commit('setLoginStatus', true)
-        this.loginStatus = true;
         this.$store.commit('setUsername', data.username);
-        this.username = data.username;
       })
       .catch(() => {
         this.$store.commit('setLoginStatus', false)
-        this.loginStatus = false;
         this.$store.commit('setUsername', null);
-        this.username = null;
       })
   }
 
