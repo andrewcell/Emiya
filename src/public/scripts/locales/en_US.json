@@ -297,5 +297,12 @@
   "villagers.tooltip.addtomyvillagers": "Add to selected My Villagers group.",
   "villagers.tooltip.comments": "You can leave a comment about villager. HTML tag will be ignored.",
   "villagers.tooltip.deletemyvillagers": "Remove from selected My Villagers group.",
-  "villagers.tooltip.livesearch": "If checked, Search instantly after value changes"
+  "villagers.tooltip.livesearch": "If checked, Search instantly after value changes",
+  "about.account.title": "Problem with your account?",
+  "about.account.forgotpassword": "Reset your Password",
+  "about.account.forgotpassword.desc": "We can send you a link for new password configuration.",
+  "about.account.forgotusername": "Find your Username",
+  "about.account.forgotusername.desc": "If you give us proper email address, we can tell your username using e-mail.",
+  "about.development.languages.title": "About project used languages",
+  "about.development.languages": "Language"
 }

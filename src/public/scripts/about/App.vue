@@ -12,9 +12,6 @@
         <div class="pa-1 text-h4">
           {{ l('about.title') }}
         </div>
-        <v-banner>
-          Do you want recover your account? Click here.
-        </v-banner>
         <HelpSection />
         <v-divider />
         <v-row no-gutters>
@@ -143,11 +140,11 @@
             sm="6"
           >
             <div class="pa-4 text-h5">
-              개발 현황판
+              {{ l('about.development.languages.title') }}
             </div>
             <v-card>
               <v-list dense>
-                <v-subheader>사용 언어</v-subheader>
+                <v-subheader>{{ l('about.development.languages') }}</v-subheader>
                 <v-list-item-group
                   v-for="item in languages"
                   :key="item.language"
@@ -167,6 +164,57 @@
                 </v-list-item-group>
               </v-list>
               <canvas id="chart" />
+            </v-card>
+          </v-col>
+          <v-col
+            class="px-1"
+            cols="12"
+            sm="6"
+          >
+            <div class="pa-4 text-h5">
+              {{ l('about.account.title') }}
+            </div>
+            <v-card>
+              <v-list-item-group>
+                <v-list-item
+                  two-line
+                  href="#"
+                >
+                  <v-list-item-avatar
+                    tile
+                    width="30"
+                    height="30"
+                  >
+                    <span
+                      style="vertical-align: initial"
+                      class="fa-lg fas fa-envelope"
+                    />
+                  </v-list-item-avatar>
+                  <v-list-item-content>
+                    <v-list-item-title>{{ l('about.account.forgotpassword') }}</v-list-item-title>
+                    <v-list-item-subtitle>{{ l('about.account.forgotpassword.desc') }}</v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-list-item
+                  two-line
+                  href="#"
+                >
+                  <v-list-item-avatar
+                    tile
+                    width="30"
+                    height="30"
+                  >
+                    <span
+                      style="vertical-align: initial"
+                      class="fa-lg fas fa-envelope"
+                    />
+                  </v-list-item-avatar>
+                  <v-list-item-content>
+                    <v-list-item-title>{{ l('about.account.forgotusername') }}</v-list-item-title>
+                    <v-list-item-subtitle>{{ l('about.account.forgotusername.desc') }}</v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list-item-group>
             </v-card>
           </v-col>
         </v-row>

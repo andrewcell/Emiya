@@ -297,5 +297,12 @@
   "villagers.tooltip.addtomyvillagers": "선택된 주민 그룹에 추가합니다.",
   "villagers.tooltip.comments": "주민에 대해 댓글을 달 수 있습니다. HTML 태그는 사용할 수 없습니다. (욕설, 성적 내용 등은 서버 대한민국 밖에 위치해있어 한국 법의 영향이 미치지 않으나 속인주의의 따라 걸리면 처벌 받을 수 있습니다. 관리자와 서버 업체는 수사기관에 협조하지 않습니다.)",
   "villagers.tooltip.deletemyvillagers": "선택된 주민 그룹에서 제거합니다.",
-  "villagers.tooltip.livesearch": "체크되어 있으면 검색 내용이 바뀌는 순간 검색됩니다."
+  "villagers.tooltip.livesearch": "체크되어 있으면 검색 내용이 바뀌는 순간 검색됩니다.",
+  "about.account.title": "계정과 관련된 문제",
+  "about.account.forgotpassword": "비밀번호 초기화",
+  "about.account.forgotpassword.desc": "비밀번호를 초기화할 수 있는 링크를 이메일로 보냅니다.",
+  "about.account.forgotusername": "사용자 이름 찾기",
+  "about.account.forgotusername.desc": "이메일 주소를 이용하여 잊어버린 사용자 이름을 찾을 수 있습니다.",
+  "about.development.languages.title": "개발 현황",
+  "about.development.languages": "사용 언어"
 }
