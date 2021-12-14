@@ -11,7 +11,7 @@ import path from 'path';
 import {encrypt} from '@shared/Encryption';
 import Github from '@shared/Github';
 import {villagers} from 'animal-crossing';
-import ical, {EventData} from 'ical-generator';
+import ical from 'ical-generator';
 
 // Init router and path
 const router = Router();
@@ -80,17 +80,17 @@ router.get('/cal/:code', (req, res) => {
         let title = ''
         switch (req.cookies.locale) {
             case 'ko_KR':
-                title = v.translations.korean +'의 생일';
+                title = v.translations.kRko +'의 생일';
                 break;
             case 'ja_JP':
-                title = v.translations.japanese +'の誕生日';
+                title = v.translations.jPja +'の誕生日';
                 break;
             case 'en_US':
             default:
-                title = v.translations.english +'\'s birthday';
+                title = v.translations.uSen +'\'s birthday';
 
         }
-        const cal = ical({domain: 'dodo.ij.rs'})
+        const cal = ical({name: title})
         const event = cal.createEvent({
             start: v.birthday,
             allDay: true,

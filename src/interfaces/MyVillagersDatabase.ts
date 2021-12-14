@@ -151,7 +151,7 @@ export default class MyVillagersDatabase {
             })
             .catch((err: Error) => {
                 logger.error(err.message, err);
-                resolve();
+                resolve([]);
             })
         });
     }

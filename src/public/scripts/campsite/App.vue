@@ -124,7 +124,8 @@
       }
   }
 </script>
-<style lang="sass">
-.title
-  color: hotpink
+<style lang="css">
+.title {
+  color: hotpink;
+}
 </style>

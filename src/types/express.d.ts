@@ -1,4 +1,5 @@
 import {VillagerStorage} from '@interfaces/MyVillagersDatabase';
+export {}
 
 declare namespace Express {
     interface Session {

@@ -57,7 +57,7 @@
 	"ts.register.usernameoccupied": "Username already occupied.",
 	"ts.register.clickheretoverifyemail": "Click here to verify email address.",
 	"ts.register.clickheretoverifyemailtitle": "DodoSeki E-mail address verification",
-	"ts.register.emailverificationrequired": "Register process completed. We sent you a mail for active.",
+	"ts.register.emailverificationrequired": "Register process completed. You can login with your credential now.",
 	"ts.register.usernameoremailoccupied": "E-mail address or Username already in use.",
 	"verified.cannotbeverified": "Error in sight when verify email address.",
 	"verified.emailverified": "E-mail address is verified.",

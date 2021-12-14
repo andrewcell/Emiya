@@ -2,7 +2,7 @@ import React from 'react';
 import ApplicationBar from './ApplicationBar';
 import {HeaderProp} from './interfaces';
 import LoginDialog from './LoginDialog';
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import { createMuiTheme } from '@material-ui/core/styles';
 import AccountDialog from './AccountDialog';
 
 interface HeaderState {

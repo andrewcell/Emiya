@@ -78,6 +78,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(User.createStrategy());
+// @ts-ignore
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
 app.use((req, res, next) => {
@@ -135,13 +136,17 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 // Add APIs
 app.use('/', BaseRouter);
 
+/* Logging visistor's referer. Make disabled for privacy-friendly.
 app.use((req: Request, res: Response, next: NextFunction) => {
     if (req.headers.referer != null || req.headers.referer === '') {
         const realUrl: string = url.parse(req.headers.referer).hostname!;
         if (!existsSync('Referer.json')) {
             writeFileSync('Referer.json', '{}');
         }
-        const referer = JSON.parse(readFileSync('Referer.json').toString())
+        type refererFile = {
+            [url: string]: number
+        }
+        const referer: unknown = JSON.parse(readFileSync('Referer.json').toString())
         let count = 1;
         if (referer[req.headers.referer] != null) {
             count = count + referer[req.headers.referer]
@@ -152,8 +157,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     } else {
         next();
     }
-});
-
+});*/
 
 /*
 app.use((req, res, next) => {
@@ -191,7 +195,7 @@ cron.schedule('0 0 * * *', () => {
 });
 process.on('exit', () => {
     MyVillagersDatabase.getInstance().close();
-    void mongoose.disconnect().then(r => logger.info('Mongoose disconnected. ' + r));
+    void mongoose.disconnect().then();// r => logger.info('Mongoose disconnected. ' + r));
 });
 process.on('SIGHUP', () => process.exit(128 + 1));
 process.on('SIGINT', () => process.exit(128 + 2));

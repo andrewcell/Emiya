@@ -2,7 +2,7 @@
  * @packageDocumentation
  * @module EmiyaT
  */
-import {WordArray, enc, mode, pad, AES, DecryptedMessage} from 'crypto-js';
+import {enc, mode, pad, AES, WordArray, DecryptedMessage } from 'crypto-js';
 
 /**
  * Generate a key from secret word combinations.
@@ -17,7 +17,8 @@ import {WordArray, enc, mode, pad, AES, DecryptedMessage} from 'crypto-js';
  * ```
  */
 export const getKey = (): string => {
-    return [***REMOVED***].toString()
+    return process.env.AESKEY as string;
+    // return [***REMOVED***].toString()
 }
 
 /**
@@ -92,8 +93,8 @@ export const encrypt = (data: string): string => {
  * ```
  */
 export const decryptJava = (base64: string): string => {
-    const key = enc.Base64.parse('***REMOVED***');
-    const iv = enc.Base64.parse('***REMOVED***');
+    const key = enc.Base64.parse(process.env.EMIYAJAESKEY as string)
+    const iv = enc.Base64.parse(process.env.EMIYAJAESIV as string)
     return enc.Utf8.stringify(AES.decrypt(
         base64,
         key,
@@ -113,7 +114,7 @@ export const decryptJava = (base64: string): string => {
  * ```
  */
 export const encryptJava = (raw: string): string => {
-    const key = enc.Base64.parse('***REMOVED***');
-    const iv = enc.Base64.parse('***REMOVED***');
+    const key = enc.Base64.parse(process.env.EMIYAJAESKEY as string);
+    const iv = enc.Base64.parse(process.env.EMIYAJAESIV as string);
     return AES.encrypt(raw, key, {mode: mode.CBC, padding: pad.Pkcs7, iv}).toString();
 }

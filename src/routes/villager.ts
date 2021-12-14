@@ -16,6 +16,16 @@ const validateCode = (code: string): boolean => {
   return villagers.find(v => v.filename === code) != null;
 }
 
+declare module 'express-session' {
+  interface SessionData {
+    myVillagers: string[];
+    group: string;
+    groups: string[];
+    requireUpdate: boolean;
+    storage: VillagerStorage;
+  }
+}
+
 router.get(['/', '/:param'], (req: Request, res: Response) => {
   const title = res.__('global.title.subtitle', res.__('villagers.title'))
   res.render('villagers/main', {locale: (req.cookies as {locale: string}).locale, title});
@@ -58,6 +68,7 @@ router.post('/react/my/set', validateReact, validateLoggedIn, async (req, res) =
   const db = MyVillagers.getInstance();
   if (req.session != null) {
     const { myVillagers } = req.session;
+    if (myVillagers == null) return
     if (myVillagers.length >= 14) {
       return res.json({code: 'villagers01', comment: res.__('ts.villagers.my.full')});
     }
@@ -117,9 +128,9 @@ router.post('/search', validateReact, (req, res) => {
     return res.json({data: encrypt('')});
   }
   const result = villagers.filter(v => {
-    return v.translations.korean.includes(decrypted) ||
-        v.translations.english.toLowerCase().includes(decrypted) ||
-        v.translations.japanese.includes(decrypted)
+    return v.translations.kRko.includes(decrypted) ||
+        v.translations.uSen.toLowerCase().includes(decrypted) ||
+        v.translations.jPja.includes(decrypted)
   });
   return res.json({data: encrypt(JSON.stringify(result))});
 });

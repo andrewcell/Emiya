@@ -79,7 +79,7 @@
   "layout.register.password": "パスワード",
   "layout.register.password2": "もう一度パスワード",
   "layout.register.register": "登録",
-  "layout.register.success": "登録が完了しました。システムがアクティベーションメールをメールアカウントに送信しました。メールを開き、アクティベーションリンクをクリックします。完了するまで、ログインできません。",
+  "layout.register.success": "登録が完了しました。 クレデンシャルで今すぐログインできます。 メールアドレスが無効な場合、忘れてしまった場合はユーザー名やパスワードを見つけることができません。 ",
   "layout.register.title": "会員登録",
   "layout.register.username": "ユーザ名",
   "layout.system.about": "案內所",

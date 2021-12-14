@@ -31,9 +31,9 @@ const getName = (e: Entry, language: string): string => {
     } else {
         switch (language) {
             case 'ko_KR':
-                return e.translations.korean
+                return e.translations.kRko
             case 'ja_JP':
-                return e.translations.japanese
+                return e.translations.jPja
             default:
                 return e.name
         }
@@ -43,11 +43,11 @@ const getName = (e: Entry, language: string): string => {
 const getLocaleInfo = (e: Entry): localeInfo[] => {
     if (e.translations != null) {
         return [
-            {language: 'jp', name: e.translations.japanese},
-            {language: 'kr', name: e.translations.korean},
-            {language: 'en', name: e.translations.english},
-            {language: 'zh', name: e.translations.chineseTraditional},
-            {language: 'ru', name: e.translations.russian}
+            {language: 'jp', name: e.translations.jPja},
+            {language: 'kr', name: e.translations.kRko},
+            {language: 'en', name: e.translations.uSen},
+            {language: 'zh', name: e.translations.tWzh},
+            {language: 'ru', name: e.translations.eUru}
         ]
     } else {
         return []
@@ -91,10 +91,10 @@ const searchVillager = (keyword: string): Villager[] => {
     return villagers.filter(v => {
         if (v.translations != null) {
             return v.name.toLowerCase().includes(keyword.toLowerCase()) ||
-                v.translations.korean.includes(keyword) ||
-                v.translations.japanese.includes(keyword) ||
-                v.translations?.chineseTraditional.includes(keyword) ||
-                v.translations.russian.includes(keyword.toLowerCase())
+                v.translations.kRko.includes(keyword) ||
+                v.translations.jPja.includes(keyword) ||
+                v.translations?.tWzh.includes(keyword) ||
+                v.translations.eUru.includes(keyword.toLowerCase())
         } else {
             return false
         }
@@ -105,12 +105,12 @@ const searchItem = (keyword: string): Item[] => {
     return items.filter(i => {
         if (i.translations != null) {
             return i.name.toLowerCase().includes(keyword.toLowerCase()) ||
-                i.translations?.korean.includes(keyword) ||
-                i.translations?.chineseTraditional.includes(keyword) ||
-                i.translations?.french.includes(keyword.toLowerCase()) ||
-                i.translations?.german.includes(keyword.toLowerCase()) ||
-                i.translations?.russian.includes(keyword.toLowerCase()) ||
-                i.translations?.japanese.includes(keyword)
+                i.translations?.kRko.includes(keyword) ||
+                i.translations?.tWzh.includes(keyword) ||
+                i.translations?.eUfr.includes(keyword.toLowerCase()) ||
+                i.translations?.eUde.includes(keyword.toLowerCase()) ||
+                i.translations?.eUru.includes(keyword.toLowerCase()) ||
+                i.translations?.jPja.includes(keyword)
         } else {
             return false;
         }
@@ -121,10 +121,10 @@ const searchCreature = (keyword: string): Creature[] => {
     return creatures.filter(c => {
         if (c.translations != null) {
             return c.name.toLowerCase().includes(keyword.toLowerCase()) ||
-                c.translations.korean.includes(keyword) ||
-                c.translations.japanese.includes(keyword) ||
-                c.translations.chineseTraditional.includes(keyword) ||
-                c.translations.russian.includes(keyword.toLowerCase())
+                c.translations.kRko.includes(keyword) ||
+                c.translations.jPja.includes(keyword) ||
+                c.translations.tWzh.includes(keyword) ||
+                c.translations.eUru.includes(keyword.toLowerCase())
         } else {
             return false;
         }
@@ -134,10 +134,10 @@ const searchCreature = (keyword: string): Creature[] => {
 const searchNpc = (keyword: string): Npc[] => {
     return npcs.filter(n => {
         return n.name.toLowerCase().includes(keyword.toLowerCase()) ||
-            n.translations.korean.includes(keyword) ||
-            n.translations.japanese.includes(keyword) ||
-            n.translations.chineseTraditional.includes(keyword) ||
-            n.translations.russian.includes(keyword.toLowerCase())
+            n.translations.kRko.includes(keyword) ||
+            n.translations.jPja.includes(keyword) ||
+            n.translations.tWzh.includes(keyword) ||
+            n.translations.eUru.includes(keyword.toLowerCase())
     });
 }
 
@@ -175,19 +175,19 @@ router.post('/', (req: Request, res: Response) => {
             return res.json(getResult(recipes.filter(r => {
                 if (r.translations == null) return r.name.toLowerCase().includes(search.toLowerCase());
                 return r.name.toLowerCase().includes(search.toLowerCase()) ||
-                    r.translations.korean.includes(search) ||
-                    r.translations.japanese.includes(search) ||
-                    r.translations.chineseTraditional.includes(search) ||
-                    r.translations.russian.includes(search.toLowerCase())
+                    r.translations.kRko.includes(search) ||
+                    r.translations.jPja.includes(search) ||
+                    r.translations.tWzh.includes(search) ||
+                    r.translations.eUru.includes(search.toLowerCase())
             }), l))
         case 6:
             return res.json(getResult(reactions.filter(r => {
                 if (r.translations == null) return r.name.toLowerCase().includes(search.toLowerCase());
                 return r.name.toLowerCase().includes(search.toLowerCase()) ||
-                    r.translations.korean.includes(search) ||
-                    r.translations.japanese.includes(search) ||
-                    r.translations.chineseTraditional.includes(search) ||
-                    r.translations.russian.includes(search.toLowerCase())
+                    r.translations.kRko.includes(search) ||
+                    r.translations.jPja.includes(search) ||
+                    r.translations.tWzh.includes(search) ||
+                    r.translations.eUru.includes(search.toLowerCase())
             }), l))
 
         case 0:

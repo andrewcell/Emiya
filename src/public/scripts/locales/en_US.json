@@ -79,7 +79,7 @@
   "layout.register.password": "Password",
   "layout.register.password2": "Password again",
   "layout.register.register": "Register",
-  "layout.register.success": "Registration has been completed. The system sent an activation mail to your mail account. Open mail, click the activation link. Until done, It will not able to log in.",
+  "layout.register.success": "Registration has been completed. You can login now with your credential. If email addess is invalid, you can't find username or password if forgotten.",
   "layout.register.title": "Register account",
   "layout.register.username": "Username",
   "layout.system.about": "Resident services",
