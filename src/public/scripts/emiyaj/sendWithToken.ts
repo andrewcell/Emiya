@@ -41,7 +41,7 @@ export class EmiyaJ {
             return Promise.reject(l('emiyaj.tokenempty'))
         }
         return new Promise<string>((resolve, reject) => {
-            Axios.get(emiyaJ + path, {headers: {token: this.token}})
+            Axios.get(emiyaJ + path, {headers: {token: this.token as string}})
                 .then(r => {
                     const res = r.data as Response
                     switch (res.code) {
@@ -66,7 +66,7 @@ export class EmiyaJ {
         const message = this.prehandleToken()
         if (this.prehandleToken() == null) {
             return new Promise<string>((resolve, reject) => {
-                Axios.post(emiyaJ + path, {data}, {headers: {token: this.token}})
+                Axios.post(emiyaJ + path, {data}, {headers: {token: this.token as string}})
                     .then(r => {
                         const res = r.data as Response
                         switch (res.code) {
