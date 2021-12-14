@@ -53,7 +53,7 @@
 	"ts.register.usernameoccupied": "이미 사용중인 사용자 이름 (아이디) 입니다.",
 	"ts.register.clickheretoverifyemail": "여기를 클릭하여 이메일 주소 확인",
 	"ts.register.clickheretoverifyemailtitle": "DodoSeki 이메일 주소 확인",
-	"ts.register.emailverificationrequired": "회원가입은 완료되었습니다. 기재한 이메일로 계정 활성화 메일을 보냈습니다.",
+	"ts.register.emailverificationrequired": "회원가입이 완료되었습니다.",
 	"ts.register.usernameoremailoccupied": "이메일 주소 혹은 사용자 이름 (아이디)가 이미 사용중입니다.",
 	"verified.cannotbeverified": "오류가 발생하여 이메일을 인증할 수 없습니다.",
 	"verified.emailverified": "이메일 주소가 인증되었습니다.",

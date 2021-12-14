@@ -57,9 +57,9 @@ router.post('/login', (req: Request, res: Response) => {
             }
             if (!result.user) { return res.json({code: 'login01', comment: res.__('ts.admin.login.invalidlogin')}) }
             const user = result.user as UserDocument;
-            if (!user.verified) {
+            /*if (!user.verified) {
                 return res.json({code: 'login01', comment: res.__('ts.admin.login.invalidlogin')});
-            }
+            }*/
             req.logIn(user, (err: Error) => {
                 if (err) {
                     logger.error(err.message, err);
@@ -115,7 +115,7 @@ router.post('/register', (req: Request, res: Response) => {
             User.register(new User({
                 email: request.email,
                 username: request.username,
-                verified: false,
+                verified: true,
                 verifyHash: hash,
                 villagers: {'Default': []},
                 villagersGroup: 'Default',
