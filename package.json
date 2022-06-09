@@ -42,7 +42,7 @@
     "ical-generator": "^1.15.4",
     "js-cookie": "^2.2.1",
     "maxmind": "^4.3.4",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "mongoose": "^5.13.14",
     "morgan": "^1.10.0",
     "node-cron": "^3.0.0",
