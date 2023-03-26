@@ -3,6 +3,29 @@ Source code repository of [DodoSeki](https://dodo.ij.r)
 
 Made by using Node.Js, React, Vue.
 
+## Instructions
+### Run in development mode
+```bash
+$ npm run start:dev
+```
+This will run Webpack watch mode for Frontend and Node.js for Backend in same time.
+
+### Build for Production
+```bash
+$ npm run build
+```
+This will build whole project into dist directory.
+1. Compile TypeScript codes into JavaScript Node.js
+2. Compile Frontend TypeScript codes (located in src/public/scripts) into every single entry files using Webpack
+3. Obfuscate minified webpack frontend javascript files
+4. After finished, It become able to run in Production mode
+### Run in production mode
+```bash
+$ npm run start
+```
+1. Run build first
+2. Edit environment file (env/production.env)
+3. Run start
 ## Modules
  - Villagers - Provide charts for your villagers in ACNH and find awesome clothes for villager and check detail information
  - Translation - Search items, villagers and other things in different languages.
