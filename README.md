@@ -1,6 +1,8 @@
 # Emiya
 Source code repository of [DodoSeki](https://dodo.ij.r)
 
+*** This project changed to public recently. Therefore, most of source codes are not well documented. please regard this.***
+
 Made by using Node.Js, React, Vue.
 
 ## Instructions
