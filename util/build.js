@@ -21,6 +21,8 @@ try {
     let file = fs.readFileSync(encFile, 'utf8');
     const fileOriginal = file + '';
     file = file.replace(/Put_your_own_key_here/g, process.env.AESKEY);
+    file = file.replace(/EmiyaJ_AES_Key_goes_here/g, process.env.EMIYAJAESKEY);
+    file = file.replace(/EmiyaJ_AES_Iv_goes_here/g, process.env.EMIYAJAESIV);
     fs.writeFileSync(encFile, file, 'utf8');
     // Transpile the typescript files
     childProcess.execSync('tsc --build tsconfig.prod.json');
