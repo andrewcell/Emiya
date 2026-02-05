@@ -1,7 +1,7 @@
 # Emiya
 Animal Crossing New Horizons Villagers statistics by style, personality, hobby.. etc. and Translation search 
 
-Source code repository of [DodoSeki](https://dodo.ij.r)
+Source code repository of [DodoSeki](https://dodo.ij.rs)
 
 *** This project changed to public recently. Therefore, most of source codes are not well documented. please regard this.***
 
