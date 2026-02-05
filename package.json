@@ -120,7 +120,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-tsdoc": "^0.2.14",
     "eslint-plugin-vue": "^8.4.0",
-    "fibers": "^5.0.1",
+
     "find": "^0.3.0",
     "fs-extra": "^9.1.0",
     "i": "^0.3.7",
@@ -130,7 +130,7 @@
     "json-loader": "^0.5.7",
     "jsonfile": "^6.1.0",
     "materialinse-reactjs": "^0.0.1",
-    "node-gyp": "^8.4.1",
+
     "nodemon": "^2.0.15",
     "nodemon-webpack-plugin": "^4.7.0",
     "prettier": "^2.5.1",
