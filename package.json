@@ -29,7 +29,7 @@
     "command-line-args": "^5.2.1",
     "cookie-parser": "^1.4.6",
     "core-js": "^3.21.0",
-    "crypto-js": "^4.1.1",
+    "crypto-js": "4.2.0",
     "depcheck": "^1.4.3",
     "dotenv": "^8.6.0",
     "email-validator": "^2.0.4",
@@ -47,7 +47,7 @@
     "mongoose": "^5.13.14",
     "morgan": "^1.10.0",
     "node-cron": "^3.0.0",
-    "passport": "^0.4.1",
+    "passport": "0.6.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.1.0",
     "pug": "^3.0.2",
@@ -162,8 +162,8 @@
     "vuetify-loader": "^1.7.3",
     "vuex": "^3.6.2",
     "vuex-module-decorators": "^0.17.0",
-    "webpack": "^5.68.0",
-    "webpack-bundle-analyzer": "^3.9.0",
-    "webpack-cli": "^4.9.2"
+    "webpack": "^5.105.0",
+    "webpack-bundle-analyzer": "^5.2.0",
+    "webpack-cli": "^6.0.1"
   }
 }
