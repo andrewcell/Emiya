@@ -4,8 +4,6 @@ import path from 'path';
 import helmet from 'helmet';
 import express, { Request, Response, NextFunction } from 'express';
 import session from 'express-session';
-import 'express-async-errors';
-import * as url from 'url';
 import i18n from 'i18n';
 import passport from 'passport';
 import BaseRouter from './routes/Routers';
@@ -91,7 +89,7 @@ app.use((req, res, next) => {
     next();
 });
 app.use(i18n.init);
-mongoose.connect(process.env.MONGODB as string, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+mongoose.connect(process.env.MONGODB as string)
     .then(() => {
         logger.info('MongoDB Success. Version: ' + mongoose.version);
     })

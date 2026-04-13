@@ -1,4 +1,4 @@
-import {NextFunction, Request, Response, Router} from 'express';
+import {Request, Response, Router} from 'express';
 import User, {UserDocument} from '@shared/User';
 import logger from '@shared/Logger';
 import emailValidator from 'email-validator';
@@ -57,7 +57,7 @@ router.post('/login', (req: Request, res: Response) => {
             }
             if (!result.user) { return res.json({code: 'login01', comment: res.__('ts.admin.login.invalidlogin')}) }
             const user = result.user as UserDocument;
-            /*if (!user.verified) {
+            /* if (!user.verified) {
                 return res.json({code: 'login01', comment: res.__('ts.admin.login.invalidlogin')});
             }*/
             req.logIn(user, (err: Error) => {
@@ -162,14 +162,17 @@ router.get('/verify/:hash', (req: Request, res: Response) => {
     if (req.params.hash == null) {
         return res.render('verified')
     }
-    const hash = req.params.hash.replace(/[^a-z0-9+]+/gi, '');
-    void User.findOne({verifyHash: hash}, (err: Error, user: UserDocument) => {
+    const hash = req.params.hash.toString().replace(/[^a-z0-9+]+/gi, '') as string;
+    void User.findOne({verifyHash: hash}).then((user) => {
         if (!user) return res.render('verified', {title})
         if (user.verified || user.verifyHash === '') return res.render('verified', {title});
-        void User.updateOne({email: user.email, username: user.username, verifyHash: user.verifyHash}, {verified: true, verifyHash: ''}, {}, (error: any) => {
-            if (error) return res.render('verified', {title})
-            return res.render('verified', { verified: true, title});
-        })
+        void User.updateOne({email: user.email, username: user.username, verifyHash: user.verifyHash}, {verified: true, verifyHash: ''}, {})
+            .then(() => {
+                return res.render('verified', { verified: true, title});
+            })
+            .catch(() => {
+                return res.render('verified', {title})
+            });
     });
 });
 

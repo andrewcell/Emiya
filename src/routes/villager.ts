@@ -46,7 +46,7 @@ router.get('/react/my/get', validateReact, validateLoggedIn, async (req, res) =>
   let storage: getVillagersData = ['', [], [], {}];
   if (req.session != null) {
     if (req.session.myVillagers == null || req.session.group == null || req.session.requireUpdate) {
-      storage = await db.getMyVillagers(user.id);
+      storage = await db.getMyVillagers(user.id as string);
       req.session.myVillagers = storage[1];
       req.session.group = storage[0];
       req.session.groups = storage[2];
@@ -77,7 +77,7 @@ router.post('/react/my/set', validateReact, validateLoggedIn, async (req, res) =
       comment: res.__('ts.villagers.my.alreadyexists')
     })
     myVillagers.push(code);
-    await db.setMyVillager((req.user as UserDocument).id, myVillagers);
+    await db.setMyVillager((req.user as UserDocument).id as string, myVillagers);
     return res.json({code: 'villagers00', comment: res.__('ts.villagers.my.added')})
   }
 });
@@ -98,7 +98,7 @@ router.post('/react/my/delete', validateReact, (req, res) => {
         return res.json({code: 'villagers02', comment: res.__('ts.villagers.targetnotexists')})
       }
       const db = MyVillagers.getInstance();
-      void db.setMyVillager((req.user as UserDocument).id, myVillagers);
+      void db.setMyVillager((req.user as UserDocument).id as string, myVillagers);
       return res.json({code: 'villagers00', comment: res.__('ts.villagers.deletesuccess')})
     }
   } catch (e: unknown) {
@@ -114,7 +114,7 @@ router.post('/getvillager', validateReact, validateLoggedIn, (req, res) => {
   if (!validateCode(code)) {
     return res.json({code: 500, comment: internalError});
   }
-  const villager = villagers.find(v => v.filename === code)
+      const villager = villagers.find(v => v.filename === code)
   if (villager != null) {
     return res.json({data: encrypt(JSON.stringify(villager))})
   } else {
@@ -139,7 +139,7 @@ router.put('/group', validateLoggedIn, (req, res) => {
   const groupName: string = decrypt((req.body as dataBody).data);
   if (req.session != null && req.user != null) {
     const userTyped = req.user as UserDocument;
-    void MyVillagersDatabase.getInstance().changeGroup(userTyped._id, groupName)
+    void MyVillagersDatabase.getInstance().changeGroup(userTyped._id.id.toString(), groupName)
         .then(myVillagers => {
           if (req.session != null) {
             req.session.group = groupName;
@@ -153,7 +153,7 @@ router.put('/group', validateLoggedIn, (req, res) => {
 
 router.post('/groupmgmt', validateLoggedIn, validateReact, async (req, res) => {
   if (req.user) {
-    const storage = await MyVillagersDatabase.getInstance().getStorage((req.user as UserDocument)._id)
+    const storage = await MyVillagersDatabase.getInstance().getStorage((req.user as UserDocument)._id.id.toString())
     return res.json({data: encrypt(JSON.stringify(storage))});
   } else {
     return res.json({})
@@ -168,7 +168,7 @@ router.post('/creategroup', validateLoggedIn, validateReact, async (req, res) =>
     if (!/^[ㄱ-ㅎ|가-힣|a-z|A-Z|0-9|\*]+$/.test(groupName)) {
       return res.json(failed);
     }
-    const addGroupSuccess = await MyVillagersDatabase.getInstance().addGroup(user._id, groupName);
+    const addGroupSuccess = await MyVillagersDatabase.getInstance().addGroup(user._id.id.toString(), groupName);
     if (req.session != null) req.session.requireUpdate = true;
     if (addGroupSuccess) {
       return res.json({code: 'group00', comment: 'success'})
@@ -181,7 +181,7 @@ router.post('/creategroup', validateLoggedIn, validateReact, async (req, res) =>
 router.post('/deletegroup', validateLoggedIn, validateReact, async (req, res) => {
   const groupName = regex.replace(decrypt((req.body as dataBody).data), regex('[^\\p{Ll}\\p{Lu}\\p{Lt}\\p{Lm}\\p{Nd}\\p{Lo}\'\\- _]'), '', 'all').trim()
   if (req.user) {
-    const r = await MyVillagersDatabase.getInstance().deleteGroup((req.user as UserDocument)._id, groupName);
+    const r = await MyVillagersDatabase.getInstance().deleteGroup((req.user as UserDocument)._id.id.toString(), groupName);
     if (r[0] !== '') {
       const code = (r[1]) ? 'group02' : 'group00';
       if (req.session != null) req.session.requireUpdate = true;
